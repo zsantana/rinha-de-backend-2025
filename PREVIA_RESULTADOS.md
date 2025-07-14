@@ -1,5 +1,5 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Sun Jul 13 10:32:43 PM -03 2025**
+Atualizado em **Sun Jul 13 10:40:10 PM -03 2025**
 
 
 | participante | bônus por desempenho (%) | multa ($) | lucro |
@@ -21,6 +21,6 @@ Atualizado em **Sun Jul 13 10:32:43 PM -03 2025**
 |	robertAlmeida	|	0	|	0	|	0	|
 |	rodrigocaldeira-elixir	|	0	|	65625.62299999999	|	121876.157	|
 |	ryangst-bun	|	0	|	2507.0517499999996	|	4655.95325	|
-|	victorverdoodt-cs	|	0	|	0	|	0	|
+|	victorverdoodt-cs	|	0	|	18232.280499999997	|	33859.9495	|
 |	willzada-aGOrinha	|	0	|	17383.247	|	32283.173	|
 |	willzada-BUNrinha	|	0.08691974300000219	|	897.0919999999999	|	1888.8137316781656	|
