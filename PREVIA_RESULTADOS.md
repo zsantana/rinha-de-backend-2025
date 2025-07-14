@@ -1,5 +1,5 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Mon Jul 14 12:37:16 AM -03 2025**
+Atualizado em **Mon Jul 14 12:45:43 AM -03 2025**
 
 
 | participante | p99 | bônus por desempenho (%) | multa ($) | lucro |
@@ -17,7 +17,7 @@ Atualizado em **Mon Jul 14 12:37:16 AM -03 2025**
 |	lpicanco-rust	|	62.819489489999995ms	|	0	|	75830.39274999186	|	140827.87224998488	|
 |	luizcordista-go	|	12.126946829999884ms	|	0	|	0	|	276755.26999999996	|
 |	panissetrafael-go	|	74.80811112000002ms	|	0	|	40605.733349999995	|	75410.64765	|
-|	ricassiocosta-python	|	333.63223297999997ms	|	0	|	0	|	0	|
+|	ricassiocosta-python	|	998.7823175800014ms	|	0	|	64545.003249994	|	119869.29174998887	|
 |	robertAlmeida	|	320.00366407999996ms	|	0	|	0	|	0	|
 |	rodrigocaldeira-elixir	|	12.607534439999997ms	|	0	|	65625.62299999999	|	121876.157	|
 |	ryangst-bun	|	1305.6865755699998ms	|	0	|	2507.0517499999996	|	4655.95325	|
