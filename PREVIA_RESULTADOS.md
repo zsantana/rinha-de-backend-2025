@@ -1,5 +1,5 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Sun Jul 13 10:48:38 PM -03 2025**
+Atualizado em **Sun Jul 13 11:13:22 PM -03 2025**
 
 
 | participante | bônus por desempenho (%) | multa ($) | lucro |
