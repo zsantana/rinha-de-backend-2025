@@ -21,7 +21,7 @@ services:
       - ConnectionStrings__Redis=redis:6379
       - Gateways__Primary=http://payment-processor-default:8080
       - Gateways__Fallback=http://payment-processor-fallback:8080
-      - DB_HOSTNAME=Host=db;Database=rinha;Username=admin;Password=123;No Reset On Close=true;Max Auto Prepare=10;Auto Prepare Min Usages=1;Pooling=true;Maximum Pool Size=10
+      - DB_HOSTNAME=Host=db;Database=rinha;Username=admin;Password=123;No Reset On Close=true;Max Auto Prepare=10;Auto Prepare Min Usages=1;Pooling=true;Maximum Pool Size=100
     deploy:
       resources:
         limits:
