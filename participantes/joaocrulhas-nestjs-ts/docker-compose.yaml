@@ -23,8 +23,6 @@ x-service-templates:
       - RINHA_TOKEN=123
     restart: unless-stopped
     depends_on:
-      - payment-processor-1
-      - payment-processor-2
       - redis
 
 services:
