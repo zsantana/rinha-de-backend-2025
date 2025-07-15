@@ -5,5 +5,4 @@ CREATE UNLOGGED TABLE payments (
                           requested_at TIMESTAMPTZ NOT NULL
 );
 
-CREATE INDEX idx_requested_at ON payments(requested_at);
-create index idx_requested_at_processor ON payments(requested_at, processor);
+create index CONCURRENTLY idx_requested_at_processor ON payments(requested_at, processor);
