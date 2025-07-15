@@ -21,10 +21,11 @@ O sistema é responsável por processar pagamentos de forma resiliente, utilizan
 | Serviço       | CPUs | Memória |
 | ------------- | ---- | ------- |
 | nginx         | 0.1  | 16MB    |
-| backend-api-1 | 0.2  | 75MB    |
-| backend-api-2 | 0.2  | 75MB    |
+| backend-api-1 | 0.1  | 64MB    |
+| backend-api-2 | 0.1  | 64MB    |
 | worker-light  | 0.3  | 48MB    |
-| worker-heavy  | 0.6  | 72MB    |
+| worker-heavy  | 0.7  | 80MB    |
+| health-worker | 0.1  | 14MB    |
 | redis         | 0.1  | 64MB    |
 | **Total**     | 1.5  | 350MB   |
 
@@ -34,6 +35,7 @@ O sistema é responsável por processar pagamentos de forma resiliente, utilizan
 ├── app/
 │   ├── __init__.py
 │   ├── config.py         # Configurações do sistema
+│   ├── health_check.py   # Worker de healthcheck dos gateways
 │   ├── main.py           # Ponto de entrada da API
 │   ├── models.py         # Modelos de dados
 │   ├── processor.py      # Processamento e envio de pagamentos
