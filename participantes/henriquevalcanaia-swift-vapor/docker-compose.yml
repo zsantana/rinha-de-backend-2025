@@ -36,6 +36,7 @@ services:
 
   api01:
     image: valcanaia/rinha-backend-2025-swift:latest
+    platform: linux/amd64
     environment:
       - ENVIRONMENT=production
       # CRITICAL: URLs mudaram de host.docker.internal para nomes dos containers
@@ -58,6 +59,7 @@ services:
 
   api02:
     image: valcanaia/rinha-backend-2025-swift:latest
+    platform: linux/amd64
     environment:
       - ENVIRONMENT=production
       # CRITICAL: URLs mudaram de host.docker.internal para nomes dos containers
