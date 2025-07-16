@@ -390,4 +390,5 @@ As tabelas abaixo oferem um resumo para facilitar a visão geral da solução.
 
 ## Outras Informações
 
+- As especificações sobre o servidor de testes podem ser encontradas [aqui](./SPECTESTENV.md).
 - O código fonte do **Payment Processor** está disponível [aqui](https://github.com/zanfranceschi/rinha-de-backend-2025-payment-processor).
