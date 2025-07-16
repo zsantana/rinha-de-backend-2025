@@ -1,7 +1,6 @@
 x-service-templates:
-  # Base app service template
   app-base: &app-base
-    image: joaocrulhas/rinha_backend:1.0
+    image: joaocrulhas/rinha_backend:1.1
     networks:
       - backend
       - payment-processor
@@ -30,6 +29,7 @@ services:
   app2:
     <<: *app-base
     container_name: app2
+#    platform: linux/amd64
     depends_on:
       redis:
         condition: service_healthy
@@ -37,6 +37,7 @@ services:
   app1:
     <<: *app-base
     container_name: app1
+#    platform: linux/amd64
     depends_on:
       redis:
         condition: service_healthy
