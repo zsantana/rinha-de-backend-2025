@@ -10,10 +10,9 @@ services:
       DISABLE_LOG: "true"
       SQLITE_PATH: "/dev/shm/database.sqlite3?sync=off&journal_mode=WAL&busy_timeout=1000"
       AMQP_URL: "amqp://guest:guest@lavinmq:5672/"
-      BATCH_INTERVAL: "5"
-      SKIP_DELAY: "true"
       PREFETCH_COUNT: "0"
-      SHARD_COUNT: "4"
+      SHARD_COUNT: "5"
+      SKIP_DELAY: "true"
     networks:
       - backend
       - payment-processor
@@ -31,22 +30,24 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '0.15'
-          memory: '20MB'
+          cpus: '0.1'
+          memory: '30MB'
   app2:
     <<: *app
     hostname: app2
+  app3:
+    <<: *app
+    hostname: app3
 
   consumer: &consumer
     <<: *app
-    hostname: "1"
     image: docker.io/lukas8219/rinha-de-backend-2025-worker:latest
+    hostname: "1"
     deploy:
       resources:
         limits:
           cpus: '0.25'
-          memory: '25MB'
-
+          memory: '35MB'
   consumer2:
     <<: *consumer
     hostname: "2"
@@ -56,6 +57,9 @@ services:
   consumer4:
     <<: *consumer
     hostname: "4"
+  consumer5:
+    <<: *consumer
+    hostname: "5"
 
   lavinmq:
     image: cloudamqp/lavinmq:latest
@@ -74,7 +78,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '0.1'
+          cpus: '0.05'
           memory: '35MB'
 
   nginx: # Load Balancer
@@ -97,7 +101,7 @@ services:
       resources:
         limits:
           cpus: '0.1'
-          memory: '35MB'
+          memory: '25MB'
 
 networks:
   backend:
