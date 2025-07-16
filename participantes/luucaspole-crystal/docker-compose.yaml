@@ -1,7 +1,7 @@
 version: '3.4'
 services:
   app1: &app
-    image: docker.io/lukas8219/rinha-de-backend-2025-app
+    image: docker.io/lukas8219/rinha-de-backend-2025-app:latest
     hostname: app1
     restart: unless-stopped
     environment:
@@ -40,12 +40,13 @@ services:
   consumer: &consumer
     <<: *app
     hostname: "1"
-    image: docker.io/lukas8219/rinha-de-backend-2025-worker
+    image: docker.io/lukas8219/rinha-de-backend-2025-worker:latest
     deploy:
       resources:
         limits:
           cpus: '0.25'
           memory: '25MB'
+
   consumer2:
     <<: *consumer
     hostname: "2"
