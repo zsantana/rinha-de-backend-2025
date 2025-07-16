@@ -30,3 +30,4 @@ Atualizado em **Wed Jul 16 04:50:09 PM -03 2025**
 |	rodrigo-schonardt-go	|	3.386434999999999ms	|	0.15227130000000003	|	0	|	145642.30463274848	|
 |	ryangst-bun	|	1323.74314443ms	|	0	|	0	|	0	|
 |	willzada-aGOrinha	|	26.902837090000045ms	|	0	|	0	|	32747.440000000002	|
+|	willzada-BUNrinha	|	17.814899719999982ms	|	0	|	0	|	2903.41	|
