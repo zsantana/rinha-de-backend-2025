@@ -20,4 +20,4 @@ Meu backend foi desenvolvido completamente em Go, utilizando o standard library 
 Aprendi muito sobre worker pools, concorrencia e a importancia de filas para lidar com tarefas assíncronas. A solução é escalável, pois novos workers podem ser adicionados facilmente, e o sistema é resiliente a falhas de processors, já que os pagamentos são reprocessados também.
 
 ## Repositório
-[https://github.com/artschur/rinha-de-backend-2025](https://github.com/artschur/rinha-de-backend-2025)
+[https://github.com/artschur/rinha-de-backend-source-code](https://github.com/artschur/rinha-de-backend-source-code)
