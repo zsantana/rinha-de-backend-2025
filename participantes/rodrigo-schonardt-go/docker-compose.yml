@@ -15,6 +15,7 @@ x-app-template: &app-template
     - PAYMENT_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080
     - PAYMENT_PROCESSOR_URL_FALLBACK=http://payment-processor-fallback:8080
     - DB_URL=postgres://postgres:postgres@postgres:5432/payments?sslmode=disable
+    - THROTTLE=0
   depends_on:
     postgres:
       condition: service_healthy
