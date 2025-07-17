@@ -29,3 +29,4 @@ Atualizado em **Thu Jul 17 03:39:32 AM -03 2025**
 |	ryangst-bun	|	1323.74314443ms	|	0	|	0	|	0	|
 |	willzada-aGOrinha	|	26.902837090000045ms	|	0	|	0	|	32747.440000000002	|
 |	willzada-BUNrinha	|	17.814899719999982ms	|	0	|	0	|	2903.41	|
+|	yanpitangui-dotnet	|	55.390722719999985ms	|	0	|	0	|	250926.065	|
