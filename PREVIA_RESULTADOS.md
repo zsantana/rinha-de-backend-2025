@@ -28,3 +28,4 @@ Atualizado em **Thu Jul 17 02:52:16 AM -03 2025**
 |	rodrigocaldeira-elixir	|	290.01029591000025ms	|	0	|	71232.44799999999	|	132288.832	|
 |	ryangst-bun	|	1323.74314443ms	|	0	|	0	|	0	|
 |	willzada-aGOrinha	|	26.902837090000045ms	|	0	|	0	|	32747.440000000002	|
+|	willzada-BUNrinha	|	17.814899719999982ms	|	0	|	0	|	2903.41	|
