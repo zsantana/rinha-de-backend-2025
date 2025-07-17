@@ -17,6 +17,7 @@ services:
     image: ricardovhz/rinha-2025:latest
     hostname: api01
     environment:
+      - WORKERS_NUMBER=20
       - DB_HOST=http://db:3000
       - DB_PORT=9042
       - DEFAULT_BACKEND_HOST=http://payment-processor-default:8080
