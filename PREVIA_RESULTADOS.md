@@ -26,3 +26,4 @@ Atualizado em **Thu Jul 17 12:56:28 PM -03 2025**
 |	ricardovhz	|	91.04761934ms	|	0	|	0	|	302819.295	|
 |	ricassiocosta-python	|	1480.26358162ms	|	0	|	65418.41424999415	|	121491.34074998915	|
 |	rodrigocaldeira-elixir	|	290.01029591000025ms	|	0	|	71232.44799999999	|	132288.832	|
+|	ryangst-bun	|	1323.74314443ms	|	0	|	0	|	0	|
