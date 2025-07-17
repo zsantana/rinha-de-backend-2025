@@ -1,6 +1,7 @@
 # Rinha de Backend 2025
 
 ## Stack: Rust com [may](https://github.com/Xudong-Huang/may) para async
+Repositorio: https://github.com/not4rt/rinha-2025
 
 ## Arquitetura
 - HAProxy: Load balancer (porta 9999) distribuindo tráfego entre 2 backends
