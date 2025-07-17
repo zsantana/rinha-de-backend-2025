@@ -10,8 +10,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.8"
-          memory: "225MB"
+          cpus: "0.5"
+          memory: "200MB"
 
   api01: &api
     image: ricardovhz/rinha-2025:latest
@@ -29,8 +29,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.25"
-          memory: "55MB"
+          cpus: "0.4"
+          memory: "65MB"
 
   api02:
     <<: *api
@@ -52,7 +52,7 @@ services:
       resources:
         limits:
           cpus: "0.2"
-          memory: "15MB"
+          memory: "20MB"
 
 networks:
   payment-processor:
