@@ -17,18 +17,15 @@ services:
   api01:
     <<: *api_template
     hostname: api01
-    container_name: andersongomes001_api01
     depends_on:
       - redis
   api02:
     <<: *api_template
     hostname: api02
-    container_name: andersongomes001_api02
     depends_on:
       - redis
   redis:
     image: redis:8.0.3-alpine
-    container_name: andersongomes001_redis
     hostname: redis
     networks:
       - backend
@@ -41,7 +38,6 @@ services:
           cpus: "0.3"
           memory: "50MB"
   nginx:
-    container_name: andersongomes001_nginx
     image: nginx
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf:ro
