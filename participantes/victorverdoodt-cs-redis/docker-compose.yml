@@ -72,8 +72,6 @@ services:
     image: redis:7.2-alpine
     container_name: redis-cache
     hostname: redis
-    volumes:
-      - ./redis-conf/redis.conf:/usr/local/etc/redis/redis.conf
     command:
       [
         "redis-server",
