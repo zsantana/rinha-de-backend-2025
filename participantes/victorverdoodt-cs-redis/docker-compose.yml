@@ -41,7 +41,7 @@ services:
       - Gateways__Fallback=http://payment-processor-fallback:8080
       - Workers__ConcurrencyLevel=2
       - Workers__BatchSize=10
-      - Workers__FlushTimeoutMs=25
+      - Workers__FlushTimeoutMs=0
     deploy:
       resources:
         limits:
@@ -65,7 +65,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.2"
+          cpus: "0.15"
           memory: "10MB"
 
   redis:
@@ -95,7 +95,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.5"
+          cpus: "0.55"
           memory: "120MB"
 
 networks:
