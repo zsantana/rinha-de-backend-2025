@@ -36,3 +36,4 @@ Atualizado em **Sat Jul 19 09:59:32 AM -03 2025**
 |	rodrigo-schonardt-go	|	4.463430510000002ms	|	0.13073138979999996	|	0	|	136510.18163774323	|
 |	ryangst-bun	|	1323.74314443ms	|	0	|	0	|	0	|
 |	victorverdoodt-cs	|	82.76182875ms	|	0	|	0	|	0	|
+|	willzada-aGOrinha	|	26.902837090000045ms	|	0	|	0	|	32747.440000000002	|
