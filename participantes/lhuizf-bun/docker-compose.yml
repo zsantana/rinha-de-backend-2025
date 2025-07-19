@@ -22,7 +22,7 @@ services:
       resources:
         limits:
           cpus: "0.40"
-          memory: "90MB"
+          memory: "110MB"
 
   api2:
     <<: *api
@@ -46,7 +46,7 @@ services:
       resources:
         limits:
           cpus: "0.15"
-          memory: "45MB"
+          memory: "35MB"
 
   db:
     image: postgres:17-alpine
@@ -66,7 +66,7 @@ services:
       resources:
         limits:
           cpus: "0.40"
-          memory: "110MB"
+          memory: "80MB"
 
   load-balancer:
     image: nginx:1.25.2-alpine
