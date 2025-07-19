@@ -39,3 +39,4 @@ Atualizado em **Sat Jul 19 02:11:57 PM -03 2025**
 |	rodrigo-schonardt-go	|	4.463430510000002ms	|	0.13073138979999996	|	0	|	136510.18163774323	|
 |	ryangst-bun	|	1323.74314443ms	|	0	|	0	|	0	|
 |	victorverdoodt-cs	|	82.76182875ms	|	0	|	0	|	0	|
+|	victorverdoodt-cs-redis	|	87.91491829000005ms	|	0	|	108835.7865	|	202123.60350000003	|
