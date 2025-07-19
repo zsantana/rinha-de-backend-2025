@@ -38,3 +38,4 @@ Atualizado em **Sat Jul 19 02:24:28 PM -03 2025**
 |	rodrigocaldeira-elixir	|	7.998594679999998ms	|	0.06002810640000004	|	0	|	131450.74638612886	|
 |	rodrigo-schonardt-go	|	4.463430510000002ms	|	0.13073138979999996	|	0	|	136510.18163774323	|
 |	ryangst-bun	|	1323.74314443ms	|	0	|	0	|	0	|
+|	victorverdoodt-cs	|	82.76182875ms	|	0	|	0	|	0	|
