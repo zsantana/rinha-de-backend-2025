@@ -14,18 +14,19 @@ Solução em **Elixir + BEAM** para o desafio da Rinha de Backend 2025, com foco
 ## 🧠 Arquitetura
 
 ```mermaid
+
 graph TD
   subgraph Clients
     C1[Load Tester / Client API]
   end
 
   subgraph Proxy
-    NGINX[NGINX Reverse Proxy]
+    NGINX[NGINX]
   end
 
   subgraph Elixir Nodes
-    APP1[app1 \n Elixir + BEAM]
-    APP2[app2 \n Elixir + BEAM]
+    APP1[app1]
+    APP2[app2]
   end
 
   subgraph External
@@ -42,3 +43,4 @@ graph TD
   APP1 --> FBACK
   APP2 --> DEF
   APP2 --> FBACK
+
