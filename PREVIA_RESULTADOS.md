@@ -1,5 +1,5 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Sat Jul 19 01:09:30 PM -03 2025**
+Atualizado em **Sat Jul 19 01:22:00 PM -03 2025**
 
 
 | participante | p99 | bônus por desempenho (%) | multa ($) | lucro |
@@ -33,3 +33,14 @@ Atualizado em **Sat Jul 19 01:09:30 PM -03 2025**
 |	not4rt-rustcoroutines	|	2.417091080000016ms	|	0.17165817839999967	|	0	|	201475.8681589075	|
 |	oliveigah	|	2.8269782799999965ms	|	0.16346043440000008	|	0	|	362482.37520636356	|
 |	panissetrafael-go	|	2.8954178300000084ms	|	0.16209164339999985	|	75528.09809999999	|	175244.96373972972	|
+|	ricardovhz	|	56.526653970000254ms	|	0	|	99663.57799999998	|	185089.50199999998	|
+|	ricassiocosta-python	|	899.20560516ms	|	0	|	69629.10499999151	|	129311.19499998423	|
+|	rodrigocaldeira-elixir	|	7.998594679999998ms	|	0.06002810640000004	|	0	|	131450.74638612886	|
+|	rodrigo-schonardt-go	|	4.463430510000002ms	|	0.13073138979999996	|	0	|	136510.18163774323	|
+|	ryangst-bun	|	1323.74314443ms	|	0	|	0	|	0	|
+|	victorverdoodt-cs	|	82.76182875ms	|	0	|	0	|	0	|
+|	victorverdoodt-cs-redis	|	87.91491829000005ms	|	0	|	108835.7865	|	202123.60350000003	|
+|	wanderdotnet	|	5.060374989999961ms	|	0.11879250020000079	|	0	|	181222.04274617112	|
+|	willzada-aGOrinha	|	26.902837090000045ms	|	0	|	0	|	32747.440000000002	|
+|	willzada-BUNrinha	|	17.814899719999982ms	|	0	|	0	|	2903.41	|
+|	yanpitangui-dotnet	|	59.305835ms	|	0	|	107416.3195	|	199487.45050000004	|
