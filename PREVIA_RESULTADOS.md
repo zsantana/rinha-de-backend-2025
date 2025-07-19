@@ -38,3 +38,4 @@ Atualizado em **Sat Jul 19 09:59:32 AM -03 2025**
 |	victorverdoodt-cs	|	82.76182875ms	|	0	|	0	|	0	|
 |	willzada-aGOrinha	|	26.902837090000045ms	|	0	|	0	|	32747.440000000002	|
 |	willzada-BUNrinha	|	17.814899719999982ms	|	0	|	0	|	2903.41	|
+|	yanpitangui-dotnet	|	59.305835ms	|	0	|	107416.3195	|	199487.45050000004	|
