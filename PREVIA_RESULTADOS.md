@@ -40,3 +40,4 @@ Atualizado em **Sat Jul 19 12:44:31 PM -03 2025**
 |	ryangst-bun	|	1323.74314443ms	|	0	|	0	|	0	|
 |	victorverdoodt-cs	|	82.76182875ms	|	0	|	0	|	0	|
 |	victorverdoodt-cs-redis	|	87.91491829000005ms	|	0	|	108835.7865	|	202123.60350000003	|
+|	wanderdotnet	|	5.060374989999961ms	|	0.11879250020000079	|	0	|	181222.04274617112	|
