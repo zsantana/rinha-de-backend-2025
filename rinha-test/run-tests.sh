@@ -97,6 +97,7 @@ while true; do
             cat $partialResult | jq -r '(["|", .participante, "|", .p99.valor, "|", .p99.bonus, "|", .multa.total, "|", .total_liquido, "|", "['$participant']('$link')"]) | @tsv' >> ../PREVIA_RESULTADOS.md
         fi
     )
+    done
 
     echo -e "### Submissões com Erro" >> ../PREVIA_RESULTADOS.md
     echo -e "\n" >> ../PREVIA_RESULTADOS.md
@@ -108,12 +109,12 @@ while true; do
         link="https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/$participant"
         echo "| $participant | [logs]($link) |"
     )
+    done
 
     git pull
     git add ../PREVIA_RESULTADOS.md
     git commit -m "previa resultados @ $(date)"
     git push
-    done
     echo "$(date) - waiting some time until next round..."
     sleep 300
 done
