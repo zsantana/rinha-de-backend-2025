@@ -31,3 +31,4 @@ Atualizado em **Sun Jul 20 06:11:28 PM -03 2025**
 |	kauan-carvalho-elixir	|	38.80337679999997ms	|	0	|	108314.8045	|	201156.0655	|	[logs](../participantes/kauan-carvalho-elixir)
 |	kauan-carvalho-go	|	5.118827370000086ms	|	0.11762345259999828	|	0	|	346592.50110582355	|	[logs](../participantes/kauan-carvalho-go)
 |	leoralph	|	81.85553900000006ms	|	0	|	0	|	180885.03	|	[logs](../participantes/leoralph)
+|	lhuizf-bun	|	90.17778007999995ms	|	0	|	99037.4245	|	183926.6455	|	[logs](../participantes/lhuizf-bun)
