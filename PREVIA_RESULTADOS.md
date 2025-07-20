@@ -23,3 +23,4 @@ Atualizado em **Sun Jul 20 06:11:28 PM -03 2025**
 |	henriquevalcanaia-swift-vapor	|	108.8489758000001ms	|	0	|	0	|	0	|	[logs](../participantes/henriquevalcanaia-swift-vapor)
 |	jairoandre	|	70.21124328000005ms	|	0	|	108854.59199999999	|	202158.528	|	[logs](../participantes/jairoandre)
 |	jccl	|	2.2906733400000006ms	|	0.17418653319999997	|	0	|	86509.09695714057	|	[logs](../participantes/jccl)
+|	joao-bittencourt-php	|	6.639060099999985ms	|	0.0872187980000003	|	0	|	0	|	[logs](../participantes/joao-bittencourt-php)
