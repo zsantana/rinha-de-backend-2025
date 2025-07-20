@@ -41,3 +41,4 @@ Atualizado em **Sun Jul 20 06:11:28 PM -03 2025**
 |	not4rt-rustcoroutines	|	2.417091080000016ms	|	0.17165817839999967	|	0	|	201475.8681589075	|	[logs](../participantes/not4rt-rustcoroutines)
 |	oliveigah	|	2.8269782799999965ms	|	0.16346043440000008	|	0	|	362482.37520636356	|	[logs](../participantes/oliveigah)
 |	panissetrafael-go	|	2.8954178300000084ms	|	0.16209164339999985	|	75528.09809999999	|	175244.96373972972	|	[logs](../participantes/panissetrafael-go)
+|	ricardovhz	|	56.526653970000254ms	|	0	|	99663.57799999998	|	185089.50199999998	|	[logs](../participantes/ricardovhz)
