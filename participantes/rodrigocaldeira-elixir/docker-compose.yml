@@ -19,7 +19,7 @@ services:
 
   worker:
     hostname: worker
-    image: rodscaldeira/rinha_backend_2025:202507201828
+    image: rodscaldeira/rinha_backend_2025:202507201856
     networks:
       - rinha
       - payment-processor
@@ -40,7 +40,7 @@ services:
 
   api01: &api
     hostname: api01
-    image: rodscaldeira/rinha_backend_2025:202507201828
+    image: rodscaldeira/rinha_backend_2025:202507201856
     ports:
       - "8080:8080"
     networks:
