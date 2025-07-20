@@ -49,3 +49,4 @@ Atualizado em **Sun Jul 20 06:11:28 PM -03 2025**
 |	victorverdoodt-cs	|	86.63267381999995ms	|	0	|	0	|	0	|	[logs](../participantes/victorverdoodt-cs)
 |	victorverdoodt-cs-redis	|	87.91491829000005ms	|	0	|	108835.7865	|	202123.60350000003	|	[logs](../participantes/victorverdoodt-cs-redis)
 |	wanderdotnet	|	5.060374989999961ms	|	0.11879250020000079	|	0	|	181222.04274617112	|	[logs](../participantes/wanderdotnet)
+|	willzada-aGOrinha	|	26.902837090000045ms	|	0	|	0	|	32747.440000000002	|	[logs](../participantes/willzada-aGOrinha)
