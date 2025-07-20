@@ -11,3 +11,4 @@ Atualizado em **Sun Jul 20 06:11:28 PM -03 2025**
 |	bine-rinha-backend-react-php	|	30.194677600000023ms	|	0	|	107502.2676000251	|	199647.0684000466	|	[logs](../participantes/bine-rinha-backend-react-php)
 |	davidalecrim1-go-1	|	3.96339118000001ms	|	0.1407321763999998	|	0	|	337010.39677057345	|	[logs](../participantes/davidalecrim1-go-1)
 |	davidalecrim1-go-2	|	6.9025167200000235ms	|	0.08194966559999953	|	106288.33774999998	|	222279.18078083513	|	[logs](../participantes/davidalecrim1-go-2)
+|	davigga-node-2	|	64.64690812000008ms	|	0	|	102979.96274999998	|	191248.50225	|	[logs](../participantes/davigga-node-2)
