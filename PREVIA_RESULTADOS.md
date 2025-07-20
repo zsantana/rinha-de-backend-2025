@@ -1,5 +1,5 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Sun Jul 20 06:34:29 PM -03 2025** (**66** resultados)
+Atualizado em **Sun Jul 20 06:40:10 PM -03 2025** (**66** resultados)
 
 
 | participante | p99 | bônus por desempenho (%) | multa ($) | lucro | submissão |
@@ -52,3 +52,8 @@ Atualizado em **Sun Jul 20 06:34:29 PM -03 2025** (**66** resultados)
 |	willzada-aGOrinha	|	26.902837090000045ms	|	0	|	0	|	32747.440000000002	|	[willzada-aGOrinha](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/willzada-aGOrinha)
 |	willzada-BUNrinha	|	17.814899719999982ms	|	0	|	0	|	2903.41	|	[willzada-BUNrinha](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/willzada-BUNrinha)
 |	yanpitangui-dotnet	|	59.305835ms	|	0	|	107416.3195	|	199487.45050000004	|	[yanpitangui-dotnet](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/yanpitangui-dotnet)
+### Submissões com Erro
+
+
+| participante | submissão |
+| -- | -- |
