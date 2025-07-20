@@ -2,7 +2,7 @@ services:
   rinhadebackend-aot:
     &api
     hostname: api01
-    image: vyctor17/rinhadebackendaot:2025
+    image: vyctor17/rinhadebackendaot:2025-2
     depends_on:
       db:
         condition: service_healthy
@@ -31,7 +31,7 @@ services:
     hostname: api02
 
   rinhadebackend-aot.worker:
-    image: vyctor17/rinhadebackendaotworker:2025
+    image: vyctor17/rinhadebackendaotworker:2025-2
     networks:
       - backend
       - payment-processor
