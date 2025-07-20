@@ -103,9 +103,9 @@ while true; do
     echo -e "\n" >> ../PREVIA_RESULTADOS.md
     echo -e "| participante | submissão |" >> ../PREVIA_RESULTADOS.md
     echo -e "| -- | -- |" >> ../PREVIA_RESULTADOS.md
-    for errorLog in ../participantes/*/error.log; do
+    for errorLog in ../participantes/*/error.logs; do
     (
-        participant=$(echo $errorLog | sed -e 's/..\/participantes\///g' -e 's/\///g' -e 's/error\.log//g')
+        participant=$(echo $errorLog | sed -e 's/..\/participantes\///g' -e 's/\///g' -e 's/error\.logs//g')
         link="https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/$participant"
         echo "| $participant | [logs]($link) |"
     )
