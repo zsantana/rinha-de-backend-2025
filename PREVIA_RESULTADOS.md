@@ -1,5 +1,5 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Sun Jul 20 06:40:10 PM -03 2025** (**66** resultados)
+Atualizado em **Sun Jul 20 06:46:57 PM -03 2025** (**65** resultados)
 
 
 | participante | p99 | bônus por desempenho (%) | multa ($) | lucro | submissão |
@@ -14,7 +14,6 @@ Atualizado em **Sun Jul 20 06:40:10 PM -03 2025** (**66** resultados)
 |	davigga-node-2	|	64.64690812000008ms	|	0	|	102979.96274999998	|	191248.50225	|	[davigga-node-2](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/davigga-node-2)
 |	dudebank	|	3.4878614099999847ms	|	0.1502427718000003	|	0	|	357705.11397666996	|	[dudebank](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/dudebank)
 |	el_yawd-crab	|	3.4197579599999726ms	|	0.15160484080000056	|	109894.81474999998	|	251692.04423548369	|	[el_yawd-crab](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/el_yawd-crab)
-|	emiliosheinz-go	|	6.0971996800000055ms	|	0.0980560063999999	|	81163.84149999046	|	173471.71181875843	|	[emiliosheinz-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/emiliosheinz-go)
 |	felipemcassiano	|	70.24968580999999ms	|	0	|	0	|	0	|	[felipemcassiano](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/felipemcassiano)
 |	gabxdev-java-1	|	4.2432716299999775ms	|	0.13513456740000046	|	0	|	358751.15813894034	|	[gabxdev-java-1](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/gabxdev-java-1)
 |	gaoliveira21	|	3.447856ms	|	0.15104288000000002	|	0	|	260126.89691239683	|	[gaoliveira21](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/gaoliveira21)
@@ -44,6 +43,7 @@ Atualizado em **Sun Jul 20 06:40:10 PM -03 2025** (**66** resultados)
 |	ricardovhz	|	56.526653970000254ms	|	0	|	99663.57799999998	|	185089.50199999998	|	[ricardovhz](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/ricardovhz)
 |	ricassiocosta-python	|	899.20560516ms	|	0	|	69629.10499999151	|	129311.19499998423	|	[ricassiocosta-python](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/ricassiocosta-python)
 |	robertAlmeida	|	20.628037520000223ms	|	0	|	98175.15750000002	|	182325.29250000004	|	[robertAlmeida](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/robertAlmeida)
+|	rodrigocaldeira-elixir	|	168.9350983600002ms	|	0	|	99126.57649998521	|	184092.21349997257	|	[rodrigocaldeira-elixir](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/rodrigocaldeira-elixir)
 |	rodrigo-schonardt-go	|	4.463430510000002ms	|	0.13073138979999996	|	0	|	136510.18163774323	|	[rodrigo-schonardt-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/rodrigo-schonardt-go)
 |	ryangst-bun	|	1323.74314443ms	|	0	|	0	|	0	|	[ryangst-bun](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/ryangst-bun)
 |	victorverdoodt-cs	|	86.63267381999995ms	|	0	|	0	|	0	|	[victorverdoodt-cs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/victorverdoodt-cs)
