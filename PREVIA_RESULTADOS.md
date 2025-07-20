@@ -8,3 +8,4 @@ Atualizado em **Sun Jul 20 06:11:28 PM -03 2025**
 |	andersongomes001	|	2.928690590000002ms	|	0.16142618819999996	|	110177.24550000756	|	255430.57812127637	|	[logs](../participantes/andersongomes001)
 |	artschur	|	6.652893839999999ms	|	0.08694212320000003	|	107739.8437499827	|	226851.5120181386	|	[logs](../participantes/artschur)
 |	bine-rinha-backend-golang	|	4.687741480000001ms	|	0.1262451704	|	103429.90174998394	|	229391.31916677585	|	[logs](../participantes/bine-rinha-backend-golang)
+|	bine-rinha-backend-react-php	|	30.194677600000023ms	|	0	|	107502.2676000251	|	199647.0684000466	|	[logs](../participantes/bine-rinha-backend-react-php)
