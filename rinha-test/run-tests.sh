@@ -82,7 +82,7 @@ while true; do
     echo "generating results preview..."
     
     echo -e "# Prévia do Resultados da Rinha de Backend 2025" > ../PREVIA_RESULTADOS.md
-    echo -e "Atualizado em **$(date)**" >> ../PREVIA_RESULTADOS.md
+    echo -e "Atualizado em **$(date)** (**$(ls ../participantes | wc -l)** resultados)" >> ../PREVIA_RESULTADOS.md
     echo -e "*Testes executados com MAX_REQUESTS=$MAX_REQUESTS*."
     echo -e "\n" >> ../PREVIA_RESULTADOS.md
     echo -e "| participante | p99 | bônus por desempenho (%) | multa ($) | lucro | logs |" >> ../PREVIA_RESULTADOS.md
