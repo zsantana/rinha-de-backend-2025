@@ -35,3 +35,4 @@ Atualizado em **Sun Jul 20 06:11:28 PM -03 2025**
 |	lpicanco-rust	|	6.321806599999985ms	|	0.0935638680000003	|	109121.00325	|	231824.10073317314	|	[logs](../participantes/lpicanco-rust)
 |	lucasgoveia	|	3.366465199999988ms	|	0.15267069600000024	|	0	|	348509.58726421	|	[logs](../participantes/lucasgoveia)
 |	lucas-laurentino-go	|	2.30862ms	|	0.17382760000000003	|	0	|	363061.055871162	|	[logs](../participantes/lucas-laurentino-go)
+|	luizcordista-go	|	8.90209172000001ms	|	0.0419581655999998	|	0	|	314262.2776060129	|	[logs](../participantes/luizcordista-go)
