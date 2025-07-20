@@ -13,3 +13,4 @@ Atualizado em **Sun Jul 20 06:11:28 PM -03 2025**
 |	davidalecrim1-go-2	|	6.9025167200000235ms	|	0.08194966559999953	|	106288.33774999998	|	222279.18078083513	|	[logs](../participantes/davidalecrim1-go-2)
 |	davigga-node-2	|	64.64690812000008ms	|	0	|	102979.96274999998	|	191248.50225	|	[logs](../participantes/davigga-node-2)
 |	dudebank	|	3.4878614099999847ms	|	0.1502427718000003	|	0	|	357705.11397666996	|	[logs](../participantes/dudebank)
+|	el_yawd-crab	|	3.4197579599999726ms	|	0.15160484080000056	|	109894.81474999998	|	251692.04423548369	|	[logs](../participantes/el_yawd-crab)
