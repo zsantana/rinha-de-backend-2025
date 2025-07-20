@@ -18,3 +18,4 @@ Atualizado em **Sun Jul 20 06:11:28 PM -03 2025**
 |	felipemcassiano	|	70.24968580999999ms	|	0	|	0	|	0	|	[logs](../participantes/felipemcassiano)
 |	gabxdev-java-1	|	4.2432716299999775ms	|	0.13513456740000046	|	0	|	358751.15813894034	|	[logs](../participantes/gabxdev-java-1)
 |	gaoliveira21	|	3.447856ms	|	0.15104288000000002	|	0	|	260126.89691239683	|	[logs](../participantes/gaoliveira21)
+|	gtiburcio-go	|	3.691863440000055ms	|	0.1461627311999989	|	0	|	362899.121345511	|	[logs](../participantes/gtiburcio-go)
