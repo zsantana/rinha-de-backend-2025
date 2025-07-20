@@ -91,9 +91,10 @@ while true; do
     for partialResult in ../participantes/*/partial-results.json; do
     (
         participant=$(echo $partialResult | sed -e 's/..\/participantes\///g' -e 's/\///g' -e 's/partial\-results\.json//g')
+        logsLink="https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/$participant"
         
         if [ -s $partialResult ]; then
-            cat $partialResult | jq -r '(["|", .participante, "|", .p99.valor, "|", .p99.bonus, "|", .multa.total, "|", .total_liquido, "|", "[logs](../participantes/'$participant')"]) | @tsv' >> ../PREVIA_RESULTADOS.md
+            cat $partialResult | jq -r '(["|", .participante, "|", .p99.valor, "|", .p99.bonus, "|", .multa.total, "|", .total_liquido, "|", "[logs]('$logsLink')"]) | @tsv' >> ../PREVIA_RESULTADOS.md
         fi
     )
 
