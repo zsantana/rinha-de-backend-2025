@@ -26,3 +26,4 @@ Atualizado em **Sun Jul 20 06:11:28 PM -03 2025**
 |	joao-bittencourt-php	|	6.639060099999985ms	|	0.0872187980000003	|	0	|	0	|	[logs](../participantes/joao-bittencourt-php)
 |	joaocrulhas-nestjs-ts	|	570.2154084699998ms	|	0	|	0	|	0	|	[logs](../participantes/joaocrulhas-nestjs-ts)
 |	joaoreisa-go	|	7.511443270000003ms	|	0.06977113459999995	|	86285.55425	|	177445.28937746387	|	[logs](../participantes/joaoreisa-go)
+|	joelgarciajr84-go	|	2.494507449999998ms	|	0.17010985100000003	|	60074.16975	|	140764.05257891776	|	[logs](../participantes/joelgarciajr84-go)
