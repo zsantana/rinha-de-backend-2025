@@ -15,3 +15,4 @@ Atualizado em **Sun Jul 20 06:11:28 PM -03 2025**
 |	dudebank	|	3.4878614099999847ms	|	0.1502427718000003	|	0	|	357705.11397666996	|	[logs](../participantes/dudebank)
 |	el_yawd-crab	|	3.4197579599999726ms	|	0.15160484080000056	|	109894.81474999998	|	251692.04423548369	|	[logs](../participantes/el_yawd-crab)
 |	emiliosheinz-go	|	6.0971996800000055ms	|	0.0980560063999999	|	81163.84149999046	|	173471.71181875843	|	[logs](../participantes/emiliosheinz-go)
+|	felipemcassiano	|	70.24968580999999ms	|	0	|	0	|	0	|	[logs](../participantes/felipemcassiano)
