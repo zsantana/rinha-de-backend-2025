@@ -28,3 +28,4 @@ Atualizado em **Sun Jul 20 06:11:28 PM -03 2025**
 |	joaoreisa-go	|	7.511443270000003ms	|	0.06977113459999995	|	86285.55425	|	177445.28937746387	|	[logs](../participantes/joaoreisa-go)
 |	joelgarciajr84-go	|	2.494507449999998ms	|	0.17010985100000003	|	60074.16975	|	140764.05257891776	|	[logs](../participantes/joelgarciajr84-go)
 |	josafaverissimo-java-01	|	53.68094809999987ms	|	0	|	17189.234999999997	|	31922.865	|	[logs](../participantes/josafaverissimo-java-01)
+|	kauan-carvalho-elixir	|	38.80337679999997ms	|	0	|	108314.8045	|	201156.0655	|	[logs](../participantes/kauan-carvalho-elixir)
