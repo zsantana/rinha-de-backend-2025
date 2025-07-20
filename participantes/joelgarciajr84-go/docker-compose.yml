@@ -2,7 +2,6 @@
 services:
   rinha_1:
     image: joelgarciajr84/rinha-backend-go:latest
-    build: .
     init: true
     networks:
       - backend
@@ -31,7 +30,6 @@ services:
 
   rinha_2:
     image: joelgarciajr84/rinha-backend-go:latest
-    build: .
     init: true
     networks:
       - backend
