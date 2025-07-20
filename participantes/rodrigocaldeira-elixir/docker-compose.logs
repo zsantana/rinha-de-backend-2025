@@ -1,0 +1,197 @@
+
+ Network rinha  Creating
+ Network rinha  Created
+ Container rodrigocaldeira-elixir-worker-1  Creating
+ Container rodrigocaldeira-elixir-worker-1  Created
+ Container rodrigocaldeira-elixir-api02-1  Creating
+ Container rodrigocaldeira-elixir-api01-1  Creating
+ Container rodrigocaldeira-elixir-api01-1  Created
+ Container rodrigocaldeira-elixir-api02-1  Created
+ Container rodrigocaldeira-elixir-nginx-1  Creating
+ Container rodrigocaldeira-elixir-nginx-1  Created
+Attaching to api01-1, api02-1, nginx-1, worker-1
+nginx-1   | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+nginx-1   | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+nginx-1   | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+nginx-1   | 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+nginx-1   | 10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
+nginx-1   | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+nginx-1   | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+nginx-1   | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+nginx-1   | /docker-entrypoint.sh: Configuration complete; ready for start up
+worker-1  | ERROR! Config provider Config.Reader failed with:
+worker-1  | Runtime terminating during boot ({#{message=><<80,108,101,97,115,101,44,32,115,101,116,32,68,65,84,65,66,65,83,69,95,80,65,84,72,32,101,110,118,32,118,97,114,10>>,'__struct__'=>'Elixir.RuntimeError','__exception__'=>true},[{elixir_eval,'__FILE__',1,[{file,"/app/releases/1.0.0/runtime.exs"},{line,16}]},{elixir,eval_external_handler,3,[{file,"src/elixir.erl"},{line,386},{error_info,#{module=>'Elixir.Exception'}}]},{erl_eval,do_apply,7,[{file,"erl_eval.erl"},{line,919}]},{erl_eval,expr,6,[{file,"erl_eval.erl"},{line,663}]},{erl_eval,exprs,6,[{file,"erl_eval.erl"},{line,271}]},{elixir,eval_forms,4,[{file,"src/elixir.erl"},{line,364}]},{'Elixir.Module.ParallelChecker',verify,1,[{file,"lib/module/parallel_checker.ex"},{line,120}]},{'Elixir.Code',validated_eval_string,3,[{file,"lib/code.ex"},{line,572}]}]})
+worker-1  | 
+worker-1  | Crash dump is being written to: erl_crash.dump...done
+[Kworker-1 exited with code 1
+nginx-1   | 2025/07/20 20:33:04 [error] 30#30: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.21.0.1, server: , request: "GET /payments-summary HTTP/1.1", upstream: "http://172.21.0.4:8080/payments-summary", host: "localhost:9999"
+nginx-1   | 2025/07/20 20:33:04 [error] 30#30: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.21.0.1, server: , request: "GET /payments-summary HTTP/1.1", upstream: "http://172.21.0.3:8081/payments-summary", host: "localhost:9999"
+api02-1   | 
+api02-1   | 20:33:07.109 [info] Running Rinha.Router with Bandit 1.7.0 at 0.0.0.0:8081 (http)
+api01-1   | 
+api01-1   | 20:33:07.111 [info] Running Rinha.Router with Bandit 1.7.0 at 0.0.0.0:8080 (http)
+nginx-1   | 2025/07/20 20:33:09 [error] 30#30: *4 no live upstreams while connecting to upstream, client: 172.21.0.1, server: , request: "GET /payments-summary HTTP/1.1", upstream: "http://api/payments-summary", host: "localhost:9999"
+nginx-1   | 2025/07/20 20:33:14 [error] 30#30: *5 no live upstreams while connecting to upstream, client: 172.21.0.1, server: , request: "GET /payments-summary HTTP/1.1", upstream: "http://api/payments-summary", host: "localhost:9999"
+api02-1   | 
+api02-1   | 20:33:19.474 [info] GET /payments-summary
+api02-1   | 
+api02-1   | 20:33:19.623 [error] ** (exit) exited in: GenServer.call({Rinha.TaskSupervisor, :worker@worker}, {:start_task, [{:api02@api02, #PID<0.1603.0>, #PID<0.1603.0>}, :monitor], :temporary, nil}, :infinity)
+api02-1   |     ** (EXIT) no connection to worker@worker
+api02-1   |     (elixir 1.18.2) lib/gen_server.ex:1128: GenServer.call/3
+api02-1   |     (elixir 1.18.2) lib/task/supervisor.ex:598: Task.Supervisor.async/6
+api02-1   |     (rinha 1.0.0) lib/rinha.ex:31: Rinha.summary/1
+api02-1   |     (rinha 1.0.0) lib/rinha/router.ex:16: anonymous fn/2 in Rinha.Router.do_match/4
+api02-1   |     (rinha 1.0.0) deps/plug/lib/plug/router.ex:246: anonymous fn/4 in Rinha.Router.dispatch/2
+api02-1   |     (telemetry 1.3.0) /app/deps/telemetry/src/telemetry.erl:324: :telemetry.span/3
+api02-1   |     (rinha 1.0.0) deps/plug/lib/plug/router.ex:242: Rinha.Router.dispatch/2
+api02-1   |     (rinha 1.0.0) lib/rinha/router.ex:1: Rinha.Router.plug_builder_call/2
+api02-1   | 
+api02-1   | 
+api02-1   | 20:33:24.634 [info] GET /payments-summary
+api02-1   | 
+api02-1   | 20:33:24.645 [error] ** (exit) exited in: GenServer.call({Rinha.TaskSupervisor, :worker@worker}, {:start_task, [{:api02@api02, #PID<0.1606.0>, #PID<0.1606.0>}, :monitor], :temporary, nil}, :infinity)
+api02-1   |     ** (EXIT) no connection to worker@worker
+api02-1   |     (elixir 1.18.2) lib/gen_server.ex:1128: GenServer.call/3
+api02-1   |     (elixir 1.18.2) lib/task/supervisor.ex:598: Task.Supervisor.async/6
+api02-1   |     (rinha 1.0.0) lib/rinha.ex:31: Rinha.summary/1
+api02-1   |     (rinha 1.0.0) lib/rinha/router.ex:16: anonymous fn/2 in Rinha.Router.do_match/4
+api02-1   |     (rinha 1.0.0) deps/plug/lib/plug/router.ex:246: anonymous fn/4 in Rinha.Router.dispatch/2
+api02-1   |     (telemetry 1.3.0) /app/deps/telemetry/src/telemetry.erl:324: :telemetry.span/3
+api02-1   |     (rinha 1.0.0) deps/plug/lib/plug/router.ex:242: Rinha.Router.dispatch/2
+api02-1   |     (rinha 1.0.0) lib/rinha/router.ex:1: Rinha.Router.plug_builder_call/2
+api02-1   | 
+api01-1   | 
+api01-1   | 20:33:29.656 [info] GET /payments-summary
+api01-1   | 
+api01-1   | 20:33:29.663 [error] ** (exit) exited in: GenServer.call({Rinha.TaskSupervisor, :worker@worker}, {:start_task, [{:api01@api01, #PID<0.1603.0>, #PID<0.1603.0>}, :monitor], :temporary, nil}, :infinity)
+api01-1   |     ** (EXIT) no connection to worker@worker
+api01-1   |     (elixir 1.18.2) lib/gen_server.ex:1128: GenServer.call/3
+api01-1   |     (elixir 1.18.2) lib/task/supervisor.ex:598: Task.Supervisor.async/6
+api01-1   |     (rinha 1.0.0) lib/rinha.ex:31: Rinha.summary/1
+api01-1   |     (rinha 1.0.0) lib/rinha/router.ex:16: anonymous fn/2 in Rinha.Router.do_match/4
+api01-1   |     (rinha 1.0.0) deps/plug/lib/plug/router.ex:246: anonymous fn/4 in Rinha.Router.dispatch/2
+api01-1   |     (telemetry 1.3.0) /app/deps/telemetry/src/telemetry.erl:324: :telemetry.span/3
+api01-1   |     (rinha 1.0.0) deps/plug/lib/plug/router.ex:242: Rinha.Router.dispatch/2
+api01-1   |     (rinha 1.0.0) lib/rinha/router.ex:1: Rinha.Router.plug_builder_call/2
+api01-1   | 
+api02-1   | 
+api02-1   | 20:33:34.673 [info] GET /payments-summary
+api02-1   | 
+api02-1   | 20:33:34.675 [error] ** (exit) exited in: GenServer.call({Rinha.TaskSupervisor, :worker@worker}, {:start_task, [{:api02@api02, #PID<0.1607.0>, #PID<0.1607.0>}, :monitor], :temporary, nil}, :infinity)
+api02-1   |     ** (EXIT) no connection to worker@worker
+api02-1   |     (elixir 1.18.2) lib/gen_server.ex:1128: GenServer.call/3
+api02-1   |     (elixir 1.18.2) lib/task/supervisor.ex:598: Task.Supervisor.async/6
+api02-1   |     (rinha 1.0.0) lib/rinha.ex:31: Rinha.summary/1
+api02-1   |     (rinha 1.0.0) lib/rinha/router.ex:16: anonymous fn/2 in Rinha.Router.do_match/4
+api02-1   |     (rinha 1.0.0) deps/plug/lib/plug/router.ex:246: anonymous fn/4 in Rinha.Router.dispatch/2
+api02-1   |     (telemetry 1.3.0) /app/deps/telemetry/src/telemetry.erl:324: :telemetry.span/3
+api02-1   |     (rinha 1.0.0) deps/plug/lib/plug/router.ex:242: Rinha.Router.dispatch/2
+api02-1   |     (rinha 1.0.0) lib/rinha/router.ex:1: Rinha.Router.plug_builder_call/2
+api02-1   | 
+api01-1   | 
+api01-1   | 20:33:39.685 [info] GET /payments-summary
+api01-1   | 
+api01-1   | 20:33:39.687 [error] ** (exit) exited in: GenServer.call({Rinha.TaskSupervisor, :worker@worker}, {:start_task, [{:api01@api01, #PID<0.1606.0>, #PID<0.1606.0>}, :monitor], :temporary, nil}, :infinity)
+api01-1   |     ** (EXIT) no connection to worker@worker
+api01-1   |     (elixir 1.18.2) lib/gen_server.ex:1128: GenServer.call/3
+api01-1   |     (elixir 1.18.2) lib/task/supervisor.ex:598: Task.Supervisor.async/6
+api01-1   |     (rinha 1.0.0) lib/rinha.ex:31: Rinha.summary/1
+api01-1   |     (rinha 1.0.0) lib/rinha/router.ex:16: anonymous fn/2 in Rinha.Router.do_match/4
+api01-1   |     (rinha 1.0.0) deps/plug/lib/plug/router.ex:246: anonymous fn/4 in Rinha.Router.dispatch/2
+api01-1   |     (telemetry 1.3.0) /app/deps/telemetry/src/telemetry.erl:324: :telemetry.span/3
+api01-1   |     (rinha 1.0.0) deps/plug/lib/plug/router.ex:242: Rinha.Router.dispatch/2
+api01-1   |     (rinha 1.0.0) lib/rinha/router.ex:1: Rinha.Router.plug_builder_call/2
+api01-1   | 
+api02-1   | 
+api02-1   | 20:33:44.697 [info] GET /payments-summary
+api02-1   | 
+api02-1   | 20:33:44.701 [error] ** (exit) exited in: GenServer.call({Rinha.TaskSupervisor, :worker@worker}, {:start_task, [{:api02@api02, #PID<0.1608.0>, #PID<0.1608.0>}, :monitor], :temporary, nil}, :infinity)
+api02-1   |     ** (EXIT) no connection to worker@worker
+api02-1   |     (elixir 1.18.2) lib/gen_server.ex:1128: GenServer.call/3
+api02-1   |     (elixir 1.18.2) lib/task/supervisor.ex:598: Task.Supervisor.async/6
+api02-1   |     (rinha 1.0.0) lib/rinha.ex:31: Rinha.summary/1
+api02-1   |     (rinha 1.0.0) lib/rinha/router.ex:16: anonymous fn/2 in Rinha.Router.do_match/4
+api02-1   |     (rinha 1.0.0) deps/plug/lib/plug/router.ex:246: anonymous fn/4 in Rinha.Router.dispatch/2
+api02-1   |     (telemetry 1.3.0) /app/deps/telemetry/src/telemetry.erl:324: :telemetry.span/3
+api02-1   |     (rinha 1.0.0) deps/plug/lib/plug/router.ex:242: Rinha.Router.dispatch/2
+api02-1   |     (rinha 1.0.0) lib/rinha/router.ex:1: Rinha.Router.plug_builder_call/2
+api02-1   | 
+api01-1   | 
+api01-1   | 20:33:49.713 [info] GET /payments-summary
+api01-1   | 
+api01-1   | 20:33:49.721 [error] ** (exit) exited in: GenServer.call({Rinha.TaskSupervisor, :worker@worker}, {:start_task, [{:api01@api01, #PID<0.1607.0>, #PID<0.1607.0>}, :monitor], :temporary, nil}, :infinity)
+api01-1   |     ** (EXIT) no connection to worker@worker
+api01-1   |     (elixir 1.18.2) lib/gen_server.ex:1128: GenServer.call/3
+api01-1   |     (elixir 1.18.2) lib/task/supervisor.ex:598: Task.Supervisor.async/6
+api01-1   |     (rinha 1.0.0) lib/rinha.ex:31: Rinha.summary/1
+api01-1   |     (rinha 1.0.0) lib/rinha/router.ex:16: anonymous fn/2 in Rinha.Router.do_match/4
+api01-1   |     (rinha 1.0.0) deps/plug/lib/plug/router.ex:246: anonymous fn/4 in Rinha.Router.dispatch/2
+api01-1   |     (telemetry 1.3.0) /app/deps/telemetry/src/telemetry.erl:324: :telemetry.span/3
+api01-1   |     (rinha 1.0.0) deps/plug/lib/plug/router.ex:242: Rinha.Router.dispatch/2
+api01-1   |     (rinha 1.0.0) lib/rinha/router.ex:1: Rinha.Router.plug_builder_call/2
+api01-1   | 
+api02-1   | 
+api02-1   | 20:33:54.731 [info] GET /payments-summary
+api02-1   | 
+api02-1   | 20:33:54.744 [error] ** (exit) exited in: GenServer.call({Rinha.TaskSupervisor, :worker@worker}, {:start_task, [{:api02@api02, #PID<0.1609.0>, #PID<0.1609.0>}, :monitor], :temporary, nil}, :infinity)
+api02-1   |     ** (EXIT) no connection to worker@worker
+api02-1   |     (elixir 1.18.2) lib/gen_server.ex:1128: GenServer.call/3
+api02-1   |     (elixir 1.18.2) lib/task/supervisor.ex:598: Task.Supervisor.async/6
+api02-1   |     (rinha 1.0.0) lib/rinha.ex:31: Rinha.summary/1
+api02-1   |     (rinha 1.0.0) lib/rinha/router.ex:16: anonymous fn/2 in Rinha.Router.do_match/4
+api02-1   |     (rinha 1.0.0) deps/plug/lib/plug/router.ex:246: anonymous fn/4 in Rinha.Router.dispatch/2
+api02-1   |     (telemetry 1.3.0) /app/deps/telemetry/src/telemetry.erl:324: :telemetry.span/3
+api02-1   |     (rinha 1.0.0) deps/plug/lib/plug/router.ex:242: Rinha.Router.dispatch/2
+api02-1   |     (rinha 1.0.0) lib/rinha/router.ex:1: Rinha.Router.plug_builder_call/2
+api02-1   | 
+api01-1   | 
+api01-1   | 20:33:59.754 [info] GET /payments-summary
+api01-1   | 
+api01-1   | 20:33:59.757 [error] ** (exit) exited in: GenServer.call({Rinha.TaskSupervisor, :worker@worker}, {:start_task, [{:api01@api01, #PID<0.1608.0>, #PID<0.1608.0>}, :monitor], :temporary, nil}, :infinity)
+api01-1   |     ** (EXIT) no connection to worker@worker
+api01-1   |     (elixir 1.18.2) lib/gen_server.ex:1128: GenServer.call/3
+api01-1   |     (elixir 1.18.2) lib/task/supervisor.ex:598: Task.Supervisor.async/6
+api01-1   |     (rinha 1.0.0) lib/rinha.ex:31: Rinha.summary/1
+api01-1   |     (rinha 1.0.0) lib/rinha/router.ex:16: anonymous fn/2 in Rinha.Router.do_match/4
+api01-1   |     (rinha 1.0.0) deps/plug/lib/plug/router.ex:246: anonymous fn/4 in Rinha.Router.dispatch/2
+api01-1   |     (telemetry 1.3.0) /app/deps/telemetry/src/telemetry.erl:324: :telemetry.span/3
+api01-1   |     (rinha 1.0.0) deps/plug/lib/plug/router.ex:242: Rinha.Router.dispatch/2
+api01-1   |     (rinha 1.0.0) lib/rinha/router.ex:1: Rinha.Router.plug_builder_call/2
+api01-1   | 
+api02-1   | 
+api02-1   | 20:34:04.768 [info] GET /payments-summary
+api02-1   | 
+api02-1   | 20:34:04.770 [error] ** (exit) exited in: GenServer.call({Rinha.TaskSupervisor, :worker@worker}, {:start_task, [{:api02@api02, #PID<0.1610.0>, #PID<0.1610.0>}, :monitor], :temporary, nil}, :infinity)
+api02-1   |     ** (EXIT) no connection to worker@worker
+api02-1   |     (elixir 1.18.2) lib/gen_server.ex:1128: GenServer.call/3
+api02-1   |     (elixir 1.18.2) lib/task/supervisor.ex:598: Task.Supervisor.async/6
+api02-1   |     (rinha 1.0.0) lib/rinha.ex:31: Rinha.summary/1
+api02-1   |     (rinha 1.0.0) lib/rinha/router.ex:16: anonymous fn/2 in Rinha.Router.do_match/4
+api02-1   |     (rinha 1.0.0) deps/plug/lib/plug/router.ex:246: anonymous fn/4 in Rinha.Router.dispatch/2
+api02-1   |     (telemetry 1.3.0) /app/deps/telemetry/src/telemetry.erl:324: :telemetry.span/3
+api02-1   |     (rinha 1.0.0) deps/plug/lib/plug/router.ex:242: Rinha.Router.dispatch/2
+api02-1   |     (rinha 1.0.0) lib/rinha/router.ex:1: Rinha.Router.plug_builder_call/2
+api02-1   | 
+api01-1   | 
+api01-1   | 20:34:09.782 [info] GET /payments-summary
+api01-1   | 
+api01-1   | 20:34:09.784 [error] ** (exit) exited in: GenServer.call({Rinha.TaskSupervisor, :worker@worker}, {:start_task, [{:api01@api01, #PID<0.1609.0>, #PID<0.1609.0>}, :monitor], :temporary, nil}, :infinity)
+api01-1   |     ** (EXIT) no connection to worker@worker
+api01-1   |     (elixir 1.18.2) lib/gen_server.ex:1128: GenServer.call/3
+api01-1   |     (elixir 1.18.2) lib/task/supervisor.ex:598: Task.Supervisor.async/6
+api01-1   |     (rinha 1.0.0) lib/rinha.ex:31: Rinha.summary/1
+api01-1   |     (rinha 1.0.0) lib/rinha/router.ex:16: anonymous fn/2 in Rinha.Router.do_match/4
+api01-1   |     (rinha 1.0.0) deps/plug/lib/plug/router.ex:246: anonymous fn/4 in Rinha.Router.dispatch/2
+api01-1   |     (telemetry 1.3.0) /app/deps/telemetry/src/telemetry.erl:324: :telemetry.span/3
+api01-1   |     (rinha 1.0.0) deps/plug/lib/plug/router.ex:242: Rinha.Router.dispatch/2
+api01-1   |     (rinha 1.0.0) lib/rinha/router.ex:1: Rinha.Router.plug_builder_call/2
+api01-1   | 
+[Knginx-1 exited with code 0
+api02-1   | 
+api02-1   | 20:34:15.404 [notice] SIGTERM received - shutting down
+api02-1   | 
+api01-1   | 
+api01-1   | 20:34:15.405 [notice] SIGTERM received - shutting down
+api01-1   | 
+[Kapi02-1 exited with code 0
+[Kapi01-1 exited with code 0
