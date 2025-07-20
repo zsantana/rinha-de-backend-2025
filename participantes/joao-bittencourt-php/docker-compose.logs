@@ -1,0 +1,1001 @@
+
+ Network joao-bittencourt-php_rinha  Creating
+ Network joao-bittencourt-php_rinha  Created
+ Container joao-bittencourt-php-app2-1  Creating
+ Container joao-bittencourt-php-db-1  Creating
+ Container joao-bittencourt-php-app1-1  Creating
+ Container joao-bittencourt-php-app2-1  Created
+ Container joao-bittencourt-php-app1-1  Created
+ Container joao-bittencourt-php-nginx-1  Creating
+ Container joao-bittencourt-php-db-1  Created
+ Container joao-bittencourt-php-nginx-1  Created
+Attaching to app1-1, app2-1, db-1, nginx-1
+db-1     | 2025-07-20 22:28:12+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.0.36-1.el8 started.
+db-1     | 2025-07-20 22:28:12+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
+db-1     | 2025-07-20 22:28:12+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.0.36-1.el8 started.
+app2-1   | [20-Jul-2025 22:28:12] NOTICE: fpm is running, pid 1
+app2-1   | [20-Jul-2025 22:28:12] NOTICE: ready to handle connections
+app1-1   | [20-Jul-2025 22:28:12] NOTICE: fpm is running, pid 1
+app1-1   | [20-Jul-2025 22:28:12] NOTICE: ready to handle connections
+db-1     | 2025-07-20 22:28:12+00:00 [Note] [Entrypoint]: Initializing database files
+db-1     | 2025-07-20T22:28:12.946303Z 0 [Warning] [MY-011068] [Server] The syntax '--skip-host-cache' is deprecated and will be removed in a future release. Please use SET GLOBAL host_cache_size=0 instead.
+db-1     | 2025-07-20T22:28:12.946401Z 0 [Warning] [MY-010918] [Server] 'default_authentication_plugin' is deprecated and will be removed in a future release. Please use authentication_policy instead.
+db-1     | 2025-07-20T22:28:12.946429Z 0 [System] [MY-013169] [Server] /usr/sbin/mysqld (mysqld 8.0.36) initializing of server in progress as process 81
+db-1     | 2025-07-20T22:28:13.326683Z 0 [Warning] [MY-013907] [InnoDB] Deprecated configuration parameters innodb_log_file_size and/or innodb_log_files_in_group have been used to compute innodb_redo_log_capacity=67108864. Please use innodb_redo_log_capacity instead.
+db-1     | 2025-07-20T22:28:13.328173Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+nginx-1  | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+nginx-1  | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+nginx-1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+nginx-1  | 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+nginx-1  | 10-listen-on-ipv6-by-default.sh: info: /etc/nginx/conf.d/default.conf differs from the packaged version
+nginx-1  | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+nginx-1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+nginx-1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+nginx-1  | /docker-entrypoint.sh: Configuration complete; ready for start up
+nginx-1  | 2025/07/20 22:28:13 [notice] 1#1: using the "epoll" event method
+nginx-1  | 2025/07/20 22:28:13 [notice] 1#1: nginx/1.29.0
+nginx-1  | 2025/07/20 22:28:13 [notice] 1#1: built by gcc 14.2.0 (Alpine 14.2.0) 
+nginx-1  | 2025/07/20 22:28:13 [notice] 1#1: OS: Linux 6.1.0-37-amd64
+nginx-1  | 2025/07/20 22:28:13 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+nginx-1  | 2025/07/20 22:28:13 [notice] 1#1: start worker processes
+nginx-1  | 2025/07/20 22:28:13 [notice] 1#1: start worker process 29
+nginx-1  | 2025/07/20 22:28:13 [notice] 1#1: start worker process 30
+nginx-1  | 2025/07/20 22:28:13 [notice] 1#1: start worker process 31
+nginx-1  | 2025/07/20 22:28:13 [notice] 1#1: start worker process 32
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:15 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:15 +0000] "GET /payments-summary HTTP/1.1" 200 374 "-" "curl/7.88.1" "-"
+db-1     | 2025-07-20T22:28:15.831251Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+db-1     | 2025-07-20T22:28:19.548723Z 6 [Warning] [MY-010453] [Server] root@localhost is created with an empty password ! Please consider switching off the --initialize-insecure option.
+db-1     | 2025-07-20T22:28:20.600429Z 6 [Warning] [MY-013360] [Server] Plugin mysql_native_password reported: ''mysql_native_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:21 +0000 "POST /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:21 +0000] "POST /purge-payments HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:21 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:21 +0000] "GET /payments-summary?from=2025-07-20T22:28:11.994Z&to=2025-07-20T22:28:21.894Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:21 +0000 "POST /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "POST /payments HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:11.998Z&to=2025-07-20T22:28:21.898Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:21 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.003Z&to=2025-07-20T22:28:21.903Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.007Z&to=2025-07-20T22:28:21.907Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.011Z&to=2025-07-20T22:28:21.911Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.014Z&to=2025-07-20T22:28:21.914Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.017Z&to=2025-07-20T22:28:21.917Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.020Z&to=2025-07-20T22:28:21.920Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.022Z&to=2025-07-20T22:28:21.922Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.025Z&to=2025-07-20T22:28:21.925Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.028Z&to=2025-07-20T22:28:21.928Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.031Z&to=2025-07-20T22:28:21.931Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.034Z&to=2025-07-20T22:28:21.934Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.037Z&to=2025-07-20T22:28:21.937Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.046Z&to=2025-07-20T22:28:21.946Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.049Z&to=2025-07-20T22:28:21.949Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.055Z&to=2025-07-20T22:28:21.955Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.059Z&to=2025-07-20T22:28:21.959Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.063Z&to=2025-07-20T22:28:21.963Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.067Z&to=2025-07-20T22:28:21.967Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.069Z&to=2025-07-20T22:28:21.969Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.074Z&to=2025-07-20T22:28:21.974Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.077Z&to=2025-07-20T22:28:21.977Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.080Z&to=2025-07-20T22:28:21.980Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.082Z&to=2025-07-20T22:28:21.982Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.088Z&to=2025-07-20T22:28:21.988Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.091Z&to=2025-07-20T22:28:21.991Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.094Z&to=2025-07-20T22:28:21.994Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.098Z&to=2025-07-20T22:28:21.998Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.100Z&to=2025-07-20T22:28:22.000Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "POST /index.php" 200
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.103Z&to=2025-07-20T22:28:22.003Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "POST /payments HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.113Z&to=2025-07-20T22:28:22.013Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.116Z&to=2025-07-20T22:28:22.016Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.119Z&to=2025-07-20T22:28:22.019Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.122Z&to=2025-07-20T22:28:22.022Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.125Z&to=2025-07-20T22:28:22.025Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.129Z&to=2025-07-20T22:28:22.029Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.132Z&to=2025-07-20T22:28:22.032Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.136Z&to=2025-07-20T22:28:22.036Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.139Z&to=2025-07-20T22:28:22.039Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.142Z&to=2025-07-20T22:28:22.042Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.145Z&to=2025-07-20T22:28:22.045Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.149Z&to=2025-07-20T22:28:22.049Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.155Z&to=2025-07-20T22:28:22.055Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.159Z&to=2025-07-20T22:28:22.059Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.162Z&to=2025-07-20T22:28:22.062Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.165Z&to=2025-07-20T22:28:22.065Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.168Z&to=2025-07-20T22:28:22.068Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.172Z&to=2025-07-20T22:28:22.072Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.176Z&to=2025-07-20T22:28:22.076Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.179Z&to=2025-07-20T22:28:22.079Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.189Z&to=2025-07-20T22:28:22.089Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.192Z&to=2025-07-20T22:28:22.092Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.200Z&to=2025-07-20T22:28:22.100Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.203Z&to=2025-07-20T22:28:22.103Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "POST /payments HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "POST /index.php" 200
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.221Z&to=2025-07-20T22:28:22.121Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.224Z&to=2025-07-20T22:28:22.124Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.226Z&to=2025-07-20T22:28:22.126Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.229Z&to=2025-07-20T22:28:22.129Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.233Z&to=2025-07-20T22:28:22.133Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.236Z&to=2025-07-20T22:28:22.136Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.239Z&to=2025-07-20T22:28:22.139Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.242Z&to=2025-07-20T22:28:22.142Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.245Z&to=2025-07-20T22:28:22.145Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.248Z&to=2025-07-20T22:28:22.148Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.251Z&to=2025-07-20T22:28:22.151Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.254Z&to=2025-07-20T22:28:22.154Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.258Z&to=2025-07-20T22:28:22.158Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.262Z&to=2025-07-20T22:28:22.162Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.264Z&to=2025-07-20T22:28:22.164Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.267Z&to=2025-07-20T22:28:22.167Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.270Z&to=2025-07-20T22:28:22.170Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.272Z&to=2025-07-20T22:28:22.172Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.277Z&to=2025-07-20T22:28:22.177Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.280Z&to=2025-07-20T22:28:22.180Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.282Z&to=2025-07-20T22:28:22.182Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.285Z&to=2025-07-20T22:28:22.185Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.287Z&to=2025-07-20T22:28:22.187Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.292Z&to=2025-07-20T22:28:22.192Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.294Z&to=2025-07-20T22:28:22.194Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.297Z&to=2025-07-20T22:28:22.197Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.299Z&to=2025-07-20T22:28:22.199Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.302Z&to=2025-07-20T22:28:22.202Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.304Z&to=2025-07-20T22:28:22.204Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.306Z&to=2025-07-20T22:28:22.206Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.309Z&to=2025-07-20T22:28:22.209Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.316Z&to=2025-07-20T22:28:22.216Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "POST /payments HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "POST /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.328Z&to=2025-07-20T22:28:22.228Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.331Z&to=2025-07-20T22:28:22.231Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.333Z&to=2025-07-20T22:28:22.233Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.337Z&to=2025-07-20T22:28:22.237Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.339Z&to=2025-07-20T22:28:22.239Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.342Z&to=2025-07-20T22:28:22.242Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.345Z&to=2025-07-20T22:28:22.245Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.348Z&to=2025-07-20T22:28:22.248Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.351Z&to=2025-07-20T22:28:22.251Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.354Z&to=2025-07-20T22:28:22.254Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.356Z&to=2025-07-20T22:28:22.256Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.372Z&to=2025-07-20T22:28:22.272Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.375Z&to=2025-07-20T22:28:22.275Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.377Z&to=2025-07-20T22:28:22.277Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.380Z&to=2025-07-20T22:28:22.280Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.385Z&to=2025-07-20T22:28:22.285Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.392Z&to=2025-07-20T22:28:22.292Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.399Z&to=2025-07-20T22:28:22.299Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.402Z&to=2025-07-20T22:28:22.302Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.407Z&to=2025-07-20T22:28:22.307Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.413Z&to=2025-07-20T22:28:22.313Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.417Z&to=2025-07-20T22:28:22.317Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.420Z&to=2025-07-20T22:28:22.320Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.425Z&to=2025-07-20T22:28:22.325Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.427Z&to=2025-07-20T22:28:22.327Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "POST /payments HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "POST /index.php" 200
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.433Z&to=2025-07-20T22:28:22.333Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.437Z&to=2025-07-20T22:28:22.337Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.441Z&to=2025-07-20T22:28:22.341Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.444Z&to=2025-07-20T22:28:22.344Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.448Z&to=2025-07-20T22:28:22.348Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.451Z&to=2025-07-20T22:28:22.351Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.454Z&to=2025-07-20T22:28:22.354Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.457Z&to=2025-07-20T22:28:22.357Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.459Z&to=2025-07-20T22:28:22.359Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.463Z&to=2025-07-20T22:28:22.363Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.469Z&to=2025-07-20T22:28:22.369Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.471Z&to=2025-07-20T22:28:22.371Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.474Z&to=2025-07-20T22:28:22.374Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.476Z&to=2025-07-20T22:28:22.376Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.478Z&to=2025-07-20T22:28:22.378Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.481Z&to=2025-07-20T22:28:22.381Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.483Z&to=2025-07-20T22:28:22.383Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.486Z&to=2025-07-20T22:28:22.386Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.490Z&to=2025-07-20T22:28:22.390Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.492Z&to=2025-07-20T22:28:22.392Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.497Z&to=2025-07-20T22:28:22.397Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.500Z&to=2025-07-20T22:28:22.400Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.502Z&to=2025-07-20T22:28:22.402Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.512Z&to=2025-07-20T22:28:22.412Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.514Z&to=2025-07-20T22:28:22.414Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.518Z&to=2025-07-20T22:28:22.418Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.521Z&to=2025-07-20T22:28:22.421Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.524Z&to=2025-07-20T22:28:22.424Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.526Z&to=2025-07-20T22:28:22.426Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.529Z&to=2025-07-20T22:28:22.429Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.535Z&to=2025-07-20T22:28:22.435Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.538Z&to=2025-07-20T22:28:22.438Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.541Z&to=2025-07-20T22:28:22.441Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "POST /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "POST /payments HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.545Z&to=2025-07-20T22:28:22.445Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.548Z&to=2025-07-20T22:28:22.448Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.550Z&to=2025-07-20T22:28:22.450Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.553Z&to=2025-07-20T22:28:22.453Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.556Z&to=2025-07-20T22:28:22.456Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.559Z&to=2025-07-20T22:28:22.459Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.561Z&to=2025-07-20T22:28:22.461Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.566Z&to=2025-07-20T22:28:22.466Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.568Z&to=2025-07-20T22:28:22.468Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.571Z&to=2025-07-20T22:28:22.471Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.577Z&to=2025-07-20T22:28:22.477Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.579Z&to=2025-07-20T22:28:22.479Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.581Z&to=2025-07-20T22:28:22.481Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.584Z&to=2025-07-20T22:28:22.484Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.586Z&to=2025-07-20T22:28:22.486Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.589Z&to=2025-07-20T22:28:22.489Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.591Z&to=2025-07-20T22:28:22.491Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.593Z&to=2025-07-20T22:28:22.493Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.596Z&to=2025-07-20T22:28:22.496Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.598Z&to=2025-07-20T22:28:22.498Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.607Z&to=2025-07-20T22:28:22.507Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.609Z&to=2025-07-20T22:28:22.509Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.613Z&to=2025-07-20T22:28:22.513Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.617Z&to=2025-07-20T22:28:22.517Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.622Z&to=2025-07-20T22:28:22.522Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.624Z&to=2025-07-20T22:28:22.524Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.627Z&to=2025-07-20T22:28:22.527Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.630Z&to=2025-07-20T22:28:22.530Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.632Z&to=2025-07-20T22:28:22.532Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.636Z&to=2025-07-20T22:28:22.536Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.647Z&to=2025-07-20T22:28:22.547Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "POST /payments HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "POST /index.php" 200
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.651Z&to=2025-07-20T22:28:22.551Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.654Z&to=2025-07-20T22:28:22.554Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.656Z&to=2025-07-20T22:28:22.556Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.658Z&to=2025-07-20T22:28:22.558Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.661Z&to=2025-07-20T22:28:22.561Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.664Z&to=2025-07-20T22:28:22.564Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.668Z&to=2025-07-20T22:28:22.568Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.674Z&to=2025-07-20T22:28:22.574Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.677Z&to=2025-07-20T22:28:22.577Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.679Z&to=2025-07-20T22:28:22.579Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.681Z&to=2025-07-20T22:28:22.581Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.684Z&to=2025-07-20T22:28:22.584Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.689Z&to=2025-07-20T22:28:22.589Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.691Z&to=2025-07-20T22:28:22.591Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.695Z&to=2025-07-20T22:28:22.595Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.697Z&to=2025-07-20T22:28:22.597Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.699Z&to=2025-07-20T22:28:22.599Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.703Z&to=2025-07-20T22:28:22.603Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.709Z&to=2025-07-20T22:28:22.609Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.712Z&to=2025-07-20T22:28:22.612Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.715Z&to=2025-07-20T22:28:22.615Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.717Z&to=2025-07-20T22:28:22.617Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.723Z&to=2025-07-20T22:28:22.623Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.726Z&to=2025-07-20T22:28:22.626Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.729Z&to=2025-07-20T22:28:22.629Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.731Z&to=2025-07-20T22:28:22.631Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.734Z&to=2025-07-20T22:28:22.634Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.737Z&to=2025-07-20T22:28:22.637Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.739Z&to=2025-07-20T22:28:22.639Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.747Z&to=2025-07-20T22:28:22.647Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.749Z&to=2025-07-20T22:28:22.649Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.752Z&to=2025-07-20T22:28:22.652Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.754Z&to=2025-07-20T22:28:22.654Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.757Z&to=2025-07-20T22:28:22.657Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "POST /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.759Z&to=2025-07-20T22:28:22.659Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "POST /payments HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.763Z&to=2025-07-20T22:28:22.663Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.768Z&to=2025-07-20T22:28:22.668Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.772Z&to=2025-07-20T22:28:22.672Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.775Z&to=2025-07-20T22:28:22.675Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.778Z&to=2025-07-20T22:28:22.678Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.780Z&to=2025-07-20T22:28:22.680Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.784Z&to=2025-07-20T22:28:22.684Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.787Z&to=2025-07-20T22:28:22.687Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.790Z&to=2025-07-20T22:28:22.690Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.792Z&to=2025-07-20T22:28:22.692Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.797Z&to=2025-07-20T22:28:22.697Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.799Z&to=2025-07-20T22:28:22.699Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.802Z&to=2025-07-20T22:28:22.702Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.804Z&to=2025-07-20T22:28:22.704Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.807Z&to=2025-07-20T22:28:22.707Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.809Z&to=2025-07-20T22:28:22.709Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.811Z&to=2025-07-20T22:28:22.711Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.814Z&to=2025-07-20T22:28:22.714Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.817Z&to=2025-07-20T22:28:22.717Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.819Z&to=2025-07-20T22:28:22.719Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.821Z&to=2025-07-20T22:28:22.721Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.825Z&to=2025-07-20T22:28:22.725Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.827Z&to=2025-07-20T22:28:22.727Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.829Z&to=2025-07-20T22:28:22.729Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.832Z&to=2025-07-20T22:28:22.732Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.834Z&to=2025-07-20T22:28:22.734Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.838Z&to=2025-07-20T22:28:22.738Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.840Z&to=2025-07-20T22:28:22.740Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.843Z&to=2025-07-20T22:28:22.743Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.846Z&to=2025-07-20T22:28:22.746Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.848Z&to=2025-07-20T22:28:22.748Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.851Z&to=2025-07-20T22:28:22.751Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.854Z&to=2025-07-20T22:28:22.754Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.856Z&to=2025-07-20T22:28:22.756Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.858Z&to=2025-07-20T22:28:22.758Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.862Z&to=2025-07-20T22:28:22.762Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.865Z&to=2025-07-20T22:28:22.765Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "POST /payments HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.868Z&to=2025-07-20T22:28:22.768Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "POST /index.php" 200
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.872Z&to=2025-07-20T22:28:22.772Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.875Z&to=2025-07-20T22:28:22.775Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.878Z&to=2025-07-20T22:28:22.778Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.881Z&to=2025-07-20T22:28:22.781Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.884Z&to=2025-07-20T22:28:22.784Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.886Z&to=2025-07-20T22:28:22.786Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.888Z&to=2025-07-20T22:28:22.788Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.892Z&to=2025-07-20T22:28:22.792Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.895Z&to=2025-07-20T22:28:22.795Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.898Z&to=2025-07-20T22:28:22.798Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.901Z&to=2025-07-20T22:28:22.801Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.903Z&to=2025-07-20T22:28:22.803Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.906Z&to=2025-07-20T22:28:22.806Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.908Z&to=2025-07-20T22:28:22.808Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.910Z&to=2025-07-20T22:28:22.810Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.915Z&to=2025-07-20T22:28:22.815Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.917Z&to=2025-07-20T22:28:22.817Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.920Z&to=2025-07-20T22:28:22.820Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.923Z&to=2025-07-20T22:28:22.823Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.925Z&to=2025-07-20T22:28:22.825Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.927Z&to=2025-07-20T22:28:22.827Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.929Z&to=2025-07-20T22:28:22.829Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.932Z&to=2025-07-20T22:28:22.832Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.935Z&to=2025-07-20T22:28:22.835Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.937Z&to=2025-07-20T22:28:22.837Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.939Z&to=2025-07-20T22:28:22.839Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.942Z&to=2025-07-20T22:28:22.842Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.944Z&to=2025-07-20T22:28:22.844Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.948Z&to=2025-07-20T22:28:22.848Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.950Z&to=2025-07-20T22:28:22.850Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.952Z&to=2025-07-20T22:28:22.852Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.955Z&to=2025-07-20T22:28:22.855Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.957Z&to=2025-07-20T22:28:22.857Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.960Z&to=2025-07-20T22:28:22.860Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.962Z&to=2025-07-20T22:28:22.862Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.964Z&to=2025-07-20T22:28:22.864Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.966Z&to=2025-07-20T22:28:22.866Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.969Z&to=2025-07-20T22:28:22.869Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.972Z&to=2025-07-20T22:28:22.872Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.976Z&to=2025-07-20T22:28:22.876Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "POST /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "POST /payments HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.980Z&to=2025-07-20T22:28:22.880Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.983Z&to=2025-07-20T22:28:22.883Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.986Z&to=2025-07-20T22:28:22.886Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.989Z&to=2025-07-20T22:28:22.889Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:22 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.997Z&to=2025-07-20T22:28:22.897Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:22 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:12.999Z&to=2025-07-20T22:28:22.899Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.002Z&to=2025-07-20T22:28:22.902Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "POST /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "POST /payments HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.004Z&to=2025-07-20T22:28:22.904Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.007Z&to=2025-07-20T22:28:22.907Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.010Z&to=2025-07-20T22:28:22.910Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.016Z&to=2025-07-20T22:28:22.916Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.019Z&to=2025-07-20T22:28:22.919Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.022Z&to=2025-07-20T22:28:22.922Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.025Z&to=2025-07-20T22:28:22.925Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.027Z&to=2025-07-20T22:28:22.927Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.030Z&to=2025-07-20T22:28:22.930Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.032Z&to=2025-07-20T22:28:22.932Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.034Z&to=2025-07-20T22:28:22.934Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.039Z&to=2025-07-20T22:28:22.939Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.041Z&to=2025-07-20T22:28:22.941Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.044Z&to=2025-07-20T22:28:22.944Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.046Z&to=2025-07-20T22:28:22.946Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.049Z&to=2025-07-20T22:28:22.949Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.052Z&to=2025-07-20T22:28:22.952Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.055Z&to=2025-07-20T22:28:22.955Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.057Z&to=2025-07-20T22:28:22.957Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.059Z&to=2025-07-20T22:28:22.959Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.062Z&to=2025-07-20T22:28:22.962Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.064Z&to=2025-07-20T22:28:22.964Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.070Z&to=2025-07-20T22:28:22.970Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.075Z&to=2025-07-20T22:28:22.975Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.078Z&to=2025-07-20T22:28:22.978Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.080Z&to=2025-07-20T22:28:22.980Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.082Z&to=2025-07-20T22:28:22.982Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.084Z&to=2025-07-20T22:28:22.984Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "POST /payments HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.087Z&to=2025-07-20T22:28:22.987Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "POST /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.092Z&to=2025-07-20T22:28:22.992Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.094Z&to=2025-07-20T22:28:22.994Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.096Z&to=2025-07-20T22:28:22.996Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.100Z&to=2025-07-20T22:28:23.000Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.102Z&to=2025-07-20T22:28:23.002Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.104Z&to=2025-07-20T22:28:23.004Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.107Z&to=2025-07-20T22:28:23.007Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.108Z&to=2025-07-20T22:28:23.008Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.110Z&to=2025-07-20T22:28:23.010Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.112Z&to=2025-07-20T22:28:23.012Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.114Z&to=2025-07-20T22:28:23.014Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "POST /payments HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "POST /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.116Z&to=2025-07-20T22:28:23.016Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.120Z&to=2025-07-20T22:28:23.020Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.122Z&to=2025-07-20T22:28:23.022Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.124Z&to=2025-07-20T22:28:23.024Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.127Z&to=2025-07-20T22:28:23.027Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.130Z&to=2025-07-20T22:28:23.030Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.134Z&to=2025-07-20T22:28:23.034Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.136Z&to=2025-07-20T22:28:23.036Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.138Z&to=2025-07-20T22:28:23.038Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.141Z&to=2025-07-20T22:28:23.041Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.143Z&to=2025-07-20T22:28:23.043Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.146Z&to=2025-07-20T22:28:23.046Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.149Z&to=2025-07-20T22:28:23.049Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.152Z&to=2025-07-20T22:28:23.052Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.154Z&to=2025-07-20T22:28:23.054Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.157Z&to=2025-07-20T22:28:23.057Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.159Z&to=2025-07-20T22:28:23.059Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.161Z&to=2025-07-20T22:28:23.061Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.164Z&to=2025-07-20T22:28:23.064Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.166Z&to=2025-07-20T22:28:23.066Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.170Z&to=2025-07-20T22:28:23.070Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.172Z&to=2025-07-20T22:28:23.072Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.174Z&to=2025-07-20T22:28:23.074Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.176Z&to=2025-07-20T22:28:23.076Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.178Z&to=2025-07-20T22:28:23.078Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.180Z&to=2025-07-20T22:28:23.080Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.183Z&to=2025-07-20T22:28:23.083Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.187Z&to=2025-07-20T22:28:23.087Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.190Z&to=2025-07-20T22:28:23.090Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.193Z&to=2025-07-20T22:28:23.093Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "POST /index.php" 200
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.196Z&to=2025-07-20T22:28:23.096Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "POST /payments HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.200Z&to=2025-07-20T22:28:23.100Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.202Z&to=2025-07-20T22:28:23.102Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.204Z&to=2025-07-20T22:28:23.104Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.206Z&to=2025-07-20T22:28:23.106Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.210Z&to=2025-07-20T22:28:23.110Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.211Z&to=2025-07-20T22:28:23.111Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.214Z&to=2025-07-20T22:28:23.114Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.216Z&to=2025-07-20T22:28:23.116Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.219Z&to=2025-07-20T22:28:23.119Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.221Z&to=2025-07-20T22:28:23.121Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "POST /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "POST /payments HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.224Z&to=2025-07-20T22:28:23.124Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.228Z&to=2025-07-20T22:28:23.128Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.230Z&to=2025-07-20T22:28:23.130Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.235Z&to=2025-07-20T22:28:23.135Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.238Z&to=2025-07-20T22:28:23.138Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.240Z&to=2025-07-20T22:28:23.140Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.245Z&to=2025-07-20T22:28:23.145Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.247Z&to=2025-07-20T22:28:23.147Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.249Z&to=2025-07-20T22:28:23.149Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.251Z&to=2025-07-20T22:28:23.151Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.253Z&to=2025-07-20T22:28:23.153Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.256Z&to=2025-07-20T22:28:23.156Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.259Z&to=2025-07-20T22:28:23.159Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.260Z&to=2025-07-20T22:28:23.160Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.263Z&to=2025-07-20T22:28:23.163Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.265Z&to=2025-07-20T22:28:23.165Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.267Z&to=2025-07-20T22:28:23.167Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.270Z&to=2025-07-20T22:28:23.170Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.273Z&to=2025-07-20T22:28:23.173Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.275Z&to=2025-07-20T22:28:23.175Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.277Z&to=2025-07-20T22:28:23.177Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.279Z&to=2025-07-20T22:28:23.179Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.283Z&to=2025-07-20T22:28:23.183Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.285Z&to=2025-07-20T22:28:23.185Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.287Z&to=2025-07-20T22:28:23.187Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.289Z&to=2025-07-20T22:28:23.189Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.291Z&to=2025-07-20T22:28:23.191Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.294Z&to=2025-07-20T22:28:23.194Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.296Z&to=2025-07-20T22:28:23.196Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.298Z&to=2025-07-20T22:28:23.198Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.301Z&to=2025-07-20T22:28:23.201Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.303Z&to=2025-07-20T22:28:23.203Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "POST /payments HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "POST /index.php" 200
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.308Z&to=2025-07-20T22:28:23.208Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.310Z&to=2025-07-20T22:28:23.210Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.313Z&to=2025-07-20T22:28:23.213Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.314Z&to=2025-07-20T22:28:23.214Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.317Z&to=2025-07-20T22:28:23.217Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.320Z&to=2025-07-20T22:28:23.220Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.322Z&to=2025-07-20T22:28:23.222Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.325Z&to=2025-07-20T22:28:23.225Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.326Z&to=2025-07-20T22:28:23.226Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.328Z&to=2025-07-20T22:28:23.228Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "POST /payments HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "POST /index.php" 200
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.331Z&to=2025-07-20T22:28:23.231Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.333Z&to=2025-07-20T22:28:23.233Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.337Z&to=2025-07-20T22:28:23.237Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.339Z&to=2025-07-20T22:28:23.239Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.341Z&to=2025-07-20T22:28:23.241Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.343Z&to=2025-07-20T22:28:23.243Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.345Z&to=2025-07-20T22:28:23.245Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.347Z&to=2025-07-20T22:28:23.247Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.349Z&to=2025-07-20T22:28:23.249Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.352Z&to=2025-07-20T22:28:23.252Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.354Z&to=2025-07-20T22:28:23.254Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.356Z&to=2025-07-20T22:28:23.256Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.358Z&to=2025-07-20T22:28:23.258Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.360Z&to=2025-07-20T22:28:23.260Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.362Z&to=2025-07-20T22:28:23.262Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.364Z&to=2025-07-20T22:28:23.264Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.366Z&to=2025-07-20T22:28:23.266Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.368Z&to=2025-07-20T22:28:23.268Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.370Z&to=2025-07-20T22:28:23.270Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.372Z&to=2025-07-20T22:28:23.272Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.374Z&to=2025-07-20T22:28:23.274Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.377Z&to=2025-07-20T22:28:23.277Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.379Z&to=2025-07-20T22:28:23.279Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.381Z&to=2025-07-20T22:28:23.281Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.383Z&to=2025-07-20T22:28:23.283Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.390Z&to=2025-07-20T22:28:23.290Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.392Z&to=2025-07-20T22:28:23.292Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.393Z&to=2025-07-20T22:28:23.293Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.395Z&to=2025-07-20T22:28:23.295Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.397Z&to=2025-07-20T22:28:23.297Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.399Z&to=2025-07-20T22:28:23.299Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.403Z&to=2025-07-20T22:28:23.303Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.405Z&to=2025-07-20T22:28:23.305Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.407Z&to=2025-07-20T22:28:23.307Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.408Z&to=2025-07-20T22:28:23.308Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.411Z&to=2025-07-20T22:28:23.311Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.413Z&to=2025-07-20T22:28:23.313Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app1-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+nginx-1  | 172.21.0.1 - - [20/Jul/2025:22:28:23 +0000] "GET /payments-summary?from=2025-07-20T22:28:13.415Z&to=2025-07-20T22:28:23.315Z HTTP/1.1" 200 374 "-" "Grafana k6/1.1.0" "-"
+app2-1   | 172.21.0.5 -  20/Jul/2025:22:28:23 +0000 "GET /index.php" 200
+log truncated at line 1000
