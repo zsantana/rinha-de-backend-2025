@@ -85,16 +85,16 @@ while true; do
     echo -e "Atualizado em **$(date)** (**$(ls ../participantes | wc -l)** resultados)" >> ../PREVIA_RESULTADOS.md
     echo -e "*Testes executados com MAX_REQUESTS=$MAX_REQUESTS*."
     echo -e "\n" >> ../PREVIA_RESULTADOS.md
-    echo -e "| participante | p99 | bônus por desempenho (%) | multa ($) | lucro | logs |" >> ../PREVIA_RESULTADOS.md
+    echo -e "| participante | p99 | bônus por desempenho (%) | multa ($) | lucro | submissão |" >> ../PREVIA_RESULTADOS.md
     echo -e "| -- | -- | -- | -- | -- | -- |" >> ../PREVIA_RESULTADOS.md
 
     for partialResult in ../participantes/*/partial-results.json; do
     (
         participant=$(echo $partialResult | sed -e 's/..\/participantes\///g' -e 's/\///g' -e 's/partial\-results\.json//g')
-        logsLink="https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/$participant"
+        link="https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/$participant"
         
         if [ -s $partialResult ]; then
-            cat $partialResult | jq -r '(["|", .participante, "|", .p99.valor, "|", .p99.bonus, "|", .multa.total, "|", .total_liquido, "|", "[logs]('$logsLink')"]) | @tsv' >> ../PREVIA_RESULTADOS.md
+            cat $partialResult | jq -r '(["|", .participante, "|", .p99.valor, "|", .p99.bonus, "|", .multa.total, "|", .total_liquido, "|", "['$participant']('$link')"]) | @tsv' >> ../PREVIA_RESULTADOS.md
         fi
     )
 
