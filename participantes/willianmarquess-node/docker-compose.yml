@@ -12,6 +12,18 @@ services:
       - payment-processor
     depends_on:
       - redis
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "node",
+          "-e",
+          "fetch('http://localhost:3333/healthcheck').then(res => process.exit(res.ok ? 0 : 1)).catch(() => process.exit(1))"
+        ]
+      interval: 5s
+      timeout: 2s
+      retries: 5
+      start_period: 10s
     deploy:
       resources:
         limits:
@@ -30,6 +42,18 @@ services:
       - payment-processor
     depends_on:
       - redis
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "node",
+          "-e",
+          "fetch('http://localhost:3333/healthcheck').then(res => process.exit(res.ok ? 0 : 1)).catch(() => process.exit(1))"
+        ]
+      interval: 5s
+      timeout: 2s
+      retries: 5
+      start_period: 10s
     deploy:
       resources:
         limits:
@@ -59,8 +83,10 @@ services:
     networks:
       - backend
     depends_on:
-      - service1
-      - service2
+      service1:
+        condition: service_healthy
+      service2:
+        condition: service_healthy
     deploy:
       resources:
         limits:
