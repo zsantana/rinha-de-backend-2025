@@ -1,5 +1,6 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Sun Jul 20 09:43:08 PM -03 2025** (**66** resultados de **66** submissões)
+Atualizado em **Sun Jul 20 09:46:32 PM -03 2025**
+66 submissões / 51 resultados / 15 submissões com erro
 
 
 | participante | p99 | bônus por desempenho (%) | multa ($) | lucro | submissão |
@@ -56,7 +57,6 @@ Atualizado em **Sun Jul 20 09:43:08 PM -03 2025** (**66** resultados de **66** s
 |	wlagent	|	4.311179259999988ms	|	0.13377641480000024	|	55322.64674999999	|	123887.38779131966	|	[wlagent](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/wlagent)
 |	yanpitangui-dotnet	|	62.125520000000094ms	|	0	|	0	|	286296.325	|	[yanpitangui-dotnet](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/yanpitangui-dotnet)
 ### Submissões com Erro
-15 submissões com erro
 
 
 | participante | submissão |
