@@ -21,7 +21,7 @@ x-backend-templates:
     THREAD_QUEUE_SIZE: "5000"
     REDIS-HOST: "redis"
     REQUEST_CONNECTION_TIMEOUT: "100"
-    REQUEST_READ_TIMEOUT: "300"
+    REQUEST_READ_TIMEOUT: "1500"
     payment-processor.default.url: "http://payment-processor-default:8080"
     payment-processor.fallback.url: "http://payment-processor-fallback:8080"
     JAVA_OPTS: "\
