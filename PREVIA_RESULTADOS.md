@@ -1,5 +1,5 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Sun Jul 20 09:46:32 PM -03 2025**
+Atualizado em **Sun Jul 20 09:59:40 PM -03 2025**
 66 submissões / 51 resultados / 15 submissões com erro
 
 
@@ -25,10 +25,10 @@ Atualizado em **Sun Jul 20 09:46:32 PM -03 2025**
 |	henriquevalcanaia-swift-vapor	|	150.8596845699999ms	|	0	|	0	|	0	|	[henriquevalcanaia-swift-vapor](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/henriquevalcanaia-swift-vapor)
 |	jairoandre	|	88.87841832000002ms	|	0	|	108496.591	|	201493.669	|	[jairoandre](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/jairoandre)
 |	jccl	|	2.350966919999998ms	|	0.17298066160000006	|	0	|	86824.07549085848	|	[jccl](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/jccl)
-|	joao-bittencourt-php	|	7.495086279999989ms	|	0.07009827440000022	|	0	|	0	|	[joao-bittencourt-php](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/joao-bittencourt-php)
+|	joao-bittencourt-php	|	13.028343720000025ms	|	0	|	0	|	0	|	[joao-bittencourt-php](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/joao-bittencourt-php)
 |	joaocrulhas-nestjs-ts	|	665.3651253600001ms	|	0	|	0	|	0	|	[joaocrulhas-nestjs-ts](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/joaocrulhas-nestjs-ts)
 |	joaoreisa-go	|	4.71585635000001ms	|	0.1256828729999998	|	0	|	275735.0066267642	|	[joaoreisa-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/joaoreisa-go)
-|	joelgarciajr84-go	|	4.434903339999998ms	|	0.13130193320000003	|	0	|	201630.1108451042	|	[joelgarciajr84-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/joelgarciajr84-go)
+|	joelgarciajr84-go	|	2.198979260000004ms	|	0.1760204147999999	|	0	|	195592.46369308906	|	[joelgarciajr84-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/joelgarciajr84-go)
 |	josafaverissimo-java-01	|	54.98577040000021ms	|	0	|	16540.16	|	30717.44	|	[josafaverissimo-java-01](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/josafaverissimo-java-01)
 |	kauan-carvalho-elixir	|	48.413242889999346ms	|	0	|	0	|	309556.44	|	[kauan-carvalho-elixir](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/kauan-carvalho-elixir)
 |	kauan-carvalho-go	|	3.039559299999964ms	|	0.15920881400000073	|	0	|	358294.9894382856	|	[kauan-carvalho-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/kauan-carvalho-go)
@@ -49,7 +49,7 @@ Atualizado em **Sun Jul 20 09:46:32 PM -03 2025**
 |	rodrigocaldeira-elixir	|	4.8402999599999745ms	|	0.12319400080000051	|	0	|	347266.139087272	|	[rodrigocaldeira-elixir](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/rodrigocaldeira-elixir)
 |	rodrigo-schonardt-go	|	4.625809799999999ms	|	0.12748380400000003	|	0	|	143111.69963912864	|	[rodrigo-schonardt-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/rodrigo-schonardt-go)
 |	ryangst-bun	|	1298.4415304599993ms	|	0	|	6533.518249999999	|	12133.67675	|	[ryangst-bun](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/ryangst-bun)
-|	victorverdoodt-cs	|	87.25890111000001ms	|	0	|	0	|	0	|	[victorverdoodt-cs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/victorverdoodt-cs)
+|	victorverdoodt-cs	|	87.85737292999997ms	|	0	|	108330.12749999999	|	201184.52249999996	|	[victorverdoodt-cs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/victorverdoodt-cs)
 |	victorverdoodt-cs-redis	|	86.57472155000012ms	|	0	|	109126.9235	|	202664.28650000002	|	[victorverdoodt-cs-redis](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/victorverdoodt-cs-redis)
 |	wanderdotnet	|	6.2866025799999985ms	|	0.09426794840000004	|	50371.5765	|	107114.14256951047	|	[wanderdotnet](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/wanderdotnet)
 |	willzada-aGOrinha	|	41.72438074999984ms	|	0	|	0	|	48658.485	|	[willzada-aGOrinha](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/willzada-aGOrinha)
