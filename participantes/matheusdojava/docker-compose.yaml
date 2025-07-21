@@ -20,6 +20,9 @@ services:
 
   api1: &api
     image: matheuspieropan/rinhabackend2025:graalvm
+    depends_on:
+      mongodb:
+        condition: service_healthy
     hostname: api1
     networks:
       - backend
@@ -46,7 +49,11 @@ services:
   mongodb:
     image: mongo:7.0
     container_name: mongodb
-    restart: always
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
     ports:
       - "27017:27017"
     networks:
