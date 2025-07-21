@@ -1,0 +1,1001 @@
+
+ Network joaocrulhas-nestjs-ts_backend  Creating
+ Network joaocrulhas-nestjs-ts_backend  Created
+ Volume "joaocrulhas-nestjs-ts_redis_data"  Creating
+ Volume "joaocrulhas-nestjs-ts_redis_data"  Created
+ Volume "joaocrulhas-nestjs-ts_rinha-store"  Creating
+ Volume "joaocrulhas-nestjs-ts_rinha-store"  Created
+ Container redis  Creating
+ Container redis  Created
+ Container app1  Creating
+ Container app2  Creating
+ Container app2  Created
+ Container app1  Created
+ Container nginx-load-balancer  Creating
+ Container nginx-load-balancer  Created
+Attaching to app1, app2, nginx-load-balancer, redis
+redis                | Starting Redis Server
+redis                | 1:C 21 Jul 2025 02:26:38.792 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+redis                | 1:C 21 Jul 2025 02:26:38.792 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+redis                | 1:C 21 Jul 2025 02:26:38.792 * Redis version=8.0.3, bits=64, commit=00000000, modified=1, pid=1, just started
+redis                | 1:C 21 Jul 2025 02:26:38.792 * Configuration loaded
+redis                | 1:M 21 Jul 2025 02:26:38.792 * monotonic clock: POSIX clock_gettime
+redis                | 1:M 21 Jul 2025 02:26:38.793 * Running mode=standalone, port=6379.
+redis                | 1:M 21 Jul 2025 02:26:38.794 * <bf> RedisBloom version 8.0.1 (Git=unknown)
+redis                | 1:M 21 Jul 2025 02:26:38.795 * <bf> Registering configuration options: [
+redis                | 1:M 21 Jul 2025 02:26:38.795 * <bf> 	{ bf-error-rate       :      0.01 }
+redis                | 1:M 21 Jul 2025 02:26:38.795 * <bf> 	{ bf-initial-size     :       100 }
+redis                | 1:M 21 Jul 2025 02:26:38.795 * <bf> 	{ bf-expansion-factor :         2 }
+redis                | 1:M 21 Jul 2025 02:26:38.795 * <bf> 	{ cf-bucket-size      :         2 }
+redis                | 1:M 21 Jul 2025 02:26:38.795 * <bf> 	{ cf-initial-size     :      1024 }
+redis                | 1:M 21 Jul 2025 02:26:38.795 * <bf> 	{ cf-max-iterations   :        20 }
+redis                | 1:M 21 Jul 2025 02:26:38.795 * <bf> 	{ cf-expansion-factor :         1 }
+redis                | 1:M 21 Jul 2025 02:26:38.795 * <bf> 	{ cf-max-expansions   :        32 }
+redis                | 1:M 21 Jul 2025 02:26:38.795 * <bf> ]
+redis                | 1:M 21 Jul 2025 02:26:38.795 * Module 'bf' loaded from /usr/local/lib/redis/modules//redisbloom.so
+redis                | 1:M 21 Jul 2025 02:26:38.812 * <search> Redis version found by RedisSearch : 8.0.3 - oss
+redis                | 1:M 21 Jul 2025 02:26:38.812 * <search> RediSearch version 8.0.1 (Git=5688fcc)
+redis                | 1:M 21 Jul 2025 02:26:38.812 * <search> Low level api version 1 initialized successfully
+redis                | 1:M 21 Jul 2025 02:26:38.812 * <search> gc: ON, prefix min length: 2, min word length to stem: 4, prefix max expansions: 200, query timeout (ms): 500, timeout policy: return, cursor read size: 1000, cursor max idle (ms): 300000, max doctable size: 1000000, max number of search results:  1000000, 
+redis                | 1:M 21 Jul 2025 02:26:38.813 * <search> Initialized thread pools!
+redis                | 1:M 21 Jul 2025 02:26:38.813 * <search> Disabled workers threadpool of size 0
+redis                | 1:M 21 Jul 2025 02:26:38.813 * <search> Subscribe to config changes
+redis                | 1:M 21 Jul 2025 02:26:38.813 * <search> Enabled role change notification
+redis                | 1:M 21 Jul 2025 02:26:38.813 * <search> Cluster configuration: AUTO partitions, type: 0, coordinator timeout: 0ms
+redis                | 1:M 21 Jul 2025 02:26:38.814 * <search> Register write commands
+redis                | 1:M 21 Jul 2025 02:26:38.814 * Module 'search' loaded from /usr/local/lib/redis/modules//redisearch.so
+redis                | 1:M 21 Jul 2025 02:26:38.882 * <timeseries> RedisTimeSeries version 80001, git_sha=577bfa8b5909e7ee572f0b651399be8303dc6641
+redis                | 1:M 21 Jul 2025 02:26:38.882 * <timeseries> Redis version found by RedisTimeSeries : 8.0.3 - oss
+redis                | 1:M 21 Jul 2025 02:26:38.889 * <timeseries> Registering configuration options: [
+redis                | 1:M 21 Jul 2025 02:26:38.889 * <timeseries> 	{ ts-compaction-policy   :              }
+redis                | 1:M 21 Jul 2025 02:26:38.889 * <timeseries> 	{ ts-num-threads         :            3 }
+redis                | 1:M 21 Jul 2025 02:26:38.889 * <timeseries> 	{ ts-retention-policy    :            0 }
+redis                | 1:M 21 Jul 2025 02:26:38.889 * <timeseries> 	{ ts-duplicate-policy    :        block }
+redis                | 1:M 21 Jul 2025 02:26:38.889 * <timeseries> 	{ ts-chunk-size-bytes    :         4096 }
+redis                | 1:M 21 Jul 2025 02:26:38.889 * <timeseries> 	{ ts-encoding            :   compressed }
+redis                | 1:M 21 Jul 2025 02:26:38.889 * <timeseries> 	{ ts-ignore-max-time-diff:            0 }
+redis                | 1:M 21 Jul 2025 02:26:38.889 * <timeseries> 	{ ts-ignore-max-val-diff :     0.000000 }
+redis                | 1:M 21 Jul 2025 02:26:38.889 * <timeseries> ]
+redis                | 1:M 21 Jul 2025 02:26:38.889 * <timeseries> Detected redis oss
+redis                | 1:M 21 Jul 2025 02:26:38.889 * Module 'timeseries' loaded from /usr/local/lib/redis/modules//redistimeseries.so
+redis                | 1:M 21 Jul 2025 02:26:38.915 * <ReJSON> Created new data type 'ReJSON-RL'
+redis                | 1:M 21 Jul 2025 02:26:38.917 * <ReJSON> version: 80001 git sha: unknown branch: unknown
+redis                | 1:M 21 Jul 2025 02:26:38.917 * <ReJSON> Exported RedisJSON_V1 API
+redis                | 1:M 21 Jul 2025 02:26:38.917 * <ReJSON> Exported RedisJSON_V2 API
+redis                | 1:M 21 Jul 2025 02:26:38.917 * <ReJSON> Exported RedisJSON_V3 API
+redis                | 1:M 21 Jul 2025 02:26:38.917 * <ReJSON> Exported RedisJSON_V4 API
+redis                | 1:M 21 Jul 2025 02:26:38.917 * <ReJSON> Exported RedisJSON_V5 API
+redis                | 1:M 21 Jul 2025 02:26:38.917 * <ReJSON> Enabled diskless replication
+redis                | 1:M 21 Jul 2025 02:26:38.917 * <ReJSON> Initialized shared string cache, thread safe: false.
+redis                | 1:M 21 Jul 2025 02:26:38.917 * Module 'ReJSON' loaded from /usr/local/lib/redis/modules//rejson.so
+redis                | 1:M 21 Jul 2025 02:26:38.917 * <search> Acquired RedisJSON_V5 API
+redis                | 1:M 21 Jul 2025 02:26:38.918 * Server initialized
+redis                | 1:M 21 Jul 2025 02:26:38.918 * Ready to accept connections tcp
+app2                 | 
+app2                 | > rinha-backend-2025@0.0.1 start:prod
+app2                 | > node dist/main
+app2                 | 
+app1                 | 
+app1                 | > rinha-backend-2025@0.0.1 start:prod
+app1                 | > node dist/main
+app1                 | 
+nginx-load-balancer  | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+nginx-load-balancer  | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+nginx-load-balancer  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+nginx-load-balancer  | 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+nginx-load-balancer  | 10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
+nginx-load-balancer  | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+nginx-load-balancer  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+nginx-load-balancer  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+nginx-load-balancer  | /docker-entrypoint.sh: Configuration complete; ready for start up
+nginx-load-balancer  | 2025/07/21 02:26:46 [error] 29#29: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.20.0.1, server: localhost, request: "GET /payments-summary HTTP/1.1", upstream: "http://172.20.0.4:3000/payments-summary", host: "localhost:9999"
+nginx-load-balancer  | 2025/07/21 02:26:46 [error] 29#29: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.20.0.1, server: localhost, request: "GET /payments-summary HTTP/1.1", upstream: "http://172.20.0.3:3000/payments-summary", host: "localhost:9999"
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:26:46 +0000] "GET /payments-summary HTTP/1.1" 502 497 "-" "curl/7.88.1"
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:46 AM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:46 AM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:46 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mBullModule dependencies initialized[39m[38;5;3m +96ms[39m
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:46 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPaymentHealthCheckModule dependencies initialized[39m[38;5;3m +0ms[39m
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:46 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mHttpModule dependencies initialized[39m[38;5;3m +1ms[39m
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:46 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +0ms[39m
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:46 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +0ms[39m
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:46 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mDiscoveryModule dependencies initialized[39m[38;5;3m +0ms[39m
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:46 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mCacheModule dependencies initialized[39m[38;5;3m +3ms[39m
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:46 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:46 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mScheduleModule dependencies initialized[39m[38;5;3m +1ms[39m
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:46 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mBullModule dependencies initialized[39m[38;5;3m +0ms[39m
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:46 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mBullModule dependencies initialized[39m[38;5;3m +0ms[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:46 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mBullModule dependencies initialized[39m[38;5;3m +86ms[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:46 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPaymentHealthCheckModule dependencies initialized[39m[38;5;3m +0ms[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:46 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mHttpModule dependencies initialized[39m[38;5;3m +1ms[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:46 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +0ms[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:47 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +1ms[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:47 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mDiscoveryModule dependencies initialized[39m[38;5;3m +0ms[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:47 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mCacheModule dependencies initialized[39m[38;5;3m +3ms[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:47 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:47 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mScheduleModule dependencies initialized[39m[38;5;3m +1ms[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:47 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mBullModule dependencies initialized[39m[38;5;3m +0ms[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:47 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mBullModule dependencies initialized[39m[38;5;3m +1ms[39m
+app2                 | query: PRAGMA foreign_keys = OFF
+app2                 | query: BEGIN TRANSACTION
+app2                 | query: SELECT * FROM "sqlite_master" WHERE "type" = 'table' AND "name" IN ('payment')
+app2                 | query: SELECT * FROM "sqlite_master" WHERE "type" = 'index' AND "tbl_name" IN ('payment')
+app2                 | query: SELECT * FROM "sqlite_master" WHERE "type" = 'table' AND "name" = 'typeorm_metadata'
+app2                 | query: CREATE TABLE "payment" ("correlationId" varchar PRIMARY KEY NOT NULL, "amount" float NOT NULL, "source" varchar NOT NULL, "requestedAt" date NOT NULL)
+app2                 | query: COMMIT
+app1                 | query: PRAGMA foreign_keys = OFF
+app1                 | query: BEGIN TRANSACTION
+app1                 | query: SELECT * FROM "sqlite_master" WHERE "type" = 'table' AND "name" IN ('payment')
+app2                 | query: PRAGMA foreign_keys = ON
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:47 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mDatabaseModule dependencies initialized[39m[38;5;3m +63ms[39m
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:47 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPaymentsModule dependencies initialized[39m[38;5;3m +1ms[39m
+app1                 | query: SELECT * FROM "sqlite_master" WHERE "type" = 'index' AND "tbl_name" IN ('payment')
+app1                 | query: SELECT * FROM "sqlite_master" WHERE "type" = 'table' AND "name" = 'typeorm_metadata'
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:47 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +26ms[39m
+app1                 | query: CREATE TABLE "payment" ("correlationId" varchar PRIMARY KEY NOT NULL, "amount" float NOT NULL, "source" varchar NOT NULL, "requestedAt" date NOT NULL)
+app1                 | query: COMMIT
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:47 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +6ms[39m
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:47 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mCreatePaymentController {/payments}:[39m[38;5;3m +0ms[39m
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:47 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/payments, POST} route[39m[38;5;3m +0ms[39m
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:47 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mPaymentsSummaryController {/payments-summary}:[39m[38;5;3m +1ms[39m
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:47 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/payments-summary, GET} route[39m[38;5;3m +0ms[39m
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:47 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mPurgeController {/purge-payments}:[39m[38;5;3m +0ms[39m
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:47 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/purge-payments, POST} route[39m[38;5;3m +1ms[39m
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:47 AM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +6ms[39m
+app2                 | {"level":30,"time":1753064807102,"pid":19,"hostname":"24abf15516ff","msg":"Server listening at http://0.0.0.0:3000"}
+app1                 | query: PRAGMA foreign_keys = ON
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:47 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mDatabaseModule dependencies initialized[39m[38;5;3m +110ms[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:47 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPaymentsModule dependencies initialized[39m[38;5;3m +1ms[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:47 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +10ms[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:47 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +3ms[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:47 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mCreatePaymentController {/payments}:[39m[38;5;3m +0ms[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:47 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/payments, POST} route[39m[38;5;3m +1ms[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:47 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mPaymentsSummaryController {/payments-summary}:[39m[38;5;3m +0ms[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:47 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/payments-summary, GET} route[39m[38;5;3m +0ms[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:47 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mPurgeController {/purge-payments}:[39m[38;5;3m +0ms[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:47 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/purge-payments, POST} route[39m[38;5;3m +1ms[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:47 AM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +7ms[39m
+app1                 | {"level":30,"time":1753064807142,"pid":19,"hostname":"d25e0cad5bb2","msg":"Server listening at http://0.0.0.0:3000"}
+app1                 | {"level":30,"time":1753064811554,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-1","req":{"method":"GET","url":"/payments-summary","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":46672},"msg":"incoming request"}
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:51 AM [95m  DEBUG[39m [38;5;3m[PaymentsSummaryService] [39m[95mGet payments summary: {}[39m
+app1                 | query: SELECT "payment"."correlationId" AS "payment_correlationId", "payment"."amount" AS "payment_amount", "payment"."source" AS "payment_source", "payment"."requestedAt" AS "payment_requestedAt" FROM "payment" "payment" WHERE "payment"."source" = ? -- PARAMETERS: ["default"]
+app1                 | query: SELECT "payment"."correlationId" AS "payment_correlationId", "payment"."amount" AS "payment_amount", "payment"."source" AS "payment_source", "payment"."requestedAt" AS "payment_requestedAt" FROM "payment" "payment" WHERE "payment"."source" = ? -- PARAMETERS: ["fallback"]
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:51 AM [32m    LOG[39m [38;5;3m[PaymentsSummaryService] [39m[32mGet payments summary: {"fallback":{"totalRequests":0,"totalAmount":0},"default":{"totalRequests":0,"totalAmount":0}}[39m
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:26:51 +0000] "GET /payments-summary HTTP/1.1" 200 94 "-" "curl/7.88.1"
+app1                 | {"level":30,"time":1753064811571,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-1","res":{"statusCode":200},"responseTime":15.56886899471283,"msg":"request completed"}
+app1                 | {"level":30,"time":1753064817793,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-2","req":{"method":"POST","url":"/purge-payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":46678},"msg":"incoming request"}
+app1                 | {"level":50,"time":1753064817795,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-2","req":{"method":"POST","url":"/purge-payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":46678},"res":{"statusCode":500},"err":{"type":"TypeError","message":"response.status(...).json is not a function","stack":"TypeError: response.status(...).json is not a function\n    at AllExceptionsFilter.catch (/app/dist/exception-filters/all-errors/all-errors.filter.js:20:33)\n    at ExceptionsHandler.invokeCustomFilters (/app/node_modules/@nestjs/core/exceptions/exceptions-handler.js:30:26)\n    at ExceptionsHandler.next (/app/node_modules/@nestjs/core/exceptions/exceptions-handler.js:14:18)\n    at Object.<anonymous> (/app/node_modules/@nestjs/core/router/router-proxy.js:25:35)\n    at handleError (/app/node_modules/fastify/lib/error-handler.js:69:20)\n    at onErrorHook (/app/node_modules/fastify/lib/reply.js:845:5)\n    at Reply.send (/app/node_modules/fastify/lib/reply.js:157:5)\n    at /app/node_modules/fastify/lib/contentTypeParser.js:196:15\n    at AsyncResource.runInAsyncScope (node:async_hooks:206:9)\n    at done (/app/node_modules/fastify/lib/contentTypeParser.js:192:14)"},"msg":"response.status(...).json is not a function"}
+app1                 | {"level":30,"time":1753064817797,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-2","res":{"statusCode":500},"responseTime":4.062823057174683,"msg":"request completed"}
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:26:57 +0000] "POST /purge-payments HTTP/1.1" 500 106 "-" "Grafana k6/1.1.0"
+app1                 | {"level":30,"time":1753064817802,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-3","req":{"method":"GET","url":"/payments-summary?from=2025-07-21T02:26:47.797Z&to=2025-07-21T02:26:57.697Z","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":46690},"msg":"incoming request"}
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:57 AM [95m  DEBUG[39m [38;5;3m[PaymentsSummaryService] [39m[95mGet payments summary: {"to":"2025-07-21T02:26:57.697Z","from":"2025-07-21T02:26:47.797Z"}[39m
+app1                 | query: SELECT "payment"."correlationId" AS "payment_correlationId", "payment"."amount" AS "payment_amount", "payment"."source" AS "payment_source", "payment"."requestedAt" AS "payment_requestedAt" FROM "payment" "payment" WHERE "payment"."source" = ? AND "payment"."requestedAt" >= ? AND "payment"."requestedAt" <= ? -- PARAMETERS: ["default","2025-07-21T02:26:47.797Z","2025-07-21T02:26:57.697Z"]
+app2                 | {"level":30,"time":1753064817806,"pid":19,"hostname":"24abf15516ff","reqId":"req-1","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":40614},"msg":"incoming request"}
+app1                 | query: SELECT "payment"."correlationId" AS "payment_correlationId", "payment"."amount" AS "payment_amount", "payment"."source" AS "payment_source", "payment"."requestedAt" AS "payment_requestedAt" FROM "payment" "payment" WHERE "payment"."source" = ? AND "payment"."requestedAt" >= ? AND "payment"."requestedAt" <= ? -- PARAMETERS: ["fallback","2025-07-21T02:26:47.797Z","2025-07-21T02:26:57.697Z"]
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:57 AM [32m    LOG[39m [38;5;3m[PaymentsSummaryService] [39m[32mGet payments summary: {"fallback":{"totalRequests":0,"totalAmount":0},"default":{"totalRequests":0,"totalAmount":0}}[39m
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:26:57 +0000] "GET /payments-summary?from=2025-07-21T02:26:47.797Z&to=2025-07-21T02:26:57.697Z HTTP/1.1" 200 94 "-" "Grafana k6/1.1.0"
+app1                 | {"level":30,"time":1753064817811,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-3","res":{"statusCode":200},"responseTime":9.210023999214172,"msg":"request completed"}
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:57 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"5ee3a6a3-a985-47c0-b1e5-998c2a32e505","amount":19.9}[39m
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:57 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"5ee3a6a3-a985-47c0-b1e5-998c2a32e505","amount":19.9}[39m
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:57 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"5ee3a6a3-a985-47c0-b1e5-998c2a32e505","amount":19.9}[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:57 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"5ee3a6a3-a985-47c0-b1e5-998c2a32e505","amount":19.9}, host: default[39m
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:26:57 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app2                 | {"level":30,"time":1753064817838,"pid":19,"hostname":"24abf15516ff","reqId":"req-1","res":{"statusCode":201},"responseTime":31.39835298061371,"msg":"request completed"}
+app1                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["5ee3a6a3-a985-47c0-b1e5-998c2a32e505"]
+app1                 | query: BEGIN TRANSACTION
+app1                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["5ee3a6a3-a985-47c0-b1e5-998c2a32e505","default","2025-07-21"]
+app1                 | query: COMMIT
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:57 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"5ee3a6a3-a985-47c0-b1e5-998c2a32e505","amount":19.9,"requestedAt":"2025-07-21T02:26:57.823Z","source":"default"}[39m
+app2                 | {"level":30,"time":1753064817909,"pid":19,"hostname":"24abf15516ff","reqId":"req-2","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":40618},"msg":"incoming request"}
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:57 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"05bd9770-4275-4341-acdb-386f236dd414","amount":19.9}[39m
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:26:57 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app2                 | {"level":30,"time":1753064817911,"pid":19,"hostname":"24abf15516ff","reqId":"req-2","res":{"statusCode":201},"responseTime":2.058722972869873,"msg":"request completed"}
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:57 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"05bd9770-4275-4341-acdb-386f236dd414","amount":19.9}[39m
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:57 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"05bd9770-4275-4341-acdb-386f236dd414","amount":19.9}[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:57 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"05bd9770-4275-4341-acdb-386f236dd414","amount":19.9}, host: default[39m
+app1                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["05bd9770-4275-4341-acdb-386f236dd414"]
+app1                 | query: BEGIN TRANSACTION
+app1                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["05bd9770-4275-4341-acdb-386f236dd414","default","2025-07-21"]
+app1                 | query: COMMIT
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:57 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"05bd9770-4275-4341-acdb-386f236dd414","amount":19.9,"requestedAt":"2025-07-21T02:26:57.912Z","source":"default"}[39m
+app1                 | {"level":30,"time":1753064818017,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-4","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":46694},"msg":"incoming request"}
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:58 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"342b6da8-275d-4a30-90b0-c1b5e7b61b7b","amount":19.9}[39m
+app1                 | {"level":30,"time":1753064818024,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-4","res":{"statusCode":201},"responseTime":6.3311179876327515,"msg":"request completed"}
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:26:58 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app2                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:58 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"342b6da8-275d-4a30-90b0-c1b5e7b61b7b","amount":19.9}[39m
+app2                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:58 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"342b6da8-275d-4a30-90b0-c1b5e7b61b7b","amount":19.9}[39m
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:58 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"342b6da8-275d-4a30-90b0-c1b5e7b61b7b","amount":19.9}, host: default[39m
+app2                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["342b6da8-275d-4a30-90b0-c1b5e7b61b7b"]
+app2                 | query: BEGIN TRANSACTION
+app2                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["342b6da8-275d-4a30-90b0-c1b5e7b61b7b","default","2025-07-21"]
+app2                 | query: COMMIT
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:58 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"342b6da8-275d-4a30-90b0-c1b5e7b61b7b","amount":19.9,"requestedAt":"2025-07-21T02:26:58.025Z","source":"default"}[39m
+app2                 | {"level":30,"time":1753064818127,"pid":19,"hostname":"24abf15516ff","reqId":"req-3","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":40626},"msg":"incoming request"}
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:58 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"8e5544e6-0cef-469e-a65f-4be68c5e051a","amount":19.9}[39m
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:26:58 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app2                 | {"level":30,"time":1753064818129,"pid":19,"hostname":"24abf15516ff","reqId":"req-3","res":{"statusCode":201},"responseTime":2.2579859495162964,"msg":"request completed"}
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:58 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"8e5544e6-0cef-469e-a65f-4be68c5e051a","amount":19.9}[39m
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:58 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"8e5544e6-0cef-469e-a65f-4be68c5e051a","amount":19.9}[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:58 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"8e5544e6-0cef-469e-a65f-4be68c5e051a","amount":19.9}, host: default[39m
+app1                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["8e5544e6-0cef-469e-a65f-4be68c5e051a"]
+app1                 | query: BEGIN TRANSACTION
+app1                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["8e5544e6-0cef-469e-a65f-4be68c5e051a","default","2025-07-21"]
+app1                 | query: COMMIT
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:58 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"8e5544e6-0cef-469e-a65f-4be68c5e051a","amount":19.9,"requestedAt":"2025-07-21T02:26:58.130Z","source":"default"}[39m
+app1                 | {"level":30,"time":1753064818237,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-5","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":46704},"msg":"incoming request"}
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:58 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"c540843b-14b5-43e4-98b3-96eb9733f179","amount":19.9}[39m
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:26:58 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app1                 | {"level":30,"time":1753064818241,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-5","res":{"statusCode":201},"responseTime":4.387542009353638,"msg":"request completed"}
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:58 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"c540843b-14b5-43e4-98b3-96eb9733f179","amount":19.9}[39m
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:58 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"c540843b-14b5-43e4-98b3-96eb9733f179","amount":19.9}[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:58 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"c540843b-14b5-43e4-98b3-96eb9733f179","amount":19.9}, host: default[39m
+app1                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["c540843b-14b5-43e4-98b3-96eb9733f179"]
+app1                 | query: BEGIN TRANSACTION
+app1                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["c540843b-14b5-43e4-98b3-96eb9733f179","default","2025-07-21"]
+app1                 | query: COMMIT
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:58 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"c540843b-14b5-43e4-98b3-96eb9733f179","amount":19.9,"requestedAt":"2025-07-21T02:26:58.242Z","source":"default"}[39m
+app2                 | {"level":30,"time":1753064818346,"pid":19,"hostname":"24abf15516ff","reqId":"req-4","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":40634},"msg":"incoming request"}
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:58 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"f4c288a9-2149-4790-9281-746e616d45be","amount":19.9}[39m
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:26:58 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app2                 | {"level":30,"time":1753064818348,"pid":19,"hostname":"24abf15516ff","reqId":"req-4","res":{"statusCode":201},"responseTime":2.2258639335632324,"msg":"request completed"}
+app2                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:58 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"f4c288a9-2149-4790-9281-746e616d45be","amount":19.9}[39m
+app2                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:58 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"f4c288a9-2149-4790-9281-746e616d45be","amount":19.9}[39m
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:58 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"f4c288a9-2149-4790-9281-746e616d45be","amount":19.9}, host: default[39m
+app2                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["f4c288a9-2149-4790-9281-746e616d45be"]
+app2                 | query: BEGIN TRANSACTION
+app2                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["f4c288a9-2149-4790-9281-746e616d45be","default","2025-07-21"]
+app2                 | query: COMMIT
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:58 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"f4c288a9-2149-4790-9281-746e616d45be","amount":19.9,"requestedAt":"2025-07-21T02:26:58.349Z","source":"default"}[39m
+app1                 | {"level":30,"time":1753064818455,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-6","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":46718},"msg":"incoming request"}
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:58 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"47c1bd64-972b-4fe0-b685-d041dcc14da8","amount":19.9}[39m
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:26:58 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app1                 | {"level":30,"time":1753064818458,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-6","res":{"statusCode":201},"responseTime":3.151547074317932,"msg":"request completed"}
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:58 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"47c1bd64-972b-4fe0-b685-d041dcc14da8","amount":19.9}[39m
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:58 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"47c1bd64-972b-4fe0-b685-d041dcc14da8","amount":19.9}[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:58 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"47c1bd64-972b-4fe0-b685-d041dcc14da8","amount":19.9}, host: default[39m
+app1                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["47c1bd64-972b-4fe0-b685-d041dcc14da8"]
+app1                 | query: BEGIN TRANSACTION
+app1                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["47c1bd64-972b-4fe0-b685-d041dcc14da8","default","2025-07-21"]
+app1                 | query: COMMIT
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:58 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"47c1bd64-972b-4fe0-b685-d041dcc14da8","amount":19.9,"requestedAt":"2025-07-21T02:26:58.460Z","source":"default"}[39m
+app2                 | {"level":30,"time":1753064818564,"pid":19,"hostname":"24abf15516ff","reqId":"req-5","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":40646},"msg":"incoming request"}
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:58 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"ab3157d4-6aa3-4d39-958c-e9c6057011fd","amount":19.9}[39m
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:26:58 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app2                 | {"level":30,"time":1753064818567,"pid":19,"hostname":"24abf15516ff","reqId":"req-5","res":{"statusCode":201},"responseTime":2.5018850564956665,"msg":"request completed"}
+app2                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:58 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"ab3157d4-6aa3-4d39-958c-e9c6057011fd","amount":19.9}[39m
+app2                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:58 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"ab3157d4-6aa3-4d39-958c-e9c6057011fd","amount":19.9}[39m
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:58 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"ab3157d4-6aa3-4d39-958c-e9c6057011fd","amount":19.9}, host: default[39m
+app2                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["ab3157d4-6aa3-4d39-958c-e9c6057011fd"]
+app2                 | query: BEGIN TRANSACTION
+app2                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["ab3157d4-6aa3-4d39-958c-e9c6057011fd","default","2025-07-21"]
+app2                 | query: COMMIT
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:58 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"ab3157d4-6aa3-4d39-958c-e9c6057011fd","amount":19.9,"requestedAt":"2025-07-21T02:26:58.568Z","source":"default"}[39m
+app1                 | {"level":30,"time":1753064818674,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-7","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":54826},"msg":"incoming request"}
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:58 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"b5267696-e9d7-407d-801a-98fe80278c93","amount":19.9}[39m
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:26:58 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app1                 | {"level":30,"time":1753064818677,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-7","res":{"statusCode":201},"responseTime":3.032057046890259,"msg":"request completed"}
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:58 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"b5267696-e9d7-407d-801a-98fe80278c93","amount":19.9}[39m
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:58 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"b5267696-e9d7-407d-801a-98fe80278c93","amount":19.9}[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:58 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"b5267696-e9d7-407d-801a-98fe80278c93","amount":19.9}, host: default[39m
+app1                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["b5267696-e9d7-407d-801a-98fe80278c93"]
+app1                 | query: BEGIN TRANSACTION
+app1                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["b5267696-e9d7-407d-801a-98fe80278c93","default","2025-07-21"]
+app1                 | query: COMMIT
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:58 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"b5267696-e9d7-407d-801a-98fe80278c93","amount":19.9,"requestedAt":"2025-07-21T02:26:58.678Z","source":"default"}[39m
+app2                 | {"level":30,"time":1753064818783,"pid":19,"hostname":"24abf15516ff","reqId":"req-6","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":42630},"msg":"incoming request"}
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:58 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"e61b3016-9755-474e-80ac-de52dcbf2f9c","amount":19.9}[39m
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:26:58 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app2                 | {"level":30,"time":1753064818786,"pid":19,"hostname":"24abf15516ff","reqId":"req-6","res":{"statusCode":201},"responseTime":2.0698130130767822,"msg":"request completed"}
+app2                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:58 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"e61b3016-9755-474e-80ac-de52dcbf2f9c","amount":19.9}[39m
+app2                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:58 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"e61b3016-9755-474e-80ac-de52dcbf2f9c","amount":19.9}[39m
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:58 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"e61b3016-9755-474e-80ac-de52dcbf2f9c","amount":19.9}, host: default[39m
+app2                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["e61b3016-9755-474e-80ac-de52dcbf2f9c"]
+app2                 | query: BEGIN TRANSACTION
+app2                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["e61b3016-9755-474e-80ac-de52dcbf2f9c","default","2025-07-21"]
+app2                 | query: COMMIT
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:58 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"e61b3016-9755-474e-80ac-de52dcbf2f9c","amount":19.9,"requestedAt":"2025-07-21T02:26:58.787Z","source":"default"}[39m
+app1                 | {"level":30,"time":1753064818838,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-8","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":54836},"msg":"incoming request"}
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:58 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"341bdda7-df5d-4c00-b7dc-30a7a001a20c","amount":19.9}[39m
+app1                 | {"level":30,"time":1753064818841,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-8","res":{"statusCode":201},"responseTime":2.521059989929199,"msg":"request completed"}
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:26:58 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:58 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"341bdda7-df5d-4c00-b7dc-30a7a001a20c","amount":19.9}[39m
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:58 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"341bdda7-df5d-4c00-b7dc-30a7a001a20c","amount":19.9}[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:58 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"341bdda7-df5d-4c00-b7dc-30a7a001a20c","amount":19.9}, host: default[39m
+app1                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["341bdda7-df5d-4c00-b7dc-30a7a001a20c"]
+app1                 | query: BEGIN TRANSACTION
+app1                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["341bdda7-df5d-4c00-b7dc-30a7a001a20c","default","2025-07-21"]
+app1                 | query: COMMIT
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:58 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"341bdda7-df5d-4c00-b7dc-30a7a001a20c","amount":19.9,"requestedAt":"2025-07-21T02:26:58.842Z","source":"default"}[39m
+app2                 | {"level":30,"time":1753064818892,"pid":19,"hostname":"24abf15516ff","reqId":"req-7","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":42638},"msg":"incoming request"}
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:58 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"4cd343dc-86aa-40ff-9591-74b0dab16410","amount":19.9}[39m
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:26:58 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app2                 | {"level":30,"time":1753064818894,"pid":19,"hostname":"24abf15516ff","reqId":"req-7","res":{"statusCode":201},"responseTime":1.9117039442062378,"msg":"request completed"}
+app2                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:58 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"4cd343dc-86aa-40ff-9591-74b0dab16410","amount":19.9}[39m
+app2                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:58 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"4cd343dc-86aa-40ff-9591-74b0dab16410","amount":19.9}[39m
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:58 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"4cd343dc-86aa-40ff-9591-74b0dab16410","amount":19.9}, host: default[39m
+app2                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["4cd343dc-86aa-40ff-9591-74b0dab16410"]
+app2                 | query: BEGIN TRANSACTION
+app2                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["4cd343dc-86aa-40ff-9591-74b0dab16410","default","2025-07-21"]
+app2                 | query: COMMIT
+app1                 | {"level":30,"time":1753064818913,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-9","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":54848},"msg":"incoming request"}
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:58 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"5aabd112-230b-4452-b8aa-19edfe5a9d74","amount":19.9}[39m
+app1                 | {"level":30,"time":1753064818915,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-9","res":{"statusCode":201},"responseTime":2.0068010091781616,"msg":"request completed"}
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:26:58 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:58 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"5aabd112-230b-4452-b8aa-19edfe5a9d74","amount":19.9}[39m
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:58 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"5aabd112-230b-4452-b8aa-19edfe5a9d74","amount":19.9}[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:58 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"5aabd112-230b-4452-b8aa-19edfe5a9d74","amount":19.9}, host: default[39m
+app1                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["5aabd112-230b-4452-b8aa-19edfe5a9d74"]
+app1                 | query: BEGIN TRANSACTION
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:58 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"4cd343dc-86aa-40ff-9591-74b0dab16410","amount":19.9,"requestedAt":"2025-07-21T02:26:58.896Z","source":"default"}[39m
+app1                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["5aabd112-230b-4452-b8aa-19edfe5a9d74","default","2025-07-21"]
+app1                 | query: COMMIT
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:58 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"5aabd112-230b-4452-b8aa-19edfe5a9d74","amount":19.9,"requestedAt":"2025-07-21T02:26:58.917Z","source":"default"}[39m
+app2                 | {"level":30,"time":1753064819002,"pid":19,"hostname":"24abf15516ff","reqId":"req-8","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":42652},"msg":"incoming request"}
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"2d124fa3-c88a-4ac8-a822-d94bac252771","amount":19.9}[39m
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:26:59 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app2                 | {"level":30,"time":1753064819005,"pid":19,"hostname":"24abf15516ff","reqId":"req-8","res":{"statusCode":201},"responseTime":2.7250890731811523,"msg":"request completed"}
+app2                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"2d124fa3-c88a-4ac8-a822-d94bac252771","amount":19.9}[39m
+app2                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"2d124fa3-c88a-4ac8-a822-d94bac252771","amount":19.9}[39m
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"2d124fa3-c88a-4ac8-a822-d94bac252771","amount":19.9}, host: default[39m
+app2                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["2d124fa3-c88a-4ac8-a822-d94bac252771"]
+app2                 | query: BEGIN TRANSACTION
+app2                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["2d124fa3-c88a-4ac8-a822-d94bac252771","default","2025-07-21"]
+app2                 | query: COMMIT
+app1                 | {"level":30,"time":1753064819026,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-a","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":54852},"msg":"incoming request"}
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"f4bf218e-ca81-4db7-b8da-9628c2358b14","amount":19.9}[39m
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:26:59 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app1                 | {"level":30,"time":1753064819032,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-a","res":{"statusCode":201},"responseTime":5.433019995689392,"msg":"request completed"}
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"2d124fa3-c88a-4ac8-a822-d94bac252771","amount":19.9,"requestedAt":"2025-07-21T02:26:59.006Z","source":"default"}[39m
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"f4bf218e-ca81-4db7-b8da-9628c2358b14","amount":19.9}[39m
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"f4bf218e-ca81-4db7-b8da-9628c2358b14","amount":19.9}[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"f4bf218e-ca81-4db7-b8da-9628c2358b14","amount":19.9}, host: default[39m
+app1                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["f4bf218e-ca81-4db7-b8da-9628c2358b14"]
+app1                 | query: BEGIN TRANSACTION
+app1                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["f4bf218e-ca81-4db7-b8da-9628c2358b14","default","2025-07-21"]
+app1                 | query: COMMIT
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"f4bf218e-ca81-4db7-b8da-9628c2358b14","amount":19.9,"requestedAt":"2025-07-21T02:26:59.034Z","source":"default"}[39m
+app2                 | {"level":30,"time":1753064819111,"pid":19,"hostname":"24abf15516ff","reqId":"req-9","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":42668},"msg":"incoming request"}
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"54eb757b-4828-40e4-a17a-bb489482698f","amount":19.9}[39m
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:26:59 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app2                 | {"level":30,"time":1753064819115,"pid":19,"hostname":"24abf15516ff","reqId":"req-9","res":{"statusCode":201},"responseTime":2.7801220417022705,"msg":"request completed"}
+app2                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"54eb757b-4828-40e4-a17a-bb489482698f","amount":19.9}[39m
+app2                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"54eb757b-4828-40e4-a17a-bb489482698f","amount":19.9}[39m
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"54eb757b-4828-40e4-a17a-bb489482698f","amount":19.9}, host: default[39m
+app2                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["54eb757b-4828-40e4-a17a-bb489482698f"]
+app2                 | query: BEGIN TRANSACTION
+app2                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["54eb757b-4828-40e4-a17a-bb489482698f","default","2025-07-21"]
+app2                 | query: COMMIT
+app1                 | {"level":30,"time":1753064819131,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-b","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":54854},"msg":"incoming request"}
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"477130fc-1a75-4e98-86f8-0eb6abcb9851","amount":19.9}[39m
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:26:59 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app1                 | {"level":30,"time":1753064819135,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-b","res":{"statusCode":201},"responseTime":3.401734948158264,"msg":"request completed"}
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"477130fc-1a75-4e98-86f8-0eb6abcb9851","amount":19.9}[39m
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"477130fc-1a75-4e98-86f8-0eb6abcb9851","amount":19.9}[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"477130fc-1a75-4e98-86f8-0eb6abcb9851","amount":19.9}, host: default[39m
+app1                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["477130fc-1a75-4e98-86f8-0eb6abcb9851"]
+app1                 | query: BEGIN TRANSACTION
+app1                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["477130fc-1a75-4e98-86f8-0eb6abcb9851","default","2025-07-21"]
+app1                 | query: COMMIT
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"54eb757b-4828-40e4-a17a-bb489482698f","amount":19.9,"requestedAt":"2025-07-21T02:26:59.115Z","source":"default"}[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"477130fc-1a75-4e98-86f8-0eb6abcb9851","amount":19.9,"requestedAt":"2025-07-21T02:26:59.137Z","source":"default"}[39m
+app2                 | {"level":30,"time":1753064819220,"pid":19,"hostname":"24abf15516ff","reqId":"req-a","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":42678},"msg":"incoming request"}
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"09e67646-765b-41ab-8f57-4e64a79a8e5b","amount":19.9}[39m
+app2                 | {"level":30,"time":1753064819224,"pid":19,"hostname":"24abf15516ff","reqId":"req-a","res":{"statusCode":201},"responseTime":3.685989022254944,"msg":"request completed"}
+app2                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"09e67646-765b-41ab-8f57-4e64a79a8e5b","amount":19.9}[39m
+app2                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"09e67646-765b-41ab-8f57-4e64a79a8e5b","amount":19.9}[39m
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"09e67646-765b-41ab-8f57-4e64a79a8e5b","amount":19.9}, host: default[39m
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:26:59 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app2                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["09e67646-765b-41ab-8f57-4e64a79a8e5b"]
+app2                 | query: BEGIN TRANSACTION
+app2                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["09e67646-765b-41ab-8f57-4e64a79a8e5b","default","2025-07-21"]
+app2                 | query: COMMIT
+app1                 | {"level":30,"time":1753064819243,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-c","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":54870},"msg":"incoming request"}
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"3589ee12-978d-4098-91a2-2d5009f65b83","amount":19.9}[39m
+app1                 | {"level":30,"time":1753064819245,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-c","res":{"statusCode":201},"responseTime":1.9215830564498901,"msg":"request completed"}
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:26:59 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"3589ee12-978d-4098-91a2-2d5009f65b83","amount":19.9}[39m
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"3589ee12-978d-4098-91a2-2d5009f65b83","amount":19.9}[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"3589ee12-978d-4098-91a2-2d5009f65b83","amount":19.9}, host: default[39m
+app1                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["3589ee12-978d-4098-91a2-2d5009f65b83"]
+app1                 | query: BEGIN TRANSACTION
+app1                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["3589ee12-978d-4098-91a2-2d5009f65b83","default","2025-07-21"]
+app1                 | query: COMMIT
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"09e67646-765b-41ab-8f57-4e64a79a8e5b","amount":19.9,"requestedAt":"2025-07-21T02:26:59.225Z","source":"default"}[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"3589ee12-978d-4098-91a2-2d5009f65b83","amount":19.9,"requestedAt":"2025-07-21T02:26:59.246Z","source":"default"}[39m
+app2                 | {"level":30,"time":1753064819329,"pid":19,"hostname":"24abf15516ff","reqId":"req-b","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":42694},"msg":"incoming request"}
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"17cb3e7f-e477-4c14-98d5-c5d6d70421ed","amount":19.9}[39m
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:26:59 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app2                 | {"level":30,"time":1753064819332,"pid":19,"hostname":"24abf15516ff","reqId":"req-b","res":{"statusCode":201},"responseTime":2.4329590797424316,"msg":"request completed"}
+app2                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"17cb3e7f-e477-4c14-98d5-c5d6d70421ed","amount":19.9}[39m
+app2                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"17cb3e7f-e477-4c14-98d5-c5d6d70421ed","amount":19.9}[39m
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"17cb3e7f-e477-4c14-98d5-c5d6d70421ed","amount":19.9}, host: default[39m
+app2                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["17cb3e7f-e477-4c14-98d5-c5d6d70421ed"]
+app2                 | query: BEGIN TRANSACTION
+app2                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["17cb3e7f-e477-4c14-98d5-c5d6d70421ed","default","2025-07-21"]
+app2                 | query: COMMIT
+app1                 | {"level":30,"time":1753064819350,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-d","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":54884},"msg":"incoming request"}
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"844bb676-ce05-437f-aa24-a99a1cf31988","amount":19.9}[39m
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"17cb3e7f-e477-4c14-98d5-c5d6d70421ed","amount":19.9,"requestedAt":"2025-07-21T02:26:59.333Z","source":"default"}[39m
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:26:59 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app1                 | {"level":30,"time":1753064819383,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-d","res":{"statusCode":201},"responseTime":32.12545204162598,"msg":"request completed"}
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"844bb676-ce05-437f-aa24-a99a1cf31988","amount":19.9}[39m
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"844bb676-ce05-437f-aa24-a99a1cf31988","amount":19.9}[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"844bb676-ce05-437f-aa24-a99a1cf31988","amount":19.9}, host: default[39m
+app1                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["844bb676-ce05-437f-aa24-a99a1cf31988"]
+app1                 | query: BEGIN TRANSACTION
+app1                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["844bb676-ce05-437f-aa24-a99a1cf31988","default","2025-07-21"]
+app1                 | query: COMMIT
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"844bb676-ce05-437f-aa24-a99a1cf31988","amount":19.9,"requestedAt":"2025-07-21T02:26:59.384Z","source":"default"}[39m
+app2                 | {"level":30,"time":1753064819440,"pid":19,"hostname":"24abf15516ff","reqId":"req-c","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":42696},"msg":"incoming request"}
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"8597d7a6-9755-4b5c-a511-5486e25ca502","amount":19.9}[39m
+app2                 | {"level":30,"time":1753064819442,"pid":19,"hostname":"24abf15516ff","reqId":"req-c","res":{"statusCode":201},"responseTime":2.0504560470581055,"msg":"request completed"}
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:26:59 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app2                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"8597d7a6-9755-4b5c-a511-5486e25ca502","amount":19.9}[39m
+app2                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"8597d7a6-9755-4b5c-a511-5486e25ca502","amount":19.9}[39m
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"8597d7a6-9755-4b5c-a511-5486e25ca502","amount":19.9}, host: default[39m
+app2                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["8597d7a6-9755-4b5c-a511-5486e25ca502"]
+app2                 | query: BEGIN TRANSACTION
+app2                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["8597d7a6-9755-4b5c-a511-5486e25ca502","default","2025-07-21"]
+app2                 | query: COMMIT
+app1                 | {"level":30,"time":1753064819460,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-e","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":54898},"msg":"incoming request"}
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"42a11c1d-c8d1-4121-81e1-269d30c4e95c","amount":19.9}[39m
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:26:59 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app1                 | {"level":30,"time":1753064819463,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-e","res":{"statusCode":201},"responseTime":2.2460739612579346,"msg":"request completed"}
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"42a11c1d-c8d1-4121-81e1-269d30c4e95c","amount":19.9}[39m
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"42a11c1d-c8d1-4121-81e1-269d30c4e95c","amount":19.9}[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"42a11c1d-c8d1-4121-81e1-269d30c4e95c","amount":19.9}, host: default[39m
+app1                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["42a11c1d-c8d1-4121-81e1-269d30c4e95c"]
+app1                 | query: BEGIN TRANSACTION
+app1                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["42a11c1d-c8d1-4121-81e1-269d30c4e95c","default","2025-07-21"]
+app1                 | query: COMMIT
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"8597d7a6-9755-4b5c-a511-5486e25ca502","amount":19.9,"requestedAt":"2025-07-21T02:26:59.443Z","source":"default"}[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"42a11c1d-c8d1-4121-81e1-269d30c4e95c","amount":19.9,"requestedAt":"2025-07-21T02:26:59.464Z","source":"default"}[39m
+app2                 | {"level":30,"time":1753064819548,"pid":19,"hostname":"24abf15516ff","reqId":"req-d","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":42706},"msg":"incoming request"}
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"3e7a28bc-0554-4c15-8593-bb944c7e2e2d","amount":19.9}[39m
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:26:59 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app2                 | {"level":30,"time":1753064819549,"pid":19,"hostname":"24abf15516ff","reqId":"req-d","res":{"statusCode":201},"responseTime":1.470749020576477,"msg":"request completed"}
+app2                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"3e7a28bc-0554-4c15-8593-bb944c7e2e2d","amount":19.9}[39m
+app2                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"3e7a28bc-0554-4c15-8593-bb944c7e2e2d","amount":19.9}[39m
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"3e7a28bc-0554-4c15-8593-bb944c7e2e2d","amount":19.9}, host: default[39m
+app2                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["3e7a28bc-0554-4c15-8593-bb944c7e2e2d"]
+app2                 | query: BEGIN TRANSACTION
+app2                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["3e7a28bc-0554-4c15-8593-bb944c7e2e2d","default","2025-07-21"]
+app2                 | query: COMMIT
+app2                 | {"level":30,"time":1753064819569,"pid":19,"hostname":"24abf15516ff","reqId":"req-e","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":42714},"msg":"incoming request"}
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"6a396596-a02e-4d23-8f0d-705c3270fa13","amount":19.9}[39m
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:26:59 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app2                 | {"level":30,"time":1753064819571,"pid":19,"hostname":"24abf15516ff","reqId":"req-e","res":{"statusCode":201},"responseTime":1.3356409072875977,"msg":"request completed"}
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"6a396596-a02e-4d23-8f0d-705c3270fa13","amount":19.9}[39m
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"6a396596-a02e-4d23-8f0d-705c3270fa13","amount":19.9}[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"6a396596-a02e-4d23-8f0d-705c3270fa13","amount":19.9}, host: default[39m
+app1                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["6a396596-a02e-4d23-8f0d-705c3270fa13"]
+app1                 | query: BEGIN TRANSACTION
+app1                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["6a396596-a02e-4d23-8f0d-705c3270fa13","default","2025-07-21"]
+app1                 | query: COMMIT
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"3e7a28bc-0554-4c15-8593-bb944c7e2e2d","amount":19.9,"requestedAt":"2025-07-21T02:26:59.550Z","source":"default"}[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"6a396596-a02e-4d23-8f0d-705c3270fa13","amount":19.9,"requestedAt":"2025-07-21T02:26:59.572Z","source":"default"}[39m
+app1                 | {"level":30,"time":1753064819657,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-f","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":54914},"msg":"incoming request"}
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"cedc80cc-c226-49ae-b001-aeb36f8cafc8","amount":19.9}[39m
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:26:59 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app1                 | {"level":30,"time":1753064819659,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-f","res":{"statusCode":201},"responseTime":1.5250680446624756,"msg":"request completed"}
+app2                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"cedc80cc-c226-49ae-b001-aeb36f8cafc8","amount":19.9}[39m
+app2                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"cedc80cc-c226-49ae-b001-aeb36f8cafc8","amount":19.9}[39m
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"cedc80cc-c226-49ae-b001-aeb36f8cafc8","amount":19.9}, host: default[39m
+app2                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["cedc80cc-c226-49ae-b001-aeb36f8cafc8"]
+app2                 | query: BEGIN TRANSACTION
+app2                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["cedc80cc-c226-49ae-b001-aeb36f8cafc8","default","2025-07-21"]
+app2                 | query: COMMIT
+app1                 | {"level":30,"time":1753064819679,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-g","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":54920},"msg":"incoming request"}
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"2e0e4e14-de71-43ab-9d2a-c31941804a49","amount":19.9}[39m
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:26:59 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app1                 | {"level":30,"time":1753064819681,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-g","res":{"statusCode":201},"responseTime":1.4268959760665894,"msg":"request completed"}
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"2e0e4e14-de71-43ab-9d2a-c31941804a49","amount":19.9}[39m
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"2e0e4e14-de71-43ab-9d2a-c31941804a49","amount":19.9}[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"2e0e4e14-de71-43ab-9d2a-c31941804a49","amount":19.9}, host: default[39m
+app1                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["2e0e4e14-de71-43ab-9d2a-c31941804a49"]
+app1                 | query: BEGIN TRANSACTION
+app1                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["2e0e4e14-de71-43ab-9d2a-c31941804a49","default","2025-07-21"]
+app1                 | query: COMMIT
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"cedc80cc-c226-49ae-b001-aeb36f8cafc8","amount":19.9,"requestedAt":"2025-07-21T02:26:59.660Z","source":"default"}[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"2e0e4e14-de71-43ab-9d2a-c31941804a49","amount":19.9,"requestedAt":"2025-07-21T02:26:59.682Z","source":"default"}[39m
+app2                 | {"level":30,"time":1753064819786,"pid":19,"hostname":"24abf15516ff","reqId":"req-f","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":42730},"msg":"incoming request"}
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"1fae15ed-3205-45c0-838c-a1f6d1d554df","amount":19.9}[39m
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:26:59 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app2                 | {"level":30,"time":1753064819788,"pid":19,"hostname":"24abf15516ff","reqId":"req-f","res":{"statusCode":201},"responseTime":1.595026969909668,"msg":"request completed"}
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"8cbc1cff-d3f1-4ac9-8ab8-9c2710fac079","amount":19.9}[39m
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:26:59 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app2                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"1fae15ed-3205-45c0-838c-a1f6d1d554df","amount":19.9}[39m
+app2                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"1fae15ed-3205-45c0-838c-a1f6d1d554df","amount":19.9}[39m
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"1fae15ed-3205-45c0-838c-a1f6d1d554df","amount":19.9}, host: default[39m
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"8cbc1cff-d3f1-4ac9-8ab8-9c2710fac079","amount":19.9}[39m
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"8cbc1cff-d3f1-4ac9-8ab8-9c2710fac079","amount":19.9}[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"8cbc1cff-d3f1-4ac9-8ab8-9c2710fac079","amount":19.9}, host: default[39m
+app2                 | {"level":30,"time":1753064819788,"pid":19,"hostname":"24abf15516ff","reqId":"req-g","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":42738},"msg":"incoming request"}
+app2                 | {"level":30,"time":1753064819790,"pid":19,"hostname":"24abf15516ff","reqId":"req-g","res":{"statusCode":201},"responseTime":1.341073989868164,"msg":"request completed"}
+app2                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["1fae15ed-3205-45c0-838c-a1f6d1d554df"]
+app2                 | query: BEGIN TRANSACTION
+app1                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["8cbc1cff-d3f1-4ac9-8ab8-9c2710fac079"]
+app2                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["1fae15ed-3205-45c0-838c-a1f6d1d554df","default","2025-07-21"]
+app1                 | query: BEGIN TRANSACTION
+app2                 | query: COMMIT
+app1                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["8cbc1cff-d3f1-4ac9-8ab8-9c2710fac079","default","2025-07-21"]
+app1                 | query: COMMIT
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"1fae15ed-3205-45c0-838c-a1f6d1d554df","amount":19.9,"requestedAt":"2025-07-21T02:26:59.790Z","source":"default"}[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"8cbc1cff-d3f1-4ac9-8ab8-9c2710fac079","amount":19.9,"requestedAt":"2025-07-21T02:26:59.791Z","source":"default"}[39m
+app1                 | {"level":30,"time":1753064819845,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-h","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":54930},"msg":"incoming request"}
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"6f537fad-47e6-42fd-aaeb-670968f57677","amount":19.9}[39m
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:26:59 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app2                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"6f537fad-47e6-42fd-aaeb-670968f57677","amount":19.9}[39m
+app2                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"6f537fad-47e6-42fd-aaeb-670968f57677","amount":19.9}[39m
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"6f537fad-47e6-42fd-aaeb-670968f57677","amount":19.9}, host: default[39m
+app1                 | {"level":30,"time":1753064819847,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-h","res":{"statusCode":201},"responseTime":2.332397937774658,"msg":"request completed"}
+app2                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["6f537fad-47e6-42fd-aaeb-670968f57677"]
+app2                 | query: BEGIN TRANSACTION
+app2                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["6f537fad-47e6-42fd-aaeb-670968f57677","default","2025-07-21"]
+app2                 | query: COMMIT
+app1                 | {"level":30,"time":1753064819876,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-i","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":54944},"msg":"incoming request"}
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"8c69f28b-edf2-41e8-bcbf-6ce2b667dfce","amount":19.9}[39m
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"6f537fad-47e6-42fd-aaeb-670968f57677","amount":19.9,"requestedAt":"2025-07-21T02:26:59.848Z","source":"default"}[39m
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:26:59 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app1                 | {"level":30,"time":1753064819878,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-i","res":{"statusCode":201},"responseTime":2.047874927520752,"msg":"request completed"}
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"8c69f28b-edf2-41e8-bcbf-6ce2b667dfce","amount":19.9}[39m
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"8c69f28b-edf2-41e8-bcbf-6ce2b667dfce","amount":19.9}[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"8c69f28b-edf2-41e8-bcbf-6ce2b667dfce","amount":19.9}, host: default[39m
+app1                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["8c69f28b-edf2-41e8-bcbf-6ce2b667dfce"]
+app1                 | query: BEGIN TRANSACTION
+app1                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["8c69f28b-edf2-41e8-bcbf-6ce2b667dfce","default","2025-07-21"]
+app1                 | query: COMMIT
+app2                 | {"level":30,"time":1753064819897,"pid":19,"hostname":"24abf15516ff","reqId":"req-h","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":42746},"msg":"incoming request"}
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"479d076f-253f-4d19-80b7-b471fe2fd88e","amount":19.9}[39m
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:26:59 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app2                 | {"level":30,"time":1753064819899,"pid":19,"hostname":"24abf15516ff","reqId":"req-h","res":{"statusCode":201},"responseTime":2.103722929954529,"msg":"request completed"}
+app2                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"479d076f-253f-4d19-80b7-b471fe2fd88e","amount":19.9}[39m
+app2                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"479d076f-253f-4d19-80b7-b471fe2fd88e","amount":19.9}[39m
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"479d076f-253f-4d19-80b7-b471fe2fd88e","amount":19.9}, host: default[39m
+app2                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["479d076f-253f-4d19-80b7-b471fe2fd88e"]
+app2                 | query: BEGIN TRANSACTION
+app2                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["479d076f-253f-4d19-80b7-b471fe2fd88e","default","2025-07-21"]
+app2                 | query: COMMIT
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"8c69f28b-edf2-41e8-bcbf-6ce2b667dfce","amount":19.9,"requestedAt":"2025-07-21T02:26:59.879Z","source":"default"}[39m
+app1                 | {"level":30,"time":1753064819918,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-j","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":54958},"msg":"incoming request"}
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"04e0ab0f-c8df-49dc-9dc2-d9c3ed34beec","amount":19.9}[39m
+app1                 | {"level":30,"time":1753064819919,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-j","res":{"statusCode":201},"responseTime":1.5907258987426758,"msg":"request completed"}
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:26:59 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"04e0ab0f-c8df-49dc-9dc2-d9c3ed34beec","amount":19.9}[39m
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"04e0ab0f-c8df-49dc-9dc2-d9c3ed34beec","amount":19.9}[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"04e0ab0f-c8df-49dc-9dc2-d9c3ed34beec","amount":19.9}, host: default[39m
+app1                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["04e0ab0f-c8df-49dc-9dc2-d9c3ed34beec"]
+app1                 | query: BEGIN TRANSACTION
+app1                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["04e0ab0f-c8df-49dc-9dc2-d9c3ed34beec","default","2025-07-21"]
+app1                 | query: COMMIT
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"479d076f-253f-4d19-80b7-b471fe2fd88e","amount":19.9,"requestedAt":"2025-07-21T02:26:59.900Z","source":"default"}[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"04e0ab0f-c8df-49dc-9dc2-d9c3ed34beec","amount":19.9,"requestedAt":"2025-07-21T02:26:59.920Z","source":"default"}[39m
+app2                 | {"level":30,"time":1753064819985,"pid":19,"hostname":"24abf15516ff","reqId":"req-i","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":42758},"msg":"incoming request"}
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"76ab7708-9f0b-45c6-b21a-84349d344cc2","amount":19.9}[39m
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:26:59 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app2                 | {"level":30,"time":1753064819987,"pid":19,"hostname":"24abf15516ff","reqId":"req-i","res":{"statusCode":201},"responseTime":1.474613070487976,"msg":"request completed"}
+app2                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"76ab7708-9f0b-45c6-b21a-84349d344cc2","amount":19.9}[39m
+app2                 | [95m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"76ab7708-9f0b-45c6-b21a-84349d344cc2","amount":19.9}[39m
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:26:59 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"76ab7708-9f0b-45c6-b21a-84349d344cc2","amount":19.9}, host: default[39m
+app2                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["76ab7708-9f0b-45c6-b21a-84349d344cc2"]
+app2                 | query: BEGIN TRANSACTION
+app2                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["76ab7708-9f0b-45c6-b21a-84349d344cc2","default","2025-07-21"]
+app2                 | query: COMMIT
+app2                 | {"level":30,"time":1753064820008,"pid":19,"hostname":"24abf15516ff","reqId":"req-j","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":42774},"msg":"incoming request"}
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"224b7dd5-0c16-4ed0-b5f4-7e9b2120e08d","amount":19.9}[39m
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:27:00 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app2                 | {"level":30,"time":1753064820010,"pid":19,"hostname":"24abf15516ff","reqId":"req-j","res":{"statusCode":201},"responseTime":2.294248938560486,"msg":"request completed"}
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"224b7dd5-0c16-4ed0-b5f4-7e9b2120e08d","amount":19.9}[39m
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"224b7dd5-0c16-4ed0-b5f4-7e9b2120e08d","amount":19.9}[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"224b7dd5-0c16-4ed0-b5f4-7e9b2120e08d","amount":19.9}, host: default[39m
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"76ab7708-9f0b-45c6-b21a-84349d344cc2","amount":19.9,"requestedAt":"2025-07-21T02:26:59.987Z","source":"default"}[39m
+app1                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["224b7dd5-0c16-4ed0-b5f4-7e9b2120e08d"]
+app1                 | query: BEGIN TRANSACTION
+app1                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["224b7dd5-0c16-4ed0-b5f4-7e9b2120e08d","default","2025-07-21"]
+app1                 | query: COMMIT
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"7a178ea8-6a59-4388-b4d4-0d6b81dcadb1","amount":19.9}[39m
+app1                 | {"level":30,"time":1753064820033,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-k","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":54972},"msg":"incoming request"}
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:27:00 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app1                 | {"level":30,"time":1753064820044,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-k","res":{"statusCode":201},"responseTime":10.703037977218628,"msg":"request completed"}
+app2                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"7a178ea8-6a59-4388-b4d4-0d6b81dcadb1","amount":19.9}[39m
+app2                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"7a178ea8-6a59-4388-b4d4-0d6b81dcadb1","amount":19.9}[39m
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"7a178ea8-6a59-4388-b4d4-0d6b81dcadb1","amount":19.9}, host: default[39m
+app2                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["7a178ea8-6a59-4388-b4d4-0d6b81dcadb1"]
+app2                 | query: BEGIN TRANSACTION
+app2                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["7a178ea8-6a59-4388-b4d4-0d6b81dcadb1","default","2025-07-21"]
+app2                 | query: COMMIT
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"7a178ea8-6a59-4388-b4d4-0d6b81dcadb1","amount":19.9,"requestedAt":"2025-07-21T02:27:00.047Z","source":"default"}[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"224b7dd5-0c16-4ed0-b5f4-7e9b2120e08d","amount":19.9,"requestedAt":"2025-07-21T02:27:00.012Z","source":"default"}[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"57612f3c-123f-4892-aa08-04ca8acd997f","amount":19.9}[39m
+app1                 | {"level":30,"time":1753064820095,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-l","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":54974},"msg":"incoming request"}
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"57612f3c-123f-4892-aa08-04ca8acd997f","amount":19.9}[39m
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"57612f3c-123f-4892-aa08-04ca8acd997f","amount":19.9}[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"57612f3c-123f-4892-aa08-04ca8acd997f","amount":19.9}, host: default[39m
+app1                 | {"level":30,"time":1753064820105,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-l","res":{"statusCode":201},"responseTime":9.279530048370361,"msg":"request completed"}
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:27:00 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app2                 | {"level":30,"time":1753064820120,"pid":19,"hostname":"24abf15516ff","reqId":"req-k","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":42782},"msg":"incoming request"}
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"0e280f18-8ea1-494d-95b0-3411012fac26","amount":19.9}[39m
+app1                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["57612f3c-123f-4892-aa08-04ca8acd997f"]
+app1                 | query: BEGIN TRANSACTION
+app2                 | {"level":30,"time":1753064820128,"pid":19,"hostname":"24abf15516ff","reqId":"req-k","res":{"statusCode":201},"responseTime":7.780593037605286,"msg":"request completed"}
+app1                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["57612f3c-123f-4892-aa08-04ca8acd997f","default","2025-07-21"]
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:27:00 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app1                 | query: COMMIT
+app2                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"0e280f18-8ea1-494d-95b0-3411012fac26","amount":19.9}[39m
+app2                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"0e280f18-8ea1-494d-95b0-3411012fac26","amount":19.9}[39m
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"0e280f18-8ea1-494d-95b0-3411012fac26","amount":19.9}, host: default[39m
+app1                 | {"level":30,"time":1753064820137,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-m","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":54986},"msg":"incoming request"}
+app2                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["0e280f18-8ea1-494d-95b0-3411012fac26"]
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"cc827f5e-4cde-4d42-8076-6a9440a3e6e2","amount":19.9}[39m
+app2                 | query: BEGIN TRANSACTION
+app1                 | {"level":30,"time":1753064820145,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-m","res":{"statusCode":201},"responseTime":7.225245952606201,"msg":"request completed"}
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:27:00 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app2                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["0e280f18-8ea1-494d-95b0-3411012fac26","default","2025-07-21"]
+app2                 | query: COMMIT
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"57612f3c-123f-4892-aa08-04ca8acd997f","amount":19.9,"requestedAt":"2025-07-21T02:27:00.105Z","source":"default"}[39m
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"cc827f5e-4cde-4d42-8076-6a9440a3e6e2","amount":19.9}[39m
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"cc827f5e-4cde-4d42-8076-6a9440a3e6e2","amount":19.9}[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"cc827f5e-4cde-4d42-8076-6a9440a3e6e2","amount":19.9}, host: default[39m
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"0e280f18-8ea1-494d-95b0-3411012fac26","amount":19.9,"requestedAt":"2025-07-21T02:27:00.134Z","source":"default"}[39m
+app1                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["cc827f5e-4cde-4d42-8076-6a9440a3e6e2"]
+app1                 | query: BEGIN TRANSACTION
+app1                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["cc827f5e-4cde-4d42-8076-6a9440a3e6e2","default","2025-07-21"]
+app1                 | query: COMMIT
+app2                 | {"level":30,"time":1753064820204,"pid":19,"hostname":"24abf15516ff","reqId":"req-l","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":42784},"msg":"incoming request"}
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"cef8ec3e-f4c8-411d-926d-b95396ea0f79","amount":19.9}[39m
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:27:00 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app2                 | {"level":30,"time":1753064820206,"pid":19,"hostname":"24abf15516ff","reqId":"req-l","res":{"statusCode":201},"responseTime":2.751244068145752,"msg":"request completed"}
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"cef8ec3e-f4c8-411d-926d-b95396ea0f79","amount":19.9}[39m
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"cef8ec3e-f4c8-411d-926d-b95396ea0f79","amount":19.9}[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"cef8ec3e-f4c8-411d-926d-b95396ea0f79","amount":19.9}, host: default[39m
+app1                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["cef8ec3e-f4c8-411d-926d-b95396ea0f79"]
+app2                 | {"level":30,"time":1753064820226,"pid":19,"hostname":"24abf15516ff","reqId":"req-m","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":42800},"msg":"incoming request"}
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"7c051d27-bb94-4e46-94c0-b5f85fcff84f","amount":19.9}[39m
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:27:00 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app2                 | {"level":30,"time":1753064820229,"pid":19,"hostname":"24abf15516ff","reqId":"req-m","res":{"statusCode":201},"responseTime":2.78603196144104,"msg":"request completed"}
+app2                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"7c051d27-bb94-4e46-94c0-b5f85fcff84f","amount":19.9}[39m
+app2                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"7c051d27-bb94-4e46-94c0-b5f85fcff84f","amount":19.9}[39m
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"7c051d27-bb94-4e46-94c0-b5f85fcff84f","amount":19.9}, host: default[39m
+app2                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["7c051d27-bb94-4e46-94c0-b5f85fcff84f"]
+app2                 | query: BEGIN TRANSACTION
+app2                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["7c051d27-bb94-4e46-94c0-b5f85fcff84f","default","2025-07-21"]
+app2                 | query: COMMIT
+app1                 | {"level":30,"time":1753064820248,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-n","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":54992},"msg":"incoming request"}
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"6e4a556b-ba6f-40ad-b832-180ae701ff52","amount":19.9}[39m
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:27:00 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app1                 | {"level":30,"time":1753064820251,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-n","res":{"statusCode":201},"responseTime":2.8071409463882446,"msg":"request completed"}
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"6e4a556b-ba6f-40ad-b832-180ae701ff52","amount":19.9}[39m
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"6e4a556b-ba6f-40ad-b832-180ae701ff52","amount":19.9}[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"6e4a556b-ba6f-40ad-b832-180ae701ff52","amount":19.9}, host: default[39m
+app1                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["6e4a556b-ba6f-40ad-b832-180ae701ff52"]
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"cc827f5e-4cde-4d42-8076-6a9440a3e6e2","amount":19.9,"requestedAt":"2025-07-21T02:27:00.183Z","source":"default"}[39m
+app1                 | query: BEGIN TRANSACTION
+app1                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["cef8ec3e-f4c8-411d-926d-b95396ea0f79","default","2025-07-21"]
+app1                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["6e4a556b-ba6f-40ad-b832-180ae701ff52","default","2025-07-21"]
+app1                 | query: COMMIT
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"7c051d27-bb94-4e46-94c0-b5f85fcff84f","amount":19.9,"requestedAt":"2025-07-21T02:27:00.231Z","source":"default"}[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"6e4a556b-ba6f-40ad-b832-180ae701ff52","amount":19.9,"requestedAt":"2025-07-21T02:27:00.253Z","source":"default"}[39m
+app1                 | {"level":30,"time":1753064820314,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-o","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":55004},"msg":"incoming request"}
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"8d1f8604-a0cd-4138-8169-7625f0800528","amount":19.9}[39m
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:27:00 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app2                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"8d1f8604-a0cd-4138-8169-7625f0800528","amount":19.9}[39m
+app2                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"8d1f8604-a0cd-4138-8169-7625f0800528","amount":19.9}[39m
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"8d1f8604-a0cd-4138-8169-7625f0800528","amount":19.9}, host: default[39m
+app1                 | {"level":30,"time":1753064820318,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-o","res":{"statusCode":201},"responseTime":3.4169960021972656,"msg":"request completed"}
+app2                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["8d1f8604-a0cd-4138-8169-7625f0800528"]
+app2                 | query: BEGIN TRANSACTION
+app2                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["8d1f8604-a0cd-4138-8169-7625f0800528","default","2025-07-21"]
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:27:00 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app2                 | query: COMMIT
+app2                 | {"level":30,"time":1753064820334,"pid":19,"hostname":"24abf15516ff","reqId":"req-n","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":42806},"msg":"incoming request"}
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"14574732-4db4-4f05-9eff-0ae3b47ad089","amount":19.9}[39m
+app2                 | {"level":30,"time":1753064820336,"pid":19,"hostname":"24abf15516ff","reqId":"req-n","res":{"statusCode":201},"responseTime":2.1442049741744995,"msg":"request completed"}
+app2                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"14574732-4db4-4f05-9eff-0ae3b47ad089","amount":19.9}[39m
+app2                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"14574732-4db4-4f05-9eff-0ae3b47ad089","amount":19.9}[39m
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"14574732-4db4-4f05-9eff-0ae3b47ad089","amount":19.9}, host: default[39m
+app2                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["14574732-4db4-4f05-9eff-0ae3b47ad089"]
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"cef8ec3e-f4c8-411d-926d-b95396ea0f79","amount":19.9,"requestedAt":"2025-07-21T02:27:00.208Z","source":"default"}[39m
+app2                 | query: BEGIN TRANSACTION
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"8d1f8604-a0cd-4138-8169-7625f0800528","amount":19.9,"requestedAt":"2025-07-21T02:27:00.320Z","source":"default"}[39m
+app2                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["14574732-4db4-4f05-9eff-0ae3b47ad089","default","2025-07-21"]
+app1                 | {"level":30,"time":1753064820385,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-p","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":55014},"msg":"incoming request"}
+app2                 | query: COMMIT
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"600a5c38-bb34-43d0-8818-9f56666466d2","amount":19.9}[39m
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:27:00 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app1                 | {"level":30,"time":1753064820388,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-p","res":{"statusCode":201},"responseTime":3.392445921897888,"msg":"request completed"}
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"600a5c38-bb34-43d0-8818-9f56666466d2","amount":19.9}[39m
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"600a5c38-bb34-43d0-8818-9f56666466d2","amount":19.9}[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"600a5c38-bb34-43d0-8818-9f56666466d2","amount":19.9}, host: default[39m
+app1                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["600a5c38-bb34-43d0-8818-9f56666466d2"]
+app1                 | query: BEGIN TRANSACTION
+app1                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["600a5c38-bb34-43d0-8818-9f56666466d2","default","2025-07-21"]
+app1                 | query: COMMIT
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"14574732-4db4-4f05-9eff-0ae3b47ad089","amount":19.9,"requestedAt":"2025-07-21T02:27:00.337Z","source":"default"}[39m
+app2                 | {"level":30,"time":1753064820422,"pid":19,"hostname":"24abf15516ff","reqId":"req-o","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":42810},"msg":"incoming request"}
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"989c3a29-09ba-42a9-a4d0-ec983981440d","amount":19.9}[39m
+app2                 | {"level":30,"time":1753064820425,"pid":19,"hostname":"24abf15516ff","reqId":"req-o","res":{"statusCode":201},"responseTime":2.927143096923828,"msg":"request completed"}
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:27:00 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app2                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"989c3a29-09ba-42a9-a4d0-ec983981440d","amount":19.9}[39m
+app2                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"989c3a29-09ba-42a9-a4d0-ec983981440d","amount":19.9}[39m
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"989c3a29-09ba-42a9-a4d0-ec983981440d","amount":19.9}, host: default[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"600a5c38-bb34-43d0-8818-9f56666466d2","amount":19.9,"requestedAt":"2025-07-21T02:27:00.389Z","source":"default"}[39m
+app2                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["989c3a29-09ba-42a9-a4d0-ec983981440d"]
+app2                 | query: BEGIN TRANSACTION
+app2                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["989c3a29-09ba-42a9-a4d0-ec983981440d","default","2025-07-21"]
+app2                 | query: COMMIT
+app2                 | {"level":30,"time":1753064820444,"pid":19,"hostname":"24abf15516ff","reqId":"req-p","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":42818},"msg":"incoming request"}
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"b6977eda-b821-40be-aa5d-a408132835bd","amount":19.9}[39m
+app2                 | {"level":30,"time":1753064820447,"pid":19,"hostname":"24abf15516ff","reqId":"req-p","res":{"statusCode":201},"responseTime":2.4552379846572876,"msg":"request completed"}
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"b6977eda-b821-40be-aa5d-a408132835bd","amount":19.9}[39m
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:27:00 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"b6977eda-b821-40be-aa5d-a408132835bd","amount":19.9}[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"b6977eda-b821-40be-aa5d-a408132835bd","amount":19.9}, host: default[39m
+app1                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["b6977eda-b821-40be-aa5d-a408132835bd"]
+app1                 | query: BEGIN TRANSACTION
+app1                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["b6977eda-b821-40be-aa5d-a408132835bd","default","2025-07-21"]
+app1                 | query: COMMIT
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"989c3a29-09ba-42a9-a4d0-ec983981440d","amount":19.9,"requestedAt":"2025-07-21T02:27:00.427Z","source":"default"}[39m
+app1                 | {"level":30,"time":1753064820465,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-q","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":55024},"msg":"incoming request"}
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"c031d66c-cab7-400c-956a-cd765e9692ee","amount":19.9}[39m
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:27:00 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app1                 | {"level":30,"time":1753064820467,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-q","res":{"statusCode":201},"responseTime":1.5980870723724365,"msg":"request completed"}
+app2                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"c031d66c-cab7-400c-956a-cd765e9692ee","amount":19.9}[39m
+app2                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"c031d66c-cab7-400c-956a-cd765e9692ee","amount":19.9}[39m
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"c031d66c-cab7-400c-956a-cd765e9692ee","amount":19.9}, host: default[39m
+app2                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["c031d66c-cab7-400c-956a-cd765e9692ee"]
+app2                 | query: BEGIN TRANSACTION
+app2                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["c031d66c-cab7-400c-956a-cd765e9692ee","default","2025-07-21"]
+app2                 | query: COMMIT
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"b6977eda-b821-40be-aa5d-a408132835bd","amount":19.9,"requestedAt":"2025-07-21T02:27:00.448Z","source":"default"}[39m
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"c031d66c-cab7-400c-956a-cd765e9692ee","amount":19.9,"requestedAt":"2025-07-21T02:27:00.467Z","source":"default"}[39m
+app1                 | {"level":30,"time":1753064820531,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-r","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":55034},"msg":"incoming request"}
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"bf62a4f8-6ee6-4374-8b75-a9df8693efa8","amount":19.9}[39m
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:27:00 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"bf62a4f8-6ee6-4374-8b75-a9df8693efa8","amount":19.9}[39m
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"bf62a4f8-6ee6-4374-8b75-a9df8693efa8","amount":19.9}[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"bf62a4f8-6ee6-4374-8b75-a9df8693efa8","amount":19.9}, host: default[39m
+app1                 | {"level":30,"time":1753064820534,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-r","res":{"statusCode":201},"responseTime":2.695976972579956,"msg":"request completed"}
+app1                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["bf62a4f8-6ee6-4374-8b75-a9df8693efa8"]
+app1                 | query: BEGIN TRANSACTION
+app1                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["bf62a4f8-6ee6-4374-8b75-a9df8693efa8","default","2025-07-21"]
+app1                 | query: COMMIT
+app2                 | {"level":30,"time":1753064820552,"pid":19,"hostname":"24abf15516ff","reqId":"req-q","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":42826},"msg":"incoming request"}
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"a361a0e6-efe0-4e04-925a-2188fdd50840","amount":19.9}[39m
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:27:00 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app2                 | {"level":30,"time":1753064820555,"pid":19,"hostname":"24abf15516ff","reqId":"req-q","res":{"statusCode":201},"responseTime":2.485921025276184,"msg":"request completed"}
+app2                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"a361a0e6-efe0-4e04-925a-2188fdd50840","amount":19.9}[39m
+app2                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"a361a0e6-efe0-4e04-925a-2188fdd50840","amount":19.9}[39m
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"a361a0e6-efe0-4e04-925a-2188fdd50840","amount":19.9}, host: default[39m
+app2                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["a361a0e6-efe0-4e04-925a-2188fdd50840"]
+app2                 | query: BEGIN TRANSACTION
+app2                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["a361a0e6-efe0-4e04-925a-2188fdd50840","default","2025-07-21"]
+app2                 | query: COMMIT
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"bf62a4f8-6ee6-4374-8b75-a9df8693efa8","amount":19.9,"requestedAt":"2025-07-21T02:27:00.535Z","source":"default"}[39m
+app2                 | {"level":30,"time":1753064820573,"pid":19,"hostname":"24abf15516ff","reqId":"req-r","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":42836},"msg":"incoming request"}
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"fa2a6f2d-7f15-4ead-a1f6-e0d892e37bff","amount":19.9}[39m
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:27:00 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"fa2a6f2d-7f15-4ead-a1f6-e0d892e37bff","amount":19.9}[39m
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"fa2a6f2d-7f15-4ead-a1f6-e0d892e37bff","amount":19.9}[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"fa2a6f2d-7f15-4ead-a1f6-e0d892e37bff","amount":19.9}, host: default[39m
+app2                 | {"level":30,"time":1753064820577,"pid":19,"hostname":"24abf15516ff","reqId":"req-r","res":{"statusCode":201},"responseTime":3.9033169746398926,"msg":"request completed"}
+app1                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["fa2a6f2d-7f15-4ead-a1f6-e0d892e37bff"]
+app1                 | query: BEGIN TRANSACTION
+app1                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["fa2a6f2d-7f15-4ead-a1f6-e0d892e37bff","default","2025-07-21"]
+app1                 | query: COMMIT
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"a361a0e6-efe0-4e04-925a-2188fdd50840","amount":19.9,"requestedAt":"2025-07-21T02:27:00.556Z","source":"default"}[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"fa2a6f2d-7f15-4ead-a1f6-e0d892e37bff","amount":19.9,"requestedAt":"2025-07-21T02:27:00.577Z","source":"default"}[39m
+app1                 | {"level":30,"time":1753064820642,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-s","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":55050},"msg":"incoming request"}
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"17716617-8214-4654-bffe-8d55954d03d7","amount":19.9}[39m
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:27:00 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app1                 | {"level":30,"time":1753064820644,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-s","res":{"statusCode":201},"responseTime":1.9352649450302124,"msg":"request completed"}
+app2                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"17716617-8214-4654-bffe-8d55954d03d7","amount":19.9}[39m
+app2                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"17716617-8214-4654-bffe-8d55954d03d7","amount":19.9}[39m
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"17716617-8214-4654-bffe-8d55954d03d7","amount":19.9}, host: default[39m
+app2                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["17716617-8214-4654-bffe-8d55954d03d7"]
+app2                 | query: BEGIN TRANSACTION
+app2                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["17716617-8214-4654-bffe-8d55954d03d7","default","2025-07-21"]
+app2                 | query: COMMIT
+app2                 | {"level":30,"time":1753064820660,"pid":19,"hostname":"24abf15516ff","reqId":"req-s","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":42844},"msg":"incoming request"}
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"c20ee556-5566-4c87-9c10-0de520df78ac","amount":19.9}[39m
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:27:00 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app2                 | {"level":30,"time":1753064820664,"pid":19,"hostname":"24abf15516ff","reqId":"req-s","res":{"statusCode":201},"responseTime":3.0295180082321167,"msg":"request completed"}
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"c20ee556-5566-4c87-9c10-0de520df78ac","amount":19.9}[39m
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"c20ee556-5566-4c87-9c10-0de520df78ac","amount":19.9}[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"c20ee556-5566-4c87-9c10-0de520df78ac","amount":19.9}, host: default[39m
+app1                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["c20ee556-5566-4c87-9c10-0de520df78ac"]
+app1                 | query: BEGIN TRANSACTION
+app1                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["c20ee556-5566-4c87-9c10-0de520df78ac","default","2025-07-21"]
+app1                 | query: COMMIT
+app1                 | {"level":30,"time":1753064820683,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-t","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":55062},"msg":"incoming request"}
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"ec68da2a-fd31-4e0b-8d12-3734d129446f","amount":19.9}[39m
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:27:00 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app2                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"ec68da2a-fd31-4e0b-8d12-3734d129446f","amount":19.9}[39m
+app2                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"ec68da2a-fd31-4e0b-8d12-3734d129446f","amount":19.9}[39m
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"ec68da2a-fd31-4e0b-8d12-3734d129446f","amount":19.9}, host: default[39m
+app1                 | {"level":30,"time":1753064820686,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-t","res":{"statusCode":201},"responseTime":3.620729088783264,"msg":"request completed"}
+app2                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["ec68da2a-fd31-4e0b-8d12-3734d129446f"]
+app2                 | query: BEGIN TRANSACTION
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"17716617-8214-4654-bffe-8d55954d03d7","amount":19.9,"requestedAt":"2025-07-21T02:27:00.644Z","source":"default"}[39m
+app2                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["ec68da2a-fd31-4e0b-8d12-3734d129446f","default","2025-07-21"]
+app2                 | query: COMMIT
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"c20ee556-5566-4c87-9c10-0de520df78ac","amount":19.9,"requestedAt":"2025-07-21T02:27:00.674Z","source":"default"}[39m
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"ec68da2a-fd31-4e0b-8d12-3734d129446f","amount":19.9,"requestedAt":"2025-07-21T02:27:00.687Z","source":"default"}[39m
+app1                 | {"level":30,"time":1753064820754,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-u","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":55076},"msg":"incoming request"}
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"56e6be23-9e07-415a-8850-f28c5434ffdf","amount":19.9}[39m
+app1                 | {"level":30,"time":1753064820757,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-u","res":{"statusCode":201},"responseTime":2.4163529872894287,"msg":"request completed"}
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:27:00 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"56e6be23-9e07-415a-8850-f28c5434ffdf","amount":19.9}[39m
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"56e6be23-9e07-415a-8850-f28c5434ffdf","amount":19.9}[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"56e6be23-9e07-415a-8850-f28c5434ffdf","amount":19.9}, host: default[39m
+app1                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["56e6be23-9e07-415a-8850-f28c5434ffdf"]
+app1                 | query: BEGIN TRANSACTION
+app1                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["56e6be23-9e07-415a-8850-f28c5434ffdf","default","2025-07-21"]
+app1                 | query: COMMIT
+app2                 | {"level":30,"time":1753064820791,"pid":19,"hostname":"24abf15516ff","reqId":"req-t","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":42848},"msg":"incoming request"}
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"26235ed6-27dd-4be2-9cb0-450347e04332","amount":19.9}[39m
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"99a38cd7-4eb5-4ee4-9f5b-3dd6fcf5fb55","amount":19.9}[39m
+app2                 | {"level":30,"time":1753064820792,"pid":19,"hostname":"24abf15516ff","reqId":"req-u","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":42852},"msg":"incoming request"}
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"26235ed6-27dd-4be2-9cb0-450347e04332","amount":19.9}[39m
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"26235ed6-27dd-4be2-9cb0-450347e04332","amount":19.9}[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"26235ed6-27dd-4be2-9cb0-450347e04332","amount":19.9}, host: default[39m
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:27:00 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:27:00 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app2                 | {"level":30,"time":1753064820794,"pid":19,"hostname":"24abf15516ff","reqId":"req-t","res":{"statusCode":201},"responseTime":2.659833073616028,"msg":"request completed"}
+app2                 | {"level":30,"time":1753064820796,"pid":19,"hostname":"24abf15516ff","reqId":"req-u","res":{"statusCode":201},"responseTime":3.120136022567749,"msg":"request completed"}
+app2                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"99a38cd7-4eb5-4ee4-9f5b-3dd6fcf5fb55","amount":19.9}[39m
+app2                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"99a38cd7-4eb5-4ee4-9f5b-3dd6fcf5fb55","amount":19.9}[39m
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"99a38cd7-4eb5-4ee4-9f5b-3dd6fcf5fb55","amount":19.9}, host: default[39m
+app1                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["26235ed6-27dd-4be2-9cb0-450347e04332"]
+app2                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["99a38cd7-4eb5-4ee4-9f5b-3dd6fcf5fb55"]
+app2                 | query: BEGIN TRANSACTION
+app2                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["99a38cd7-4eb5-4ee4-9f5b-3dd6fcf5fb55","default","2025-07-21"]
+app2                 | query: COMMIT
+app1                 | query: BEGIN TRANSACTION
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"56e6be23-9e07-415a-8850-f28c5434ffdf","amount":19.9,"requestedAt":"2025-07-21T02:27:00.759Z","source":"default"}[39m
+app1                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["26235ed6-27dd-4be2-9cb0-450347e04332","default","2025-07-21"]
+app1                 | query: COMMIT
+app1                 | {"level":30,"time":1753064820850,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-v","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":55078},"msg":"incoming request"}
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"32a87921-80ba-46e4-83d3-aedb71aa88ed","amount":19.9}[39m
+app1                 | {"level":30,"time":1753064820852,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-v","res":{"statusCode":201},"responseTime":2.3611369132995605,"msg":"request completed"}
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:27:00 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app2                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"32a87921-80ba-46e4-83d3-aedb71aa88ed","amount":19.9}[39m
+app2                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"32a87921-80ba-46e4-83d3-aedb71aa88ed","amount":19.9}[39m
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"32a87921-80ba-46e4-83d3-aedb71aa88ed","amount":19.9}, host: default[39m
+app2                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["32a87921-80ba-46e4-83d3-aedb71aa88ed"]
+app2                 | query: BEGIN TRANSACTION
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"99a38cd7-4eb5-4ee4-9f5b-3dd6fcf5fb55","amount":19.9,"requestedAt":"2025-07-21T02:27:00.797Z","source":"default"}[39m
+app1                 | {"level":30,"time":1753064820859,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-w","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":55094},"msg":"incoming request"}
+app2                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["32a87921-80ba-46e4-83d3-aedb71aa88ed","default","2025-07-21"]
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"540b90ff-52e5-4b4f-b09a-a26d66b03db4","amount":19.9}[39m
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:27:00 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app2                 | query: COMMIT
+app1                 | {"level":30,"time":1753064820861,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-w","res":{"statusCode":201},"responseTime":1.5069119930267334,"msg":"request completed"}
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"540b90ff-52e5-4b4f-b09a-a26d66b03db4","amount":19.9}[39m
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"540b90ff-52e5-4b4f-b09a-a26d66b03db4","amount":19.9}[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"540b90ff-52e5-4b4f-b09a-a26d66b03db4","amount":19.9}, host: default[39m
+app1                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["540b90ff-52e5-4b4f-b09a-a26d66b03db4"]
+app1                 | query: BEGIN TRANSACTION
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"26235ed6-27dd-4be2-9cb0-450347e04332","amount":19.9,"requestedAt":"2025-07-21T02:27:00.794Z","source":"default"}[39m
+app1                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["540b90ff-52e5-4b4f-b09a-a26d66b03db4","default","2025-07-21"]
+app1                 | query: COMMIT
+app2                 | {"level":30,"time":1753064820880,"pid":19,"hostname":"24abf15516ff","reqId":"req-v","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":42856},"msg":"incoming request"}
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"cc10b11a-2c50-4e15-bb55-025bc8a3e232","amount":19.9}[39m
+app2                 | {"level":30,"time":1753064820882,"pid":19,"hostname":"24abf15516ff","reqId":"req-v","res":{"statusCode":201},"responseTime":1.7221490144729614,"msg":"request completed"}
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:27:00 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app2                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"cc10b11a-2c50-4e15-bb55-025bc8a3e232","amount":19.9}[39m
+app2                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"cc10b11a-2c50-4e15-bb55-025bc8a3e232","amount":19.9}[39m
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"cc10b11a-2c50-4e15-bb55-025bc8a3e232","amount":19.9}, host: default[39m
+app2                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["cc10b11a-2c50-4e15-bb55-025bc8a3e232"]
+app2                 | {"level":30,"time":1753064820901,"pid":19,"hostname":"24abf15516ff","reqId":"req-w","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":42864},"msg":"incoming request"}
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"d0d5d89b-e428-42ac-9011-c953fe200740","amount":19.9}[39m
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:27:00 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app2                 | {"level":30,"time":1753064820902,"pid":19,"hostname":"24abf15516ff","reqId":"req-w","res":{"statusCode":201},"responseTime":1.4220139980316162,"msg":"request completed"}
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"d0d5d89b-e428-42ac-9011-c953fe200740","amount":19.9}[39m
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"d0d5d89b-e428-42ac-9011-c953fe200740","amount":19.9}[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"d0d5d89b-e428-42ac-9011-c953fe200740","amount":19.9}, host: default[39m
+app2                 | query: BEGIN TRANSACTION
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"32a87921-80ba-46e4-83d3-aedb71aa88ed","amount":19.9,"requestedAt":"2025-07-21T02:27:00.852Z","source":"default"}[39m
+app2                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["cc10b11a-2c50-4e15-bb55-025bc8a3e232","default","2025-07-21"]
+app2                 | query: COMMIT
+app1                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["d0d5d89b-e428-42ac-9011-c953fe200740"]
+app1                 | query: BEGIN TRANSACTION
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"540b90ff-52e5-4b4f-b09a-a26d66b03db4","amount":19.9,"requestedAt":"2025-07-21T02:27:00.862Z","source":"default"}[39m
+app1                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["d0d5d89b-e428-42ac-9011-c953fe200740","default","2025-07-21"]
+app1                 | query: COMMIT
+app1                 | {"level":30,"time":1753064820922,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-x","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":55098},"msg":"incoming request"}
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"b0c35589-20eb-4f5d-8889-1ce0e0e153ef","amount":19.9}[39m
+app1                 | {"level":30,"time":1753064820923,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-x","res":{"statusCode":201},"responseTime":1.8071659803390503,"msg":"request completed"}
+app2                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"b0c35589-20eb-4f5d-8889-1ce0e0e153ef","amount":19.9}[39m
+app2                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"b0c35589-20eb-4f5d-8889-1ce0e0e153ef","amount":19.9}[39m
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"b0c35589-20eb-4f5d-8889-1ce0e0e153ef","amount":19.9}, host: default[39m
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:27:00 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app2                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["b0c35589-20eb-4f5d-8889-1ce0e0e153ef"]
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"cc10b11a-2c50-4e15-bb55-025bc8a3e232","amount":19.9,"requestedAt":"2025-07-21T02:27:00.883Z","source":"default"}[39m
+app2                 | query: BEGIN TRANSACTION
+app2                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["b0c35589-20eb-4f5d-8889-1ce0e0e153ef","default","2025-07-21"]
+app2                 | query: COMMIT
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"d0d5d89b-e428-42ac-9011-c953fe200740","amount":19.9,"requestedAt":"2025-07-21T02:27:00.903Z","source":"default"}[39m
+app1                 | {"level":30,"time":1753064820969,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-y","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":55108},"msg":"incoming request"}
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"f32bafa6-9f1e-4f4f-a4f8-7e6c020212a9","amount":19.9}[39m
+app1                 | {"level":30,"time":1753064820971,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-y","res":{"statusCode":201},"responseTime":1.7608510255813599,"msg":"request completed"}
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:27:00 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"f32bafa6-9f1e-4f4f-a4f8-7e6c020212a9","amount":19.9}[39m
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"f32bafa6-9f1e-4f4f-a4f8-7e6c020212a9","amount":19.9}[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"f32bafa6-9f1e-4f4f-a4f8-7e6c020212a9","amount":19.9}, host: default[39m
+app1                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["f32bafa6-9f1e-4f4f-a4f8-7e6c020212a9"]
+app1                 | query: BEGIN TRANSACTION
+app1                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["f32bafa6-9f1e-4f4f-a4f8-7e6c020212a9","default","2025-07-21"]
+app1                 | query: COMMIT
+app2                 | {"level":30,"time":1753064820990,"pid":19,"hostname":"24abf15516ff","reqId":"req-x","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":42870},"msg":"incoming request"}
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"0fbaab6e-4800-4786-9369-f56191f8a2c9","amount":19.9}[39m
+app2                 | {"level":30,"time":1753064820992,"pid":19,"hostname":"24abf15516ff","reqId":"req-x","res":{"statusCode":201},"responseTime":2.455794930458069,"msg":"request completed"}
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:27:00 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app2                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"0fbaab6e-4800-4786-9369-f56191f8a2c9","amount":19.9}[39m
+app2                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"0fbaab6e-4800-4786-9369-f56191f8a2c9","amount":19.9}[39m
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:00 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"0fbaab6e-4800-4786-9369-f56191f8a2c9","amount":19.9}, host: default[39m
+app2                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["0fbaab6e-4800-4786-9369-f56191f8a2c9"]
+app2                 | query: BEGIN TRANSACTION
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:01 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"b0c35589-20eb-4f5d-8889-1ce0e0e153ef","amount":19.9,"requestedAt":"2025-07-21T02:27:00.924Z","source":"default"}[39m
+app2                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["0fbaab6e-4800-4786-9369-f56191f8a2c9","default","2025-07-21"]
+app2                 | query: COMMIT
+app2                 | {"level":30,"time":1753064821012,"pid":19,"hostname":"24abf15516ff","reqId":"req-y","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":42878},"msg":"incoming request"}
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:01 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"2b09b823-653f-426d-bb74-f09ba6f544c9","amount":19.9}[39m
+app2                 | {"level":30,"time":1753064821014,"pid":19,"hostname":"24abf15516ff","reqId":"req-y","res":{"statusCode":201},"responseTime":1.4930379390716553,"msg":"request completed"}
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:27:01 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:01 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"2b09b823-653f-426d-bb74-f09ba6f544c9","amount":19.9}[39m
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:01 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"2b09b823-653f-426d-bb74-f09ba6f544c9","amount":19.9}[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:01 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"2b09b823-653f-426d-bb74-f09ba6f544c9","amount":19.9}, host: default[39m
+app1                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["2b09b823-653f-426d-bb74-f09ba6f544c9"]
+app1                 | query: BEGIN TRANSACTION
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:01 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"f32bafa6-9f1e-4f4f-a4f8-7e6c020212a9","amount":19.9,"requestedAt":"2025-07-21T02:27:00.972Z","source":"default"}[39m
+app1                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["2b09b823-653f-426d-bb74-f09ba6f544c9","default","2025-07-21"]
+app1                 | query: COMMIT
+app1                 | {"level":30,"time":1753064821045,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-z","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":55114},"msg":"incoming request"}
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:01 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"898c2cea-e27e-4bf4-8ff1-81969adbb568","amount":19.9}[39m
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:27:01 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app1                 | {"level":30,"time":1753064821047,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-z","res":{"statusCode":201},"responseTime":1.1673060655593872,"msg":"request completed"}
+app2                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:01 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"898c2cea-e27e-4bf4-8ff1-81969adbb568","amount":19.9}[39m
+app2                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:01 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"898c2cea-e27e-4bf4-8ff1-81969adbb568","amount":19.9}[39m
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:01 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"898c2cea-e27e-4bf4-8ff1-81969adbb568","amount":19.9}, host: default[39m
+app2                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["898c2cea-e27e-4bf4-8ff1-81969adbb568"]
+app2                 | query: BEGIN TRANSACTION
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:01 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"0fbaab6e-4800-4786-9369-f56191f8a2c9","amount":19.9,"requestedAt":"2025-07-21T02:27:00.994Z","source":"default"}[39m
+app2                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["898c2cea-e27e-4bf4-8ff1-81969adbb568","default","2025-07-21"]
+app2                 | query: COMMIT
+app1                 | {"level":30,"time":1753064821078,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-10","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":55124},"msg":"incoming request"}
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:01 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"6226a6b0-d46c-4b57-8b65-436aa09ecf2c","amount":19.9}[39m
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:27:01 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app1                 | {"level":30,"time":1753064821080,"pid":19,"hostname":"d25e0cad5bb2","reqId":"req-10","res":{"statusCode":201},"responseTime":1.8196539878845215,"msg":"request completed"}
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:01 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"6226a6b0-d46c-4b57-8b65-436aa09ecf2c","amount":19.9}[39m
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:01 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"6226a6b0-d46c-4b57-8b65-436aa09ecf2c","amount":19.9}[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:01 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"6226a6b0-d46c-4b57-8b65-436aa09ecf2c","amount":19.9}, host: default[39m
+app1                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["6226a6b0-d46c-4b57-8b65-436aa09ecf2c"]
+app1                 | query: BEGIN TRANSACTION
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:01 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"2b09b823-653f-426d-bb74-f09ba6f544c9","amount":19.9,"requestedAt":"2025-07-21T02:27:01.015Z","source":"default"}[39m
+app1                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["6226a6b0-d46c-4b57-8b65-436aa09ecf2c","default","2025-07-21"]
+app1                 | query: COMMIT
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:01 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"898c2cea-e27e-4bf4-8ff1-81969adbb568","amount":19.9,"requestedAt":"2025-07-21T02:27:01.047Z","source":"default"}[39m
+app2                 | {"level":30,"time":1753064821112,"pid":19,"hostname":"24abf15516ff","reqId":"req-z","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":42890},"msg":"incoming request"}
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:01 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"38658cd5-f639-46ad-91eb-1e66a7240552","amount":19.9}[39m
+app2                 | {"level":30,"time":1753064821113,"pid":19,"hostname":"24abf15516ff","reqId":"req-z","res":{"statusCode":201},"responseTime":1.4353200197219849,"msg":"request completed"}
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:27:01 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app2                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:01 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"38658cd5-f639-46ad-91eb-1e66a7240552","amount":19.9}[39m
+app2                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:01 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"38658cd5-f639-46ad-91eb-1e66a7240552","amount":19.9}[39m
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:01 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"38658cd5-f639-46ad-91eb-1e66a7240552","amount":19.9}, host: default[39m
+app2                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["38658cd5-f639-46ad-91eb-1e66a7240552"]
+app2                 | query: BEGIN TRANSACTION
+app2                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["38658cd5-f639-46ad-91eb-1e66a7240552","default","2025-07-21"]
+app2                 | query: COMMIT
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:01 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"6226a6b0-d46c-4b57-8b65-436aa09ecf2c","amount":19.9,"requestedAt":"2025-07-21T02:27:01.081Z","source":"default"}[39m
+app2                 | {"level":30,"time":1753064821132,"pid":19,"hostname":"24abf15516ff","reqId":"req-10","req":{"method":"POST","url":"/payments","hostname":"localhost","remoteAddress":"172.20.0.5","remotePort":42894},"msg":"incoming request"}
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:01 AM [32m    LOG[39m [38;5;3m[CreatePaymentController] [39m[32mAdding payment to a queue: {"correlationId":"bd8a7494-48f8-40e8-898f-fa57ab513b9b","amount":19.9}[39m
+app2                 | {"level":30,"time":1753064821133,"pid":19,"hostname":"24abf15516ff","reqId":"req-10","res":{"statusCode":201},"responseTime":1.3824729919433594,"msg":"request completed"}
+nginx-load-balancer  | 172.20.0.1 - - [21/Jul/2025:02:27:01 +0000] "POST /payments HTTP/1.1" 201 11 "-" "Grafana k6/1.1.0"
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:01 AM [95m  DEBUG[39m [38;5;3m[ProcessPaymentProcessor] [39m[95mStarting to process payment: {"correlationId":"bd8a7494-48f8-40e8-898f-fa57ab513b9b","amount":19.9}[39m
+app1                 | [95m[Nest] 19  - [39m07/21/2025, 2:27:01 AM [95m  DEBUG[39m [38;5;3m[CreatePaymentService] [39m[95mRegistering payment: {"correlationId":"bd8a7494-48f8-40e8-898f-fa57ab513b9b","amount":19.9}[39m
+app1                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:01 AM [32m    LOG[39m [38;5;3m[RinhaPaymentProcessorAdapter] [39m[32mProcessing payment: {"correlationId":"bd8a7494-48f8-40e8-898f-fa57ab513b9b","amount":19.9}, host: default[39m
+app1                 | query: SELECT "Payment"."correlationId" AS "Payment_correlationId", "Payment"."amount" AS "Payment_amount", "Payment"."source" AS "Payment_source", "Payment"."requestedAt" AS "Payment_requestedAt" FROM "payment" "Payment" WHERE "Payment"."correlationId" IN (?) -- PARAMETERS: ["bd8a7494-48f8-40e8-898f-fa57ab513b9b"]
+app1                 | query: BEGIN TRANSACTION
+app1                 | query: INSERT INTO "payment"("correlationId", "amount", "source", "requestedAt") VALUES (?, 19.9, ?, ?) -- PARAMETERS: ["bd8a7494-48f8-40e8-898f-fa57ab513b9b","default","2025-07-21"]
+app1                 | query: COMMIT
+app2                 | [32m[Nest] 19  - [39m07/21/2025, 2:27:01 AM [32m    LOG[39m [38;5;3m[ProcessPaymentProcessor] [39m[32mPayment processed: {"correlationId":"38658cd5-f639-46ad-91eb-1e66a7240552","amount":19.9,"requestedAt":"2025-07-21T02:27:01.114Z","source":"default"}[39m
+log truncated at line 1000
