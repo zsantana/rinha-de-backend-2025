@@ -39,6 +39,9 @@ services:
         limits:
           cpus: '0.15'
           memory: '50MB'
+        reservations:
+          cpus: '0.15'
+          memory: '50MB'
   app2:
     <<: *app
     environment:
@@ -58,10 +61,11 @@ services:
       resources:
         limits:
           cpus: '0.9'
-          memory: '180MB'
+          memory: '170MB'
+        reservations:
+          cpus: '0.9'
     image: docker.io/lukas8219/rinha-de-backend-2025-worker:main-317aebe76-1753117211
     cpu_shares: 2048
-    cpuset: "0"
     depends_on:
       lavinmq:
         condition: service_healthy
@@ -102,6 +106,9 @@ services:
         limits:
           cpus: '0.1'
           memory: '35MB'
+        reservations:
+          cpus: '0.1'
+          memory: '35MB'
 
   nginx: # Load Balancer
     ipc: host
@@ -115,6 +122,7 @@ services:
       - consumer
     ports:
       - "9999:9999"
+    cpu_shares: 3072
     ulimits:
       nproc: 1000000
       nofile:
@@ -126,7 +134,10 @@ services:
       resources:
         limits:
           cpus: '0.1'
-          memory: '25MB'
+          memory: '35MB'
+        reservations:
+          cpus: '0.1'
+          memory: '35MB'
 
 networks:
   backend:
