@@ -1,10 +1,11 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Mon Jul 21 12:32:03 AM -03 2025**
-70 submissões / 52 resultados / 18 submissões com erro
+Atualizado em **Mon Jul 21 12:38:49 AM -03 2025**
+71 submissões / 53 resultados / 18 submissões com erro
 
 
 | participante | p99 | bônus por desempenho (%) | multa ($) | lucro | submissão |
 | -- | -- | -- | -- | -- | -- |
+|	alexroza-rs	|	1003.7500193000001ms	|	0	|	0	|	0	|	[alexroza-rs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/alexroza-rs)
 |	andersongomes001	|	3.010885279999995ms	|	0.1597822944000001	|	110177.94200000758	|	254914.7047572465	|	[andersongomes001](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/andersongomes001)
 |	artschur	|	8.837972719999977ms	|	0.043240545600000464	|	106944.44074998294	|	211823.4927268717	|	[artschur](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/artschur)
 |	asfernandes-haproxy-mongoose-lmdb	|	3.448321960000004ms	|	0.15103356079999994	|	0	|	358968.0425519152	|	[asfernandes-haproxy-mongoose-lmdb](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/asfernandes-haproxy-mongoose-lmdb)
