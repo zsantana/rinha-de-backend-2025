@@ -65,6 +65,7 @@ while true; do
             else
                 stopContainers $participant
                 echo "[$(date)] Seu backend não respondeu nenhuma das $max_attempts tentativas de GET para http://localhost:9999/payments-summary. Teste abortado." > $directory/error.logs
+                echo "[$(date)] Inspecione o arquivo docker-compose.logs para mais informações." >> $directory/error.logs
                 echo "Could not get a successful response from backend... aborting test for $participant"
             fi
 
