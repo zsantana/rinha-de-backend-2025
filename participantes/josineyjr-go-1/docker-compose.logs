@@ -1,0 +1,79 @@
+
+ Network josineyjr-go-1_backend  Creating
+ Network josineyjr-go-1_backend  Created
+ Container redis-db  Creating
+ Container redis-db  Created
+ Container api2  Creating
+ Container api1  Creating
+ Container api2  Created
+ Container api1  Created
+ Container rinha-nginx  Creating
+ Container rinha-nginx  Created
+Attaching to api1, api2, redis-db, rinha-nginx
+redis-db     | 9:C 21 Jul 2025 02:32:15.560 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+redis-db     | 9:C 21 Jul 2025 02:32:15.560 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+redis-db     | 9:C 21 Jul 2025 02:32:15.560 * Redis version=7.2.10, bits=64, commit=00000000, modified=0, pid=9, just started
+redis-db     | 9:C 21 Jul 2025 02:32:15.560 * Configuration loaded
+redis-db     | 9:M 21 Jul 2025 02:32:15.560 * monotonic clock: POSIX clock_gettime
+redis-db     | 9:M 21 Jul 2025 02:32:15.562 * Running mode=standalone, port=6379.
+redis-db     | 9:M 21 Jul 2025 02:32:15.563 * Module 'RedisCompat' loaded from /opt/redis-stack/lib/rediscompat.so
+redis-db     | 9:M 21 Jul 2025 02:32:15.578 * <search> Redis version found by RedisSearch : 7.2.10 - oss
+redis-db     | 9:M 21 Jul 2025 02:32:15.581 * <search> RediSearch version 2.8.28 (Git=65a9fa6)
+redis-db     | 9:M 21 Jul 2025 02:32:15.581 * <search> Low level api version 1 initialized successfully
+redis-db     | 9:M 21 Jul 2025 02:32:15.585 * <search> concurrent writes: OFF, gc: ON, prefix min length: 2, prefix max expansions: 200, query timeout (ms): 500, timeout policy: return, cursor read size: 1000, cursor max idle (ms): 300000, max doctable size: 1000000, max number of search results:  10000, search pool size: 20, index pool size: 8, 
+redis-db     | 9:M 21 Jul 2025 02:32:15.586 * <search> Initialized thread pools!
+redis-db     | 9:M 21 Jul 2025 02:32:15.587 * <search> Enabled role change notification
+redis-db     | 9:M 21 Jul 2025 02:32:15.587 * Module 'search' loaded from /opt/redis-stack/lib/redisearch.so
+redis-db     | 9:M 21 Jul 2025 02:32:15.592 * <timeseries> RedisTimeSeries version 11017, git_sha=7b274da7d1f9055c16914520c938f2ad3546d0b7
+redis-db     | 9:M 21 Jul 2025 02:32:15.592 * <timeseries> Redis version found by RedisTimeSeries : 7.2.10 - oss
+redis-db     | 9:M 21 Jul 2025 02:32:15.592 * <timeseries> loaded default CHUNK_SIZE_BYTES policy: 4096
+redis-db     | 9:M 21 Jul 2025 02:32:15.592 * <timeseries> loaded server DUPLICATE_POLICY: block
+redis-db     | 9:M 21 Jul 2025 02:32:15.592 * <timeseries> Setting default series ENCODING to: compressed
+redis-db     | 9:M 21 Jul 2025 02:32:15.592 * <timeseries> Detected redis oss
+redis-db     | 9:M 21 Jul 2025 02:32:15.596 * Module 'timeseries' loaded from /opt/redis-stack/lib/redistimeseries.so
+redis-db     | 9:M 21 Jul 2025 02:32:15.611 * <ReJSON> Created new data type 'ReJSON-RL'
+redis-db     | 9:M 21 Jul 2025 02:32:15.613 * <ReJSON> version: 20615 git sha: unknown branch: unknown
+redis-db     | 9:M 21 Jul 2025 02:32:15.613 * <ReJSON> Exported RedisJSON_V1 API
+redis-db     | 9:M 21 Jul 2025 02:32:15.613 * <ReJSON> Exported RedisJSON_V2 API
+redis-db     | 9:M 21 Jul 2025 02:32:15.613 * <ReJSON> Exported RedisJSON_V3 API
+redis-db     | 9:M 21 Jul 2025 02:32:15.613 * <ReJSON> Exported RedisJSON_V4 API
+redis-db     | 9:M 21 Jul 2025 02:32:15.613 * <ReJSON> Exported RedisJSON_V5 API
+redis-db     | 9:M 21 Jul 2025 02:32:15.613 * <ReJSON> Enabled diskless replication
+redis-db     | 9:M 21 Jul 2025 02:32:15.613 * Module 'ReJSON' loaded from /opt/redis-stack/lib/rejson.so
+redis-db     | 9:M 21 Jul 2025 02:32:15.613 * <search> Acquired RedisJSON_V5 API
+redis-db     | 9:M 21 Jul 2025 02:32:15.614 * <bf> RedisBloom version 2.6.18 (Git=unknown)
+redis-db     | 9:M 21 Jul 2025 02:32:15.614 * Module 'bf' loaded from /opt/redis-stack/lib/redisbloom.so
+redis-db     | 9:M 21 Jul 2025 02:32:15.630 * <redisgears_2> Created new data type 'GearsType'
+redis-db     | 9:M 21 Jul 2025 02:32:15.632 * <redisgears_2> Detected redis oss
+redis-db     | 9:M 21 Jul 2025 02:32:15.633 # <redisgears_2> could not initialize RedisAI_InitError
+redis-db     | 
+redis-db     | 9:M 21 Jul 2025 02:32:15.633 * <redisgears_2> Failed loading RedisAI API.
+redis-db     | 9:M 21 Jul 2025 02:32:15.633 * <redisgears_2> RedisGears v2.0.23, sha='5b7c00df3ed1df6b77a4339b7705eed8327f1aec', build_type='release', built_for='Linux-ubuntu22.04.x86_64', redis_version:'7.2.10', enterprise:'false'.
+redis-db     | 9:M 21 Jul 2025 02:32:15.652 * <redisgears_2> Registered backend: js.
+redis-db     | 9:M 21 Jul 2025 02:32:15.678 * Module 'redisgears_2' loaded from /opt/redis-stack/lib/redisgears.so
+redis-db     | 9:M 21 Jul 2025 02:32:15.678 * Server initialized
+redis-db     | 9:M 21 Jul 2025 02:32:15.679 * Ready to accept connections tcp
+api2         | [90m2025-07-21T02:32:16Z[0m [32mINF[0m [1mcmd/api/main.go:95[0m[36m >[0m [1mServer starting on port 9998[0m
+api1         | [90m2025-07-21T02:32:21Z[0m [32mINF[0m [1mcmd/api/main.go:95[0m[36m >[0m [1mServer starting on port 9997[0m
+api1         | [90m2025-07-21T02:32:23Z[0m [32mINF[0m [1mcmd/api/main.go:65[0m[36m >[0m [1mget summary took- 12.596µs[0m
+api1         | [90m2025-07-21T02:32:28Z[0m [32mINF[0m [1mcmd/api/main.go:65[0m[36m >[0m [1mget summary took- 8.907µs[0m
+api1         | [90m2025-07-21T02:32:33Z[0m [32mINF[0m [1mcmd/api/main.go:65[0m[36m >[0m [1mget summary took- 23.539µs[0m
+api1         | [90m2025-07-21T02:32:38Z[0m [32mINF[0m [1mcmd/api/main.go:65[0m[36m >[0m [1mget summary took- 7.713µs[0m
+api2         | [90m2025-07-21T02:32:43Z[0m [32mINF[0m [1mcmd/api/main.go:65[0m[36m >[0m [1mget summary took- 10.88µs[0m
+api1         | [90m2025-07-21T02:32:48Z[0m [32mINF[0m [1mcmd/api/main.go:65[0m[36m >[0m [1mget summary took- 19.39µs[0m
+api2         | [90m2025-07-21T02:32:53Z[0m [32mINF[0m [1mcmd/api/main.go:65[0m[36m >[0m [1mget summary took- 10.87µs[0m
+api1         | [90m2025-07-21T02:32:58Z[0m [32mINF[0m [1mcmd/api/main.go:65[0m[36m >[0m [1mget summary took- 9.892µs[0m
+api2         | [90m2025-07-21T02:33:03Z[0m [32mINF[0m [1mcmd/api/main.go:65[0m[36m >[0m [1mget summary took- 9.777µs[0m
+api1         | [90m2025-07-21T02:33:08Z[0m [32mINF[0m [1mcmd/api/main.go:65[0m[36m >[0m [1mget summary took- 8.53µs[0m
+api2         | [90m2025-07-21T02:33:13Z[0m [32mINF[0m [1mcmd/api/main.go:65[0m[36m >[0m [1mget summary took- 10.015µs[0m
+api1         | [90m2025-07-21T02:33:18Z[0m [32mINF[0m [1mcmd/api/main.go:65[0m[36m >[0m [1mget summary took- 8.067µs[0m
+api2         | [90m2025-07-21T02:33:23Z[0m [32mINF[0m [1mcmd/api/main.go:65[0m[36m >[0m [1mget summary took- 6.47µs[0m
+[Krinha-nginx exited with code 0
+api2         | [90m2025-07-21T02:33:29Z[0m [32mINF[0m [1mcmd/api/main.go:102[0m[36m >[0m [1mShutdown signal received. Gracefully stopping server...[0m
+api2         | [90m2025-07-21T02:33:29Z[0m [32mINF[0m [1mcmd/api/main.go:108[0m[36m >[0m [1mServer stopped gracefully[0m
+api1         | [90m2025-07-21T02:33:29Z[0m [32mINF[0m [1mcmd/api/main.go:102[0m[36m >[0m [1mShutdown signal received. Gracefully stopping server...[0m
+api1         | [90m2025-07-21T02:33:29Z[0m [32mINF[0m [1mcmd/api/main.go:108[0m[36m >[0m [1mServer stopped gracefully[0m
+[Kapi1 exited with code 0
+redis-db     | 9:signal-handler (1753065209) Received SIGTERM scheduling shutdown...
+redis-db     | 9:signal-handler (1753065209) Received SIGTERM scheduling shutdown...
+[Kredis-db exited with code 143
