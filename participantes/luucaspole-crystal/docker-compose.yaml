@@ -12,7 +12,7 @@ x-enviromments: &x-enviromments
 version: '3.4'
 services:
   app1: &app
-    image: docker.io/lukas8219/rinha-de-backend-2025-app:main-a0daa45f7-1753099550
+    image: docker.io/lukas8219/rinha-de-backend-2025-app:main-317aebe76-1753117211
     hostname: app1
     restart: unless-stopped
     environment:
@@ -59,7 +59,7 @@ services:
         limits:
           cpus: '0.9'
           memory: '180MB'
-    image: docker.io/lukas8219/rinha-de-backend-2025-worker:main-a0daa45f7-1753099550
+    image: docker.io/lukas8219/rinha-de-backend-2025-worker:main-317aebe76-1753117211
     cpu_shares: 2048
     cpuset: "0"
     depends_on:
