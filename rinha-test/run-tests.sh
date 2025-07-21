@@ -85,7 +85,7 @@ while true; do
     PREVIA_RESULTADOS=../PREVIA_RESULTADOS.md
     
     echo -e "# Prévia do Resultados da Rinha de Backend 2025" > $PREVIA_RESULTADOS
-    echo -e "Atualizado em **$(date)** (**$(ls ../participantes/*/partial-results.json | wc -l)** resultados de **$(ls ../participantes/* | wc -l)** submissões)" >> $PREVIA_RESULTADOS
+    echo -e "Atualizado em **$(date)** (**$(ls ../participantes/*/partial-results.json | wc -l)** resultados de **$(ls ../participantes | wc -l)** submissões)" >> $PREVIA_RESULTADOS
     echo -e "*Testes executados com MAX_REQUESTS=$MAX_REQUESTS*."
     echo -e "\n" >> $PREVIA_RESULTADOS
     echo -e "| participante | p99 | bônus por desempenho (%) | multa ($) | lucro | submissão |" >> $PREVIA_RESULTADOS
