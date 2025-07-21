@@ -84,8 +84,13 @@ while true; do
 
     PREVIA_RESULTADOS=../PREVIA_RESULTADOS.md
     
+    results=$(find ../participantes/*/partial-results.json -size +1b | wc -l)
+    errors=$(find ../participantes/*/partial-results.json -size 0 | wc -l)
+    total=$(find ../participantes/*/partial-results.json | wc -l)
+
     echo -e "# Prévia do Resultados da Rinha de Backend 2025" > $PREVIA_RESULTADOS
-    echo -e "Atualizado em **$(date)** (**$(ls ../participantes/*/partial-results.json | wc -l)** resultados de **$(ls ../participantes | wc -l)** submissões)" >> $PREVIA_RESULTADOS
+    echo -e "Atualizado em **$(date)**" >> $PREVIA_RESULTADOS
+    echo -e "$total submissões / $results resultados / $errors submissões com erro" >> $PREVIA_RESULTADOS
     echo -e "*Testes executados com MAX_REQUESTS=$MAX_REQUESTS*."
     echo -e "\n" >> $PREVIA_RESULTADOS
     echo -e "| participante | p99 | bônus por desempenho (%) | multa ($) | lucro | submissão |" >> $PREVIA_RESULTADOS
@@ -103,7 +108,6 @@ while true; do
     done
 
     echo -e "### Submissões com Erro" >> $PREVIA_RESULTADOS
-    echo -e "$(ls ../participantes/*/error.logs | wc -l) submissões com erro" >> $PREVIA_RESULTADOS
     echo -e "\n" >> $PREVIA_RESULTADOS
     echo -e "| participante | submissão |" >> $PREVIA_RESULTADOS
     echo -e "| -- | -- |" >> $PREVIA_RESULTADOS
