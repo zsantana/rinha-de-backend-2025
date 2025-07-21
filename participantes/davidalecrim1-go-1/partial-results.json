@@ -1,12 +1,12 @@
 {
   "participante": "davidalecrim1-go-1",
-  "total_liquido": 348367.5746933891,
-  "total_bruto": 333285.19999999995,
-  "total_taxas": 33792.189999999995,
+  "total_liquido": 341413.8906632202,
+  "total_bruto": 333285.2,
+  "total_taxas": 32460.88,
   "descricao": "'total_liquido' é sua pontuação final. Equivale ao seu lucro. Fórmula: total_liquido + (total_liquido * p99.bonus) - (total_liquido * multa.porcentagem)",
   "p99": {
-    "valor": "2.8404498499999797ms",
-    "bonus": 0.16319100300000042,
+    "valor": "4.2536088400000045ms",
+    "bonus": 0.1349278231999999,
     "max_requests": "550",
     "descricao": "Fórmula para o bônus: max((11 - p99.valor) * 0.02, 0)"
   },
@@ -30,15 +30,15 @@
     "descricao": "'qtd_sucesso' foram requests bem sucedidos para 'POST /payments' e 'qtd_falha' os requests com erro."
   },
   "pagamentos_realizados_default": {
-    "total_bruto": 162005.9,
-    "num_pagamentos": 8141,
-    "total_taxas": 8100.295,
+    "total_bruto": 175319,
+    "num_pagamentos": 8810,
+    "total_taxas": 8765.95,
     "descricao": "Informações do backend sobre solicitações de pagamento para o Payment Processor Default."
   },
   "pagamentos_realizados_fallback": {
-    "total_bruto": 171279.3,
-    "num_pagamentos": 8607,
-    "total_taxas": 25691.894999999997,
+    "total_bruto": 157966.2,
+    "num_pagamentos": 7938,
+    "total_taxas": 23694.93,
     "descricao": "Informações do backend sobre solicitações de pagamento para o Payment Processor Fallback."
   }
 }

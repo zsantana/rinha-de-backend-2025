@@ -6,8 +6,8 @@
  Container api1  Creating
  Container api1  Created
  Container api4  Creating
- Container api3  Creating
  Container api2  Creating
+ Container api3  Creating
  Container api4  Created
  Container api3  Created
  Container api2  Created
@@ -32,7 +32,7 @@ postgres  | selecting default time zone ... UTC
 postgres  | creating configuration files ... ok
 postgres  | running bootstrap script ... ok
 postgres  | sh: locale: not found
-postgres  | 2025-07-20 22:47:13.415 UTC [35] WARNING:  no usable system locales were found
+postgres  | 2025-07-21 02:44:57.781 UTC [35] WARNING:  no usable system locales were found
 postgres  | performing post-bootstrap initialization ... ok
 postgres  | syncing data to disk ... ok
 postgres  | 
@@ -45,7 +45,7 @@ postgres  | initdb: warning: enabling "trust" authentication for local connectio
 postgres  | initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
 postgres  | waiting for server to start....LOG:  starting PostgreSQL 17.5 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
 postgres  | LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
-postgres  | LOG:  database system was shut down at 2025-07-20 22:47:14 UTC
+postgres  | LOG:  database system was shut down at 2025-07-21 02:44:58 UTC
 postgres  | LOG:  database system is ready to accept connections
 postgres  |  done
 postgres  | server started
@@ -57,12 +57,12 @@ postgres  | CREATE TABLE
 postgres  | CREATE INDEX
 postgres  | 
 postgres  | 
-postgres  | waiting for server to shut down...LOG:  received fast shutdown request
-postgres  | .LOG:  aborting any active transactions
+postgres  | waiting for server to shut down....LOG:  received fast shutdown request
+postgres  | LOG:  aborting any active transactions
 postgres  | LOG:  background worker "logical replication launcher" (PID 47) exited with exit code 1
 postgres  | LOG:  shutting down
 postgres  | LOG:  checkpoint starting: shutdown immediate
-postgres  | LOG:  checkpoint complete: wrote 927 buffers (15.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.031 s, sync=0.086 s, total=0.147 s; sync files=311, longest=0.027 s, average=0.001 s; distance=4278 kB, estimate=4278 kB; lsn=0/191AA90, redo lsn=0/191AA90
+postgres  | LOG:  checkpoint complete: wrote 927 buffers (15.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.043 s, sync=0.099 s, total=0.166 s; sync files=311, longest=0.042 s, average=0.001 s; distance=4278 kB, estimate=4278 kB; lsn=0/191AA90, redo lsn=0/191AA90
 postgres  | LOG:  database system is shut down
 postgres  |  done
 postgres  | server stopped
@@ -73,12 +73,12 @@ postgres  | LOG:  starting PostgreSQL 17.5 on x86_64-pc-linux-musl, compiled by 
 postgres  | LOG:  listening on IPv4 address "0.0.0.0", port 5432
 postgres  | LOG:  listening on IPv6 address "::", port 5432
 postgres  | LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
-postgres  | LOG:  database system was shut down at 2025-07-20 22:47:15 UTC
+postgres  | LOG:  database system was shut down at 2025-07-21 02:44:59 UTC
 postgres  | LOG:  database system is ready to accept connections
-api1      | 2025/07/20 22:47:18 Server listening on 0.0.0.0:9999
-api2      | 2025/07/20 22:47:18 Server listening on 0.0.0.0:9999
-api4      | 2025/07/20 22:47:18 Server listening on 0.0.0.0:9999
-api3      | 2025/07/20 22:47:18 Server listening on 0.0.0.0:9999
+api1      | 2025/07/21 02:45:02 Server listening on 0.0.0.0:9999
+api3      | 2025/07/21 02:45:03 Server listening on 0.0.0.0:9999
+api4      | 2025/07/21 02:45:03 Server listening on 0.0.0.0:9999
+api2      | 2025/07/21 02:45:03 Server listening on 0.0.0.0:9999
 nginx     | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
 nginx     | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
 nginx     | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
@@ -88,98 +88,94 @@ nginx     | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolv
 nginx     | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
 nginx     | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
 nginx     | /docker-entrypoint.sh: Configuration complete; ready for start up
-api1      | 2025/07/20 22:47:23 INFO [Healthcheck]: no changes
-api4      | 2025/07/20 22:47:23 INFO [Healthcheck]: no changes
-api2      | 2025/07/20 22:47:23 INFO [Healthcheck]: no changes
-api3      | 2025/07/20 22:47:23 INFO [Healthcheck]: no changes
-api1      | 2025/07/20 22:47:28 INFO [Healthcheck]: no changes
-api2      | 2025/07/20 22:47:28 INFO [Healthcheck]: no changes
-api3      | 2025/07/20 22:47:28 INFO [Healthcheck]: no changes
-api4      | 2025/07/20 22:47:28 INFO [Healthcheck]: no changes
-api1      | 2025/07/20 22:47:33 INFO [Healthcheck]: no changes
-api2      | 2025/07/20 22:47:33 INFO [Healthcheck]: no changes
-api3      | 2025/07/20 22:47:33 INFO [Healthcheck]: no changes
-api4      | 2025/07/20 22:47:33 INFO [Healthcheck]: no changes
-api1      | 2025/07/20 22:47:38 INFO [Healthcheck]: changed to FALLBACK
-api3      | 2025/07/20 22:47:38 INFO [Healthcheck]: changed to FALLBACK
-api2      | 2025/07/20 22:47:38 INFO [Healthcheck]: changed to FALLBACK
-api4      | 2025/07/20 22:47:38 INFO [Healthcheck]: changed to FALLBACK
-api1      | 2025/07/20 22:47:43 INFO [Healthcheck]: no changes
-api3      | 2025/07/20 22:47:43 INFO [Healthcheck]: no changes
-api4      | 2025/07/20 22:47:43 INFO [Healthcheck]: no changes
-api2      | 2025/07/20 22:47:43 INFO [Healthcheck]: no changes
-api1      | 2025/07/20 22:47:48 INFO [Healthcheck]: no changes
-api2      | 2025/07/20 22:47:48 INFO [Healthcheck]: no changes
-api4      | 2025/07/20 22:47:48 INFO [Healthcheck]: no changes
-api3      | 2025/07/20 22:47:48 INFO [Healthcheck]: no changes
-api1      | 2025/07/20 22:47:54 INFO [Healthcheck]: no changes
-api2      | 2025/07/20 22:47:54 INFO [Healthcheck]: no changes
-api3      | 2025/07/20 22:47:54 INFO [Healthcheck]: no changes
-api4      | 2025/07/20 22:47:54 INFO [Healthcheck]: no changes
+api1      | 2025/07/21 02:45:07 INFO [Healthcheck]: no changes
+api3      | 2025/07/21 02:45:07 INFO [Healthcheck]: no changes
+api4      | 2025/07/21 02:45:07 INFO [Healthcheck]: no changes
+api2      | 2025/07/21 02:45:07 INFO [Healthcheck]: no changes
+api1      | 2025/07/21 02:45:12 INFO [Healthcheck]: no changes
+api4      | 2025/07/21 02:45:12 INFO [Healthcheck]: no changes
+api2      | 2025/07/21 02:45:12 INFO [Healthcheck]: no changes
+api3      | 2025/07/21 02:45:12 INFO [Healthcheck]: no changes
+api1      | 2025/07/21 02:45:17 INFO [Healthcheck]: no changes
+api2      | 2025/07/21 02:45:17 INFO [Healthcheck]: no changes
+api3      | 2025/07/21 02:45:17 INFO [Healthcheck]: no changes
+api4      | 2025/07/21 02:45:17 INFO [Healthcheck]: no changes
+api1      | 2025/07/21 02:45:22 INFO [Healthcheck]: changed to FALLBACK
+api3      | 2025/07/21 02:45:22 INFO [Healthcheck]: changed to FALLBACK
+api2      | 2025/07/21 02:45:22 INFO [Healthcheck]: changed to FALLBACK
+api4      | 2025/07/21 02:45:22 INFO [Healthcheck]: changed to FALLBACK
+api1      | 2025/07/21 02:45:28 INFO [Healthcheck]: no changes
+api2      | 2025/07/21 02:45:28 INFO [Healthcheck]: no changes
+api3      | 2025/07/21 02:45:28 INFO [Healthcheck]: no changes
+api4      | 2025/07/21 02:45:28 INFO [Healthcheck]: no changes
+api1      | 2025/07/21 02:45:33 INFO [Healthcheck]: no changes
+api2      | 2025/07/21 02:45:33 INFO [Healthcheck]: no changes
+api3      | 2025/07/21 02:45:33 INFO [Healthcheck]: no changes
+api4      | 2025/07/21 02:45:33 INFO [Healthcheck]: no changes
+api3      | 2025/07/21 02:45:38 INFO [Healthcheck]: no changes
+api1      | 2025/07/21 02:45:38 INFO [Healthcheck]: no changes
+api2      | 2025/07/21 02:45:38 INFO [Healthcheck]: no changes
+api4      | 2025/07/21 02:45:38 INFO [Healthcheck]: no changes
 postgres  | LOG:  automatic vacuum of table "rinha.public.payments": index scans: 0
-postgres  | 	pages: 0 removed, 37 remain, 37 scanned (100.00% of total)
-postgres  | 	tuples: 0 removed, 3985 remain, 0 are dead but not yet removable
-postgres  | 	removable cutoff: 4728, which was 0 XIDs old when operation ended
+postgres  | 	pages: 0 removed, 39 remain, 39 scanned (100.00% of total)
+postgres  | 	tuples: 0 removed, 3984 remain, 0 are dead but not yet removable
+postgres  | 	removable cutoff: 4727, which was 0 XIDs old when operation ended
 postgres  | 	new relfrozenxid: 743, which is 1 XIDs ahead of previous value
 postgres  | 	frozen: 0 pages from table (0.00% of total) had 0 tuples frozen
 postgres  | 	index scan not needed: 0 pages from table (0.00% of total) had 0 dead item identifiers removed
-postgres  | 	avg read rate: 0.000 MB/s, avg write rate: 21.015 MB/s
-postgres  | 	buffer usage: 131 hits, 0 misses, 4 dirtied
+postgres  | 	avg read rate: 0.000 MB/s, avg write rate: 21.086 MB/s
+postgres  | 	buffer usage: 135 hits, 0 misses, 4 dirtied
 postgres  | 	WAL usage: 1 records, 0 full page images, 188 bytes
 postgres  | 	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
 postgres  | LOG:  automatic analyze of table "rinha.public.payments"
-postgres  | 	avg read rate: 3.906 MB/s, avg write rate: 3.906 MB/s
-postgres  | 	buffer usage: 370 hits, 7 misses, 7 dirtied
+postgres  | 	avg read rate: 4.557 MB/s, avg write rate: 4.557 MB/s
+postgres  | 	buffer usage: 372 hits, 7 misses, 7 dirtied
 postgres  | 	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.01 s
-api2      | 2025/07/20 22:48:04 INFO [Healthcheck]: no changes
-api1      | 2025/07/20 22:48:04 INFO [Healthcheck]: no changes
-api4      | 2025/07/20 22:48:04 INFO [Healthcheck]: no changes
-api3      | 2025/07/20 22:48:04 INFO [Healthcheck]: no changes
-api1      | 2025/07/20 22:48:09 INFO [Healthcheck]: changed to DEFAULT
-api4      | 2025/07/20 22:48:09 INFO [Healthcheck]: changed to DEFAULT
-api3      | 2025/07/20 22:48:09 INFO [Healthcheck]: changed to DEFAULT
-api2      | 2025/07/20 22:48:09 INFO [Healthcheck]: changed to DEFAULT
-api1      | 2025/07/20 22:48:14 INFO [Healthcheck]: no changes
-api4      | 2025/07/20 22:48:14 INFO [Healthcheck]: no changes
-api2      | 2025/07/20 22:48:14 INFO [Healthcheck]: no changes
-api3      | 2025/07/20 22:48:14 INFO [Healthcheck]: no changes
-postgres  | LOG:  automatic analyze of table "template1.pg_catalog.pg_depend"
-postgres  | 	avg read rate: 39.062 MB/s, avg write rate: 6.250 MB/s
-postgres  | 	buffer usage: 297 hits, 50 misses, 8 dirtied
+api1      | 2025/07/21 02:45:48 INFO [Healthcheck]: no changes
+api3      | 2025/07/21 02:45:48 INFO [Healthcheck]: no changes
+api2      | 2025/07/21 02:45:48 INFO [Healthcheck]: no changes
+api4      | 2025/07/21 02:45:48 INFO [Healthcheck]: no changes
+api1      | 2025/07/21 02:45:53 INFO [Healthcheck]: changed to DEFAULT
+api2      | 2025/07/21 02:45:53 INFO [Healthcheck]: changed to DEFAULT
+api4      | 2025/07/21 02:45:53 INFO [Healthcheck]: changed to DEFAULT
+api3      | 2025/07/21 02:45:53 INFO [Healthcheck]: changed to DEFAULT
+api3      | 2025/07/21 02:45:58 INFO [Healthcheck]: no changes
+api4      | 2025/07/21 02:45:58 INFO [Healthcheck]: no changes
+api2      | 2025/07/21 02:45:58 INFO [Healthcheck]: no changes
+api1      | 2025/07/21 02:45:58 INFO [Healthcheck]: no changes
+postgres  | LOG:  automatic analyze of table "template1.information_schema.sql_features"
+postgres  | 	avg read rate: 60.268 MB/s, avg write rate: 16.741 MB/s
+postgres  | 	buffer usage: 240 hits, 54 misses, 15 dirtied
 postgres  | 	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
 postgres  | LOG:  checkpoint starting: time
-postgres  | LOG:  automatic analyze of table "template1.information_schema.sql_features"
-postgres  | 	avg read rate: 25.670 MB/s, avg write rate: 10.045 MB/s
-postgres  | 	buffer usage: 227 hits, 23 misses, 9 dirtied
-postgres  | 	system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
-postgres  | LOG:  checkpoint complete: wrote 44 buffers (0.7%); 0 WAL file(s) added, 0 removed, 0 recycled; write=3.656 s, sync=0.040 s, total=3.770 s; sync files=34, longest=0.012 s, average=0.002 s; distance=439 kB, estimate=439 kB; lsn=0/19B1440, redo lsn=0/1988818
-api1      | 2025/07/20 22:48:19 INFO [Healthcheck]: no changes
-api3      | 2025/07/20 22:48:19 INFO [Healthcheck]: no changes
-api2      | 2025/07/20 22:48:19 INFO [Healthcheck]: no changes
-api4      | 2025/07/20 22:48:19 INFO [Healthcheck]: no changes
-api1      | 2025/07/20 22:48:24 INFO [Healthcheck]: no changes
-api3      | 2025/07/20 22:48:24 INFO [Healthcheck]: no changes
-api2      | 2025/07/20 22:48:24 INFO [Healthcheck]: no changes
-api4      | 2025/07/20 22:48:24 INFO [Healthcheck]: no changes
-api3      | 2025/07/20 22:48:27 Byyyye
-api4      | 2025/07/20 22:48:27 Byyyye
-api3      | 2025/07/20 22:48:27 Server closed!
-api4      | 2025/07/20 22:48:27 Server closed!
+postgres  | LOG:  checkpoint complete: wrote 42 buffers (0.7%); 0 WAL file(s) added, 0 removed, 0 recycled; write=3.454 s, sync=0.041 s, total=3.535 s; sync files=34, longest=0.010 s, average=0.002 s; distance=446 kB, estimate=446 kB; lsn=0/19A8770, redo lsn=0/198A410
+api1      | 2025/07/21 02:46:03 INFO [Healthcheck]: no changes
+api2      | 2025/07/21 02:46:03 INFO [Healthcheck]: no changes
+api4      | 2025/07/21 02:46:03 INFO [Healthcheck]: no changes
+api3      | 2025/07/21 02:46:03 INFO [Healthcheck]: no changes
+api1      | 2025/07/21 02:46:08 INFO [Healthcheck]: no changes
+api2      | 2025/07/21 02:46:08 INFO [Healthcheck]: no changes
+api4      | 2025/07/21 02:46:08 INFO [Healthcheck]: no changes
+api3      | 2025/07/21 02:46:08 INFO [Healthcheck]: no changes
+api3      | 2025/07/21 02:46:11 Byyyye
+api4      | 2025/07/21 02:46:11 Byyyye
+api4      | 2025/07/21 02:46:11 Server closed!
+api3      | 2025/07/21 02:46:12 Server closed!
 [Knginx exited with code 0
-api2      | 2025/07/20 22:48:28 Byyyye
-api2      | 2025/07/20 22:48:28 Server closed!
-[Kapi3 exited with code 0
+api2      | 2025/07/21 02:46:12 Byyyye
+api2      | 2025/07/21 02:46:12 Server closed!
 [Kapi4 exited with code 0
+[Kapi3 exited with code 0
 [Kapi2 exited with code 0
-api1      | 2025/07/20 22:48:28 Byyyye
-api1      | 2025/07/20 22:48:28 Server closed!
+api1      | 2025/07/21 02:46:13 Byyyye
+api1      | 2025/07/21 02:46:13 Server closed!
 [Kapi1 exited with code 0
 postgres  | LOG:  received fast shutdown request
 postgres  | LOG:  aborting any active transactions
 postgres  | LOG:  background worker "logical replication launcher" (PID 62) exited with exit code 1
 postgres  | LOG:  shutting down
 postgres  | LOG:  checkpoint starting: shutdown immediate
-postgres  | LOG:  checkpoint complete: wrote 281 buffers (4.6%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.012 s, sync=0.034 s, total=0.080 s; sync files=6, longest=0.018 s, average=0.006 s; distance=310 kB, estimate=426 kB; lsn=0/19D62A0, redo lsn=0/19D62A0
+postgres  | LOG:  checkpoint complete: wrote 287 buffers (4.7%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.015 s, sync=0.034 s, total=0.078 s; sync files=6, longest=0.021 s, average=0.006 s; distance=273 kB, estimate=429 kB; lsn=0/19CE980, redo lsn=0/19CE980
 postgres  | LOG:  database system is shut down
 [Kpostgres exited with code 0
 log truncated at line 1000

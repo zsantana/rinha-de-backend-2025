@@ -10,39 +10,15 @@
  Container joelgarciajr84-go-nginx-1  Creating
  Container joelgarciajr84-go-nginx-1  Created
 Attaching to nginx-1, redis-1, rinha_1-1, rinha_2-1
-redis-1    | 1:C 21 Jul 2025 00:53:37.284 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
-redis-1    | 1:C 21 Jul 2025 00:53:37.284 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
-redis-1    | 1:C 21 Jul 2025 00:53:37.284 * Redis version=7.4.5, bits=64, commit=00000000, modified=0, pid=1, just started
-redis-1    | 1:C 21 Jul 2025 00:53:37.284 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf
-redis-1    | 1:M 21 Jul 2025 00:53:37.285 * monotonic clock: POSIX clock_gettime
-redis-1    | 1:M 21 Jul 2025 00:53:37.286 * Running mode=standalone, port=6379.
-redis-1    | 1:M 21 Jul 2025 00:53:37.286 * Server initialized
-redis-1    | 1:M 21 Jul 2025 00:53:37.286 * Ready to accept connections tcp
-rinha_2-1  | 2025/07/21 00:53:37 INFO 
-rinha_2-1  | ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⣶⣶⣶⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-rinha_2-1  | ⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⣿⠟⠋⠙⠻⣿⣿⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀
-rinha_2-1  | ⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⡇⠀🐔⠀ ⢸⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀
-rinha_2-1  | ⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⣿⣄⣀⣤⣾⣿⠟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-rinha_2-1  | ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠛⠛⠋⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-rinha_2-1  | 
-rinha_2-1  | 💥 RINHA DE BACKEND 2025 💥
-rinha_2-1  | 🥊 Lutador: Golang Beast v1
-rinha_2-1  | 🧠 Estratégia: Fallback, retry e muita mutexada
-rinha_2-1  | 📡 Arena aberta na porta 9999
-rinha_2-1  | 
-rinha_2-1  | 👉 Que comece o massacre dos milisegundos!
-rinha_2-1  | 2025/07/21 00:53:37 INFO server running port=9999
-rinha_2-1  | 
-rinha_2-1  |  ┌───────────────────────────────────────────────────┐ 
-rinha_2-1  |  │                   Fiber v2.52.8                   │ 
-rinha_2-1  |  │               http://127.0.0.1:9999               │ 
-rinha_2-1  |  │       (bound on host 0.0.0.0 and port 9999)       │ 
-rinha_2-1  |  │                                                   │ 
-rinha_2-1  |  │ Handlers ............. 4  Processes ........... 1 │ 
-rinha_2-1  |  │ Prefork ....... Disabled  PID ................. 6 │ 
-rinha_2-1  |  └───────────────────────────────────────────────────┘ 
-rinha_2-1  | 
-rinha_1-1  | 2025/07/21 00:53:37 INFO 
+redis-1    | 1:C 21 Jul 2025 02:29:30.697 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+redis-1    | 1:C 21 Jul 2025 02:29:30.697 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+redis-1    | 1:C 21 Jul 2025 02:29:30.697 * Redis version=7.4.5, bits=64, commit=00000000, modified=0, pid=1, just started
+redis-1    | 1:C 21 Jul 2025 02:29:30.697 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf
+redis-1    | 1:M 21 Jul 2025 02:29:30.697 * monotonic clock: POSIX clock_gettime
+redis-1    | 1:M 21 Jul 2025 02:29:30.698 * Running mode=standalone, port=6379.
+redis-1    | 1:M 21 Jul 2025 02:29:30.698 * Server initialized
+redis-1    | 1:M 21 Jul 2025 02:29:30.698 * Ready to accept connections tcp
+rinha_1-1  | 2025/07/21 02:29:31 INFO 
 rinha_1-1  | ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⣶⣶⣶⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 rinha_1-1  | ⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⣿⠟⠋⠙⠻⣿⣿⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀
 rinha_1-1  | ⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⡇⠀🐔⠀ ⢸⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀
@@ -55,7 +31,7 @@ rinha_1-1  | 🧠 Estratégia: Fallback, retry e muita mutexada
 rinha_1-1  | 📡 Arena aberta na porta 9999
 rinha_1-1  | 
 rinha_1-1  | 👉 Que comece o massacre dos milisegundos!
-rinha_1-1  | 2025/07/21 00:53:37 INFO server running port=9999
+rinha_1-1  | 2025/07/21 02:29:31 INFO server running port=9999
 rinha_1-1  | 
 rinha_1-1  |  ┌───────────────────────────────────────────────────┐ 
 rinha_1-1  |  │                   Fiber v2.52.8                   │ 
@@ -63,9 +39,33 @@ rinha_1-1  |  │               http://127.0.0.1:9999               │
 rinha_1-1  |  │       (bound on host 0.0.0.0 and port 9999)       │ 
 rinha_1-1  |  │                                                   │ 
 rinha_1-1  |  │ Handlers ............. 4  Processes ........... 1 │ 
-rinha_1-1  |  │ Prefork ....... Disabled  PID ................. 7 │ 
+rinha_1-1  |  │ Prefork ....... Disabled  PID ................. 8 │ 
 rinha_1-1  |  └───────────────────────────────────────────────────┘ 
 rinha_1-1  | 
+rinha_2-1  | 2025/07/21 02:29:31 INFO 
+rinha_2-1  | ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⣶⣶⣶⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+rinha_2-1  | ⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⣿⠟⠋⠙⠻⣿⣿⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀
+rinha_2-1  | ⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⡇⠀🐔⠀ ⢸⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀
+rinha_2-1  | ⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⣿⣄⣀⣤⣾⣿⠟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+rinha_2-1  | ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠛⠛⠋⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+rinha_2-1  | 
+rinha_2-1  | 💥 RINHA DE BACKEND 2025 💥
+rinha_2-1  | 🥊 Lutador: Golang Beast v1
+rinha_2-1  | 🧠 Estratégia: Fallback, retry e muita mutexada
+rinha_2-1  | 📡 Arena aberta na porta 9999
+rinha_2-1  | 
+rinha_2-1  | 👉 Que comece o massacre dos milisegundos!
+rinha_2-1  | 2025/07/21 02:29:31 INFO server running port=9999
+rinha_2-1  | 
+rinha_2-1  |  ┌───────────────────────────────────────────────────┐ 
+rinha_2-1  |  │                   Fiber v2.52.8                   │ 
+rinha_2-1  |  │               http://127.0.0.1:9999               │ 
+rinha_2-1  |  │       (bound on host 0.0.0.0 and port 9999)       │ 
+rinha_2-1  |  │                                                   │ 
+rinha_2-1  |  │ Handlers ............. 4  Processes ........... 1 │ 
+rinha_2-1  |  │ Prefork ....... Disabled  PID ................. 7 │ 
+rinha_2-1  |  └───────────────────────────────────────────────────┘ 
+rinha_2-1  | 
 nginx-1    | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
 nginx-1    | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
 nginx-1    | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
@@ -75,18 +75,18 @@ nginx-1    | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resol
 nginx-1    | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
 nginx-1    | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
 nginx-1    | /docker-entrypoint.sh: Configuration complete; ready for start up
-redis-1    | 1:M 21 Jul 2025 00:54:38.006 * 10000 changes in 60 seconds. Saving...
-redis-1    | 1:M 21 Jul 2025 00:54:38.007 * Background saving started by pid 89
-redis-1    | 89:C 21 Jul 2025 00:54:38.083 * DB saved on disk
-redis-1    | 89:C 21 Jul 2025 00:54:38.084 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
-redis-1    | 1:M 21 Jul 2025 00:54:38.114 * Background saving terminated with success
+redis-1    | 1:M 21 Jul 2025 02:30:31.061 * 10000 changes in 60 seconds. Saving...
+redis-1    | 1:M 21 Jul 2025 02:30:31.062 * Background saving started by pid 87
+redis-1    | 87:C 21 Jul 2025 02:30:31.086 * DB saved on disk
+redis-1    | 87:C 21 Jul 2025 02:30:31.087 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+redis-1    | 1:M 21 Jul 2025 02:30:31.163 * Background saving terminated with success
 [Knginx-1 exited with code 0
 [Krinha_2-1 exited with code 143
 [Krinha_1-1 exited with code 143
-redis-1    | 1:signal-handler (1753059289) Received SIGTERM scheduling shutdown...
-redis-1    | 1:M 21 Jul 2025 00:54:49.213 * User requested shutdown...
-redis-1    | 1:M 21 Jul 2025 00:54:49.213 * Saving the final RDB snapshot before exiting.
-redis-1    | 1:M 21 Jul 2025 00:54:49.283 * DB saved on disk
-redis-1    | 1:M 21 Jul 2025 00:54:49.283 # Redis is now ready to exit, bye bye...
+redis-1    | 1:signal-handler (1753065042) Received SIGTERM scheduling shutdown...
+redis-1    | 1:M 21 Jul 2025 02:30:42.721 * User requested shutdown...
+redis-1    | 1:M 21 Jul 2025 02:30:42.721 * Saving the final RDB snapshot before exiting.
+redis-1    | 1:M 21 Jul 2025 02:30:42.787 * DB saved on disk
+redis-1    | 1:M 21 Jul 2025 02:30:42.787 # Redis is now ready to exit, bye bye...
 [Kredis-1 exited with code 0
 log truncated at line 1000

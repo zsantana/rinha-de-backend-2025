@@ -138,11 +138,11 @@ const defaultTotalFeeCounter = new Counter("default_total_fee");
 const fallbackTotalFeeCounter = new Counter("fallback_total_fee");
 
 export async function setup() {
+  await setPPToken("default", token);
+  await setPPToken("fallback", token);
   await resetPPDatabase("default");
   await resetPPDatabase("fallback");
   await resetBackendDatabase();
-  await setPPToken("default", token);
-  await setPPToken("fallback", token);
 }
 
 export async function teardown() {
