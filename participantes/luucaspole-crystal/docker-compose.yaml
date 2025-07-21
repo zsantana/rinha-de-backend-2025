@@ -1,10 +1,7 @@
 x-enviromments: &x-enviromments
-  - SQLITE_PATH: "/dev/shm/database.sqlite3?sync=off&journal_mode=WAL&busy_timeout=1000&cache_size=100000"
   - AMQP_URL: "amqp://guest:guest@lavinmq:5672/"
-  - BATCH_INTERVAL: "50"
   - PREFETCH_COUNT: "0"
   - SHARD_COUNT: "1"
-  - SKIP_DELAY: "true"
   - PROCESSOR_URL: "http://payment-processor-default:8080"
   - FALLBACK_URL: "http://payment-processor-fallback:8080"
   - DISABLE_LOG: "true"
@@ -12,7 +9,7 @@ x-enviromments: &x-enviromments
 version: '3.4'
 services:
   app1: &app
-    image: docker.io/lukas8219/rinha-de-backend-2025-app:main-317aebe76-1753117211
+    image: docker.io/lukas8219/rinha-de-backend-2025-app:main-65787499f-1753140182
     hostname: app1
     restart: unless-stopped
     environment:
@@ -37,10 +34,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '0.15'
-          memory: '50MB'
-        reservations:
-          cpus: '0.15'
+          cpus: '0.20'
           memory: '50MB'
   app2:
     <<: *app
@@ -54,36 +48,22 @@ services:
       consumer:
         condition: service_started
 
-  consumer:
+  consumer: &consumer
     <<: *app
     hostname: "1"
+    cpu_shares: 3072
     deploy:
       resources:
         limits:
-          cpus: '0.9'
-          memory: '170MB'
+          cpus: '1'
+          memory: '150MB'
         reservations:
-          cpus: '0.9'
-    image: docker.io/lukas8219/rinha-de-backend-2025-worker:main-317aebe76-1753117211
-    cpu_shares: 2048
+          cpus: '1'
+          memory: '150MB'
+    image: docker.io/lukas8219/rinha-de-backend-2025-app:main-65787499f-1753140182
     depends_on:
       lavinmq:
         condition: service_healthy
-
-  cleanup:
-    image: alpine:latest
-    command: ["/bin/sh", "-c", "rm -rf /dev/shm/*"]
-    ipc: host
-    volumes:
-      - /dev/shm:/dev/shm
-    deploy:
-      resources:
-        limits:
-          cpus: '0.01'
-          memory: '10MB'
-    restart: "no"
-    networks:
-      - backend
 
   lavinmq:
     image: cloudamqp/lavinmq:latest
@@ -94,8 +74,6 @@ services:
       timeout: 10s
       retries: 20
       start_period: 5s
-    depends_on:
-      - cleanup
     ports:
       - "5672:5672"
       - "15672:15672"
@@ -107,7 +85,7 @@ services:
           cpus: '0.1'
           memory: '35MB'
         reservations:
-          cpus: '0.1'
+          cpus: '0.01'
           memory: '35MB'
 
   nginx: # Load Balancer
@@ -122,7 +100,6 @@ services:
       - consumer
     ports:
       - "9999:9999"
-    cpu_shares: 3072
     ulimits:
       nproc: 1000000
       nofile:
@@ -130,13 +107,14 @@ services:
         hard: 1000000
     networks:
       - backend
+    cpu_shares: 2048
     deploy:
       resources:
         limits:
           cpus: '0.1'
           memory: '35MB'
         reservations:
-          cpus: '0.1'
+          cpus: '0.01'
           memory: '35MB'
 
 networks:
