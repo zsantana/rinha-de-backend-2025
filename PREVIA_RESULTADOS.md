@@ -1,5 +1,5 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Sun Jul 20 09:21:00 PM -03 2025** (**66** resultados)
+Atualizado em **Sun Jul 20 09:26:25 PM -03 2025** (**66** resultados)
 
 
 | participante | p99 | bônus por desempenho (%) | multa ($) | lucro | submissão |
