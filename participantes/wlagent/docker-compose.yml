@@ -1,5 +1,5 @@
 x-app-base: &app-base
-  image: wlagent/wza-go:latest
+  image: wlagent/wza-go:1.0.0
   environment:
     - DEFAULT_URL=http://payment-processor-default:8080
     - FALLBACK_URL=http://payment-processor-fallback:8080

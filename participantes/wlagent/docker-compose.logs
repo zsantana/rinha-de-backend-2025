@@ -1,4 +1,38 @@
 
+ app2 Pulling 
+ app1 Pulling 
+ 9824c27679d3 Already exists 
+ 97051dd2486e Pulling fs layer 
+ 7dbe5f668d65 Pulling fs layer 
+ 9824c27679d3 Already exists 
+ 97051dd2486e Pulling fs layer 
+ 7dbe5f668d65 Pulling fs layer 
+ 97051dd2486e Downloading [==================================================>]      93B/93B
+ 97051dd2486e Download complete 
+ 97051dd2486e Extracting [==================================================>]      93B/93B
+ 97051dd2486e Downloading [==================================================>]      93B/93B
+ 97051dd2486e Download complete 
+ 97051dd2486e Extracting [==================================================>]      93B/93B
+ 97051dd2486e Extracting [==================================================>]      93B/93B
+ 97051dd2486e Extracting [==================================================>]      93B/93B
+ 7dbe5f668d65 Downloading [>                                                  ]  90.91kB/9.084MB
+ 7dbe5f668d65 Downloading [>                                                  ]  90.91kB/9.084MB
+ 97051dd2486e Pull complete 
+ 97051dd2486e Pull complete 
+ 7dbe5f668d65 Downloading [=============================================>     ]  8.339MB/9.084MB
+ 7dbe5f668d65 Downloading [=============================================>     ]  8.339MB/9.084MB
+ 7dbe5f668d65 Verifying Checksum 
+ 7dbe5f668d65 Verifying Checksum 
+ 7dbe5f668d65 Download complete 
+ 7dbe5f668d65 Download complete 
+ 7dbe5f668d65 Extracting [>                                                  ]   98.3kB/9.084MB
+ 7dbe5f668d65 Extracting [>                                                  ]   98.3kB/9.084MB
+ 7dbe5f668d65 Extracting [==================================================>]  9.084MB/9.084MB
+ 7dbe5f668d65 Extracting [==================================================>]  9.084MB/9.084MB
+ 7dbe5f668d65 Pull complete 
+ 7dbe5f668d65 Pull complete 
+ app1 Pulled 
+ app2 Pulled 
  Network wlagent_backend  Creating
  Network wlagent_backend  Created
  Volume "wlagent_rinha-store"  Creating
@@ -9,51 +43,49 @@
  Container wlagent-nats-1  Created
  Container wlagent-app2-1  Creating
  Container wlagent-app1-1  Creating
- Container wlagent-app2-1  Created
  Container wlagent-app1-1  Created
+ Container wlagent-app2-1  Created
  Container wlagent-nginx-1  Creating
  Container wlagent-nginx-1  Created
 Attaching to app1-1, app2-1, nats-1, nginx-1
-nats-1   | [1] 2025/07/20 20:36:02.108885 [INF] Starting nats-server
-nats-1   | [1] 2025/07/20 20:36:02.109178 [INF]   Version:  2.10.29
-nats-1   | [1] 2025/07/20 20:36:02.109219 [INF]   Git:      [f91ddd8]
-nats-1   | [1] 2025/07/20 20:36:02.109239 [INF]   Name:     NAIODIZ3B6HOYZDAB5YBDUB7WKRRGGT5J3EHHMRO3SONFXF5KXJ5DJL6
-nats-1   | [1] 2025/07/20 20:36:02.109261 [INF]   Node:     Zj4jLbi6
-nats-1   | [1] 2025/07/20 20:36:02.109291 [INF]   ID:       NAIODIZ3B6HOYZDAB5YBDUB7WKRRGGT5J3EHHMRO3SONFXF5KXJ5DJL6
-nats-1   | [1] 2025/07/20 20:36:02.110756 [INF] Starting JetStream
-nats-1   | [1] 2025/07/20 20:36:02.111161 [WRN] Temporary storage directory used, data could be lost on system reboot
-nats-1   | [1] 2025/07/20 20:36:02.111654 [INF]     _ ___ _____ ___ _____ ___ ___   _   __  __
-nats-1   | [1] 2025/07/20 20:36:02.111699 [INF]  _ | | __|_   _/ __|_   _| _ \ __| /_\ |  \/  |
-nats-1   | [1] 2025/07/20 20:36:02.111719 [INF] | || | _|  | | \__ \ | | |   / _| / _ \| |\/| |
-nats-1   | [1] 2025/07/20 20:36:02.111734 [INF]  \__/|___| |_| |___/ |_| |_|_\___/_/ \_\_|  |_|
-nats-1   | [1] 2025/07/20 20:36:02.111749 [INF] 
-nats-1   | [1] 2025/07/20 20:36:02.111779 [INF]          https://docs.nats.io/jetstream
-nats-1   | [1] 2025/07/20 20:36:02.111809 [INF] 
-nats-1   | [1] 2025/07/20 20:36:02.111829 [INF] ---------------- JETSTREAM ----------------
-nats-1   | [1] 2025/07/20 20:36:02.111848 [INF]   Max Memory:      5.73 GB
-nats-1   | [1] 2025/07/20 20:36:02.111882 [INF]   Max Storage:     36.16 GB
-nats-1   | [1] 2025/07/20 20:36:02.112059 [INF]   Store Directory: "/tmp/nats/jetstream"
-nats-1   | [1] 2025/07/20 20:36:02.112153 [INF] -------------------------------------------
-nats-1   | [1] 2025/07/20 20:36:02.113873 [INF] Listening for client connections on 0.0.0.0:4222
-nats-1   | [1] 2025/07/20 20:36:02.114214 [INF] Server is ready
+nats-1   | [1] 2025/07/20 23:26:29.360938 [INF] Starting nats-server
+nats-1   | [1] 2025/07/20 23:26:29.363310 [INF]   Version:  2.10.29
+nats-1   | [1] 2025/07/20 23:26:29.363317 [INF]   Git:      [f91ddd8]
+nats-1   | [1] 2025/07/20 23:26:29.363320 [INF]   Name:     NDIDFIPJRW7TXLP6B5JFRAEEUOVFS2R52VR7JJUDZO3M65L6LTXB6LQ6
+nats-1   | [1] 2025/07/20 23:26:29.363332 [INF]   Node:     cJViVrCL
+nats-1   | [1] 2025/07/20 23:26:29.363335 [INF]   ID:       NDIDFIPJRW7TXLP6B5JFRAEEUOVFS2R52VR7JJUDZO3M65L6LTXB6LQ6
+nats-1   | [1] 2025/07/20 23:26:29.365086 [INF] Starting JetStream
+nats-1   | [1] 2025/07/20 23:26:29.365110 [WRN] Temporary storage directory used, data could be lost on system reboot
+nats-1   | [1] 2025/07/20 23:26:29.365521 [INF]     _ ___ _____ ___ _____ ___ ___   _   __  __
+nats-1   | [1] 2025/07/20 23:26:29.365533 [INF]  _ | | __|_   _/ __|_   _| _ \ __| /_\ |  \/  |
+nats-1   | [1] 2025/07/20 23:26:29.365536 [INF] | || | _|  | | \__ \ | | |   / _| / _ \| |\/| |
+nats-1   | [1] 2025/07/20 23:26:29.365538 [INF]  \__/|___| |_| |___/ |_| |_|_\___/_/ \_\_|  |_|
+nats-1   | [1] 2025/07/20 23:26:29.365540 [INF] 
+nats-1   | [1] 2025/07/20 23:26:29.365543 [INF]          https://docs.nats.io/jetstream
+nats-1   | [1] 2025/07/20 23:26:29.365545 [INF] 
+nats-1   | [1] 2025/07/20 23:26:29.365547 [INF] ---------------- JETSTREAM ----------------
+nats-1   | [1] 2025/07/20 23:26:29.365551 [INF]   Max Memory:      5.73 GB
+nats-1   | [1] 2025/07/20 23:26:29.365555 [INF]   Max Storage:     29.44 GB
+nats-1   | [1] 2025/07/20 23:26:29.365557 [INF]   Store Directory: "/tmp/nats/jetstream"
+nats-1   | [1] 2025/07/20 23:26:29.365559 [INF] -------------------------------------------
+nats-1   | [1] 2025/07/20 23:26:29.366406 [INF] Listening for client connections on 0.0.0.0:4222
+nats-1   | [1] 2025/07/20 23:26:29.366564 [INF] Server is ready
 app1-1   | Stream PAYMENT criado com sucesso!
-app1-1   | 2025/07/20 20:36:02 Broker connected successfully
+app1-1   | 2025/07/20 23:26:29 Broker connected successfully
 app2-1   | Stream PAYMENT criado com sucesso!
-app2-1   | 2025/07/20 20:36:02 Broker connected successfully
-app1-1   | 2025/07/20 20:36:02 Database connected successfully
-app1-1   | 2025/07/20 20:36:02 Serve running on :9999
-app1-1   | 2025/07/20 20:36:02 Starting consumer 4
-app1-1   | 2025/07/20 20:36:02 Starting consumer 0
-app1-1   | 2025/07/20 20:36:02 Starting consumer 1
-app1-1   | 2025/07/20 20:36:02 Starting consumer 2
-app1-1   | 2025/07/20 20:36:02 Starting consumer 3
-app2-1   | 2025/07/20 20:36:02 Database connected successfully
-app2-1   | 2025/07/20 20:36:02 Serve running on :9999
-app2-1   | 2025/07/20 20:36:02 Starting consumer 4
-app2-1   | 2025/07/20 20:36:02 Starting consumer 0
-app2-1   | 2025/07/20 20:36:02 Starting consumer 1
-app2-1   | 2025/07/20 20:36:02 Starting consumer 2
-app2-1   | 2025/07/20 20:36:02 Starting consumer 3
+app2-1   | 2025/07/20 23:26:29 Broker connected successfully
+app1-1   | 2025/07/20 23:26:29 Database connected successfully
+app1-1   | 2025/07/20 23:26:29 Starting consumer 4
+app1-1   | 2025/07/20 23:26:29 Starting consumer 0
+app1-1   | 2025/07/20 23:26:29 Starting consumer 1
+app1-1   | 2025/07/20 23:26:29 Starting consumer 2
+app1-1   | 2025/07/20 23:26:29 Starting consumer 3
+app2-1   | 2025/07/20 23:26:29 Database connected successfully
+app2-1   | 2025/07/20 23:26:29 Starting consumer 1
+app2-1   | 2025/07/20 23:26:29 Starting consumer 2
+app2-1   | 2025/07/20 23:26:29 Starting consumer 3
+app2-1   | 2025/07/20 23:26:29 Starting consumer 0
+app2-1   | 2025/07/20 23:26:29 Starting consumer 4
 nginx-1  | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
 nginx-1  | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
 nginx-1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
@@ -63,26 +95,13 @@ nginx-1  | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolve
 nginx-1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
 nginx-1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
 nginx-1  | /docker-entrypoint.sh: Configuration complete; ready for start up
-app1-1   | 2025/07/20 20:36:05 Recovered from panic: runtime error: invalid memory address or nil pointer dereference
-app2-1   | 2025/07/20 20:36:10 Recovered from panic: runtime error: invalid memory address or nil pointer dereference
-app1-1   | 2025/07/20 20:36:15 Recovered from panic: runtime error: invalid memory address or nil pointer dereference
-app2-1   | 2025/07/20 20:36:20 Recovered from panic: runtime error: invalid memory address or nil pointer dereference
-app1-1   | 2025/07/20 20:36:25 Recovered from panic: runtime error: invalid memory address or nil pointer dereference
-app2-1   | 2025/07/20 20:36:30 Recovered from panic: runtime error: invalid memory address or nil pointer dereference
-app1-1   | 2025/07/20 20:36:35 Recovered from panic: runtime error: invalid memory address or nil pointer dereference
-app2-1   | 2025/07/20 20:36:40 Recovered from panic: runtime error: invalid memory address or nil pointer dereference
-app1-1   | 2025/07/20 20:36:45 Recovered from panic: runtime error: invalid memory address or nil pointer dereference
-app2-1   | 2025/07/20 20:36:50 Recovered from panic: runtime error: invalid memory address or nil pointer dereference
-app1-1   | 2025/07/20 20:36:55 Recovered from panic: runtime error: invalid memory address or nil pointer dereference
-app2-1   | 2025/07/20 20:37:00 Recovered from panic: runtime error: invalid memory address or nil pointer dereference
-app1-1   | 2025/07/20 20:37:05 Recovered from panic: runtime error: invalid memory address or nil pointer dereference
-app2-1   | 2025/07/20 20:37:10 Recovered from panic: runtime error: invalid memory address or nil pointer dereference
 [Knginx-1 exited with code 0
 [Kapp1-1 exited with code 2
 [Kapp2-1 exited with code 2
-nats-1   | [1] 2025/07/20 20:37:16.357731 [INF] Trapped "terminated" signal
-nats-1   | [1] 2025/07/20 20:37:16.408152 [INF] Initiating Shutdown...
-nats-1   | [1] 2025/07/20 20:37:16.408216 [INF] Initiating JetStream Shutdown...
-nats-1   | [1] 2025/07/20 20:37:16.408544 [INF] JetStream Shutdown
-nats-1   | [1] 2025/07/20 20:37:16.408700 [INF] Server Exiting..
+nats-1   | [1] 2025/07/20 23:27:43.769578 [INF] Trapped "terminated" signal
+nats-1   | [1] 2025/07/20 23:27:43.819982 [INF] Initiating Shutdown...
+nats-1   | [1] 2025/07/20 23:27:43.820025 [INF] Initiating JetStream Shutdown...
+nats-1   | [1] 2025/07/20 23:27:43.820229 [INF] JetStream Shutdown
+nats-1   | [1] 2025/07/20 23:27:43.820277 [INF] Server Exiting..
 [Knats-1 exited with code 1
+log truncated at line 1000
