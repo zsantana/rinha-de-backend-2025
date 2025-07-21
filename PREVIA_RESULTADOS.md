@@ -1,6 +1,6 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Sun Jul 20 09:59:40 PM -03 2025**
-66 submissões / 51 resultados / 15 submissões com erro
+Atualizado em **Sun Jul 20 10:11:42 PM -03 2025**
+69 submissões / 53 resultados / 16 submissões com erro
 
 
 | participante | p99 | bônus por desempenho (%) | multa ($) | lucro | submissão |
@@ -8,6 +8,7 @@ Atualizado em **Sun Jul 20 09:59:40 PM -03 2025**
 |	alexroza-rs	|	1003.88540614ms	|	0	|	0	|	186566.47999999998	|	[alexroza-rs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/alexroza-rs)
 |	andersongomes001	|	4.898413950000001ms	|	0.12203172099999998	|	110177.24550000756	|	243029.50988117242	|	[andersongomes001](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/andersongomes001)
 |	artschur	|	17.7725825199999ms	|	0	|	107777.45474998266	|	200158.13024996783	|	[artschur](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/artschur)
+|	asfernandes-haproxy-mongoose-lmdb	|	9.600861449999991ms	|	0.027982771000000177	|	0	|	320219.3676006709	|	[asfernandes-haproxy-mongoose-lmdb](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/asfernandes-haproxy-mongoose-lmdb)
 |	bine-rinha-backend-golang	|	4.8196232999999955ms	|	0.12360753400000009	|	104999.11624998349	|	232080.3068409402	|	[bine-rinha-backend-golang](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/bine-rinha-backend-golang)
 |	bine-rinha-backend-react-php	|	32.91155633999994ms	|	0	|	105792.52320002577	|	196471.82880004786	|	[bine-rinha-backend-react-php](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/bine-rinha-backend-react-php)
 |	davidalecrim1-go-1	|	2.8404498499999797ms	|	0.16319100300000042	|	0	|	348367.5746933891	|	[davidalecrim1-go-1](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/davidalecrim1-go-1)
@@ -43,6 +44,7 @@ Atualizado em **Sun Jul 20 09:59:40 PM -03 2025**
 |	not4rt-rustcoroutines	|	3.21597861ms	|	0.1556804278	|	0	|	199119.33456751006	|	[not4rt-rustcoroutines](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/not4rt-rustcoroutines)
 |	oliveigah	|	2.9778391599999976ms	|	0.16044321680000004	|	0	|	361255.993817017	|	[oliveigah](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/oliveigah)
 |	panissetrafael-go	|	3.761794279999991ms	|	0.14476411440000017	|	75981.9879	|	172536.4494962715	|	[panissetrafael-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/panissetrafael-go)
+|	pedropereiradev-bun	|	7.342226770000033ms	|	0.07315546459999935	|	0	|	274480.678062989	|	[pedropereiradev-bun](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/pedropereiradev-bun)
 |	ricardovhz	|	56.40056871999999ms	|	0	|	96099.23925	|	178470.01575000002	|	[ricardovhz](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/ricardovhz)
 |	ricassiocosta-python	|	1004.7613695199999ms	|	0	|	69975.96199999168	|	129955.35799998455	|	[ricassiocosta-python](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/ricassiocosta-python)
 |	robertAlmeida	|	90.14829455999984ms	|	0	|	90241.32599999999	|	167591.03399999999	|	[robertAlmeida](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/robertAlmeida)
@@ -71,6 +73,7 @@ Atualizado em **Sun Jul 20 09:59:40 PM -03 2025**
 | luucaspole-crystal | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/luucaspole-crystal) |
 | marcospaulo-java-1 | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/marcospaulo-java-1) |
 | matheusdojava | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/matheusdojava) |
+| mbenencase-python | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/mbenencase-python) |
 | ricardo-santos | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/ricardo-santos) |
 | rodrixl | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/rodrixl) |
 | santannaf | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/santannaf) |
