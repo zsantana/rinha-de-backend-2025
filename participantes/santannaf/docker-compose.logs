@@ -1,0 +1,63 @@
+
+ api02 Pulling 
+ api01 Pulling 
+ api02 Pulled 
+ api01 Pulled 
+ Network backend  Creating
+ Network backend  Created
+ Container redis  Creating
+ Container redis  Created
+ Container api02  Creating
+ Container api01  Creating
+ Container api02  Created
+ Container api01  Created
+ Container nginx  Creating
+ Container nginx  Created
+Attaching to api01, api02, nginx, redis
+redis  | 1:C 21 Jul 2025 03:15:52.619 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+redis  | 1:C 21 Jul 2025 03:15:52.619 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+redis  | 1:C 21 Jul 2025 03:15:52.619 * Redis version=7.2.10, bits=64, commit=00000000, modified=0, pid=1, just started
+redis  | 1:C 21 Jul 2025 03:15:52.619 * Configuration loaded
+redis  | 1:M 21 Jul 2025 03:15:52.619 * monotonic clock: POSIX clock_gettime
+redis  | 1:M 21 Jul 2025 03:15:52.620 * Running mode=standalone, port=6379.
+redis  | 1:M 21 Jul 2025 03:15:52.620 * Server initialized
+redis  | 1:M 21 Jul 2025 03:15:52.628 * Creating AOF base file appendonly.aof.1.base.rdb on server start
+redis  | 1:M 21 Jul 2025 03:15:52.647 * Creating AOF incr file appendonly.aof.1.incr.aof on server start
+redis  | 1:M 21 Jul 2025 03:15:52.647 * Ready to accept connections tcp
+api01  | 
+api01  |   .   ____          _            __ _ _
+api01  |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+api01  | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+api01  |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+api01  |   '  |____| .__|_| |_|_| |_\__, | / / / /
+api01  |  =========|_|==============|___/=/_/_/_/
+api01  | 
+api01  |  :: Spring Boot ::                (v3.5.3)
+api01  | 
+api01  | 2025-07-21T03:15:52.986Z  INFO 1 --- [payments] [           main] s.payments.payments.Application          : Starting AOT-processed Application using Java 24.0.2 with PID 1 (/app/meuapp started by root in /)
+api01  | 2025-07-21T03:15:52.986Z  INFO 1 --- [payments] [           main] s.payments.payments.Application          : No active profile set, falling back to 1 default profile: "default"
+api01  | 2025-07-21T03:15:53.010Z  INFO 1 --- [payments] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+api01  | 2025-07-21T03:15:53.012Z  INFO 1 --- [payments] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+api01  | 2025-07-21T03:15:53.012Z  INFO 1 --- [payments] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
+api01  | 2025-07-21T03:15:53.025Z  INFO 1 --- [payments] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+api01  | 2025-07-21T03:15:53.026Z  INFO 1 --- [payments] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 40 ms
+api02  | 
+api02  |   .   ____          _            __ _ _
+api02  |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+api02  | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+api02  |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+api02  |   '  |____| .__|_| |_|_| |_\__, | / / / /
+api02  |  =========|_|==============|___/=/_/_/_/
+api02  | 
+api02  |  :: Spring Boot ::                (v3.5.3)
+api02  | 
+api02  | 2025-07-21T03:15:53.154Z  INFO 1 --- [payments] [           main] s.payments.payments.Application          : Starting AOT-processed Application using Java 24.0.2 with PID 1 (/app/meuapp started by root in /)
+api02  | 2025-07-21T03:15:53.154Z  INFO 1 --- [payments] [           main] s.payments.payments.Application          : No active profile set, falling back to 1 default profile: "default"
+api02  | 2025-07-21T03:15:53.174Z  INFO 1 --- [payments] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+api02  | 2025-07-21T03:15:53.175Z  INFO 1 --- [payments] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+api02  | 2025-07-21T03:15:53.175Z  INFO 1 --- [payments] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
+api02  | 2025-07-21T03:15:53.184Z  INFO 1 --- [payments] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+api02  | 2025-07-21T03:15:53.184Z  INFO 1 --- [payments] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 30 ms
+api01  | 2025-07-21T03:15:53.218Z  INFO 1 --- [payments] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+api01  | 2025-07-21T03:15:53.219Z  INFO 1 --- [payments] [           main] s.payments.payments.Application          : Started Application in 0.254 seconds (process running for 0.26)
+Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: error during container init: error mounting "/home/rinha-user/rinha-de-backend-2025/participantes/santannaf/nginx.conf" to rootfs at "/etc/nginx/nginx.conf": create mountpoint for /etc/nginx/nginx.conf mount: cannot create subdirectories in "/var/lib/docker/overlay2/fef7febace8787b1f3b4ee872a3e8c4b659ad1225921cc8510cefb7218906f35/merged/etc/nginx/nginx.conf": not a directory: unknown: Are you trying to mount a directory onto a file (or vice-versa)? Check if the specified host path exists and is the expected type
