@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+echo "=================================="
+echo "Usando token: $TOKEN"
+echo "=================================="
+
 startContainers() {
     pushd ../payment-processor > /dev/null
         docker compose up --build -d 1> /dev/null 2>&1
