@@ -60,6 +60,8 @@ services:
           cpus: '0.9'
           memory: '180MB'
     image: docker.io/lukas8219/rinha-de-backend-2025-worker:main-a0daa45f7-1753099550
+    cpu_shares: 2048
+    cpuset: "0"
     depends_on:
       lavinmq:
         condition: service_healthy
