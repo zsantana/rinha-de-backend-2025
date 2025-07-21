@@ -1,5 +1,5 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Sun Jul 20 09:26:25 PM -03 2025** (**66** resultados)
+Atualizado em **Sun Jul 20 09:29:00 PM -03 2025** (**66** resultados)
 
 
 | participante | p99 | bônus por desempenho (%) | multa ($) | lucro | submissão |
@@ -60,3 +60,18 @@ Atualizado em **Sun Jul 20 09:26:25 PM -03 2025** (**66** resultados)
 
 | participante | submissão |
 | -- | -- |
+| anibalferreira-rust | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/anibalferreira-rust) |
+| ccs1201-01 | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/ccs1201-01) |
+| d4vz | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/d4vz) |
+| danilosantana-dotnet | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/danilosantana-dotnet) |
+| dotnetRinha | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/dotnetRinha) |
+| josineyjr-go-1 | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/josineyjr-go-1) |
+| luanvictor-node | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/luanvictor-node) |
+| luucaspole-crystal | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/luucaspole-crystal) |
+| marcospaulo-java-1 | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/marcospaulo-java-1) |
+| matheusdojava | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/matheusdojava) |
+| ricardo-santos | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/ricardo-santos) |
+| rodrixl | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/rodrixl) |
+| santannaf | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/santannaf) |
+| willianmarquess-node | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/willianmarquess-node) |
+| zsantana-java-quarkus-v1 | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/zsantana-java-quarkus-v1) |
