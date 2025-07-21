@@ -54,7 +54,7 @@ while true; do
 
             if [ $success -eq 0 ]; then
                 echo "" > $directory/k6.logs
-                k6 run -e MAX_REQUESTS=$MAX_REQUESTS -e PARTICIPANT=$participant --log-output=file=$directory/k6.logs rinha.js
+                k6 run -e MAX_REQUESTS=$MAX_REQUESTS -e PARTICIPANT=$participant -e TOKEN=$(uuidgen) --log-output=file=$directory/k6.logs rinha.js
                 stopContainers $participant
                 echo "======================================="
                 echo "working on $participant"
