@@ -1,6 +1,6 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Sun Jul 20 10:19:52 PM -03 2025**
-70 submissões / 53 resultados / 17 submissões com erro
+Atualizado em **Sun Jul 20 10:26:48 PM -03 2025**
+71 submissões / 54 resultados / 17 submissões com erro
 
 
 | participante | p99 | bônus por desempenho (%) | multa ($) | lucro | submissão |
@@ -51,6 +51,7 @@ Atualizado em **Sun Jul 20 10:19:52 PM -03 2025**
 |	rodrigocaldeira-elixir	|	4.8402999599999745ms	|	0.12319400080000051	|	0	|	347266.139087272	|	[rodrigocaldeira-elixir](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/rodrigocaldeira-elixir)
 |	rodrigo-schonardt-go	|	4.625809799999999ms	|	0.12748380400000003	|	0	|	143111.69963912864	|	[rodrigo-schonardt-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/rodrigo-schonardt-go)
 |	ryangst-bun	|	1298.4415304599993ms	|	0	|	6533.518249999999	|	12133.67675	|	[ryangst-bun](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/ryangst-bun)
+|	suricat89-solucao1	|	2.457792540000008ms	|	0.17084414919999988	|	108743.50024999998	|	255032.7598392606	|	[suricat89-solucao1](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/suricat89-solucao1)
 |	victorverdoodt-cs	|	87.85737292999997ms	|	0	|	108330.12749999999	|	201184.52249999996	|	[victorverdoodt-cs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/victorverdoodt-cs)
 |	victorverdoodt-cs-redis	|	86.57472155000012ms	|	0	|	109126.9235	|	202664.28650000002	|	[victorverdoodt-cs-redis](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/victorverdoodt-cs-redis)
 |	wanderdotnet	|	6.2866025799999985ms	|	0.09426794840000004	|	50371.5765	|	107114.14256951047	|	[wanderdotnet](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/wanderdotnet)
