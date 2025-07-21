@@ -3,7 +3,7 @@ x-enviromments: &x-enviromments
   - AMQP_URL: "amqp://guest:guest@lavinmq:5672/"
   - BATCH_INTERVAL: "50"
   - PREFETCH_COUNT: "0"
-  - SHARD_COUNT: "5"
+  - SHARD_COUNT: "1"
   - SKIP_DELAY: "true"
   - PROCESSOR_URL: "http://payment-processor-default:8080"
   - FALLBACK_URL: "http://payment-processor-fallback:8080"
@@ -12,7 +12,7 @@ x-enviromments: &x-enviromments
 version: '3.4'
 services:
   app1: &app
-    image: docker.io/lukas8219/rinha-de-backend-2025-app:main-0ecadfc84-1753043469
+    image: docker.io/lukas8219/rinha-de-backend-2025-app:main-a0daa45f7-1753099550
     hostname: app1
     restart: unless-stopped
     environment:
@@ -23,10 +23,12 @@ services:
       - payment-processor
     expose:
       - "3000"
+    ipc: host
     depends_on:
       lavinmq:
         condition: service_healthy
-    ipc: host
+      consumer:
+        condition: service_started
     ulimits:
       nproc: 1000000
       nofile:
@@ -35,42 +37,47 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '0.1'
-          memory: '30MB'
+          cpus: '0.15'
+          memory: '50MB'
   app2:
     <<: *app
     environment:
       <<: *x-enviromments
       SOCKET_PATH: "/dev/shm/app2.sock"
     hostname: app2
-  app3:
-    <<: *app
-    environment:
-      <<: *x-enviromments
-      SOCKET_PATH: "/dev/shm/app3.sock"
-    hostname: app3
+    depends_on:
+      lavinmq:
+        condition: service_healthy
+      consumer:
+        condition: service_started
 
-  consumer: &consumer
+  consumer:
     <<: *app
-    image: docker.io/lukas8219/rinha-de-backend-2025-app:main-0ecadfc84-1753043469
     hostname: "1"
     deploy:
       resources:
         limits:
-          cpus: '0.25'
-          memory: '35MB'
-  consumer2:
-    <<: *consumer
-    hostname: "2"
-  consumer3:
-    <<: *consumer
-    hostname: "3"
-  consumer4:
-    <<: *consumer
-    hostname: "4"
-  consumer5:
-    <<: *consumer
-    hostname: "5"
+          cpus: '0.9'
+          memory: '180MB'
+    image: docker.io/lukas8219/rinha-de-backend-2025-worker:main-a0daa45f7-1753099550
+    depends_on:
+      lavinmq:
+        condition: service_healthy
+
+  cleanup:
+    image: alpine:latest
+    command: ["/bin/sh", "-c", "rm -rf /dev/shm/*"]
+    ipc: host
+    volumes:
+      - /dev/shm:/dev/shm
+    deploy:
+      resources:
+        limits:
+          cpus: '0.01'
+          memory: '10MB'
+    restart: "no"
+    networks:
+      - backend
 
   lavinmq:
     image: cloudamqp/lavinmq:latest
@@ -81,6 +88,8 @@ services:
       timeout: 10s
       retries: 20
       start_period: 5s
+    depends_on:
+      - cleanup
     ports:
       - "5672:5672"
       - "15672:15672"
@@ -100,13 +109,8 @@ services:
     depends_on:
       - app1
       - app2
-      - app3
       - lavinmq
       - consumer
-      - consumer2
-      - consumer3
-      - consumer4
-      - consumer5
     ports:
       - "9999:9999"
     ulimits:
