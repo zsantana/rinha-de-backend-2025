@@ -1,6 +1,6 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Tue Jul 22 04:04:25 PM -03 2025**
-83 submissões / 63 resultados / 20 submissões com erro
+Atualizado em **Tue Jul 22 04:11:28 PM -03 2025**
+84 submissões / 63 resultados / 21 submissões com erro
 
 
 | participante | p99 | bônus por desempenho (%) | multa ($) | lucro | submissão |
@@ -91,4 +91,5 @@ Atualizado em **Tue Jul 22 04:04:25 PM -03 2025**
 | rafaspimenta-dotnet | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/rafaspimenta-dotnet) |
 | rodrixl | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/rodrixl) |
 | samypng-go | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/samypng-go) |
+| willianmarquess-lua-luvit | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/willianmarquess-lua-luvit) |
 | zsantana-java-quarkus-v1 | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/zsantana-java-quarkus-v1) |
