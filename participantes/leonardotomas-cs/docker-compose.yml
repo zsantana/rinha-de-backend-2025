@@ -38,20 +38,6 @@ services:
           cpus: "0.1"
           memory: "20MB"
 
-  nginx:
-    image: nginx:latest
-    networks:
-      - rinha
-    volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf:ro
-    ports:
-      - "9999:9999"
-    deploy:
-      resources:
-        limits:
-          cpus: "0.1"
-          memory: "15MB"
-
   rinhabackend01: &backend-template
     image: leo9114/rinha-de-backend-2025-csharp:latest
     networks:
@@ -78,6 +64,30 @@ services:
     <<: *backend-template
     ports:
       - "8089:80"
+
+  nginx:
+    image: nginx:latest
+    networks:
+      - rinha
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - "9999:9999"
+    depends_on:
+      - rinhabackend01
+      - rinhabackend02
+    deploy:
+      resources:
+        limits:
+          cpus: "0.1"
+          memory: "15MB"
+    restart: unless-stopped
+    command: >
+      sh -c "
+        echo 'Waiting for backends to be ready...' &&
+        sleep 10 &&
+        nginx -g 'daemon off;'
+      "
 
 networks:
   rinha:
