@@ -1,5 +1,4 @@
 x-api_template: &api_template
-  image: andersongomes001/rinha-api-2025:59d698c
   environment:
     PAYMENT_PROCESSOR_DEFAULT_URL: "http://payment-processor-default:8080"
     PAYMENT_PROCESSOR_FALLBACK_URL: "http://payment-processor-fallback:8080"
@@ -11,8 +10,9 @@ x-api_template: &api_template
   deploy:
     resources:
       limits:
-        cpus: "0.3"
-        memory: "80MB"
+        cpus: "0.5"
+        memory: "115MB"
+
 services:
   api01:
     <<: *api_template
@@ -51,10 +51,9 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.3"
-          memory: "90MB"
+          cpus: "0.2"
+          memory: "70MB"
 networks:
   backend:
-    driver: bridge
   payment-processor:
     external: true
