@@ -34,7 +34,7 @@ services:
       resources:
         limits:
           cpus: '0.3'
-          memory: 80MB
+          memory: 145M
     
   api-1:
     <<: *api_template
@@ -45,7 +45,7 @@ services:
       resources:
         limits:
           cpus: '0.4'
-          memory: 85MB
+          memory: 70MB
 
   api-2:
     <<: *api_template
@@ -56,7 +56,7 @@ services:
       resources:
         limits:
           cpus: '0.4'
-          memory: 85MB
+          memory: 70MB
   
   nginx:
     image: nginx:alpine
@@ -74,7 +74,7 @@ services:
       resources:
         limits:
           cpus: '0.4'
-          memory: "100MB"
+          memory: "30MB"
 
 networks:
   rinha-backend:
