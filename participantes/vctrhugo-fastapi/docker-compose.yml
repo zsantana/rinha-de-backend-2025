@@ -1,0 +1,88 @@
+version: "3.9"
+
+services:
+
+  nginx:
+    image: nginx:1.25-alpine
+    container_name: nginx
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - api1
+      - api2
+      - api3
+    ports:
+      - "9999:9999"
+    networks:
+      - backend
+      - payment-processor
+    deploy:
+      resources:
+        limits:
+          cpus: "0.1"
+          memory: "25MB"
+
+  api1: &api
+    image: vctrhugo3011/rinha2025-api:latest
+    hostname: api1
+    networks:
+      - backend
+      - payment-processor
+    depends_on:
+      - worker
+    deploy:
+      resources:
+        limits:
+          cpus: "0.2"
+          memory: "78MB"
+
+  api2:
+    <<: *api
+    hostname: api2
+
+  api3:
+    <<: *api
+    hostname: api3
+
+  worker:
+    image: vctrhugo3011/rinha2025-worker:latest
+    container_name: worker
+    environment:
+      - PAYMENT_PROCESSOR_DEFAULT_URL=http://payment-processor-default:8080
+      - PAYMENT_PROCESSOR_FALLBACK_URL=http://payment-processor-fallback:8080
+    depends_on:
+      redis:
+        condition: service_healthy
+    networks:
+      - backend
+      - payment-processor
+    deploy:
+      resources:
+        limits:
+          cpus: "0.7"
+          memory: "60MB"
+
+  redis:
+    image: redis:7.2-alpine
+    container_name: redis
+    command: redis-server --save "" --appendonly no --maxclients 20000
+    ports:
+      - "6379:6379"
+    networks:
+      - backend
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    deploy:
+      resources:
+        limits:
+          cpus: "0.1"
+          memory: "30MB"
+
+networks:
+  backend:
+    driver: bridge
+  payment-processor:
+    external: true
