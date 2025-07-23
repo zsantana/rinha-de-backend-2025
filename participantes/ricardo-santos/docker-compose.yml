@@ -29,7 +29,7 @@ services:
 
   app2:
     <<: *app
-    build: .
+    image: ricardo2010/payment-app:v3
     container_name: app2
     environment:
       - MIX_ENV=prod
@@ -55,7 +55,7 @@ services:
           memory: "150M"
 
   nginx:
-    image: nginx:1.29.0-alpine 
+    image: nginx:1.29.0-alpine
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf:ro
     ports:
@@ -68,8 +68,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '0.50'
-          memory: '50MB'
+          cpus: "0.50"
+          memory: "50MB"
 
 networks:
   payment-processor:
