@@ -22,7 +22,6 @@ services:
       retries: 30
     
   api01: &api01
-    build: .
     image: antoniocarvalhodev/rinha:1.0
     networks:
       - backend
