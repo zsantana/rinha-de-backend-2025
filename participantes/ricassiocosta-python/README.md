@@ -15,11 +15,10 @@ O sistema é responsável por processar pagamentos de forma resiliente, utilizan
 ## Arquitetura
 
 ```mermaid
-
 graph TD
     %% Seções principais
     subgraph CLIENT
-        A[Usuário / Cliente HTTP]
+        A[Usuário/Cliente_HTTP]
     end
 
     subgraph LOAD_BALANCER
@@ -27,19 +26,19 @@ graph TD
     end
 
     subgraph BACKEND
-        C1[BE 1 (API + Worker)]
-        C2[BE 2 (API + Worker)]
-        HC[Health Check Worker]
+        C1[BE1_API+Worker]
+        C2[BE2_API+Worker]
+        HC[HealthCheck_Worker]
     end
 
     subgraph REDIS
-        RQ[Redis (Fila: payments_pending)]
-        RD[Redis (Banco de dados)]
+        RQ[Redis_Queue]
+        RD[Redis_Database]
     end
 
     subgraph GATEWAYS
-        PG1[Payment Gateway 1]
-        PG2[Payment Gateway 2]
+        PG1[Gateway_1]
+        PG2[Gateway_2]
     end
 
     %% Fluxo de requisições
@@ -51,13 +50,13 @@ graph TD
     C1 --> RQ
     C2 --> RQ
 
-    %% API enviando pagamentos pro gateway mais saudável
+    %% API enviando pagamentos pros gateways
     C1 --> PG1
     C1 --> PG2
     C2 --> PG1
     C2 --> PG2
 
-    %% API salvando resultado no Redis como banco
+    %% API salvando resultado no Redis
     C1 --> RD
     C2 --> RD
 
@@ -68,8 +67,6 @@ graph TD
     %% Health Check atualizando status nos BEs
     HC --> C1
     HC --> C2
-
-
 ```
 
 ## Recursos Alocados (docker-compose)
