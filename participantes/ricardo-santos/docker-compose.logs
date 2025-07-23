@@ -1,5 +1,68 @@
 
- app2 Pulling 
- app1 Pulling 
- app1  Interrupted
-no matching manifest for linux/amd64 in the manifest list entries
+ Container app1  Creating
+ Container app2  Creating
+ Container app2  Created
+ Container app1  Created
+ Container ricardo-santos-nginx-1  Creating
+ Container ricardo-santos-nginx-1  Created
+Attaching to app1, app2, nginx-1
+nginx-1  | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+nginx-1  | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+nginx-1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+nginx-1  | 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+nginx-1  | 10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
+nginx-1  | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+nginx-1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+nginx-1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+nginx-1  | /docker-entrypoint.sh: Configuration complete; ready for start up
+app1     | "Connected to cluster!!!"
+app2     | "Connected to cluster!!!"
+app2     | 
+app2     | 20:31:51.482 [info] Running PaymentDispatcher.Server with Bandit 1.7.0 at 0.0.0.0:9999 (http)
+app1     | 
+app1     | 20:31:51.485 [info] Running PaymentDispatcher.Server with Bandit 1.7.0 at 0.0.0.0:9999 (http)
+app1     | "[WARN] /payments-summary demorou 344"
+app2     | "[WARN] /payments demorou 784"
+app2     | "[WARN] /payments demorou 301"
+app1     | "[WARN] /payments-summary demorou 732"
+app1     | "[WARN] /payments-summary demorou 10921"
+app2     | "[WARN] /payments demorou 442"
+app2     | "[WARN] /payments-summary demorou 2634"
+app2     | "[WARN] /payments-summary demorou 636"
+app1     | "[WARN] /payments demorou 490"
+app1     | "[WARN] /payments demorou 386"
+app1     | "[WARN] /payments demorou 2068"
+app1     | "[WARN] /payments demorou 7784"
+app1     | "[WARN] /payments demorou 7805"
+app1     | "[WARN] /payments demorou 403"
+app1     | "[WARN] /payments demorou 328"
+app1     | "[WARN] /payments-summary demorou 22208"
+app1     | "[WARN] /payments demorou 312"
+app1     | "[WARN] /payments demorou 1359"
+app1     | "[WARN] /payments demorou 381"
+app1     | "[WARN] /payments demorou 321"
+app1     | "[WARN] /payments demorou 330"
+app1     | "[WARN] /payments demorou 310"
+app2     | "[WARN] /payments demorou 346"
+app1     | "[WARN] /payments demorou 357"
+app1     | "[WARN] /payments demorou 659"
+app2     | "[WARN] /payments demorou 367"
+app1     | "[WARN] /payments demorou 310"
+app1     | "[WARN] /payments demorou 324"
+app2     | "[WARN] /payments demorou 539"
+app1     | "[WARN] /payments demorou 306"
+app1     | "[WARN] /payments demorou 391"
+app2     | "[WARN] /payments demorou 367"
+app2     | "[WARN] /payments demorou 349"
+app1     | "[WARN] /payments demorou 488"
+app2     | "[WARN] /payments-summary demorou 8097"
+[Knginx-1 exited with code 0
+app1     | 
+app1     | 20:32:59.422 [notice] SIGTERM received - shutting down
+app1     | 
+app2     | 
+app2     | 20:32:59.431 [notice] SIGTERM received - shutting down
+app2     | 
+[Kapp1 exited with code 0
+[Kapp2 exited with code 0
+log truncated at line 1000
