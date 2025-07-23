@@ -1,5 +1,3 @@
-version: "3.9"
-
 services:
 
   nginx:
@@ -10,7 +8,6 @@ services:
     depends_on:
       - api1
       - api2
-      - api3
     ports:
       - "9999:9999"
     networks:
@@ -19,8 +16,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.1"
-          memory: "25MB"
+          cpus: "0.15"
+          memory: "50MB"
 
   api1: &api
     image: vctrhugo3011/rinha2025-api:latest
@@ -29,27 +26,25 @@ services:
       - backend
       - payment-processor
     depends_on:
-      - worker
+      - worker1
+      - worker2
     deploy:
       resources:
         limits:
           cpus: "0.2"
-          memory: "78MB"
+          memory: "70MB"
 
   api2:
     <<: *api
     hostname: api2
 
-  api3:
-    <<: *api
-    hostname: api3
-
-  worker:
+  worker1: &worker
     image: vctrhugo3011/rinha2025-worker:latest
-    container_name: worker
+    container_name: worker1
     environment:
       - PAYMENT_PROCESSOR_DEFAULT_URL=http://payment-processor-default:8080
       - PAYMENT_PROCESSOR_FALLBACK_URL=http://payment-processor-fallback:8080
+      - WORKER_CONCURRENCY=20
     depends_on:
       redis:
         condition: service_healthy
@@ -59,8 +54,12 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.7"
-          memory: "60MB"
+          cpus: "0.4"
+          memory: "50MB"
+
+  worker2:
+    <<: *worker
+    container_name: worker2
 
   redis:
     image: redis:7.2-alpine
@@ -78,8 +77,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.1"
-          memory: "30MB"
+          cpus: "0.15"
+          memory: "20MB"
 
 networks:
   backend:
