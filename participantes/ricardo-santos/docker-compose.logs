@@ -1,43 +1,8 @@
 
- app1 Pulling 
- app2 Pulling 
- 6c87eefc1f42 Already exists 
- 42cd868ef9a6 Already exists 
- e1f888823f32 Already exists 
- 4f79533e2cb3 Already exists 
- ea9c933f6e1b Already exists 
- f6ff7c6212d0 Pulling fs layer 
- 6c87eefc1f42 Already exists 
- 42cd868ef9a6 Already exists 
- e1f888823f32 Already exists 
- 4f79533e2cb3 Already exists 
- ea9c933f6e1b Already exists 
- f6ff7c6212d0 Pulling fs layer 
- f6ff7c6212d0 Downloading [>                                                  ]  82.45kB/7.942MB
- f6ff7c6212d0 Downloading [>                                                  ]  82.45kB/7.942MB
- f6ff7c6212d0 Downloading [===========================================>       ]  6.963MB/7.942MB
- f6ff7c6212d0 Downloading [===========================================>       ]  6.963MB/7.942MB
- f6ff7c6212d0 Verifying Checksum 
- f6ff7c6212d0 Download complete 
- f6ff7c6212d0 Download complete 
- f6ff7c6212d0 Extracting [>                                                  ]   98.3kB/7.942MB
- f6ff7c6212d0 Extracting [>                                                  ]   98.3kB/7.942MB
- f6ff7c6212d0 Extracting [=====================>                             ]  3.342MB/7.942MB
- f6ff7c6212d0 Extracting [=====================>                             ]  3.342MB/7.942MB
- f6ff7c6212d0 Extracting [=================================>                 ]  5.308MB/7.942MB
- f6ff7c6212d0 Extracting [=================================>                 ]  5.308MB/7.942MB
- f6ff7c6212d0 Extracting [=============================================>     ]  7.176MB/7.942MB
- f6ff7c6212d0 Extracting [=============================================>     ]  7.176MB/7.942MB
- f6ff7c6212d0 Extracting [==================================================>]  7.942MB/7.942MB
- f6ff7c6212d0 Extracting [==================================================>]  7.942MB/7.942MB
- f6ff7c6212d0 Pull complete 
- f6ff7c6212d0 Pull complete 
- app1 Pulled 
- app2 Pulled 
- Container app2  Creating
  Container app1  Creating
- Container app1  Created
+ Container app2  Creating
  Container app2  Created
+ Container app1  Created
  Container ricardo-santos-nginx-1  Creating
  Container ricardo-santos-nginx-1  Created
 Attaching to app1, app2, nginx-1
@@ -50,24 +15,53 @@ nginx-1  | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolve
 nginx-1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
 nginx-1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
 nginx-1  | /docker-entrypoint.sh: Configuration complete; ready for start up
-app2     | "Connected to cluster!"
+app1     | "Connected to cluster!!!"
+app2     | "Connected to cluster!!!"
 app2     | 
-app2     | 17:03:14.851 [info] Running PaymentDispatcher.Server with Bandit 1.7.0 at 0.0.0.0:9999 (http)
-app1     | "Connected to cluster!"
+app2     | 20:31:51.482 [info] Running PaymentDispatcher.Server with Bandit 1.7.0 at 0.0.0.0:9999 (http)
 app1     | 
-app1     | 17:03:14.889 [info] Running PaymentDispatcher.Server with Bandit 1.7.0 at 0.0.0.0:9999 (http)
-app1     | 
-app1     | 17:03:15.046 [info] global: Name conflict terminating {PaymentDispatcher.PaymentRouter, #PID<35583.1112.0>}
-app1     | 
-app1     | 
-app1     | 17:03:15.047 [info] global: Name conflict terminating {PaymentDispatcher.StateManager, #PID<35583.1111.0>}
-app1     | 
+app1     | 20:31:51.485 [info] Running PaymentDispatcher.Server with Bandit 1.7.0 at 0.0.0.0:9999 (http)
+app1     | "[WARN] /payments-summary demorou 344"
+app2     | "[WARN] /payments demorou 784"
+app2     | "[WARN] /payments demorou 301"
+app1     | "[WARN] /payments-summary demorou 732"
+app1     | "[WARN] /payments-summary demorou 10921"
+app2     | "[WARN] /payments demorou 442"
+app2     | "[WARN] /payments-summary demorou 2634"
+app2     | "[WARN] /payments-summary demorou 636"
+app1     | "[WARN] /payments demorou 490"
+app1     | "[WARN] /payments demorou 386"
+app1     | "[WARN] /payments demorou 2068"
+app1     | "[WARN] /payments demorou 7784"
+app1     | "[WARN] /payments demorou 7805"
+app1     | "[WARN] /payments demorou 403"
+app1     | "[WARN] /payments demorou 328"
+app1     | "[WARN] /payments-summary demorou 22208"
+app1     | "[WARN] /payments demorou 312"
+app1     | "[WARN] /payments demorou 1359"
+app1     | "[WARN] /payments demorou 381"
+app1     | "[WARN] /payments demorou 321"
+app1     | "[WARN] /payments demorou 330"
+app1     | "[WARN] /payments demorou 310"
+app2     | "[WARN] /payments demorou 346"
+app1     | "[WARN] /payments demorou 357"
+app1     | "[WARN] /payments demorou 659"
+app2     | "[WARN] /payments demorou 367"
+app1     | "[WARN] /payments demorou 310"
+app1     | "[WARN] /payments demorou 324"
+app2     | "[WARN] /payments demorou 539"
+app1     | "[WARN] /payments demorou 306"
+app1     | "[WARN] /payments demorou 391"
+app2     | "[WARN] /payments demorou 367"
+app2     | "[WARN] /payments demorou 349"
+app1     | "[WARN] /payments demorou 488"
+app2     | "[WARN] /payments-summary demorou 8097"
 [Knginx-1 exited with code 0
 app1     | 
-app1     | 17:04:24.852 [notice] SIGTERM received - shutting down
+app1     | 20:32:59.422 [notice] SIGTERM received - shutting down
 app1     | 
 app2     | 
-app2     | 17:04:24.862 [notice] SIGTERM received - shutting down
+app2     | 20:32:59.431 [notice] SIGTERM received - shutting down
 app2     | 
 [Kapp1 exited with code 0
 [Kapp2 exited with code 0

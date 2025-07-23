@@ -27,11 +27,11 @@ services:
     deploy:
       resources:
         limits:
-          memory: 45M
+          memory: 25M
           cpus: "0.2"
 
   backend1:
-    image: not4rt/rinha-2025-fast:latest
+    image: not4rt/rinha-2025-fast:v1.0.5
     environment:
       PORT: 8080
       DEFAULT_PROCESSOR_URL: http://payment-processor-default:8080
@@ -51,11 +51,11 @@ services:
     deploy:
       resources:
         limits:
-          memory: 55M
+          memory: 50M
           cpus: "0.2"
 
   backend2:
-    image: not4rt/rinha-2025-fast:latest
+    image: not4rt/rinha-2025-fast:v1.0.5
     environment:
       PORT: 8080
       DEFAULT_PROCESSOR_URL: http://payment-processor-default:8080
@@ -75,11 +75,11 @@ services:
     deploy:
       resources:
         limits:
-          memory: 55M
+          memory: 50M
           cpus: "0.2"
 
   worker1:
-    image: not4rt/rinha-2025-fast:latest
+    image: not4rt/rinha-2025-fast:v1.0.5
     environment:
       PORT: 8080
       DEFAULT_PROCESSOR_URL: http://payment-processor-default:8080
@@ -99,11 +99,11 @@ services:
     deploy:
       resources:
         limits:
-          memory: 55M
+          memory: 40M
           cpus: "0.3"
 
   worker2:
-    image: not4rt/rinha-2025-fast:latest
+    image: not4rt/rinha-2025-fast:v1.0.5
     environment:
       PORT: 8080
       DEFAULT_PROCESSOR_URL: http://payment-processor-default:8080
@@ -123,7 +123,7 @@ services:
     deploy:
       resources:
         limits:
-          memory: 55M
+          memory: 40M
           cpus: "0.3"
 
   valkey:
@@ -133,7 +133,7 @@ services:
       --save ""
       --appendonly no
       --io-threads 2
-      --maxmemory 80mb
+      --maxmemory 20mb
       --maxmemory-policy allkeys-lru
       --tcp-keepalive 0
       --timeout 0
@@ -152,7 +152,7 @@ services:
     deploy:
       resources:
         limits:
-          memory: 85M # valkey is using less than 15mb :/
+          memory: 25M # valkey is using less than 15mb when uncapped:o
           cpus: "0.3"
 
 networks:

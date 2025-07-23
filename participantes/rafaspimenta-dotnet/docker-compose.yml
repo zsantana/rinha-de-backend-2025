@@ -1,6 +1,7 @@
 services:
   api01: &api
     image: rafaspimenta/rinha-backend-csharp:latest
+    platform: linux/amd64
     hostname: api01
     depends_on:
       postgres:
@@ -26,14 +27,6 @@ services:
   api02:
     <<: *api
     hostname: api02
-    
-  api03:
-    <<: *api
-    hostname: api03
-    
-  api04:
-    <<: *api
-    hostname: api04
 
   nginx:
     image: nginx:latest
@@ -42,8 +35,6 @@ services:
     depends_on:
       - api01
       - api02
-      - api03
-      - api04
     ports:
       - "9999:9999"
     deploy:
