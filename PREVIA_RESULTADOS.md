@@ -1,5 +1,5 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Wed Jul 23 01:36:35 PM -03 2025**
+Atualizado em **Wed Jul 23 01:43:42 PM -03 2025**
 94 submissões / 76 resultados / 18 submissões com erro
 
 
@@ -59,7 +59,7 @@ Atualizado em **Wed Jul 23 01:36:35 PM -03 2025**
 |	oliveigah	|	2.8367277599999987ms	|	0.16326544480000002	|	0	|	362275.7865557002	|	[oliveigah](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/oliveigah)
 |	panissetrafael-go	|	4.101088839999998ms	|	0.13797822320000003	|	75635.65327499999	|	170283.5647948736	|	[panissetrafael-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/panissetrafael-go)
 |	pedropereiradev-bun	|	3.3056286999999998ms	|	0.15388742600000002	|	0	|	340832.60241192597	|	[pedropereiradev-bun](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/pedropereiradev-bun)
-|	rafaspimenta-dotnet	|	3.0709102800000077ms	|	0.15858179439999984	|	0	|	361999.9185909859	|	[rafaspimenta-dotnet](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/rafaspimenta-dotnet)
+|	rafaspimenta-dotnet	|	4.9429496399999975ms	|	0.12114100720000005	|	0	|	353141.664000151	|	[rafaspimenta-dotnet](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/rafaspimenta-dotnet)
 |	ricardovhz	|	59.49709704999997ms	|	0	|	99968.64499999997	|	185656.055	|	[ricardovhz](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/ricardovhz)
 |	ricassiocosta-python	|	1073.90891388ms	|	0	|	66852.50774999322	|	124154.65724998743	|	[ricassiocosta-python](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/ricassiocosta-python)
 |	robertAlmeida	|	20.967730459999995ms	|	0	|	98177.94350000001	|	182330.46650000004	|	[robertAlmeida](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/robertAlmeida)
