@@ -1,10 +1,11 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Wed Jul 23 01:43:42 PM -03 2025**
-94 submissões / 76 resultados / 18 submissões com erro
+Atualizado em **Wed Jul 23 01:50:52 PM -03 2025**
+95 submissões / 77 resultados / 18 submissões com erro
 
 
 | participante | p99 | bônus por desempenho (%) | multa ($) | lucro | submissão |
 | -- | -- | -- | -- | -- | -- |
+|	adriano-moreira	|	370.1160417199992ms	|	0	|	105941.829	|	196749.111	|	[adriano-moreira](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/adriano-moreira)
 |	adrianosilva-go	|	80.56373031999999ms	|	0	|	0	|	300454.18	|	[adrianosilva-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/adrianosilva-go)
 |	alan-silva	|	6.349996999999922ms	|	0.09300006000000156	|	0	|	345922.06425431685	|	[alan-silva](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/alan-silva)
 |	alexroza-rs	|	1003.7500193000001ms	|	0	|	0	|	0	|	[alexroza-rs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/alexroza-rs)
