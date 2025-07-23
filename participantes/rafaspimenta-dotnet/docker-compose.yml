@@ -27,14 +27,6 @@ services:
   api02:
     <<: *api
     hostname: api02
-    
-  api03:
-    <<: *api
-    hostname: api03
-    
-  api04:
-    <<: *api
-    hostname: api04
 
   nginx:
     image: nginx:latest
