@@ -1,5 +1,5 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Wed Jul 23 12:27:43 PM -03 2025**
+Atualizado em **Wed Jul 23 12:35:00 PM -03 2025**
 94 submissões / 76 resultados / 18 submissões com erro
 
 
@@ -66,7 +66,7 @@ Atualizado em **Wed Jul 23 12:27:43 PM -03 2025**
 |	rodrigocaldeira-elixir	|	5.370745519999986ms	|	0.11258508960000028	|	0	|	343988.3181334435	|	[rodrigocaldeira-elixir](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/rodrigocaldeira-elixir)
 |	rodrigo-schonardt-go	|	9.53884647000011ms	|	0.029223070599997812	|	0	|	131746.47621557102	|	[rodrigo-schonardt-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/rodrigo-schonardt-go)
 |	ryangst-bun	|	1259.6145583200148ms	|	0	|	0	|	0	|	[ryangst-bun](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/ryangst-bun)
-|	samypng-go	|	4.967033849999992ms	|	0.12065932300000017	|	73977.70274998921	|	162890.30376686272	|	[samypng-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/samypng-go)
+|	samypng-go	|	3.9369521199999937ms	|	0.14126095760000013	|	73959.94199998923	|	167204.612945577	|	[samypng-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/samypng-go)
 |	santannaf	|	37.6219894ms	|	0	|	0	|	315524.45	|	[santannaf](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/santannaf)
 |	silvaangelo	|	30.504041360000006ms	|	0	|	110559.624	|	205325.016	|	[silvaangelo](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/silvaangelo)
 |	suricat89-solucao1	|	3.272489899999993ms	|	0.15455020200000014	|	107528.10775000001	|	247176.45945982938	|	[suricat89-solucao1](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/suricat89-solucao1)
