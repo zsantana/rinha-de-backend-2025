@@ -1,5 +1,5 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Wed Jul 23 04:16:20 PM -03 2025**
+Atualizado em **Wed Jul 23 04:23:48 PM -03 2025**
 95 submissões / 77 resultados / 18 submissões com erro
 
 
@@ -71,7 +71,7 @@ Atualizado em **Wed Jul 23 04:16:20 PM -03 2025**
 |	santannaf	|	37.6219894ms	|	0	|	0	|	315524.45	|	[santannaf](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/santannaf)
 |	silvaangelo	|	30.504041360000006ms	|	0	|	110559.624	|	205325.016	|	[silvaangelo](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/silvaangelo)
 |	suricat89-solucao1	|	3.272489899999993ms	|	0.15455020200000014	|	107528.10775000001	|	247176.45945982938	|	[suricat89-solucao1](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/suricat89-solucao1)
-|	vctrhugo-fastapi	|	704.59533661ms	|	0	|	59268.6675	|	110070.3825	|	[vctrhugo-fastapi](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/vctrhugo-fastapi)
+|	vctrhugo-fastapi	|	1212.8720336500003ms	|	0	|	78755.3445	|	146259.9255	|	[vctrhugo-fastapi](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/vctrhugo-fastapi)
 |	victorverdoodt-cs	|	88.6388849200001ms	|	0	|	0	|	310643.975	|	[victorverdoodt-cs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/victorverdoodt-cs)
 |	victorverdoodt-cs-redis	|	76.91649010000015ms	|	0	|	0	|	312384.23000000004	|	[victorverdoodt-cs-redis](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/victorverdoodt-cs-redis)
 |	wanderdotnet	|	16.950205439999973ms	|	0	|	47855.12199999999	|	88873.798	|	[wanderdotnet](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/wanderdotnet)
