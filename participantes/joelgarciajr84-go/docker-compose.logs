@@ -1,84 +1,53 @@
 
- rinha_1 Pulling 
  rinha_2 Pulling 
- 01d036902a3c Pulling fs layer 
- 4f4fb700ef54 Pulling fs layer 
- d7061be2bbf9 Pulling fs layer 
- 01d036902a3c Pulling fs layer 
- 4f4fb700ef54 Pulling fs layer 
- d7061be2bbf9 Pulling fs layer 
- 01d036902a3c Downloading [>                                                  ]   36.3kB/3.62MB
- 01d036902a3c Downloading [>                                                  ]   36.3kB/3.62MB
- 4f4fb700ef54 Downloading [==================================================>]      32B/32B
- 4f4fb700ef54 Verifying Checksum 
- 4f4fb700ef54 Download complete 
- 4f4fb700ef54 Verifying Checksum 
- 4f4fb700ef54 Download complete 
- 01d036902a3c Verifying Checksum 
- 01d036902a3c Download complete 
- 01d036902a3c Download complete 
- 01d036902a3c Extracting [>                                                  ]  65.54kB/3.62MB
- 01d036902a3c Extracting [>                                                  ]  65.54kB/3.62MB
- 01d036902a3c Extracting [==================================================>]   3.62MB/3.62MB
- 01d036902a3c Extracting [==================================================>]   3.62MB/3.62MB
- 01d036902a3c Pull complete 
- 01d036902a3c Pull complete 
- 4f4fb700ef54 Extracting [==================================================>]      32B/32B
- 4f4fb700ef54 Extracting [==================================================>]      32B/32B
- 4f4fb700ef54 Extracting [==================================================>]      32B/32B
- 4f4fb700ef54 Extracting [==================================================>]      32B/32B
- 4f4fb700ef54 Pull complete 
- 4f4fb700ef54 Pull complete 
- d7061be2bbf9 Downloading [>                                                  ]  90.91kB/8.899MB
- d7061be2bbf9 Downloading [>                                                  ]  90.91kB/8.899MB
- d7061be2bbf9 Downloading [=============================================>     ]  8.081MB/8.899MB
- d7061be2bbf9 Downloading [=============================================>     ]  8.081MB/8.899MB
- d7061be2bbf9 Verifying Checksum 
- d7061be2bbf9 Download complete 
- d7061be2bbf9 Download complete 
- d7061be2bbf9 Extracting [>                                                  ]   98.3kB/8.899MB
- d7061be2bbf9 Extracting [>                                                  ]   98.3kB/8.899MB
- d7061be2bbf9 Extracting [=========================================>         ]  7.471MB/8.899MB
- d7061be2bbf9 Extracting [=========================================>         ]  7.471MB/8.899MB
- d7061be2bbf9 Extracting [==================================================>]  8.899MB/8.899MB
- d7061be2bbf9 Extracting [==================================================>]  8.899MB/8.899MB
- d7061be2bbf9 Pull complete 
- d7061be2bbf9 Pull complete 
+ rinha_1 Pulling 
+ 01d036902a3c Already exists 
+ 4f4fb700ef54 Already exists 
+ 01d036902a3c Already exists 
+ fa4e89e0f81c Pulling fs layer 
+ 4f4fb700ef54 Already exists 
+ fa4e89e0f81c Pulling fs layer 
+ fa4e89e0f81c Downloading [>                                                  ]  90.11kB/8.902MB
+ fa4e89e0f81c Downloading [>                                                  ]  90.11kB/8.902MB
+ fa4e89e0f81c Downloading [==============================================>    ]    8.2MB/8.902MB
+ fa4e89e0f81c Downloading [==============================================>    ]    8.2MB/8.902MB
+ fa4e89e0f81c Verifying Checksum 
+ fa4e89e0f81c Verifying Checksum 
+ fa4e89e0f81c Download complete 
+ fa4e89e0f81c Download complete 
+ fa4e89e0f81c Extracting [>                                                  ]   98.3kB/8.902MB
+ fa4e89e0f81c Extracting [>                                                  ]   98.3kB/8.902MB
+ fa4e89e0f81c Extracting [=============================================>     ]  8.061MB/8.902MB
+ fa4e89e0f81c Extracting [=============================================>     ]  8.061MB/8.902MB
+ fa4e89e0f81c Extracting [==================================================>]  8.902MB/8.902MB
+ fa4e89e0f81c Extracting [==================================================>]  8.902MB/8.902MB
+ fa4e89e0f81c Pull complete 
+ fa4e89e0f81c Pull complete 
  rinha_1 Pulled 
  rinha_2 Pulled 
  Network joelgarciajr84-go_backend  Creating
  Network joelgarciajr84-go_backend  Created
  Container joelgarciajr84-go-redis-1  Creating
  Container joelgarciajr84-go-redis-1  Created
- Container joelgarciajr84-go-rinha_2-1  Creating
  Container joelgarciajr84-go-rinha_1-1  Creating
- Container joelgarciajr84-go-rinha_2-1  Created
+ Container joelgarciajr84-go-rinha_2-1  Creating
  Container joelgarciajr84-go-rinha_1-1  Created
+ Container joelgarciajr84-go-rinha_2-1  Created
  Container joelgarciajr84-go-nginx-1  Creating
  Container joelgarciajr84-go-nginx-1  Created
 Attaching to nginx-1, redis-1, rinha_1-1, rinha_2-1
-redis-1    | 1:C 18 Jul 2025 04:00:37.182 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
-redis-1    | 1:C 18 Jul 2025 04:00:37.182 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
-redis-1    | 1:C 18 Jul 2025 04:00:37.182 * Redis version=7.4.5, bits=64, commit=00000000, modified=0, pid=1, just started
-redis-1    | 1:C 18 Jul 2025 04:00:37.182 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf
-redis-1    | 1:M 18 Jul 2025 04:00:37.182 * monotonic clock: POSIX clock_gettime
-redis-1    | 1:M 18 Jul 2025 04:00:37.182 * Running mode=standalone, port=6379.
-redis-1    | 1:M 18 Jul 2025 04:00:37.183 * Server initialized
-redis-1    | 1:M 18 Jul 2025 04:00:37.183 * Ready to accept connections tcp
-rinha_1-1  | 2025/07/18 04:00:37 INFO 
-rinha_1-1  | ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⣶⣶⣶⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-rinha_1-1  | ⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⣿⠟⠋⠙⠻⣿⣿⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀
-rinha_1-1  | ⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⡇⠀🐔⠀ ⢸⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀
-rinha_1-1  | ⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⣿⣄⣀⣤⣾⣿⠟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-rinha_1-1  | ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠛⠛⠋⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-rinha_1-1  | 
-rinha_1-1  | 💥 RINHA DE BACKEND 2025 💥
-rinha_1-1  | 🥊 Lutador: Golang Beast v1
-rinha_1-1  | 🧠 Estratégia: Fallback, retry e muita mutexada
-rinha_1-1  | 📡 Arena aberta na porta 9999
-rinha_1-1  | 
-rinha_1-1  | 👉 Que comece o massacre dos milisegundos!
-rinha_1-1  | 2025/07/18 04:00:37 INFO server running port=9999
+redis-1    | 1:C 22 Jul 2025 20:47:00.983 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+redis-1    | 1:C 22 Jul 2025 20:47:00.983 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+redis-1    | 1:C 22 Jul 2025 20:47:00.983 * Redis version=7.4.5, bits=64, commit=00000000, modified=0, pid=1, just started
+redis-1    | 1:C 22 Jul 2025 20:47:00.983 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf
+redis-1    | 1:M 22 Jul 2025 20:47:00.984 * monotonic clock: POSIX clock_gettime
+redis-1    | 1:M 22 Jul 2025 20:47:00.985 * Running mode=standalone, port=6379.
+redis-1    | 1:M 22 Jul 2025 20:47:00.985 * Server initialized
+redis-1    | 1:M 22 Jul 2025 20:47:00.985 * Ready to accept connections tcp
+rinha_1-1  | 2025/07/22 20:47:01 INFO STARTING RINHA BACKEND
+rinha_1-1  | 2025/07/22 20:47:01 INFO Connecting to Redis addr=redis:6379
+rinha_1-1  | 2025/07/22 20:47:01 INFO Creating PaymentProcessorAdapter defaultUrl=http://payment-processor-default:8080 fallbackUrl=http://payment-processor-fallback:8080
+rinha_1-1  | 2025/07/22 20:47:01 INFO Starting server port=9999
 rinha_1-1  | 
 rinha_1-1  |  ┌───────────────────────────────────────────────────┐ 
 rinha_1-1  |  │                   Fiber v2.52.8                   │ 
@@ -89,20 +58,10 @@ rinha_1-1  |  │ Handlers ............. 4  Processes ........... 1 │
 rinha_1-1  |  │ Prefork ....... Disabled  PID ................. 7 │ 
 rinha_1-1  |  └───────────────────────────────────────────────────┘ 
 rinha_1-1  | 
-rinha_2-1  | 2025/07/18 04:00:37 INFO 
-rinha_2-1  | ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⣶⣶⣶⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-rinha_2-1  | ⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⣿⠟⠋⠙⠻⣿⣿⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀
-rinha_2-1  | ⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⡇⠀🐔⠀ ⢸⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀
-rinha_2-1  | ⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⣿⣄⣀⣤⣾⣿⠟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-rinha_2-1  | ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠛⠛⠋⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-rinha_2-1  | 
-rinha_2-1  | 💥 RINHA DE BACKEND 2025 💥
-rinha_2-1  | 🥊 Lutador: Golang Beast v1
-rinha_2-1  | 🧠 Estratégia: Fallback, retry e muita mutexada
-rinha_2-1  | 📡 Arena aberta na porta 9999
-rinha_2-1  | 
-rinha_2-1  | 👉 Que comece o massacre dos milisegundos!
-rinha_2-1  | 2025/07/18 04:00:37 INFO server running port=9999
+rinha_2-1  | 2025/07/22 20:47:01 INFO STARTING RINHA BACKEND
+rinha_2-1  | 2025/07/22 20:47:01 INFO Connecting to Redis addr=redis:6379
+rinha_2-1  | 2025/07/22 20:47:01 INFO Creating PaymentProcessorAdapter defaultUrl=http://payment-processor-default:8080 fallbackUrl=http://payment-processor-fallback:8080
+rinha_2-1  | 2025/07/22 20:47:01 INFO Starting server port=9999
 rinha_2-1  | 
 rinha_2-1  |  ┌───────────────────────────────────────────────────┐ 
 rinha_2-1  |  │                   Fiber v2.52.8                   │ 
@@ -122,18 +81,27 @@ nginx-1    | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resol
 nginx-1    | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
 nginx-1    | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
 nginx-1    | /docker-entrypoint.sh: Configuration complete; ready for start up
-redis-1    | 1:M 18 Jul 2025 04:01:38.012 * 10000 changes in 60 seconds. Saving...
-redis-1    | 1:M 18 Jul 2025 04:01:38.013 * Background saving started by pid 85
-redis-1    | 85:C 18 Jul 2025 04:01:38.087 * DB saved on disk
-redis-1    | 85:C 18 Jul 2025 04:01:38.087 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
-redis-1    | 1:M 18 Jul 2025 04:01:38.114 * Background saving terminated with success
+rinha_1-1  | 2025/07/22 20:47:05 INFO Fetching payment summary method=GET path=/payments-summary
+rinha_2-1  | 2025/07/22 20:47:11 INFO Purging payments method=POST path=/purge-payments
+rinha_1-1  | 2025/07/22 20:47:11 INFO Fetching payment summary method=GET path=/payments-summary
+rinha_2-1  | 2025/07/22 20:47:21 INFO Fetching payment summary method=GET path=/payments-summary
+rinha_2-1  | 2025/07/22 20:47:31 INFO Fetching payment summary method=GET path=/payments-summary
+rinha_1-1  | 2025/07/22 20:47:41 INFO Fetching payment summary method=GET path=/payments-summary
+rinha_2-1  | 2025/07/22 20:47:51 INFO Fetching payment summary method=GET path=/payments-summary
+redis-1    | 1:M 22 Jul 2025 20:48:01.010 * 10000 changes in 60 seconds. Saving...
+redis-1    | 1:M 22 Jul 2025 20:48:01.010 * Background saving started by pid 88
+redis-1    | 88:C 22 Jul 2025 20:48:01.087 * DB saved on disk
+redis-1    | 88:C 22 Jul 2025 20:48:01.087 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+redis-1    | 1:M 22 Jul 2025 20:48:01.182 * Background saving terminated with success
+rinha_2-1  | 2025/07/22 20:48:01 INFO Fetching payment summary method=GET path=/payments-summary
+rinha_1-1  | 2025/07/22 20:48:12 INFO Fetching payment summary method=GET path=/payments-summary
 [Knginx-1 exited with code 0
-[Krinha_1-1 exited with code 143
 [Krinha_2-1 exited with code 143
-redis-1    | 1:signal-handler (1752811310) Received SIGTERM scheduling shutdown...
-redis-1    | 1:M 18 Jul 2025 04:01:50.430 * User requested shutdown...
-redis-1    | 1:M 18 Jul 2025 04:01:50.430 * Saving the final RDB snapshot before exiting.
-redis-1    | 1:M 18 Jul 2025 04:01:50.583 * DB saved on disk
-redis-1    | 1:M 18 Jul 2025 04:01:50.583 # Redis is now ready to exit, bye bye...
+[Krinha_1-1 exited with code 143
+redis-1    | 1:signal-handler (1753217294) Received SIGTERM scheduling shutdown...
+redis-1    | 1:M 22 Jul 2025 20:48:14.784 * User requested shutdown...
+redis-1    | 1:M 22 Jul 2025 20:48:14.784 * Saving the final RDB snapshot before exiting.
+redis-1    | 1:M 22 Jul 2025 20:48:14.882 * DB saved on disk
+redis-1    | 1:M 22 Jul 2025 20:48:14.882 # Redis is now ready to exit, bye bye...
 [Kredis-1 exited with code 0
 log truncated at line 1000
