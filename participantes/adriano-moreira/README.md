@@ -2,7 +2,7 @@ Quarkus
 Java 21 grallvm
 Virtual-Threads
 
-cada instancia backend com apenas 64mb
+cada instancia backend com apenas 96mb
 
 Persistencia Postgres
 
