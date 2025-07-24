@@ -1,3 +1,30 @@
+x-api-template: &api-template
+    image: adrianomoreira86/rinha-de-backend-2025-java-quarkus:latest
+    networks:
+      - app
+      - payment-processor
+    depends_on:
+      postgres:
+        condition: service_healthy
+    deploy:
+      resources:
+        limits:
+          cpus: "0.6"
+          memory: "96MB"
+    environment:
+      quarkus.datasource.db-kind: postgresql
+      quarkus.datasource.username: admin
+      quarkus.datasource.password: 123
+      quarkus.datasource.jdbc.url: jdbc:postgresql://postgres:5432/rinha
+      quarkus.datasource.jdbc.max-size: 24
+      quarkus.rest-client.processor-default.url: http://payment-processor-default:8080/
+      quarkus.rest-client.processor-default.read-timeout: 3000
+      quarkus.rest-client.processor-default.connect-timeout: 100
+      quarkus.rest-client.processor-fallback.url: http://payment-processor-default:8080/
+      quarkus.rest-client.processor-fallback.read-timeout: 3000
+      quarkus.rest-client.processor-fallback.connect-timeout: 100
+      quarkus.log.level: INFO
+
 services:
   nginx:
     image: nginx:latest
@@ -14,35 +41,12 @@ services:
       resources:
         limits:
           cpus: "0.1"
-          memory: "32MB"
+          memory: "30MB"
 
   quarkus-backend-1:
-    image: adrianomoreira86/rinha-de-backend-2025-java-quarkus:latest
-    networks:
-      - app
-      - payment-processor
-    depends_on:
-      postgres:
-        condition: service_healthy
-    deploy:
-      resources:
-        limits:
-          cpus: "0.6"
-          memory: "64MB"
+    <<: *api-template
   quarkus-backend-2:
-    image: adrianomoreira86/rinha-de-backend-2025-java-quarkus:latest
-    networks:
-      - app
-      - payment-processor
-    depends_on:
-      postgres:
-        condition: service_healthy
-    deploy:
-      resources:
-        limits:
-          cpus: "0.6"
-          memory: "64MB"
-
+    <<: *api-template
 
   postgres:
     image: postgres:17
