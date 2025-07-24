@@ -1,12 +1,10 @@
 services:
   api1: &api-service
-    image: eber404/dudebank:latest
+    image: eber404/dudebank:0.0.1
     env_file:
       - .env
-    environment:
-      - IS_MAIN_INSTANCE=true
     ports:
-      - "3001:8080"
+      - '3001:8080'
     networks:
       - backend
       - payment-processor
@@ -17,27 +15,27 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.6"
-          memory: "120MB"
+          cpus: '0.6'
+          memory: '120MB'
 
   api2:
     <<: *api-service
     ports:
-      - "3002:8080"
+      - '3002:8080'
 
   memorydb:
-    image: eber404/dudebank-db:latest
+    image: eber404/dudebank-db:0.0.1
     volumes:
       - memorydb_data:/app/data
     networks:
       - backend
     ports:
-      - "8081:8081"
+      - '8081:8081'
     deploy:
       resources:
         limits:
-          cpus: "0.2"
-          memory: "90MB"
+          cpus: '0.2'
+          memory: '90MB'
 
   nginx:
     image: nginx:alpine
@@ -51,12 +49,12 @@ services:
     networks:
       - backend
     ports:
-      - "9999:80"
+      - '9999:80'
     deploy:
       resources:
         limits:
-          cpus: "0.1"
-          memory: "20MB"
+          cpus: '0.1'
+          memory: '20MB'
 
 networks:
   backend:
