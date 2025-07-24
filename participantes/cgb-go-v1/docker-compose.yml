@@ -1,0 +1,69 @@
+# Rinha v1 - Solução para Rinha de Backend 2025
+# Arquitetura: API monolítica + Redis + Payment Processors
+# Performance: p99=10.14ms
+
+version: '3.8'
+
+services:
+  # Storage Redis otimizado para cache e persistência
+  rinha-redis:
+    image: redis:8.0.3-alpine
+    container_name: rinha-v1-redis
+    restart: always
+    command: >
+      redis-server
+      --save ""
+      --appendonly no
+      --maxclients 15000
+      --tcp-keepalive 60
+      --timeout 300
+    networks:
+      - rinha-network
+      - payment-processor
+    ports:
+      - "6379:6379"
+    deploy:
+      resources:
+        limits:
+          cpus: "0.25"
+          memory: "70MB"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 3
+
+  # API monolítica otimizada
+  rinha-v1-api:
+    image: cicerocg/rinha-v1:latest
+    container_name: rinha-v1-api
+    ports:
+      - "9999:8080"  # Expor diretamente na porta 9999
+    networks:
+      - rinha-network
+      - payment-processor
+    depends_on:
+      rinha-redis:
+        condition: service_healthy
+    environment:
+      - REDIS_URL=rinha-redis:6379
+      - GOMAXPROCS=2
+      - GOGC=200      # GC mais agressivo para baixa latência
+    deploy:
+      resources:
+        limits:
+          cpus: "1.0"   # CPU otimizada para arquitetura monolítica
+          memory: "280MB"  # Memória otimizada para máxima performance
+      restart_policy:
+        condition: on-failure
+        delay: 3s
+        max_attempts: 5
+
+# Redes
+networks:
+  rinha-network:
+    driver: bridge
+    name: rinha-v1-network
+  payment-processor:
+    external: true
+    name: payment-processor
