@@ -1,5 +1,5 @@
 x-api-template: &api-template
-    image: adrianomoreira86/rinha-de-backend-2025-java-quarkus:latest
+    image: adrianomoreira86/rinha-de-backend-2025-java-quarkus:v2
     networks:
       - app
       - payment-processor
@@ -18,11 +18,11 @@ x-api-template: &api-template
       quarkus.datasource.jdbc.url: jdbc:postgresql://postgres:5432/rinha
       quarkus.datasource.jdbc.max-size: 24
       quarkus.rest-client.processor-default.url: http://payment-processor-default:8080/
-      quarkus.rest-client.processor-default.read-timeout: 3000
-      quarkus.rest-client.processor-default.connect-timeout: 100
+      quarkus.rest-client.processor-default.read-timeout: 12000
+      quarkus.rest-client.processor-default.connect-timeout: 1000
       quarkus.rest-client.processor-fallback.url: http://payment-processor-default:8080/
-      quarkus.rest-client.processor-fallback.read-timeout: 3000
-      quarkus.rest-client.processor-fallback.connect-timeout: 100
+      quarkus.rest-client.processor-fallback.read-timeout: 12000
+      quarkus.rest-client.processor-fallback.connect-timeout: 1000
       quarkus.log.level: INFO
 
 services:
