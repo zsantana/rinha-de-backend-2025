@@ -18,6 +18,11 @@ services:
         limits:
           cpus: "0.35"
           memory: "60MB"
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
 
   api-2:
     image: guilhermegules/rinha-node:latest
@@ -38,6 +43,11 @@ services:
         limits:
           cpus: "0.35"
           memory: "60MB"
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
 
   worker:
     image: guilhermegules/rinha-node:latest
@@ -57,10 +67,20 @@ services:
         limits:
           cpus: "0.3"
           memory: "70MB"
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
 
   redis:
     image: redis:7-alpine
     container_name: redis
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
     networks:
       - backend
     deploy:
@@ -76,6 +96,11 @@ services:
       POSTGRES_DB: rinha
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
     networks:
       - backend
     volumes:
