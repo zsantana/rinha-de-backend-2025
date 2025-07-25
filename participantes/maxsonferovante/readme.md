@@ -12,7 +12,7 @@
 #### Arquitetura
 
 ```
-[Nginx] → [App-1 + App-2] → [Redis Queue] → [Async Worker] → [Payment Processors]
+[Nginx] → [App-1 + App-2] → [Redis Queue] → [Async Worker + Async Worker] → [Payment Processors Default + Fallback]
 ```
 
 #### Repositórios
