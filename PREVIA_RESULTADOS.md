@@ -1,6 +1,6 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Fri Jul 25 03:19:44 PM -03 2025**
-108 submissões / 88 resultados / 20 submissões com erro
+Atualizado em **Fri Jul 25 03:26:55 PM -03 2025**
+107 submissões / 88 resultados / 19 submissões com erro
 
 
 | participante | p99 | bônus por desempenho (%) | multa ($) | lucro | submissão |
@@ -76,7 +76,7 @@ Atualizado em **Fri Jul 25 03:19:44 PM -03 2025**
 |	rodrigo-schonardt-go	|	9.53884647000011ms	|	0.029223070599997812	|	0	|	131746.47621557102	|	[rodrigo-schonardt-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/rodrigo-schonardt-go)
 |	ryangst-bun	|	1259.6145583200148ms	|	0	|	0	|	0	|	[ryangst-bun](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/ryangst-bun)
 |	samypng-go	|	7.879218400000021ms	|	0.062415631999999575	|	0	|	331235.998870887	|	[samypng-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/samypng-go)
-|	santannaf	|	12.258623129999872ms	|	0	|	110453.40775000001	|	205127.75725000002	|	[santannaf](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/santannaf)
+|	santannaf	|	11.851327600000026ms	|	0	|	110446.791	|	205115.469	|	[santannaf](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/santannaf)
 |	silvaangelo	|	65.4931149599999ms	|	0	|	110294.954	|	204833.486	|	[silvaangelo](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/silvaangelo)
 |	suricat89-solucao1	|	3.272489899999993ms	|	0.15455020200000014	|	107528.10775000001	|	247176.45945982938	|	[suricat89-solucao1](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/suricat89-solucao1)
 |	svaan1-go	|	3.4275543599999936ms	|	0.15144891280000014	|	0	|	244717.44895187314	|	[svaan1-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/svaan1-go)
@@ -98,7 +98,6 @@ Atualizado em **Fri Jul 25 03:19:44 PM -03 2025**
 
 | participante | submissão |
 | -- | -- |
-| adrianosilva-go | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/adrianosilva-go) |
 | andre-nicoletti | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/andre-nicoletti) |
 | antooniodev-node | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/antooniodev-node) |
 | boaglio-player456 | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/boaglio-player456) |
