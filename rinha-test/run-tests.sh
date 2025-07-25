@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+export GIT_EDITOR=true
+
 startContainers() {
     pushd ../payment-processor > /dev/null
         docker compose up --build -d 1> /dev/null 2>&1
