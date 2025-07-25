@@ -5,4 +5,4 @@ Sistema de intermediação de pagamentos desenvolvido em Go.
 
 ## 📝 Repositório
 
-**Código fonte**: https://github.com/cicerogb/cgb-go-v1
+**Código fonte**: https://github.com/cicerogb/cgb-go-v1-source
