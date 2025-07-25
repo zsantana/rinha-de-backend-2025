@@ -1,8 +1,9 @@
 services:
   app1: &app
-    image: ricardo2010/payment-app:v4
+    image: ricardo2010/payment-app:v6
     container_name: app1
     networks:
+      - backend
       - payment-processor
     environment:
       - MIX_ENV=prod
@@ -26,7 +27,7 @@ services:
       resources:
         limits:
           cpus: "0.60"
-          memory: "150M"
+          memory: "170M"
 
   app2:
     <<: *app
@@ -54,25 +55,38 @@ services:
       resources:
         limits:
           cpus: "0.60"
-          memory: "150M"
+          memory: "165M"
 
-  nginx:
-    image: nginx:1.29.0-alpine
-    volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf:ro
-    ports:
-      - 9999:9999
+  haproxy:
+    image: haproxy:3.1.7
     depends_on:
-      - app1
-      - app2
+      app1:
+        condition: service_healthy
+      app2:
+        condition: service_healthy
     networks:
-      - payment-processor
+      - backend
+    ports:
+      - "9999:9999"
+    healthcheck:
+      test: |
+        bash -c 'exec 3<>/dev/tcp/127.0.0.1/9797; echo -e "GET / HTTP/1.1\nConnection: close\n" >&3; cat <&3 | grep -q "200 OK"'
+      interval: 15s
+      timeout: 15s
+      start_period: 30s
+      start_interval: 1s
+      retries: 3
+    restart: always
     deploy:
       resources:
         limits:
-          cpus: "0.30"
-          memory: "50MB"
+          cpus: "0.3"
+          memory: "15MB"
+    volumes:
+      - ./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg
 
 networks:
+  backend:
+    driver: bridge
   payment-processor:
     external: true
