@@ -1,5 +1,5 @@
 x-server-template: &server-template
-  image: francogm/rinhabackend-2025:2.1
+  image: francogm/rinhabackend-2025:2.2.0
   environment:
     - PAYMENT_WORKERS_COUNT=20
     - PAYMENT_WORKERS_EVENTS_BUFFER_SIZE=20000
@@ -58,11 +58,9 @@ services:
           memory: 60M
 
   cache:
-    image: redis:latest
-    environment:
-      - REDIS_PASSWORD=password
+    image: redis:7-alpine
     healthcheck:
-      test: ["CMD", "redis-cli", "-a", "password", "ping"]
+      test: ["CMD", "redis-cli", "-a", "ping"]
       interval: 5s
       timeout: 3s
       retries: 5
@@ -72,9 +70,16 @@ services:
     ports:
       - "6379:6379"
     volumes:
+      - ./redis.conf:/usr/local/etc/redis/redis.conf:ro
       - cache-data:/data
     networks:
       - backend
+    sysctls:
+      - net.core.somaxconn=8192
+    ulimits:
+      nofile:
+        soft: 65535
+        hard: 65535
     deploy:
       resources:
         limits:
