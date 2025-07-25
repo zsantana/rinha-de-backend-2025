@@ -97,7 +97,7 @@ services:
       - QUEUE_RECEIVE_TIMEOUT_SECS=60
       - POLL_SLEEP_MILLIS=10
       - ERROR_SLEEP_MILLIS=10
-      - PROCESS_SLEEP_MILLIS=8
+      - PROCESS_SLEEP_MILLIS=2
       # Health Checker Config (usado pelo payment-worker)
       - HEALTH_CHECK_CYCLE_INTERVAL_SECS=1
       - HTTP_TIMEOUT_SECS=10
