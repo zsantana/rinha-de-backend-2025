@@ -1,6 +1,6 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Fri Jul 25 11:56:50 AM -03 2025**
-105 submissões / 85 resultados / 20 submissões com erro
+Atualizado em **Fri Jul 25 12:06:50 PM -03 2025**
+108 submissões / 88 resultados / 20 submissões com erro
 
 
 | participante | p99 | bônus por desempenho (%) | multa ($) | lucro | submissão |
@@ -24,10 +24,13 @@ Atualizado em **Fri Jul 25 11:56:50 AM -03 2025**
 |	davigga-node	|	168.14674859999928ms	|	0	|	105574.077	|	196066.14300000004	|	[davigga-node](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/davigga-node)
 |	diegodario-go	|	4.017952299999927ms	|	0.13964095400000145	|	0	|	355522.8022805839	|	[diegodario-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/diegodario-go)
 |	dolphs	|	121.47635015000006ms	|	0	|	107383.93224999204	|	199427.30274998525	|	[dolphs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/dolphs)
+|	dudebank-bun	|	23.3003006200002ms	|	0	|	109108.46624999998	|	202630.00874999998	|	[dudebank-bun](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/dudebank-bun)
 |	emiliosheinz-go	|	13.575562099999978ms	|	0	|	0	|	229749.48	|	[emiliosheinz-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/emiliosheinz-go)
 |	felipemcassiano	|	87.97430029999951ms	|	0	|	0	|	0	|	[felipemcassiano](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/felipemcassiano)
+|	felipeschirmann	|	2.482061ms	|	0.17035878000000002	|	0	|	0	|	[felipeschirmann](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/felipeschirmann)
 |	fhgm-dani-ed	|	58.157652639999995ms	|	0	|	0	|	290138.02	|	[fhgm-dani-ed](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/fhgm-dani-ed)
 |	francoggm-go	|	11.692093560000075ms	|	0	|	0	|	309105.70499999996	|	[francoggm-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/francoggm-go)
+|	gabxdev-java-1	|	9.377176910000008ms	|	0.032456461799999836	|	0	|	326105.29163180245	|	[gabxdev-java-1](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/gabxdev-java-1)
 |	gabxdev-java-2	|	2.6663049ms	|	0.166673902	|	0	|	368756.0860723709	|	[gabxdev-java-2](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/gabxdev-java-2)
 |	gaoliveira21	|	6.4095455700000015ms	|	0.09180908859999998	|	0	|	186261.2329995266	|	[gaoliveira21](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/gaoliveira21)
 |	gtiburcio-go	|	3.5941612699999808ms	|	0.1481167746000004	|	110823.94575000968	|	252715.57180126617	|	[gtiburcio-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/gtiburcio-go)
