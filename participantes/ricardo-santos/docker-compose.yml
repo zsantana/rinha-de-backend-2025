@@ -1,11 +1,12 @@
 services:
   app1: &app
-    image: ricardo2010/payment-app:v3
+    image: ricardo2010/payment-app:v4
     container_name: app1
     networks:
       - payment-processor
     environment:
       - MIX_ENV=prod
+      - ERL_FLAGS=+S 1 +SDcpu 1 +sbwtdcpu none +sbwtdio none
       - RELEASE_COOKIE=secret_cookie
       - RELEASE_NODE=api1@app1
       - PEER_NODES=api2@app2
@@ -24,15 +25,16 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.50"
+          cpus: "0.60"
           memory: "150M"
 
   app2:
     <<: *app
-    image: ricardo2010/payment-app:v3
+    image: ricardo2010/payment-app:v4
     container_name: app2
     environment:
       - MIX_ENV=prod
+      - ERL_FLAGS=+S 1 +SDcpu 1 +sbwtdcpu none +sbwtdio none
       - RELEASE_COOKIE=secret_cookie
       - RELEASE_NODE=api2@app2
       - PEER_NODES=api1@app1
@@ -51,7 +53,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.50"
+          cpus: "0.60"
           memory: "150M"
 
   nginx:
@@ -68,7 +70,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.50"
+          cpus: "0.30"
           memory: "50MB"
 
 networks:
