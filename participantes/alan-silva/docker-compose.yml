@@ -14,7 +14,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.2"
+          cpus: "0.3"
           memory: "50MB"
 
   rinha-gateway-1:
@@ -28,11 +28,11 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.6"
+          cpus: "0.5"
           memory: "125MB"
 
   rinha-gateway-2:
-    image: ghcr.io/alan-venv/rinha-gateway:4.2
+    image: ghcr.io/alan-venv/rinha-gateway:5.0
     container_name: rinha-gateway-2
     networks:
       - backend
@@ -42,11 +42,11 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.6"
+          cpus: "0.5"
           memory: "125MB"
 
   rinha-db:
-    image: ghcr.io/alan-venv/rinha-database:2.0
+    image: ghcr.io/alan-venv/rinha-database:5.0
     container_name: rinha-db
     networks:
       - backend
@@ -54,7 +54,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.1"
+          cpus: "0.2"
           memory: "50MB"
 
 networks:
