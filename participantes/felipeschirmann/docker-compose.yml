@@ -1,58 +1,25 @@
 services:
   api:
-    image: felipeschirmann/rinha-backend-2025:latest
-
+    image: felipeschirmann/rinha-backend-2025:3.0.0
+    container_name: felipeschirmann-rinha-v3
     environment:
-      # URLs for the external payment processors, accessible via the Docker network.
-      - DEFAULT_PROCESSOR_URL=http://payment-processor-default:8080
-      - FALLBACK_PROCESSOR_URL=http://payment-processor-fallback:8080
-
-      # ===============================================================
-      #                      PERFORMANCE TUNING PARAMETERS
-      # ===============================================================
-      # These values override the defaults set in application.properties.
-
-      # --- HTTP Client: Timeouts (tuned for fail-fast behavior) ---
-      - app.http-client.connect-timeout-ms=${APP_CONNECT_TIMEOUT_MS:-250}
-      - app.http-client.response-timeout-ms=${APP_RESPONSE_TIMEOUT_MS:-650}
-
-      # --- HTTP Client: Connection Pool ---
-      - app.http-client.pool.max-total=${APP_POOL_MAX_TOTAL:-200}
-      - app.http-client.pool.max-per-route=${APP_POOL_MAX_PER_ROUTE:-100}
-
-      # --- Queue ---
-      - app.queue.capacity=${APP_QUEUE_CAPACITY:-7500}
-      - app.queue.drain-timeout-ms=${APP_DRAIN_TIMEOUT_MS:-1200}
-      - app.queue.contention-threshold-percent=90
-      - app.payment.high-value-threshold=100.00
-
-      # ===================================================================
-      #                  TOMCAT PERFORMANCE TUNING
-      # ===================================================================
-      # Increases the size of the connection queue.
-      - server.tomcat.accept-count=${SERVER_TOMCAT_ACCEPT_COUNT:-1000}
-
-    # Maps port 9999 of the host machine to port 8080 inside the container.
+      DEFAULT_PROCESSOR_URL: http://payment-processor-default:8080
+      FALLBACK_PROCESSOR_URL: http://payment-processor-fallback:8080
+      APP_QUEUE_CAPACITY: 3500
+      APP_DRAIN_TIMEOUT_MS: 1000
+      APP_CONTENTION_THRESHOLD: 95
+      APP_HIGH_VALUE_THRESHOLD: 200.00
+      APP_CONNECT_TIMEOUT_MS: 500
+      APP_RESPONSE_TIMEOUT_MS: 500
+      APP_POOL_MAX_TOTAL: 500
+      APP_POOL_MAX_PER_ROUTE: 250
     ports:
       - "9999:8080"
-
-    # Connects this service to the external 'payment-processor' network.
-    networks:
-      - payment-processor
-
-    # Kernel parameter tuning for high concurrency.
-    sysctls:
-      - net.core.somaxconn=65535
-
-    # Resource limits for the container, as per the challenge rules.
     deploy:
       resources:
         limits:
-          cpus: '1.5'
-          memory: '350MB'
-
-# Defines the networks used by the services.
+          cpus:  "1.5"
+          memory: "350MB"
 networks:
-  # Declares that 'payment-processor' is a pre-existing external network.
   payment-processor:
     external: true
