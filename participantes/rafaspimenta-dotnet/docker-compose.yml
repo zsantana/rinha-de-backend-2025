@@ -11,8 +11,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '0.5'
-          memory: '55MB'
+          cpus: '0.25'
+          memory: '30MB'
     environment:
       - DOTNET_ENVIRONMENT=Production
     networks:
@@ -28,6 +28,14 @@ services:
     <<: *api
     hostname: api02
 
+  api03:
+    <<: *api
+    hostname: api03
+
+  api04:
+    <<: *api
+    hostname: api04
+
   nginx:
     image: nginx:latest
     volumes:
@@ -35,13 +43,15 @@ services:
     depends_on:
       - api01
       - api02
+      - api03
+      - api04
     ports:
       - "9999:9999"
     deploy:
       resources:
         limits:
           cpus: '0.2'
-          memory: '40MB'
+          memory: '50MB'
     networks:
       - app-network
 
@@ -60,7 +70,7 @@ services:
       resources:
         limits:
           cpus: '0.3'
-          memory: '200MB'
+          memory: '180MB'
     command: >
       postgres
       -c fsync=off
