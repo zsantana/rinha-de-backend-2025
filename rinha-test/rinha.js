@@ -231,6 +231,34 @@ export async function checkPayments() {
 
   balanceInconsistencyCounter.add(inconsistencies);
 
+  if (inconsistencies > 0) {
+    console.warn(
+      `Found ${inconsistencies} inconsistencies in payment processing`
+    );
+
+    console.info(`
+    ╔══════════════════ Inconsistency Report ══════════════════╗
+    ║ Total Inconsistencies: ${inconsistencies}
+    ║
+    ║ Backend:
+    ║   Default Amount: ${backendPaymentsSummary.default.totalAmount}
+    ║   Default Requests: ${backendPaymentsSummary.default.totalRequests}
+    ║   Fallback Amount: ${backendPaymentsSummary.fallback.totalAmount}
+    ║   Fallback Requests: ${backendPaymentsSummary.fallback.totalRequests}
+    ║
+    ║ Payment Processor:
+    ║   Default Amount: ${defaultAdminPaymentsSummary.totalAmount}
+    ║   Default Requests: ${defaultAdminPaymentsSummary.totalRequests}
+    ║   Fallback Amount: ${fallbackAdminPaymentsSummary.totalAmount}
+    ║   Fallback Requests: ${fallbackAdminPaymentsSummary.totalRequests}
+    ║
+    ║ Time Range:
+    ║   From: ${from}
+    ║   To: ${to}
+    ║   Now: ${now.toISOString()}
+    ╚═══════════════════════════════════════════════════════════`);
+  }
+
   sleep(10);
 }
 
