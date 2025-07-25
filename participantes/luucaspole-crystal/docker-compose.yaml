@@ -71,7 +71,7 @@ services:
         reservations:
           cpus: '0.9'
           memory: '140MB'
-    image: docker.io/lukas8219/rinha-de-backend-2025-app:main-1ca9312f1-1753450997
+    image: docker.io/lukas8219/rinha-de-backend-2025-worker:main-1ca9312f1-1753450997
     depends_on:
       lavinmq:
         condition: service_healthy
