@@ -5,5 +5,9 @@ Submissão para a rinha de backend 2025, código fonte disponível no meu [repos
 ## Tecnologias usadas
 
 - Go
+  - Fiber - Web framework on top of fasthttp
+  - Fasthttp - http client
+  - Artifex - In memory job queue
+  - Sonic - Json Marshaling/Unmarshaling
 - Redis - persistência
 - Nginx - load balance
