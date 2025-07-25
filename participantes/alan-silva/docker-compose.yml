@@ -18,7 +18,7 @@ services:
           memory: "50MB"
 
   rinha-gateway-1:
-    image: ghcr.io/alan-venv/rinha-gateway:4.2
+    image: ghcr.io/alan-venv/rinha-gateway:5.0
     container_name: rinha-gateway-1
     networks:
       - backend
