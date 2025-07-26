@@ -1,6 +1,6 @@
 services:
   app1: &app
-    image: ricardo2010/payment-app:v6
+    image: ricardo2010/payment:v1
     container_name: app1
     networks:
       - backend
@@ -11,7 +11,7 @@ services:
       - RELEASE_COOKIE=secret_cookie
       - RELEASE_NODE=api1@app1
       - PEER_NODES=api2@app2
-      - ERL_MAX_PORTS=2046
+      - ERL_MAX_PORTS=10000
       - PORT=9999
       - SECRET_KEY_BASE=j/s16IqcuOkGYYwGZBPTZc9clvsn7ZDeg3w+/EGAHUzDZa+VxEma/TGKMXfLXIZ2
       - PROCESSOR_DEFAULT_URL=http://payment-processor-default:8080
@@ -27,11 +27,11 @@ services:
       resources:
         limits:
           cpus: "0.60"
-          memory: "170M"
+          memory: "150M"
 
   app2:
     <<: *app
-    image: ricardo2010/payment-app:v4
+    image: ricardo2010/payment:v1
     container_name: app2
     environment:
       - MIX_ENV=prod
@@ -39,7 +39,7 @@ services:
       - RELEASE_COOKIE=secret_cookie
       - RELEASE_NODE=api2@app2
       - PEER_NODES=api1@app1
-      - ERL_MAX_PORTS=2046
+      - ERL_MAX_PORTS=10000
       - PORT=9999
       - SECRET_KEY_BASE=j/s16IqcuOkGYYwGZBPTZc9clvsn7ZDeg3w+/EGAHUzDZa+VxEma/TGKMXfLXIZ2
       - PROCESSOR_DEFAULT_URL=http://payment-processor-default:8080
@@ -55,7 +55,7 @@ services:
       resources:
         limits:
           cpus: "0.60"
-          memory: "165M"
+          memory: "145M"
 
   haproxy:
     image: haproxy:3.1.7
@@ -81,7 +81,7 @@ services:
       resources:
         limits:
           cpus: "0.3"
-          memory: "15MB"
+          memory: "55MB"
     volumes:
       - ./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg
 
