@@ -4,9 +4,9 @@ A backend project for the Rinha de Backend 2025 challenge.
 
 ## 🛠️ Stack
 
-- Java 21 (GraalVM)
-- Spring Boot 3.5.3
-- PostgreSQL
+- Java 21 (GraalVM) Native build
+- Spring Boot 3.5.3 (**Spring WebFlux / Reactive**)
+- PostgreSQL (Reactive Driver)
 - Maven
 - Docker & Docker Compose
 
@@ -28,13 +28,4 @@ A backend project for the Rinha de Backend 2025 challenge.
 
 1. **Clone the repository:**
    ```sh
-   git clone git@github.com:tiagodolphine/rinha-de-backend-2025.git
-   cd rinha-de-backend-2025
-
-## ⚡ Native Build
-
-This project supports building a native executable with GraalVM Native Image.
-
-### Steps to Build Native Image
-   ```sh
-    mvn -Pnative spring-boot:build-image -Dspring-boot.build-image.imageName=tiagodolphine/rinha-2025-payment-service:22
+    docker-compose up
