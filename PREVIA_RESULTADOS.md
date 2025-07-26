@@ -1,6 +1,6 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Sat Jul 26 02:58:57 AM -03 2025**
-110 submissões / 93 resultados / 17 submissões com erro
+Atualizado em **Sat Jul 26 03:07:36 AM -03 2025**
+112 submissões / 94 resultados / 18 submissões com erro
 
 
 | participante | p99 | bônus por desempenho (%) | multa ($) | lucro | submissão |
@@ -19,6 +19,7 @@ Atualizado em **Sat Jul 26 02:58:57 AM -03 2025**
 |	bine-rinha-backend-golang	|	8.629161919999975ms	|	0.04741676160000051	|	105419.45399998337	|	210060.84062373894	|	[bine-rinha-backend-golang](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/bine-rinha-backend-golang)
 |	bine-rinha-backend-react-php	|	32.1839054199998ms	|	0	|	101226.47535002082	|	187992.02565003867	|	[bine-rinha-backend-react-php](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/bine-rinha-backend-react-php)
 |	ccs1201-02-sprg-redis-native	|	4.960540359999993ms	|	0.12078919280000014	|	0	|	350139.1726900863	|	[ccs1201-02-sprg-redis-native](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/ccs1201-02-sprg-redis-native)
+|	ccs1201-03-sprg-postgres-native	|	6.4234497600000235ms	|	0.09153100479999952	|	0	|	344866.30112112203	|	[ccs1201-03-sprg-postgres-native](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/ccs1201-03-sprg-postgres-native)
 |	cgb-go-v1	|	25.928633520000123ms	|	0	|	0	|	309087.795	|	[cgb-go-v1](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/cgb-go-v1)
 |	danielsuhett-nestjs	|	63.338162630000134ms	|	0	|	0	|	290214.635	|	[danielsuhett-nestjs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/danielsuhett-nestjs)
 |	davidalecrim1-go-1	|	5.522369959999996ms	|	0.10955260080000008	|	0	|	330404.35984591127	|	[davidalecrim1-go-1](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/davidalecrim1-go-1)
@@ -117,3 +118,4 @@ Atualizado em **Sat Jul 26 02:58:57 AM -03 2025**
 | matheusf-lucas-and-luis-java1 | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/matheusf-lucas-and-luis-java1) |
 | mbenencase-python | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/mbenencase-python) |
 | rodrixl | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/rodrixl) |
+| ronssm-CopiRinhaGo | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/ronssm-CopiRinhaGo) |
