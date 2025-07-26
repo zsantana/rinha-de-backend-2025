@@ -14,11 +14,11 @@ Docker será utilizado do início ao final do projeto para que haja um ambiente 
 
 [Depois de instalado](https://docs.docker.com/get-started/get-docker/) vá até a pasta `payment-processor` e rode `docker compose up` para inicializar os servidores do payment processor.
 
-Se tudo ocorrer como esperado, o servidor default (http://127.0.0.1:8001/) e de fallback (http://127.0.0.1:8002/) estarão online e com [seus endpoints](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main#resumo-dos-endpoints) funcionando bonitinho.
+Se tudo ocorrer como esperado, o servidor default (http://127.0.0.1:8001/) e de fallback (http://127.0.0.1:8002/) estarão online e com [seus endpoints](https://github.com/zanfranceschi/rinha-de-backend-2025/blob/main/INSTRUCOES.md#detalhes-dos-endpoints) funcionando bonitinho.
 
 ### 2. K6
 
-Essa ferramenta [será utilizada para testar requisições na sua API local](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/rinha-test). Assim, você poderá validar se seu backend está processando as informações direitinho e tankando o estresse.
+Essa ferramenta [será utilizada para testar requisições na sua API local](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/rinha-test#instru%C3%A7%C3%B5es-para-execu%C3%A7%C3%A3o-dos-testes-locais). Assim, você poderá validar se seu backend está processando as informações direitinho e tankando o estresse.
 
 Siga as [instruções para instalar no seu sistema operacional](https://grafana.com/docs/k6/latest/set-up/install-k6/) e depois vá para a pasta `rinha-test` para rodar o teste com `k6 run rinha.js` — mas não agora, tem algumas coisas que ainda serão resolvidas logo abaixo.
 
