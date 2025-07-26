@@ -5,19 +5,27 @@
  Volume "wanderdotnet_postgres_data"  Created
  Container wanderdotnet-cache-1  Creating
  Container wanderdotnet-database-1  Creating
- Container wanderdotnet-cache-1  Created
  Container wanderdotnet-database-1  Created
+ Container wanderdotnet-cache-1  Created
  Container wanderdotnet-api1-1  Creating
- Container wanderdotnet-worker1-1  Creating
  Container wanderdotnet-api2-1  Creating
+ Container wanderdotnet-worker1-1  Creating
  Container wanderdotnet-worker2-1  Creating
- Container wanderdotnet-api1-1  Created
  Container wanderdotnet-worker2-1  Created
  Container wanderdotnet-worker1-1  Created
+ Container wanderdotnet-api1-1  Created
  Container wanderdotnet-api2-1  Created
  Container wanderdotnet-nginx-1  Creating
  Container wanderdotnet-nginx-1  Created
 Attaching to api1-1, api2-1, cache-1, database-1, nginx-1, worker1-1, worker2-1
+cache-1     | 1:C 26 Jul 2025 21:55:02.190 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+cache-1     | 1:C 26 Jul 2025 21:55:02.190 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+cache-1     | 1:C 26 Jul 2025 21:55:02.190 * Redis version=7.2.10, bits=64, commit=00000000, modified=0, pid=1, just started
+cache-1     | 1:C 26 Jul 2025 21:55:02.190 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf
+cache-1     | 1:M 26 Jul 2025 21:55:02.190 * monotonic clock: POSIX clock_gettime
+cache-1     | 1:M 26 Jul 2025 21:55:02.191 * Running mode=standalone, port=6379.
+cache-1     | 1:M 26 Jul 2025 21:55:02.191 * Server initialized
+cache-1     | 1:M 26 Jul 2025 21:55:02.191 * Ready to accept connections tcp
 database-1  | The files belonging to this database system will be owned by user "postgres".
 database-1  | This user must also own the server process.
 database-1  | 
@@ -32,46 +40,6 @@ database-1  | creating subdirectories ... ok
 database-1  | selecting dynamic shared memory implementation ... posix
 database-1  | selecting default max_connections ... 100
 database-1  | selecting default shared_buffers ... 128MB
-cache-1     | 1:C 21 Jul 2025 03:21:49.291 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
-cache-1     | 1:C 21 Jul 2025 03:21:49.291 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
-cache-1     | 1:C 21 Jul 2025 03:21:49.291 * Redis version=7.2.10, bits=64, commit=00000000, modified=0, pid=1, just started
-cache-1     | 1:C 21 Jul 2025 03:21:49.291 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf
-cache-1     | 1:M 21 Jul 2025 03:21:49.291 * monotonic clock: POSIX clock_gettime
-cache-1     | 1:M 21 Jul 2025 03:21:49.291 * Running mode=standalone, port=6379.
-cache-1     | 1:M 21 Jul 2025 03:21:49.382 * Server initialized
-cache-1     | 1:M 21 Jul 2025 03:21:49.382 * Ready to accept connections tcp
-database-1  | selecting default time zone ... UTC
-database-1  | creating configuration files ... ok
-api2-1      | warn: Microsoft.AspNetCore.Hosting.Diagnostics[15]
-api2-1      |       Overriding HTTP_PORTS '8080' and HTTPS_PORTS ''. Binding to values defined by URLS instead 'http://+:8080'.
-api2-1      | info: Microsoft.Hosting.Lifetime[14]
-api2-1      |       Now listening on: http://[::]:8080
-api2-1      | info: Microsoft.Hosting.Lifetime[0]
-api2-1      |       Application started. Press Ctrl+C to shut down.
-api2-1      | info: Microsoft.Hosting.Lifetime[0]
-api2-1      |       Hosting environment: Production
-api2-1      | info: Microsoft.Hosting.Lifetime[0]
-api2-1      |       Content root path: /app
-worker2-1   | info: RinhaBackend.Worker.HealthCheckService[0]
-worker2-1   |       Health Check Service iniciado.
-worker2-1   | info: RinhaBackend.Worker.HealthCheckService[0]
-worker2-1   |       A verificar saúde do processador: default
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker2-1   |       Start processing HTTP request GET http://payment-processor-default:8080/payments/service-health
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker2-1   |       Sending HTTP request GET http://payment-processor-default:8080/payments/service-health
-worker2-1   | info: RinhaBackend.Worker.HealthCheckService[0]
-worker2-1   |       A verificar saúde do processador: fallback
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker2-1   |       Start processing HTTP request GET http://payment-processor-fallback:8080/payments/service-health
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker2-1   |       Sending HTTP request GET http://payment-processor-fallback:8080/payments/service-health
-worker2-1   | info: Microsoft.Hosting.Lifetime[0]
-worker2-1   |       Application started. Press Ctrl+C to shut down.
-worker2-1   | info: Microsoft.Hosting.Lifetime[0]
-worker2-1   |       Hosting environment: Production
-worker2-1   | info: Microsoft.Hosting.Lifetime[0]
-worker2-1   |       Content root path: /app
 worker1-1   | info: RinhaBackend.Worker.HealthCheckService[0]
 worker1-1   |       Health Check Service iniciado.
 worker1-1   | info: RinhaBackend.Worker.HealthCheckService[0]
@@ -92,8 +60,55 @@ worker1-1   | info: Microsoft.Hosting.Lifetime[0]
 worker1-1   |       Hosting environment: Production
 worker1-1   | info: Microsoft.Hosting.Lifetime[0]
 worker1-1   |       Content root path: /app
+database-1  | selecting default time zone ... UTC
+database-1  | creating configuration files ... ok
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker1-1   |       Received HTTP response headers after 297.988ms - 200
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker1-1   |       End processing HTTP request after 298.2185ms - 200
+worker1-1   | info: RinhaBackend.Worker.HealthCheckService[0]
+worker1-1   |       Status de saúde do fallback atualizado: IsFailing = False
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker1-1   |       Received HTTP response headers after 355.2451ms - 200
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker1-1   |       End processing HTTP request after 356.5463ms - 200
+worker1-1   | info: RinhaBackend.Worker.HealthCheckService[0]
+worker1-1   |       Status de saúde do default atualizado: IsFailing = False
+worker2-1   | info: RinhaBackend.Worker.HealthCheckService[0]
+worker2-1   |       Health Check Service iniciado.
+worker2-1   | info: RinhaBackend.Worker.HealthCheckService[0]
+worker2-1   |       A verificar saúde do processador: default
+api2-1      | warn: Microsoft.AspNetCore.Hosting.Diagnostics[15]
+api2-1      |       Overriding HTTP_PORTS '8080' and HTTPS_PORTS ''. Binding to values defined by URLS instead 'http://+:8080'.
+worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker2-1   |       Start processing HTTP request GET http://payment-processor-default:8080/payments/service-health
+worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker2-1   |       Sending HTTP request GET http://payment-processor-default:8080/payments/service-health
+worker2-1   | info: RinhaBackend.Worker.HealthCheckService[0]
+worker2-1   |       A verificar saúde do processador: fallback
+worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker2-1   |       Start processing HTTP request GET http://payment-processor-fallback:8080/payments/service-health
+worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker2-1   |       Sending HTTP request GET http://payment-processor-fallback:8080/payments/service-health
+worker2-1   | info: Microsoft.Hosting.Lifetime[0]
+worker2-1   |       Application started. Press Ctrl+C to shut down.
+worker2-1   | info: Microsoft.Hosting.Lifetime[0]
+worker2-1   |       Hosting environment: Production
+worker2-1   | info: Microsoft.Hosting.Lifetime[0]
+worker2-1   |       Content root path: /app
 api1-1      | warn: Microsoft.AspNetCore.Hosting.Diagnostics[15]
 api1-1      |       Overriding HTTP_PORTS '8080' and HTTPS_PORTS ''. Binding to values defined by URLS instead 'http://+:8080'.
+api2-1      | info: Microsoft.Hosting.Lifetime[14]
+api2-1      |       Now listening on: http://[::]:8080
+api2-1      | info: Microsoft.Hosting.Lifetime[0]
+api2-1      |       Application started. Press Ctrl+C to shut down.
+api2-1      | info: Microsoft.Hosting.Lifetime[0]
+api2-1      |       Hosting environment: Production
+api2-1      | info: Microsoft.Hosting.Lifetime[0]
+api2-1      |       Content root path: /app
+nginx-1     | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+nginx-1     | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+nginx-1     | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
 api1-1      | info: Microsoft.Hosting.Lifetime[14]
 api1-1      |       Now listening on: http://[::]:8080
 api1-1      | info: Microsoft.Hosting.Lifetime[0]
@@ -102,32 +117,15 @@ api1-1      | info: Microsoft.Hosting.Lifetime[0]
 api1-1      |       Hosting environment: Production
 api1-1      | info: Microsoft.Hosting.Lifetime[0]
 api1-1      |       Content root path: /app
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker2-1   |       Received HTTP response headers after 227.1066ms - 200
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker2-1   |       End processing HTTP request after 227.5089ms - 200
-worker2-1   | info: RinhaBackend.Worker.HealthCheckService[0]
-worker2-1   |       Status de saúde do default atualizado: IsFailing = False
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker2-1   |       Received HTTP response headers after 233.5739ms - 200
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker2-1   |       End processing HTTP request after 233.6059ms - 200
-worker2-1   | info: RinhaBackend.Worker.HealthCheckService[0]
-worker2-1   |       Status de saúde do fallback atualizado: IsFailing = False
-database-1  | running bootstrap script ... ok
-nginx-1     | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
-nginx-1     | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
-nginx-1     | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
 nginx-1     | 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
 nginx-1     | 10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
 nginx-1     | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
 nginx-1     | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
 nginx-1     | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
 nginx-1     | /docker-entrypoint.sh: Configuration complete; ready for start up
-database-1  | sh: locale: not found
-database-1  | 2025-07-21 03:21:51.501 UTC [34] WARNING:  no usable system locales were found
+database-1  | running bootstrap script ... ok
 api1-1      | fail: Microsoft.AspNetCore.Server.Kestrel[13]
-api1-1      |       Connection id "0HNE80MU9MV45", Request id "0HNE80MU9MV45:00000001": An unhandled exception was thrown by the application.
+api1-1      |       Connection id "0HNECHSA4JB7B", Request id "0HNECHSA4JB7B:00000001": An unhandled exception was thrown by the application.
 api1-1      |       Npgsql.NpgsqlException (0x80004005): Failed to connect to 172.20.0.2:5432
 api1-1      |        ---> System.Net.Sockets.SocketException (111): Connection refused
 api1-1      |          at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError, CancellationToken) + 0x3e
@@ -158,8 +156,12 @@ api1-1      |       --- End of stack trace from previous location ---
 api1-1      |          at Microsoft.AspNetCore.Http.Generated.<GeneratedRouteBuilderExtensions_g>F4880590E89E4A61E29E76EFCE4F63F8AA54B08269FA83FF5CB6126FDA39D3703__GeneratedRouteBuilderExtensionsCore.<>c__DisplayClass4_0.<<MapGet1>g__RequestHandler|5>d.MoveNext() + 0x71
 api1-1      |       --- End of stack trace from previous location ---
 api1-1      |          at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.<ProcessRequests>d__238`1.MoveNext() + 0x360
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:21:52 +0000] "GET /payments-summary HTTP/1.1" 500 0 "-" "curl/7.88.1"
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:04 +0000] "GET /payments-summary HTTP/1.1" 500 0 "-" "curl/7.88.1"
+database-1  | sh: locale: not found
+database-1  | 2025-07-26 21:55:05.202 UTC [34] WARNING:  no usable system locales were found
 database-1  | performing post-bootstrap initialization ... ok
+database-1  | initdb: warning: enabling "trust" authentication for local connections
+database-1  | initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
 database-1  | syncing data to disk ... ok
 database-1  | 
 database-1  | 
@@ -167,12 +169,10 @@ database-1  | Success. You can now start the database server using:
 database-1  | 
 database-1  |     pg_ctl -D /var/lib/postgresql/data -l logfile start
 database-1  | 
-database-1  | initdb: warning: enabling "trust" authentication for local connections
-database-1  | initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
-database-1  | waiting for server to start....2025-07-21 03:21:53.406 UTC [40] LOG:  starting PostgreSQL 16.9 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
-database-1  | 2025-07-21 03:21:53.406 UTC [40] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
-database-1  | 2025-07-21 03:21:53.407 UTC [43] LOG:  database system was shut down at 2025-07-21 03:21:53 UTC
-database-1  | 2025-07-21 03:21:53.412 UTC [40] LOG:  database system is ready to accept connections
+database-1  | waiting for server to start....2025-07-26 21:55:07.194 UTC [40] LOG:  starting PostgreSQL 16.9 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
+database-1  | 2025-07-26 21:55:07.194 UTC [40] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+database-1  | 2025-07-26 21:55:07.196 UTC [43] LOG:  database system was shut down at 2025-07-26 21:55:07 UTC
+database-1  | 2025-07-26 21:55:07.200 UTC [40] LOG:  database system is ready to accept connections
 database-1  |  done
 database-1  | server started
 database-1  | CREATE DATABASE
@@ -183,49 +183,24 @@ database-1  | CREATE TABLE
 database-1  | CREATE INDEX
 database-1  | 
 database-1  | 
-database-1  | waiting for server to shut down....2025-07-21 03:21:53.787 UTC [40] LOG:  received fast shutdown request
-database-1  | 2025-07-21 03:21:53.787 UTC [40] LOG:  aborting any active transactions
-database-1  | 2025-07-21 03:21:53.790 UTC [40] LOG:  background worker "logical replication launcher" (PID 46) exited with exit code 1
-database-1  | 2025-07-21 03:21:53.792 UTC [41] LOG:  shutting down
-database-1  | 2025-07-21 03:21:53.792 UTC [41] LOG:  checkpoint starting: shutdown immediate
-database-1  | 2025-07-21 03:21:53.812 UTC [41] LOG:  checkpoint complete: wrote 933 buffers (5.7%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.020 s, sync=0.001 s, total=0.021 s; sync files=0, longest=0.000 s, average=0.000 s; distance=4291 kB, estimate=4291 kB; lsn=0/1923280, redo lsn=0/1923280
-database-1  | 2025-07-21 03:21:53.882 UTC [40] LOG:  database system is shut down
+database-1  | waiting for server to shut down...2025-07-26 21:55:07.500 UTC [40] LOG:  received fast shutdown request
+database-1  | 2025-07-26 21:55:07.500 UTC [40] LOG:  aborting any active transactions
+database-1  | .2025-07-26 21:55:07.584 UTC [40] LOG:  background worker "logical replication launcher" (PID 46) exited with exit code 1
+database-1  | 2025-07-26 21:55:07.584 UTC [41] LOG:  shutting down
+database-1  | 2025-07-26 21:55:07.584 UTC [41] LOG:  checkpoint starting: shutdown immediate
+database-1  | 2025-07-26 21:55:07.607 UTC [41] LOG:  checkpoint complete: wrote 933 buffers (5.7%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.022 s, sync=0.001 s, total=0.023 s; sync files=0, longest=0.000 s, average=0.000 s; distance=4291 kB, estimate=4291 kB; lsn=0/1923280, redo lsn=0/1923280
+database-1  | 2025-07-26 21:55:07.628 UTC [40] LOG:  database system is shut down
 database-1  |  done
 database-1  | server stopped
 database-1  | 
 database-1  | PostgreSQL init process complete; ready for start up.
 database-1  | 
-database-1  | 2025-07-21 03:21:53.905 UTC [1] LOG:  starting PostgreSQL 16.9 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
-database-1  | 2025-07-21 03:21:53.905 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
-database-1  | 2025-07-21 03:21:53.905 UTC [1] LOG:  listening on IPv6 address "::", port 5432
-database-1  | 2025-07-21 03:21:53.905 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
-database-1  | 2025-07-21 03:21:53.907 UTC [58] LOG:  database system was shut down at 2025-07-21 03:21:53 UTC
-database-1  | 2025-07-21 03:21:53.911 UTC [1] LOG:  database system is ready to accept connections
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker1-1   |       Received HTTP response headers after 5039.961ms - 200
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker1-1   |       End processing HTTP request after 5040.1349ms - 200
-worker1-1   | info: RinhaBackend.Worker.HealthCheckService[0]
-worker1-1   |       Status de saúde do fallback atualizado: IsFailing = False
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker1-1   |       Received HTTP response headers after 5051.7315ms - 200
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker1-1   |       End processing HTTP request after 5051.8956ms - 200
-worker1-1   | info: RinhaBackend.Worker.HealthCheckService[0]
-worker1-1   |       Status de saúde do default atualizado: IsFailing = False
-worker2-1   | info: RinhaBackend.Worker.HealthCheckService[0]
-worker2-1   |       A verificar saúde do processador: default
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker2-1   |       Start processing HTTP request GET http://payment-processor-default:8080/payments/service-health
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker2-1   |       Sending HTTP request GET http://payment-processor-default:8080/payments/service-health
-worker2-1   | info: RinhaBackend.Worker.HealthCheckService[0]
-worker2-1   |       A verificar saúde do processador: fallback
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker2-1   |       Start processing HTTP request GET http://payment-processor-fallback:8080/payments/service-health
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker2-1   |       Sending HTTP request GET http://payment-processor-fallback:8080/payments/service-health
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:21:57 +0000] "GET /payments-summary HTTP/1.1" 200 105 "-" "curl/7.88.1"
+database-1  | 2025-07-26 21:55:07.702 UTC [1] LOG:  starting PostgreSQL 16.9 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
+database-1  | 2025-07-26 21:55:07.702 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+database-1  | 2025-07-26 21:55:07.702 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+database-1  | 2025-07-26 21:55:07.702 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+database-1  | 2025-07-26 21:55:07.704 UTC [58] LOG:  database system was shut down at 2025-07-26 21:55:07 UTC
+database-1  | 2025-07-26 21:55:07.708 UTC [1] LOG:  database system is ready to accept connections
 worker1-1   | info: RinhaBackend.Worker.HealthCheckService[0]
 worker1-1   |       A verificar saúde do processador: default
 worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
@@ -239,349 +214,18 @@ worker1-1   |       Start processing HTTP request GET http://payment-processor-f
 worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
 worker1-1   |       Sending HTTP request GET http://payment-processor-fallback:8080/payments/service-health
 worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker2-1   |       Received HTTP response headers after 5075.3973ms - 200
+worker2-1   |       Received HTTP response headers after 4859.5622ms - 200
 worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker2-1   |       End processing HTTP request after 5075.4322ms - 200
+worker2-1   |       End processing HTTP request after 4864.4578ms - 200
 worker2-1   | info: RinhaBackend.Worker.HealthCheckService[0]
 worker2-1   |       Status de saúde do fallback atualizado: IsFailing = False
 worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker2-1   |       Received HTTP response headers after 5090.0019ms - 200
+worker2-1   |       Received HTTP response headers after 4887.0694ms - 200
 worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker2-1   |       End processing HTTP request after 5090.0407ms - 200
+worker2-1   |       End processing HTTP request after 4887.6895ms - 200
 worker2-1   | info: RinhaBackend.Worker.HealthCheckService[0]
 worker2-1   |       Status de saúde do default atualizado: IsFailing = False
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:03 +0000] "POST /purge-payments HTTP/1.1" 404 0 "-" "Grafana k6/1.1.0"
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:03 +0000] "GET /payments-summary?from=2025-07-21T03:21:53.252Z&to=2025-07-21T03:22:03.152Z HTTP/1.1" 200 105 "-" "Grafana k6/1.1.0"
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:03 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker1-1   |       Received HTTP response headers after 50.1933ms - 200
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker1-1   |       End processing HTTP request after 50.2736ms - 200
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:03 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker1-1   |       Received HTTP response headers after 2.4747ms - 200
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker1-1   |       End processing HTTP request after 2.7727ms - 200
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:03 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker2-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker2-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker2-1   |       Received HTTP response headers after 2.0127ms - 200
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker2-1   |       End processing HTTP request after 2.0702ms - 200
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:03 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker1-1   |       Received HTTP response headers after 1.8938ms - 200
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker1-1   |       End processing HTTP request after 1.9511ms - 200
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:03 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker1-1   |       Received HTTP response headers after 1.4973ms - 200
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker1-1   |       End processing HTTP request after 1.5421ms - 200
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:03 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker2-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker2-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker2-1   |       Received HTTP response headers after 1.5987ms - 200
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker2-1   |       End processing HTTP request after 1.6692ms - 200
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:03 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker1-1   |       Received HTTP response headers after 1.5199ms - 200
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker1-1   |       End processing HTTP request after 1.5664ms - 200
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:04 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker2-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker2-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker2-1   |       Received HTTP response headers after 1.4052ms - 200
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker2-1   |       End processing HTTP request after 1.4709ms - 200
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:04 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker1-1   |       Received HTTP response headers after 1.6306ms - 200
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker1-1   |       End processing HTTP request after 1.6924ms - 200
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:04 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker2-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker2-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker2-1   |       Received HTTP response headers after 1.459ms - 200
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker2-1   |       End processing HTTP request after 1.5192ms - 200
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:04 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker1-1   |       Received HTTP response headers after 1.3689ms - 200
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker1-1   |       End processing HTTP request after 1.4166ms - 200
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:04 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:04 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker2-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker2-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker2-1   |       Received HTTP response headers after 1.251ms - 200
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker2-1   |       End processing HTTP request after 1.2969ms - 200
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker1-1   |       Received HTTP response headers after 1.0485ms - 200
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker1-1   |       End processing HTTP request after 1.0947ms - 200
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:04 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:04 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker2-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker2-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker2-1   |       Received HTTP response headers after 1.1641ms - 200
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker2-1   |       End processing HTTP request after 1.2149ms - 200
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker1-1   |       Received HTTP response headers after 1.1514ms - 200
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker1-1   |       End processing HTTP request after 1.1933ms - 200
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:04 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:04 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker2-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker2-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker2-1   |       Received HTTP response headers after 1.1024ms - 200
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker2-1   |       End processing HTTP request after 1.1468ms - 200
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker1-1   |       Received HTTP response headers after 1.2017ms - 200
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker1-1   |       End processing HTTP request after 1.2534ms - 200
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:04 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:04 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker2-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker2-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker2-1   |       Received HTTP response headers after 1.1983ms - 200
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker2-1   |       End processing HTTP request after 1.2441ms - 200
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker1-1   |       Received HTTP response headers after 1.2053ms - 200
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker1-1   |       End processing HTTP request after 1.2516ms - 200
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:04 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:04 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker2-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker2-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker2-1   |       Received HTTP response headers after 1.3392ms - 200
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker2-1   |       End processing HTTP request after 1.3845ms - 200
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker1-1   |       Received HTTP response headers after 0.9032ms - 200
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker1-1   |       End processing HTTP request after 0.9589ms - 200
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:04 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker2-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker2-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:04 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker2-1   |       Received HTTP response headers after 1.0089ms - 200
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker2-1   |       End processing HTTP request after 1.0576ms - 200
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker2-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker2-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker2-1   |       Received HTTP response headers after 0.9302ms - 200
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker2-1   |       End processing HTTP request after 0.9675ms - 200
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:05 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker1-1   |       Received HTTP response headers after 1.2363ms - 200
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker1-1   |       End processing HTTP request after 1.2934ms - 200
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:05 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker2-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker2-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker2-1   |       Received HTTP response headers after 1.3542ms - 200
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker2-1   |       End processing HTTP request after 1.4042ms - 200
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:05 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker1-1   |       Received HTTP response headers after 1.0178ms - 200
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker1-1   |       End processing HTTP request after 1.0556ms - 200
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:05 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker1-1   |       Received HTTP response headers after 1.1346ms - 200
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker1-1   |       End processing HTTP request after 1.179ms - 200
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:05 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker1-1   |       Received HTTP response headers after 1.0787ms - 200
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker1-1   |       End processing HTTP request after 1.118ms - 200
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:05 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:05 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker2-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker2-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker2-1   |       Received HTTP response headers after 1.267ms - 200
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker2-1   |       End processing HTTP request after 1.3101ms - 200
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker2-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker2-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker2-1   |       Received HTTP response headers after 0.9977ms - 200
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker2-1   |       End processing HTTP request after 1.0429ms - 200
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:05 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:05 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:05 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker2-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker2-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker1-1   |       Received HTTP response headers after 1.3267ms - 200
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker1-1   |       End processing HTTP request after 1.3676ms - 200
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker2-1   |       Received HTTP response headers after 0.9615ms - 200
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker2-1   |       End processing HTTP request after 1.0071ms - 200
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker2-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker2-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker2-1   |       Received HTTP response headers after 0.6548ms - 200
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker2-1   |       End processing HTTP request after 0.6961ms - 200
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:05 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:05 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:05 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker2-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker2-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker1-1   |       Received HTTP response headers after 1.5199ms - 200
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker1-1   |       End processing HTTP request after 1.5613ms - 200
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker2-1   |       Received HTTP response headers after 0.7749ms - 200
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker2-1   |       End processing HTTP request after 0.8814ms - 200
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker1-1   |       Received HTTP response headers after 1.0939ms - 200
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker1-1   |       End processing HTTP request after 1.136ms - 200
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker1-1   |       Received HTTP response headers after 5081.2794ms - 200
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker1-1   |       End processing HTTP request after 5081.3333ms - 200
-worker1-1   | info: RinhaBackend.Worker.HealthCheckService[0]
-worker1-1   |       Status de saúde do fallback atualizado: IsFailing = False
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:10 +0000] "GET /payments-summary HTTP/1.1" 200 105 "-" "curl/7.88.1"
 worker2-1   | info: RinhaBackend.Worker.HealthCheckService[0]
 worker2-1   |       A verificar saúde do processador: default
 worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
@@ -594,68 +238,157 @@ worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
 worker2-1   |       Start processing HTTP request GET http://payment-processor-fallback:8080/payments/service-health
 worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
 worker2-1   |       Sending HTTP request GET http://payment-processor-fallback:8080/payments/service-health
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:05 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:05 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker2-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker2-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker2-1   |       Received HTTP response headers after 1.4965ms - 200
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker2-1   |       End processing HTTP request after 1.5834ms - 200
 worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker1-1   |       Received HTTP response headers after 0.9433ms - 200
+worker1-1   |       Received HTTP response headers after 5111.5053ms - 200
 worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker1-1   |       End processing HTTP request after 0.9839ms - 200
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:05 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker2-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker2-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker2-1   |       Received HTTP response headers after 1.0039ms - 200
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker2-1   |       End processing HTTP request after 1.0428ms - 200
+worker1-1   |       End processing HTTP request after 5111.5348ms - 200
+worker1-1   | info: RinhaBackend.Worker.HealthCheckService[0]
+worker1-1   |       Status de saúde do fallback atualizado: IsFailing = False
 worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker1-1   |       Received HTTP response headers after 5193.7748ms - 200
+worker1-1   |       Received HTTP response headers after 5139.1843ms - 200
 worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker1-1   |       End processing HTTP request after 5193.8247ms - 200
+worker1-1   |       End processing HTTP request after 5139.22ms - 200
 worker1-1   | info: RinhaBackend.Worker.HealthCheckService[0]
 worker1-1   |       Status de saúde do default atualizado: IsFailing = False
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:05 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:05 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:15 +0000] "POST /purge-payments HTTP/1.1" 404 0 "-" "Grafana k6/1.1.0"
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:15 +0000] "GET /payments-summary?from=2025-07-26T21:55:05.942Z&to=2025-07-26T21:55:15.842Z HTTP/1.1" 200 105 "-" "Grafana k6/1.1.0"
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:15 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
 worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
 worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
 worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
 worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
 worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker1-1   |       Received HTTP response headers after 0.9739ms - 200
+worker1-1   |       Received HTTP response headers after 43.1522ms - 200
 worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker1-1   |       End processing HTTP request after 1.0176ms - 200
+worker1-1   |       End processing HTTP request after 43.3378ms - 200
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:16 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
 worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
 worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
 worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
 worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
 worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker1-1   |       Received HTTP response headers after 0.8701ms - 200
+worker1-1   |       Received HTTP response headers after 1.4698ms - 200
 worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker1-1   |       End processing HTTP request after 0.9035ms - 200
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:05 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+worker1-1   |       End processing HTTP request after 1.5152ms - 200
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:16 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
 worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
 worker2-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
 worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
 worker2-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
 worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker2-1   |       Received HTTP response headers after 1.1265ms - 200
+worker2-1   |       Received HTTP response headers after 2.3117ms - 200
 worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker2-1   |       End processing HTTP request after 1.1617ms - 200
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:05 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:05 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+worker2-1   |       End processing HTTP request after 2.4101ms - 200
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:16 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker2-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
+worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker2-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
+worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker2-1   |       Received HTTP response headers after 1.4737ms - 200
+worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker2-1   |       End processing HTTP request after 1.5338ms - 200
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:16 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker1-1   |       Received HTTP response headers after 1.4609ms - 200
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker1-1   |       End processing HTTP request after 1.5134ms - 200
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:16 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker1-1   |       Received HTTP response headers after 1.0639ms - 200
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker1-1   |       End processing HTTP request after 1.1178ms - 200
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:16 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker1-1   |       Received HTTP response headers after 1.4704ms - 200
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker1-1   |       End processing HTTP request after 1.5301ms - 200
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:16 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker1-1   |       Received HTTP response headers after 1.3755ms - 200
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker1-1   |       End processing HTTP request after 1.4728ms - 200
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:16 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker1-1   |       Received HTTP response headers after 1.1903ms - 200
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker1-1   |       End processing HTTP request after 1.235ms - 200
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:16 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker2-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
+worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker2-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
+worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker2-1   |       Received HTTP response headers after 1.4983ms - 200
+worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker2-1   |       End processing HTTP request after 1.5733ms - 200
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:16 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker1-1   |       Received HTTP response headers after 1.0432ms - 200
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker1-1   |       End processing HTTP request after 1.0979ms - 200
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:17 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:17 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker1-1   |       Received HTTP response headers after 1.2455ms - 200
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker1-1   |       End processing HTTP request after 1.311ms - 200
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker1-1   |       Received HTTP response headers after 1.2229ms - 200
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker1-1   |       End processing HTTP request after 1.2647ms - 200
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:17 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:17 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker2-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
+worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker2-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker1-1   |       Received HTTP response headers after 1.606ms - 200
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker1-1   |       End processing HTTP request after 1.6587ms - 200
+worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker2-1   |       Received HTTP response headers after 2.2345ms - 200
+worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker2-1   |       End processing HTTP request after 3.03ms - 200
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:17 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:17 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
 worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
 worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
 worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
@@ -667,49 +400,13 @@ worker2-1   |       Sending HTTP request POST http://payment-processor-default:8
 worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
 worker1-1   |       Received HTTP response headers after 1.5661ms - 200
 worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker1-1   |       End processing HTTP request after 1.6158ms - 200
+worker1-1   |       End processing HTTP request after 1.6695ms - 200
 worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker2-1   |       Received HTTP response headers after 7.4196ms - 200
+worker2-1   |       Received HTTP response headers after 1.4133ms - 200
 worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker2-1   |       End processing HTTP request after 7.4628ms - 200
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:05 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker1-1   |       Received HTTP response headers after 1.0216ms - 200
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker1-1   |       End processing HTTP request after 1.0734ms - 200
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:05 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:05 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker1-1   |       Received HTTP response headers after 0.9886ms - 200
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker1-1   |       End processing HTTP request after 1.0291ms - 200
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker1-1   |       Received HTTP response headers after 0.9634ms - 200
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker1-1   |       End processing HTTP request after 1.0045ms - 200
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:05 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker1-1   |       Received HTTP response headers after 1.3048ms - 200
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker1-1   |       End processing HTTP request after 1.3478ms - 200
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:05 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:06 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+worker2-1   |       End processing HTTP request after 1.4538ms - 200
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:17 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:17 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
 worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
 worker2-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
 worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
@@ -719,204 +416,33 @@ worker1-1   |       Start processing HTTP request POST http://payment-processor-
 worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
 worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
 worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker2-1   |       Received HTTP response headers after 1.144ms - 200
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker2-1   |       End processing HTTP request after 1.1899ms - 200
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker1-1   |       Received HTTP response headers after 0.8443ms - 200
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker1-1   |       End processing HTTP request after 1.3797ms - 200
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:06 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker2-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker2-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker2-1   |       Received HTTP response headers after 0.9337ms - 200
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker2-1   |       End processing HTTP request after 0.9777ms - 200
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:06 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker1-1   |       Received HTTP response headers after 1.2668ms - 200
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker1-1   |       End processing HTTP request after 1.3305ms - 200
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:06 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:06 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker2-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker2-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker2-1   |       Received HTTP response headers after 1.149ms - 200
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker2-1   |       End processing HTTP request after 1.1934ms - 200
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker1-1   |       Received HTTP response headers after 0.9691ms - 200
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker1-1   |       End processing HTTP request after 1.0238ms - 200
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:06 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker2-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker2-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker2-1   |       Received HTTP response headers after 0.83ms - 200
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker2-1   |       End processing HTTP request after 0.8839ms - 200
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:06 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:06 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker2-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker2-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker2-1   |       Received HTTP response headers after 0.7343ms - 200
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker2-1   |       End processing HTTP request after 0.7695ms - 200
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker1-1   |       Received HTTP response headers after 0.6791ms - 200
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker1-1   |       End processing HTTP request after 0.7357ms - 200
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:06 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:06 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker2-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker2-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker2-1   |       Received HTTP response headers after 0.8018ms - 200
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker2-1   |       End processing HTTP request after 0.845ms - 200
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker1-1   |       Received HTTP response headers after 1.1989ms - 200
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker1-1   |       End processing HTTP request after 1.2364ms - 200
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:06 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:06 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:06 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker2-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker2-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker2-1   |       Received HTTP response headers after 1.2025ms - 200
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker2-1   |       End processing HTTP request after 1.2509ms - 200
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker1-1   |       Received HTTP response headers after 1.1971ms - 200
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker1-1   |       End processing HTTP request after 1.234ms - 200
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker1-1   |       Received HTTP response headers after 0.9126ms - 200
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker1-1   |       End processing HTTP request after 0.9619ms - 200
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:06 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker2-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker2-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker2-1   |       Received HTTP response headers after 0.989ms - 200
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker2-1   |       End processing HTTP request after 1.0308ms - 200
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:06 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:06 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker2-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker2-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker2-1   |       Received HTTP response headers after 0.9984ms - 200
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker2-1   |       End processing HTTP request after 1.0456ms - 200
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker1-1   |       Received HTTP response headers after 1.0039ms - 200
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker1-1   |       End processing HTTP request after 1.0838ms - 200
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:06 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker2-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker2-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker2-1   |       Received HTTP response headers after 1.0312ms - 200
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker2-1   |       End processing HTTP request after 1.0761ms - 200
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:06 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:06 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:06 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker1-1   |       Received HTTP response headers after 1.1321ms - 200
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker1-1   |       End processing HTTP request after 1.2054ms - 200
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker2-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker2-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker2-1   |       Received HTTP response headers after 1.4118ms - 200
+worker2-1   |       Received HTTP response headers after 1.3885ms - 200
 worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
 worker2-1   |       End processing HTTP request after 1.4615ms - 200
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker1-1   |       Received HTTP response headers after 1.388ms - 200
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker1-1   |       End processing HTTP request after 1.4181ms - 200
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:17 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:17 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker2-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
+worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker2-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
 worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
 worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
 worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
 worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker1-1   |       Received HTTP response headers after 1.3025ms - 200
+worker1-1   |       Received HTTP response headers after 1.119ms - 200
 worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker1-1   |       End processing HTTP request after 1.3956ms - 200
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:06 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker2-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker2-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   |       End processing HTTP request after 1.1608ms - 200
 worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker2-1   |       Received HTTP response headers after 0.989ms - 200
+worker2-1   |       Received HTTP response headers after 1.4155ms - 200
 worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker2-1   |       End processing HTTP request after 1.0321ms - 200
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:06 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:06 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:06 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker2-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker2-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker2-1   |       Received HTTP response headers after 0.8896ms - 200
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker2-1   |       End processing HTTP request after 0.9376ms - 200
+worker2-1   |       End processing HTTP request after 1.4549ms - 200
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:17 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:17 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
 worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
 worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
 worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
@@ -926,69 +452,79 @@ worker2-1   |       Start processing HTTP request POST http://payment-processor-
 worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
 worker2-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
 worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker1-1   |       Received HTTP response headers after 1.1442ms - 200
+worker1-1   |       Received HTTP response headers after 1.3425ms - 200
 worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker1-1   |       End processing HTTP request after 1.395ms - 200
+worker1-1   |       End processing HTTP request after 1.4049ms - 200
 worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker2-1   |       Received HTTP response headers after 1.0884ms - 200
+worker2-1   |       Received HTTP response headers after 1.6587ms - 200
 worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker2-1   |       End processing HTTP request after 1.1381ms - 200
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:06 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker2-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker2-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
-worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker2-1   |       Received HTTP response headers after 0.9235ms - 200
-worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker2-1   |       End processing HTTP request after 0.9648ms - 200
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:06 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:06 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:06 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+worker2-1   |       End processing HTTP request after 1.7061ms - 200
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:17 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
 worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
 worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
 worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
 worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
 worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker1-1   |       Received HTTP response headers after 1.2385ms - 200
+worker1-1   |       Received HTTP response headers after 1.2937ms - 200
 worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker1-1   |       End processing HTTP request after 1.2799ms - 200
+worker1-1   |       End processing HTTP request after 1.3515ms - 200
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:17 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
 worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
 worker2-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
 worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
 worker2-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
 worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker2-1   |       Received HTTP response headers after 0.73ms - 200
+worker2-1   |       Received HTTP response headers after 1.4638ms - 200
 worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker2-1   |       End processing HTTP request after 0.7672ms - 200
+worker2-1   |       End processing HTTP request after 1.5206ms - 200
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:17 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
 worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
 worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
 worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
 worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
 worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker1-1   |       Received HTTP response headers after 0.9421ms - 200
+worker1-1   |       Received HTTP response headers after 1.0757ms - 200
 worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker1-1   |       End processing HTTP request after 0.9805ms - 200
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:06 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
-worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
-worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
-worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker1-1   |       Received HTTP response headers after 0.8579ms - 200
-worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker1-1   |       End processing HTTP request after 0.9038ms - 200
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:06 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:06 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
-nginx-1     | 172.20.0.1 - - [21/Jul/2025:03:22:06 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+worker1-1   |       End processing HTTP request after 1.1182ms - 200
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:17 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
 worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
 worker2-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
 worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
 worker2-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
 worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
-worker2-1   |       Received HTTP response headers after 1.1282ms - 200
+worker2-1   |       Received HTTP response headers after 0.9704ms - 200
 worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
-worker2-1   |       End processing HTTP request after 1.1969ms - 200
+worker2-1   |       End processing HTTP request after 1.011ms - 200
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:17 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker1-1   |       Received HTTP response headers after 1.0476ms - 200
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker1-1   |       End processing HTTP request after 1.1061ms - 200
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:17 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:17 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker2-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
+worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker2-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
+worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker2-1   |       Received HTTP response headers after 1.3548ms - 200
+worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker2-1   |       End processing HTTP request after 1.5334ms - 200
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker1-1   |       Received HTTP response headers after 1.3824ms - 200
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker1-1   |       End processing HTTP request after 1.4588ms - 200
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:18 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:18 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:18 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
 worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
 worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
 worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
@@ -998,4 +534,468 @@ worker2-1   |       Start processing HTTP request POST http://payment-processor-
 worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
 worker2-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
 worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker1-1   |       Received HTTP response headers after 1.4859ms - 200
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker1-1   |       End processing HTTP request after 1.5384ms - 200
+worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker2-1   |       Received HTTP response headers after 0.8569ms - 200
+worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker2-1   |       End processing HTTP request after 0.9019ms - 200
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker1-1   |       Received HTTP response headers after 1.0378ms - 200
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker1-1   |       End processing HTTP request after 1.0988ms - 200
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:18 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:18 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:18 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker2-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
+worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker2-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
+worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker2-1   |       Received HTTP response headers after 1.0597ms - 200
+worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker2-1   |       End processing HTTP request after 1.1189ms - 200
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
+worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker2-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
+worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker2-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker1-1   |       Received HTTP response headers after 1.0853ms - 200
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker1-1   |       End processing HTTP request after 1.1315ms - 200
+worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker2-1   |       Received HTTP response headers after 1.1396ms - 200
+worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker2-1   |       End processing HTTP request after 1.1765ms - 200
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:18 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:18 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:18 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker2-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
+worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker2-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
+worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker2-1   |       Received HTTP response headers after 0.8679ms - 200
+worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker2-1   |       End processing HTTP request after 0.912ms - 200
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker1-1   |       Received HTTP response headers after 1.5508ms - 200
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker1-1   |       End processing HTTP request after 1.6372ms - 200
+worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker2-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
+worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker2-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
+worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker2-1   |       Received HTTP response headers after 0.9665ms - 200
+worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker2-1   |       End processing HTTP request after 1.0114ms - 200
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:18 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:18 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker1-1   |       Received HTTP response headers after 1.0526ms - 200
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker1-1   |       End processing HTTP request after 1.1047ms - 200
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:18 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker2-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
+worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker2-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
+worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker2-1   |       Received HTTP response headers after 1.044ms - 200
+worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker2-1   |       End processing HTTP request after 1.0937ms - 200
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker1-1   |       Received HTTP response headers after 0.7811ms - 200
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker1-1   |       End processing HTTP request after 0.8197ms - 200
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:18 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:18 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker2-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
+worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker2-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker1-1   |       Received HTTP response headers after 2.1647ms - 200
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker1-1   |       End processing HTTP request after 2.2122ms - 200
+worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker2-1   |       Received HTTP response headers after 2.144ms - 200
+worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker2-1   |       End processing HTTP request after 2.2211ms - 200
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:18 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker2-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
+worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker2-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
+worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker2-1   |       Received HTTP response headers after 0.9039ms - 200
+worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker2-1   |       End processing HTTP request after 0.9438ms - 200
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:18 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:18 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker1-1   |       Received HTTP response headers after 0.8974ms - 200
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker1-1   |       End processing HTTP request after 0.9555ms - 200
+worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker2-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
+worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker2-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
+worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker2-1   |       Received HTTP response headers after 0.9862ms - 200
+worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker2-1   |       End processing HTTP request after 1.0381ms - 200
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:18 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker1-1   |       Received HTTP response headers after 1.0141ms - 200
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker1-1   |       End processing HTTP request after 1.0767ms - 200
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:18 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:18 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker2-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
+worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker2-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
+worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker2-1   |       Received HTTP response headers after 1.0723ms - 200
+worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker2-1   |       End processing HTTP request after 1.1171ms - 200
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker1-1   |       Received HTTP response headers after 1.4512ms - 200
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker1-1   |       End processing HTTP request after 1.4963ms - 200
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:18 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker2-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
+worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker2-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
+worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker2-1   |       Received HTTP response headers after 0.8722ms - 200
+worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker2-1   |       End processing HTTP request after 0.9358ms - 200
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:18 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:18 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
+worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker2-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
+worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker2-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
+worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker2-1   |       Received HTTP response headers after 1.1041ms - 200
+worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker2-1   |       End processing HTTP request after 1.1541ms - 200
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker1-1   |       Received HTTP response headers after 1.2867ms - 200
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker1-1   |       End processing HTTP request after 1.3798ms - 200
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:18 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker2-1   |       Received HTTP response headers after 5070.417ms - 200
+worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker2-1   |       End processing HTTP request after 5070.4778ms - 200
+worker2-1   | info: RinhaBackend.Worker.HealthCheckService[0]
+worker2-1   |       Status de saúde do fallback atualizado: IsFailing = False
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker1-1   |       Received HTTP response headers after 0.8726ms - 200
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker1-1   |       End processing HTTP request after 0.9246ms - 200
+worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker2-1   |       Received HTTP response headers after 5098.0011ms - 200
+worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker2-1   |       End processing HTTP request after 5098.0365ms - 200
+worker2-1   | info: RinhaBackend.Worker.HealthCheckService[0]
+worker2-1   |       Status de saúde do default atualizado: IsFailing = False
+worker1-1   | info: RinhaBackend.Worker.HealthCheckService[0]
+worker1-1   |       A verificar saúde do processador: default
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker1-1   |       Start processing HTTP request GET http://payment-processor-default:8080/payments/service-health
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker1-1   |       Sending HTTP request GET http://payment-processor-default:8080/payments/service-health
+worker1-1   | info: RinhaBackend.Worker.HealthCheckService[0]
+worker1-1   |       A verificar saúde do processador: fallback
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker1-1   |       Start processing HTTP request GET http://payment-processor-fallback:8080/payments/service-health
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker1-1   |       Sending HTTP request GET http://payment-processor-fallback:8080/payments/service-health
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:18 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker1-1   |       Received HTTP response headers after 1.3741ms - 200
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker1-1   |       End processing HTTP request after 1.4156ms - 200
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:18 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:18 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:18 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker2-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
+worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker2-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
+worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker2-1   |       Received HTTP response headers after 1.067ms - 200
+worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker2-1   |       End processing HTTP request after 1.1133ms - 200
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
+worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker2-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
+worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker2-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker1-1   |       Received HTTP response headers after 1.1271ms - 200
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker1-1   |       End processing HTTP request after 1.2066ms - 200
+worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker2-1   |       Received HTTP response headers after 1.133ms - 200
+worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker2-1   |       End processing HTTP request after 1.1834ms - 200
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:19 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker2-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
+worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker2-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
+worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker2-1   |       Received HTTP response headers after 0.9246ms - 200
+worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker2-1   |       End processing HTTP request after 0.965ms - 200
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:19 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:19 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:19 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker1-1   |       Received HTTP response headers after 0.9521ms - 200
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker1-1   |       End processing HTTP request after 0.9939ms - 200
+worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker2-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
+worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker2-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker1-1   |       Received HTTP response headers after 0.4798ms - 200
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker1-1   |       End processing HTTP request after 0.5114ms - 200
+worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker2-1   |       Received HTTP response headers after 0.9001ms - 200
+worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker2-1   |       End processing HTTP request after 1.0661ms - 200
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:19 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker1-1   |       Received HTTP response headers after 1.0504ms - 200
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker1-1   |       End processing HTTP request after 1.0927ms - 200
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:19 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:19 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:19 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker2-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
+worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker2-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
+worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker2-1   |       Received HTTP response headers after 1.0799ms - 200
+worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker2-1   |       End processing HTTP request after 1.1402ms - 200
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
+worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker2-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
+worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker2-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker1-1   |       Received HTTP response headers after 0.968ms - 200
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker1-1   |       End processing HTTP request after 1.0069ms - 200
+worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker2-1   |       Received HTTP response headers after 1.0284ms - 200
+worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker2-1   |       End processing HTTP request after 1.0648ms - 200
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:19 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker1-1   |       Received HTTP response headers after 0.8051ms - 200
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker1-1   |       End processing HTTP request after 0.8608ms - 200
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:19 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:19 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker2-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
+worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker2-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:19 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker2-1   |       Received HTTP response headers after 0.9275ms - 200
+worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker2-1   |       End processing HTTP request after 0.9773ms - 200
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
+worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker2-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
+worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker2-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker1-1   |       Received HTTP response headers after 0.8421ms - 200
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker1-1   |       End processing HTTP request after 0.9392ms - 200
+worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker2-1   |       Received HTTP response headers after 0.8272ms - 200
+worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker2-1   |       End processing HTTP request after 0.8571ms - 200
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:19 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:19 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:19 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker2-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
+worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker2-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
+worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker2-1   |       Received HTTP response headers after 1.3073ms - 200
+worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker2-1   |       End processing HTTP request after 1.3559ms - 200
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker1-1   |       Received HTTP response headers after 0.7997ms - 200
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker1-1   |       End processing HTTP request after 1.2333ms - 200
+worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker2-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
+worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker2-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
+worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker2-1   |       Received HTTP response headers after 0.6969ms - 200
+worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker2-1   |       End processing HTTP request after 0.737ms - 200
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:19 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker1-1   |       Received HTTP response headers after 1.0926ms - 200
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker1-1   |       End processing HTTP request after 1.1337ms - 200
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:19 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:19 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:19 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker2-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
+worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker2-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
+worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker2-1   |       Received HTTP response headers after 1.1326ms - 200
+worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker2-1   |       End processing HTTP request after 1.1699ms - 200
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker1-1   |       Received HTTP response headers after 0.7112ms - 200
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker1-1   |       End processing HTTP request after 0.7618ms - 200
+worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker2-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
+worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker2-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
+worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker2-1   |       Received HTTP response headers after 0.6394ms - 200
+worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker2-1   |       End processing HTTP request after 0.6731ms - 200
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:19 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker1-1   |       Received HTTP response headers after 0.76ms - 200
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker1-1   |       End processing HTTP request after 0.8126ms - 200
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:19 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:19 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+nginx-1     | 172.20.0.1 - - [26/Jul/2025:21:55:19 +0000] "POST /payments HTTP/1.1" 200 0 "-" "Grafana k6/1.1.0"
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker1-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
+worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+worker2-1   |       Start processing HTTP request POST http://payment-processor-default:8080/payments
+worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker2-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+worker1-1   |       Sending HTTP request POST http://payment-processor-default:8080/payments
+worker2-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker1-1   | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+worker2-1   |       Received HTTP response headers after 2.6932ms - 200
+worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker2-1   |       End processing HTTP request after 2.7349ms - 200
+worker1-1   |       Received HTTP response headers after 2.6962ms - 200
+worker1-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+worker1-1   |       End processing HTTP request after 2.7435ms - 200
+worker2-1   | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
 log truncated at line 1000

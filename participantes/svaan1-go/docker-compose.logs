@@ -1,89 +1,26 @@
 
- api2 Pulling 
- api1 Pulling 
- 01d036902a3c Already exists 
- 89cb97449d3f Pulling fs layer 
- a997b24555d6 Pulling fs layer 
- 913c675c8d0f Pulling fs layer 
- 01d036902a3c Already exists 
- 89cb97449d3f Pulling fs layer 
- a997b24555d6 Pulling fs layer 
- 913c675c8d0f Pulling fs layer 
- 89cb97449d3f Downloading [>                                                  ]  13.26kB/1.294MB
- 89cb97449d3f Downloading [>                                                  ]  13.26kB/1.294MB
- 89cb97449d3f Downloading [==================================================>]  1.294MB/1.294MB
- 89cb97449d3f Verifying Checksum 
- 89cb97449d3f Download complete 
- 89cb97449d3f Downloading [==================================================>]  1.294MB/1.294MB
- 89cb97449d3f Verifying Checksum 
- 89cb97449d3f Download complete 
- 89cb97449d3f Extracting [=>                                                 ]  32.77kB/1.294MB
- 89cb97449d3f Extracting [=>                                                 ]  32.77kB/1.294MB
- 89cb97449d3f Extracting [==================================================>]  1.294MB/1.294MB
- 89cb97449d3f Extracting [==================================================>]  1.294MB/1.294MB
- 89cb97449d3f Extracting [==================================================>]  1.294MB/1.294MB
- 89cb97449d3f Extracting [==================================================>]  1.294MB/1.294MB
- 89cb97449d3f Pull complete 
- 89cb97449d3f Pull complete 
- a997b24555d6 Verifying Checksum 
- a997b24555d6 Download complete 
- a997b24555d6 Downloading [==================================================>]     967B/967B
- a997b24555d6 Extracting [==================================================>]     967B/967B
- a997b24555d6 Verifying Checksum 
- a997b24555d6 Download complete 
- a997b24555d6 Extracting [==================================================>]     967B/967B
- a997b24555d6 Extracting [==================================================>]     967B/967B
- a997b24555d6 Extracting [==================================================>]     967B/967B
- 913c675c8d0f Downloading [>                                                  ]  82.45kB/8.241MB
- 913c675c8d0f Downloading [>                                                  ]  82.45kB/8.241MB
- a997b24555d6 Pull complete 
- a997b24555d6 Pull complete 
- 913c675c8d0f Downloading [===============================================>   ]  7.848MB/8.241MB
- 913c675c8d0f Downloading [===============================================>   ]  7.848MB/8.241MB
- 913c675c8d0f Verifying Checksum 
- 913c675c8d0f Download complete 
- 913c675c8d0f Verifying Checksum 
- 913c675c8d0f Download complete 
- 913c675c8d0f Extracting [>                                                  ]   98.3kB/8.241MB
- 913c675c8d0f Extracting [>                                                  ]   98.3kB/8.241MB
- 913c675c8d0f Extracting [==================================================>]  8.241MB/8.241MB
- 913c675c8d0f Extracting [==================================================>]  8.241MB/8.241MB
- 913c675c8d0f Pull complete 
- 913c675c8d0f Pull complete 
- api2 Pulled 
- api1 Pulled 
  Network svaan1-go_backend  Creating
  Network svaan1-go_backend  Created
- Container svaan1-go-redis-1  Creating
  Container health  Creating
+ Container svaan1-go-redis-1  Creating
  Container health  Created
  Container svaan1-go-redis-1  Created
- Container api1  Creating
  Container api2  Creating
- Container api1  Created
+ Container api1  Creating
  Container api2  Created
+ Container api1  Created
  Container nginx  Creating
  Container nginx  Created
 Attaching to api1, api2, health, nginx, redis-1
-redis-1  | 1:C 25 Jul 2025 12:55:32.386 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
-redis-1  | 1:C 25 Jul 2025 12:55:32.386 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
-redis-1  | 1:C 25 Jul 2025 12:55:32.386 * Redis version=7.4.5, bits=64, commit=00000000, modified=0, pid=1, just started
-redis-1  | 1:C 25 Jul 2025 12:55:32.386 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf
-redis-1  | 1:M 25 Jul 2025 12:55:32.386 * monotonic clock: POSIX clock_gettime
-redis-1  | 1:M 25 Jul 2025 12:55:32.387 * Running mode=standalone, port=6379.
-redis-1  | 1:M 25 Jul 2025 12:55:32.387 * Server initialized
-redis-1  | 1:M 25 Jul 2025 12:55:32.387 * Ready to accept connections tcp
-health   | 2025/07/25 12:55:32 Starting server at :8080
-api1     | 
-api1     |  ┌───────────────────────────────────────────────────┐ 
-api1     |  │                   Fiber v2.52.9                   │ 
-api1     |  │                http://127.0.0.1:80                │ 
-api1     |  │        (bound on host 0.0.0.0 and port 80)        │ 
-api1     |  │                                                   │ 
-api1     |  │ Handlers ............. 4  Processes ........... 1 │ 
-api1     |  │ Prefork ....... Disabled  PID ................. 1 │ 
-api1     |  └───────────────────────────────────────────────────┘ 
-api1     | 
+redis-1  | 1:C 26 Jul 2025 21:48:31.808 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+redis-1  | 1:C 26 Jul 2025 21:48:31.808 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+redis-1  | 1:C 26 Jul 2025 21:48:31.808 * Redis version=7.4.5, bits=64, commit=00000000, modified=0, pid=1, just started
+redis-1  | 1:C 26 Jul 2025 21:48:31.808 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf
+redis-1  | 1:M 26 Jul 2025 21:48:31.809 * monotonic clock: POSIX clock_gettime
+redis-1  | 1:M 26 Jul 2025 21:48:31.809 * Running mode=standalone, port=6379.
+redis-1  | 1:M 26 Jul 2025 21:48:31.882 * Server initialized
+redis-1  | 1:M 26 Jul 2025 21:48:31.882 * Ready to accept connections tcp
+health   | 2025/07/26 21:48:31 Starting server at :8080
 api2     | 
 api2     |  ┌───────────────────────────────────────────────────┐ 
 api2     |  │                   Fiber v2.52.9                   │ 
@@ -94,6 +31,16 @@ api2     |  │ Handlers ............. 4  Processes ........... 1 │
 api2     |  │ Prefork ....... Disabled  PID ................. 1 │ 
 api2     |  └───────────────────────────────────────────────────┘ 
 api2     | 
+api1     | 
+api1     |  ┌───────────────────────────────────────────────────┐ 
+api1     |  │                   Fiber v2.52.9                   │ 
+api1     |  │                http://127.0.0.1:80                │ 
+api1     |  │        (bound on host 0.0.0.0 and port 80)        │ 
+api1     |  │                                                   │ 
+api1     |  │ Handlers ............. 4  Processes ........... 1 │ 
+api1     |  │ Prefork ....... Disabled  PID ................. 1 │ 
+api1     |  └───────────────────────────────────────────────────┘ 
+api1     | 
 nginx    | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
 nginx    | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
 nginx    | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
@@ -103,18 +50,19 @@ nginx    | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolve
 nginx    | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
 nginx    | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
 nginx    | /docker-entrypoint.sh: Configuration complete; ready for start up
-redis-1  | 1:M 25 Jul 2025 12:56:33.088 * 10000 changes in 60 seconds. Saving...
-redis-1  | 1:M 25 Jul 2025 12:56:33.088 * Background saving started by pid 21
-redis-1  | 21:C 25 Jul 2025 12:56:33.386 * DB saved on disk
-redis-1  | 21:C 25 Jul 2025 12:56:33.387 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
-redis-1  | 1:M 25 Jul 2025 12:56:33.390 * Background saving terminated with success
+redis-1  | 1:M 26 Jul 2025 21:49:32.091 * 10000 changes in 60 seconds. Saving...
+redis-1  | 1:M 26 Jul 2025 21:49:32.091 * Background saving started by pid 20
+redis-1  | 20:C 26 Jul 2025 21:49:32.219 * DB saved on disk
+redis-1  | 20:C 26 Jul 2025 21:49:32.220 * Fork CoW for RDB: current 1 MB, peak 1 MB, average 0 MB
+redis-1  | 1:M 26 Jul 2025 21:49:32.282 * Background saving terminated with success
 [Knginx exited with code 0
+[Kapi2 exited with code 2
 [Kapi1 exited with code 2
-redis-1  | 1:signal-handler (1753448205) Received SIGTERM scheduling shutdown...
-redis-1  | 1:M 25 Jul 2025 12:56:45.299 * User requested shutdown...
-redis-1  | 1:M 25 Jul 2025 12:56:45.299 * Saving the final RDB snapshot before exiting.
-redis-1  | 1:M 25 Jul 2025 12:56:45.433 * DB saved on disk
-redis-1  | 1:M 25 Jul 2025 12:56:45.433 # Redis is now ready to exit, bye bye...
+redis-1  | 1:signal-handler (1753566583) Received SIGTERM scheduling shutdown...
+redis-1  | 1:M 26 Jul 2025 21:49:43.998 * User requested shutdown...
+redis-1  | 1:M 26 Jul 2025 21:49:43.998 * Saving the final RDB snapshot before exiting.
+redis-1  | 1:M 26 Jul 2025 21:49:44.122 * DB saved on disk
+redis-1  | 1:M 26 Jul 2025 21:49:44.122 # Redis is now ready to exit, bye bye...
 [Khealth exited with code 2
 [Kredis-1 exited with code 0
 log truncated at line 1000

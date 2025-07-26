@@ -1,34 +1,67 @@
 
- Network el_yawd-crab_backend  Creating
- Network el_yawd-crab_backend  Created
- Volume "el_yawd-crab_shared_db"  Creating
- Volume "el_yawd-crab_shared_db"  Created
+ api-1 Pulling 
+ api-2 Pulling 
+ rinha-db Pulling 
+ load_balancer Pulling 
+ 9824c27679d3 Already exists 
+ 9f0ab9472e86 Pulling fs layer 
+ 9824c27679d3 Already exists 
+ 9f0ab9472e86 Pulling fs layer 
+ 9824c27679d3 Already exists 
+ 48a82a083efe Pulling fs layer 
+ 9824c27679d3 Already exists 
+ ec2cae9ca433 Pulling fs layer 
+ ec2cae9ca433 Downloading [>                                                  ]  13.67kB/1.329MB
+ ec2cae9ca433 Downloading [==================================================>]  1.329MB/1.329MB
+ ec2cae9ca433 Verifying Checksum 
+ ec2cae9ca433 Download complete 
+ ec2cae9ca433 Extracting [=>                                                 ]  32.77kB/1.329MB
+ ec2cae9ca433 Extracting [==================================================>]  1.329MB/1.329MB
+ ec2cae9ca433 Extracting [==================================================>]  1.329MB/1.329MB
+ ec2cae9ca433 Pull complete 
+ 48a82a083efe Downloading [>                                                  ]  10.93kB/993kB
+ 9f0ab9472e86 Downloading [>                                                  ]  42.35kB/4.163MB
+ 9f0ab9472e86 Downloading [>                                                  ]  42.35kB/4.163MB
+ 48a82a083efe Downloading [==================================================>]    993kB/993kB
+ 48a82a083efe Verifying Checksum 
+ 48a82a083efe Download complete 
+ 48a82a083efe Extracting [=>                                                 ]  32.77kB/993kB
+ 48a82a083efe Extracting [==================================================>]    993kB/993kB
+ 48a82a083efe Extracting [==================================================>]    993kB/993kB
+ 48a82a083efe Pull complete 
+ 9f0ab9472e86 Downloading [==================================>                ]  2.851MB/4.163MB
+ 9f0ab9472e86 Downloading [==================================>                ]  2.851MB/4.163MB
+ 9f0ab9472e86 Verifying Checksum 
+ 9f0ab9472e86 Download complete 
+ 9f0ab9472e86 Download complete 
+ 9f0ab9472e86 Extracting [>                                                  ]  65.54kB/4.163MB
+ 9f0ab9472e86 Extracting [>                                                  ]  65.54kB/4.163MB
+ 9f0ab9472e86 Extracting [==================================================>]  4.163MB/4.163MB
+ 9f0ab9472e86 Extracting [==================================================>]  4.163MB/4.163MB
+ rinha-db Pulled 
+ 9f0ab9472e86 Pull complete 
+ 9f0ab9472e86 Pull complete 
+ load_balancer Pulled 
+ api-1 Pulled 
+ api-2 Pulled 
+ Network el_yawd-crab_default  Creating
+ Network el_yawd-crab_default  Created
+ Volume "el_yawd-crab_ipc-socket"  Creating
+ Volume "el_yawd-crab_ipc-socket"  Created
+ Container el_yawd-crab-rinha-db-1  Creating
+ Container el_yawd-crab-rinha-db-1  Created
  Container el_yawd-crab-api-2-1  Creating
  Container el_yawd-crab-api-1-1  Creating
  Container el_yawd-crab-api-1-1  Created
  Container el_yawd-crab-api-2-1  Created
  Container el_yawd-crab-load_balancer-1  Creating
  Container el_yawd-crab-load_balancer-1  Created
-Attaching to api-1-1, api-2-1, load_balancer-1
-api-1-1          | 
-api-1-1          | thread 'main' panicked at src/provider/handler.rs:71:10:
-api-1-1          | Unable to connect with external providers, Aborting...: reqwest::Error { kind: Decode, source: Error("EOF while parsing a value", line: 1, column: 0) }
-api-1-1          | note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
-api-2-1          | 
-api-2-1          | thread 'main' panicked at src/provider/handler.rs:71:10:
-api-2-1          | Unable to connect with external providers, Aborting...: reqwest::Error { kind: Decode, source: Error("EOF while parsing a value", line: 1, column: 0) }
-api-2-1          | note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
-load_balancer-1  | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
-load_balancer-1  | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
-load_balancer-1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
-load_balancer-1  | 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
-load_balancer-1  | 10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
-load_balancer-1  | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
-load_balancer-1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
-load_balancer-1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
-load_balancer-1  | /docker-entrypoint.sh: Configuration complete; ready for start up
-load_balancer-1  | 2025/07/21 02:09:59 [emerg] 1#1: host not found in upstream "api-2:9999" in /etc/nginx/nginx.conf:22
-load_balancer-1  | nginx: [emerg] host not found in upstream "api-2:9999" in /etc/nginx/nginx.conf:22
-[Kapi-2-1 exited with code 101
-[Kapi-1-1 exited with code 101
-[Kload_balancer-1 exited with code 1
+Attaching to api-1-1, api-2-1, load_balancer-1, rinha-db-1
+rinha-db-1       | RinhaDB listening on /tmp/rinha.sock
+api-2-1          | API listening on /tmp/api-2.sock
+api-1-1          | API listening on /tmp/api-1.sock
+[Kload_balancer-1 exited with code 137
+[Kapi-2-1 exited with code 137
+[Kapi-1-1 exited with code 137
+[Krinha-db-1 exited with code 137
+log truncated at line 1000

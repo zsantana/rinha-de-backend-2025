@@ -1,108 +1,66 @@
 
  backend1 Pulling 
  backend2 Pulling 
- worker1 Pulling 
- worker2 Pulling 
  59e22667830b Already exists 
- 7f9f467daae6 Pulling fs layer 
- bea5431aed03 Pulling fs layer 
+ 3c03150a0a6a Pulling fs layer 
+ d652f73cc69b Pulling fs layer 
  59e22667830b Already exists 
- bea5431aed03 Downloading [>                                                  ]  15.06kB/1.446MB
- 7f9f467daae6 Downloading [==================================================>]      93B/93B
- 7f9f467daae6 Download complete 
- 7f9f467daae6 Extracting [==================================================>]      93B/93B
- 7f9f467daae6 Extracting [==================================================>]      93B/93B
- 7f9f467daae6 Pulling fs layer 
- bea5431aed03 Pulling fs layer 
- bea5431aed03 Downloading [>                                                  ]  15.06kB/1.446MB
- 7f9f467daae6 Extracting [==================================================>]      93B/93B
- bea5431aed03 Verifying Checksum 
- bea5431aed03 Download complete 
- bea5431aed03 Verifying Checksum 
- 59e22667830b Already exists 
- 7f9f467daae6 Pulling fs layer 
- bea5431aed03 Pulling fs layer 
- bea5431aed03 Download complete 
- 7f9f467daae6 Extracting [==================================================>]      93B/93B
- 7f9f467daae6 Pull complete 
- 7f9f467daae6 Pull complete 
- 7f9f467daae6 Pull complete 
- bea5431aed03 Extracting [=>                                                 ]  32.77kB/1.446MB
- bea5431aed03 Extracting [=>                                                 ]  32.77kB/1.446MB
- bea5431aed03 Extracting [=>                                                 ]  32.77kB/1.446MB
- bea5431aed03 Extracting [==================================================>]  1.446MB/1.446MB
- bea5431aed03 Extracting [==================================================>]  1.446MB/1.446MB
- bea5431aed03 Extracting [==================================================>]  1.446MB/1.446MB
- bea5431aed03 Pull complete 
- bea5431aed03 Pull complete 
- bea5431aed03 Pull complete 
- 59e22667830b Already exists 
- 7f9f467daae6 Already exists 
- bea5431aed03 Already exists 
+ 3c03150a0a6a Pulling fs layer 
+ d652f73cc69b Pulling fs layer 
+ d652f73cc69b Downloading [>                                                  ]  4.107kB/359.8kB
+ d652f73cc69b Downloading [>                                                  ]  4.107kB/359.8kB
+ d652f73cc69b Verifying Checksum 
+ d652f73cc69b Download complete 
+ d652f73cc69b Verifying Checksum 
+ d652f73cc69b Download complete 
+ 3c03150a0a6a Verifying Checksum 
+ 3c03150a0a6a Download complete 
+ 3c03150a0a6a Downloading [==================================================>]      91B/91B
+ 3c03150a0a6a Verifying Checksum 
+ 3c03150a0a6a Download complete 
+ 3c03150a0a6a Extracting [==================================================>]      91B/91B
+ 3c03150a0a6a Extracting [==================================================>]      91B/91B
+ 3c03150a0a6a Extracting [==================================================>]      91B/91B
+ 3c03150a0a6a Extracting [==================================================>]      91B/91B
+ 3c03150a0a6a Pull complete 
+ 3c03150a0a6a Pull complete 
+ d652f73cc69b Extracting [====>                                              ]  32.77kB/359.8kB
+ d652f73cc69b Extracting [====>                                              ]  32.77kB/359.8kB
+ d652f73cc69b Extracting [==================================================>]  359.8kB/359.8kB
+ d652f73cc69b Extracting [==================================================>]  359.8kB/359.8kB
+ d652f73cc69b Extracting [==================================================>]  359.8kB/359.8kB
+ d652f73cc69b Extracting [==================================================>]  359.8kB/359.8kB
+ d652f73cc69b Pull complete 
+ d652f73cc69b Pull complete 
  backend2 Pulled 
- worker2 Pulled 
  backend1 Pulled 
- worker1 Pulled 
  Network not4rt-rustcoroutines_backend  Creating
  Network not4rt-rustcoroutines_backend  Created
- Container not4rt-rustcoroutines-valkey-1  Creating
- Container not4rt-rustcoroutines-valkey-1  Created
- Container not4rt-rustcoroutines-worker2-1  Creating
- Container not4rt-rustcoroutines-backend2-1  Creating
- Container not4rt-rustcoroutines-worker1-1  Creating
  Container not4rt-rustcoroutines-backend1-1  Creating
+ Container not4rt-rustcoroutines-backend2-1  Creating
  Container not4rt-rustcoroutines-backend1-1  Created
  Container not4rt-rustcoroutines-backend2-1  Created
  Container not4rt-rustcoroutines-haproxy-1  Creating
- Container not4rt-rustcoroutines-worker1-1  Created
- Container not4rt-rustcoroutines-worker2-1  Created
  Container not4rt-rustcoroutines-haproxy-1  Created
-Attaching to backend1-1, backend2-1, haproxy-1, valkey-1, worker1-1, worker2-1
-valkey-1    | 1:M 23 Jul 2025 13:12:21.878 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
-valkey-1    | 1:M 23 Jul 2025 13:12:21.878 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
-valkey-1    | 1:M 23 Jul 2025 13:12:21.878 * Valkey version=8.1.3, bits=64, commit=00000000, modified=0, pid=1, just started
-valkey-1    | 1:M 23 Jul 2025 13:12:21.878 * Configuration loaded
-valkey-1    | 1:M 23 Jul 2025 13:12:21.879 * monotonic clock: POSIX clock_gettime
-valkey-1    | 1:M 23 Jul 2025 13:12:21.880 * Running mode=standalone, port=6379.
-valkey-1    | 1:M 23 Jul 2025 13:12:21.880 # WARNING: The TCP backlog setting of 65535 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 4096.
-valkey-1    | 1:M 23 Jul 2025 13:12:21.881 * Server initialized
-valkey-1    | 1:M 23 Jul 2025 13:12:21.881 * Ready to accept connections tcp
-worker2-1   | Configuration:
-worker2-1   |   CPUs: 1
-worker2-1   |   Port: 8080
-worker2-1   |   Redis: redis://valkey
-worker2-1   |   Default Processor: http://payment-processor-default:8080
-worker2-1   |   Fallback Processor: http://payment-processor-fallback:8080
-worker2-1   | Redis scripts initialized
-worker2-1   | Starting workers...
-worker2-1   | Started only worker mode...
-worker2-1   | Worker 0 started
-worker1-1   | Configuration:
-worker1-1   |   CPUs: 1
-worker1-1   |   Port: 8080
-worker1-1   |   Redis: redis://valkey
-worker1-1   |   Default Processor: http://payment-processor-default:8080
-worker1-1   |   Fallback Processor: http://payment-processor-fallback:8080
-worker1-1   | Redis scripts initialized
-worker1-1   | Starting workers...
-worker1-1   | Started only worker mode...
-worker1-1   | Worker 0 started
-backend2-1  | Configuration:
-backend2-1  |   CPUs: 1
-backend2-1  |   Port: 8080
-backend2-1  |   Redis: redis://valkey
-backend2-1  |   Default Processor: http://payment-processor-default:8080
-backend2-1  |   Fallback Processor: http://payment-processor-fallback:8080
-backend2-1  | Redis scripts initialized
-backend2-1  | Starting HTTP server on port 8080
+Attaching to backend1-1, backend2-1, haproxy-1
 backend1-1  | Configuration:
 backend1-1  |   CPUs: 1
 backend1-1  |   Port: 8080
-backend1-1  |   Redis: redis://valkey
-backend1-1  |   Default Processor: http://payment-processor-default:8080
-backend1-1  |   Fallback Processor: http://payment-processor-fallback:8080
-backend1-1  | Redis scripts initialized
+backend1-1  |   Default Processor: payment-processor-default:8080
+backend1-1  |   Fallback Processor: payment-processor-fallback:8080
+backend1-1  |   Peer Host: backend2:8080
+backend1-1  | Starting workers...
 backend1-1  | Starting HTTP server on port 8080
+backend1-1  | Worker 0 started
+backend2-1  | Configuration:
+backend2-1  |   CPUs: 1
+backend2-1  |   Port: 8080
+backend2-1  |   Default Processor: payment-processor-default:8080
+backend2-1  |   Fallback Processor: payment-processor-fallback:8080
+backend2-1  |   Peer Host: backend1:8080
+backend2-1  | Starting workers...
+backend2-1  | Starting HTTP server on port 8080
+backend2-1  | Worker 0 started
 haproxy-1   | [NOTICE]   (7) : haproxy version is 3.2.3-1844da7
 haproxy-1   | [NOTICE]   (7) : path to executable is /usr/local/sbin/haproxy
 haproxy-1   | [WARNING]  (7) : missing timeouts for frontend 'api_frontend'.
@@ -113,21 +71,24 @@ haproxy-1   | [WARNING]  (7) : missing timeouts for backend 'api_backend'.
 haproxy-1   |    | While not properly invalid, you will certainly encounter various problems
 haproxy-1   |    | with such a configuration. To fix this, please ensure that all following
 haproxy-1   |    | timeouts are set to a non-zero value: 'client', 'connect', 'server'.
-worker2-1   | Worker 0: Processed 266 payments
-worker1-1   | Worker 0: Processed 912 payments
-worker2-1   | Worker 0: Processed 3000 payments
-worker1-1   | Worker 0: Processed 3000 payments
-worker2-1   | Worker 0: Processed 3000 payments
-worker1-1   | Worker 0: Processed 3000 payments
-worker1-1   | Worker 0: Processed 629 payments
-worker2-1   | Worker 0: Processed 2313 payments
-[Kworker2-1 exited with code 137
+backend2-1  | Summary request processed in 0 ms
+backend1-1  | Summary request processed in 2 ms
+backend2-1  | Purged backend payments
+backend1-1  | Summary request processed in 0 ms
+backend2-1  | Summary request processed in 0 ms
+backend1-1  | Summary request processed in 0 ms
+backend2-1  | Summary request processed in 0 ms
+backend2-1  | Summary request processed in 0 ms
+backend1-1  | Summary request processed in 0 ms
+backend2-1  | Summary request processed in 0 ms
+backend1-1  | Summary request processed in 1 ms
+backend2-1  | Summary request processed in 0 ms
+backend1-1  | Summary request processed in 3 ms
+backend2-1  | Summary request processed in 0 ms
+backend1-1  | Summary request processed in 2 ms
+backend2-1  | Summary request processed in 0 ms
+backend1-1  | Summary request processed in 2 ms
 [Khaproxy-1 exited with code 137
-[Kworker1-1 exited with code 137
-[Kbackend1-1 exited with code 137
 [Kbackend2-1 exited with code 137
-valkey-1    | 1:signal-handler (1753276437) Received SIGTERM scheduling shutdown...
-valkey-1    | 1:M 23 Jul 2025 13:13:57.280 * User requested shutdown...
-valkey-1    | 1:M 23 Jul 2025 13:13:57.280 # Valkey is now ready to exit, bye bye...
-[Kvalkey-1 exited with code 0
+[Kbackend1-1 exited with code 137
 log truncated at line 1000

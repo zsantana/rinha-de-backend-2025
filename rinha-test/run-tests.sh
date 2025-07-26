@@ -121,7 +121,11 @@ while true; do
     )
     done
 
+    PREVIA_RESULTADOS_JSON=../previa-resultados+participantes-info.json
+    python3 previa_resultados_json.py $PREVIA_RESULTADOS_JSON
+    
     git pull
+    git add $PREVIA_RESULTADOS_JSON
     git add $PREVIA_RESULTADOS
     git commit -m "previa resultados @ $(date)"
     git push

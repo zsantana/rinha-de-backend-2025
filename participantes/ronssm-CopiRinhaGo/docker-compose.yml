@@ -43,6 +43,9 @@ services:
           memory: "110MB"
   nginx:
     image: nginx:latest
+    depends_on:
+      - backend1
+      - backend2
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf
     ports:

@@ -1,33 +1,9 @@
 name: DaniloSantanaRB2025
 
 services:
-  api-1: &api-service
-    image: danilosantanaaa/rinha:2025
-    expose:
-      - "8080"
-    ports:
-      - "3001:8080"
-    environment:
-      - ASPNETCORE_URLS=http://+:8080
-      - ConnectionStrings__PostgreSQL=User Id=postgres;Password=password;Server=rinha-db;Port=5432;Database=rinha
-      - PaymentProcessorDefault=http://payment-processor-default:8080
-      - PaymentProcessorFallback=http://payment-processor-fallback:8080
-    depends_on:
-      - rinha-db
-    networks:
-      - backend
-      - payment-processor
-    deploy:
-      resources:
-        limits:
-          cpus: "0.45"
-          memory: "85MB"
-  api-2:
-    <<: *api-service
-    ports:
-      - "3002:8080"
 
   load-balancer:
+    container_name: load-balancer
     image: nginx:latest
     ports:
       - "9999:9999"
@@ -38,41 +14,97 @@ services:
       - api-2
     networks:
       - backend
-      - payment-processor
-    deploy:
-      resources:
-        limits:
-          cpus: "0.2"
-          memory: "60MB"
-
-  rinha-db:
-    image: postgres:17-alpine
-    networks:
-      - backend
-      - payment-processor
-    volumes:
-      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
-    environment:
-      - POSTGRES_PASSWORD=password
-      - POSTGRES_USER=postgres
-      - POSTGRES_DB=rinha
-    ports:
-      - "5432:5432"
-    healthcheck:
-      test: [ "CMD-SHELL", "pg_isready -U postgres -d rinha" ]
-      interval: 2s
-      retries: 5
-      start_period: 2s
     deploy:
       resources:
         limits:
           cpus: "0.4"
-          memory: "120MB"
+          memory: "40MB"
+
+  api-1: &api-service
+    container_name: api-1
+    image: danilosantanaaa/rinha:2025.2
+    expose:
+      - "8080"
+    ports:
+      - "3001:8080"
+    hostname: api-1
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ASPNETCORE_URLS=http://+:8080
+      - ConnectionStrings__Redis=redis:6379,abortConnect=false
+      - ConnectionStrings__PostgreSQL=User Id=postgres;Password=postgres;Server=postgreSQL;Port=5432;Database=rinha
+      - PaymentProcessorDefault=http://payment-processor-default:8080
+      - PaymentProcessorFallback=http://payment-processor-fallback:8080
+    depends_on:
+      - postgreSQL
+      - redis
+    networks:
+      - backend
+      - payment-processor
+    deploy:
+      resources:
+        limits:
+          cpus: "0.3"
+          memory: "95MB"
+  api-2:
+    <<: *api-service
+    container_name: api-2
+    ports:
+      - "3002:8080"
+    hostname: api-2
+    
+  redis:
+    container_name: cache
+    hostname: redis
+    image: redis:latest
+    ports:
+      - "6379:6379"
+    networks:
+      - backend
+    restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: "0.2"
+          memory: "20MB"
+
+  postgreSQL:
+    container_name: database
+    hostname: postgreSQL
+    image: postgres:17-alpine
+    networks:
+      - backend
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    environment:
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=rinha
+    ports:
+      - "5432:5432"
+    command: >
+      postgres
+      -c fsync=off
+      -c work_mem=64MB
+      -c synchronous_commit=off
+      -c wal_level=minimal
+      -c max_wal_senders=0
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U postgres -d rinha" ]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+    deploy:
+      resources:
+        limits:
+          cpus: "0.3"
+          memory: "100MB"
 
 networks:
   backend:
     name: backend
     driver: bridge
+    external: true
   payment-processor:
     name: payment-processor
     driver: bridge

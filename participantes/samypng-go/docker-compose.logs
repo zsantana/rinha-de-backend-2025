@@ -1,56 +1,8 @@
 
- backend2 Pulling 
  backend1 Pulling 
- 9824c27679d3 Already exists 
- a153787a2048 Pulling fs layer 
- 4f4fb700ef54 Pulling fs layer 
- dfe4f6cdff23 Pulling fs layer 
- 9824c27679d3 Already exists 
- a153787a2048 Pulling fs layer 
- 4f4fb700ef54 Pulling fs layer 
- dfe4f6cdff23 Pulling fs layer 
- 4f4fb700ef54 Downloading [==================================================>]      32B/32B
- 4f4fb700ef54 Verifying Checksum 
- 4f4fb700ef54 Download complete 
- 4f4fb700ef54 Downloading [==================================================>]      32B/32B
- 4f4fb700ef54 Verifying Checksum 
- 4f4fb700ef54 Download complete 
- dfe4f6cdff23 Downloading [>                                                  ]  131.1kB/13.07MB
- dfe4f6cdff23 Downloading [>                                                  ]  131.1kB/13.07MB
- a153787a2048 Downloading [>                                                  ]  3.745kB/282.5kB
- a153787a2048 Downloading [>                                                  ]  3.745kB/282.5kB
- a153787a2048 Download complete 
- a153787a2048 Download complete 
- a153787a2048 Extracting [=====>                                             ]  32.77kB/282.5kB
- a153787a2048 Extracting [=====>                                             ]  32.77kB/282.5kB
- dfe4f6cdff23 Downloading [============================>                      ]  7.451MB/13.07MB
- dfe4f6cdff23 Downloading [============================>                      ]  7.451MB/13.07MB
- a153787a2048 Extracting [==================================================>]  282.5kB/282.5kB
- a153787a2048 Extracting [==================================================>]  282.5kB/282.5kB
- a153787a2048 Extracting [==================================================>]  282.5kB/282.5kB
- a153787a2048 Extracting [==================================================>]  282.5kB/282.5kB
- dfe4f6cdff23 Verifying Checksum 
- dfe4f6cdff23 Verifying Checksum 
- dfe4f6cdff23 Download complete 
- dfe4f6cdff23 Download complete 
- a153787a2048 Pull complete 
- a153787a2048 Pull complete 
- 4f4fb700ef54 Extracting [==================================================>]      32B/32B
- 4f4fb700ef54 Extracting [==================================================>]      32B/32B
- 4f4fb700ef54 Extracting [==================================================>]      32B/32B
- 4f4fb700ef54 Extracting [==================================================>]      32B/32B
- 4f4fb700ef54 Pull complete 
- 4f4fb700ef54 Pull complete 
- dfe4f6cdff23 Extracting [>                                                  ]  131.1kB/13.07MB
- dfe4f6cdff23 Extracting [>                                                  ]  131.1kB/13.07MB
- dfe4f6cdff23 Extracting [=========================>                         ]  6.685MB/13.07MB
- dfe4f6cdff23 Extracting [=========================>                         ]  6.685MB/13.07MB
- dfe4f6cdff23 Extracting [==================================================>]  13.07MB/13.07MB
- dfe4f6cdff23 Extracting [==================================================>]  13.07MB/13.07MB
- dfe4f6cdff23 Pull complete 
- dfe4f6cdff23 Pull complete 
- backend2 Pulled 
+ backend2 Pulling 
  backend1 Pulled 
+ backend2 Pulled 
  Network samypng-go_rinha-network  Creating
  Network samypng-go_rinha-network  Created
  Container rinha-redis  Creating
@@ -62,14 +14,14 @@
  Container rinha-nginx  Creating
  Container rinha-nginx  Created
 Attaching to rinha-backend-1, rinha-backend-2, rinha-nginx, rinha-redis
-rinha-redis      | 1:C 24 Jul 2025 19:51:28.268 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
-rinha-redis      | 1:C 24 Jul 2025 19:51:28.268 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
-rinha-redis      | 1:C 24 Jul 2025 19:51:28.268 * Redis version=7.4.5, bits=64, commit=00000000, modified=0, pid=1, just started
-rinha-redis      | 1:C 24 Jul 2025 19:51:28.268 * Configuration loaded
-rinha-redis      | 1:M 24 Jul 2025 19:51:28.269 * monotonic clock: POSIX clock_gettime
-rinha-redis      | 1:M 24 Jul 2025 19:51:28.269 * Running mode=standalone, port=6379.
-rinha-redis      | 1:M 24 Jul 2025 19:51:28.269 * Server initialized
-rinha-redis      | 1:M 24 Jul 2025 19:51:28.269 * Ready to accept connections tcp
+rinha-redis      | 1:C 26 Jul 2025 21:42:22.286 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+rinha-redis      | 1:C 26 Jul 2025 21:42:22.286 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+rinha-redis      | 1:C 26 Jul 2025 21:42:22.286 * Redis version=7.4.5, bits=64, commit=00000000, modified=0, pid=1, just started
+rinha-redis      | 1:C 26 Jul 2025 21:42:22.286 * Configuration loaded
+rinha-redis      | 1:M 26 Jul 2025 21:42:22.286 * monotonic clock: POSIX clock_gettime
+rinha-redis      | 1:M 26 Jul 2025 21:42:22.287 * Running mode=standalone, port=6379.
+rinha-redis      | 1:M 26 Jul 2025 21:42:22.287 * Server initialized
+rinha-redis      | 1:M 26 Jul 2025 21:42:22.287 * Ready to accept connections tcp
 rinha-backend-1  | 
 rinha-backend-1  |  ┌───────────────────────────────────────────────────┐ 
 rinha-backend-1  |  │                   Fiber v2.52.8                   │ 
@@ -102,8 +54,8 @@ rinha-nginx      | /docker-entrypoint.sh: Configuration complete; ready for star
 [Krinha-nginx exited with code 0
 [Krinha-backend-1 exited with code 137
 [Krinha-backend-2 exited with code 137
-rinha-redis      | 1:signal-handler (1753386782) Received SIGTERM scheduling shutdown...
-rinha-redis      | 1:M 24 Jul 2025 19:53:02.464 * User requested shutdown...
-rinha-redis      | 1:M 24 Jul 2025 19:53:02.464 # Redis is now ready to exit, bye bye...
+rinha-redis      | 1:signal-handler (1753566233) Received SIGTERM scheduling shutdown...
+rinha-redis      | 1:M 26 Jul 2025 21:43:53.777 * User requested shutdown...
+rinha-redis      | 1:M 26 Jul 2025 21:43:53.777 # Redis is now ready to exit, bye bye...
 [Krinha-redis exited with code 0
 log truncated at line 1000
