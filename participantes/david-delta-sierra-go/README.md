@@ -1,5 +1,5 @@
 # Projeto
-Projeto construido utilizando GO com framework Echo (APIs), e postgres
+Projeto construido utilizando GO com framework Echo (APIs), e postgres, nginx como LB
 
 # Arquitetura
 ````aiignore
