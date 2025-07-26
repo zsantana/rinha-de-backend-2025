@@ -10,22 +10,25 @@ x-service-templates:
     deploy:
       resources:
         limits:
-          cpus: "0.3"
-          memory: "90M"
+          cpus: "0.245"
+          memory: "110M"
 
 services:
-  caddy:
-    image: caddy:latest
+  nginx:
+    image: nginx:latest
     ports:
       - "9999:9999"
     volumes:
-      - ./Caddyfile:/etc/caddy/Caddyfile
+      - ./nginx.conf:/etc/nginx/nginx.conf
     networks:
       - backend
+    depends_on:
+      - api01
+      - api02
     deploy:
       resources:
         limits:
-          cpus: "0.15"
+          cpus: "0.12"
           memory: "50M"
 
   redis:
@@ -40,11 +43,14 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.15"
-          memory: "40M"
+          cpus: "0.28"
+          memory: "55M"
 
-  worker:
+  payment-worker:
     image: leoralph/rinha-de-backend-2025-worker:latest
+    environment:
+      - WORKER_TYPE=payment
+      - WORKER_COUNT=10
     depends_on:
       redis:
         condition: service_healthy
@@ -55,7 +61,23 @@ services:
       resources:
         limits:
           cpus: "0.6"
-          memory: "80M"
+          memory: "15M"
+
+  health-worker:
+    image: leoralph/rinha-de-backend-2025-worker:latest
+    environment:
+      - WORKER_TYPE=health
+    depends_on:
+      redis:
+        condition: service_healthy
+    networks:
+      - backend
+      - payment-processor
+    deploy:
+      resources:
+        limits:
+          cpus: "0.01"
+          memory: "10M"
 
   api01:
     <<: *api
