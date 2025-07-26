@@ -25,6 +25,8 @@ services:
     container_name: payment-api-1
     hostname: payment-api-1
     environment:
+      Logging__LogLevel__Default: Error
+      Logging__LogLevel__Microsoft.AspNetCore: Error
       ASPNETCORE_ENVIRONMENT: Production
       ConnectionStrings__Postgres: "server=payment-db; database=PaymentsDB; user id=user; password=password; pooling=true; maximum pool size=256; multiplexing=true; no reset on close=true; max auto prepare=50; auto prepare min usages=1;"
       PaymentProcessors__Default__BaseUrl: "http://payment-processor-default:8080"
@@ -53,11 +55,12 @@ services:
     hostname: payment-api-2
 
   payment-db:
-    image: postgres:16-alpine
+    image: postgres:15-alpine
     container_name: payment-db
+    hostname: payment-db
     command: >-
       postgres -c max_connections=400
-               -c shared_buffers=100MB
+               -c shared_buffers=512MB
                -c synchronous_commit=off
                -c fsync=off
                -c full_page_writes=off
