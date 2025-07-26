@@ -1,78 +1,12 @@
 
- quarkus-backend-1 Pulling 
- quarkus-backend-2 Pulling 
- fcce199ebec0 Already exists 
- 4f4fb700ef54 Already exists 
- e24321d3af6d Already exists 
- 2a89df389bcc Already exists 
- 1c2db57be337 Pulling fs layer 
- 5dd6f8963a86 Pulling fs layer 
- 03ade769df91 Pulling fs layer 
- fcce199ebec0 Already exists 
- 4f4fb700ef54 Already exists 
- e24321d3af6d Already exists 
- 2a89df389bcc Already exists 
- 1c2db57be337 Pulling fs layer 
- 5dd6f8963a86 Pulling fs layer 
- 03ade769df91 Pulling fs layer 
- 5dd6f8963a86 Downloading [==================================================>]     120B/120B
- 5dd6f8963a86 Verifying Checksum 
- 5dd6f8963a86 Download complete 
- 5dd6f8963a86 Downloading [==================================================>]     120B/120B
- 5dd6f8963a86 Verifying Checksum 
- 5dd6f8963a86 Download complete 
- 03ade769df91 Downloading [>                                                  ]  314.8kB/30.37MB
- 03ade769df91 Downloading [>                                                  ]  314.8kB/30.37MB
- 03ade769df91 Downloading [==================>                                ]  11.23MB/30.37MB
- 03ade769df91 Downloading [==================>                                ]  11.23MB/30.37MB
- 03ade769df91 Downloading [====================================>              ]  22.16MB/30.37MB
- 03ade769df91 Downloading [====================================>              ]  22.16MB/30.37MB
- 03ade769df91 Downloading [================================================>  ]  29.67MB/30.37MB
- 03ade769df91 Downloading [================================================>  ]  29.67MB/30.37MB
- 03ade769df91 Verifying Checksum 
- 03ade769df91 Download complete 
- 03ade769df91 Verifying Checksum 
- 03ade769df91 Download complete 
- 1c2db57be337 Downloading [==================================================>]      94B/94B
- 1c2db57be337 Verifying Checksum 
- 1c2db57be337 Download complete 
- 1c2db57be337 Download complete 
- 1c2db57be337 Extracting [==================================================>]      94B/94B
- 1c2db57be337 Extracting [==================================================>]      94B/94B
- 1c2db57be337 Extracting [==================================================>]      94B/94B
- 1c2db57be337 Extracting [==================================================>]      94B/94B
- 1c2db57be337 Pull complete 
- 1c2db57be337 Pull complete 
- 5dd6f8963a86 Extracting [==================================================>]     120B/120B
- 5dd6f8963a86 Extracting [==================================================>]     120B/120B
- 5dd6f8963a86 Extracting [==================================================>]     120B/120B
- 5dd6f8963a86 Extracting [==================================================>]     120B/120B
- 5dd6f8963a86 Pull complete 
- 5dd6f8963a86 Pull complete 
- 03ade769df91 Extracting [>                                                  ]  327.7kB/30.37MB
- 03ade769df91 Extracting [>                                                  ]  327.7kB/30.37MB
- 03ade769df91 Extracting [===========>                                       ]  7.209MB/30.37MB
- 03ade769df91 Extracting [===========>                                       ]  7.209MB/30.37MB
- 03ade769df91 Extracting [=======================>                           ]  14.42MB/30.37MB
- 03ade769df91 Extracting [=======================>                           ]  14.42MB/30.37MB
- 03ade769df91 Extracting [===============================>                   ]  19.33MB/30.37MB
- 03ade769df91 Extracting [===============================>                   ]  19.33MB/30.37MB
- 03ade769df91 Extracting [==========================================>        ]  25.89MB/30.37MB
- 03ade769df91 Extracting [==========================================>        ]  25.89MB/30.37MB
- 03ade769df91 Extracting [==================================================>]  30.37MB/30.37MB
- 03ade769df91 Extracting [==================================================>]  30.37MB/30.37MB
- 03ade769df91 Pull complete 
- 03ade769df91 Pull complete 
- quarkus-backend-1 Pulled 
- quarkus-backend-2 Pulled 
  Network adriano-moreira_app  Creating
  Network adriano-moreira_app  Created
  Container adriano-moreira-postgres-1  Creating
  Container adriano-moreira-postgres-1  Created
  Container adriano-moreira-quarkus-backend-2-1  Creating
  Container adriano-moreira-quarkus-backend-1-1  Creating
- Container adriano-moreira-quarkus-backend-2-1  Created
  Container adriano-moreira-quarkus-backend-1-1  Created
+ Container adriano-moreira-quarkus-backend-2-1  Created
  Container adriano-moreira-nginx-1  Creating
  Container adriano-moreira-nginx-1  Created
 Attaching to nginx-1, postgres-1, quarkus-backend-1-1, quarkus-backend-2-1
@@ -103,183 +37,53 @@ postgres-1           |     pg_ctl -D /var/lib/postgresql/data -l logfile start
 postgres-1           | 
 postgres-1           | initdb: warning: enabling "trust" authentication for local connections
 postgres-1           | initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
-postgres-1           | waiting for server to start....2025-07-24 20:04:50.016 UTC [61] LOG:  starting PostgreSQL 17.5 (Debian 17.5-1.pgdg120+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14) 12.2.0, 64-bit
-postgres-1           | 2025-07-24 20:04:50.086 UTC [61] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
-postgres-1           | 2025-07-24 20:04:50.102 UTC [64] LOG:  database system was shut down at 2025-07-24 20:04:49 UTC
-postgres-1           | 2025-07-24 20:04:50.115 UTC [61] LOG:  database system is ready to accept connections
+postgres-1           | waiting for server to start....2025-07-26 18:52:37.085 UTC [67] LOG:  starting PostgreSQL 17.5 (Debian 17.5-1.pgdg120+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14) 12.2.0, 64-bit
+postgres-1           | 2025-07-26 18:52:37.090 UTC [67] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+postgres-1           | 2025-07-26 18:52:37.108 UTC [70] LOG:  database system was shut down at 2025-07-26 18:52:36 UTC
+postgres-1           | 2025-07-26 18:52:37.118 UTC [67] LOG:  database system is ready to accept connections
 postgres-1           |  done
 postgres-1           | server started
-postgres-1           | 2025-07-24 20:04:50.586 UTC [77] FATAL:  database "rinha" does not exist
 postgres-1           | CREATE DATABASE
 postgres-1           | 
 postgres-1           | 
 postgres-1           | /usr/local/bin/docker-entrypoint.sh: running /docker-entrypoint-initdb.d/script.sql
-quarkus-backend-1-1  | __  ____  __  _____   ___  __ ____  ______ 
-quarkus-backend-1-1  |  --/ __ \/ / / / _ | / _ \/ //_/ / / / __/ 
-quarkus-backend-1-1  |  -/ /_/ / /_/ / __ |/ , _/ ,< / /_/ /\ \   
-quarkus-backend-1-1  | --\___\_\____/_/ |_/_/|_/_/|_|\____/___/   
-quarkus-backend-1-1  | 2025-07-24 20:04:51,290 WARN  [io.agr.pool] (agroal-11) Datasource '<default>': Connection to postgres:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
-quarkus-backend-1-1  | 2025-07-24 20:04:51,290 WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) SQL Error: 0, SQLState: 08001
-quarkus-backend-1-1  | 2025-07-24 20:04:51,290 ERROR [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) Connection to postgres:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
-quarkus-backend-1-1  | 2025-07-24 20:04:51,290 WARN  [org.hib.eng.jdb.env.int.JdbcEnvironmentInitiator] (JPA Startup Thread) HHH000342: Could not obtain connection to query metadata: org.hibernate.exception.JDBCConnectionException: unable to obtain isolated JDBC connection [Connection to postgres:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.] [n/a]
-quarkus-backend-1-1  | 	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:100)
-quarkus-backend-1-1  | 	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58)
-quarkus-backend-1-1  | 	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
-quarkus-backend-1-1  | 	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94)
-quarkus-backend-1-1  | 	at org.hibernate.resource.transaction.backend.jta.internal.JtaIsolationDelegate.doTheWork(JtaIsolationDelegate.java:206)
-quarkus-backend-1-1  | 	at org.hibernate.resource.transaction.backend.jta.internal.JtaIsolationDelegate.lambda$delegateWork$3(JtaIsolationDelegate.java:91)
-quarkus-backend-1-1  | 	at org.hibernate.resource.transaction.backend.jta.internal.JtaIsolationDelegate.doInSuspendedTransaction(JtaIsolationDelegate.java:125)
-quarkus-backend-1-1  | 	at org.hibernate.resource.transaction.backend.jta.internal.JtaIsolationDelegate.delegateWork(JtaIsolationDelegate.java:88)
-quarkus-backend-1-1  | 	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:320)
-quarkus-backend-1-1  | 	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:129)
-quarkus-backend-1-1  | 	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:81)
-quarkus-backend-1-1  | 	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
-quarkus-backend-1-1  | 	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
-quarkus-backend-1-1  | 	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
-quarkus-backend-1-1  | 	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
-quarkus-backend-1-1  | 	at org.hibernate.service.ServiceRegistry.requireService(ServiceRegistry.java:68)
-quarkus-backend-1-1  | 	at org.hibernate.engine.jdbc.internal.JdbcServicesImpl.configure(JdbcServicesImpl.java:52)
-quarkus-backend-1-1  | 	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:136)
-quarkus-backend-1-1  | 	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:247)
-quarkus-backend-1-1  | 	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
-quarkus-backend-1-1  | 	at org.hibernate.service.ServiceRegistry.requireService(ServiceRegistry.java:68)
-quarkus-backend-1-1  | 	at org.hibernate.boot.internal.SessionFactoryOptionsBuilder.<init>(SessionFactoryOptionsBuilder.java:290)
-quarkus-backend-1-1  | 	at io.quarkus.hibernate.orm.runtime.recording.PrevalidatedQuarkusMetadata.buildSessionFactoryOptionsBuilder(PrevalidatedQuarkusMetadata.java:72)
-quarkus-backend-1-1  | 	at io.quarkus.hibernate.orm.runtime.boot.FastBootEntityManagerFactoryBuilder.build(FastBootEntityManagerFactoryBuilder.java:84)
-quarkus-backend-1-1  | 	at io.quarkus.hibernate.orm.runtime.FastBootHibernatePersistenceProvider.createEntityManagerFactory(FastBootHibernatePersistenceProvider.java:72)
-quarkus-backend-1-1  | 	at jakarta.persistence.Persistence.createEntityManagerFactory(Persistence.java:80)
-quarkus-backend-1-1  | 	at jakarta.persistence.Persistence.createEntityManagerFactory(Persistence.java:55)
-quarkus-backend-1-1  | 	at io.quarkus.hibernate.orm.runtime.JPAConfig$LazyPersistenceUnit.get(JPAConfig.java:163)
-quarkus-backend-1-1  | 	at io.quarkus.hibernate.orm.runtime.JPAConfig$1.run(JPAConfig.java:63)
-quarkus-backend-1-1  | 	at java.base@21.0.7/java.lang.Thread.runWith(Thread.java:1596)
-quarkus-backend-1-1  | 	at java.base@21.0.7/java.lang.Thread.run(Thread.java:1583)
-quarkus-backend-1-1  | 	at org.graalvm.nativeimage.builder/com.oracle.svm.core.thread.PlatformThreads.threadStartRoutine(PlatformThreads.java:896)
-quarkus-backend-1-1  | 	at org.graalvm.nativeimage.builder/com.oracle.svm.core.thread.PlatformThreads.threadStartRoutine(PlatformThreads.java:872)
-quarkus-backend-1-1  | Caused by: org.postgresql.util.PSQLException: Connection to postgres:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
-quarkus-backend-1-1  | 	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:352)
-quarkus-backend-1-1  | 	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
-quarkus-backend-1-1  | 	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:273)
-quarkus-backend-1-1  | 	at org.postgresql.Driver.makeConnection(Driver.java:446)
-quarkus-backend-1-1  | 	at org.postgresql.Driver.connect(Driver.java:298)
-quarkus-backend-1-1  | 	at io.agroal.pool.ConnectionFactory.createConnection(ConnectionFactory.java:225)
-quarkus-backend-1-1  | 	at io.agroal.pool.ConnectionPool$CreateConnectionTask.call(ConnectionPool.java:585)
-quarkus-backend-1-1  | 	at io.agroal.pool.ConnectionPool$CreateConnectionTask.call(ConnectionPool.java:566)
-quarkus-backend-1-1  | 	at java.base@21.0.7/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-quarkus-backend-1-1  | 	at io.agroal.pool.util.PriorityScheduledExecutor.beforeExecute(PriorityScheduledExecutor.java:75)
-quarkus-backend-1-1  | 	at java.base@21.0.7/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-quarkus-backend-1-1  | 	at java.base@21.0.7/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-quarkus-backend-1-1  | 	... 4 more
-quarkus-backend-1-1  | Caused by: java.net.ConnectException: Connection refused
-quarkus-backend-1-1  | 	at java.base@21.0.7/sun.nio.ch.Net.pollConnect(Native Method)
-quarkus-backend-1-1  | 	at java.base@21.0.7/sun.nio.ch.Net.pollConnectNow(Net.java:682)
-quarkus-backend-1-1  | 	at java.base@21.0.7/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
-quarkus-backend-1-1  | 	at java.base@21.0.7/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
-quarkus-backend-1-1  | 	at java.base@21.0.7/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
-quarkus-backend-1-1  | 	at java.base@21.0.7/java.net.Socket.connect(Socket.java:751)
-quarkus-backend-1-1  | 	at org.postgresql.core.PGStream.createSocket(PGStream.java:260)
-quarkus-backend-1-1  | 	at org.postgresql.core.PGStream.<init>(PGStream.java:121)
-quarkus-backend-1-1  | 	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:140)
-quarkus-backend-1-1  | 	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:268)
-quarkus-backend-1-1  | 	... 15 more
-quarkus-backend-1-1  | 
-quarkus-backend-1-1  | 2025-07-24 20:04:51,294 WARN  [io.qua.hib.orm.run.ser.QuarkusRuntimeInitDialectFactory] (JPA Startup Thread) Persistence unit <default>: Could not retrieve the database version to check it is at least 12.0.0
 postgres-1           | CREATE TABLE
-quarkus-backend-1-1  | 2025-07-24 20:04:51,297 INFO  [io.quarkus] (main) rinha-de-backend-2025-java-quarkus 1.0-SNAPSHOT native (powered by Quarkus 3.20.1) started in 0.054s. Listening on: http://0.0.0.0:8080
-quarkus-backend-1-1  | 2025-07-24 20:04:51,298 INFO  [io.quarkus] (main) Profile prod activated. 
-quarkus-backend-1-1  | 2025-07-24 20:04:51,298 INFO  [io.quarkus] (main) Installed features: [agroal, cdi, hibernate-orm, hibernate-orm-panache, jdbc-postgresql, narayana-jta, rest, rest-client, rest-client-jackson, rest-jackson, smallrye-context-propagation, smallrye-openapi, vertx]
 postgres-1           | CREATE INDEX
 postgres-1           | 
 postgres-1           | 
-postgres-1           | waiting for server to shut down....2025-07-24 20:04:51.303 UTC [61] LOG:  received fast shutdown request
-postgres-1           | 2025-07-24 20:04:51.314 UTC [61] LOG:  aborting any active transactions
-postgres-1           | 2025-07-24 20:04:51.318 UTC [61] LOG:  background worker "logical replication launcher" (PID 73) exited with exit code 1
-postgres-1           | 2025-07-24 20:04:51.319 UTC [62] LOG:  shutting down
-postgres-1           | 2025-07-24 20:04:51.326 UTC [62] LOG:  checkpoint starting: shutdown immediate
-quarkus-backend-2-1  | __  ____  __  _____   ___  __ ____  ______ 
-quarkus-backend-2-1  |  --/ __ \/ / / / _ | / _ \/ //_/ / / / __/ 
-quarkus-backend-2-1  |  -/ /_/ / /_/ / __ |/ , _/ ,< / /_/ /\ \   
-quarkus-backend-2-1  | --\___\_\____/_/ |_/_/|_/_/|_|\____/___/   
-quarkus-backend-2-1  | 2025-07-24 20:04:51,327 WARN  [io.agr.pool] (agroal-11) Datasource '<default>': Connection to postgres:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
-quarkus-backend-2-1  | 2025-07-24 20:04:51,327 WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) SQL Error: 0, SQLState: 08001
-quarkus-backend-2-1  | 2025-07-24 20:04:51,327 ERROR [org.hib.eng.jdb.spi.SqlExceptionHelper] (JPA Startup Thread) Connection to postgres:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
-quarkus-backend-2-1  | 2025-07-24 20:04:51,327 WARN  [org.hib.eng.jdb.env.int.JdbcEnvironmentInitiator] (JPA Startup Thread) HHH000342: Could not obtain connection to query metadata: org.hibernate.exception.JDBCConnectionException: unable to obtain isolated JDBC connection [Connection to postgres:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.] [n/a]
-quarkus-backend-2-1  | 	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:100)
-quarkus-backend-2-1  | 	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58)
-quarkus-backend-2-1  | 	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
-quarkus-backend-2-1  | 	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94)
-quarkus-backend-2-1  | 	at org.hibernate.resource.transaction.backend.jta.internal.JtaIsolationDelegate.doTheWork(JtaIsolationDelegate.java:206)
-quarkus-backend-2-1  | 	at org.hibernate.resource.transaction.backend.jta.internal.JtaIsolationDelegate.lambda$delegateWork$3(JtaIsolationDelegate.java:91)
-quarkus-backend-2-1  | 	at org.hibernate.resource.transaction.backend.jta.internal.JtaIsolationDelegate.doInSuspendedTransaction(JtaIsolationDelegate.java:125)
-quarkus-backend-2-1  | 	at org.hibernate.resource.transaction.backend.jta.internal.JtaIsolationDelegate.delegateWork(JtaIsolationDelegate.java:88)
-quarkus-backend-2-1  | 	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:320)
-quarkus-backend-2-1  | 	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:129)
-quarkus-backend-2-1  | 	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:81)
-quarkus-backend-2-1  | 	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
-quarkus-backend-2-1  | 	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
-quarkus-backend-2-1  | 	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
-quarkus-backend-2-1  | 	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
-quarkus-backend-2-1  | 	at org.hibernate.service.ServiceRegistry.requireService(ServiceRegistry.java:68)
-quarkus-backend-2-1  | 	at org.hibernate.engine.jdbc.internal.JdbcServicesImpl.configure(JdbcServicesImpl.java:52)
-quarkus-backend-2-1  | 	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:136)
-quarkus-backend-2-1  | 	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:247)
-quarkus-backend-2-1  | 	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
-quarkus-backend-2-1  | 	at org.hibernate.service.ServiceRegistry.requireService(ServiceRegistry.java:68)
-quarkus-backend-2-1  | 	at org.hibernate.boot.internal.SessionFactoryOptionsBuilder.<init>(SessionFactoryOptionsBuilder.java:290)
-quarkus-backend-2-1  | 	at io.quarkus.hibernate.orm.runtime.recording.PrevalidatedQuarkusMetadata.buildSessionFactoryOptionsBuilder(PrevalidatedQuarkusMetadata.java:72)
-quarkus-backend-2-1  | 	at io.quarkus.hibernate.orm.runtime.boot.FastBootEntityManagerFactoryBuilder.build(FastBootEntityManagerFactoryBuilder.java:84)
-quarkus-backend-2-1  | 	at io.quarkus.hibernate.orm.runtime.FastBootHibernatePersistenceProvider.createEntityManagerFactory(FastBootHibernatePersistenceProvider.java:72)
-quarkus-backend-2-1  | 	at jakarta.persistence.Persistence.createEntityManagerFactory(Persistence.java:80)
-quarkus-backend-2-1  | 	at jakarta.persistence.Persistence.createEntityManagerFactory(Persistence.java:55)
-quarkus-backend-2-1  | 	at io.quarkus.hibernate.orm.runtime.JPAConfig$LazyPersistenceUnit.get(JPAConfig.java:163)
-quarkus-backend-2-1  | 	at io.quarkus.hibernate.orm.runtime.JPAConfig$1.run(JPAConfig.java:63)
-quarkus-backend-2-1  | 	at java.base@21.0.7/java.lang.Thread.runWith(Thread.java:1596)
-quarkus-backend-2-1  | 	at java.base@21.0.7/java.lang.Thread.run(Thread.java:1583)
-quarkus-backend-2-1  | 	at org.graalvm.nativeimage.builder/com.oracle.svm.core.thread.PlatformThreads.threadStartRoutine(PlatformThreads.java:896)
-quarkus-backend-2-1  | 	at org.graalvm.nativeimage.builder/com.oracle.svm.core.thread.PlatformThreads.threadStartRoutine(PlatformThreads.java:872)
-quarkus-backend-2-1  | Caused by: org.postgresql.util.PSQLException: Connection to postgres:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
-quarkus-backend-2-1  | 	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:352)
-quarkus-backend-2-1  | 	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
-quarkus-backend-2-1  | 	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:273)
-quarkus-backend-2-1  | 	at org.postgresql.Driver.makeConnection(Driver.java:446)
-quarkus-backend-2-1  | 	at org.postgresql.Driver.connect(Driver.java:298)
-quarkus-backend-2-1  | 	at io.agroal.pool.ConnectionFactory.createConnection(ConnectionFactory.java:225)
-quarkus-backend-2-1  | 	at io.agroal.pool.ConnectionPool$CreateConnectionTask.call(ConnectionPool.java:585)
-quarkus-backend-2-1  | 	at io.agroal.pool.ConnectionPool$CreateConnectionTask.call(ConnectionPool.java:566)
-quarkus-backend-2-1  | 	at java.base@21.0.7/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-quarkus-backend-2-1  | 	at io.agroal.pool.util.PriorityScheduledExecutor.beforeExecute(PriorityScheduledExecutor.java:75)
-quarkus-backend-2-1  | 	at java.base@21.0.7/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-quarkus-backend-2-1  | 	at java.base@21.0.7/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-quarkus-backend-2-1  | 	... 4 more
-quarkus-backend-2-1  | Caused by: java.net.ConnectException: Connection refused
-quarkus-backend-2-1  | 	at java.base@21.0.7/sun.nio.ch.Net.pollConnect(Native Method)
-quarkus-backend-2-1  | 	at java.base@21.0.7/sun.nio.ch.Net.pollConnectNow(Net.java:682)
-quarkus-backend-2-1  | 	at java.base@21.0.7/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
-quarkus-backend-2-1  | 	at java.base@21.0.7/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
-quarkus-backend-2-1  | 	at java.base@21.0.7/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
-quarkus-backend-2-1  | 	at java.base@21.0.7/java.net.Socket.connect(Socket.java:751)
-quarkus-backend-2-1  | 	at org.postgresql.core.PGStream.createSocket(PGStream.java:260)
-quarkus-backend-2-1  | 	at org.postgresql.core.PGStream.<init>(PGStream.java:121)
-quarkus-backend-2-1  | 	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:140)
-quarkus-backend-2-1  | 	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:268)
-quarkus-backend-2-1  | 	... 15 more
-quarkus-backend-2-1  | 
-quarkus-backend-2-1  | 2025-07-24 20:04:51,331 WARN  [io.qua.hib.orm.run.ser.QuarkusRuntimeInitDialectFactory] (JPA Startup Thread) Persistence unit <default>: Could not retrieve the database version to check it is at least 12.0.0
-quarkus-backend-2-1  | 2025-07-24 20:04:51,335 INFO  [io.quarkus] (main) rinha-de-backend-2025-java-quarkus 1.0-SNAPSHOT native (powered by Quarkus 3.20.1) started in 0.056s. Listening on: http://0.0.0.0:8080
-quarkus-backend-2-1  | 2025-07-24 20:04:51,335 INFO  [io.quarkus] (main) Profile prod activated. 
-quarkus-backend-2-1  | 2025-07-24 20:04:51,335 INFO  [io.quarkus] (main) Installed features: [agroal, cdi, hibernate-orm, hibernate-orm-panache, jdbc-postgresql, narayana-jta, rest, rest-client, rest-client-jackson, rest-jackson, smallrye-context-propagation, smallrye-openapi, vertx]
-postgres-1           | 2025-07-24 20:04:51.566 UTC [62] LOG:  checkpoint complete: wrote 923 buffers (5.6%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.028 s, sync=0.131 s, total=0.247 s; sync files=311, longest=0.078 s, average=0.001 s; distance=4259 kB, estimate=4259 kB; lsn=0/190DCB8, redo lsn=0/190DCB8
-postgres-1           | 2025-07-24 20:04:51.572 UTC [61] LOG:  database system is shut down
+postgres-1           | waiting for server to shut down...2025-07-26 18:52:38.183 UTC [67] LOG:  received fast shutdown request
+postgres-1           | .2025-07-26 18:52:38.191 UTC [67] LOG:  aborting any active transactions
+postgres-1           | 2025-07-26 18:52:38.194 UTC [67] LOG:  background worker "logical replication launcher" (PID 73) exited with exit code 1
+postgres-1           | 2025-07-26 18:52:38.282 UTC [68] LOG:  shutting down
+postgres-1           | 2025-07-26 18:52:38.285 UTC [88] FATAL:  the database system is shutting down
+postgres-1           | 2025-07-26 18:52:38.289 UTC [68] LOG:  checkpoint starting: shutdown immediate
+postgres-1           | 2025-07-26 18:52:38.488 UTC [68] LOG:  checkpoint complete: wrote 923 buffers (5.6%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.082 s, sync=0.084 s, total=0.206 s; sync files=311, longest=0.021 s, average=0.001 s; distance=4259 kB, estimate=4259 kB; lsn=0/190DCB8, redo lsn=0/190DCB8
+postgres-1           | 2025-07-26 18:52:38.495 UTC [67] LOG:  database system is shut down
 postgres-1           |  done
 postgres-1           | server stopped
 postgres-1           | 
 postgres-1           | PostgreSQL init process complete; ready for start up.
 postgres-1           | 
-postgres-1           | 2025-07-24 20:04:51.685 UTC [1] LOG:  starting PostgreSQL 17.5 (Debian 17.5-1.pgdg120+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14) 12.2.0, 64-bit
-postgres-1           | 2025-07-24 20:04:51.687 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
-postgres-1           | 2025-07-24 20:04:51.687 UTC [1] LOG:  listening on IPv6 address "::", port 5432
-postgres-1           | 2025-07-24 20:04:51.703 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
-postgres-1           | 2025-07-24 20:04:51.792 UTC [92] LOG:  database system was shut down at 2025-07-24 20:04:51 UTC
-postgres-1           | 2025-07-24 20:04:51.810 UTC [1] LOG:  database system is ready to accept connections
+postgres-1           | 2025-07-26 18:52:38.614 UTC [1] LOG:  starting PostgreSQL 17.5 (Debian 17.5-1.pgdg120+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14) 12.2.0, 64-bit
+postgres-1           | 2025-07-26 18:52:38.615 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+postgres-1           | 2025-07-26 18:52:38.615 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+postgres-1           | 2025-07-26 18:52:38.627 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+postgres-1           | 2025-07-26 18:52:38.682 UTC [92] LOG:  database system was shut down at 2025-07-26 18:52:38 UTC
+postgres-1           | 2025-07-26 18:52:38.697 UTC [1] LOG:  database system is ready to accept connections
+quarkus-backend-2-1  | __  ____  __  _____   ___  __ ____  ______ 
+quarkus-backend-2-1  |  --/ __ \/ / / / _ | / _ \/ //_/ / / / __/ 
+quarkus-backend-2-1  |  -/ /_/ / /_/ / __ |/ , _/ ,< / /_/ /\ \   
+quarkus-backend-2-1  | --\___\_\____/_/ |_/_/|_/_/|_|\____/___/   
+quarkus-backend-1-1  | __  ____  __  _____   ___  __ ____  ______ 
+quarkus-backend-2-1  | 2025-07-26 18:52:40,216 INFO  [io.quarkus] (main) rinha-de-backend-2025-java-quarkus 1.0-SNAPSHOT native (powered by Quarkus 3.20.1) started in 0.119s. Listening on: http://0.0.0.0:8080
+quarkus-backend-1-1  |  --/ __ \/ / / / _ | / _ \/ //_/ / / / __/ 
+quarkus-backend-1-1  |  -/ /_/ / /_/ / __ |/ , _/ ,< / /_/ /\ \   
+quarkus-backend-1-1  | --\___\_\____/_/ |_/_/|_/_/|_|\____/___/   
+quarkus-backend-1-1  | 2025-07-26 18:52:40,216 INFO  [io.quarkus] (main) rinha-de-backend-2025-java-quarkus 1.0-SNAPSHOT native (powered by Quarkus 3.20.1) started in 0.104s. Listening on: http://0.0.0.0:8080
+quarkus-backend-1-1  | 2025-07-26 18:52:40,218 INFO  [io.quarkus] (main) Profile prod activated. 
+quarkus-backend-1-1  | 2025-07-26 18:52:40,218 INFO  [io.quarkus] (main) Installed features: [agroal, cdi, hibernate-orm, hibernate-orm-panache, jdbc-postgresql, narayana-jta, rest, rest-client, rest-client-jackson, rest-jackson, smallrye-context-propagation, smallrye-openapi, vertx]
+quarkus-backend-2-1  | 2025-07-26 18:52:40,218 INFO  [io.quarkus] (main) Profile prod activated. 
+quarkus-backend-2-1  | 2025-07-26 18:52:40,218 INFO  [io.quarkus] (main) Installed features: [agroal, cdi, hibernate-orm, hibernate-orm-panache, jdbc-postgresql, narayana-jta, rest, rest-client, rest-client-jackson, rest-jackson, smallrye-context-propagation, smallrye-openapi, vertx]
 nginx-1              | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
 nginx-1              | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
 nginx-1              | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
@@ -290,18 +94,18 @@ nginx-1              | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-
 nginx-1              | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
 nginx-1              | /docker-entrypoint.sh: Configuration complete; ready for start up
 [Knginx-1 exited with code 0
-quarkus-backend-1-1  | 2025-07-24 20:06:03,386 INFO  [rin.fea.pro.ProcessorService] (main) Shutting down, queue size: 0
-quarkus-backend-2-1  | 2025-07-24 20:06:03,394 INFO  [rin.fea.pro.ProcessorService] (Shutdown thread) Shutting down, queue size: 0
-quarkus-backend-2-1  | 2025-07-24 20:06:03,404 INFO  [io.quarkus] (Shutdown thread) rinha-de-backend-2025-java-quarkus stopped in 0.019s
-quarkus-backend-1-1  | 2025-07-24 20:06:03,406 INFO  [io.quarkus] (main) rinha-de-backend-2025-java-quarkus stopped in 0.021s
-[Kquarkus-backend-1-1 exited with code 143
+quarkus-backend-2-1  | 2025-07-26 18:53:54,063 INFO  [rin.fea.pro.ProcessorService] (main) Shutting down, queue size: 0
+quarkus-backend-2-1  | 2025-07-26 18:53:54,076 INFO  [io.quarkus] (main) rinha-de-backend-2025-java-quarkus stopped in 0.014s
+quarkus-backend-1-1  | 2025-07-26 18:53:54,063 INFO  [rin.fea.pro.ProcessorService] (main) Shutting down, queue size: 0
+quarkus-backend-1-1  | 2025-07-26 18:53:54,098 INFO  [io.quarkus] (main) rinha-de-backend-2025-java-quarkus stopped in 0.035s
 [Kquarkus-backend-2-1 exited with code 143
-postgres-1           | 2025-07-24 20:06:04.044 UTC [1] LOG:  received fast shutdown request
-postgres-1           | 2025-07-24 20:06:04.081 UTC [1] LOG:  aborting any active transactions
-postgres-1           | 2025-07-24 20:06:04.181 UTC [1] LOG:  background worker "logical replication launcher" (PID 95) exited with exit code 1
-postgres-1           | 2025-07-24 20:06:04.182 UTC [90] LOG:  shutting down
-postgres-1           | 2025-07-24 20:06:04.189 UTC [90] LOG:  checkpoint starting: shutdown immediate
-postgres-1           | 2025-07-24 20:06:04.366 UTC [90] LOG:  checkpoint complete: wrote 345 buffers (2.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.085 s, sync=0.062 s, total=0.185 s; sync files=22, longest=0.054 s, average=0.003 s; distance=796 kB, estimate=796 kB; lsn=0/19D4ED0, redo lsn=0/19D4ED0
-postgres-1           | 2025-07-24 20:06:04.373 UTC [1] LOG:  database system is shut down
+[Kquarkus-backend-1-1 exited with code 143
+postgres-1           | 2025-07-26 18:53:54.686 UTC [1] LOG:  received fast shutdown request
+postgres-1           | 2025-07-26 18:53:54.694 UTC [1] LOG:  aborting any active transactions
+postgres-1           | 2025-07-26 18:53:54.702 UTC [1] LOG:  background worker "logical replication launcher" (PID 95) exited with exit code 1
+postgres-1           | 2025-07-26 18:53:54.703 UTC [90] LOG:  shutting down
+postgres-1           | 2025-07-26 18:53:54.712 UTC [90] LOG:  checkpoint starting: shutdown immediate
+postgres-1           | 2025-07-26 18:53:54.801 UTC [90] LOG:  checkpoint complete: wrote 339 buffers (2.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.025 s, sync=0.045 s, total=0.098 s; sync files=22, longest=0.037 s, average=0.002 s; distance=851 kB, estimate=851 kB; lsn=0/19E2AD0, redo lsn=0/19E2AD0
+postgres-1           | 2025-07-26 18:53:54.807 UTC [1] LOG:  database system is shut down
 [Kpostgres-1 exited with code 0
 log truncated at line 1000
