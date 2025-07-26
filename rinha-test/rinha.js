@@ -242,24 +242,24 @@ export async function checkPaymentsConsistency() {
 
     console.info(`
     ╔══════════════════ Inconsistency Report ══════════════════╗
-    ║ Total Inconsistencies: ${inconsistencies}
+    ║ Detected Inconsistencies: ${inconsistencies}
     ║
     ║ Backend:
-    ║   Default Amount: ${backendPaymentsSummary.default.totalAmount}
-    ║   Default Requests: ${backendPaymentsSummary.default.totalRequests}
-    ║   Fallback Amount: ${backendPaymentsSummary.fallback.totalAmount}
-    ║   Fallback Requests: ${backendPaymentsSummary.fallback.totalRequests}
+    ║   Default Amount.....${backendPaymentsSummary.default.totalAmount}
+    ║   Default Requests...${backendPaymentsSummary.default.totalRequests}
+    ║   Fallback Amount....${backendPaymentsSummary.fallback.totalAmount}
+    ║   Fallback Requests..${backendPaymentsSummary.fallback.totalRequests}
     ║
     ║ Payment Processor:
-    ║   Default Amount: ${defaultAdminPaymentsSummary.totalAmount}
-    ║   Default Requests: ${defaultAdminPaymentsSummary.totalRequests}
-    ║   Fallback Amount: ${fallbackAdminPaymentsSummary.totalAmount}
-    ║   Fallback Requests: ${fallbackAdminPaymentsSummary.totalRequests}
+    ║   Default Amount.....${defaultAdminPaymentsSummary.totalAmount}
+    ║   Default Requests...${defaultAdminPaymentsSummary.totalRequests}
+    ║   Fallback Amount....${fallbackAdminPaymentsSummary.totalAmount}
+    ║   Fallback Requests..${fallbackAdminPaymentsSummary.totalRequests}
     ║
     ║ Time Range:
-    ║   From: ${from}
-    ║   To: ${to}
-    ║   Now: ${now.toISOString()}
+    ║   From..${from}
+    ║   To....${to}
+    ║   Now...${now.toISOString()}
     ╚═══════════════════════════════════════════════════════════`);
   }
 
