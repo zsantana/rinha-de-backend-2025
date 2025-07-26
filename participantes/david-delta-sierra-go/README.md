@@ -1,5 +1,5 @@
 # Projeto
-Projeto construido utilizando GO com framework Echo (APIs)
+Projeto construido utilizando GO com framework Echo (APIs), e postgres
 
 # Arquitetura
 ````aiignore
