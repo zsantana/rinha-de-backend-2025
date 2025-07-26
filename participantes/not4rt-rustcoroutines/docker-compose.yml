@@ -31,14 +31,12 @@ services:
           cpus: "0.2"
 
   backend1:
-    image: not4rt/rinha-2025-fast:v1.0.5
+    image: not4rt/rinha-2025-fast:v2.0.0
     environment:
       PORT: 8080
-      DEFAULT_PROCESSOR_URL: http://payment-processor-default:8080
-      FALLBACK_PROCESSOR_URL: http://payment-processor-fallback:8080
-      REDIS_URL: redis://valkey
-    depends_on:
-      - valkey
+      DEFAULT_PROCESSOR_URL: payment-processor-default:8080
+      FALLBACK_PROCESSOR_URL: payment-processor-fallback:8080
+      PEER_HOST: backend2:8080
     networks:
       - backend
       - payment-processor
@@ -47,22 +45,21 @@ services:
       sh -c "
       ./rust_coroutines_rinha_2025
       --server
+      --workers
       "
     deploy:
       resources:
         limits:
           memory: 50M
-          cpus: "0.2"
+          cpus: "0.65"
 
   backend2:
-    image: not4rt/rinha-2025-fast:v1.0.5
+    image: not4rt/rinha-2025-fast:v2.0.0
     environment:
       PORT: 8080
-      DEFAULT_PROCESSOR_URL: http://payment-processor-default:8080
-      FALLBACK_PROCESSOR_URL: http://payment-processor-fallback:8080
-      REDIS_URL: redis://valkey
-    depends_on:
-      - valkey
+      DEFAULT_PROCESSOR_URL: payment-processor-default:8080
+      FALLBACK_PROCESSOR_URL: payment-processor-fallback:8080
+      PEER_HOST: backend1:8080
     networks:
       - backend
       - payment-processor
@@ -71,89 +68,13 @@ services:
       sh -c "
       ./rust_coroutines_rinha_2025
       --server
+      --workers
       "
     deploy:
       resources:
         limits:
           memory: 50M
-          cpus: "0.2"
-
-  worker1:
-    image: not4rt/rinha-2025-fast:v1.0.5
-    environment:
-      PORT: 8080
-      DEFAULT_PROCESSOR_URL: http://payment-processor-default:8080
-      FALLBACK_PROCESSOR_URL: http://payment-processor-fallback:8080
-      REDIS_URL: redis://valkey
-    depends_on:
-      - valkey
-    networks:
-      - backend
-      - payment-processor
-    restart: unless-stopped
-    command: >
-      sh -c "
-      ./rust_coroutines_rinha_2025
-      --workers
-      "
-    deploy:
-      resources:
-        limits:
-          memory: 40M
-          cpus: "0.3"
-
-  worker2:
-    image: not4rt/rinha-2025-fast:v1.0.5
-    environment:
-      PORT: 8080
-      DEFAULT_PROCESSOR_URL: http://payment-processor-default:8080
-      FALLBACK_PROCESSOR_URL: http://payment-processor-fallback:8080
-      REDIS_URL: redis://valkey
-    depends_on:
-      - valkey
-    networks:
-      - backend
-      - payment-processor
-    restart: unless-stopped
-    command: >
-      sh -c "
-      ./rust_coroutines_rinha_2025
-      --workers
-      "
-    deploy:
-      resources:
-        limits:
-          memory: 40M
-          cpus: "0.3"
-
-  valkey:
-    image: valkey/valkey:latest
-    command: >
-      valkey-server
-      --save ""
-      --appendonly no
-      --io-threads 2
-      --maxmemory 20mb
-      --maxmemory-policy allkeys-lru
-      --tcp-keepalive 0
-      --timeout 0
-      --tcp-backlog 65535
-      --databases 1
-      --stop-writes-on-bgsave-error no
-      --rdbcompression no
-      --lazyfree-lazy-eviction yes
-      --lazyfree-lazy-expire yes
-      --lazyfree-lazy-server-del yes
-      --replica-lazy-flush yes
-    logging:
-      driver: "none"
-    networks:
-      - backend
-    deploy:
-      resources:
-        limits:
-          memory: 25M # valkey is using less than 15mb when uncapped:o
-          cpus: "0.3"
+          cpus: "0.65"
 
 networks:
   backend:

@@ -59,7 +59,7 @@ services:
       resources:
         limits:
           cpus: "0.45"
-          memory: "77MB"
+          memory: "83MB"
 
   transaction-api-02:
     <<: *api
@@ -83,7 +83,7 @@ services:
       resources:
         limits:
           cpus: "0.2"
-          memory: "23MB"
+          memory: "10MB"
     ulimits:
       nofile:
         soft: 8192

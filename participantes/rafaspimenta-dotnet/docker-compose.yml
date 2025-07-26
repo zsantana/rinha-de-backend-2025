@@ -11,8 +11,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '0.5'
-          memory: '55MB'
+          cpus: '0.6'
+          memory: '60MB'
     environment:
       - DOTNET_ENVIRONMENT=Production
     networks:
@@ -40,8 +40,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '0.2'
-          memory: '40MB'
+          cpus: '0.1'
+          memory: '50MB'
     networks:
       - app-network
 
@@ -59,8 +59,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '0.3'
-          memory: '200MB'
+          cpus: '0.2'
+          memory: '180MB'
     command: >
       postgres
       -c fsync=off
