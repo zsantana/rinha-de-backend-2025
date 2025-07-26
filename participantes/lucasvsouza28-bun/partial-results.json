@@ -5,7 +5,7 @@
   "total_taxas": 0,
   "descricao": "'total_liquido' é sua pontuação final. Equivale ao seu lucro. Fórmula: total_liquido + (total_liquido * p99.bonus) - (total_liquido * multa.porcentagem)",
   "p99": {
-    "valor": "175.88372052ms",
+    "valor": "181.98101473999992ms",
     "bonus": 0,
     "max_requests": "550",
     "descricao": "Fórmula para o bônus: max((11 - p99.valor) * 0.02, 0)"
@@ -14,18 +14,18 @@
     "porcentagem": 0.35,
     "total": 0,
     "composicao": {
-      "total_inconsistencias": 13512.099999999999,
+      "total_inconsistencias": 13492.199999999999,
       "descricao": "Se 'total_inconsistencias' > 0, há multa de 35%."
     }
   },
   "lag": {
     "num_pagamentos_total": 0,
-    "num_pagamentos_solicitados": 16385,
-    "lag": 16385,
+    "num_pagamentos_solicitados": 16246,
+    "lag": 16246,
     "descricao": "Lag é a diferença entre a quantidade de solicitações de pagamentos vs o que foi realmente computado pelo backend. Mostra a perda de pagamentos possivelmente por estarem enfileirados."
   },
   "pagamentos_solicitados": {
-    "qtd_sucesso": 16385,
+    "qtd_sucesso": 16246,
     "qtd_falha": 0,
     "descricao": "'qtd_sucesso' foram requests bem sucedidos para 'POST /payments' e 'qtd_falha' os requests com erro."
   },

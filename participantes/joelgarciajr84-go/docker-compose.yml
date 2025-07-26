@@ -1,105 +1,99 @@
 
 services:
-  rinha_1:
-    image: joelgarciajr84/rinha-backend-go:rinha-back-2025
-    init: true
-    networks:
-      - backend
-      - payment-processor
+  financial-db:
+    image: postgres:alpine
+    hostname: financial-db
     environment:
-      - PAYMENT_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080
-      - PAYMENT_PROCESSOR_URL_FALLBACK=http://payment-processor-fallback:8080
-      - X_RINHA_TOKEN=123
-      - REDIS_ADDR=redis:6379
-      - MONITOR_HEALTH=true
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_USER=root
+      - POSTGRES_DB=transactions
     ports:
-      - "9991:9999"
-    depends_on:
-      - redis
-    restart: unless-stopped
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:9999/payments-summary"]
-      interval: 5s
-      timeout: 3s
-      retries: 5
-    deploy:
-      resources:
-        limits:
-          cpus: "0.625"
-          memory: "120MB"
-
-  rinha_2:
-    image: joelgarciajr84/rinha-backend-go:rinha-back-2025
-    init: true
-    networks:
-      - backend
-      - payment-processor
-    environment:
-      - PAYMENT_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080
-      - PAYMENT_PROCESSOR_URL_FALLBACK=http://payment-processor-fallback:8080
-      - X_RINHA_TOKEN=123
-      - REDIS_ADDR=redis:6379
-      - MONITOR_HEALTH=true
-    ports:
-      - "9992:9999"
-    depends_on:
-      - redis
-    restart: unless-stopped
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:9999/payments-summary"]
-      interval: 5s
-      timeout: 3s
-      retries: 5
-    deploy:
-      resources:
-        limits:
-          cpus: "0.625"
-          memory: "120MB"
-
-  nginx:
-    image: nginx:alpine
-    init: true
+      - "5432:5432"
     volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf
-    ports:
-      - "9999:80"
+      - ./script.sql:/docker-entrypoint-initdb.d/script.sql
     networks:
-      - backend
+      - transaction-network
       - payment-processor
-    depends_on:
-      - redis
-      - rinha_1
-      - rinha_2
-    restart: unless-stopped
     deploy:
       resources:
         limits:
-          cpus: "0.15"
-          memory: "50MB"
-
-  redis:
-    image: redis:7-alpine
-    ports:
-      - "6379:6379"
-    networks:
-      - backend
-      - payment-processor
-    restart: unless-stopped
+          cpus: "0.4"
+          memory: "173MB"
+    command: postgres -c 'max_connections=300' -c 'shared_buffers=64MB' -c 'effective_cache_size=100MB' -c 'maintenance_work_mem=16MB' -c 'checkpoint_completion_target=0.9' -c 'wal_buffers=8MB' -c 'default_statistics_target=100' -c 'random_page_cost=1.1' -c 'effective_io_concurrency=200'
     healthcheck:
-      test: ["CMD", "redis-cli", "ping"]
+      test: ["CMD-SHELL", "pg_isready -U root -d transactions"]
       interval: 5s
-      timeout: 3s
+      timeout: 5s
       retries: 5
+
+  transaction-api-01: &api
+    image: joelgarciajr84/rinha-backend-go:rinha-pg-galo
+    hostname: transaction-api-01
+    ports:
+      - "3001:8080"
+    depends_on:
+      financial-db:
+        condition: service_healthy
+    environment:
+      - DB_PASSWORD=root
+      - DB_USER=root
+      - DB_HOST=financial-db:5432
+      - DB_NAME=transactions
+      - PRIMARY_HOST=payment-processor-default:8080
+      - FALLBACK_HOST=payment-processor-fallback:8080
+      - PRIMARY_TIMEOUT_MS=220
+      - FALLBACK_TIMEOUT_MS=250
+      - MAX_RETRIES=0
+      - RETRY_DELAY_MS=25
+      - PORT=8080
+    ulimits:
+      nofile:
+        soft: 8192
+        hard: 8192
+    tmpfs:
+      - /tmp:noexec,nosuid,size=8m
+    networks:
+      - transaction-network
+      - payment-processor
     deploy:
       resources:
         limits:
-          cpus: "0.1"
-          memory: "60MB"
-    tmpfs:
-      - /data
+          cpus: "0.45"
+          memory: "83MB"
+
+  transaction-api-02:
+    <<: *api
+    hostname: transaction-api-02
+    ports:
+      - "3002:8080"
+
+  nginx-lb:
+    image: nginx:1.27.0-alpine
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - transaction-api-01
+      - transaction-api-02
+    ports:
+      - "9999:9999"
+    networks:
+      - transaction-network
+      - payment-processor
+    deploy:
+      resources:
+        limits:
+          cpus: "0.2"
+          memory: "10MB"
+    ulimits:
+      nofile:
+        soft: 8192
+        hard: 8192
 
 networks:
-  backend:
+  transaction-network:
     driver: bridge
+    driver_opts:
+      com.docker.network.driver.mtu: 1500
+      com.docker.network.bridge.enable_ip_masquerade: 'false'
   payment-processor:
     external: true

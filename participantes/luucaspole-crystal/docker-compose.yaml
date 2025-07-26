@@ -5,13 +5,14 @@ x-enviromments: &x-enviromments
   - PROCESSOR_URL: "http://payment-processor-default:8080"
   - FALLBACK_URL: "http://payment-processor-fallback:8080"
   - DISABLE_LOG: "true"
-
 version: '3.4'
 services:
   app1: &app
-    image: docker.io/lukas8219/rinha-de-backend-2025-app:main-5a00dc542-1753223541
+    image: docker.io/lukas8219/rinha-de-backend-2025-app:main-79807011a-1753481819
+    user: "1001:1001"
     hostname: app1
     restart: unless-stopped
+    ipc: host
     environment:
       <<: *x-enviromments
       SOCKET_PATH: "/dev/shm/app1.sock"
@@ -20,7 +21,6 @@ services:
       - payment-processor
     expose:
       - "3000"
-    ipc: host
     depends_on:
       lavinmq:
         condition: service_healthy
@@ -35,9 +35,11 @@ services:
       resources:
         limits:
           cpus: '0.20'
-          memory: '50MB'
+          memory: '40MB'
   app2:
     <<: *app
+    user: "1001:1001"
+    ipc: host
     environment:
       <<: *x-enviromments
       SOCKET_PATH: "/dev/shm/app2.sock"
@@ -47,10 +49,15 @@ services:
         condition: service_healthy
       consumer:
         condition: service_started
-
   consumer: &consumer
     <<: *app
+    user: "1001:1001"
     hostname: "1"
+    ipc: host
+    cpuset: "0"
+    environment:
+      <<: *x-enviromments
+      SOCKET_PATH: "/dev/shm/1.sock"
     cpu_shares: 3072
     deploy:
       resources:
@@ -60,11 +67,10 @@ services:
         reservations:
           cpus: '1'
           memory: '150MB'
-    image: docker.io/lukas8219/rinha-de-backend-2025-app:main-5a00dc542-1753223541
+    image: docker.io/lukas8219/rinha-de-backend-2025-worker:main-79807011a-1753481819
     depends_on:
       lavinmq:
         condition: service_healthy
-
   lavinmq:
     image: cloudamqp/lavinmq:latest
     container_name: lavinmq
@@ -87,12 +93,15 @@ services:
         reservations:
           cpus: '0.1'
           memory: '35MB'
-
   nginx: # Load Balancer
-    ipc: host
     image: nginx:latest
+    user: "1001:1001"
+    ipc: host
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - nginx_cache:/var/cache/nginx
+      - nginx_run:/var/run
+      - nginx_log:/var/log/nginx
     depends_on:
       - app1
       - app2
@@ -108,15 +117,34 @@ services:
     networks:
       - backend
     cpu_shares: 2048
+    cpuset: "1"
     deploy:
       resources:
         limits:
           cpus: '0.1'
-          memory: '35MB'
+          memory: '55MB'
         reservations:
           cpus: '0.1'
-          memory: '35MB'
-
+          memory: '55MB'
+volumes:
+  nginx_cache:
+    driver: local
+    driver_opts:
+      type: tmpfs
+      device: tmpfs
+      o: "uid=1001,gid=1001,mode=0755"
+  nginx_run:
+    driver: local
+    driver_opts:
+      type: tmpfs
+      device: tmpfs
+      o: "uid=1001,gid=1001,mode=0755"
+  nginx_log:
+    driver: local
+    driver_opts:
+      type: tmpfs
+      device: tmpfs
+      o: "uid=1001,gid=1001,mode=0755"
 networks:
   backend:
     driver: bridge

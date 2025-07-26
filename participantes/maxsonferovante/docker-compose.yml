@@ -14,7 +14,7 @@ services:
       resources:
         limits:
           cpus: '0.2'
-          memory: 40M
+          memory: 40MB
 
   app-native-1:
     image: docker.io/maxsonferovante/api-payment-processor:latest
@@ -33,8 +33,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '0.35'
-          memory: 70M
+          cpus: '0.3'
+          memory: 60MB
 
   app-native-2:
     image: docker.io/maxsonferovante/api-payment-processor:latest
@@ -53,8 +53,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '0.35'
-          memory: 70M
+          cpus: '0.2'
+          memory: 60MB
 
   # Processador assíncrono de pagamentos - consome mensagens do Redis
   async-worker:
@@ -63,14 +63,13 @@ services:
     environment:
       REDIS_HOST: redis
       REDIS_PORT: 6379
-      REDIS_TIMEOUT: 500ms
+      REDIS_TIMEOUT: 5000ms
       REDIS_QUEUE_PAYMENTS_MAIN: rinha-payments-main-queue
       PAYMENT_PROCESSOR_DEFAULT_URL: http://payment-processor-default:8080
       PAYMENT_PROCESSOR_FALLBACK_URL: http://payment-processor-fallback:8080
-      WORKER_BLOCKING_TIMEOUT: 4000
-      WORKER_MAX_CONCURRENT_PAYMENTS: 250
+      WORKER_MAX_CONCURRENT_PAYMENTS: 70
       WORKER_BATCH_SIZE: 100
-      WORKER_EXECUTION_DELAY: 100
+      WORKER_EXECUTION_DELAY: 200
     depends_on:
       redis:
         condition: service_healthy
@@ -80,8 +79,32 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '0.4'
-          memory: 100M    
+          cpus: '0.3'
+          memory: 60MB
+  async-worker-2:
+      image: docker.io/maxsonferovante/async-payment-processor:latest
+      pull_policy: always
+      environment:
+        REDIS_HOST: redis
+        REDIS_PORT: 6379
+        REDIS_TIMEOUT: 5000ms
+        REDIS_QUEUE_PAYMENTS_MAIN: rinha-payments-main-queue
+        PAYMENT_PROCESSOR_DEFAULT_URL: http://payment-processor-default:8080
+        PAYMENT_PROCESSOR_FALLBACK_URL: http://payment-processor-fallback:8080
+        WORKER_MAX_CONCURRENT_PAYMENTS: 70
+        WORKER_BATCH_SIZE: 100
+        WORKER_EXECUTION_DELAY: 200
+      depends_on:
+        redis:
+          condition: service_healthy
+      networks:
+        - backend
+        - payment-processor
+      deploy:
+        resources:
+          limits:
+            cpus: '0.2'
+            memory: 60MB
 
   nginx:
     image: nginx:alpine
@@ -97,8 +120,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '0.2'
-          memory: 70M
+          cpus: '0.3'
+          memory: 70MB
 
 networks:
   backend:
