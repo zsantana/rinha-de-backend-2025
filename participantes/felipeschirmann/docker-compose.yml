@@ -1,0 +1,25 @@
+services:
+  api:
+    image: felipeschirmann/rinha-backend-2025:3.0.0
+    container_name: felipeschirmann-rinha-v3
+    environment:
+      DEFAULT_PROCESSOR_URL: http://payment-processor-default:8080
+      FALLBACK_PROCESSOR_URL: http://payment-processor-fallback:8080
+      APP_QUEUE_CAPACITY: 3500
+      APP_DRAIN_TIMEOUT_MS: 1000
+      APP_CONTENTION_THRESHOLD: 95
+      APP_HIGH_VALUE_THRESHOLD: 200.00
+      APP_CONNECT_TIMEOUT_MS: 500
+      APP_RESPONSE_TIMEOUT_MS: 500
+      APP_POOL_MAX_TOTAL: 500
+      APP_POOL_MAX_PER_ROUTE: 250
+    ports:
+      - "9999:8080"
+    deploy:
+      resources:
+        limits:
+          cpus:  "1.5"
+          memory: "350MB"
+networks:
+  payment-processor:
+    external: true

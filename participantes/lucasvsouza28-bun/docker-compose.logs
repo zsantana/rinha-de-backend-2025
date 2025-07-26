@@ -1,0 +1,1001 @@
+
+ Network lucasvsouza28-bun_rinha-backend  Creating
+ Network lucasvsouza28-bun_rinha-backend  Created
+ Volume "lucasvsouza28-bun_redis_data"  Creating
+ Volume "lucasvsouza28-bun_redis_data"  Created
+ Container lucasvsouza28-bun-db-1  Creating
+ Container lucasvsouza28-bun-redis-1  Creating
+ Container lucasvsouza28-bun-redis-1  Created
+ Container lucasvsouza28-bun-api-2-1  Creating
+ Container lucasvsouza28-bun-api-1-1  Creating
+ Container lucasvsouza28-bun-db-1  Created
+ Container lucasvsouza28-bun-api-2-1  Created
+ Container lucasvsouza28-bun-api-1-1  Created
+ Container lucasvsouza28-bun-nginx-1  Creating
+ Container lucasvsouza28-bun-nginx-1  Created
+Attaching to api-1-1, api-2-1, db-1, nginx-1, redis-1
+db-1     | The files belonging to this database system will be owned by user "postgres".
+db-1     | This user must also own the server process.
+db-1     | 
+db-1     | The database cluster will be initialized with locale "en_US.utf8".
+db-1     | The default database encoding has accordingly been set to "UTF8".
+db-1     | The default text search configuration will be set to "english".
+db-1     | 
+db-1     | Data page checksums are disabled.
+db-1     | 
+db-1     | fixing permissions on existing directory /var/lib/postgresql/data ... ok
+db-1     | creating subdirectories ... ok
+db-1     | selecting dynamic shared memory implementation ... posix
+db-1     | selecting default "max_connections" ... 100
+db-1     | selecting default "shared_buffers" ... 128MB
+redis-1  | Starting Redis Server
+db-1     | selecting default time zone ... UTC
+db-1     | creating configuration files ... ok
+redis-1  | 1:C 24 Jul 2025 19:46:29.342 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+redis-1  | 1:C 24 Jul 2025 19:46:29.343 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+redis-1  | 1:C 24 Jul 2025 19:46:29.343 * Redis version=8.0.3, bits=64, commit=00000000, modified=1, pid=1, just started
+redis-1  | 1:C 24 Jul 2025 19:46:29.343 * Configuration loaded
+redis-1  | 1:M 24 Jul 2025 19:46:29.343 * monotonic clock: POSIX clock_gettime
+redis-1  | 1:M 24 Jul 2025 19:46:29.344 * Running mode=standalone, port=6379.
+redis-1  | 1:M 24 Jul 2025 19:46:29.345 * <bf> RedisBloom version 8.0.1 (Git=unknown)
+redis-1  | 1:M 24 Jul 2025 19:46:29.345 * <bf> Registering configuration options: [
+redis-1  | 1:M 24 Jul 2025 19:46:29.345 * <bf> 	{ bf-error-rate       :      0.01 }
+redis-1  | 1:M 24 Jul 2025 19:46:29.345 * <bf> 	{ bf-initial-size     :       100 }
+redis-1  | 1:M 24 Jul 2025 19:46:29.345 * <bf> 	{ bf-expansion-factor :         2 }
+redis-1  | 1:M 24 Jul 2025 19:46:29.345 * <bf> 	{ cf-bucket-size      :         2 }
+redis-1  | 1:M 24 Jul 2025 19:46:29.345 * <bf> 	{ cf-initial-size     :      1024 }
+redis-1  | 1:M 24 Jul 2025 19:46:29.345 * <bf> 	{ cf-max-iterations   :        20 }
+redis-1  | 1:M 24 Jul 2025 19:46:29.345 * <bf> 	{ cf-expansion-factor :         1 }
+redis-1  | 1:M 24 Jul 2025 19:46:29.345 * <bf> 	{ cf-max-expansions   :        32 }
+redis-1  | 1:M 24 Jul 2025 19:46:29.345 * <bf> ]
+redis-1  | 1:M 24 Jul 2025 19:46:29.345 * Module 'bf' loaded from /usr/local/lib/redis/modules//redisbloom.so
+redis-1  | 1:M 24 Jul 2025 19:46:29.350 * <search> Redis version found by RedisSearch : 8.0.3 - oss
+redis-1  | 1:M 24 Jul 2025 19:46:29.350 * <search> RediSearch version 8.0.1 (Git=5688fcc)
+redis-1  | 1:M 24 Jul 2025 19:46:29.350 * <search> Low level api version 1 initialized successfully
+redis-1  | 1:M 24 Jul 2025 19:46:29.350 * <search> gc: ON, prefix min length: 2, min word length to stem: 4, prefix max expansions: 200, query timeout (ms): 500, timeout policy: return, cursor read size: 1000, cursor max idle (ms): 300000, max doctable size: 1000000, max number of search results:  1000000, 
+redis-1  | 1:M 24 Jul 2025 19:46:29.350 * <search> Initialized thread pools!
+redis-1  | 1:M 24 Jul 2025 19:46:29.350 * <search> Disabled workers threadpool of size 0
+redis-1  | 1:M 24 Jul 2025 19:46:29.350 * <search> Subscribe to config changes
+redis-1  | 1:M 24 Jul 2025 19:46:29.351 * <search> Enabled role change notification
+redis-1  | 1:M 24 Jul 2025 19:46:29.351 * <search> Cluster configuration: AUTO partitions, type: 0, coordinator timeout: 0ms
+redis-1  | 1:M 24 Jul 2025 19:46:29.351 * <search> Register write commands
+redis-1  | 1:M 24 Jul 2025 19:46:29.381 * Module 'search' loaded from /usr/local/lib/redis/modules//redisearch.so
+redis-1  | 1:M 24 Jul 2025 19:46:29.382 * <timeseries> RedisTimeSeries version 80001, git_sha=577bfa8b5909e7ee572f0b651399be8303dc6641
+redis-1  | 1:M 24 Jul 2025 19:46:29.382 * <timeseries> Redis version found by RedisTimeSeries : 8.0.3 - oss
+redis-1  | 1:M 24 Jul 2025 19:46:29.382 * <timeseries> Registering configuration options: [
+redis-1  | 1:M 24 Jul 2025 19:46:29.382 * <timeseries> 	{ ts-compaction-policy   :              }
+redis-1  | 1:M 24 Jul 2025 19:46:29.382 * <timeseries> 	{ ts-num-threads         :            3 }
+redis-1  | 1:M 24 Jul 2025 19:46:29.382 * <timeseries> 	{ ts-retention-policy    :            0 }
+redis-1  | 1:M 24 Jul 2025 19:46:29.382 * <timeseries> 	{ ts-duplicate-policy    :        block }
+redis-1  | 1:M 24 Jul 2025 19:46:29.382 * <timeseries> 	{ ts-chunk-size-bytes    :         4096 }
+redis-1  | 1:M 24 Jul 2025 19:46:29.382 * <timeseries> 	{ ts-encoding            :   compressed }
+redis-1  | 1:M 24 Jul 2025 19:46:29.382 * <timeseries> 	{ ts-ignore-max-time-diff:            0 }
+redis-1  | 1:M 24 Jul 2025 19:46:29.382 * <timeseries> 	{ ts-ignore-max-val-diff :     0.000000 }
+redis-1  | 1:M 24 Jul 2025 19:46:29.382 * <timeseries> ]
+redis-1  | 1:M 24 Jul 2025 19:46:29.382 * <timeseries> Detected redis oss
+redis-1  | 1:M 24 Jul 2025 19:46:29.383 * Module 'timeseries' loaded from /usr/local/lib/redis/modules//redistimeseries.so
+redis-1  | 1:M 24 Jul 2025 19:46:29.390 * <ReJSON> Created new data type 'ReJSON-RL'
+redis-1  | 1:M 24 Jul 2025 19:46:29.391 * <ReJSON> version: 80001 git sha: unknown branch: unknown
+redis-1  | 1:M 24 Jul 2025 19:46:29.391 * <ReJSON> Exported RedisJSON_V1 API
+redis-1  | 1:M 24 Jul 2025 19:46:29.391 * <ReJSON> Exported RedisJSON_V2 API
+redis-1  | 1:M 24 Jul 2025 19:46:29.391 * <ReJSON> Exported RedisJSON_V3 API
+redis-1  | 1:M 24 Jul 2025 19:46:29.391 * <ReJSON> Exported RedisJSON_V4 API
+redis-1  | 1:M 24 Jul 2025 19:46:29.391 * <ReJSON> Exported RedisJSON_V5 API
+redis-1  | 1:M 24 Jul 2025 19:46:29.391 * <ReJSON> Enabled diskless replication
+redis-1  | 1:M 24 Jul 2025 19:46:29.391 * <ReJSON> Initialized shared string cache, thread safe: false.
+redis-1  | 1:M 24 Jul 2025 19:46:29.391 * Module 'ReJSON' loaded from /usr/local/lib/redis/modules//rejson.so
+redis-1  | 1:M 24 Jul 2025 19:46:29.391 * <search> Acquired RedisJSON_V5 API
+redis-1  | 1:M 24 Jul 2025 19:46:29.391 * Server initialized
+redis-1  | 1:M 24 Jul 2025 19:46:29.392 * Ready to accept connections tcp
+db-1     | running bootstrap script ... ok
+db-1     | sh: locale: not found
+db-1     | 2025-07-24 19:46:30.883 UTC [36] WARNING:  no usable system locales were found
+api-2-1  | Server is listening on port 3000
+api-1-1  | Server is listening on port 3000
+nginx-1  | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+nginx-1  | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+nginx-1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+nginx-1  | 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+nginx-1  | 10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
+nginx-1  | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+nginx-1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+nginx-1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+nginx-1  | /docker-entrypoint.sh: Configuration complete; ready for start up
+nginx-1  | 172.20.0.1 - - [24/Jul/2025:19:46:32 +0000] "GET /payments-summary HTTP/1.1" 200 94 "-" "curl/7.88.1"
+db-1     | performing post-bootstrap initialization ... ok
+db-1     | initdb: warning: enabling "trust" authentication for local connections
+db-1     | initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
+db-1     | syncing data to disk ... ok
+db-1     | 
+db-1     | 
+db-1     | Success. You can now start the database server using:
+db-1     | 
+db-1     |     pg_ctl -D /var/lib/postgresql/data -l logfile start
+db-1     | 
+db-1     | waiting for server to start....2025-07-24 19:46:32.889 UTC [42] LOG:  starting PostgreSQL 17.5 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
+db-1     | 2025-07-24 19:46:32.896 UTC [42] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db-1     | 2025-07-24 19:46:32.917 UTC [45] LOG:  database system was shut down at 2025-07-24 19:46:32 UTC
+db-1     | 2025-07-24 19:46:32.934 UTC [42] LOG:  database system is ready to accept connections
+db-1     |  done
+db-1     | server started
+db-1     | CREATE DATABASE
+db-1     | 
+db-1     | 
+db-1     | /usr/local/bin/docker-entrypoint.sh: running /docker-entrypoint-initdb.d/init.sql
+db-1     | CREATE TABLE
+db-1     | CREATE INDEX
+db-1     | 
+db-1     | 
+db-1     | waiting for server to shut down....2025-07-24 19:46:33.311 UTC [42] LOG:  received fast shutdown request
+db-1     | 2025-07-24 19:46:33.319 UTC [42] LOG:  aborting any active transactions
+db-1     | 2025-07-24 19:46:33.381 UTC [42] LOG:  background worker "logical replication launcher" (PID 48) exited with exit code 1
+db-1     | 2025-07-24 19:46:33.382 UTC [43] LOG:  shutting down
+db-1     | 2025-07-24 19:46:33.387 UTC [43] LOG:  checkpoint starting: shutdown immediate
+db-1     | 2025-07-24 19:46:33.508 UTC [43] LOG:  checkpoint complete: wrote 927 buffers (5.7%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.037 s, sync=0.060 s, total=0.126 s; sync files=306, longest=0.020 s, average=0.001 s; distance=4276 kB, estimate=4276 kB; lsn=0/191A310, redo lsn=0/191A310
+db-1     | 2025-07-24 19:46:33.515 UTC [42] LOG:  database system is shut down
+db-1     |  done
+db-1     | server stopped
+db-1     | 
+db-1     | PostgreSQL init process complete; ready for start up.
+db-1     | 
+db-1     | 2025-07-24 19:46:33.649 UTC [1] LOG:  starting PostgreSQL 17.5 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
+db-1     | 2025-07-24 19:46:33.649 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+db-1     | 2025-07-24 19:46:33.649 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+db-1     | 2025-07-24 19:46:33.661 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db-1     | 2025-07-24 19:46:33.676 UTC [60] LOG:  database system was shut down at 2025-07-24 19:46:33 UTC
+db-1     | 2025-07-24 19:46:33.688 UTC [1] LOG:  database system is ready to accept connections
+nginx-1  | 172.20.0.1 - - [24/Jul/2025:19:46:38 +0000] "POST /purge-payments HTTP/1.1" 404 9 "-" "Grafana k6/1.1.0"
+api-1-1  | Enqueuing payment {
+api-1-1  |   amount: 19.9,
+api-1-1  |   correlationId: "583bc784-44eb-45ff-9ec5-7b2954be4e33",
+api-1-1  |   requestedAt: 2025-07-24T19:46:38.321Z,
+api-1-1  | }
+nginx-1  | 172.20.0.1 - - [24/Jul/2025:19:46:38 +0000] "POST /payments HTTP/1.1" 202 8 "-" "Grafana k6/1.1.0"
+nginx-1  | 172.20.0.1 - - [24/Jul/2025:19:46:38 +0000] "GET /payments-summary?from=2025-07-24T19:46:28.313Z&to=2025-07-24T19:46:38.213Z HTTP/1.1" 200 94 "-" "Grafana k6/1.1.0"
+api-2-1  | Processing payment: 583bc784-44eb-45ff-9ec5-7b2954be4e33
+api-2-1  | checking processor health: default
+api-2-1  | DeprecationWarning: Calling promisify on a function that returns a Promise is likely a mistake.
+api-2-1  |  code: "DEP0174"
+api-2-1  | 
+api-2-1  |       at bound  (internal:promisify:39:28)
+api-2-1  |       at <anonymous> (/usr/src/app/dist/index.js:33740:31)
+api-2-1  | 
+api-2-1  | 46822 | paymentsQueue.process(async (job, done) => {
+api-2-1  | 46823 |   const { amount, correlationId, requestedAt } = job.data;
+api-2-1  | 46824 |   console.log(`Processing payment: ${correlationId}`);
+api-2-1  | 46825 |   let processor = "default";
+api-2-1  | 46826 |   let processorResponse;
+api-2-1  | 46827 |   if (!defaultProcessorHealth.failing) {
+api-2-1  |                                      ^
+api-2-1  | TypeError: undefined is not an object (evaluating 'defaultProcessorHealth.failing')
+api-2-1  |       at <anonymous> (/usr/src/app/dist/index.js:46827:30)
+api-2-1  | note: missing sourcemaps for /usr/src/app/dist/index.js
+api-2-1  | note: consider bundling with '--sourcemap' to get unminified traces
+api-2-1  | 
+api-2-1  | Bun v1.2.19 (Linux x64 baseline)
+nginx-1  | 2025/07/24 19:46:38 [error] 30#30: *9 connect() failed (111: Connection refused) while connecting to upstream, client: 172.20.0.1, server: , request: "POST /payments HTTP/1.1", upstream: "http://172.20.0.4:3000/payments", host: "localhost:9999"
+api-1-1  | Enqueuing payment {
+api-1-1  |   amount: 19.9,
+api-1-1  |   correlationId: "a6e0680c-f10c-4cf9-9e87-f151a50aa79f",
+api-1-1  |   requestedAt: 2025-07-24T19:46:38.424Z,
+api-1-1  | }
+nginx-1  | 172.20.0.1 - - [24/Jul/2025:19:46:38 +0000] "POST /payments HTTP/1.1" 202 8 "-" "Grafana k6/1.1.0"
+api-1-1  | Processing payment: a6e0680c-f10c-4cf9-9e87-f151a50aa79f
+api-1-1  | DeprecationWarning: Calling promisify on a function that returns a Promise is likely a mistake.
+api-1-1  |  code: "DEP0174"
+api-1-1  | 
+api-1-1  |       at bound  (internal:promisify:39:28)
+api-1-1  |       at <anonymous> (/usr/src/app/dist/index.js:33740:31)
+api-1-1  | 
+api-1-1  | checking processor health: default
+api-1-1  | processor response:  {
+api-1-1  |   message: "payment processed successfully",
+api-1-1  | }
+api-1-1  | checking processor health: fallback
+api-1-1  | Payment processed via default: a6e0680c-f10c-4cf9-9e87-f151a50aa79f OK
+api-1-1  | Enqueuing payment {
+api-1-1  |   amount: 19.9,
+api-1-1  |   correlationId: "73ac1b0c-0c77-4485-8564-f5fab94904b1",
+api-1-1  |   requestedAt: 2025-07-24T19:46:38.533Z,
+api-1-1  | }
+nginx-1  | 172.20.0.1 - - [24/Jul/2025:19:46:38 +0000] "POST /payments HTTP/1.1" 202 8 "-" "Grafana k6/1.1.0"
+api-1-1  | DeprecationWarning: Calling promisify on a function that returns a Promise is likely a mistake.
+api-1-1  |  code: "DEP0174"
+api-1-1  | 
+api-1-1  |       at bound  (internal:promisify:39:28)
+api-1-1  |       at <anonymous> (/usr/src/app/dist/index.js:33740:31)
+api-1-1  | 
+api-1-1  | Processing payment: 73ac1b0c-0c77-4485-8564-f5fab94904b1
+api-1-1  | checking processor health: default
+api-1-1  | processor response:  {
+api-1-1  |   message: "payment processed successfully",
+api-1-1  | }
+api-1-1  | checking processor health: fallback
+api-1-1  | Payment processed via default: 73ac1b0c-0c77-4485-8564-f5fab94904b1 OK
+api-1-1  | Enqueuing payment {
+api-1-1  |   amount: 19.9,
+api-1-1  |   correlationId: "de45860d-6bfa-4e97-83b7-50019a1a801f",
+api-1-1  |   requestedAt: 2025-07-24T19:46:38.643Z,
+api-1-1  | }
+nginx-1  | 172.20.0.1 - - [24/Jul/2025:19:46:38 +0000] "POST /payments HTTP/1.1" 202 8 "-" "Grafana k6/1.1.0"
+api-1-1  | DeprecationWarning: Calling promisify on a function that returns a Promise is likely a mistake.
+api-1-1  |  code: "DEP0174"
+api-1-1  | 
+api-1-1  |       at bound  (internal:promisify:39:28)
+api-1-1  |       at <anonymous> (/usr/src/app/dist/index.js:33740:31)
+api-1-1  | 
+api-1-1  | Processing payment: de45860d-6bfa-4e97-83b7-50019a1a801f
+api-1-1  | checking processor health: default
+api-1-1  | processor response:  {
+api-1-1  |   message: "payment processed successfully",
+api-1-1  | }
+api-1-1  | checking processor health: fallback
+api-1-1  | Payment processed via default: de45860d-6bfa-4e97-83b7-50019a1a801f OK
+nginx-1  | 172.20.0.1 - - [24/Jul/2025:19:46:38 +0000] "POST /payments HTTP/1.1" 202 8 "-" "Grafana k6/1.1.0"
+api-1-1  | Enqueuing payment {
+api-1-1  |   amount: 19.9,
+api-1-1  |   correlationId: "e71bfef3-32c7-4334-8f23-485df7ddde2c",
+api-1-1  |   requestedAt: 2025-07-24T19:46:38.752Z,
+api-1-1  | }
+api-1-1  | Processing payment: e71bfef3-32c7-4334-8f23-485df7ddde2c
+api-1-1  | checking processor health: default
+api-1-1  | processor response:  {
+api-1-1  |   message: "payment processed successfully",
+api-1-1  | }
+api-1-1  | checking processor health: fallback
+api-1-1  | Payment processed via default: e71bfef3-32c7-4334-8f23-485df7ddde2c OK
+api-1-1  | DeprecationWarning: Calling promisify on a function that returns a Promise is likely a mistake.
+api-1-1  |  code: "DEP0174"
+api-1-1  | 
+api-1-1  |       at bound  (internal:promisify:39:28)
+api-1-1  |       at <anonymous> (/usr/src/app/dist/index.js:33740:31)
+api-1-1  | 
+api-1-1  | Enqueuing payment {
+api-1-1  |   amount: 19.9,
+api-1-1  |   correlationId: "28982e85-4899-48d1-9f8e-21ab83b427d2",
+api-1-1  |   requestedAt: 2025-07-24T19:46:38.862Z,
+api-1-1  | }
+nginx-1  | 172.20.0.1 - - [24/Jul/2025:19:46:38 +0000] "POST /payments HTTP/1.1" 202 8 "-" "Grafana k6/1.1.0"
+api-1-1  | Processing payment: 28982e85-4899-48d1-9f8e-21ab83b427d2
+api-1-1  | checking processor health: default
+api-1-1  | DeprecationWarning: Calling promisify on a function that returns a Promise is likely a mistake.
+api-1-1  |  code: "DEP0174"
+api-1-1  | 
+api-1-1  |       at bound  (internal:promisify:39:28)
+api-1-1  |       at <anonymous> (/usr/src/app/dist/index.js:33740:31)
+api-1-1  | 
+api-1-1  | processor response:  {
+api-1-1  |   message: "payment processed successfully",
+api-1-1  | }
+api-1-1  | checking processor health: fallback
+api-1-1  | Payment processed via default: 28982e85-4899-48d1-9f8e-21ab83b427d2 OK
+api-1-1  | Enqueuing payment {
+api-1-1  |   amount: 19.9,
+api-1-1  |   correlationId: "e57ec574-4b0b-4c19-848d-a740da885648",
+api-1-1  |   requestedAt: 2025-07-24T19:46:38.971Z,
+api-1-1  | }
+nginx-1  | 172.20.0.1 - - [24/Jul/2025:19:46:38 +0000] "POST /payments HTTP/1.1" 202 8 "-" "Grafana k6/1.1.0"
+api-1-1  | Processing payment: e57ec574-4b0b-4c19-848d-a740da885648
+api-1-1  | checking processor health: default
+api-1-1  | DeprecationWarning: Calling promisify on a function that returns a Promise is likely a mistake.
+api-1-1  |  code: "DEP0174"
+api-1-1  | 
+api-1-1  |       at bound  (internal:promisify:39:28)
+api-1-1  |       at <anonymous> (/usr/src/app/dist/index.js:33740:31)
+api-1-1  | 
+api-1-1  | processor response:  {
+api-1-1  |   message: "payment processed successfully",
+api-1-1  | }
+api-1-1  | checking processor health: fallback
+api-1-1  | Payment processed via default: e57ec574-4b0b-4c19-848d-a740da885648 OK
+api-1-1  | Enqueuing payment {
+api-1-1  |   amount: 19.9,
+api-1-1  |   correlationId: "6aabfa3a-715a-412c-ba79-e328230b33fb",
+api-1-1  |   requestedAt: 2025-07-24T19:46:39.080Z,
+api-1-1  | }
+nginx-1  | 172.20.0.1 - - [24/Jul/2025:19:46:39 +0000] "POST /payments HTTP/1.1" 202 8 "-" "Grafana k6/1.1.0"
+api-1-1  | Processing payment: 6aabfa3a-715a-412c-ba79-e328230b33fb
+api-1-1  | checking processor health: default
+api-1-1  | DeprecationWarning: Calling promisify on a function that returns a Promise is likely a mistake.
+api-1-1  |  code: "DEP0174"
+api-1-1  | 
+api-1-1  |       at bound  (internal:promisify:39:28)
+api-1-1  |       at <anonymous> (/usr/src/app/dist/index.js:33740:31)
+api-1-1  | 
+api-1-1  | processor response:  {
+api-1-1  |   message: "payment processed successfully",
+api-1-1  | }
+api-1-1  | checking processor health: fallback
+api-1-1  | Payment processed via default: 6aabfa3a-715a-412c-ba79-e328230b33fb OK
+api-1-1  | Enqueuing payment {
+api-1-1  |   amount: 19.9,
+api-1-1  |   correlationId: "80a6d82a-edc3-4294-8431-9db95d3e05fe",
+api-1-1  |   requestedAt: 2025-07-24T19:46:39.189Z,
+api-1-1  | }
+nginx-1  | 172.20.0.1 - - [24/Jul/2025:19:46:39 +0000] "POST /payments HTTP/1.1" 202 8 "-" "Grafana k6/1.1.0"
+api-1-1  | Processing payment: 80a6d82a-edc3-4294-8431-9db95d3e05fe
+api-1-1  | checking processor health: default
+api-1-1  | DeprecationWarning: Calling promisify on a function that returns a Promise is likely a mistake.
+api-1-1  |  code: "DEP0174"
+api-1-1  | 
+api-1-1  |       at bound  (internal:promisify:39:28)
+api-1-1  |       at <anonymous> (/usr/src/app/dist/index.js:33740:31)
+api-1-1  | 
+api-1-1  | processor response:  {
+api-1-1  |   message: "payment processed successfully",
+api-1-1  | }
+api-1-1  | checking processor health: fallback
+api-1-1  | Payment processed via default: 80a6d82a-edc3-4294-8431-9db95d3e05fe OK
+api-1-1  | Enqueuing payment {
+api-1-1  |   amount: 19.9,
+api-1-1  |   correlationId: "73e3573f-58c5-4852-aae1-5afcd9390c74",
+api-1-1  |   requestedAt: 2025-07-24T19:46:39.299Z,
+api-1-1  | }
+nginx-1  | 172.20.0.1 - - [24/Jul/2025:19:46:39 +0000] "POST /payments HTTP/1.1" 202 8 "-" "Grafana k6/1.1.0"
+api-1-1  | Processing payment: 73e3573f-58c5-4852-aae1-5afcd9390c74
+api-1-1  | checking processor health: default
+api-1-1  | DeprecationWarning: Calling promisify on a function that returns a Promise is likely a mistake.
+api-1-1  |  code: "DEP0174"
+api-1-1  | 
+api-1-1  |       at bound  (internal:promisify:39:28)
+api-1-1  |       at <anonymous> (/usr/src/app/dist/index.js:33740:31)
+api-1-1  | 
+api-1-1  | processor response:  {
+api-1-1  |   message: "payment processed successfully",
+api-1-1  | }
+api-1-1  | checking processor health: fallback
+api-1-1  | Payment processed via default: 73e3573f-58c5-4852-aae1-5afcd9390c74 OK
+nginx-1  | 2025/07/24 19:46:39 [error] 32#32: *7 connect() failed (111: Connection refused) while connecting to upstream, client: 172.20.0.1, server: , request: "POST /payments HTTP/1.1", upstream: "http://172.20.0.4:3000/payments", host: "localhost:9999"
+api-1-1  | Enqueuing payment {
+api-1-1  |   amount: 19.9,
+api-1-1  |   correlationId: "ff1a79a8-7dd5-43b2-a648-b4ac0a797ddd",
+api-1-1  |   requestedAt: 2025-07-24T19:46:39.327Z,
+api-1-1  | }
+nginx-1  | 172.20.0.1 - - [24/Jul/2025:19:46:39 +0000] "POST /payments HTTP/1.1" 202 8 "-" "Grafana k6/1.1.0"
+api-1-1  | Processing payment: ff1a79a8-7dd5-43b2-a648-b4ac0a797ddd
+api-1-1  | checking processor health: default
+api-1-1  | DeprecationWarning: Calling promisify on a function that returns a Promise is likely a mistake.
+api-1-1  |  code: "DEP0174"
+api-1-1  | 
+api-1-1  |       at bound  (internal:promisify:39:28)
+api-1-1  |       at <anonymous> (/usr/src/app/dist/index.js:33740:31)
+api-1-1  | 
+api-1-1  | processor response:  {
+api-1-1  |   message: "payment processed successfully",
+api-1-1  | }
+api-1-1  | checking processor health: fallback
+api-1-1  | Payment processed via default: ff1a79a8-7dd5-43b2-a648-b4ac0a797ddd OK
+[Kapi-2-1 exited with code 0
+api-1-1  | DeprecationWarning: Calling promisify on a function that returns a Promise is likely a mistake.
+api-1-1  |  code: "DEP0174"
+api-1-1  | 
+api-1-1  |       at bound  (internal:promisify:39:28)
+api-1-1  |       at <anonymous> (/usr/src/app/dist/index.js:33740:31)
+api-1-1  | 
+nginx-1  | 172.20.0.1 - - [24/Jul/2025:19:46:39 +0000] "POST /payments HTTP/1.1" 202 8 "-" "Grafana k6/1.1.0"
+api-1-1  | Enqueuing payment {
+api-1-1  |   amount: 19.9,
+api-1-1  |   correlationId: "3b1d450f-cec4-446f-8895-9440a96eab30",
+api-1-1  |   requestedAt: 2025-07-24T19:46:39.408Z,
+api-1-1  | }
+api-1-1  | Processing payment: 3b1d450f-cec4-446f-8895-9440a96eab30
+api-1-1  | checking processor health: default
+api-1-1  | processor response:  {
+api-1-1  |   message: "payment processed successfully",
+api-1-1  | }
+api-1-1  | checking processor health: fallback
+api-1-1  | Payment processed via default: 3b1d450f-cec4-446f-8895-9440a96eab30 OK
+api-1-1  | Enqueuing payment {
+api-1-1  |   amount: 19.9,
+api-1-1  |   correlationId: "03033ad3-e875-4e63-adf5-0e9bfa069386",
+api-1-1  |   requestedAt: 2025-07-24T19:46:39.427Z,
+api-1-1  | }
+nginx-1  | 172.20.0.1 - - [24/Jul/2025:19:46:39 +0000] "POST /payments HTTP/1.1" 202 8 "-" "Grafana k6/1.1.0"
+api-1-1  | Processing payment: 03033ad3-e875-4e63-adf5-0e9bfa069386
+api-1-1  | checking processor health: default
+api-1-1  | DeprecationWarning: Calling promisify on a function that returns a Promise is likely a mistake.
+api-1-1  |  code: "DEP0174"
+api-1-1  | 
+api-1-1  |       at bound  (internal:promisify:39:28)
+api-1-1  |       at <anonymous> (/usr/src/app/dist/index.js:33740:31)
+api-1-1  | 
+api-1-1  | processor response:  {
+api-1-1  |   message: "payment processed successfully",
+api-1-1  | }
+api-1-1  | checking processor health: fallback
+api-1-1  | Payment processed via default: 03033ad3-e875-4e63-adf5-0e9bfa069386 OK
+api-1-1  | Enqueuing payment {
+api-1-1  |   amount: 19.9,
+api-1-1  |   correlationId: "dd67b75a-7b06-4516-b576-b9fa32569135",
+api-1-1  |   requestedAt: 2025-07-24T19:46:39.517Z,
+api-1-1  | }
+api-1-1  | Processing payment: dd67b75a-7b06-4516-b576-b9fa32569135
+api-1-1  | checking processor health: default
+api-1-1  | DeprecationWarning: Calling promisify on a function that returns a Promise is likely a mistake.
+api-1-1  |  code: "DEP0174"
+api-1-1  | 
+api-1-1  |       at bound  (internal:promisify:39:28)
+api-1-1  |       at <anonymous> (/usr/src/app/dist/index.js:33740:31)
+api-1-1  | 
+nginx-1  | 172.20.0.1 - - [24/Jul/2025:19:46:39 +0000] "POST /payments HTTP/1.1" 202 8 "-" "Grafana k6/1.1.0"
+api-1-1  | processor response:  {
+api-1-1  |   message: "payment processed successfully",
+api-1-1  | }
+api-1-1  | checking processor health: fallback
+api-1-1  | Payment processed via default: dd67b75a-7b06-4516-b576-b9fa32569135 OK
+api-1-1  | Enqueuing payment {
+api-1-1  |   amount: 19.9,
+api-1-1  |   correlationId: "213d776c-546f-4e45-abda-3cc98086734f",
+api-1-1  |   requestedAt: 2025-07-24T19:46:39.537Z,
+api-1-1  | }
+nginx-1  | 172.20.0.1 - - [24/Jul/2025:19:46:39 +0000] "POST /payments HTTP/1.1" 202 8 "-" "Grafana k6/1.1.0"
+api-1-1  | Processing payment: 213d776c-546f-4e45-abda-3cc98086734f
+api-1-1  | checking processor health: default
+api-1-1  | DeprecationWarning: Calling promisify on a function that returns a Promise is likely a mistake.
+api-1-1  |  code: "DEP0174"
+api-1-1  | 
+api-1-1  |       at bound  (internal:promisify:39:28)
+api-1-1  |       at <anonymous> (/usr/src/app/dist/index.js:33740:31)
+api-1-1  | 
+api-1-1  | processor response:  {
+api-1-1  |   message: "payment processed successfully",
+api-1-1  | }
+api-1-1  | checking processor health: fallback
+api-1-1  | Payment processed via default: 213d776c-546f-4e45-abda-3cc98086734f OK
+api-2-1  | Server is listening on port 3000
+nginx-1  | 172.20.0.1 - - [24/Jul/2025:19:46:39 +0000] "POST /payments HTTP/1.1" 202 8 "-" "Grafana k6/1.1.0"
+api-1-1  | Enqueuing payment {
+api-1-1  |   amount: 19.9,
+api-1-1  |   correlationId: "8b681246-1bf6-438f-a1d1-24588e989ab0",
+api-1-1  |   requestedAt: 2025-07-24T19:46:39.626Z,
+api-1-1  | }
+api-1-1  | Processing payment: 8b681246-1bf6-438f-a1d1-24588e989ab0
+api-1-1  | checking processor health: default
+api-1-1  | DeprecationWarning: Calling promisify on a function that returns a Promise is likely a mistake.
+api-1-1  |  code: "DEP0174"
+api-1-1  | 
+api-1-1  |       at bound  (internal:promisify:39:28)
+api-1-1  |       at <anonymous> (/usr/src/app/dist/index.js:33740:31)
+api-1-1  | 
+api-1-1  | processor response:  {
+api-1-1  |   message: "payment processed successfully",
+api-1-1  | }
+api-1-1  | checking processor health: fallback
+api-1-1  | Payment processed via default: 8b681246-1bf6-438f-a1d1-24588e989ab0 OK
+api-1-1  | Enqueuing payment {
+api-1-1  |   amount: 19.9,
+api-1-1  |   correlationId: "3c2c3d92-25b7-4f1d-b386-aa1828dfcc86",
+api-1-1  |   requestedAt: 2025-07-24T19:46:39.645Z,
+api-1-1  | }
+nginx-1  | 172.20.0.1 - - [24/Jul/2025:19:46:39 +0000] "POST /payments HTTP/1.1" 202 8 "-" "Grafana k6/1.1.0"
+api-2-1  | Processing payment: 3c2c3d92-25b7-4f1d-b386-aa1828dfcc86
+api-2-1  | checking processor health: default
+api-2-1  | DeprecationWarning: Calling promisify on a function that returns a Promise is likely a mistake.
+api-2-1  |  code: "DEP0174"
+api-2-1  | 
+api-2-1  |       at bound  (internal:promisify:39:28)
+api-2-1  |       at <anonymous> (/usr/src/app/dist/index.js:33740:31)
+api-2-1  | 
+api-2-1  | processor response:  {
+api-2-1  |   message: "payment processed successfully",
+api-2-1  | }
+api-2-1  | checking processor health: fallback
+api-2-1  | Payment processed via default: 3c2c3d92-25b7-4f1d-b386-aa1828dfcc86 OK
+api-1-1  | Enqueuing payment {
+api-1-1  |   amount: 19.9,
+api-1-1  |   correlationId: "d4dbd248-9450-4016-8cba-ab5c1e34ed46",
+api-1-1  |   requestedAt: 2025-07-24T19:46:39.735Z,
+api-1-1  | }
+nginx-1  | 172.20.0.1 - - [24/Jul/2025:19:46:39 +0000] "POST /payments HTTP/1.1" 202 8 "-" "Grafana k6/1.1.0"
+api-1-1  | Processing payment: d4dbd248-9450-4016-8cba-ab5c1e34ed46
+api-1-1  | checking processor health: default
+api-1-1  | DeprecationWarning: Calling promisify on a function that returns a Promise is likely a mistake.
+api-1-1  |  code: "DEP0174"
+api-1-1  | 
+api-1-1  |       at bound  (internal:promisify:39:28)
+api-1-1  |       at <anonymous> (/usr/src/app/dist/index.js:33740:31)
+api-1-1  | 
+api-1-1  | processor response:  {
+api-1-1  |   message: "payment processed successfully",
+api-1-1  | }
+api-1-1  | checking processor health: fallback
+api-1-1  | Payment processed via default: d4dbd248-9450-4016-8cba-ab5c1e34ed46 OK
+api-1-1  | Enqueuing payment {
+api-1-1  |   amount: 19.9,
+api-1-1  |   correlationId: "345e71f9-93f4-4e27-b33f-aca30b40d1c8",
+api-1-1  |   requestedAt: 2025-07-24T19:46:39.763Z,
+api-1-1  | }
+nginx-1  | 172.20.0.1 - - [24/Jul/2025:19:46:39 +0000] "POST /payments HTTP/1.1" 202 8 "-" "Grafana k6/1.1.0"
+api-2-1  | Processing payment: 345e71f9-93f4-4e27-b33f-aca30b40d1c8
+api-2-1  | checking processor health: default
+api-2-1  | DeprecationWarning: Calling promisify on a function that returns a Promise is likely a mistake.
+api-2-1  |  code: "DEP0174"
+api-2-1  | 
+api-2-1  |       at bound  (internal:promisify:39:28)
+api-2-1  |       at <anonymous> (/usr/src/app/dist/index.js:33740:31)
+api-2-1  | 
+api-2-1  | processor response:  {
+api-2-1  |   message: "payment processed successfully",
+api-2-1  | }
+api-2-1  | checking processor health: fallback
+api-2-1  | Payment processed via default: 345e71f9-93f4-4e27-b33f-aca30b40d1c8 OK
+api-1-1  | Enqueuing payment {
+api-1-1  |   amount: 19.9,
+api-1-1  |   correlationId: "25793b22-a543-4988-9dc9-2702da0cc155",
+api-1-1  |   requestedAt: 2025-07-24T19:46:39.845Z,
+api-1-1  | }
+nginx-1  | 172.20.0.1 - - [24/Jul/2025:19:46:39 +0000] "POST /payments HTTP/1.1" 202 8 "-" "Grafana k6/1.1.0"
+api-1-1  | Processing payment: 25793b22-a543-4988-9dc9-2702da0cc155
+api-1-1  | checking processor health: default
+api-1-1  | DeprecationWarning: Calling promisify on a function that returns a Promise is likely a mistake.
+api-1-1  |  code: "DEP0174"
+api-1-1  | 
+api-1-1  |       at bound  (internal:promisify:39:28)
+api-1-1  |       at <anonymous> (/usr/src/app/dist/index.js:33740:31)
+api-1-1  | 
+api-1-1  | processor response:  {
+api-1-1  |   message: "payment processed successfully",
+api-1-1  | }
+api-1-1  | checking processor health: fallback
+api-1-1  | Payment processed via default: 25793b22-a543-4988-9dc9-2702da0cc155 OK
+api-1-1  | Enqueuing payment {
+api-1-1  |   amount: 19.9,
+api-1-1  |   correlationId: "b76efb3d-5df3-4825-b33f-24900e2d6439",
+api-1-1  |   requestedAt: 2025-07-24T19:46:39.864Z,
+api-1-1  | }
+nginx-1  | 172.20.0.1 - - [24/Jul/2025:19:46:39 +0000] "POST /payments HTTP/1.1" 202 8 "-" "Grafana k6/1.1.0"
+api-2-1  | Processing payment: b76efb3d-5df3-4825-b33f-24900e2d6439
+api-2-1  | checking processor health: default
+api-2-1  | DeprecationWarning: Calling promisify on a function that returns a Promise is likely a mistake.
+api-2-1  |  code: "DEP0174"
+api-2-1  | 
+api-2-1  |       at bound  (internal:promisify:39:28)
+api-2-1  |       at <anonymous> (/usr/src/app/dist/index.js:33740:31)
+api-2-1  | 
+api-2-1  | processor response:  {
+api-2-1  |   message: "payment processed successfully",
+api-2-1  | }
+api-2-1  | checking processor health: fallback
+api-2-1  | Payment processed via default: b76efb3d-5df3-4825-b33f-24900e2d6439 OK
+api-1-1  | Enqueuing payment {
+api-1-1  |   amount: 19.9,
+api-1-1  |   correlationId: "37b8e98c-9bb8-45a6-bf02-5ec062c3045e",
+api-1-1  |   requestedAt: 2025-07-24T19:46:39.955Z,
+api-1-1  | }
+nginx-1  | 172.20.0.1 - - [24/Jul/2025:19:46:39 +0000] "POST /payments HTTP/1.1" 202 8 "-" "Grafana k6/1.1.0"
+api-1-1  | Processing payment: 37b8e98c-9bb8-45a6-bf02-5ec062c3045e
+api-1-1  | checking processor health: default
+api-1-1  | DeprecationWarning: Calling promisify on a function that returns a Promise is likely a mistake.
+api-1-1  |  code: "DEP0174"
+api-1-1  | 
+api-1-1  |       at bound  (internal:promisify:39:28)
+api-1-1  |       at <anonymous> (/usr/src/app/dist/index.js:33740:31)
+api-1-1  | 
+api-1-1  | Enqueuing payment {
+api-1-1  |   amount: 19.9,
+api-1-1  |   correlationId: "cd05cfa1-9372-47d8-a8d7-7cb3c9afef0a",
+api-1-1  |   requestedAt: 2025-07-24T19:46:39.974Z,
+api-1-1  | }
+nginx-1  | 172.20.0.1 - - [24/Jul/2025:19:46:39 +0000] "POST /payments HTTP/1.1" 202 8 "-" "Grafana k6/1.1.0"
+api-2-1  | DeprecationWarning: Calling promisify on a function that returns a Promise is likely a mistake.
+api-2-1  |  code: "DEP0174"
+api-2-1  | 
+api-2-1  |       at bound  (internal:promisify:39:28)
+api-2-1  |       at <anonymous> (/usr/src/app/dist/index.js:33740:31)
+api-2-1  | 
+api-2-1  | Processing payment: cd05cfa1-9372-47d8-a8d7-7cb3c9afef0a
+api-2-1  | checking processor health: default
+api-1-1  | processor response:  {
+api-1-1  |   message: "payment processed successfully",
+api-1-1  | }
+api-1-1  | checking processor health: fallback
+api-2-1  | processor response:  {
+api-2-1  |   message: "payment processed successfully",
+api-2-1  | }
+api-2-1  | checking processor health: fallback
+api-1-1  | Payment processed via default: 37b8e98c-9bb8-45a6-bf02-5ec062c3045e OK
+api-2-1  | Payment processed via default: cd05cfa1-9372-47d8-a8d7-7cb3c9afef0a OK
+api-1-1  | Enqueuing payment {
+api-1-1  |   amount: 19.9,
+api-1-1  |   correlationId: "3efb91f9-8c80-473b-9965-23389c68ae6f",
+api-1-1  |   requestedAt: 2025-07-24T19:46:40.064Z,
+api-1-1  | }
+nginx-1  | 172.20.0.1 - - [24/Jul/2025:19:46:40 +0000] "POST /payments HTTP/1.1" 202 8 "-" "Grafana k6/1.1.0"
+api-1-1  | Processing payment: 3efb91f9-8c80-473b-9965-23389c68ae6f
+api-1-1  | checking processor health: default
+api-1-1  | DeprecationWarning: Calling promisify on a function that returns a Promise is likely a mistake.
+api-1-1  |  code: "DEP0174"
+api-1-1  | 
+api-1-1  |       at bound  (internal:promisify:39:28)
+api-1-1  |       at <anonymous> (/usr/src/app/dist/index.js:33740:31)
+api-1-1  | 
+api-1-1  | Enqueuing payment {
+api-1-1  |   amount: 19.9,
+api-1-1  |   correlationId: "a05eaa6a-1bf7-43e6-b3a3-0d3ceb0c9c3d",
+api-1-1  |   requestedAt: 2025-07-24T19:46:40.083Z,
+api-1-1  | }
+nginx-1  | 172.20.0.1 - - [24/Jul/2025:19:46:40 +0000] "POST /payments HTTP/1.1" 202 8 "-" "Grafana k6/1.1.0"
+api-1-1  | processor response:  {
+api-1-1  |   message: "payment processed successfully",
+api-1-1  | }
+api-1-1  | checking processor health: fallback
+api-2-1  | Processing payment: a05eaa6a-1bf7-43e6-b3a3-0d3ceb0c9c3d
+api-2-1  | DeprecationWarning: Calling promisify on a function that returns a Promise is likely a mistake.
+api-2-1  |  code: "DEP0174"
+api-2-1  | 
+api-2-1  |       at bound  (internal:promisify:39:28)
+api-2-1  |       at <anonymous> (/usr/src/app/dist/index.js:33740:31)
+api-2-1  | 
+api-1-1  | Payment processed via default: 3efb91f9-8c80-473b-9965-23389c68ae6f OK
+api-2-1  | checking processor health: default
+api-2-1  | Enqueuing payment {
+api-2-1  |   amount: 19.9,
+api-2-1  |   correlationId: "d638deca-d58e-43bf-a677-bcb84fd38017",
+api-2-1  |   requestedAt: 2025-07-24T19:46:40.187Z,
+api-2-1  | }
+nginx-1  | 172.20.0.1 - - [24/Jul/2025:19:46:40 +0000] "POST /payments HTTP/1.1" 202 8 "-" "Grafana k6/1.1.0"
+api-2-1  | processor response:  {
+api-2-1  |   message: "payment processed successfully",
+api-2-1  | }
+api-2-1  | checking processor health: fallback
+api-1-1  | DeprecationWarning: Calling promisify on a function that returns a Promise is likely a mistake.
+api-1-1  |  code: "DEP0174"
+api-1-1  | 
+api-1-1  |       at bound  (internal:promisify:39:28)
+api-1-1  |       at <anonymous> (/usr/src/app/dist/index.js:33740:31)
+api-1-1  | 
+api-1-1  | Processing payment: d638deca-d58e-43bf-a677-bcb84fd38017
+api-1-1  | checking processor health: default
+api-2-1  | Payment processed via default: a05eaa6a-1bf7-43e6-b3a3-0d3ceb0c9c3d OK
+api-1-1  | Enqueuing payment {
+api-1-1  |   amount: 19.9,
+api-1-1  |   correlationId: "4096f5aa-f2f5-4df5-8e9f-0bf8749d47fe",
+api-1-1  |   requestedAt: 2025-07-24T19:46:40.193Z,
+api-1-1  | }
+nginx-1  | 172.20.0.1 - - [24/Jul/2025:19:46:40 +0000] "POST /payments HTTP/1.1" 202 8 "-" "Grafana k6/1.1.0"
+api-1-1  | processor response:  {
+api-1-1  |   message: "payment processed successfully",
+api-1-1  | }
+api-1-1  | checking processor health: fallback
+api-1-1  | Payment processed via default: d638deca-d58e-43bf-a677-bcb84fd38017 OK
+api-2-1  | Processing payment: 4096f5aa-f2f5-4df5-8e9f-0bf8749d47fe
+api-2-1  | checking processor health: default
+api-2-1  | DeprecationWarning: Calling promisify on a function that returns a Promise is likely a mistake.
+api-2-1  |  code: "DEP0174"
+api-2-1  | 
+api-2-1  |       at bound  (internal:promisify:39:28)
+api-2-1  |       at <anonymous> (/usr/src/app/dist/index.js:33740:31)
+api-2-1  | 
+api-2-1  | processor response:  {
+api-2-1  |   message: "payment processed successfully",
+api-2-1  | }
+api-2-1  | checking processor health: fallback
+api-2-1  | Payment processed via default: 4096f5aa-f2f5-4df5-8e9f-0bf8749d47fe OK
+api-1-1  | Enqueuing payment {
+api-1-1  |   amount: 19.9,
+api-1-1  |   correlationId: "9c49772d-40c6-4999-bbb2-6f7c5d7a5d43",
+api-1-1  |   requestedAt: 2025-07-24T19:46:40.283Z,
+api-1-1  | }
+nginx-1  | 172.20.0.1 - - [24/Jul/2025:19:46:40 +0000] "POST /payments HTTP/1.1" 202 8 "-" "Grafana k6/1.1.0"
+api-1-1  | DeprecationWarning: Calling promisify on a function that returns a Promise is likely a mistake.
+api-1-1  |  code: "DEP0174"
+api-1-1  | 
+api-1-1  |       at bound  (internal:promisify:39:28)
+api-1-1  |       at <anonymous> (/usr/src/app/dist/index.js:33740:31)
+api-1-1  | 
+api-1-1  | Processing payment: 9c49772d-40c6-4999-bbb2-6f7c5d7a5d43
+api-1-1  | checking processor health: default
+api-1-1  | processor response:  {
+api-1-1  |   message: "payment processed successfully",
+api-1-1  | }
+api-1-1  | checking processor health: fallback
+api-1-1  | Payment processed via default: 9c49772d-40c6-4999-bbb2-6f7c5d7a5d43 OK
+api-1-1  | Enqueuing payment {
+api-1-1  |   amount: 19.9,
+api-1-1  |   correlationId: "d307a112-4a20-4d9d-924c-5b34ad9049e9",
+api-1-1  |   requestedAt: 2025-07-24T19:46:40.301Z,
+api-1-1  | }
+nginx-1  | 172.20.0.1 - - [24/Jul/2025:19:46:40 +0000] "POST /payments HTTP/1.1" 202 8 "-" "Grafana k6/1.1.0"
+api-2-1  | DeprecationWarning: Calling promisify on a function that returns a Promise is likely a mistake.
+api-2-1  |  code: "DEP0174"
+api-2-1  | 
+api-2-1  |       at bound  (internal:promisify:39:28)
+api-2-1  |       at <anonymous> (/usr/src/app/dist/index.js:33740:31)
+api-2-1  | 
+api-2-1  | Processing payment: d307a112-4a20-4d9d-924c-5b34ad9049e9
+api-2-1  | checking processor health: default
+api-2-1  | processor response:  {
+api-2-1  |   message: "payment processed successfully",
+api-2-1  | }
+api-2-1  | checking processor health: fallback
+api-2-1  | Payment processed via default: d307a112-4a20-4d9d-924c-5b34ad9049e9 OK
+api-1-1  | Enqueuing payment {
+api-1-1  |   amount: 19.9,
+api-1-1  |   correlationId: "5e87439a-692c-4def-b690-5f3f6efdfae4",
+api-1-1  |   requestedAt: 2025-07-24T19:46:40.330Z,
+api-1-1  | }
+nginx-1  | 172.20.0.1 - - [24/Jul/2025:19:46:40 +0000] "POST /payments HTTP/1.1" 202 8 "-" "Grafana k6/1.1.0"
+api-1-1  | Processing payment: 5e87439a-692c-4def-b690-5f3f6efdfae4
+api-1-1  | checking processor health: default
+api-1-1  | DeprecationWarning: Calling promisify on a function that returns a Promise is likely a mistake.
+api-1-1  |  code: "DEP0174"
+api-1-1  | 
+api-1-1  |       at bound  (internal:promisify:39:28)
+api-1-1  |       at <anonymous> (/usr/src/app/dist/index.js:33740:31)
+api-1-1  | 
+api-1-1  | processor response:  {
+api-1-1  |   message: "payment processed successfully",
+api-1-1  | }
+api-1-1  | checking processor health: fallback
+api-1-1  | Payment processed via default: 5e87439a-692c-4def-b690-5f3f6efdfae4 OK
+api-2-1  | Enqueuing payment {
+api-2-1  |   amount: 19.9,
+api-2-1  |   correlationId: "2167ecfc-9124-467f-981c-54f0297c9a39",
+api-2-1  |   requestedAt: 2025-07-24T19:46:40.391Z,
+api-2-1  | }
+nginx-1  | 172.20.0.1 - - [24/Jul/2025:19:46:40 +0000] "POST /payments HTTP/1.1" 202 8 "-" "Grafana k6/1.1.0"
+api-2-1  | Processing payment: 2167ecfc-9124-467f-981c-54f0297c9a39
+api-2-1  | checking processor health: default
+api-2-1  | DeprecationWarning: Calling promisify on a function that returns a Promise is likely a mistake.
+api-2-1  |  code: "DEP0174"
+api-2-1  | 
+api-2-1  |       at bound  (internal:promisify:39:28)
+api-2-1  |       at <anonymous> (/usr/src/app/dist/index.js:33740:31)
+api-2-1  | 
+api-2-1  | processor response:  {
+api-2-1  |   message: "payment processed successfully",
+api-2-1  | }
+api-2-1  | checking processor health: fallback
+api-2-1  | Payment processed via default: 2167ecfc-9124-467f-981c-54f0297c9a39 OK
+api-1-1  | Enqueuing payment {
+api-1-1  |   amount: 19.9,
+api-1-1  |   correlationId: "c2f9e78c-fb15-49e1-b9aa-7d25fb7560a2",
+api-1-1  |   requestedAt: 2025-07-24T19:46:40.410Z,
+api-1-1  | }
+nginx-1  | 172.20.0.1 - - [24/Jul/2025:19:46:40 +0000] "POST /payments HTTP/1.1" 202 8 "-" "Grafana k6/1.1.0"
+api-1-1  | DeprecationWarning: Calling promisify on a function that returns a Promise is likely a mistake.
+api-1-1  |  code: "DEP0174"
+api-1-1  | 
+api-1-1  |       at bound  (internal:promisify:39:28)
+api-1-1  |       at <anonymous> (/usr/src/app/dist/index.js:33740:31)
+api-1-1  | 
+api-1-1  | Processing payment: c2f9e78c-fb15-49e1-b9aa-7d25fb7560a2
+api-1-1  | checking processor health: default
+api-1-1  | processor response:  {
+api-1-1  |   message: "payment processed successfully",
+api-1-1  | }
+api-1-1  | checking processor health: fallback
+api-1-1  | Payment processed via default: c2f9e78c-fb15-49e1-b9aa-7d25fb7560a2 OK
+api-1-1  | Enqueuing payment {
+api-1-1  |   amount: 19.9,
+api-1-1  |   correlationId: "9edfcf7f-3332-49ab-a3b6-c9288c2184df",
+api-1-1  |   requestedAt: 2025-07-24T19:46:40.430Z,
+api-1-1  | }
+nginx-1  | 172.20.0.1 - - [24/Jul/2025:19:46:40 +0000] "POST /payments HTTP/1.1" 202 8 "-" "Grafana k6/1.1.0"
+api-2-1  | Processing payment: 9edfcf7f-3332-49ab-a3b6-c9288c2184df
+api-2-1  | checking processor health: default
+api-2-1  | DeprecationWarning: Calling promisify on a function that returns a Promise is likely a mistake.
+api-2-1  |  code: "DEP0174"
+api-2-1  | 
+api-2-1  |       at bound  (internal:promisify:39:28)
+api-2-1  |       at <anonymous> (/usr/src/app/dist/index.js:33740:31)
+api-2-1  | 
+api-2-1  | processor response:  {
+api-2-1  |   message: "payment processed successfully",
+api-2-1  | }
+api-2-1  | checking processor health: fallback
+api-2-1  | Payment processed via default: 9edfcf7f-3332-49ab-a3b6-c9288c2184df OK
+api-1-1  | Enqueuing payment {
+api-1-1  |   amount: 19.9,
+api-1-1  |   correlationId: "48e6b39c-dce7-4e6b-a629-f04c871dde51",
+api-1-1  |   requestedAt: 2025-07-24T19:46:40.501Z,
+api-1-1  | }
+nginx-1  | 172.20.0.1 - - [24/Jul/2025:19:46:40 +0000] "POST /payments HTTP/1.1" 202 8 "-" "Grafana k6/1.1.0"
+api-1-1  | Processing payment: 48e6b39c-dce7-4e6b-a629-f04c871dde51
+api-1-1  | checking processor health: default
+api-1-1  | DeprecationWarning: Calling promisify on a function that returns a Promise is likely a mistake.
+api-1-1  |  code: "DEP0174"
+api-1-1  | 
+api-1-1  |       at bound  (internal:promisify:39:28)
+api-1-1  |       at <anonymous> (/usr/src/app/dist/index.js:33740:31)
+api-1-1  | 
+api-1-1  | processor response:  {
+api-1-1  |   message: "payment processed successfully",
+api-1-1  | }
+api-1-1  | checking processor health: fallback
+api-1-1  | Payment processed via default: 48e6b39c-dce7-4e6b-a629-f04c871dde51 OK
+api-1-1  | Enqueuing payment {
+api-1-1  |   amount: 19.9,
+api-1-1  |   correlationId: "e4f0fded-aff7-4df2-9d09-f475c1135bb1",
+api-1-1  |   requestedAt: 2025-07-24T19:46:40.520Z,
+api-1-1  | }
+nginx-1  | 172.20.0.1 - - [24/Jul/2025:19:46:40 +0000] "POST /payments HTTP/1.1" 202 8 "-" "Grafana k6/1.1.0"
+api-2-1  | Processing payment: e4f0fded-aff7-4df2-9d09-f475c1135bb1
+api-2-1  | checking processor health: default
+api-2-1  | DeprecationWarning: Calling promisify on a function that returns a Promise is likely a mistake.
+api-2-1  |  code: "DEP0174"
+api-2-1  | 
+api-2-1  |       at bound  (internal:promisify:39:28)
+api-2-1  |       at <anonymous> (/usr/src/app/dist/index.js:33740:31)
+api-2-1  | 
+api-2-1  | processor response:  {
+api-2-1  |   message: "payment processed successfully",
+api-2-1  | }
+api-2-1  | checking processor health: fallback
+api-2-1  | Payment processed via default: e4f0fded-aff7-4df2-9d09-f475c1135bb1 OK
+api-1-1  | Enqueuing payment {
+api-1-1  |   amount: 19.9,
+api-1-1  |   correlationId: "5ba1bfcf-2011-4681-a750-cffcc7a6a7d1",
+api-1-1  |   requestedAt: 2025-07-24T19:46:40.540Z,
+api-1-1  | }
+nginx-1  | 172.20.0.1 - - [24/Jul/2025:19:46:40 +0000] "POST /payments HTTP/1.1" 202 8 "-" "Grafana k6/1.1.0"
+api-1-1  | DeprecationWarning: Calling promisify on a function that returns a Promise is likely a mistake.
+api-1-1  |  code: "DEP0174"
+api-1-1  | 
+api-1-1  |       at bound  (internal:promisify:39:28)
+api-1-1  |       at <anonymous> (/usr/src/app/dist/index.js:33740:31)
+api-1-1  | 
+api-1-1  | Processing payment: 5ba1bfcf-2011-4681-a750-cffcc7a6a7d1
+api-1-1  | checking processor health: default
+api-1-1  | processor response:  {
+api-1-1  |   message: "payment processed successfully",
+api-1-1  | }
+api-1-1  | checking processor health: fallback
+api-1-1  | Payment processed via default: 5ba1bfcf-2011-4681-a750-cffcc7a6a7d1 OK
+api-2-1  | Enqueuing payment {
+api-2-1  |   amount: 19.9,
+api-2-1  |   correlationId: "d41dbae2-9b5d-4c43-8b35-49635136145a",
+api-2-1  |   requestedAt: 2025-07-24T19:46:40.610Z,
+api-2-1  | }
+nginx-1  | 172.20.0.1 - - [24/Jul/2025:19:46:40 +0000] "POST /payments HTTP/1.1" 202 8 "-" "Grafana k6/1.1.0"
+api-2-1  | Processing payment: d41dbae2-9b5d-4c43-8b35-49635136145a
+api-2-1  | checking processor health: default
+api-2-1  | DeprecationWarning: Calling promisify on a function that returns a Promise is likely a mistake.
+api-2-1  |  code: "DEP0174"
+api-2-1  | 
+api-2-1  |       at bound  (internal:promisify:39:28)
+api-2-1  |       at <anonymous> (/usr/src/app/dist/index.js:33740:31)
+api-2-1  | 
+api-2-1  | processor response:  {
+api-2-1  |   message: "payment processed successfully",
+api-2-1  | }
+api-2-1  | checking processor health: fallback
+api-2-1  | Payment processed via default: d41dbae2-9b5d-4c43-8b35-49635136145a OK
+api-1-1  | Enqueuing payment {
+api-1-1  |   amount: 19.9,
+api-1-1  |   correlationId: "ba3d4a73-0fb2-468a-ab64-322ca01148a8",
+api-1-1  |   requestedAt: 2025-07-24T19:46:40.628Z,
+api-1-1  | }
+nginx-1  | 172.20.0.1 - - [24/Jul/2025:19:46:40 +0000] "POST /payments HTTP/1.1" 202 8 "-" "Grafana k6/1.1.0"
+api-1-1  | DeprecationWarning: Calling promisify on a function that returns a Promise is likely a mistake.
+api-1-1  |  code: "DEP0174"
+api-1-1  | 
+api-1-1  |       at bound  (internal:promisify:39:28)
+api-1-1  |       at <anonymous> (/usr/src/app/dist/index.js:33740:31)
+api-1-1  | 
+api-1-1  | Processing payment: ba3d4a73-0fb2-468a-ab64-322ca01148a8
+api-1-1  | checking processor health: default
+api-1-1  | processor response:  {
+api-1-1  |   message: "payment processed successfully",
+api-1-1  | }
+api-1-1  | checking processor health: fallback
+api-1-1  | Payment processed via default: ba3d4a73-0fb2-468a-ab64-322ca01148a8 OK
+api-1-1  | Enqueuing payment {
+api-1-1  |   amount: 19.9,
+api-1-1  |   correlationId: "2ba11941-0b2a-49b0-9fdc-6b7d3fc12440",
+api-1-1  |   requestedAt: 2025-07-24T19:46:40.648Z,
+api-1-1  | }
+nginx-1  | 172.20.0.1 - - [24/Jul/2025:19:46:40 +0000] "POST /payments HTTP/1.1" 202 8 "-" "Grafana k6/1.1.0"
+api-2-1  | Processing payment: 2ba11941-0b2a-49b0-9fdc-6b7d3fc12440
+api-2-1  | checking processor health: default
+api-2-1  | DeprecationWarning: Calling promisify on a function that returns a Promise is likely a mistake.
+api-2-1  |  code: "DEP0174"
+api-2-1  | 
+api-2-1  |       at bound  (internal:promisify:39:28)
+api-2-1  |       at <anonymous> (/usr/src/app/dist/index.js:33740:31)
+api-2-1  | 
+api-2-1  | processor response:  {
+api-2-1  |   message: "payment processed successfully",
+api-2-1  | }
+api-2-1  | checking processor health: fallback
+api-2-1  | Payment processed via default: 2ba11941-0b2a-49b0-9fdc-6b7d3fc12440 OK
+api-1-1  | Enqueuing payment {
+api-1-1  |   amount: 19.9,
+api-1-1  |   correlationId: "b3d0ea67-b1b6-4a87-ab9d-821fdad8d94d",
+api-1-1  |   requestedAt: 2025-07-24T19:46:40.719Z,
+api-1-1  | }
+nginx-1  | 172.20.0.1 - - [24/Jul/2025:19:46:40 +0000] "POST /payments HTTP/1.1" 202 8 "-" "Grafana k6/1.1.0"
+api-1-1  | Processing payment: b3d0ea67-b1b6-4a87-ab9d-821fdad8d94d
+api-1-1  | checking processor health: default
+api-1-1  | DeprecationWarning: Calling promisify on a function that returns a Promise is likely a mistake.
+api-1-1  |  code: "DEP0174"
+api-1-1  | 
+api-1-1  |       at bound  (internal:promisify:39:28)
+api-1-1  |       at <anonymous> (/usr/src/app/dist/index.js:33740:31)
+api-1-1  | 
+api-1-1  | processor response:  {
+api-1-1  |   message: "payment processed successfully",
+api-1-1  | }
+api-1-1  | checking processor health: fallback
+api-1-1  | Payment processed via default: b3d0ea67-b1b6-4a87-ab9d-821fdad8d94d OK
+api-1-1  | Enqueuing payment {
+api-1-1  |   amount: 19.9,
+api-1-1  |   correlationId: "d7c0f7bd-01ec-48e0-9ff1-9bac3dd9aae6",
+api-1-1  |   requestedAt: 2025-07-24T19:46:40.738Z,
+api-1-1  | }
+nginx-1  | 172.20.0.1 - - [24/Jul/2025:19:46:40 +0000] "POST /payments HTTP/1.1" 202 8 "-" "Grafana k6/1.1.0"
+api-2-1  | Processing payment: d7c0f7bd-01ec-48e0-9ff1-9bac3dd9aae6
+api-2-1  | checking processor health: default
+api-2-1  | DeprecationWarning: Calling promisify on a function that returns a Promise is likely a mistake.
+api-2-1  |  code: "DEP0174"
+api-2-1  | 
+api-2-1  |       at bound  (internal:promisify:39:28)
+api-2-1  |       at <anonymous> (/usr/src/app/dist/index.js:33740:31)
+api-2-1  | 
+api-2-1  | processor response:  {
+api-2-1  |   message: "payment processed successfully",
+api-2-1  | }
+api-2-1  | checking processor health: fallback
+api-2-1  | Payment processed via default: d7c0f7bd-01ec-48e0-9ff1-9bac3dd9aae6 OK
+api-1-1  | Enqueuing payment {
+api-1-1  |   amount: 19.9,
+api-1-1  |   correlationId: "3c403f20-91b0-4130-892e-62465d6ef32b",
+api-1-1  |   requestedAt: 2025-07-24T19:46:40.766Z,
+api-1-1  | }
+nginx-1  | 172.20.0.1 - - [24/Jul/2025:19:46:40 +0000] "POST /payments HTTP/1.1" 202 8 "-" "Grafana k6/1.1.0"
+api-1-1  | Processing payment: 3c403f20-91b0-4130-892e-62465d6ef32b
+api-1-1  | checking processor health: default
+api-1-1  | DeprecationWarning: Calling promisify on a function that returns a Promise is likely a mistake.
+api-1-1  |  code: "DEP0174"
+api-1-1  | 
+api-1-1  |       at bound  (internal:promisify:39:28)
+api-1-1  |       at <anonymous> (/usr/src/app/dist/index.js:33740:31)
+api-1-1  | 
+api-1-1  | processor response:  {
+api-1-1  |   message: "payment processed successfully",
+api-1-1  | }
+api-1-1  | checking processor health: fallback
+api-1-1  | Payment processed via default: 3c403f20-91b0-4130-892e-62465d6ef32b OK
+api-2-1  | Enqueuing payment {
+api-2-1  |   amount: 19.9,
+api-2-1  |   correlationId: "b824f63a-5b1e-4536-ba79-d5f2baa36ae1",
+api-2-1  |   requestedAt: 2025-07-24T19:46:40.828Z,
+api-2-1  | }
+nginx-1  | 172.20.0.1 - - [24/Jul/2025:19:46:40 +0000] "POST /payments HTTP/1.1" 202 8 "-" "Grafana k6/1.1.0"
+api-2-1  | Processing payment: b824f63a-5b1e-4536-ba79-d5f2baa36ae1
+api-2-1  | checking processor health: default
+api-2-1  | DeprecationWarning: Calling promisify on a function that returns a Promise is likely a mistake.
+api-2-1  |  code: "DEP0174"
+api-2-1  | 
+api-2-1  |       at bound  (internal:promisify:39:28)
+api-2-1  |       at <anonymous> (/usr/src/app/dist/index.js:33740:31)
+api-2-1  | 
+api-2-1  | processor response:  {
+api-2-1  |   message: "payment processed successfully",
+api-2-1  | }
+api-2-1  | checking processor health: fallback
+api-2-1  | Payment processed via default: b824f63a-5b1e-4536-ba79-d5f2baa36ae1 OK
+api-1-1  | Enqueuing payment {
+api-1-1  |   amount: 19.9,
+api-1-1  |   correlationId: "119f38dc-43fd-47f1-8ea0-e7fbad247f83",
+api-1-1  |   requestedAt: 2025-07-24T19:46:40.847Z,
+api-1-1  | }
+nginx-1  | 172.20.0.1 - - [24/Jul/2025:19:46:40 +0000] "POST /payments HTTP/1.1" 202 8 "-" "Grafana k6/1.1.0"
+api-1-1  | Processing payment: 119f38dc-43fd-47f1-8ea0-e7fbad247f83
+api-1-1  | checking processor health: default
+api-1-1  | DeprecationWarning: Calling promisify on a function that returns a Promise is likely a mistake.
+api-1-1  |  code: "DEP0174"
+api-1-1  | 
+api-1-1  |       at bound  (internal:promisify:39:28)
+api-1-1  |       at <anonymous> (/usr/src/app/dist/index.js:33740:31)
+api-1-1  | 
+api-1-1  | processor response:  {
+api-1-1  |   message: "payment processed successfully",
+api-1-1  | }
+api-1-1  | checking processor health: fallback
+api-1-1  | Payment processed via default: 119f38dc-43fd-47f1-8ea0-e7fbad247f83 OK
+api-1-1  | Enqueuing payment {
+api-1-1  |   amount: 19.9,
+api-1-1  |   correlationId: "b98a6e46-8b86-4a46-ab4e-3c804dae9822",
+api-1-1  |   requestedAt: 2025-07-24T19:46:40.866Z,
+log truncated at line 1000

@@ -7,5 +7,5 @@ Repositório do projeto: [https://github.com/WillianAgostini/wza-go](httpshttps:
 
 - **Linguagem**: Go
 - **Servidor HTTP**: [fasthttp](https://github.com/valyala/fasthttp)
-- **Persistência**: SQLite + NATS JetStream
+- **Persistência**: Redis + NATS JetStream
 - **Load Balancer**: Nginx
