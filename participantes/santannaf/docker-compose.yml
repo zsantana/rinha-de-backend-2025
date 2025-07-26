@@ -17,7 +17,7 @@ services:
       resources:
         limits:
           cpus: "0.20"
-          memory: 25MB
+          memory: 30MB
 
   redis:
     image: redis:7.2-alpine
@@ -30,7 +30,7 @@ services:
       resources:
         limits:
           cpus: "0.20"
-          memory: 25MB
+          memory: 20MB
     networks:
       - backend
 
