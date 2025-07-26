@@ -22,11 +22,9 @@ Essa ferramenta [será utilizada para testar requisições na sua API local](htt
 
 Siga as [instruções para instalar no seu sistema operacional](https://grafana.com/docs/k6/latest/set-up/install-k6/) e depois vá para a pasta `rinha-test` para rodar o teste com `k6 run rinha.js` — mas não agora, tem algumas coisas que ainda serão resolvidas logo abaixo.
 
-### 3. Crie rotas necessárias para rodar o teste
+### 3. Seu Backend
 
-Além dos [endpoints a serem desenvolvidos](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main#resumo-dos-endpoints), há também um *endpoint secreto* necessário para o script não crashar, que é o `POST /purge-payments`. Ele é chamado pelo script de teste e serve para notificar uma limpeza no seu serviço.
-
-[Seu backend também deve estar exposto na porta `9999`.](https://github.com/zanfranceschi/rinha-de-backend-2025?tab=readme-ov-file#arquitetura)
+Sinta-se livre para criar o seu backend com os [endpoints](https://github.com/zanfranceschi/rinha-de-backend-2025/blob/main/INSTRUCOES.md#detalhes-dos-endpoints) necessários.
 
 Se por algum motivo você quiser testar apenas um cenário, comente os demais no arquivo [`rinha.js`](https://github.com/zanfranceschi/rinha-de-backend-2025/blob/2ac3f62f225afd6748e9164be3c4d4ebe5d3474e/rinha-test/rinha.js#L35-L128).
 
