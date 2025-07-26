@@ -1,13 +1,13 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Sat Jul 26 10:48:06 AM -03 2025**
-112 submissões / 94 resultados / 18 submissões com erro
+Atualizado em **Sat Jul 26 12:38:51 PM -03 2025**
+112 submissões / 93 resultados / 19 submissões com erro
 
 
 | participante | p99 | bônus por desempenho (%) | multa ($) | lucro | submissão |
 | -- | -- | -- | -- | -- | -- |
 |	adriano-moreira	|	252.91781827999992ms	|	0	|	0	|	313223.01499999996	|	[adriano-moreira](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/adriano-moreira)
 |	adrianosilva-go	|	4.079590199999993ms	|	0.13840819600000015	|	0	|	351997.2087532401	|	[adrianosilva-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/adrianosilva-go)
-|	alan-silva	|	4.788265849999994ms	|	0.12423468300000012	|	0	|	355913.7347986978	|	[alan-silva](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/alan-silva)
+|	alan-silva	|	2.9833760200000055ms	|	0.1603324795999999	|	0	|	367407.4964890096	|	[alan-silva](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/alan-silva)
 |	alexroza-rs	|	1003.7500193000001ms	|	0	|	0	|	0	|	[alexroza-rs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/alexroza-rs)
 |	andersongomes001-go	|	3.8664645899999996ms	|	0.14267070820000002	|	0	|	359204.62184419116	|	[andersongomes001-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/andersongomes001-go)
 |	andersongomes001	|	1.624445ms	|	0.1875111	|	0	|	376066.50144928205	|	[andersongomes001](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/andersongomes001)
@@ -38,7 +38,6 @@ Atualizado em **Sat Jul 26 10:48:06 AM -03 2025**
 |	gabxdev-java-1	|	5.646310190000009ms	|	0.10707379619999982	|	0	|	349715.3183350609	|	[gabxdev-java-1](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/gabxdev-java-1)
 |	gabxdev-java-2	|	2.6663049ms	|	0.166673902	|	0	|	368756.0860723709	|	[gabxdev-java-2](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/gabxdev-java-2)
 |	gaoliveira21	|	6.4095455700000015ms	|	0.09180908859999998	|	0	|	186261.2329995266	|	[gaoliveira21](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/gaoliveira21)
-|	gtiburcio-go	|	3.5941612699999808ms	|	0.1481167746000004	|	110823.94575000968	|	252715.57180126617	|	[gtiburcio-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/gtiburcio-go)
 |	guidugaich-node	|	118.87273569999962ms	|	0	|	27583.4895	|	51226.480500000005	|	[guidugaich-node](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/guidugaich-node)
 |	hamilton-golang-mongo	|	4.650465999999955ms	|	0.12699068000000088	|	109098.01874999177	|	242194.696500597	|	[hamilton-golang-mongo](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/hamilton-golang-mongo)
 |	henriqueramos13-node	|	51.525659259999934ms	|	0	|	59049.95249999999	|	109664.19750000001	|	[henriqueramos13-node](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/henriqueramos13-node)
@@ -112,6 +111,7 @@ Atualizado em **Sat Jul 26 10:48:06 AM -03 2025**
 | danilosantana-dotnet | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/danilosantana-dotnet) |
 | dotnetRinha | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/dotnetRinha) |
 | el_yawd-crab | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/el_yawd-crab) |
+| gtiburcio-go | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/gtiburcio-go) |
 | guilhermegules-payflow-node | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/guilhermegules-payflow-node) |
 | libardi-dotnet-2 | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/libardi-dotnet-2) |
 | marcospaulo-java-1 | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/marcospaulo-java-1) |
