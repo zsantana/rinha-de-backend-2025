@@ -65,7 +65,7 @@ services:
       interval: 5s
       retries: 6
     volumes:
-      - ./scripts:/docker-entrypoint-initdb.d
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
     environment:
       - POSTGRES_PASSWORD=root
       - POSTGRES_DB=rinha
