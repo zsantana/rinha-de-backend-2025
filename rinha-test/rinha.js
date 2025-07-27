@@ -288,13 +288,13 @@ export function handleSummary(data) {
     descricao: "'total_liquido' é sua pontuação final. Equivale ao seu lucro. Fórmula: total_liquido + (total_liquido * p99.bonus) - (total_liquido * multa.porcentagem)",
     p99: {
       valor: `${p_99}ms`,
-      bonus: p_99_bonus,
+      bonus: `${new Big(p_99_bonus).times(100)}%`,
       max_requests: MAX_REQUESTS,
       descricao: "Fórmula para o bônus: max((11 - p99.valor) * 0.02, 0)",
     },
     multa: {
       porcentagem: inconsistencies_fine,
-      total: (liquid_partial_amount * inconsistencies_fine),
+      total: new Big(liquid_partial_amount).times(inconsistencies_fine).toNumber(),
       composicao: {
         num_inconsistencias: data.metrics.payments_inconsistency.values.count,
         descricao: "Se 'num_inconsistencias' > 0, há multa de 35%.",
