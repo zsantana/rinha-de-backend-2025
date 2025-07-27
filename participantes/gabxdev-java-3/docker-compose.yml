@@ -17,15 +17,15 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '0.42'
-          memory: '200MB'
+          cpus: '0.38'
+          memory: '190MB'
 
   backend-1:
     image: gabxdevv/rinha-backend-2025-javinha:1.0.0
     environment:
       RETRY_API_DEFAULT: 16
       WORKER_POOL_SIZE: 21
-      HANDLER_UDP_POOL_SIZE: 5
+      HANDLER_UDP_POOL_SIZE: 6
       URL_PROCESSOR_DEFAULT: http://payment-processor-default:8080/payments
       URL_PROCESSOR_FALLBACK: http://payment-processor-fallback:8080/payments
       DATABASE_HOST: db-bolado
@@ -50,8 +50,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '0.40'
-          memory: '40MB'
+          cpus: '0.42'
+          memory: '45MB'
 
   backend-2:
     image: gabxdevv/rinha-backend-2025-javinha:1.0.0
@@ -59,7 +59,7 @@ services:
     environment:
       RETRY_API_DEFAULT: 16
       WORKER_POOL_SIZE: 21
-      HANDLER_UDP_POOL_SIZE: 5
+      HANDLER_UDP_POOL_SIZE: 6
       URL_PROCESSOR_DEFAULT: http://payment-processor-default:8080/payments
       URL_PROCESSOR_FALLBACK: http://payment-processor-fallback:8080/payments
       DATABASE_HOST: db-bolado
@@ -84,8 +84,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '0.40'
-          memory: '40MB'
+          cpus: '0.42'
+          memory: '45MB'
 
 
   load-balancer:
