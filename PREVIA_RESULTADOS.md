@@ -1,6 +1,6 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Sun Jul 27 12:40:41 PM -03 2025**
-129 submissões / 104 resultados / 25 submissões com erro
+Atualizado em **Sun Jul 27 12:50:44 PM -03 2025**
+129 submissões / 106 resultados / 23 submissões com erro
 
 
 | participante | p99 | bônus por desempenho (%) | multa ($) | lucro | submissão |
@@ -45,6 +45,7 @@ Atualizado em **Sun Jul 27 12:40:41 PM -03 2025**
 |	gabxdev-java-1	|	4.55ms	|	13%	|	0	|	356914.78835	|	[gabxdev-java-1](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/gabxdev-java-1)
 |	gabxdev-java-2	|	3.25ms	|	16%	|	0	|	366632.7842	|	[gabxdev-java-2](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/gabxdev-java-2)
 |	gaoliveira21	|	6.45ms	|	9%	|	0	|	186982.9273	|	[gaoliveira21](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/gaoliveira21)
+|	geazi-anc	|	1400.39ms	|	0%	|	39085.83875000197	|	72587.98625000364	|	[geazi-anc](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/geazi-anc)
 |	guidugaich-node	|	103.57ms	|	0%	|	25625.628	|	47590.452	|	[guidugaich-node](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/guidugaich-node)
 |	hamilton-golang-mongo	|	4.93ms	|	12%	|	0	|	349173.8375999739	|	[hamilton-golang-mongo](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/hamilton-golang-mongo)
 |	henriqueramos13-node	|	46.62ms	|	0%	|	52785.005	|	98029.295	|	[henriqueramos13-node](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/henriqueramos13-node)
@@ -88,6 +89,7 @@ Atualizado em **Sun Jul 27 12:40:41 PM -03 2025**
 |	ricassiocosta-python	|	142.59ms	|	0%	|	63870.79125	|	118617.18375	|	[ricassiocosta-python](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/ricassiocosta-python)
 |	robertAlmeida	|	38ms	|	0%	|	90587.13825	|	168233.25675	|	[robertAlmeida](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/robertAlmeida)
 |	rodrigocaldeira-elixir	|	68.11ms	|	0%	|	0	|	288778.85	|	[rodrigocaldeira-elixir](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/rodrigocaldeira-elixir)
+|	rodrigo-militao	|	61.76ms	|	0%	|	0	|	315770.2150000267	|	[rodrigo-militao](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/rodrigo-militao)
 |	rodrigo-schonardt-go	|	16.32ms	|	0%	|	0	|	128475.395	|	[rodrigo-schonardt-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/rodrigo-schonardt-go)
 |	ronssm-CopiRinhaGo	|	1311.28ms	|	0%	|	0	|	64206.355	|	[ronssm-CopiRinhaGo](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/ronssm-CopiRinhaGo)
 |	ryangst-bun	|	648.26ms	|	0%	|	0	|	0	|	[ryangst-bun](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/ryangst-bun)
@@ -122,7 +124,6 @@ Atualizado em **Sun Jul 27 12:40:41 PM -03 2025**
 | d4vz | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/d4vz) |
 | danilosantana-dotnet | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/danilosantana-dotnet) |
 | dotnetRinha | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/dotnetRinha) |
-| geazi-anc | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/geazi-anc) |
 | geffersonFerraz-go | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/geffersonFerraz-go) |
 | gtiburcio-go | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/gtiburcio-go) |
 | guilhermegules-payflow-node | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/guilhermegules-payflow-node) |
@@ -136,5 +137,4 @@ Atualizado em **Sun Jul 27 12:40:41 PM -03 2025**
 | mxlange | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/mxlange) |
 | mxlange-fasthttp | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/mxlange-fasthttp) |
 | rafaelgiori-dotnet | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/rafaelgiori-dotnet) |
-| rodrigo-militao | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/rodrigo-militao) |
 | rodrixl | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/rodrixl) |
