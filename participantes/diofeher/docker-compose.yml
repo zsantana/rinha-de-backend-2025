@@ -18,9 +18,9 @@ services:
           memory: "15MB"
 
   api1:
+    image: diofeher/rinha-de-backend-diofeher:latest
     depends_on:
       - redis
-    build: .
     environment:
       - PORT=8080
       - REDIS_URL=redis:6379
