@@ -1,6 +1,6 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Sat Jul 26 11:50:44 PM -03 2025**
-122 submissões / 100 resultados / 22 submissões com erro
+Atualizado em **Sat Jul 26 11:57:53 PM -03 2025**
+123 submissões / 100 resultados / 23 submissões com erro
 
 
 | participante | p99 | bônus por desempenho (%) | multa ($) | lucro | submissão |
@@ -116,6 +116,7 @@ Atualizado em **Sat Jul 26 11:50:44 PM -03 2025**
 | boaglio-player456 | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/boaglio-player456) |
 | ccs1201-01 | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/ccs1201-01) |
 | d4vz | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/d4vz) |
+| danilosantana-dotnet | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/danilosantana-dotnet) |
 | dbiagi | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/dbiagi) |
 | dotnetRinha | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/dotnetRinha) |
 | gtiburcio-go | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/gtiburcio-go) |
