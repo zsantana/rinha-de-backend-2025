@@ -321,7 +321,7 @@ export function handleSummary(data) {
   };
 
   const participant = __ENV.PARTICIPANT;
-  let summaryJsonFileName = `../participantes/${participant}/partial-results.json`
+  let summaryJsonFileName = `/home/diego/workspace/rinha-de-backend-2025/participantes/${participant}/partial-results.json`
 
   if (participant == undefined) {
     summaryJsonFileName = `./partial-results.json`
