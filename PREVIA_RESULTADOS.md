@@ -1,6 +1,6 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Sat Jul 26 10:24:55 PM -03 2025**
-117 submissões / 98 resultados / 19 submissões com erro
+Atualizado em **Sat Jul 26 10:39:33 PM -03 2025**
+116 submissões / 97 resultados / 19 submissões com erro
 
 
 | participante | p99 | bônus por desempenho (%) | multa ($) | lucro | submissão |
@@ -35,11 +35,10 @@ Atualizado em **Sat Jul 26 10:24:55 PM -03 2025**
 |	emiliosheinz-go	|	6.17ms	|	0.1	|	88555.79599999999	|	189762.42	|	[emiliosheinz-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/emiliosheinz-go)
 |	felipefrmelo-rust	|	5.77ms	|	0.1	|	105605.4195	|	226297.3275	|	[felipefrmelo-rust](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/felipefrmelo-rust)
 |	felipemcassiano	|	179.74ms	|	0	|	0	|	0	|	[felipemcassiano](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/felipemcassiano)
-|	felipeschirmann	|	3.69ms	|	0.15	|	5.920249999999999	|	13.532	|	[felipeschirmann](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/felipeschirmann)
 |	fhgm-dani-ed	|	64.75ms	|	0	|	0	|	245677.44	|	[fhgm-dani-ed](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/fhgm-dani-ed)
 |	francoggm-go	|	5.99ms	|	0.1	|	0	|	342982.3705	|	[francoggm-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/francoggm-go)
 |	gabxdev-java-1	|	3.15ms	|	0.16	|	0	|	366390.4022	|	[gabxdev-java-1](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/gabxdev-java-1)
-|	gabxdev-java-2	|	7.74ms	|	0.07	|	0	|	338045.5387	|	[gabxdev-java-2](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/gabxdev-java-2)
+|	gabxdev-java-2	|	4.52ms	|	0.13	|	0	|	357202.62195	|	[gabxdev-java-2](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/gabxdev-java-2)
 |	gaoliveira21	|	39.96ms	|	0	|	0	|	169350.99	|	[gaoliveira21](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/gaoliveira21)
 |	guidugaich-node	|	105.58ms	|	0	|	27469.96	|	51015.64	|	[guidugaich-node](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/guidugaich-node)
 |	hamilton-golang-mongo	|	6.72ms	|	0.09	|	109115.43124999183	|	230701.19749998272	|	[hamilton-golang-mongo](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/hamilton-golang-mongo)
