@@ -19,7 +19,7 @@ services:
           memory: '30MB'
 
   backend-1: &backend-template
-    image: rodrigo-militao/rinha-go:2025
+    image: rodrigomilitao/rinha-go:2025
     expose:
       - '8080'
     networks:
