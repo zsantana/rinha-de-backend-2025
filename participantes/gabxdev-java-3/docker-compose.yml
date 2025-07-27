@@ -1,7 +1,6 @@
 services:
   db-bolado:
     image: gabxdevv/rinha-backend-2025-banco-bolado:1.0.0
-    container_name: banco
     networks:
       - backend
     environment:
@@ -23,7 +22,6 @@ services:
 
   backend-1:
     image: gabxdevv/rinha-backend-2025-javinha:1.0.0
-    container_name: api1
     environment:
       RETRY_API_DEFAULT: 16
       WORKER_POOL_SIZE: 21
@@ -57,7 +55,6 @@ services:
 
   backend-2:
     image: gabxdevv/rinha-backend-2025-javinha:1.0.0
-    container_name: ap2
     restart: always
     environment:
       RETRY_API_DEFAULT: 16
@@ -93,7 +90,6 @@ services:
 
   load-balancer:
     image: gabxdevv/loud-balance-diferenciado-bolado:1.0.0
-    container_name: load-balance
     restart: always
     depends_on:
       - backend-1
@@ -120,7 +116,6 @@ services:
         -XX:-PrintGCDetails
         -XX:-FlightRecorder
         -XX:+DisableExplicitGC
-
 networks:
   backend:
     driver: bridge
