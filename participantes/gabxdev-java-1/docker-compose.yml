@@ -2,7 +2,7 @@ services:
   backend-1:
     image: gabxdevv/rinha-backend-2025-java-1:1.0.0
     environment:
-      RETRY_API_DEFAULT: 15
+      RETRY_API_DEFAULT: 16
       WORKER_POOL_SIZE: 25
       PAYMENT_PROCESSOR_URL_DEFAULT: http://payment-processor-default:8080/payments
       PAYMENT_PROCESSOR_URL_FALLBACK: http://payment-processor-fallback:8080/payments
@@ -32,7 +32,7 @@ services:
     image: gabxdevv/rinha-backend-2025-java-1:1.0.0
     restart: always
     environment:
-      RETRY_API_DEFAULT: 15
+      RETRY_API_DEFAULT: 16
       WORKER_POOL_SIZE: 25
       PAYMENT_PROCESSOR_URL_DEFAULT: http://payment-processor-default:8080/payments
       PAYMENT_PROCESSOR_URL_FALLBACK: http://payment-processor-fallback:8080/payments
