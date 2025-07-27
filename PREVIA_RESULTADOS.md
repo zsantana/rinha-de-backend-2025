@@ -1,6 +1,6 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Sun Jul 27 12:20:52 AM -03 2025**
-123 submissões / 100 resultados / 23 submissões com erro
+Atualizado em **Sun Jul 27 12:28:12 AM -03 2025**
+123 submissões / 101 resultados / 22 submissões com erro
 
 
 | participante | p99 | bônus por desempenho (%) | multa ($) | lucro | submissão |
@@ -42,6 +42,7 @@ Atualizado em **Sun Jul 27 12:20:52 AM -03 2025**
 |	gabxdev-java-1	|	3.15ms	|	0.16	|	0	|	366390.4022	|	[gabxdev-java-1](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/gabxdev-java-1)
 |	gabxdev-java-2	|	3.06ms	|	0.16	|	0	|	366588.9246	|	[gabxdev-java-2](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/gabxdev-java-2)
 |	gaoliveira21	|	39.96ms	|	0	|	0	|	169350.99	|	[gaoliveira21](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/gaoliveira21)
+|	geazi-anc	|	8.7ms	|	0.05	|	0	|	135636.7582499838	|	[geazi-anc](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/geazi-anc)
 |	guidugaich-node	|	105.58ms	|	0	|	27469.96	|	51015.64	|	[guidugaich-node](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/guidugaich-node)
 |	hamilton-golang-mongo	|	6.72ms	|	0.09	|	109115.43124999183	|	230701.19749998272	|	[hamilton-golang-mongo](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/hamilton-golang-mongo)
 |	henriqueramos13-node	|	176.52ms	|	0	|	57845.5325	|	107427.4175	|	[henriqueramos13-node](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/henriqueramos13-node)
