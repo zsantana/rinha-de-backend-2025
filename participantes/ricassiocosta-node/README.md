@@ -206,21 +206,11 @@ Remove todos os pagamentos armazenados.
 
 ## Arquitetura
 
-A aplicação mantém a mesma arquitetura da versão Python:
-
 1. **API Fastify** - Recebe requisições HTTP
 2. **Queue Worker** - Processa pagamentos assincronamente
 3. **Health Check Service** - Monitora saúde dos gateways
 4. **Redis** - Cache distribuído e persistência
 5. **Load Balancer** - Nginx distribui requisições
-
-## Diferenças da Versão Python
-
-- Fastify ao invés de FastAPI
-- Sistema de filas em memória ao invés de asyncio.Queue
-- Axios ao invés de httpx
-- TypeScript para tipagem estática
-- Mantém exatamente a mesma lógica de negócio
 
 ## Scripts Úteis
 
@@ -235,4 +225,3 @@ Este projeto está licenciado sob a licença MIT.
 ---
 
 Desenvolvido para o desafio Rinha de Backend 2025 🚀
-Versão Node.js/TypeScript com mesma funcionalidade da versão Python original.
