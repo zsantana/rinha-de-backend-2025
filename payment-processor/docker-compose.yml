@@ -5,6 +5,11 @@ x-service-templates:
       - payment-processor
       - payment-processor-db
     deploy:
+      restart_policy:
+        condition: on-failure
+        delay: 2s
+        max_attempts: 10
+        window: 5s
       resources:
         limits:
           cpus: "1.5"
@@ -21,6 +26,11 @@ x-service-templates:
       - POSTGRES_USER=postgres
       - POSTGRES_DB=rinha
     deploy:
+      restart_policy:
+        condition: on-failure
+        delay: 2s
+        max_attempts: 10
+        window: 5s
       resources:
         limits:
           cpus: "1.5"
