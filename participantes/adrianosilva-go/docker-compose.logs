@@ -5,11 +5,11 @@
  Container redis  Creating
  Container redis  Created
  Container payment-db  Created
- Container api1  Creating
- Container api2  Creating
  Container worker  Creating
- Container api1  Created
+ Container api2  Creating
+ Container api1  Creating
  Container api2  Created
+ Container api1  Created
  Container worker  Created
  Container nginx-lb  Creating
  Container nginx-lb  Created
@@ -29,67 +29,67 @@ payment-db  | selecting dynamic shared memory implementation ... posix
 payment-db  | selecting default "max_connections" ... 100
 payment-db  | selecting default "shared_buffers" ... 128MB
 redis       | Starting Redis Server
+redis       | 1:C 27 Jul 2025 03:43:43.798 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+redis       | 1:C 27 Jul 2025 03:43:43.798 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+redis       | 1:C 27 Jul 2025 03:43:43.798 * Redis version=8.0.3, bits=64, commit=00000000, modified=1, pid=1, just started
+redis       | 1:C 27 Jul 2025 03:43:43.798 * Configuration loaded
+redis       | 1:M 27 Jul 2025 03:43:43.798 * monotonic clock: POSIX clock_gettime
+redis       | 1:M 27 Jul 2025 03:43:43.799 * Running mode=standalone, port=6379.
+redis       | 1:M 27 Jul 2025 03:43:43.801 * <bf> RedisBloom version 8.0.1 (Git=unknown)
+redis       | 1:M 27 Jul 2025 03:43:43.801 * <bf> Registering configuration options: [
+redis       | 1:M 27 Jul 2025 03:43:43.801 * <bf> 	{ bf-error-rate       :      0.01 }
+redis       | 1:M 27 Jul 2025 03:43:43.801 * <bf> 	{ bf-initial-size     :       100 }
+redis       | 1:M 27 Jul 2025 03:43:43.801 * <bf> 	{ bf-expansion-factor :         2 }
+redis       | 1:M 27 Jul 2025 03:43:43.801 * <bf> 	{ cf-bucket-size      :         2 }
+redis       | 1:M 27 Jul 2025 03:43:43.802 * <bf> 	{ cf-initial-size     :      1024 }
+redis       | 1:M 27 Jul 2025 03:43:43.802 * <bf> 	{ cf-max-iterations   :        20 }
+redis       | 1:M 27 Jul 2025 03:43:43.802 * <bf> 	{ cf-expansion-factor :         1 }
+redis       | 1:M 27 Jul 2025 03:43:43.802 * <bf> 	{ cf-max-expansions   :        32 }
+redis       | 1:M 27 Jul 2025 03:43:43.802 * <bf> ]
+redis       | 1:M 27 Jul 2025 03:43:43.802 * Module 'bf' loaded from /usr/local/lib/redis/modules//redisbloom.so
 payment-db  | selecting default time zone ... UTC
-redis       | 1:C 26 Jul 2025 18:54:03.818 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
-redis       | 1:C 26 Jul 2025 18:54:03.818 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
-redis       | 1:C 26 Jul 2025 18:54:03.818 * Redis version=8.0.3, bits=64, commit=00000000, modified=1, pid=1, just started
-redis       | 1:C 26 Jul 2025 18:54:03.818 * Configuration loaded
-redis       | 1:M 26 Jul 2025 18:54:03.818 * monotonic clock: POSIX clock_gettime
-redis       | 1:M 26 Jul 2025 18:54:03.819 * Running mode=standalone, port=6379.
-redis       | 1:M 26 Jul 2025 18:54:03.831 * <bf> RedisBloom version 8.0.1 (Git=unknown)
-redis       | 1:M 26 Jul 2025 18:54:03.831 * <bf> Registering configuration options: [
-redis       | 1:M 26 Jul 2025 18:54:03.831 * <bf> 	{ bf-error-rate       :      0.01 }
-redis       | 1:M 26 Jul 2025 18:54:03.831 * <bf> 	{ bf-initial-size     :       100 }
-redis       | 1:M 26 Jul 2025 18:54:03.831 * <bf> 	{ bf-expansion-factor :         2 }
-redis       | 1:M 26 Jul 2025 18:54:03.831 * <bf> 	{ cf-bucket-size      :         2 }
-redis       | 1:M 26 Jul 2025 18:54:03.831 * <bf> 	{ cf-initial-size     :      1024 }
-redis       | 1:M 26 Jul 2025 18:54:03.831 * <bf> 	{ cf-max-iterations   :        20 }
-redis       | 1:M 26 Jul 2025 18:54:03.831 * <bf> 	{ cf-expansion-factor :         1 }
-redis       | 1:M 26 Jul 2025 18:54:03.831 * <bf> 	{ cf-max-expansions   :        32 }
-redis       | 1:M 26 Jul 2025 18:54:03.831 * <bf> ]
-redis       | 1:M 26 Jul 2025 18:54:03.832 * Module 'bf' loaded from /usr/local/lib/redis/modules//redisbloom.so
 payment-db  | creating configuration files ... ok
-redis       | 1:M 26 Jul 2025 18:54:03.898 * <search> Redis version found by RedisSearch : 8.0.3 - oss
-redis       | 1:M 26 Jul 2025 18:54:03.898 * <search> RediSearch version 8.0.1 (Git=5688fcc)
-redis       | 1:M 26 Jul 2025 18:54:03.898 * <search> Low level api version 1 initialized successfully
-redis       | 1:M 26 Jul 2025 18:54:03.898 * <search> gc: ON, prefix min length: 2, min word length to stem: 4, prefix max expansions: 200, query timeout (ms): 500, timeout policy: return, cursor read size: 1000, cursor max idle (ms): 300000, max doctable size: 1000000, max number of search results:  1000000, 
-redis       | 1:M 26 Jul 2025 18:54:03.899 * <search> Initialized thread pools!
-redis       | 1:M 26 Jul 2025 18:54:03.899 * <search> Disabled workers threadpool of size 0
-redis       | 1:M 26 Jul 2025 18:54:03.899 * <search> Subscribe to config changes
-redis       | 1:M 26 Jul 2025 18:54:03.899 * <search> Enabled role change notification
-redis       | 1:M 26 Jul 2025 18:54:03.899 * <search> Cluster configuration: AUTO partitions, type: 0, coordinator timeout: 0ms
-redis       | 1:M 26 Jul 2025 18:54:03.901 * <search> Register write commands
-redis       | 1:M 26 Jul 2025 18:54:03.901 * Module 'search' loaded from /usr/local/lib/redis/modules//redisearch.so
-redis       | 1:M 26 Jul 2025 18:54:03.910 * <timeseries> RedisTimeSeries version 80001, git_sha=577bfa8b5909e7ee572f0b651399be8303dc6641
-redis       | 1:M 26 Jul 2025 18:54:03.910 * <timeseries> Redis version found by RedisTimeSeries : 8.0.3 - oss
-redis       | 1:M 26 Jul 2025 18:54:03.913 * <timeseries> Registering configuration options: [
-redis       | 1:M 26 Jul 2025 18:54:03.913 * <timeseries> 	{ ts-compaction-policy   :              }
-redis       | 1:M 26 Jul 2025 18:54:03.913 * <timeseries> 	{ ts-num-threads         :            3 }
-redis       | 1:M 26 Jul 2025 18:54:03.913 * <timeseries> 	{ ts-retention-policy    :            0 }
-redis       | 1:M 26 Jul 2025 18:54:03.913 * <timeseries> 	{ ts-duplicate-policy    :        block }
-redis       | 1:M 26 Jul 2025 18:54:03.913 * <timeseries> 	{ ts-chunk-size-bytes    :         4096 }
-redis       | 1:M 26 Jul 2025 18:54:03.913 * <timeseries> 	{ ts-encoding            :   compressed }
-redis       | 1:M 26 Jul 2025 18:54:03.913 * <timeseries> 	{ ts-ignore-max-time-diff:            0 }
-redis       | 1:M 26 Jul 2025 18:54:03.913 * <timeseries> 	{ ts-ignore-max-val-diff :     0.000000 }
-redis       | 1:M 26 Jul 2025 18:54:03.913 * <timeseries> ]
-redis       | 1:M 26 Jul 2025 18:54:03.913 * <timeseries> Detected redis oss
-redis       | 1:M 26 Jul 2025 18:54:03.914 * Module 'timeseries' loaded from /usr/local/lib/redis/modules//redistimeseries.so
-redis       | 1:M 26 Jul 2025 18:54:03.930 * <ReJSON> Created new data type 'ReJSON-RL'
-redis       | 1:M 26 Jul 2025 18:54:03.931 * <ReJSON> version: 80001 git sha: unknown branch: unknown
-redis       | 1:M 26 Jul 2025 18:54:03.931 * <ReJSON> Exported RedisJSON_V1 API
-redis       | 1:M 26 Jul 2025 18:54:03.931 * <ReJSON> Exported RedisJSON_V2 API
-redis       | 1:M 26 Jul 2025 18:54:03.931 * <ReJSON> Exported RedisJSON_V3 API
-redis       | 1:M 26 Jul 2025 18:54:03.931 * <ReJSON> Exported RedisJSON_V4 API
-redis       | 1:M 26 Jul 2025 18:54:03.931 * <ReJSON> Exported RedisJSON_V5 API
-redis       | 1:M 26 Jul 2025 18:54:03.931 * <ReJSON> Enabled diskless replication
-redis       | 1:M 26 Jul 2025 18:54:03.931 * <ReJSON> Initialized shared string cache, thread safe: false.
-redis       | 1:M 26 Jul 2025 18:54:03.931 * Module 'ReJSON' loaded from /usr/local/lib/redis/modules//rejson.so
-redis       | 1:M 26 Jul 2025 18:54:03.931 * <search> Acquired RedisJSON_V5 API
-redis       | 1:M 26 Jul 2025 18:54:03.931 * Server initialized
-redis       | 1:M 26 Jul 2025 18:54:03.932 * Ready to accept connections tcp
+redis       | 1:M 27 Jul 2025 03:43:43.882 * <search> Redis version found by RedisSearch : 8.0.3 - oss
+redis       | 1:M 27 Jul 2025 03:43:43.882 * <search> RediSearch version 8.0.1 (Git=5688fcc)
+redis       | 1:M 27 Jul 2025 03:43:43.882 * <search> Low level api version 1 initialized successfully
+redis       | 1:M 27 Jul 2025 03:43:43.882 * <search> gc: ON, prefix min length: 2, min word length to stem: 4, prefix max expansions: 200, query timeout (ms): 500, timeout policy: return, cursor read size: 1000, cursor max idle (ms): 300000, max doctable size: 1000000, max number of search results:  1000000, 
+redis       | 1:M 27 Jul 2025 03:43:43.882 * <search> Initialized thread pools!
+redis       | 1:M 27 Jul 2025 03:43:43.882 * <search> Disabled workers threadpool of size 0
+redis       | 1:M 27 Jul 2025 03:43:43.883 * <search> Subscribe to config changes
+redis       | 1:M 27 Jul 2025 03:43:43.883 * <search> Enabled role change notification
+redis       | 1:M 27 Jul 2025 03:43:43.883 * <search> Cluster configuration: AUTO partitions, type: 0, coordinator timeout: 0ms
+redis       | 1:M 27 Jul 2025 03:43:43.888 * <search> Register write commands
+redis       | 1:M 27 Jul 2025 03:43:43.888 * Module 'search' loaded from /usr/local/lib/redis/modules//redisearch.so
+redis       | 1:M 27 Jul 2025 03:43:43.891 * <timeseries> RedisTimeSeries version 80001, git_sha=577bfa8b5909e7ee572f0b651399be8303dc6641
+redis       | 1:M 27 Jul 2025 03:43:43.891 * <timeseries> Redis version found by RedisTimeSeries : 8.0.3 - oss
+redis       | 1:M 27 Jul 2025 03:43:43.891 * <timeseries> Registering configuration options: [
+redis       | 1:M 27 Jul 2025 03:43:43.891 * <timeseries> 	{ ts-compaction-policy   :              }
+redis       | 1:M 27 Jul 2025 03:43:43.891 * <timeseries> 	{ ts-num-threads         :            3 }
+redis       | 1:M 27 Jul 2025 03:43:43.891 * <timeseries> 	{ ts-retention-policy    :            0 }
+redis       | 1:M 27 Jul 2025 03:43:43.891 * <timeseries> 	{ ts-duplicate-policy    :        block }
+redis       | 1:M 27 Jul 2025 03:43:43.891 * <timeseries> 	{ ts-chunk-size-bytes    :         4096 }
+redis       | 1:M 27 Jul 2025 03:43:43.891 * <timeseries> 	{ ts-encoding            :   compressed }
+redis       | 1:M 27 Jul 2025 03:43:43.891 * <timeseries> 	{ ts-ignore-max-time-diff:            0 }
+redis       | 1:M 27 Jul 2025 03:43:43.891 * <timeseries> 	{ ts-ignore-max-val-diff :     0.000000 }
+redis       | 1:M 27 Jul 2025 03:43:43.891 * <timeseries> ]
+redis       | 1:M 27 Jul 2025 03:43:43.892 * <timeseries> Detected redis oss
+redis       | 1:M 27 Jul 2025 03:43:43.892 * Module 'timeseries' loaded from /usr/local/lib/redis/modules//redistimeseries.so
+redis       | 1:M 27 Jul 2025 03:43:43.895 * <ReJSON> Created new data type 'ReJSON-RL'
+redis       | 1:M 27 Jul 2025 03:43:43.896 * <ReJSON> version: 80001 git sha: unknown branch: unknown
+redis       | 1:M 27 Jul 2025 03:43:43.896 * <ReJSON> Exported RedisJSON_V1 API
+redis       | 1:M 27 Jul 2025 03:43:43.896 * <ReJSON> Exported RedisJSON_V2 API
+redis       | 1:M 27 Jul 2025 03:43:43.896 * <ReJSON> Exported RedisJSON_V3 API
+redis       | 1:M 27 Jul 2025 03:43:43.896 * <ReJSON> Exported RedisJSON_V4 API
+redis       | 1:M 27 Jul 2025 03:43:43.896 * <ReJSON> Exported RedisJSON_V5 API
+redis       | 1:M 27 Jul 2025 03:43:43.896 * <ReJSON> Enabled diskless replication
+redis       | 1:M 27 Jul 2025 03:43:43.896 * <ReJSON> Initialized shared string cache, thread safe: false.
+redis       | 1:M 27 Jul 2025 03:43:43.896 * Module 'ReJSON' loaded from /usr/local/lib/redis/modules//rejson.so
+redis       | 1:M 27 Jul 2025 03:43:43.896 * <search> Acquired RedisJSON_V5 API
+redis       | 1:M 27 Jul 2025 03:43:43.897 * Server initialized
+redis       | 1:M 27 Jul 2025 03:43:43.897 * Ready to accept connections tcp
 api2        | Running 'server'...
-api1        | Running 'server'...
 worker      | Running 'worker'...
+api1        | Running 'server'...
 payment-db  | running bootstrap script ... ok
 worker      | [INFO] Starting Redis Queue with 4 workers
 nginx-lb    | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
@@ -102,12 +102,10 @@ nginx-lb    | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-
 nginx-lb    | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
 nginx-lb    | /docker-entrypoint.sh: Configuration complete; ready for start up
 payment-db  | sh: locale: not found
-payment-db  | 2025-07-26 18:54:05.608 UTC [34] WARNING:  no usable system locales were found
+payment-db  | 2025-07-27 03:43:45.500 UTC [35] WARNING:  no usable system locales were found
 worker      | [health] 0 UP (1)ms
 worker      | [health] 1 UP (1)ms
 payment-db  | performing post-bootstrap initialization ... ok
-payment-db  | initdb: warning: enabling "trust" authentication for local connections
-payment-db  | initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
 payment-db  | syncing data to disk ... ok
 payment-db  | 
 payment-db  | 
@@ -115,10 +113,12 @@ payment-db  | Success. You can now start the database server using:
 payment-db  | 
 payment-db  |     pg_ctl -D /var/lib/postgresql/data -l logfile start
 payment-db  | 
-payment-db  | waiting for server to start....2025-07-26 18:54:07.904 UTC [40] LOG:  starting PostgreSQL 17.5 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
-payment-db  | 2025-07-26 18:54:07.904 UTC [40] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
-payment-db  | 2025-07-26 18:54:07.906 UTC [43] LOG:  database system was shut down at 2025-07-26 18:54:07 UTC
-payment-db  | 2025-07-26 18:54:07.910 UTC [40] LOG:  database system is ready to accept connections
+payment-db  | initdb: warning: enabling "trust" authentication for local connections
+payment-db  | initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
+payment-db  | waiting for server to start....2025-07-27 03:43:47.893 UTC [41] LOG:  starting PostgreSQL 17.5 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
+payment-db  | 2025-07-27 03:43:47.893 UTC [41] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+payment-db  | 2025-07-27 03:43:47.895 UTC [44] LOG:  database system was shut down at 2025-07-27 03:43:47 UTC
+payment-db  | 2025-07-27 03:43:47.898 UTC [41] LOG:  database system is ready to accept connections
 payment-db  |  done
 payment-db  | server started
 payment-db  | CREATE DATABASE
@@ -129,28 +129,28 @@ payment-db  | CREATE TABLE
 payment-db  | CREATE INDEX
 payment-db  | 
 payment-db  | 
-payment-db  | waiting for server to shut down....2025-07-26 18:54:08.387 UTC [40] LOG:  received fast shutdown request
-payment-db  | 2025-07-26 18:54:08.387 UTC [40] LOG:  aborting any active transactions
-payment-db  | 2025-07-26 18:54:08.393 UTC [40] LOG:  background worker "logical replication launcher" (PID 46) exited with exit code 1
-payment-db  | 2025-07-26 18:54:08.394 UTC [41] LOG:  shutting down
-payment-db  | 2025-07-26 18:54:08.394 UTC [41] LOG:  checkpoint starting: shutdown immediate
-payment-db  | 2025-07-26 18:54:08.485 UTC [41] LOG:  checkpoint complete: wrote 927 buffers (22.6%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.090 s, sync=0.001 s, total=0.091 s; sync files=0, longest=0.000 s, average=0.000 s; distance=4276 kB, estimate=4276 kB; lsn=0/191A358, redo lsn=0/191A358
-payment-db  | 2025-07-26 18:54:08.495 UTC [40] LOG:  database system is shut down
+payment-db  | waiting for server to shut down....2025-07-27 03:43:48.289 UTC [41] LOG:  received fast shutdown request
+payment-db  | 2025-07-27 03:43:48.289 UTC [41] LOG:  aborting any active transactions
+payment-db  | 2025-07-27 03:43:48.292 UTC [41] LOG:  background worker "logical replication launcher" (PID 47) exited with exit code 1
+payment-db  | 2025-07-27 03:43:48.295 UTC [42] LOG:  shutting down
+payment-db  | 2025-07-27 03:43:48.295 UTC [42] LOG:  checkpoint starting: shutdown immediate
+payment-db  | 2025-07-27 03:43:48.385 UTC [42] LOG:  checkpoint complete: wrote 927 buffers (22.6%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.090 s, sync=0.001 s, total=0.090 s; sync files=0, longest=0.000 s, average=0.000 s; distance=4276 kB, estimate=4276 kB; lsn=0/191A358, redo lsn=0/191A358
+payment-db  | 2025-07-27 03:43:48.395 UTC [41] LOG:  database system is shut down
 payment-db  |  done
 payment-db  | server stopped
 payment-db  | 
 payment-db  | PostgreSQL init process complete; ready for start up.
 payment-db  | 
-payment-db  | 2025-07-26 18:54:08.611 UTC [1] LOG:  starting PostgreSQL 17.5 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
-payment-db  | 2025-07-26 18:54:08.611 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
-payment-db  | 2025-07-26 18:54:08.611 UTC [1] LOG:  listening on IPv6 address "::", port 5432
-payment-db  | 2025-07-26 18:54:08.611 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
-payment-db  | 2025-07-26 18:54:08.613 UTC [58] LOG:  database system was shut down at 2025-07-26 18:54:08 UTC
-payment-db  | 2025-07-26 18:54:08.617 UTC [1] LOG:  database system is ready to accept connections
+payment-db  | 2025-07-27 03:43:48.511 UTC [1] LOG:  starting PostgreSQL 17.5 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
+payment-db  | 2025-07-27 03:43:48.512 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+payment-db  | 2025-07-27 03:43:48.512 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+payment-db  | 2025-07-27 03:43:48.512 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+payment-db  | 2025-07-27 03:43:48.514 UTC [59] LOG:  database system was shut down at 2025-07-27 03:43:48 UTC
+payment-db  | 2025-07-27 03:43:48.599 UTC [1] LOG:  database system is ready to accept connections
 worker      | [health] 0 UP (1)ms
 worker      | [health] 1 UP (1)ms
-worker      | [health] 0 UP (1)ms
 worker      | [health] 1 UP (1)ms
+worker      | [health] 0 UP (1)ms
 api1        | [INFO] Cleared stream payment_stream
 worker      | [health] 0 UP (1)ms
 worker      | [health] 1 UP (1)ms
@@ -158,69 +158,67 @@ worker      | [health] 0 UP (1)ms
 worker      | [health] 1 UP (1)ms
 worker      | [health] 0 UP (100)ms
 worker      | [health] 1 UP (1)ms
+worker      | [health] 1 UP (1)ms
 worker      | [health] 0 UP (100)ms
-worker      | [health] 1 UP (1)ms
 worker      | [health] 0 DOWN (100)ms
 worker      | [health] 1 UP (1)ms
 worker      | [health] 0 DOWN (100)ms
 worker      | [health] 1 UP (1)ms
-worker      | [ERROR] Failed to process payment, payment reenqued 6a3d731c-fe1c-4667-8cc6-ddc49f8ef4c4: EOF
-worker      | [ERROR] Failed to process payment, payment reenqued d5ba5cff-885e-4078-83e6-d6f5d509ee84: EOF
-worker      | [ERROR] Failed to process payment, payment reenqued f22ceafc-d734-41e3-ba8c-b3ed7c6c23c9: EOF
-worker      | [ERROR] Failed to process payment, payment reenqued 6468d59e-b911-4513-97ef-2a26f8be2b94: EOF
-worker      | [ERROR] Failed to process payment, payment reenqued 59f848cb-790b-4987-8879-918c309e9974: EOF
-worker      | [ERROR] Failed to process payment, payment reenqued d2ed1d4f-a7c9-4c83-b555-8ff4f3558501: EOF
-worker      | [ERROR] Failed to process payment, payment reenqued 9caceede-5e21-46fa-a04b-cfb0cf1e2dd5: EOF
-worker      | [ERROR] Failed to process payment, payment reenqued 0d43f243-3fbe-4b0b-a175-37cb701bacbe: EOF
-worker      | [ERROR] Failed to process payment, payment reenqued 2510aee8-1b03-436c-b263-55807f8dab82: EOF
-worker      | [ERROR] Failed to process payment, payment reenqued 37a08992-fbd8-47eb-8a4b-e565a27d5d15: EOF
-worker      | [ERROR] Failed to process payment, payment reenqued ef9cfc04-3443-40d2-b233-bced597f9f41: EOF
-worker      | [ERROR] Failed to process payment, payment reenqued 266cc946-18aa-46be-8dc5-6a88fc74f1d9: EOF
-worker      | [ERROR] Failed to process payment, payment reenqued 68244bb7-caf5-49be-9d41-89af71b169b3: EOF
-worker      | [ERROR] Failed to process payment, payment reenqued 466b5710-0b51-4bf0-a495-fd970e045043: EOF
-worker      | [ERROR] Failed to process payment, payment reenqued 2f4de432-163e-4856-b578-ceaacc8e0746: EOF
-worker      | [ERROR] Failed to process payment, payment reenqued 5a5cdc9d-fb62-4610-a6b1-b3f341d23689: EOF
+worker      | [ERROR] Failed to process payment, payment reenqued aeadf019-762e-4baa-89c0-9ba8b4a655c3: EOF
+worker      | [ERROR] Failed to process payment, payment reenqued 5c20fd3a-a5a2-4ea7-9369-0ef0d83ef05d: EOF
+worker      | [ERROR] Failed to process payment, payment reenqued a976f9c9-68d0-452c-af78-11f128ac1299: EOF
+worker      | [ERROR] Failed to process payment, payment reenqued b81da4b5-1662-4e4f-b4d4-6440b10ac94f: EOF
+worker      | [ERROR] Failed to process payment, payment reenqued a68746b2-e40e-47d3-b514-f8c221dd4641: EOF
+worker      | [ERROR] Failed to process payment, payment reenqued 1a4ffbf7-8aec-4d88-9449-2706bcb37a7f: EOF
+worker      | [ERROR] Failed to process payment, payment reenqued 984bef38-dd32-4e41-ab90-e02aff27bcf3: EOF
+worker      | [ERROR] Failed to process payment, payment reenqued 35a335a0-54ab-4b0e-bd0a-4152b561fb1d: EOF
+worker      | [ERROR] Failed to process payment, payment reenqued 57ddbe95-6fde-4e5f-aee8-1951da589105: EOF
+worker      | [ERROR] Failed to process payment, payment reenqued 69d2a2fb-7bd9-4416-9f0f-3bc8e3996a6d: EOF
+worker      | [ERROR] Failed to process payment, payment reenqued b110c785-deb6-40e6-9089-9ed3108b75bf: EOF
+worker      | [ERROR] Failed to process payment, payment reenqued 4b938593-47e9-484a-b021-1a879aaea400: EOF
+worker      | [ERROR] Failed to process payment, payment reenqued 620640e4-57e8-4a1d-99e8-d0f300349de3: EOF
+worker      | [health] 0 DOWN (2000)ms
+worker      | [ERROR] Failed to process payment, payment reenqued 134cbc82-aefd-4778-bed9-ae9ba4063eeb: EOF
+worker      | [ERROR] Failed to process payment, payment reenqued e98a5644-4dad-464b-9865-e9b1d74b009a: EOF
+worker      | [ERROR] Failed to process payment, payment reenqued 42f29a5e-8ae6-4863-8e1d-2e8753c57d7e: EOF
+worker      | [health] 1 DOWN (1000)ms
+worker      | [ERROR] Failed to process payment, payment reenqued db34fbab-d7cf-4755-87ac-78222a7801b4: EOF
+worker      | [ERROR] Failed to process payment, payment reenqued ad33358e-e4fe-48d2-b1ca-00ee6a0bf00f: EOF
+worker      | [ERROR] Failed to process payment, payment reenqued e386e58b-6a95-42d5-b93b-27478956d463: EOF
+worker      | [ERROR] Failed to process payment, payment reenqued 647823e0-814f-4551-9189-7561c7664e99: EOF
 worker      | [health] 0 DOWN (2000)ms
 worker      | [health] 1 DOWN (1000)ms
-worker      | [ERROR] Failed to process payment, payment reenqued e4cbeaa0-65a7-43de-8c69-ff3c1f15ed18: EOF
-worker      | [ERROR] Failed to process payment, payment reenqued abb3142a-8595-4c15-aeb0-2d71f4fde74e: EOF
-worker      | [ERROR] Failed to process payment, payment reenqued bf4479b2-946f-4ab4-8b37-23edf404c6e9: EOF
-worker      | [ERROR] Failed to process payment, payment reenqued c9b444b3-8ec4-4605-9bc0-eb23632826c0: EOF
-worker      | [health] 0 DOWN (2000)ms
-worker      | [health] 1 DOWN (1000)ms
-worker      | [health] 0 UP (20)ms
 worker      | [health] 1 UP (20)ms
-redis       | 1:M 26 Jul 2025 18:55:04.020 * 10000 changes in 60 seconds. Saving...
-redis       | 1:M 26 Jul 2025 18:55:04.020 * Background saving started by pid 30
-redis       | 30:C 26 Jul 2025 18:55:04.198 * DB saved on disk
-redis       | 30:C 26 Jul 2025 18:55:04.199 * Fork CoW for RDB: current 1 MB, peak 1 MB, average 0 MB
-redis       | 1:M 26 Jul 2025 18:55:04.223 * Background saving terminated with success
+worker      | [health] 0 UP (20)ms
+redis       | 1:M 27 Jul 2025 03:44:44.008 * 10000 changes in 60 seconds. Saving...
+redis       | 1:M 27 Jul 2025 03:44:44.008 * Background saving started by pid 29
+redis       | 29:C 27 Jul 2025 03:44:44.118 * DB saved on disk
+redis       | 29:C 27 Jul 2025 03:44:44.119 * Fork CoW for RDB: current 1 MB, peak 1 MB, average 0 MB
+redis       | 1:M 27 Jul 2025 03:44:44.212 * Background saving terminated with success
 worker      | [health] 0 UP (20)ms
 worker      | [health] 1 UP (20)ms
 worker      | [health] 0 UP (1)ms
 worker      | [health] 1 UP (5000)ms
-worker      | [health] 0 UP (1)ms
 worker      | [health] 1 UP (5000)ms
+worker      | [health] 0 UP (1)ms
 [Knginx-lb exited with code 0
-worker      | [health] 0 UP (1)ms
 worker      | [health] 1 UP (5000)ms
 worker      | [health] 0 UP (1)ms
-worker      | [health] 1 UP (5000)ms
+[Kapi2 exited with code 137
 [Kworker exited with code 137
 [Kapi1 exited with code 137
-[Kapi2 exited with code 137
-redis       | 1:signal-handler (1753556129) Received SIGTERM scheduling shutdown...
-payment-db  | 2025-07-26 18:55:29.710 UTC [1] LOG:  received fast shutdown request
-payment-db  | 2025-07-26 18:55:29.710 UTC [1] LOG:  aborting any active transactions
-payment-db  | 2025-07-26 18:55:29.713 UTC [1] LOG:  background worker "logical replication launcher" (PID 61) exited with exit code 1
-payment-db  | 2025-07-26 18:55:29.716 UTC [56] LOG:  shutting down
-payment-db  | 2025-07-26 18:55:29.716 UTC [56] LOG:  checkpoint starting: shutdown immediate
-payment-db  | 2025-07-26 18:55:29.718 UTC [56] LOG:  checkpoint complete: wrote 331 buffers (8.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.001 s, total=0.003 s; sync files=0, longest=0.000 s, average=0.000 s; distance=862 kB, estimate=862 kB; lsn=0/19F1C88, redo lsn=0/19F1C88
-payment-db  | 2025-07-26 18:55:29.724 UTC [1] LOG:  database system is shut down
-redis       | 1:M 26 Jul 2025 18:55:29.758 * User requested shutdown...
-redis       | 1:M 26 Jul 2025 18:55:29.758 * Saving the final RDB snapshot before exiting.
-redis       | 1:M 26 Jul 2025 18:55:30.020 * DB saved on disk
-redis       | 1:M 26 Jul 2025 18:55:30.021 # Redis is now ready to exit, bye bye...
+payment-db  | 2025-07-27 03:45:10.348 UTC [1] LOG:  received fast shutdown request
+payment-db  | 2025-07-27 03:45:10.348 UTC [1] LOG:  aborting any active transactions
+payment-db  | 2025-07-27 03:45:10.351 UTC [1] LOG:  background worker "logical replication launcher" (PID 62) exited with exit code 1
+redis       | 1:signal-handler (1753587910) Received SIGTERM scheduling shutdown...
+payment-db  | 2025-07-27 03:45:10.354 UTC [57] LOG:  shutting down
+payment-db  | 2025-07-27 03:45:10.355 UTC [57] LOG:  checkpoint starting: shutdown immediate
+payment-db  | 2025-07-27 03:45:10.357 UTC [57] LOG:  checkpoint complete: wrote 325 buffers (7.9%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.003 s, sync=0.001 s, total=0.003 s; sync files=0, longest=0.000 s, average=0.000 s; distance=862 kB, estimate=862 kB; lsn=0/19F1C38, redo lsn=0/19F1C38
+payment-db  | 2025-07-27 03:45:10.366 UTC [1] LOG:  database system is shut down
+redis       | 1:M 27 Jul 2025 03:45:10.402 * User requested shutdown...
+redis       | 1:M 27 Jul 2025 03:45:10.402 * Saving the final RDB snapshot before exiting.
+redis       | 1:M 27 Jul 2025 03:45:10.596 * DB saved on disk
+redis       | 1:M 27 Jul 2025 03:45:10.596 # Redis is now ready to exit, bye bye...
 [Kpayment-db exited with code 0
 [Kredis exited with code 0
 log truncated at line 1000
