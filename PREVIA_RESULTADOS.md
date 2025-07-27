@@ -1,6 +1,6 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Sun Jul 27 12:27:12 PM -03 2025**
-129 submissões / 103 resultados / 26 submissões com erro
+Atualizado em **Sun Jul 27 12:34:46 PM -03 2025**
+129 submissões / 104 resultados / 25 submissões com erro
 
 
 | participante | p99 | bônus por desempenho (%) | multa ($) | lucro | submissão |
@@ -9,6 +9,7 @@ Atualizado em **Sun Jul 27 12:27:12 PM -03 2025**
 |	adrianosilva-go	|	4.23ms	|	14%	|	0	|	352608.498	|	[adrianosilva-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/adrianosilva-go)
 |	alan-silva	|	2.91ms	|	16%	|	0	|	367280.2904	|	[alan-silva](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/alan-silva)
 |	alexroza-rs	|	1004.01ms	|	0%	|	0	|	0	|	[alexroza-rs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/alexroza-rs)
+|	alvesluc-node	|	161.73ms	|	0%	|	0	|	140509.91999998898	|	[alvesluc-node](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/alvesluc-node)
 |	andersongomes001-go	|	16.84ms	|	0%	|	0	|	314317.515	|	[andersongomes001-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/andersongomes001-go)
 |	andersongomes001	|	2.23ms	|	18%	|	0	|	373710.1595	|	[andersongomes001](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/andersongomes001)
 |	anibalferreira-rust-2	|	16.29ms	|	0%	|	108817.32925	|	202089.32575	|	[anibalferreira-rust-2](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/anibalferreira-rust-2)
@@ -113,7 +114,6 @@ Atualizado em **Sun Jul 27 12:27:12 PM -03 2025**
 
 | participante | submissão |
 | -- | -- |
-| alvesluc-node | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/alvesluc-node) |
 | andre-nicoletti | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/andre-nicoletti) |
 | antooniodev-node | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/antooniodev-node) |
 | boaglio-player456 | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/boaglio-player456) |
