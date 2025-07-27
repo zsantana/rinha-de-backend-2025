@@ -1,45 +1,0 @@
-
- Network joao-xavier_backend  Creating
- Network joao-xavier_backend  Created
- Volume "joao-xavier_data"  Creating
- Volume "joao-xavier_data"  Created
- Container joao-xavier-worker-1  Creating
- Container joao-xavier-worker-1  Created
- Container joao-xavier-api_0-1  Creating
- Container joao-xavier-api_1-1  Creating
- Container joao-xavier-api_1-1  Created
- Container joao-xavier-api_0-1  Created
- Container joao-xavier-nginx-1  Creating
- Container joao-xavier-nginx-1  Created
-Attaching to api_0-1, api_1-1, nginx-1, worker-1
-worker-1  | 2025-07-27T02:40:15.725610Z  INFO ThreadId(01) serve: src/worker/mod.rs:31: Starting worker on port 80
-worker-1  | 2025-07-27T02:40:15.792393Z  INFO ThreadId(01) serve:start_consumer: src/worker/mod.rs:70: Starting mpsc consumer
-api_1-1   | 2025-07-27T02:40:16.157285Z  INFO ThreadId(01) serve: src/api/mod.rs:15: Starting API on port 80
-api_0-1   | 2025-07-27T02:40:16.212683Z  INFO ThreadId(01) serve: src/api/mod.rs:15: Starting API on port 80
-nginx-1   | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
-nginx-1   | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
-nginx-1   | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
-nginx-1   | 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
-nginx-1   | 10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
-nginx-1   | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
-nginx-1   | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
-nginx-1   | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
-nginx-1   | /docker-entrypoint.sh: Configuration complete; ready for start up
-nginx-1   | 172.20.0.1 - - [27/Jul/2025:02:40:18 +0000] "GET /payments-summary HTTP/1.1" 400 56 "-" "curl/7.88.1"
-nginx-1   | 172.20.0.1 - - [27/Jul/2025:02:40:23 +0000] "GET /payments-summary HTTP/1.1" 400 56 "-" "curl/7.88.1"
-nginx-1   | 172.20.0.1 - - [27/Jul/2025:02:40:28 +0000] "GET /payments-summary HTTP/1.1" 400 56 "-" "curl/7.88.1"
-nginx-1   | 172.20.0.1 - - [27/Jul/2025:02:40:33 +0000] "GET /payments-summary HTTP/1.1" 400 56 "-" "curl/7.88.1"
-nginx-1   | 172.20.0.1 - - [27/Jul/2025:02:40:38 +0000] "GET /payments-summary HTTP/1.1" 400 56 "-" "curl/7.88.1"
-nginx-1   | 172.20.0.1 - - [27/Jul/2025:02:40:43 +0000] "GET /payments-summary HTTP/1.1" 400 56 "-" "curl/7.88.1"
-nginx-1   | 172.20.0.1 - - [27/Jul/2025:02:40:48 +0000] "GET /payments-summary HTTP/1.1" 400 56 "-" "curl/7.88.1"
-nginx-1   | 172.20.0.1 - - [27/Jul/2025:02:40:53 +0000] "GET /payments-summary HTTP/1.1" 400 56 "-" "curl/7.88.1"
-nginx-1   | 172.20.0.1 - - [27/Jul/2025:02:40:58 +0000] "GET /payments-summary HTTP/1.1" 400 56 "-" "curl/7.88.1"
-nginx-1   | 172.20.0.1 - - [27/Jul/2025:02:41:03 +0000] "GET /payments-summary HTTP/1.1" 400 56 "-" "curl/7.88.1"
-nginx-1   | 172.20.0.1 - - [27/Jul/2025:02:41:08 +0000] "GET /payments-summary HTTP/1.1" 400 56 "-" "curl/7.88.1"
-nginx-1   | 172.20.0.1 - - [27/Jul/2025:02:41:13 +0000] "GET /payments-summary HTTP/1.1" 400 56 "-" "curl/7.88.1"
-nginx-1   | 172.20.0.1 - - [27/Jul/2025:02:41:18 +0000] "GET /payments-summary HTTP/1.1" 400 56 "-" "curl/7.88.1"
-nginx-1   | 172.20.0.1 - - [27/Jul/2025:02:41:23 +0000] "GET /payments-summary HTTP/1.1" 400 56 "-" "curl/7.88.1"
-[Knginx-1 exited with code 0
-[Kapi_1-1 exited with code 137
-[Kapi_0-1 exited with code 137
-[Kworker-1 exited with code 137
