@@ -1,7 +1,7 @@
 services:
   backend1:
     build: .
-    image: copirinhago-local:latest
+    image: ronssm/copirinhago:latest
     environment:
       - REDIS_CONN=redis:6379
       - LOG_LEVEL=ERROR
@@ -24,7 +24,7 @@ services:
           memory: "80MB"
   backend2:
     build: .
-    image: copirinhago-local:latest
+    image: ronssm/copirinhago:latest
     environment:
       - REDIS_CONN=redis:6379
       - LOG_LEVEL=ERROR
