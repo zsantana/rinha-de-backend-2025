@@ -1,6 +1,6 @@
 services:
   backend-1:
-    image: gabxdevv/rinha-backend-2025-java-puro:1.0.3
+    image: gabxdevv/rinha-backend-2025-java-puro:1.0.4
     environment:
       RETRY_API_DEFAULT: 16
       WORKER_POOL_SIZE: 21
@@ -34,7 +34,7 @@ services:
           memory: '120MB'
 
   backend-2:
-    image: gabxdevv/rinha-backend-2025-java-puro:1.0.3
+    image: gabxdevv/rinha-backend-2025-java-puro:1.0.4
     restart: always
     environment:
       RETRY_API_DEFAULT: 16
