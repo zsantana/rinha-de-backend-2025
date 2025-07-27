@@ -1,9 +1,8 @@
 services:
   backend-1:
-    image: gabxdevv/rinha-backend-2025-java:1.0.0
-    container_name: gaxdev_backend-1
+    image: gabxdevv/rinha-backend-2025-java-1:1.0.0
     environment:
-      RETRY_API_DEFAULT: 16
+      RETRY_API_DEFAULT: 15
       WORKER_POOL_SIZE: 25
       PAYMENT_PROCESSOR_URL_DEFAULT: http://payment-processor-default:8080/payments
       PAYMENT_PROCESSOR_URL_FALLBACK: http://payment-processor-fallback:8080/payments
@@ -26,15 +25,14 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '0.62'
+          cpus: '0.625'
           memory: '140MB'
 
   backend-2:
-    image: gabxdevv/rinha-backend-2025-java:1.0.0
-    container_name: gaxdev_backend-2
+    image: gabxdevv/rinha-backend-2025-java-1:1.0.0
     restart: always
     environment:
-      RETRY_API_DEFAULT: 16
+      RETRY_API_DEFAULT: 15
       WORKER_POOL_SIZE: 25
       PAYMENT_PROCESSOR_URL_DEFAULT: http://payment-processor-default:8080/payments
       PAYMENT_PROCESSOR_URL_FALLBACK: http://payment-processor-fallback:8080/payments
@@ -57,7 +55,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '0.62'
+          cpus: '0.625'
           memory: '140MB'
 
   load-balancer:
@@ -70,13 +68,13 @@ services:
       - backend-1
       - backend-2
     ports:
-      - "9999:80"
+      - "9999:9999"
     networks:
       - backend
     deploy:
       resources:
         limits:
-          cpus: "0.26"
+          cpus: "0.25"
           memory: "70MB"
 
 networks:

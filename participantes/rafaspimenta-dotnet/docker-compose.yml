@@ -1,6 +1,6 @@
 services:
   api01: &api
-    image: rafaspimenta/rinha-backend-csharp:latest
+    image: rafaspimenta/rinha-backend-csharp:prod
     platform: linux/amd64
     hostname: api01
     depends_on:
@@ -12,7 +12,7 @@ services:
       resources:
         limits:
           cpus: '0.6'
-          memory: '80MB'
+          memory: '60MB'
     environment:
       - DOTNET_ENVIRONMENT=Production
     networks:
@@ -41,7 +41,7 @@ services:
       resources:
         limits:
           cpus: '0.1'
-          memory: '40MB'
+          memory: '50MB'
     networks:
       - app-network
 
@@ -53,14 +53,14 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
     ports:
-      - "5433:5432"
+      - "5432:5432"
     volumes:
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
     deploy:
       resources:
         limits:
           cpus: '0.2'
-          memory: '150MB'
+          memory: '180MB'
     command: >
       postgres
       -c fsync=off

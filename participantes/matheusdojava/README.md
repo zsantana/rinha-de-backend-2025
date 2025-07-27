@@ -9,7 +9,7 @@ Solução em **Java 21** com **Spring Boot**, **GraalVM Native Image** e suporte
 - Java 21 (com Loom)
 - Spring Boot
 - GraalVM Native Image
-- MongoDB
+- Redis
 - HttpClient nativo da JDK
 - Nginx (para balanceamento entre instâncias)
 

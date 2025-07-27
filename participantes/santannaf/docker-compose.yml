@@ -11,18 +11,13 @@ services:
     depends_on:
       - api01
       - api02
-    ulimits:
-      nproc: 1000000
-      nofile:
-        soft: 1000000
-        hard: 1000000
     ports:
       - "9999:9999"
     deploy:
       resources:
         limits:
-          cpus: "0.10"
-          memory: 25MB
+          cpus: "0.20"
+          memory: 30MB
 
   redis:
     image: redis:7.2-alpine
@@ -35,12 +30,12 @@ services:
       resources:
         limits:
           cpus: "0.20"
-          memory: 25MB
+          memory: 20MB
     networks:
       - backend
 
   api01: &api
-    image: thalessantanna/payments:0.0.1
+    image: thalessantanna/payments:0.0.4
     hostname: api01
     container_name: api01
     pull_policy: always
@@ -48,7 +43,9 @@ services:
       - HOST_PROCESSOR_DEFAULT=http://payment-processor-default:8080
       - HOST_PROCESSOR_FALLBACK=http://payment-processor-fallback:8080
       - REDIS_HOST=redis
-      - DC_ENV=gt
+      - POOL_FIXED_EXECUTOR_THREADS=2
+      - TENTATIVES_DEFAULT=10
+      - TIMEOUT_PAYMENT=800
     networks:
       - backend
       - payment-processor
@@ -59,7 +56,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.60"
+          cpus: "0.55"
           memory: 150MB
   api02:
     <<: *api
@@ -71,7 +68,9 @@ services:
       - HOST_PROCESSOR_DEFAULT=http://payment-processor-default:8080
       - HOST_PROCESSOR_FALLBACK=http://payment-processor-fallback:8080
       - REDIS_HOST=redis
-      - DC_ENV=tb
+      - POOL_FIXED_EXECUTOR_THREADS=2
+      - TENTATIVES_DEFAULT=10
+      - TIMEOUT_PAYMENT=800
 
 networks:
   backend:

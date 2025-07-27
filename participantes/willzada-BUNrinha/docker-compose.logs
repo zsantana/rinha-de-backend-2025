@@ -1,244 +1,219 @@
 
  Network willzada-bunrinha_backend  Creating
  Network willzada-bunrinha_backend  Created
- Container willzada-bunrinha-app2-1  Creating
  Container willzada-bunrinha-worker1-1  Creating
  Container willzada-bunrinha-worker2-1  Creating
  Container willzada-bunrinha-redis-1  Creating
  Container willzada-bunrinha-app1-1  Creating
- Container willzada-bunrinha-app1-1  Created
- Container willzada-bunrinha-worker1-1  Created
- Container willzada-bunrinha-worker2-1  Created
- Container willzada-bunrinha-redis-1  Created
+ Container willzada-bunrinha-app2-1  Creating
  Container willzada-bunrinha-app2-1  Created
+ Container willzada-bunrinha-worker2-1  Created
+ Container willzada-bunrinha-worker1-1  Created
+ Container willzada-bunrinha-app1-1  Created
+ Container willzada-bunrinha-redis-1  Created
 Attaching to app1-1, app2-1, redis-1, worker1-1, worker2-1
-redis-1    | 1:C 21 Jul 2025 03:26:07.262 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
-redis-1    | 1:C 21 Jul 2025 03:26:07.263 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
-redis-1    | 1:C 21 Jul 2025 03:26:07.263 * Redis version=7.4.5, bits=64, commit=00000000, modified=0, pid=1, just started
-redis-1    | 1:C 21 Jul 2025 03:26:07.263 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf
-redis-1    | 1:M 21 Jul 2025 03:26:07.263 * monotonic clock: POSIX clock_gettime
-redis-1    | 1:M 21 Jul 2025 03:26:07.263 * Running mode=standalone, port=6379.
-redis-1    | 1:M 21 Jul 2025 03:26:07.264 * Server initialized
-redis-1    | 1:M 21 Jul 2025 03:26:07.264 * Ready to accept connections tcp
+redis-1    | 1:C 27 Jul 2025 06:39:26.395 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+redis-1    | 1:C 27 Jul 2025 06:39:26.395 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+redis-1    | 1:C 27 Jul 2025 06:39:26.395 * Redis version=7.4.5, bits=64, commit=00000000, modified=0, pid=1, just started
+redis-1    | 1:C 27 Jul 2025 06:39:26.395 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf
+redis-1    | 1:M 27 Jul 2025 06:39:26.395 * monotonic clock: POSIX clock_gettime
+redis-1    | 1:M 27 Jul 2025 06:39:26.396 * Running mode=standalone, port=6379.
+redis-1    | 1:M 27 Jul 2025 06:39:26.396 * Server initialized
+redis-1    | 1:M 27 Jul 2025 06:39:26.397 * Ready to accept connections tcp
 worker1-1  | 🧵 Worker started...
 app2-1     | 🚀 Server is running at http://localhost:9999
 app1-1     | 🚀 Server is running at http://localhost:9999
 worker2-1  | 🧵 Worker started...
-worker1-1  | ✅ Processed: b376b29c-45a9-4459-9ef8-84a445582e47 via default
-worker1-1  | ✅ Processed: 4fc6a3de-e4c5-4ca0-b69c-2e2c91602e70 via default
-worker1-1  | ✅ Processed: 58f5a82b-f17d-48d5-9e4b-c1706fa4c580 via default
-worker1-1  | ✅ Processed: ac85bcc5-3490-43a5-ab15-8ba7c2cbfae3 via default
-worker1-1  | ✅ Processed: 0b4c3c4f-b281-4ed4-9a94-ec88e854a843 via default
-worker1-1  | ✅ Processed: 23402b83-c245-4bcc-8a13-510a8c9fe26f via default
-worker1-1  | ✅ Processed: 3dc7275d-0ebb-4d01-bb3c-27a5c209f792 via default
-worker1-1  | ✅ Processed: 336e24ab-7f8b-410f-b267-08e3b406a822 via default
-worker1-1  | ✅ Processed: c99acb19-3da9-4ea9-8709-b7c6bdf5bbf9 via default
-worker1-1  | ✅ Processed: 2aac3feb-b707-4c6e-90ad-1ef3e88ccaa5 via default
-worker1-1  | ✅ Processed: e6af6f51-ab03-42eb-9908-2871a6e30822 via default
-worker1-1  | ✅ Processed: afa54813-bdc1-4d84-ba60-1951fa1baa63 via default
-worker1-1  | ✅ Processed: c6c9475a-14cc-4389-a56b-b1464ad96770 via default
-worker1-1  | ✅ Processed: c506d656-04a0-4337-8bb8-c02d0d552e43 via default
-worker1-1  | ✅ Processed: 8dbbffe6-ac9a-4586-948c-91ad60a01b50 via default
-worker1-1  | ✅ Processed: b120dc38-d21e-4f22-b322-eed638c3cc2f via default
-worker1-1  | ✅ Processed: 10a0c486-5e35-4c9d-9bf9-8b80f2fad395 via default
-worker1-1  | ✅ Processed: 4a3dea5e-060d-43d5-ac4e-1a29f9ca46c8 via default
-worker1-1  | ✅ Processed: b1ad00c8-bec5-406c-9c3f-7c3f257150dd via default
-worker1-1  | ✅ Processed: c5ee6e2f-8f4d-4962-832c-338320579f39 via default
-worker1-1  | ✅ Processed: 197b3470-646f-4695-b13b-421f937f6df5 via default
-worker1-1  | ✅ Processed: 0a4c157e-cf01-47fb-a7dc-a7476e50f608 via default
-worker1-1  | ✅ Processed: 2fb1630d-55b9-4fa5-a53e-a914f6f121e3 via default
-worker1-1  | ✅ Processed: 6c3cc82a-3528-42d4-9b4a-cfb92bef65e7 via default
-worker1-1  | ✅ Processed: 9f2170fb-9ca4-4445-bfce-f2657703348d via default
-worker1-1  | ✅ Processed: 27741536-b8b7-4302-8c7a-307d2106770f via default
-worker1-1  | ✅ Processed: d26512e0-07ff-425f-ad28-00ec819712d9 via default
-worker1-1  | ✅ Processed: 65ca6f4c-5510-4aae-855d-48225402ac52 via default
-worker1-1  | ✅ Processed: e20f14df-6463-45ae-b43a-1b5ac03df534 via default
-worker1-1  | ✅ Processed: de4384e5-44be-4b3a-8650-0783e2ad85f0 via default
-worker1-1  | ✅ Processed: cba8a86c-9a3c-49a4-a1fe-ba15838ba6a5 via default
-worker1-1  | ✅ Processed: b932e8c5-2d48-472b-acdc-02eb55e9e231 via default
-worker1-1  | ✅ Processed: 592af1a5-b144-47f1-a04c-f3d37d22b8ec via default
-worker1-1  | ✅ Processed: a2eea3a4-4314-4dae-90ca-17f758063f98 via default
-worker1-1  | ✅ Processed: cdd133a2-f5ca-4f83-be8c-03a9fd1dfe8e via default
-worker1-1  | ✅ Processed: fea57f4d-4abc-4693-987b-350896fddff0 via default
-worker1-1  | ✅ Processed: 70377d4f-1861-4864-9b77-edc8e70949b3 via default
-worker1-1  | ✅ Processed: 93ff4a01-77ba-491a-98bb-589d47648895 via default
-worker1-1  | ✅ Processed: 5524a5e1-8b68-4929-aa4a-9659fe699c33 via default
-worker1-1  | ✅ Processed: 792d970f-b418-4844-a6df-ec70aa307e45 via default
-worker1-1  | ✅ Processed: 7833dd05-1956-44db-bd1b-a34c62427d4d via default
-worker1-1  | ✅ Processed: 82284960-5b85-492d-8e1d-5147151aea60 via default
-worker1-1  | ✅ Processed: 90b8441e-f432-49bb-b40e-6be8dcef50ac via default
-worker1-1  | ✅ Processed: 7290d21d-d7bc-44c5-b869-3de7548e7b19 via default
-worker1-1  | ✅ Processed: 70f3c166-ed42-4b28-b266-d136e09f4b77 via default
-worker1-1  | ✅ Processed: 24aeb491-8019-47a9-b314-38c3f3ddb647 via default
-worker1-1  | ✅ Processed: 66205f1f-59c9-4b43-bff7-94687eaead4e via default
-worker1-1  | ✅ Processed: e7625f98-a714-4494-aeea-ae3f83c0cb4f via default
-worker1-1  | ✅ Processed: d91508c5-a177-4751-ab58-48cc5f0cf2f3 via default
-worker1-1  | ✅ Processed: 604a64eb-a8e8-4b23-9315-9cca5edaf026 via default
-worker1-1  | ✅ Processed: 2e874b21-fadc-4af1-a101-0bb12e71dfd0 via default
-worker1-1  | ✅ Processed: 51525a4f-afee-4e12-9f3f-7257d085f170 via default
-worker1-1  | ✅ Processed: a7761615-bfb0-4266-bad8-70ff87428941 via default
-worker1-1  | ✅ Processed: 4d6eb2a7-ccb1-41d2-a06f-059b06e0a9b0 via default
-worker1-1  | ✅ Processed: c5ba9e62-20ac-4b4d-985b-a39dcaeac5ee via default
-worker1-1  | ✅ Processed: 590a61c1-19ad-41ab-8301-95a15361d90d via default
-worker1-1  | ✅ Processed: 2111e711-d827-4e50-b664-05f36e24b5e0 via default
-worker1-1  | ✅ Processed: 16293073-af52-4ef9-9e22-92913ea1cab6 via default
-worker1-1  | ✅ Processed: 9785db07-869a-48b3-b9b3-8e9389bc9c01 via default
-worker1-1  | ✅ Processed: c9c83ab8-a7ef-4d43-8a09-f7b76a54f910 via default
-worker1-1  | ✅ Processed: d8c1ac42-97b8-40cd-9f9e-bc4ee8bbc36e via default
-worker1-1  | ✅ Processed: 4e0e7131-740c-4333-aacc-c0a7be5228a2 via default
-worker1-1  | ✅ Processed: c9471204-6a1a-42bd-8322-6b85052486e9 via default
-worker1-1  | ✅ Processed: c183cdb4-e145-463d-a5a9-00d5a690e4f6 via default
-worker1-1  | ✅ Processed: 519eba69-e282-47ef-b214-ec69140bdbea via default
-worker1-1  | ✅ Processed: c153dcdc-b738-413f-b39e-3d7685a18f95 via default
-worker1-1  | ✅ Processed: 503b8a4b-0071-4a69-87b9-f8d6cb1c2986 via default
-worker1-1  | ✅ Processed: d900224a-d18c-4287-b3a8-0d5322fbea93 via default
-worker1-1  | ✅ Processed: 8117a8c6-f3c2-4fb7-8aea-c187d19e842a via default
-worker1-1  | ✅ Processed: 195f976b-ac03-4a15-9054-52df2ada4255 via default
-worker1-1  | ✅ Processed: 643a1691-d07e-48e8-ba70-2109de7d8fd6 via default
-worker1-1  | ✅ Processed: a1a2cf9c-7ac5-4bf7-a708-cdfd6a040eff via default
-worker1-1  | ✅ Processed: 9895c097-4640-45e5-80e2-3c27b943e48c via default
-worker1-1  | ✅ Processed: f9145209-9f09-493a-975e-85e1c1f6bf95 via default
-worker1-1  | ✅ Processed: 6a44c2e0-55ee-4227-9b90-6c9cfa49fb1e via default
-worker1-1  | ✅ Processed: bd8a54fc-4d10-4bbb-923e-a31b32fc181c via default
-worker1-1  | ✅ Processed: 683eb637-3fbe-462e-9b6a-22a7ac72d816 via default
-worker1-1  | ✅ Processed: 270ba930-4c7e-4925-991c-a1ba23f388c5 via default
-worker1-1  | ✅ Processed: 13598fd1-5819-44b5-a337-abd56b20cf58 via default
-worker1-1  | ✅ Processed: f7bb7698-b451-4dbd-a9c7-24511c7cb8b3 via default
-worker1-1  | ✅ Processed: 26f31306-a687-4da6-a9b8-94bc08b8eba9 via default
-worker1-1  | ✅ Processed: fa50b5d1-cb5b-4ebf-9b9b-1d6e7c3d4566 via default
-worker1-1  | ✅ Processed: b05562f8-cdcc-4cbb-9f29-c4cea53f93cf via default
-worker1-1  | ✅ Processed: c361d954-b813-4932-ad35-23e9a8eb6f45 via default
-worker1-1  | ✅ Processed: 63c5298e-e2b4-495d-87be-a8d467125e59 via default
-worker1-1  | ✅ Processed: 00bcaba9-b0ef-4444-b8df-41a0253f1f5e via default
-worker1-1  | ✅ Processed: 9f1206e3-cedf-4155-9bbc-2adc6a36bee1 via default
-worker1-1  | ✅ Processed: c990b003-e494-4314-860a-25a33f135187 via default
-worker1-1  | ✅ Processed: 2fe8cdee-e67f-4c57-901b-89963179cf32 via default
-worker1-1  | ✅ Processed: a8fd05fa-5d46-4d50-a144-50c57335571e via default
-worker1-1  | ✅ Processed: 9dcf3824-e4e0-4280-b328-b159ae524b23 via default
-worker1-1  | ✅ Processed: b6cb74a6-8abb-4717-80f6-8797fb996bb9 via default
-worker1-1  | ✅ Processed: 26291dfe-3a29-4898-b504-97bad1b82bc6 via default
-worker1-1  | ✅ Processed: c53ce648-2295-4dda-92fe-f39f88042fb3 via default
-worker1-1  | ✅ Processed: cdbd29b7-cd72-4b22-9024-d7d69e2bacb8 via default
-worker1-1  | ✅ Processed: 4240ecac-ef03-4c75-9902-3e082c85fb40 via default
-worker1-1  | ✅ Processed: 551ddd28-71ba-47f3-a22e-86668045d8dd via default
-worker1-1  | ✅ Processed: b6a27d58-20c1-43a1-bd12-2a7141e20ebd via default
-worker1-1  | ✅ Processed: 610aace2-dea0-4ec2-9d13-cb3c55dd5c64 via default
-worker1-1  | ✅ Processed: f9fdc771-b7f7-4331-b4ba-0504fa1fdd7c via default
-worker1-1  | ✅ Processed: c59211c7-7138-4162-9d7d-5b9c3747b875 via default
-worker1-1  | ✅ Processed: 2b3efef3-d473-4176-878b-12d778435487 via default
-worker1-1  | ✅ Processed: 1ef700fe-4f0c-4edd-9928-8edf2acea3e7 via default
-worker1-1  | ✅ Processed: 1821a358-7e20-4751-b26a-6847b788a0a6 via default
-worker1-1  | ✅ Processed: dd845b46-ce0f-423b-a8f1-be3648176258 via default
-worker1-1  | ✅ Processed: 00692fde-f4f6-43a1-a283-a28fd9766d22 via default
-worker1-1  | ✅ Processed: ea7c2691-19d5-4b06-8834-d965ea77fd37 via default
-worker1-1  | ✅ Processed: e32e867b-41e2-4594-a3af-74f85c7918c4 via default
-worker1-1  | ✅ Processed: fe4af683-78f2-46aa-bc73-a95a33c00790 via default
-worker1-1  | ✅ Processed: 5b832eda-0fc1-4f44-a5f5-6e7c993dc788 via default
-worker1-1  | ✅ Processed: 652597c5-6026-4df0-b423-b2f1fd848709 via default
-worker1-1  | ✅ Processed: 525268f1-602d-4b48-8a14-08c9b30ddc7a via default
-worker1-1  | ✅ Processed: b0ff0f1a-c46a-46c2-9845-13aa219d4cf7 via default
-worker1-1  | ✅ Processed: 4cdd402b-2eef-478a-bce2-c039c57c6129 via default
-worker1-1  | ✅ Processed: ca9394c7-923d-4ba0-943e-c01ae9ca034c via default
-worker1-1  | ✅ Processed: 54bd6375-6a3d-4bc7-8d14-b7b0ade64155 via default
-worker1-1  | ✅ Processed: 923c6e79-3bf4-4768-94a9-e274e3d1bcbf via default
-worker1-1  | ✅ Processed: 66c778cd-2971-48e9-963b-deef8f212cd7 via default
-worker1-1  | ✅ Processed: 9a866efc-cb12-4a57-82d5-b2ba0881f247 via default
-worker1-1  | ✅ Processed: 31e9304f-1ea7-49d8-815c-f82f8d47e60a via default
-worker1-1  | ✅ Processed: 397e2ec4-8245-4672-bf6a-49027b9a7d1a via default
-worker1-1  | ✅ Processed: 2ae7797a-6338-4b38-a57d-3a7782d41262 via default
-worker1-1  | ✅ Processed: 4daa1335-b3e7-41c9-a2ac-ca5f32d95190 via default
-worker1-1  | ✅ Processed: 5115dfb4-a11d-410f-922f-882d58d4115f via default
-worker1-1  | ✅ Processed: d825871d-2188-452b-9f2f-5f2bc8f36a05 via default
-worker1-1  | ✅ Processed: 6cab517f-1dde-4737-9ea8-87b4d1de3217 via default
-worker1-1  | ✅ Processed: 9d8eefdb-2c10-4d0c-9949-8a5bf46c21b3 via default
-worker1-1  | ✅ Processed: cb9422e8-87f0-4915-93d6-105420a33327 via default
-worker1-1  | ✅ Processed: 0c3afe25-245f-41f2-bda8-d593b7d60179 via default
-worker1-1  | ✅ Processed: 0e583f38-bea4-467d-8d92-0cc2f6f36074 via default
-worker1-1  | ✅ Processed: 320b57c0-4ac4-4c81-8a25-f4826c9e7c89 via default
-worker1-1  | ✅ Processed: 860d6d40-326b-4d6f-be22-4ef6e29cadfa via default
-worker1-1  | ✅ Processed: 6c4750b7-d245-4ca0-8586-e0a68294eef1 via default
-worker1-1  | ✅ Processed: bb1cd6d7-e7de-4221-b321-1ffdb166fada via default
-worker1-1  | ✅ Processed: 2e100e0c-92e2-4f71-b878-9876270598e7 via default
-worker1-1  | ✅ Processed: ad7dbf6b-4d93-4d73-8b9b-0598b2aa5549 via default
-worker1-1  | ✅ Processed: 5d422e13-8ce0-4efb-ba61-9b4f71bd2a74 via default
-worker1-1  | ✅ Processed: c24c2900-24c3-48d2-bf82-04b9c4db4a78 via default
-worker1-1  | ✅ Processed: 2b53c4c0-b83e-4bf6-8c3d-18aba8b85601 via default
-worker2-1  | ✅ Processed: b02cb0ca-84d1-474b-9ea2-e553ca6b5bb5 via default
-worker2-1  | ✅ Processed: 5e2c9f51-65d2-46d3-904f-75dc90580a1a via default
-worker2-1  | ✅ Processed: 8368d2af-0801-4d5f-abe8-ee274e53dedc via default
-worker2-1  | ✅ Processed: acf1c642-550c-4c47-9d4a-13f500500a16 via default
-worker2-1  | ✅ Processed: 5557ef1f-0d2a-4c22-8d04-eedaf294c50d via default
-worker2-1  | ✅ Processed: 76859ebc-754d-4e55-a796-4cec2bcbabec via default
-worker1-1  | ✅ Processed: 8cedd17d-da66-4c81-b3e5-844143077864 via fallback
-worker2-1  | ✅ Processed: 87eda08a-5e7c-4508-b5e2-fda3b42d6b9e via fallback
-worker1-1  | ✅ Processed: 5ce4c168-e25e-42fa-add3-17f4213253f4 via fallback
-worker2-1  | ✅ Processed: 0fcadaf1-2783-4306-98d6-2736f2fe905b via fallback
+worker1-1  | ✅ Processed: 6260cdab-2eba-4bc3-88ef-1a46ac9e21d0 via default
+worker1-1  | ✅ Processed: c5190018-e492-4709-a9d8-cf347e201322 via default
+worker1-1  | ✅ Processed: 88470526-2a83-418e-9034-4a0653824007 via default
+worker1-1  | ✅ Processed: 120a59c8-3d0f-4384-b2d7-f1c51cb75d74 via default
+worker1-1  | ✅ Processed: b26d18e7-a8b8-46dd-a1a2-3bc0349642ea via default
+worker1-1  | ✅ Processed: 270888f6-36e8-499b-86e5-d3f2353336dc via default
+worker1-1  | ✅ Processed: eddf60b9-29c3-4799-87ff-e24cf545e433 via default
+worker1-1  | ✅ Processed: 779e8086-b060-4988-92f5-732065eb4523 via default
+worker1-1  | ✅ Processed: 9c32aa2b-c209-421f-91cd-0be3ae5db15a via default
+worker1-1  | ✅ Processed: 44c57554-4d0c-4e31-9c53-58c7d74a78e4 via default
+worker1-1  | ✅ Processed: be1f5afb-0b26-4286-bd23-a2af74f8b2ac via default
+worker1-1  | ✅ Processed: 3e79e7da-a07a-403b-854d-9ce7c9225635 via default
+worker1-1  | ✅ Processed: 12022963-a9fc-418d-88d2-6166ecb61a50 via default
+worker1-1  | ✅ Processed: b331fb14-8bfc-414c-8ddb-541f1239161f via default
+worker1-1  | ✅ Processed: 7d06b560-5a16-4710-b63a-8b12dbb95d94 via default
+worker1-1  | ✅ Processed: d006bae5-7cd1-422d-9d72-aacf9f4a10f8 via default
+worker1-1  | ✅ Processed: cbcf2595-a2af-46c9-995e-c6cad33630ad via default
+worker1-1  | ✅ Processed: aca14c0a-5812-477b-a0e1-f8169f0f87d2 via default
+worker1-1  | ✅ Processed: 0b9937a5-e716-4ac9-aac4-5c9877eb1fc0 via default
+worker1-1  | ✅ Processed: bdbb503a-e606-4413-b4a5-46b3fd6e5943 via default
+worker1-1  | ✅ Processed: 6d0f5282-b6f9-450a-8181-6233a143e72d via default
+worker1-1  | ✅ Processed: bc848de9-7331-47f2-8799-2619469b7239 via default
+worker1-1  | ✅ Processed: 8119dad4-510e-4c04-8fa6-71f03c41571f via default
+worker1-1  | ✅ Processed: 5eca7ff9-8afc-48cc-ae17-731e7e1e26cc via default
+worker1-1  | ✅ Processed: 9d8e2a8e-3d65-433d-bb56-a887c74241de via default
+worker1-1  | ✅ Processed: 2d1780fc-24e0-4ffd-b476-3330c2ba6388 via default
+worker1-1  | ✅ Processed: 616f8636-548b-4173-a147-44ff15263a75 via default
+worker1-1  | ✅ Processed: ff07dbab-51bf-4cbb-8bf8-08b4d929be27 via default
+worker1-1  | ✅ Processed: 7fec899e-d006-40a8-9816-eba91624fa3c via default
+worker1-1  | ✅ Processed: d6cc4c41-f2da-4e6a-99ed-489d667a1e97 via default
+worker1-1  | ✅ Processed: e8b69eb1-b769-41d8-a317-4f8f20bdf30f via default
+worker1-1  | ✅ Processed: 81dad9e9-841f-4b99-91a1-42eaee79f981 via default
+worker1-1  | ✅ Processed: de40c68a-b4ba-46df-a836-335189ec871f via default
+worker1-1  | ✅ Processed: 061454b1-75a3-46ba-8965-2f960b5ff97a via default
+worker1-1  | ✅ Processed: b3fbd99c-1af7-499b-9022-fa6932785581 via default
+worker1-1  | ✅ Processed: c04d4cf1-8da9-49da-aab5-0e0613480e83 via default
+worker1-1  | ✅ Processed: 51233d97-70c9-4c64-b234-08bb56ebc313 via default
+worker1-1  | ✅ Processed: 1f519c8e-ccdc-4385-b37f-8635273c9b78 via default
+worker1-1  | ✅ Processed: 6a00549b-2737-4f98-8dd6-81e27b593b99 via default
+worker1-1  | ✅ Processed: 43ca8169-1d20-4a72-8817-0858ccb8f881 via default
+worker1-1  | ✅ Processed: 2113e325-dd77-445b-bec0-e9d5bdd0d617 via default
+worker1-1  | ✅ Processed: 58eea620-18b4-4c33-a7a1-e8e8d2d99e01 via default
+worker1-1  | ✅ Processed: f924456a-22d8-43cb-b924-7786b98d3f35 via default
+worker1-1  | ✅ Processed: 53938a6d-17f5-42ba-b97e-8633da120aa4 via default
+worker1-1  | ✅ Processed: adb4ba2d-0a39-4d15-8429-b56990b3031a via default
+worker1-1  | ✅ Processed: d7755774-a8be-4226-936c-0d0994464c8b via default
+worker1-1  | ✅ Processed: cfca2d92-ada0-4795-9b8d-23a67a4a17eb via default
+worker1-1  | ✅ Processed: 5f3ef458-a7a5-4111-a8a1-d2f77029f116 via default
+worker1-1  | ✅ Processed: 48fe057a-524b-42d2-8823-8be16c36fc9c via default
+worker1-1  | ✅ Processed: c8c312d4-afa5-4619-8aae-9f4fd2b334a7 via default
+worker1-1  | ✅ Processed: 5a55f799-3c1d-44c4-bdc4-fdc5dfb09f9e via default
+worker1-1  | ✅ Processed: 4809e306-3ec4-4f0f-b9ec-e8ca9093090c via default
+worker1-1  | ✅ Processed: f2a29759-44f1-43e8-a51d-9b9557a9a380 via default
+worker1-1  | ✅ Processed: 34731a74-8585-4679-8fa6-e47dfbeab189 via default
+worker1-1  | ✅ Processed: a64c14a4-1bf7-4de5-b4da-bcac4e4a7e05 via default
+worker1-1  | ✅ Processed: 7610289b-d188-437d-bcc5-6b804310d1c4 via default
+worker1-1  | ✅ Processed: a4726d2a-b257-49e2-bb44-cdf2fdaa1f6d via default
+worker1-1  | ✅ Processed: 9457464b-e915-4b67-bcfc-89c76bfb5779 via default
+worker1-1  | ✅ Processed: 744252c8-6655-49bc-bb3c-f8d20b499ccf via default
+worker1-1  | ✅ Processed: f8400bfe-d62b-4406-b61c-4f43fe97f2d1 via default
+worker1-1  | ✅ Processed: 6844e6bf-1421-4970-9f09-1dd34629db03 via default
+worker1-1  | ✅ Processed: 09dfaf7f-7eb6-4aa8-83ff-1c2f50b01d3d via default
+worker1-1  | ✅ Processed: bffda7c0-be13-409d-82bc-7757b8fc9796 via default
+worker1-1  | ✅ Processed: c40d2fef-03d6-4175-a587-1ed23c88b2f6 via default
+worker1-1  | ✅ Processed: dcb7c16d-c2d8-4452-88d0-706cd333f59b via default
+worker1-1  | ✅ Processed: fd9bada2-94bd-419c-8404-83cd86165390 via default
+worker1-1  | ✅ Processed: 3cfcc31a-fc8f-4f60-8743-6cdc6a8afcbc via default
+worker1-1  | ✅ Processed: 018ee787-93e2-4e89-aed6-bd1f74130ca4 via default
+worker1-1  | ✅ Processed: 9e93bca0-1594-49ee-87cf-94c7421052b0 via default
+worker1-1  | ✅ Processed: 14663e90-5b38-45a8-89bb-ef5f3bc2853a via default
+worker1-1  | ✅ Processed: da059802-bf72-42fe-92a6-ca22abfff4d6 via default
+worker1-1  | ✅ Processed: 4a7618fd-9511-4978-976b-eb044eb45e80 via default
+worker1-1  | ✅ Processed: fd7b0d69-467b-4acb-9701-57393478bcbd via default
+worker1-1  | ✅ Processed: e78fc889-9c09-4d95-8897-8a520021ad25 via default
+worker1-1  | ✅ Processed: a80bef04-d2d0-4b08-b4b2-eb0aab671380 via default
+worker1-1  | ✅ Processed: 5bdcb01d-b1b7-49f1-a77e-d464ab50e7f7 via default
+worker1-1  | ✅ Processed: 69061197-6ceb-4d05-879c-2a5724311613 via default
+worker1-1  | ✅ Processed: 40c9ac23-f2d3-4098-81ee-6c047cd097ac via default
+worker1-1  | ✅ Processed: 964d4d51-7506-484e-833d-fb9c34ce00ae via default
+worker1-1  | ✅ Processed: df6a861d-0218-4bf3-84dd-e4fb3b51a338 via default
+worker1-1  | ✅ Processed: f2461c2f-9982-4696-9eea-9a71b4b7405d via default
+worker1-1  | ✅ Processed: 551902b2-c4ff-426a-87df-1b25bdf198d1 via default
+worker1-1  | ✅ Processed: 7cae4762-e16f-4864-8edd-131f00f2ef5e via default
+worker1-1  | ✅ Processed: f9d1145c-57f3-423d-a243-8cddb17a33f5 via default
+worker1-1  | ✅ Processed: 8497e49b-2074-4417-abb0-a4b19ec6004c via default
+worker1-1  | ✅ Processed: c2f8ab8f-120d-480c-9efe-f35afd143663 via default
+worker1-1  | ✅ Processed: 4a8778af-5cfb-4f28-b220-d54bdf7674af via default
+worker1-1  | ✅ Processed: ef0475e9-ad12-4052-82b2-a2fa640766dd via default
+worker1-1  | ✅ Processed: baa3b2e3-641d-49c8-a055-45e37bd850c1 via default
+worker1-1  | ✅ Processed: d8959ba4-42d6-4579-a5b7-420d9f1d66d5 via default
+worker1-1  | ✅ Processed: 512295dd-89a5-4c02-9c78-f2e9c7854c95 via default
+worker1-1  | ✅ Processed: 1714f8bb-6253-4c39-a206-d3c8379dcbf2 via default
+worker1-1  | ✅ Processed: 06d8396d-93e5-4ff0-a3b4-4ed3389c2533 via default
+worker1-1  | ✅ Processed: f2581829-7085-456c-873e-7f5e74eac05b via default
+worker1-1  | ✅ Processed: d0ad128e-7bc8-4b06-ac7c-fd81d3b9ff7b via default
+worker1-1  | ✅ Processed: d646b090-04cf-4a01-85ca-923050c62100 via default
+worker1-1  | ✅ Processed: f0fc1d84-d52f-4f2d-9c51-d6bb7f69f641 via default
+worker1-1  | ✅ Processed: 36dbf2e1-d8c1-4d3b-b417-3ee7133f3d6f via default
+worker1-1  | ✅ Processed: ebb182f0-5483-47d0-9d71-2ff843eb7aa4 via default
+worker1-1  | ✅ Processed: 081519a9-7536-4f6c-b5bf-808b7fca295f via default
+worker1-1  | ✅ Processed: f2d8c25f-b086-4ad4-b038-551f69f03fe0 via default
+worker1-1  | ✅ Processed: 74cc11cd-ad26-4cbc-ac03-6c429d64eb1b via default
+worker1-1  | ✅ Processed: 5d0970db-0fbf-4186-9764-a97b22ebe627 via default
+worker1-1  | ✅ Processed: 2f32bead-5f04-4016-833f-43dba055aac1 via default
+worker1-1  | ✅ Processed: e81372da-4863-45a8-ad05-621acfeaf1a3 via default
+worker1-1  | ✅ Processed: aac8edf1-edae-411e-a2f2-549cbf82674b via default
+worker1-1  | ✅ Processed: d07621f5-75ae-4376-8ac2-b696699a374d via default
+worker1-1  | ✅ Processed: 42e6baa3-84e8-4664-a5b4-7255fd02b07e via default
+worker1-1  | ✅ Processed: a97a6b2e-0c2a-4779-bf17-89981979c75b via default
+worker1-1  | ✅ Processed: d10a09e1-f831-42fb-9378-12df9fe838fe via default
+worker1-1  | ✅ Processed: b2063fa8-26c1-4f9e-8fdc-6ed8c0d87a56 via default
+worker1-1  | ✅ Processed: 2504fcf0-a2d5-45eb-9f63-cc7a0090db55 via default
+worker1-1  | ✅ Processed: e9faaea7-4ff5-4025-96c5-77ef467c4f3e via default
+worker1-1  | ✅ Processed: 4c12d010-02ad-4053-b6d0-3f26693a9082 via default
+worker1-1  | ✅ Processed: 7e4b1ca3-04e2-43c9-8742-7e4ff309b125 via default
+worker1-1  | ✅ Processed: 1db977e2-3e7f-4359-a7fc-76a1416d8692 via default
+worker1-1  | ✅ Processed: 18aec066-c427-492a-9a96-9f99c7a26d57 via default
+worker1-1  | ✅ Processed: 52b8508b-734b-4dfa-b5f4-57f6b5ceec47 via default
+worker1-1  | ✅ Processed: b0bf37a9-e24c-4ea6-b06c-c03c39aca051 via default
+worker1-1  | ✅ Processed: f2d5c720-eabf-4f1b-af27-2b0d11ecc8db via default
+worker1-1  | ✅ Processed: 021c6aaa-80f3-4134-ba63-5a756d235a43 via default
+worker1-1  | ✅ Processed: cb7e62a1-a63a-45a1-ad73-882a44eaa04c via default
+worker1-1  | ✅ Processed: 9e92cb24-321c-418c-b041-235faf06b83e via default
+worker1-1  | ✅ Processed: af792f9c-93ac-4e31-8a2c-0ec5f295d993 via default
+worker1-1  | ✅ Processed: 47e3035b-c068-4c19-8212-4a93280e5e43 via default
+worker1-1  | ✅ Processed: 7de986ff-ee73-4ee5-847e-4f892409bdbc via default
+worker1-1  | ✅ Processed: 51e86fde-182e-4560-a306-67ab75d97cb7 via default
+worker1-1  | ✅ Processed: f8883d86-46b6-4549-acc3-56eac918061b via default
+worker1-1  | ✅ Processed: e2c782ac-4629-42a9-925e-02ea9587a98d via default
+worker1-1  | ✅ Processed: cc8c7f8e-e53b-435c-9449-84c32576c234 via default
+worker1-1  | ✅ Processed: 2d51d0d6-1dbc-47fb-b72e-f5d564173ed2 via default
+worker1-1  | ✅ Processed: e57fdd02-e059-4ea2-a0a6-24fbf5d45187 via default
+worker1-1  | ✅ Processed: fba89c28-c4f2-44ab-809c-a7f48898dd48 via default
+worker1-1  | ✅ Processed: 7f142da8-8fbd-418f-834b-1c3b88cfaa69 via default
+worker1-1  | ✅ Processed: 2e113733-3a55-4c93-88cf-88c656ac437a via default
+worker1-1  | ✅ Processed: d32481e6-69ac-47be-bb12-cfe89cac70d1 via default
+worker1-1  | ✅ Processed: 1c04e28d-548a-4361-a607-97c537348746 via default
+worker1-1  | ✅ Processed: b83e73eb-e285-449c-9a92-11cfab0bf5ac via default
+worker1-1  | ✅ Processed: b782b7a4-349c-4c6c-b82c-19573b195d7b via default
+worker2-1  | ✅ Processed: 4e246508-5333-41eb-be19-ba0c5ebbcf01 via default
+worker2-1  | ✅ Processed: 4b78b1c5-503e-4911-a289-a2730f8a2814 via default
+worker2-1  | ✅ Processed: 954a02b1-8fab-457c-844d-48e81baa0fa7 via default
+worker2-1  | ✅ Processed: d3d3662b-a981-49e0-acfc-7242617480b6 via default
+worker2-1  | ✅ Processed: 92145d35-54c5-44b5-8794-16ca24303f79 via default
+worker2-1  | ✅ Processed: e42c0cb8-5229-4bce-a62e-e61a4eb8e30b via default
+worker1-1  | ✅ Processed: 850a3030-19c4-4b9c-ac1d-2658f0e24351 via fallback
+worker2-1  | ✅ Processed: 8ed0cd76-08a6-4ef3-aa71-609ea161af64 via fallback
+worker1-1  | ✅ Processed: f3facecf-f71a-4784-adc0-b39e56eb336d via fallback
+worker2-1  | ✅ Processed: f8c71998-5230-4913-86b2-1f74efb2af97 via fallback
 worker1-1  | Worker error: Both processors failed
 worker2-1  | Worker error: Both processors failed
-worker1-1  | ✅ Processed: 7c1075c9-1101-419d-9238-46bab3b5e3c4 via default
-worker2-1  | ✅ Processed: 81c68942-4f19-4daa-894c-8fcc5c19e256 via default
-worker1-1  | ✅ Processed: e3e504fe-19a8-4d24-9d53-709e25046977 via default
-redis-1    | 1:M 21 Jul 2025 03:27:08.025 * 10000 changes in 60 seconds. Saving...
-redis-1    | 1:M 21 Jul 2025 03:27:08.025 * Background saving started by pid 22
-redis-1    | 22:C 21 Jul 2025 03:27:08.053 * DB saved on disk
-redis-1    | 22:C 21 Jul 2025 03:27:08.054 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
-redis-1    | 1:M 21 Jul 2025 03:27:08.127 * Background saving terminated with success
-worker2-1  | ✅ Processed: ef58caf8-c7bd-41c1-a994-2db34c362450 via default
-worker1-1  | ✅ Processed: 7038b70c-73e5-4e04-b12b-6039613dcd9d via default
-redis-1    | 1:signal-handler (1753068437) Received SIGTERM scheduling shutdown...
-redis-1    | 1:M 21 Jul 2025 03:27:17.917 * User requested shutdown...
-redis-1    | 1:M 21 Jul 2025 03:27:17.917 * Saving the final RDB snapshot before exiting.
-redis-1    | 1:M 21 Jul 2025 03:27:18.031 * DB saved on disk
-redis-1    | 1:M 21 Jul 2025 03:27:18.031 # Redis is now ready to exit, bye bye...
-worker1-1  | [ioredis] Unhandled error event: Error: connect ECONNREFUSED 172.20.0.2:6379
-worker1-1  |     at new ExceptionWithHostPort (internal:shared:42:10)
-worker1-1  |     at afterConnect (node:net:1167:39)
-worker1-1  |     at connectError (node:net:364:48)
-worker1-1  | [ioredis] Unhandled error event: Error: connect ECONNREFUSED 172.20.0.2:6379
-worker1-1  |     at new ExceptionWithHostPort (internal:shared:42:10)
-worker1-1  |     at afterConnect (node:net:1167:39)
-worker1-1  |     at connectError (node:net:364:48)
-worker2-1  | [ioredis] Unhandled error event: Error: connect ECONNREFUSED 172.20.0.2:6379
+worker1-1  | ✅ Processed: 60ea7434-25f9-4fc8-b76f-c9bdf6f04c55 via default
+worker2-1  | ✅ Processed: 0fccec97-6800-4634-bcd4-1fddefe00128 via default
+worker1-1  | ✅ Processed: 0a50825e-56ce-418d-b209-60f574b92706 via default
+redis-1    | 1:M 27 Jul 2025 06:40:27.060 * 10000 changes in 60 seconds. Saving...
+redis-1    | 1:M 27 Jul 2025 06:40:27.060 * Background saving started by pid 21
+redis-1    | 21:C 27 Jul 2025 06:40:27.605 * DB saved on disk
+redis-1    | 21:C 27 Jul 2025 06:40:27.606 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+redis-1    | 1:M 27 Jul 2025 06:40:27.666 * Background saving terminated with success
+worker2-1  | ✅ Processed: 7f0ce963-409d-4a8d-933b-55958ef041b4 via default
+worker1-1  | ✅ Processed: 434a355b-3f2b-42c2-b21e-4a90a56915d1 via default
+redis-1    | 1:signal-handler (1753598436) Received SIGTERM scheduling shutdown...
+redis-1    | 1:M 27 Jul 2025 06:40:36.043 * User requested shutdown...
+redis-1    | 1:M 27 Jul 2025 06:40:36.043 * Saving the final RDB snapshot before exiting.
+redis-1    | 1:M 27 Jul 2025 06:40:36.071 * DB saved on disk
+redis-1    | 1:M 27 Jul 2025 06:40:36.071 # Redis is now ready to exit, bye bye...
+worker2-1  | [ioredis] Unhandled error event: Error: connect ECONNREFUSED 172.20.0.3:6379
 worker2-1  |     at new ExceptionWithHostPort (internal:shared:42:10)
-worker2-1  |     at afterConnect (node:net:1167:39)
-worker2-1  |     at connectError (node:net:364:48)
-worker2-1  | [ioredis] Unhandled error event: Error: connect ECONNREFUSED 172.20.0.2:6379
-worker2-1  |     at new ExceptionWithHostPort (internal:shared:42:10)
-worker2-1  |     at afterConnect (node:net:1167:39)
-worker2-1  |     at connectError (node:net:364:48)
-app2-1     | [ioredis] Unhandled error event: Error: connect ECONNREFUSED 172.20.0.2:6379
+worker1-1  | [ioredis] Unhandled error event: Error: connect ECONNREFUSED 172.20.0.3:6379
+app2-1     | [ioredis] Unhandled error event: Error: connect ECONNREFUSED 172.20.0.3:6379
 app2-1     |     at new ExceptionWithHostPort (internal:shared:42:10)
 app2-1     |     at afterConnect (node:net:1167:39)
+worker1-1  |     at new ExceptionWithHostPort (internal:shared:42:10)
+worker2-1  |     at afterConnect (node:net:1167:39)
+worker2-1  |     at connectError (node:net:364:48)
+worker2-1  | [ioredis] Unhandled error event: Error: connect ECONNREFUSED 172.20.0.3:6379
 app2-1     |     at connectError (node:net:364:48)
-app1-1     | [ioredis] Unhandled error event: Error: connect ECONNREFUSED 172.20.0.2:6379
+worker1-1  |     at afterConnect (node:net:1167:39)
+worker2-1  |     at new ExceptionWithHostPort (internal:shared:42:10)
+worker2-1  |     at afterConnect (node:net:1167:39)
+worker2-1  |     at connectError (node:net:364:48)
+worker1-1  |     at connectError (node:net:364:48)
+worker1-1  | [ioredis] Unhandled error event: Error: connect ECONNREFUSED 172.20.0.3:6379
+worker1-1  |     at new ExceptionWithHostPort (internal:shared:42:10)
+worker1-1  |     at afterConnect (node:net:1167:39)
+worker1-1  |     at connectError (node:net:364:48)
+app1-1     | [ioredis] Unhandled error event: Error: connect ECONNREFUSED 172.20.0.3:6379
 app1-1     |     at new ExceptionWithHostPort (internal:shared:42:10)
 app1-1     |     at afterConnect (node:net:1167:39)
 app1-1     |     at connectError (node:net:364:48)
-worker1-1  | [ioredis] Unhandled error event: Error: connect ECONNREFUSED 172.20.0.2:6379
-worker1-1  |     at new ExceptionWithHostPort (internal:shared:42:10)
-worker1-1  |     at afterConnect (node:net:1167:39)
-worker1-1  |     at connectError (node:net:364:48)
-worker1-1  | [ioredis] Unhandled error event: Error: connect ECONNREFUSED 172.20.0.2:6379
-worker1-1  |     at new ExceptionWithHostPort (internal:shared:42:10)
-worker1-1  |     at afterConnect (node:net:1167:39)
-worker1-1  |     at connectError (node:net:364:48)
-app2-1     | [ioredis] Unhandled error event: Error: connect ECONNREFUSED 172.20.0.2:6379
-app2-1     |     at new ExceptionWithHostPort (internal:shared:42:10)
-app2-1     |     at afterConnect (node:net:1167:39)
-app2-1     |     at connectError (node:net:364:48)
-app1-1     | [ioredis] Unhandled error event: Error: connect ECONNREFUSED 172.20.0.2:6379
-app1-1     |     at new ExceptionWithHostPort (internal:shared:42:10)
-app1-1     |     at afterConnect (node:net:1167:39)
-app1-1     |     at connectError (node:net:364:48)
-worker2-1  | [ioredis] Unhandled error event: Error: connect ECONNREFUSED 172.20.0.2:6379
-worker2-1  |     at new ExceptionWithHostPort (internal:shared:42:10)
-worker2-1  |     at afterConnect (node:net:1167:39)
-worker2-1  |     at connectError (node:net:364:48)
-worker2-1  | [ioredis] Unhandled error event: Error: connect ECONNREFUSED 172.20.0.2:6379
-worker2-1  |     at new ExceptionWithHostPort (internal:shared:42:10)
-worker2-1  |     at afterConnect (node:net:1167:39)
-worker2-1  |     at connectError (node:net:364:48)
 [Kredis-1 exited with code 0
-[Kworker2-1 exited with code 137
-[Kapp1-1 exited with code 137
+[Kworker1-1 exited with code 137
 log truncated at line 1000

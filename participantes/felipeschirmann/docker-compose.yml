@@ -1,64 +1,29 @@
 services:
   api:
-    # Use the local Dockerfile to build the image
-    # and tag it as 'rinha-backend:compose-build'.
-    image: felipeschirmann/rinha-backend-2025:latest
-
+    image: felipeschirmann/rinha-backend-2025:9.0.0
+    container_name: felipeschirmann-rinha-v9
     environment:
-      # URLs for the external payment processors, accessible via the Docker network.
-      - DEFAULT_PROCESSOR_URL=http://payment-processor-default:8080
-      - FALLBACK_PROCESSOR_URL=http://payment-processor-fallback:8080
-
-      # ===============================================================
-      #                      PERFORMANCE TUNING PARAMETERS
-      # ===============================================================
-      # These values override the defaults set in application.properties.
-
-      # --- HTTP Client: Timeouts (tuned for fail-fast behavior) ---
-      - app.http-client.connect-timeout-ms=250
-      - app.http-client.response-timeout-ms=650
-
-      # --- HTTP Client: Connection Pool ---
-      - app.http-client.pool.max-total=400
-      - app.http-client.pool.max-per-route=200
-
-      # --- Queue and Workers ---
-      - app.workers.count=1000000
-      - app.queue.capacity=10000000
-      - app.queue.drain-timeout-ms=1200
-      - app.queue.contention-threshold-percent=90
-      - app.payment.high-value-threshold=100.00
-
-      # ===================================================================
-      #                  TOMCAT PERFORMANCE TUNING
-      # ===================================================================
-      # Increases the maximum number of worker threads the Tomcat server can use.
-      - server.tomcat.threads.max=10000
-
-      # Increases the size of the connection queue.
-      - server.tomcat.accept-count=5000
-
-    # Maps port 9999 of the host machine to port 8080 inside the container.
+      PAYMENT_PROCESSOR_DEFAULT_URL: "http://payment-processor-default:8080"
+      PAYMENT_PROCESSOR_FALLBACK_URL: "http://payment-processor-fallback:8080"
+      APP_CLIENT_RESPONSE_TIMEOUT: "3s"
+      APP_CLIENT_CONNECT_TIMEOUT: "1s"
+      APP_QUEUE_MAX_CAPACITY: "40000"
+      APP_QUEUE_BASE_CAPACITY: "20000"
+      APP_WORKER_BATCH_SIZE: "500"
+      SERVER_TOMCAT_THREADS_MAX: "800"
+    sysctls:
+      net.core.somaxconn: 4096
     ports:
-      - "9999:8080"
-
-    # Connects this service to the external 'payment-processor' network.
+      - "9999:9999"
     networks:
       - payment-processor
-
-    # Kernel parameter tuning for high concurrency.
-    sysctls:
-      - net.core.somaxconn=65535
-
-    # Resource limits for the container, as per the challenge rules.
     deploy:
       resources:
         limits:
-          cpus: "1.5"
+          cpus:  "1.5"
           memory: "350MB"
-
-# Defines the networks used by the services.
 networks:
-  # Declares that 'payment-processor' is a pre-existing external network.
+  backend:
+    driver: bridge
   payment-processor:
     external: true

@@ -40,7 +40,7 @@ services:
       - 8001:8080
     depends_on:
       - payment-processor-db-1
-    
+
   payment-processor-db-1:
     <<: *payment-processor-db
     container_name: payment-processor-default-db
@@ -62,7 +62,7 @@ services:
       - payment-processor-db
     depends_on:
       - payment-processor-db-2
-  
+
   payment-processor-db-2:
     <<: *payment-processor-db
     container_name: payment-processor-fallback-db

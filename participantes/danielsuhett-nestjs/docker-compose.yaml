@@ -6,11 +6,12 @@ services:
       - ./nginx.conf:/etc/nginx/nginx.conf:ro
     depends_on:
       - api1
+      - api2
     ports:
       - "9999:9999"
     networks:
-      - backend
       - payment-processor
+      - backend
     deploy:
       resources:
         limits:
@@ -18,15 +19,16 @@ services:
           memory: "55MB"
 
   api1:
-    image: danielsuhett1999/rinha-backend
+    image: danielsuhett1999/rinha-backend:1.0.3
     hostname: api1
     environment:
       - APP_PORT=8080
-      - APP_MODE=1
+      - APP_NAME=1
       - REDIS_HOST=redis
       - REDIS_PORT=6379
       - PROCESSOR_DEFAULT_URL=http://payment-processor-default:8080
       - PROCESSOR_FALLBACK_URL=http://payment-processor-fallback:8080
+      - LOG_LEVEL=ERROR
     networks:
       - backend
       - payment-processor
@@ -36,19 +38,20 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.60"
-          memory: "70MB"
+          cpus: "0.65"
+          memory: "100MB"
 
   api2:
-    image: danielsuhett1999/rinha-backend
+    image: danielsuhett1999/rinha-backend:1.0.3
     hostname: api2
     environment:
       - APP_PORT=8081
-      - APP_MODE=2
+      - APP_NAME=2
       - REDIS_HOST=redis
       - REDIS_PORT=6379
       - PROCESSOR_DEFAULT_URL=http://payment-processor-default:8080
       - PROCESSOR_FALLBACK_URL=http://payment-processor-fallback:8080
+      - LOG_LEVEL=ERROR
     networks:
       - backend
       - payment-processor
@@ -58,15 +61,15 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.60"
-          memory: "70MB"
+          cpus: "0.65"
+          memory: "100MB"
+
   redis:
     image: redis:7.2-alpine
     container_name: rinha-redis
-    command: redis-server --save "" --appendonly no --maxmemory 150mb --maxmemory-policy allkeys-lru --tcp-keepalive 60 --timeout 0 --tcp-backlog 511 --databases 1 --maxclients 10000 --hz 100 --rdbcompression no --rdbchecksum no
+    command: redis-server --save "" --appendonly no --maxmemory 45mb --maxmemory-policy allkeys-lru --tcp-keepalive 30 --timeout 0 --tcp-backlog 1024 --databases 1 --maxclients 5000 --hz 10 --rdbcompression no --rdbchecksum no --io-threads 2 --io-threads-do-reads yes
     networks:
       - backend
-      - payment-processor
     ports:
       - 6380:6379
     healthcheck:
@@ -77,8 +80,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.20"
-          memory: "150MB"
+          cpus: "0.10"
+          memory: "90MB"
 
 networks:
   backend:
