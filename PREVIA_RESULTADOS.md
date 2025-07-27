@@ -1,6 +1,6 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Sat Jul 26 10:39:33 PM -03 2025**
-116 submissões / 97 resultados / 19 submissões com erro
+Atualizado em **Sat Jul 26 10:50:10 PM -03 2025**
+122 submissões / 100 resultados / 22 submissões com erro
 
 
 | participante | p99 | bônus por desempenho (%) | multa ($) | lucro | submissão |
@@ -26,6 +26,7 @@ Atualizado em **Sat Jul 26 10:39:33 PM -03 2025**
 |	danielwisky	|	1009.11ms	|	0	|	23924.77500000086	|	44431.7250000016	|	[danielwisky](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/danielwisky)
 |	davidalecrim1-go-1	|	12.29ms	|	0	|	107610.64299999998	|	199848.337	|	[davidalecrim1-go-1](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/davidalecrim1-go-1)
 |	davidalecrim1-go-2	|	6.28ms	|	0.09	|	108032.37374999998	|	228411.3045	|	[davidalecrim1-go-2](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/davidalecrim1-go-2)
+|	david-delta-sierra-go	|	5.2ms	|	0.12	|	110737.928	|	243623.4416	|	[david-delta-sierra-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/david-delta-sierra-go)
 |	davigga-node-2	|	79.51ms	|	0	|	98083.56775	|	182155.19725	|	[davigga-node-2](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/davigga-node-2)
 |	davigga-node	|	170.33ms	|	0	|	105870.78600000001	|	196617.174	|	[davigga-node](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/davigga-node)
 |	diegodario-go	|	7.28ms	|	0.07	|	0	|	333810.361	|	[diegodario-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/diegodario-go)
@@ -35,6 +36,7 @@ Atualizado em **Sat Jul 26 10:39:33 PM -03 2025**
 |	emiliosheinz-go	|	6.17ms	|	0.1	|	88555.79599999999	|	189762.42	|	[emiliosheinz-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/emiliosheinz-go)
 |	felipefrmelo-rust	|	5.77ms	|	0.1	|	105605.4195	|	226297.3275	|	[felipefrmelo-rust](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/felipefrmelo-rust)
 |	felipemcassiano	|	179.74ms	|	0	|	0	|	0	|	[felipemcassiano](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/felipemcassiano)
+|	felipeschirmann	|	7.97ms	|	0.06	|	73965.514	|	150044.3284	|	[felipeschirmann](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/felipeschirmann)
 |	fhgm-dani-ed	|	64.75ms	|	0	|	0	|	245677.44	|	[fhgm-dani-ed](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/fhgm-dani-ed)
 |	francoggm-go	|	5.99ms	|	0.1	|	0	|	342982.3705	|	[francoggm-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/francoggm-go)
 |	gabxdev-java-1	|	3.15ms	|	0.16	|	0	|	366390.4022	|	[gabxdev-java-1](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/gabxdev-java-1)
@@ -60,6 +62,7 @@ Atualizado em **Sat Jul 26 10:39:33 PM -03 2025**
 |	lhuizf-bun	|	10.5ms	|	0.01	|	0	|	0	|	[lhuizf-bun](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/lhuizf-bun)
 |	lhuizf-dotnet	|	184.22ms	|	0	|	0	|	192817.07	|	[lhuizf-dotnet](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/lhuizf-dotnet)
 |	libardi-dotnet-2	|	3.1ms	|	0.16	|	0	|	366988.2778	|	[libardi-dotnet-2](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/libardi-dotnet-2)
+|	libardi-dotnet-3	|	2.75ms	|	0.17	|	0	|	370365.0093	|	[libardi-dotnet-3](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/libardi-dotnet-3)
 |	libardi-dotnet	|	16.59ms	|	0	|	0	|	316394.08	|	[libardi-dotnet](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/libardi-dotnet)
 |	lpicanco-rust	|	5.57ms	|	0.11	|	109119.61025	|	236945.4394	|	[lpicanco-rust](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/lpicanco-rust)
 |	luanvictor-node	|	685.33ms	|	0	|	71636.76625	|	133039.70875	|	[luanvictor-node](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/luanvictor-node)
@@ -107,15 +110,18 @@ Atualizado em **Sat Jul 26 10:39:33 PM -03 2025**
 
 | participante | submissão |
 | -- | -- |
+| alvesluc-node | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/alvesluc-node) |
 | andre-nicoletti | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/andre-nicoletti) |
 | antooniodev-node | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/antooniodev-node) |
 | boaglio-player456 | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/boaglio-player456) |
 | ccs1201-01 | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/ccs1201-01) |
 | d4vz | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/d4vz) |
 | danilosantana-dotnet | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/danilosantana-dotnet) |
+| dbiagi | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/dbiagi) |
 | dotnetRinha | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/dotnetRinha) |
 | gtiburcio-go | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/gtiburcio-go) |
 | guilhermegules-payflow-node | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/guilhermegules-payflow-node) |
+| joao-xavier | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/joao-xavier) |
 | lucas-laurentino-go | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/lucas-laurentino-go) |
 | marcospaulo-java-1 | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/marcospaulo-java-1) |
 | matheusf-lucas-and-luis-java1 | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/matheusf-lucas-and-luis-java1) |
