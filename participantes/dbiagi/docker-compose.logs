@@ -1,74 +1,10 @@
 
- worker Pulling 
- app-1 Pulling 
- app-2 Pulling 
- 9824c27679d3 Already exists 
- 245b200505f5 Pulling fs layer 
- 4f4fb700ef54 Pulling fs layer 
- f4bb989f7b51 Pulling fs layer 
- 9824c27679d3 Already exists 
- 245b200505f5 Pulling fs layer 
- 4f4fb700ef54 Pulling fs layer 
- f4bb989f7b51 Pulling fs layer 
- 245b200505f5 Downloading [>                                                  ]  28.17kB/2.771MB
- 245b200505f5 Downloading [>                                                  ]  28.17kB/2.771MB
- 4f4fb700ef54 Download complete 
- 4f4fb700ef54 Downloading [==================================================>]      32B/32B
- 4f4fb700ef54 Verifying Checksum 
- 4f4fb700ef54 Download complete 
- f4bb989f7b51 Downloading [>                                                  ]  32.77kB/3.195MB
- f4bb989f7b51 Downloading [>                                                  ]  32.77kB/3.195MB
- 245b200505f5 Download complete 
- 245b200505f5 Download complete 
- 245b200505f5 Extracting [>                                                  ]  32.77kB/2.771MB
- 245b200505f5 Extracting [>                                                  ]  32.77kB/2.771MB
- f4bb989f7b51 Verifying Checksum 
- f4bb989f7b51 Download complete 
- f4bb989f7b51 Verifying Checksum 
- f4bb989f7b51 Download complete 
- 9824c27679d3 Already exists 
- 245b200505f5 Pulling fs layer 
- 4f4fb700ef54 Pulling fs layer 
- f4bb989f7b51 Pulling fs layer 
- f4bb989f7b51 Download complete 
- 245b200505f5 Extracting [>                                                  ]  32.77kB/2.771MB
- 4f4fb700ef54 Download complete 
- 245b200505f5 Extracting [=====>                                             ]  327.7kB/2.771MB
- 245b200505f5 Extracting [=====>                                             ]  327.7kB/2.771MB
- 245b200505f5 Extracting [=====>                                             ]  327.7kB/2.771MB
- 245b200505f5 Extracting [==================================================>]  2.771MB/2.771MB
- 245b200505f5 Extracting [==================================================>]  2.771MB/2.771MB
- 245b200505f5 Extracting [==================================================>]  2.771MB/2.771MB
- 245b200505f5 Pull complete 
- 245b200505f5 Pull complete 
- 245b200505f5 Pull complete 
- 4f4fb700ef54 Extracting [==================================================>]      32B/32B
- 4f4fb700ef54 Extracting [==================================================>]      32B/32B
- 4f4fb700ef54 Extracting [==================================================>]      32B/32B
- 4f4fb700ef54 Extracting [==================================================>]      32B/32B
- 4f4fb700ef54 Extracting [==================================================>]      32B/32B
- 4f4fb700ef54 Extracting [==================================================>]      32B/32B
- 4f4fb700ef54 Pull complete 
- 4f4fb700ef54 Pull complete 
- 4f4fb700ef54 Pull complete 
- f4bb989f7b51 Extracting [>                                                  ]  32.77kB/3.195MB
- f4bb989f7b51 Extracting [>                                                  ]  32.77kB/3.195MB
- f4bb989f7b51 Extracting [>                                                  ]  32.77kB/3.195MB
- f4bb989f7b51 Extracting [==================================================>]  3.195MB/3.195MB
- f4bb989f7b51 Extracting [==================================================>]  3.195MB/3.195MB
- f4bb989f7b51 Extracting [==================================================>]  3.195MB/3.195MB
- f4bb989f7b51 Pull complete 
- f4bb989f7b51 Pull complete 
- f4bb989f7b51 Pull complete 
- app-1 Pulled 
- app-2 Pulled 
- worker Pulled 
  Network dbiagi_default  Creating
  Network dbiagi_default  Created
  Container dbiagi-postgres-1  Creating
  Container dbiagi-postgres-1  Created
- Container dbiagi-app-1-1  Creating
  Container dbiagi-worker-1  Creating
+ Container dbiagi-app-1-1  Creating
  Container dbiagi-app-2-1  Creating
  Container dbiagi-app-1-1  Created
  Container dbiagi-app-2-1  Created
@@ -94,7 +30,7 @@ postgres-1  | selecting default time zone ... UTC
 postgres-1  | creating configuration files ... ok
 postgres-1  | running bootstrap script ... ok
 postgres-1  | sh: locale: not found
-postgres-1  | 2025-07-27 01:43:50.499 UTC [34] WARNING:  no usable system locales were found
+postgres-1  | 2025-07-27 02:37:09.417 UTC [35] WARNING:  no usable system locales were found
 postgres-1  | performing post-bootstrap initialization ... ok
 postgres-1  | syncing data to disk ... ok
 postgres-1  | 
@@ -105,10 +41,10 @@ postgres-1  |     pg_ctl -D /var/lib/postgresql/data -l logfile start
 postgres-1  | 
 postgres-1  | initdb: warning: enabling "trust" authentication for local connections
 postgres-1  | initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
-postgres-1  | waiting for server to start....2025-07-27 01:43:51.282 UTC [40] LOG:  starting PostgreSQL 17.5 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
-postgres-1  | 2025-07-27 01:43:51.289 UTC [40] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
-postgres-1  | 2025-07-27 01:43:51.310 UTC [43] LOG:  database system was shut down at 2025-07-27 01:43:51 UTC
-postgres-1  | 2025-07-27 01:43:51.318 UTC [40] LOG:  database system is ready to accept connections
+postgres-1  | waiting for server to start....2025-07-27 02:37:10.397 UTC [41] LOG:  starting PostgreSQL 17.5 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
+postgres-1  | 2025-07-27 02:37:10.404 UTC [41] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+postgres-1  | 2025-07-27 02:37:10.420 UTC [44] LOG:  database system was shut down at 2025-07-27 02:37:10 UTC
+postgres-1  | 2025-07-27 02:37:10.432 UTC [41] LOG:  database system is ready to accept connections
 postgres-1  |  done
 postgres-1  | server started
 postgres-1  | CREATE DATABASE
@@ -125,30 +61,30 @@ postgres-1  | CREATE INDEX
 postgres-1  | ALTER SYSTEM
 postgres-1  | 
 postgres-1  | 
-postgres-1  | waiting for server to shut down....2025-07-27 01:43:51.574 UTC [40] LOG:  received fast shutdown request
-postgres-1  | 2025-07-27 01:43:51.581 UTC [40] LOG:  aborting any active transactions
-postgres-1  | 2025-07-27 01:43:51.584 UTC [40] LOG:  background worker "logical replication launcher" (PID 46) exited with exit code 1
-postgres-1  | 2025-07-27 01:43:51.584 UTC [41] LOG:  shutting down
-postgres-1  | 2025-07-27 01:43:51.589 UTC [41] LOG:  checkpoint starting: shutdown immediate
-postgres-1  | 2025-07-27 01:43:51.740 UTC [41] LOG:  checkpoint complete: wrote 942 buffers (5.7%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.027 s, sync=0.102 s, total=0.156 s; sync files=309, longest=0.051 s, average=0.001 s; distance=4304 kB, estimate=4304 kB; lsn=0/1921448, redo lsn=0/1921448
-postgres-1  | 2025-07-27 01:43:51.748 UTC [40] LOG:  database system is shut down
+postgres-1  | waiting for server to shut down....2025-07-27 02:37:10.682 UTC [41] LOG:  received fast shutdown request
+postgres-1  | 2025-07-27 02:37:10.696 UTC [41] LOG:  aborting any active transactions
+postgres-1  | 2025-07-27 02:37:10.700 UTC [41] LOG:  background worker "logical replication launcher" (PID 47) exited with exit code 1
+postgres-1  | 2025-07-27 02:37:10.700 UTC [42] LOG:  shutting down
+postgres-1  | 2025-07-27 02:37:10.705 UTC [42] LOG:  checkpoint starting: shutdown immediate
+postgres-1  | 2025-07-27 02:37:10.888 UTC [42] LOG:  checkpoint complete: wrote 942 buffers (5.7%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.025 s, sync=0.130 s, total=0.188 s; sync files=309, longest=0.079 s, average=0.001 s; distance=4304 kB, estimate=4304 kB; lsn=0/1921448, redo lsn=0/1921448
+postgres-1  | 2025-07-27 02:37:10.895 UTC [41] LOG:  database system is shut down
 postgres-1  |  done
 postgres-1  | server stopped
 postgres-1  | 
 postgres-1  | PostgreSQL init process complete; ready for start up.
 postgres-1  | 
-postgres-1  | 2025-07-27 01:43:51.805 UTC [1] LOG:  starting PostgreSQL 17.5 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
-postgres-1  | 2025-07-27 01:43:51.805 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
-postgres-1  | 2025-07-27 01:43:51.805 UTC [1] LOG:  listening on IPv6 address "::", port 5432
-postgres-1  | 2025-07-27 01:43:51.816 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
-postgres-1  | 2025-07-27 01:43:51.837 UTC [58] LOG:  database system was shut down at 2025-07-27 01:43:51 UTC
-postgres-1  | 2025-07-27 01:43:51.856 UTC [1] LOG:  database system is ready to accept connections
-app-1-1     | 2025/07/27 01:43:56 WARN Config file does not exist.
-app-2-1     | 2025/07/27 01:43:56 WARN Config file does not exist.
-app-1-1     | 2025/07/27 01:43:56 INFO Server started 🚀
-app-1-1     | 2025/07/27 01:43:56 INFO Configuring graceful shutdown.
-app-2-1     | 2025/07/27 01:43:56 INFO Server started 🚀
-app-2-1     | 2025/07/27 01:43:56 INFO Configuring graceful shutdown.
+postgres-1  | 2025-07-27 02:37:11.023 UTC [1] LOG:  starting PostgreSQL 17.5 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
+postgres-1  | 2025-07-27 02:37:11.023 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+postgres-1  | 2025-07-27 02:37:11.023 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+postgres-1  | 2025-07-27 02:37:11.039 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+postgres-1  | 2025-07-27 02:37:11.052 UTC [59] LOG:  database system was shut down at 2025-07-27 02:37:10 UTC
+postgres-1  | 2025-07-27 02:37:11.076 UTC [1] LOG:  database system is ready to accept connections
+app-2-1     | 2025/07/27 02:37:14 WARN Config file does not exist.
+app-2-1     | 2025/07/27 02:37:14 INFO Server started 🚀
+app-2-1     | 2025/07/27 02:37:14 INFO Configuring graceful shutdown.
+app-1-1     | 2025/07/27 02:37:14 WARN Config file does not exist.
+app-1-1     | 2025/07/27 02:37:14 INFO Server started 🚀
+app-1-1     | 2025/07/27 02:37:14 INFO Configuring graceful shutdown.
 nginx-1     | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
 nginx-1     | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
 nginx-1     | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
@@ -158,42 +94,45 @@ nginx-1     | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-reso
 nginx-1     | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
 nginx-1     | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
 nginx-1     | /docker-entrypoint.sh: Configuration complete; ready for start up
-worker-1    | 2025/07/27 01:43:58 WARN Config file does not exist.
-worker-1    | 2025/07/27 01:43:59 INFO Worker started 🚀
-app-1-1     | 2025/07/27 01:44:00 ERROR Missing 'from' or 'to' query parameters
-nginx-1     | 172.20.0.1 - - [27/Jul/2025:01:44:00 +0000] "GET /payments-summary HTTP/1.1" 400 0 "-" "curl/7.88.1"
-app-2-1     | 2025/07/27 01:44:05 ERROR Missing 'from' or 'to' query parameters
-nginx-1     | 172.20.0.1 - - [27/Jul/2025:01:44:05 +0000] "GET /payments-summary HTTP/1.1" 400 0 "-" "curl/7.88.1"
-app-1-1     | 2025/07/27 01:44:10 ERROR Missing 'from' or 'to' query parameters
-nginx-1     | 172.20.0.1 - - [27/Jul/2025:01:44:10 +0000] "GET /payments-summary HTTP/1.1" 400 0 "-" "curl/7.88.1"
-nginx-1     | 172.20.0.1 - - [27/Jul/2025:01:44:15 +0000] "GET /payments-summary HTTP/1.1" 400 0 "-" "curl/7.88.1"
-app-2-1     | 2025/07/27 01:44:15 ERROR Missing 'from' or 'to' query parameters
-app-1-1     | 2025/07/27 01:44:20 ERROR Missing 'from' or 'to' query parameters
-nginx-1     | 172.20.0.1 - - [27/Jul/2025:01:44:20 +0000] "GET /payments-summary HTTP/1.1" 400 0 "-" "curl/7.88.1"
-app-2-1     | 2025/07/27 01:44:25 ERROR Missing 'from' or 'to' query parameters
-nginx-1     | 172.20.0.1 - - [27/Jul/2025:01:44:25 +0000] "GET /payments-summary HTTP/1.1" 400 0 "-" "curl/7.88.1"
-app-1-1     | 2025/07/27 01:44:30 ERROR Missing 'from' or 'to' query parameters
-nginx-1     | 172.20.0.1 - - [27/Jul/2025:01:44:30 +0000] "GET /payments-summary HTTP/1.1" 400 0 "-" "curl/7.88.1"
-app-2-1     | 2025/07/27 01:44:35 ERROR Missing 'from' or 'to' query parameters
-nginx-1     | 172.20.0.1 - - [27/Jul/2025:01:44:35 +0000] "GET /payments-summary HTTP/1.1" 400 0 "-" "curl/7.88.1"
-app-1-1     | 2025/07/27 01:44:40 ERROR Missing 'from' or 'to' query parameters
-nginx-1     | 172.20.0.1 - - [27/Jul/2025:01:44:40 +0000] "GET /payments-summary HTTP/1.1" 400 0 "-" "curl/7.88.1"
-app-2-1     | 2025/07/27 01:44:45 ERROR Missing 'from' or 'to' query parameters
-nginx-1     | 172.20.0.1 - - [27/Jul/2025:01:44:45 +0000] "GET /payments-summary HTTP/1.1" 400 0 "-" "curl/7.88.1"
-app-1-1     | 2025/07/27 01:44:50 ERROR Missing 'from' or 'to' query parameters
-nginx-1     | 172.20.0.1 - - [27/Jul/2025:01:44:50 +0000] "GET /payments-summary HTTP/1.1" 400 0 "-" "curl/7.88.1"
-app-2-1     | 2025/07/27 01:44:55 ERROR Missing 'from' or 'to' query parameters
-nginx-1     | 172.20.0.1 - - [27/Jul/2025:01:44:55 +0000] "GET /payments-summary HTTP/1.1" 400 0 "-" "curl/7.88.1"
-app-1-1     | 2025/07/27 01:45:01 INFO Shutting down server
-app-1-1     | 2025/07/27 01:45:01 INFO Closing database connection
-app-2-1     | 2025/07/27 01:45:01 INFO Shutting down server
-app-2-1     | 2025/07/27 01:45:01 INFO Closing database connection
+nginx-1     | 172.20.0.1 - - [27/Jul/2025:02:37:16 +0000] "GET /payments-summary HTTP/1.1" 400 0 "-" "curl/7.88.1"
+app-1-1     | 2025/07/27 02:37:16 ERROR Missing 'from' or 'to' query parameters
+worker-1    | 2025/07/27 02:37:16 WARN Config file does not exist.
+worker-1    | 2025/07/27 02:37:17 INFO Worker started 🚀
+app-2-1     | 2025/07/27 02:37:21 ERROR Missing 'from' or 'to' query parameters
+nginx-1     | 172.20.0.1 - - [27/Jul/2025:02:37:21 +0000] "GET /payments-summary HTTP/1.1" 400 0 "-" "curl/7.88.1"
+app-1-1     | 2025/07/27 02:37:26 ERROR Missing 'from' or 'to' query parameters
+nginx-1     | 172.20.0.1 - - [27/Jul/2025:02:37:26 +0000] "GET /payments-summary HTTP/1.1" 400 0 "-" "curl/7.88.1"
+app-2-1     | 2025/07/27 02:37:31 ERROR Missing 'from' or 'to' query parameters
+nginx-1     | 172.20.0.1 - - [27/Jul/2025:02:37:31 +0000] "GET /payments-summary HTTP/1.1" 400 0 "-" "curl/7.88.1"
+app-1-1     | 2025/07/27 02:37:36 ERROR Missing 'from' or 'to' query parameters
+nginx-1     | 172.20.0.1 - - [27/Jul/2025:02:37:36 +0000] "GET /payments-summary HTTP/1.1" 400 0 "-" "curl/7.88.1"
+app-2-1     | 2025/07/27 02:37:41 ERROR Missing 'from' or 'to' query parameters
+nginx-1     | 172.20.0.1 - - [27/Jul/2025:02:37:41 +0000] "GET /payments-summary HTTP/1.1" 400 0 "-" "curl/7.88.1"
+app-1-1     | 2025/07/27 02:37:46 ERROR Missing 'from' or 'to' query parameters
+nginx-1     | 172.20.0.1 - - [27/Jul/2025:02:37:46 +0000] "GET /payments-summary HTTP/1.1" 400 0 "-" "curl/7.88.1"
+app-2-1     | 2025/07/27 02:37:51 ERROR Missing 'from' or 'to' query parameters
+nginx-1     | 172.20.0.1 - - [27/Jul/2025:02:37:51 +0000] "GET /payments-summary HTTP/1.1" 400 0 "-" "curl/7.88.1"
+app-1-1     | 2025/07/27 02:37:56 ERROR Missing 'from' or 'to' query parameters
+nginx-1     | 172.20.0.1 - - [27/Jul/2025:02:37:56 +0000] "GET /payments-summary HTTP/1.1" 400 0 "-" "curl/7.88.1"
+app-2-1     | 2025/07/27 02:38:01 ERROR Missing 'from' or 'to' query parameters
+nginx-1     | 172.20.0.1 - - [27/Jul/2025:02:38:01 +0000] "GET /payments-summary HTTP/1.1" 400 0 "-" "curl/7.88.1"
+app-1-1     | 2025/07/27 02:38:06 ERROR Missing 'from' or 'to' query parameters
+nginx-1     | 172.20.0.1 - - [27/Jul/2025:02:38:06 +0000] "GET /payments-summary HTTP/1.1" 400 0 "-" "curl/7.88.1"
+app-2-1     | 2025/07/27 02:38:11 ERROR Missing 'from' or 'to' query parameters
+nginx-1     | 172.20.0.1 - - [27/Jul/2025:02:38:11 +0000] "GET /payments-summary HTTP/1.1" 400 0 "-" "curl/7.88.1"
+app-1-1     | 2025/07/27 02:38:16 ERROR Missing 'from' or 'to' query parameters
+nginx-1     | 172.20.0.1 - - [27/Jul/2025:02:38:16 +0000] "GET /payments-summary HTTP/1.1" 400 0 "-" "curl/7.88.1"
+[Knginx-1 exited with code 0
+app-1-1     | 2025/07/27 02:38:22 INFO Shutting down server
+app-1-1     | 2025/07/27 02:38:22 INFO Closing database connection
+app-2-1     | 2025/07/27 02:38:22 INFO Shutting down server
+app-2-1     | 2025/07/27 02:38:22 INFO Closing database connection
 [Kapp-2-1 exited with code 0
-postgres-1  | 2025-07-27 01:45:02.147 UTC [1] LOG:  received fast shutdown request
-postgres-1  | 2025-07-27 01:45:02.155 UTC [1] LOG:  aborting any active transactions
-postgres-1  | 2025-07-27 01:45:02.159 UTC [1] LOG:  background worker "logical replication launcher" (PID 61) exited with exit code 1
-postgres-1  | 2025-07-27 01:45:02.161 UTC [56] LOG:  shutting down
-postgres-1  | 2025-07-27 01:45:02.169 UTC [56] LOG:  checkpoint starting: shutdown immediate
-postgres-1  | 2025-07-27 01:45:02.221 UTC [56] LOG:  checkpoint complete: wrote 49 buffers (0.3%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.012 s, sync=0.019 s, total=0.060 s; sync files=15, longest=0.012 s, average=0.002 s; distance=248 kB, estimate=248 kB; lsn=0/195F4B0, redo lsn=0/195F4B0
-postgres-1  | 2025-07-27 01:45:02.227 UTC [1] LOG:  database system is shut down
+postgres-1  | 2025-07-27 02:38:22.645 UTC [1] LOG:  received fast shutdown request
+postgres-1  | 2025-07-27 02:38:22.656 UTC [1] LOG:  aborting any active transactions
+postgres-1  | 2025-07-27 02:38:22.659 UTC [1] LOG:  background worker "logical replication launcher" (PID 62) exited with exit code 1
+postgres-1  | 2025-07-27 02:38:22.659 UTC [57] LOG:  shutting down
+postgres-1  | 2025-07-27 02:38:22.672 UTC [57] LOG:  checkpoint starting: shutdown immediate
+postgres-1  | 2025-07-27 02:38:22.741 UTC [57] LOG:  checkpoint complete: wrote 49 buffers (0.3%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.011 s, sync=0.027 s, total=0.082 s; sync files=15, longest=0.019 s, average=0.002 s; distance=248 kB, estimate=248 kB; lsn=0/195F4B0, redo lsn=0/195F4B0
+postgres-1  | 2025-07-27 02:38:22.746 UTC [1] LOG:  database system is shut down
 [Kpostgres-1 exited with code 0
