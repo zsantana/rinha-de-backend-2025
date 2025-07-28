@@ -14,7 +14,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.2"
+          cpus: "0.25"
           memory: "50MB"
 
   backend-01: &backend
@@ -27,7 +27,7 @@ services:
     environment:
       - SPRING_PROFILES_ACTIVE=prod
       - PAYMENT_BACKEND_MAIN_INSTANCE=true
-      - PAYMENT_BACKEND_WORKER_FALLBACK_DELAY=10
+      - PAYMENT_BACKEND_WORKER_FALLBACK_DELAY=5
       - HTTPCLIENT_CONNECTION_TIMEOUT=5000
       - HTTPCLIENT_READ_TIMEOUT=10000
       - HTTPCLIENT_SOCKET_TIMEOUT=10000
@@ -46,7 +46,7 @@ services:
       resources:
         limits:
           cpus: "0.55"
-          memory: "100MB"
+          memory: "130MB"
 
   backend-02:
     <<: *backend
@@ -55,7 +55,7 @@ services:
     environment:
       - SPRING_PROFILES_ACTIVE=prod
       - PAYMENT_BACKEND_MAIN_INSTANCE=false
-      - PAYMENT_BACKEND_WORKER_FALLBACK_DELAY=10
+      - PAYMENT_BACKEND_WORKER_FALLBACK_DELAY=5
       - HTTPCLIENT_CONNECTION_TIMEOUT=5000
       - HTTPCLIENT_READ_TIMEOUT=10000
       - HTTPCLIENT_SOCKET_TIMEOUT=10000
@@ -71,7 +71,7 @@ services:
   redis:
     image: redis:7-alpine
     container_name: redis
-    command: redis-server --save "" --appendonly no --maxmemory 50Mb --maxmemory-policy allkeys-lru --tcp-keepalive 60 --timeout 0
+    command: redis-server --save "" --appendonly no --maxmemory 40Mb --maxmemory-policy allkeys-lru --tcp-keepalive 60 --timeout 0
     networks:
       - backend
     healthcheck:
@@ -82,8 +82,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.2"
-          memory: "50MB" #Change in command line too.
+          cpus: "0.15"
+          memory: "40MB" #Change in command line too.
 
 networks:
   backend:
