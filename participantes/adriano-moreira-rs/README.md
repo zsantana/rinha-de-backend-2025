@@ -4,7 +4,7 @@ do dia 27/07/2025
 
 Com as flags
 ```Dockerfile
-ENV RUSTFLAGS='-C target-cpu=skylake -C target-feature=+sse4.2,+cx16,+rdrand,+rdseed,+aes,+fma,+avx,+avx2,+bmi,+bmi2,+lzcnt,+popcnt'
+ENV RUSTFLAGS='-C target-cpu=skylake -C target-feature=+sse4.2,+cx16,+rdrand,+rdseed,+aes,+fma,+avx,+avx2,+bmi,+bmi2,+lzcnt,+popcnt,+crt-static'
+RUN cargo build --bin api --release --target x86_64-unknown-linux-musl
 ```
-na teoria com essas flags é gerado um binario otimizado para tirar o maximo do processador usado nos testes `Intel i7 7700`,
-localmente não consigo medir o ganho real dessa flags porque tenho um CPU AMD
+Na teoria com essas flags é gerado um binario otimizado para tirar o maximo do processador usado nos testes `Intel i7 7700`
