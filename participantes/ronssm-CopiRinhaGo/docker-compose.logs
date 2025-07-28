@@ -1,0 +1,98 @@
+
+ Network ronssm-copirinhago_backend  Creating
+ Network ronssm-copirinhago_backend  Created
+ Container ronssm-copirinhago-redis-1  Creating
+ Container ronssm-copirinhago-redis-1  Created
+ Container ronssm-copirinhago-backend2-1  Creating
+ Container ronssm-copirinhago-backend1-1  Creating
+ Container ronssm-copirinhago-backend2-1  Created
+ Container ronssm-copirinhago-backend1-1  Created
+ Container ronssm-copirinhago-haproxy-1  Creating
+ Container ronssm-copirinhago-haproxy-1  Created
+Attaching to backend1-1, backend2-1, haproxy-1, redis-1
+redis-1     | 1:C 28 Jul 2025 12:59:57.290 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+redis-1     | 1:C 28 Jul 2025 12:59:57.290 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+redis-1     | 1:C 28 Jul 2025 12:59:57.291 * Redis version=7.4.5, bits=64, commit=00000000, modified=0, pid=1, just started
+redis-1     | 1:C 28 Jul 2025 12:59:57.291 * Configuration loaded
+redis-1     | 1:M 28 Jul 2025 12:59:57.291 * monotonic clock: POSIX clock_gettime
+redis-1     | 1:M 28 Jul 2025 12:59:57.292 * Running mode=standalone, port=6379.
+redis-1     | 1:M 28 Jul 2025 12:59:57.292 * Server initialized
+redis-1     | 1:M 28 Jul 2025 12:59:57.292 * Ready to accept connections tcp
+backend2-1  | 2025/07/28 13:00:03 [INFO] LOG_LEVEL=ERROR
+backend2-1  | 2025/07/28 13:00:03 [DEBUG][DB] Pool de conexões ajustado: MaxOpenConns=10, MaxIdleConns=5, MaxLifetime=5min.
+backend2-1  | 2025/07/28 13:00:03 [DEBUG][DB] Conexão aberta, testando ping...
+backend1-1  | 2025/07/28 13:00:03 [INFO] LOG_LEVEL=ERROR
+backend1-1  | 2025/07/28 13:00:03 [DEBUG][DB] Pool de conexões ajustado: MaxOpenConns=10, MaxIdleConns=5, MaxLifetime=5min.
+backend1-1  | 2025/07/28 13:00:03 [DEBUG][DB] Conexão aberta, testando ping...
+backend2-1  | 2025/07/28 13:00:03 [ERROR][DB] Falha no ping: dial tcp: lookup db on 127.0.0.11:53: no such host
+backend2-1  | 2025/07/28 13:00:03 [ERROR] DB error: dial tcp: lookup db on 127.0.0.11:53: no such host
+backend1-1  | 2025/07/28 13:00:03 [ERROR][DB] Falha no ping: dial tcp: lookup db on 127.0.0.11:53: no such host
+backend1-1  | 2025/07/28 13:00:03 [ERROR] DB error: dial tcp: lookup db on 127.0.0.11:53: no such host
+[Kbackend2-1 exited with code 1
+[Kbackend1-1 exited with code 1
+haproxy-1   | [NOTICE]   (1) : haproxy version is 2.8.15-a9aef56
+haproxy-1   | [WARNING]  (1) : config : log format ignored for frontend 'api_gateway' since it has no log address.
+haproxy-1   | [ALERT]    (1) : config : [/usr/local/etc/haproxy/haproxy.cfg:29] : 'server api_servers/backend1' : could not resolve address 'backend1'.
+haproxy-1   | [ALERT]    (1) : config : [/usr/local/etc/haproxy/haproxy.cfg:30] : 'server api_servers/backend2' : could not resolve address 'backend2'.
+haproxy-1   | [ALERT]    (1) : config : Failed to initialize server(s) addr.
+[Khaproxy-1 exited with code 0
+haproxy-1   | [NOTICE]   (1) : haproxy version is 2.8.15-a9aef56
+haproxy-1   | [WARNING]  (1) : config : log format ignored for frontend 'api_gateway' since it has no log address.
+haproxy-1   | [ALERT]    (1) : config : [/usr/local/etc/haproxy/haproxy.cfg:29] : 'server api_servers/backend1' : could not resolve address 'backend1'.
+haproxy-1   | [ALERT]    (1) : config : [/usr/local/etc/haproxy/haproxy.cfg:30] : 'server api_servers/backend2' : could not resolve address 'backend2'.
+haproxy-1   | [ALERT]    (1) : config : Failed to initialize server(s) addr.
+[Khaproxy-1 exited with code 0
+haproxy-1   | [NOTICE]   (1) : haproxy version is 2.8.15-a9aef56
+haproxy-1   | [WARNING]  (1) : config : log format ignored for frontend 'api_gateway' since it has no log address.
+haproxy-1   | [ALERT]    (1) : config : [/usr/local/etc/haproxy/haproxy.cfg:29] : 'server api_servers/backend1' : could not resolve address 'backend1'.
+haproxy-1   | [ALERT]    (1) : config : [/usr/local/etc/haproxy/haproxy.cfg:30] : 'server api_servers/backend2' : could not resolve address 'backend2'.
+haproxy-1   | [ALERT]    (1) : config : Failed to initialize server(s) addr.
+[Khaproxy-1 exited with code 1
+haproxy-1   | [NOTICE]   (1) : haproxy version is 2.8.15-a9aef56
+haproxy-1   | [WARNING]  (1) : config : log format ignored for frontend 'api_gateway' since it has no log address.
+haproxy-1   | [ALERT]    (1) : config : [/usr/local/etc/haproxy/haproxy.cfg:29] : 'server api_servers/backend1' : could not resolve address 'backend1'.
+haproxy-1   | [ALERT]    (1) : config : [/usr/local/etc/haproxy/haproxy.cfg:30] : 'server api_servers/backend2' : could not resolve address 'backend2'.
+haproxy-1   | [ALERT]    (1) : config : Failed to initialize server(s) addr.
+[Khaproxy-1 exited with code 1
+haproxy-1   | [NOTICE]   (1) : haproxy version is 2.8.15-a9aef56
+haproxy-1   | [WARNING]  (1) : config : log format ignored for frontend 'api_gateway' since it has no log address.
+haproxy-1   | [ALERT]    (1) : config : [/usr/local/etc/haproxy/haproxy.cfg:29] : 'server api_servers/backend1' : could not resolve address 'backend1'.
+haproxy-1   | [ALERT]    (1) : config : [/usr/local/etc/haproxy/haproxy.cfg:30] : 'server api_servers/backend2' : could not resolve address 'backend2'.
+haproxy-1   | [ALERT]    (1) : config : Failed to initialize server(s) addr.
+[Khaproxy-1 exited with code 1
+haproxy-1   | [NOTICE]   (1) : haproxy version is 2.8.15-a9aef56
+haproxy-1   | [WARNING]  (1) : config : log format ignored for frontend 'api_gateway' since it has no log address.
+haproxy-1   | [ALERT]    (1) : config : [/usr/local/etc/haproxy/haproxy.cfg:29] : 'server api_servers/backend1' : could not resolve address 'backend1'.
+haproxy-1   | [ALERT]    (1) : config : [/usr/local/etc/haproxy/haproxy.cfg:30] : 'server api_servers/backend2' : could not resolve address 'backend2'.
+haproxy-1   | [ALERT]    (1) : config : Failed to initialize server(s) addr.
+[Khaproxy-1 exited with code 1
+haproxy-1   | [NOTICE]   (1) : haproxy version is 2.8.15-a9aef56
+haproxy-1   | [WARNING]  (1) : config : log format ignored for frontend 'api_gateway' since it has no log address.
+haproxy-1   | [ALERT]    (1) : config : [/usr/local/etc/haproxy/haproxy.cfg:29] : 'server api_servers/backend1' : could not resolve address 'backend1'.
+haproxy-1   | [ALERT]    (1) : config : [/usr/local/etc/haproxy/haproxy.cfg:30] : 'server api_servers/backend2' : could not resolve address 'backend2'.
+haproxy-1   | [ALERT]    (1) : config : Failed to initialize server(s) addr.
+[Khaproxy-1 exited with code 1
+haproxy-1   | [NOTICE]   (1) : haproxy version is 2.8.15-a9aef56
+haproxy-1   | [WARNING]  (1) : config : log format ignored for frontend 'api_gateway' since it has no log address.
+haproxy-1   | [ALERT]    (1) : config : [/usr/local/etc/haproxy/haproxy.cfg:29] : 'server api_servers/backend1' : could not resolve address 'backend1'.
+haproxy-1   | [ALERT]    (1) : config : [/usr/local/etc/haproxy/haproxy.cfg:30] : 'server api_servers/backend2' : could not resolve address 'backend2'.
+haproxy-1   | [ALERT]    (1) : config : Failed to initialize server(s) addr.
+[Khaproxy-1 exited with code 1
+haproxy-1   | [NOTICE]   (1) : haproxy version is 2.8.15-a9aef56
+haproxy-1   | [WARNING]  (1) : config : log format ignored for frontend 'api_gateway' since it has no log address.
+haproxy-1   | [ALERT]    (1) : config : [/usr/local/etc/haproxy/haproxy.cfg:29] : 'server api_servers/backend1' : could not resolve address 'backend1'.
+haproxy-1   | [ALERT]    (1) : config : [/usr/local/etc/haproxy/haproxy.cfg:30] : 'server api_servers/backend2' : could not resolve address 'backend2'.
+haproxy-1   | [ALERT]    (1) : config : Failed to initialize server(s) addr.
+[Khaproxy-1 exited with code 1
+haproxy-1   | [NOTICE]   (1) : haproxy version is 2.8.15-a9aef56
+haproxy-1   | [WARNING]  (1) : config : log format ignored for frontend 'api_gateway' since it has no log address.
+haproxy-1   | [ALERT]    (1) : config : [/usr/local/etc/haproxy/haproxy.cfg:29] : 'server api_servers/backend1' : could not resolve address 'backend1'.
+haproxy-1   | [ALERT]    (1) : config : [/usr/local/etc/haproxy/haproxy.cfg:30] : 'server api_servers/backend2' : could not resolve address 'backend2'.
+haproxy-1   | [ALERT]    (1) : config : Failed to initialize server(s) addr.
+[Khaproxy-1 exited with code 1
+redis-1     | 1:signal-handler (1753707669) Received SIGTERM scheduling shutdown...
+redis-1     | 1:M 28 Jul 2025 13:01:09.800 * User requested shutdown...
+redis-1     | 1:M 28 Jul 2025 13:01:09.800 * Saving the final RDB snapshot before exiting.
+redis-1     | 1:M 28 Jul 2025 13:01:09.811 * DB saved on disk
+redis-1     | 1:M 28 Jul 2025 13:01:09.811 # Redis is now ready to exit, bye bye...
+[Kredis-1 exited with code 0
