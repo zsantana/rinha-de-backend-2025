@@ -20,7 +20,10 @@ services:
           memory: "16MB"
 
   backend-api-1:
-    image: onidael/rinha-2025-php:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    # image: php:fpm
     container_name: rinha-backend-api-1
     restart: unless-stopped
     environment:
@@ -34,11 +37,14 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.55"
+          cpus: "0.5"
           memory: "128MB"
 
   backend-api-2:
-    image: onidael/rinha-2025-php:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    # image: php:fpm
     container_name: rinha-backend-api-2
     restart: unless-stopped
     environment:
@@ -52,7 +58,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.55"
+          cpus: "0.5"
           memory: "128MB"
 
   api-db: 
@@ -73,7 +79,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.2"
+          cpus: "0.3"
           memory: "78MB"
 
 networks:
