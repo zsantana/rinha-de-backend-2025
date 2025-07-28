@@ -20,7 +20,7 @@ services:
           memory: "16MB"
 
   backend-api-1:
-    image: onidael/rinha-2025-php:latest
+    image: onidael/rinha-2025-php-v2:latest
     container_name: rinha-backend-api-1
     restart: unless-stopped
     environment:
@@ -38,7 +38,7 @@ services:
           memory: "128MB"
 
   backend-api-2:
-    image: onidael/rinha-2025-php:latest
+    image: onidael/rinha-2025-php-v2:latest
     container_name: rinha-backend-api-2
     restart: unless-stopped
     environment:
