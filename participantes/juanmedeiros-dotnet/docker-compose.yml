@@ -22,7 +22,7 @@ services:
       resources:
         limits:
           cpus: "1"    
-          memory: "200MB" 
+          memory: "250MB" 
   api2:
     image: juanormelli/rinha2025-jl:latest
     hostname: api2
@@ -42,7 +42,7 @@ services:
       resources:
         limits:
           cpus: "0.2"    
-          memory: "100MB" 
+          memory: "50MB" 
   haproxy:
     image: haproxytech/haproxy-alpine:2.9
     container_name: haproxy_gateway
