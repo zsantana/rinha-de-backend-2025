@@ -1,12 +1,5 @@
 x-api-template: &api-template
-    image: pauloricardo45657/rinha-2025-api:v1.3
-    ulimits:
-      nofile:
-        soft: 65535
-        hard: 65535
-    sysctls:
-      - net.ipv4.tcp_tw_reuse=1
-      - net.ipv4.tcp_fin_timeout=15
+    image: pauloricardo45657/rinha-2025-api:v1.4
     networks:
       - backend
       - payment-processor
