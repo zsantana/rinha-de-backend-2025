@@ -1,5 +1,5 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Sun Jul 27 11:35:01 PM -03 2025**
+Atualizado em **Sun Jul 27 11:43:55 PM -03 2025**
 136 submissões / 114 resultados / 22 submissões com erro
 
 
@@ -55,7 +55,7 @@ Atualizado em **Sun Jul 27 11:35:01 PM -03 2025**
 |	henriquevalcanaia-swift-vapor	|	155.09ms	|	0%	|	74862.926775	|	139031.149725	|	[henriquevalcanaia-swift-vapor](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/henriquevalcanaia-swift-vapor)
 |	jairoandre-go-v2	|	14.52ms	|	0%	|	0	|	309417.14	|	[jairoandre-go-v2](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/jairoandre-go-v2)
 |	jairoandre	|	193.18ms	|	0%	|	107849.5425	|	200292.0075	|	[jairoandre](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/jairoandre)
-|	jccl	|	2.66ms	|	17%	|	0	|	86264.67915	|	[jccl](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/jccl)
+|	jccl	|	3.47ms	|	15%	|	25810.897	|	58996.336	|	[jccl](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/jccl)
 |	joao-bittencourt-php	|	1441ms	|	0%	|	58441.2255	|	108533.7045	|	[joao-bittencourt-php](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/joao-bittencourt-php)
 |	joaocrulhas-nestjs-ts	|	197.63ms	|	0%	|	0	|	0	|	[joaocrulhas-nestjs-ts](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/joaocrulhas-nestjs-ts)
 |	joaoreisa-go	|	9.85ms	|	2%	|	109104.28725	|	208856.77845	|	[joaoreisa-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/joaoreisa-go)
@@ -109,7 +109,7 @@ Atualizado em **Sun Jul 27 11:35:01 PM -03 2025**
 |	victorverdoodt-cs	|	86.74ms	|	0%	|	108413.011	|	201338.449	|	[victorverdoodt-cs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/victorverdoodt-cs)
 |	victorverdoodt-cs-redis	|	88.54ms	|	0%	|	108950.36075	|	202336.38425	|	[victorverdoodt-cs-redis](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/victorverdoodt-cs-redis)
 |	wanderdotnet	|	28.37ms	|	0%	|	0	|	130736.035	|	[wanderdotnet](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/wanderdotnet)
-|	wellington-pacheco	|	5.44ms	|	11%	|	0	|	345850.78635	|	[wellington-pacheco](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/wellington-pacheco)
+|	wellington-pacheco	|	4.7ms	|	13%	|	0	|	357632.12365	|	[wellington-pacheco](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/wellington-pacheco)
 |	wiliansimoes-dotnet	|	31.51ms	|	0%	|	0	|	308127.62	|	[wiliansimoes-dotnet](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/wiliansimoes-dotnet)
 |	willianmarquess-lua-luvit	|	217.27ms	|	0%	|	0	|	0	|	[willianmarquess-lua-luvit](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/willianmarquess-lua-luvit)
 |	willianmarquess-node	|	17.71ms	|	0%	|	0	|	312719.545	|	[willianmarquess-node](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/willianmarquess-node)
