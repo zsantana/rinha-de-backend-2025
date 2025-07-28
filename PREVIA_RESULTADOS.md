@@ -1,5 +1,5 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Mon Jul 28 01:46:13 PM -03 2025**
+Atualizado em **Mon Jul 28 01:54:28 PM -03 2025**
 146 submissões / 124 resultados / 22 submissões com erro
 
 
@@ -40,7 +40,7 @@ Atualizado em **Mon Jul 28 01:46:13 PM -03 2025**
 |	dolphs	|	80.03ms	|	0%	|	79798.00499998416	|	148196.2949999706	|	[dolphs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/dolphs)
 |	dudebank-bun	|	6.23ms	|	10%	|	109101.8495	|	233789.6775	|	[dudebank-bun](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/dudebank-bun)
 |	el_yawd-crab	|	1.89ms	|	18%	|	109031.50299999434	|	258560.42139998658	|	[el_yawd-crab](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/el_yawd-crab)
-|	emiliosheinz-go	|	8.9ms	|	4%	|	0	|	233735.45	|	[emiliosheinz-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/emiliosheinz-go)
+|	emiliosheinz-go	|	5.92ms	|	10%	|	0	|	289358.4375	|	[emiliosheinz-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/emiliosheinz-go)
 |	felipefrmelo-rust	|	14.67ms	|	0%	|	105775.71375	|	196440.61125	|	[felipefrmelo-rust](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/felipefrmelo-rust)
 |	felipemcassiano	|	127.09ms	|	0%	|	0	|	0	|	[felipemcassiano](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/felipemcassiano)
 |	felipeschirmann	|	2.86ms	|	16%	|	0	|	0	|	[felipeschirmann](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/felipeschirmann)
@@ -75,7 +75,7 @@ Atualizado em **Mon Jul 28 01:46:13 PM -03 2025**
 |	lczago-go	|	8.35ms	|	5%	|	109195.5287499923	|	218391.0574999846	|	[lczago-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/lczago-go)
 |	lecosas-java-spring-graalvm	|	26.36ms	|	0%	|	0	|	311526.54	|	[lecosas-java-spring-graalvm](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/lecosas-java-spring-graalvm)
 |	leonardotomas-cs	|	63.64ms	|	0%	|	0	|	219090.045	|	[leonardotomas-cs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/leonardotomas-cs)
-|	leoralph	|	12.2ms	|	0%	|	0	|	316450.795	|	[leoralph](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/leoralph)
+|	leoralph	|	11.9ms	|	0%	|	0	|	316356.27	|	[leoralph](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/leoralph)
 |	lhuizf-bun	|	90.87ms	|	0%	|	69671.24325	|	129389.45175	|	[lhuizf-bun](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/lhuizf-bun)
 |	lhuizf-dotnet	|	82.21ms	|	0%	|	0	|	202568.07	|	[lhuizf-dotnet](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/lhuizf-dotnet)
 |	libardi-dotnet-2	|	13.51ms	|	0%	|	0	|	316347.315	|	[libardi-dotnet-2](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/libardi-dotnet-2)
@@ -146,6 +146,7 @@ Atualizado em **Mon Jul 28 01:46:13 PM -03 2025**
 | guilhermegules-payflow-node | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/guilhermegules-payflow-node) |
 | jjeanjacques10 | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/jjeanjacques10) |
 | juanmedeiros-dotnet | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/juanmedeiros-dotnet) |
+| lbattochio-dotnet | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/lbattochio-dotnet) |
 | marcospaulo-java-1 | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/marcospaulo-java-1) |
 | matheusf-lucas-and-luis-java1 | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/matheusf-lucas-and-luis-java1) |
 | mbenencase-python | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/mbenencase-python) |
