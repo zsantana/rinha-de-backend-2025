@@ -1,6 +1,7 @@
 services:
   backend1:
     image: ronssm/copirinhago:latest
+    pull_policy: always
     environment:
       - REDIS_CONN=redis:6379
       - LOG_LEVEL=ERROR
@@ -23,6 +24,7 @@ services:
           memory: "90MB"
   backend2:
     image: ronssm/copirinhago:latest
+    pull_policy: always
     environment:
       - REDIS_CONN=redis:6379
       - LOG_LEVEL=ERROR
@@ -45,6 +47,7 @@ services:
           memory: "90MB"
   haproxy:
     image: haproxy:2.8-alpine
+    pull_policy: always
     depends_on:
       - backend1
       - backend2
@@ -62,6 +65,7 @@ services:
           memory: "15MB"
   redis:
     image: redis:7-alpine
+    pull_policy: always
     ports:
       - "6379:6379"
     networks:

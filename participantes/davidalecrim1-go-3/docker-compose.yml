@@ -1,12 +1,11 @@
 x-service-templates:
   go-backend: &go-backend
-    image: davidalecrim1/rinha-with-go-2025:v0.9-mongodb
+    image: davidalecrim1/rinha-with-go-2025:v0.9-redis-only-default
     networks:
       - app
       - payment-processor
     depends_on:
       - redis
-      - mongodb
 
 services:
   go-backend-1:
@@ -19,16 +18,11 @@ services:
       - REDIS_ADDR=redis-db:6379
       - MONITOR_HEALTH=true
       - ENABLE_PROFILING=false
-      - MONGO_ENDPOINT=mongodb://mongodb:27017
-      - MONGO_DATABASE=payments-db
-    networks:
-      - app
-      - payment-processor
     deploy:
       resources:
         limits:
-          cpus: "0.4"
-          memory: "85MB"
+          cpus: "0.5"
+          memory: "100MB"
 
   go-backend-2:
     <<: *go-backend
@@ -40,16 +34,11 @@ services:
       - REDIS_ADDR=redis-db:6379
       - MONITOR_HEALTH=false
       - ENABLE_PROFILING=false
-      - MONGO_ENDPOINT=mongodb://mongodb:27017
-      - MONGO_DATABASE=payments-db
-    networks:
-      - app
-      - payment-processor
     deploy:
       resources:
         limits:
-          cpus: "0.4"
-          memory: "85MB"
+          cpus: "0.5"
+          memory: "100MB"
 
   redis:
     image: redis:8.0-alpine
@@ -63,18 +52,6 @@ services:
       interval: 5s
       timeout: 5s
       retries: 5
-    deploy:
-      resources:
-        limits:
-          cpus: "0.2"
-          memory: "50MB"
-
-  mongodb:
-    container_name: mongodb
-    image: mongo:8.0.11
-    networks:
-      - app
-      - payment-processor
     deploy:
       resources:
         limits:
@@ -97,7 +74,7 @@ services:
       resources:
         limits:
           cpus: "0.2"
-          memory: "30MB"
+          memory: "50MB"
 
 networks:
   app:
