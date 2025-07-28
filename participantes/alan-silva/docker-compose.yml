@@ -19,7 +19,7 @@ services:
           memory: "50MB"
 
   rinha-gateway-1:
-    image: ghcr.io/alan-venv/rinha-gateway:6.0
+    image: ghcr.io/alan-venv/rinha-gateway:6.2
     container_name: rinha-gateway-1
     volumes:
       - sockets:/sockets:rw
@@ -37,7 +37,7 @@ services:
           memory: "125MB"
 
   rinha-gateway-2:
-    image: ghcr.io/alan-venv/rinha-gateway:6.0
+    image: ghcr.io/alan-venv/rinha-gateway:6.2
     container_name: rinha-gateway-2
     volumes:
       - sockets:/sockets:rw
@@ -55,12 +55,10 @@ services:
           memory: "125MB"
 
   rinha-db:
-    image: ghcr.io/alan-venv/rinha-database:6.0
+    image: ghcr.io/alan-venv/rinha-database:6.2
     container_name: rinha-db
     volumes:
       - sockets:/sockets:rw
-    environment:
-      - SOCKET_PATH=/sockets/database.sock
     networks:
       - backend
       - payment-processor

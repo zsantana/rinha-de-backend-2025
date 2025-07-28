@@ -1,6 +1,6 @@
 services:
   health-check:
-    image: pedrohsbarbosa99/rinha-fastapi-2025:0.0.1
+    image: pedrohsbarbosa99/rinha-fastapi-2025:0.1.0
     command: python -m app.check
     depends_on:
       - redis
@@ -14,7 +14,7 @@ services:
           memory: "70M"
 
   api1:
-    image: pedrohsbarbosa99/rinha-fastapi-2025:0.0.1
+    image: pedrohsbarbosa99/rinha-fastapi-2025:0.1.0
     command: uvicorn app.apis.main:app --host 0.0.0.0 --port 9999 --workers 1 --loop uvloop --http httptools
     networks:
       - backend
@@ -26,7 +26,7 @@ services:
           memory: "70M"
 
   api2:
-    image: pedrohsbarbosa99/rinha-fastapi-2025:0.0.1
+    image: pedrohsbarbosa99/rinha-fastapi-2025:0.1.0
     command: uvicorn app.apis.main:app --host 0.0.0.0 --port 9999 --workers 1 --loop uvloop --http httptools
     networks:
       - backend

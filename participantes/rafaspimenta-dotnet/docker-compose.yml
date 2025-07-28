@@ -1,6 +1,6 @@
 services:
   api01: &api
-    image: rafaspimenta/rinha-backend-csharp:prod
+    image: rafaspimenta/rinha-backend-csharp:prod_v1
     platform: linux/amd64
     hostname: api01
     depends_on:
@@ -12,7 +12,7 @@ services:
       resources:
         limits:
           cpus: '0.6'
-          memory: '100MB'
+          memory: '90MB'
     environment:
       - DOTNET_ENVIRONMENT=Production
     networks:
@@ -55,7 +55,7 @@ services:
       resources:
         limits:
           cpus: '0.2'
-          memory: '100MB'
+          memory: '120MB'
     command: >
       postgres
       -c fsync=off
