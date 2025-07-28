@@ -1,8 +1,6 @@
 x-service-templates:
   api: &api
-    image: ghcr.io/leoralph/rinha-de-backend-2025-api:v2.0.0
-    environment:
-      - WORKER_COUNT=40
+    image: ghcr.io/leoralph/rinha-de-backend-2025-api:v2.0.1
     depends_on:
       redis:
         condition: service_healthy
@@ -49,7 +47,7 @@ services:
           memory: "55M"
 
   payment-worker:
-    image: ghcr.io/leoralph/rinha-de-backend-2025-worker:v2.0.0
+    image: ghcr.io/leoralph/rinha-de-backend-2025-worker:v2.0.1
     environment:
       - WORKER_TYPE=payment
       - WORKER_COUNT=3
@@ -66,7 +64,7 @@ services:
           memory: "15M"
 
   health-worker:
-    image: ghcr.io/leoralph/rinha-de-backend-2025-worker:v2.0.0
+    image: ghcr.io/leoralph/rinha-de-backend-2025-worker:v2.0.1
     environment:
       - WORKER_TYPE=health
     depends_on:
