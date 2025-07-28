@@ -1,4 +1,5 @@
 set timezone TO 'UTC';
+set max_parallel_workers_per_gather = 4;
 
 create type payment_type as ENUM ('default', 'fallback');
 
@@ -9,4 +10,4 @@ create unlogged table payment (
 	requested_at timestamp not null default NOW()
 );
 
-create index idx_payment_requested_type on payment (requested_at, type);
+create index idx_requested_at on payment using btree (requested_at);
