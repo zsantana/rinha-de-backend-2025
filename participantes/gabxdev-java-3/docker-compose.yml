@@ -24,7 +24,7 @@ services:
     image: gabxdevv/rinha-backend-2025-javinha:1.0.0
     environment:
       RETRY_API_DEFAULT: 16
-      WORKER_POOL_SIZE: 21
+      WORKER_POOL_SIZE: 23
       HANDLER_UDP_POOL_SIZE: 6
       URL_PROCESSOR_DEFAULT: http://payment-processor-default:8080/payments
       URL_PROCESSOR_FALLBACK: http://payment-processor-fallback:8080/payments
@@ -58,7 +58,7 @@ services:
     restart: always
     environment:
       RETRY_API_DEFAULT: 16
-      WORKER_POOL_SIZE: 21
+      WORKER_POOL_SIZE: 23
       HANDLER_UDP_POOL_SIZE: 6
       URL_PROCESSOR_DEFAULT: http://payment-processor-default:8080/payments
       URL_PROCESSOR_FALLBACK: http://payment-processor-fallback:8080/payments
