@@ -1,0 +1,323 @@
+
+ Network rodrigo-militao_backend  Creating
+ Network rodrigo-militao_backend  Created
+ Container redis  Creating
+ Container redis  Created
+ Container rodrigo-militao-backend-1-1  Creating
+ Container rodrigo-militao-backend-2-1  Creating
+ Container rodrigo-militao-backend-1-1  Created
+ Container rodrigo-militao-backend-2-1  Created
+ Container nginx-lb  Creating
+ Container nginx-lb  Created
+Attaching to nginx-lb, redis, backend-1-1, backend-2-1
+redis        | 1:C 28 Jul 2025 16:52:59.810 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+redis        | 1:C 28 Jul 2025 16:52:59.810 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+redis        | 1:C 28 Jul 2025 16:52:59.810 * Redis version=7.4.5, bits=64, commit=00000000, modified=0, pid=1, just started
+redis        | 1:C 28 Jul 2025 16:52:59.810 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf
+redis        | 1:M 28 Jul 2025 16:52:59.811 * monotonic clock: POSIX clock_gettime
+redis        | 1:M 28 Jul 2025 16:52:59.812 * Running mode=standalone, port=6379.
+redis        | 1:M 28 Jul 2025 16:52:59.812 * Server initialized
+redis        | 1:M 28 Jul 2025 16:52:59.812 * Ready to accept connections tcp
+backend-1-1  | 2025/07/28 16:53:01 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:01 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:01 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:01 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+nginx-lb     | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+nginx-lb     | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+nginx-lb     | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+nginx-lb     | 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+nginx-lb     | 10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
+nginx-lb     | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+nginx-lb     | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+nginx-lb     | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+nginx-lb     | /docker-entrypoint.sh: Configuration complete; ready for start up
+backend-1-1  | 2025/07/28 16:53:02 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:02 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:02 [Handler] Failed to get summary: failed to retrieve payments: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:02 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:02 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:03 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:03 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:03 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:03 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:05 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:05 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:05 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:05 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:06 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:06 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:06 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:06 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:07 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:07 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:07 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:07 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:07 [Handler] Failed to get summary: failed to retrieve payments: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:08 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:08 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:08 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:08 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:09 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:09 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:09 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:09 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:10 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:10 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:10 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:10 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:11 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:11 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:11 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:11 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:12 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:12 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:12 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:12 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:12 [Handler] Failed to get summary: failed to retrieve payments: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:13 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:13 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:13 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:13 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:14 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:14 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:14 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:14 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:15 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:15 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:15 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:15 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:16 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:16 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:16 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:17 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:17 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:17 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:18 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:18 [Handler] Failed to get summary: failed to retrieve payments: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:18 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:19 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:19 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:19 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:19 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:20 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:20 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:20 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:20 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:21 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:21 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:21 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:21 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:22 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:22 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:22 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:22 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:23 [Handler] Failed to get summary: failed to retrieve payments: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:23 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:23 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:23 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:23 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:24 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:24 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:24 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:24 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:25 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:25 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:25 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:25 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:26 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:26 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:26 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:26 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:27 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:27 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:27 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:28 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:28 [Handler] Failed to get summary: failed to retrieve payments: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:28 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:28 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:28 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:29 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:29 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:29 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:29 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:30 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:31 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:31 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:31 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:31 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:32 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:32 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:32 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:32 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:33 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:33 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:33 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:33 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:33 [Handler] Failed to get summary: failed to retrieve payments: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:34 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:34 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:34 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:34 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:35 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:35 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:35 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:35 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:36 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:36 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:36 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:36 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:37 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:37 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:37 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:37 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:38 [Handler] Failed to get summary: failed to retrieve payments: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:38 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:38 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:38 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:38 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:39 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:39 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:39 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:39 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:40 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:40 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:40 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:40 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:41 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:41 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:41 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:42 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:42 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:43 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:43 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:43 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:43 [Handler] Failed to get summary: failed to retrieve payments: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:44 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:44 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:44 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:44 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:45 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:45 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:45 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:45 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:46 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:46 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:46 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:46 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:47 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:47 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:47 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:47 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:48 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:48 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:48 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:48 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:48 [Handler] Failed to get summary: failed to retrieve payments: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:49 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:49 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:49 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:49 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:50 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:50 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:50 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:50 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:51 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:51 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:51 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:51 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:52 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:52 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:52 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:52 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:53 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:53 [Handler] Failed to get summary: failed to retrieve payments: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:53 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:53 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:53 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:54 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:55 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:55 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:55 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:55 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:56 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:56 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:56 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:56 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:57 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:57 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:57 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:57 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:58 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:58 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:58 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:58 [Handler] Failed to get summary: failed to retrieve payments: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:59 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:53:59 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:59 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:53:59 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:54:00 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:54:00 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:54:00 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:54:00 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:54:01 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:54:01 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:54:01 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:54:01 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:54:02 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:54:02 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:54:02 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:54:02 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:54:03 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:54:03 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:54:03 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:54:03 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:54:03 [Handler] Failed to get summary: failed to retrieve payments: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:54:04 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:54:04 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:54:04 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:54:04 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:54:05 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:54:05 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:54:05 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:54:05 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:54:06 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:54:06 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:54:06 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:54:06 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:54:07 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:54:07 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:54:07 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:54:08 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:54:08 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:54:09 [Handler] Failed to get summary: failed to retrieve payments: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:54:09 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:54:09 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:54:09 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:54:09 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:54:10 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:54:10 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:54:10 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:54:10 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:54:11 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:54:11 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:54:11 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:54:11 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:54:12 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:54:12 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:54:12 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:54:12 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:54:13 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:54:13 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:54:13 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-2-1  | 2025/07/28 16:54:14 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:54:14 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+backend-1-1  | 2025/07/28 16:54:14 [Worker 1] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+[Knginx-lb exited with code 0
+backend-2-1  | 2025/07/28 16:54:14 [Worker 0] Redis error: dial unix /tmp/redis.sock: connect: no such file or directory
+[Kbackend-1-1 exited with code 2
+redis        | 1:signal-handler (1753721655) Received SIGTERM scheduling shutdown...
+redis        | 1:M 28 Jul 2025 16:54:15.238 * User requested shutdown...
+redis        | 1:M 28 Jul 2025 16:54:15.239 * Saving the final RDB snapshot before exiting.
+redis        | 1:M 28 Jul 2025 16:54:15.250 * DB saved on disk
+redis        | 1:M 28 Jul 2025 16:54:15.250 # Redis is now ready to exit, bye bye...
+[Kredis exited with code 0
