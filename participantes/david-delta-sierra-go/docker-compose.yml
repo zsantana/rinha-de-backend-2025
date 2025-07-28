@@ -6,7 +6,7 @@ services:
       resources:
         limits:
           cpus: "0.3"
-          memory: 30M
+          memory: 50M
     image: nginx
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf:ro
@@ -57,7 +57,7 @@ services:
       resources:
         limits:
           cpus: "0.3"
-          memory: 260M
+          memory: 240M
     image: postgres:alpine
     user: postgres
     healthcheck:

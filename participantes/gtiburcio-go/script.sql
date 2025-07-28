@@ -9,4 +9,4 @@ create unlogged table payment (
 	requested_at timestamp not null default NOW()
 );
 
-create index idx_requested_at on payment using btree (requested_at);
+create index idx_payment_requested_type on payment (requested_at, type);
