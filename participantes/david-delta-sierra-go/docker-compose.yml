@@ -7,7 +7,7 @@ services:
         limits:
           cpus: "0.3"
           memory: 50M
-    image: nginx
+    image: nginx:stable-alpine
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf:ro
     ports:
