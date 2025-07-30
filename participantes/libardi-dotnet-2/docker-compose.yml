@@ -11,6 +11,8 @@ services:
         condition: service_healthy
       payment-api-2:
         condition: service_healthy
+      payment-api-3:
+        condition: service_healthy
     networks:
       - backend
       - payment-processor
