@@ -1,6 +1,6 @@
 x-service-templates:
   base: &base
-    image: josiney/rdb25_02-amd64:69d188da
+    image: josiney/rdb25_02-amd64:465cf6bb
     networks:
       - backend
       - payment-processor
@@ -89,7 +89,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "1.0"
+          cpus: "0.8"
           memory: "150MB"
     ports:
       - "9996:9996"
