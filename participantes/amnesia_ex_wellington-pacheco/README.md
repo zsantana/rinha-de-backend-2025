@@ -3,7 +3,7 @@
 ## 🚀 Tecnologias Utilizadas
 
 - **Linguagem:** Elixir / Phoenix
-- **Banco de dados:** Amnesia (erlang cluster)
+- **Banco de dados:** Mnesia (erlang cluster)
 - **Balanceador de carga:** Nginx
 
 ## Repositório
