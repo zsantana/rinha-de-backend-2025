@@ -1,6 +1,6 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Wed Jul 30 05:49:45 PM -03 2025**
-177 submissões / 157 resultados / 20 submissões com erro
+Atualizado em **Wed Jul 30 05:57:16 PM -03 2025**
+178 submissões / 157 resultados / 21 submissões com erro
 
 
 | participante | p99 | bônus por desempenho (%) | multa ($) | lucro | submissão |
@@ -167,6 +167,7 @@ Atualizado em **Wed Jul 30 05:49:45 PM -03 2025**
 
 | participante | submissão |
 | -- | -- |
+| 4emcos-golang | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/4emcos-golang) |
 | andre-nicoletti | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/andre-nicoletti) |
 | antooniodev-node | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/antooniodev-node) |
 | boaglio-player456 | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/boaglio-player456) |
