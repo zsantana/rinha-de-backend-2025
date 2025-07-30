@@ -20,6 +20,7 @@ services:
           memory: "30MB"
     environment:
       - PORT=9997
+      - REDIS_URL=redis://redis-db:6379/0
       - PAYMENTS_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080/payments
       - PAYMENTS_PROCESSOR_URL_FALLBACK=http://payment-processor-fallback:8080/payments
       - HEALTH_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080/payments/service-health
@@ -39,6 +40,7 @@ services:
           memory: "30MB"
     environment:
       - PORT=9998
+      - REDIS_URL=redis://redis-db:6379/0
       - PAYMENTS_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080/payments
       - PAYMENTS_PROCESSOR_URL_FALLBACK=http://payment-processor-fallback:8080/payments
       - HEALTH_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080/payments/service-health
@@ -58,6 +60,7 @@ services:
           memory: "30MB"
     environment:
       - PORT=9994
+      - REDIS_URL=redis://redis-db:6379/0
       - PAYMENTS_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080/payments
       - PAYMENTS_PROCESSOR_URL_FALLBACK=http://payment-processor-fallback:8080/payments
       - HEALTH_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080/payments/service-health
@@ -116,6 +119,7 @@ services:
     depends_on:
       - api1
       - api2
+      - api3
     ports:
       - "9999:9999"
     networks:
