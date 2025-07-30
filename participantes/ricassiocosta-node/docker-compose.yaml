@@ -26,7 +26,7 @@ services:
     environment:
       - PAYMENT_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080
       - PAYMENT_PROCESSOR_URL_FALLBACK=http://payment-processor-fallback:8080
-      - MAX_PARALLELISM=8
+      - MAX_PARALLELISM=5
     depends_on:
       - redis
     volumes:
