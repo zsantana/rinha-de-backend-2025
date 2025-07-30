@@ -10,7 +10,7 @@ services:
             - API_INSTANCES=http://api2:8080
             - BASE_URL_DEFAULT=http://payment-processor-default:8080
             - BASE_URL_FALLBACK=http://payment-processor-fallback:8080
-            - WORKERS=10
+            - WORKERS=2
         networks:
             - payment-processor
         deploy:
@@ -25,7 +25,7 @@ services:
             - API_INSTANCES=http://api1:8080
             - BASE_URL_DEFAULT=http://payment-processor-default:8080
             - BASE_URL_FALLBACK=http://payment-processor-fallback:8080
-            - WORKERS=10
+            - WORKERS=2
         networks:
             - payment-processor
         deploy:
