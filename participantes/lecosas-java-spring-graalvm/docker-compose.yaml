@@ -14,7 +14,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.25"
+          cpus: "0.3"
           memory: "50MB"
 
   backend-01: &backend
@@ -27,7 +27,8 @@ services:
     environment:
       - SPRING_PROFILES_ACTIVE=prod
       - PAYMENT_BACKEND_MAIN_INSTANCE=true
-      - PAYMENT_BACKEND_WORKER_FALLBACK_DELAY=5
+      - PAYMENT_BACKEND_WORKER_FALLBACK_DELAY=2
+      - PAYMENT_BACKEND_WORKER_THREAD_DELAY=2
       - HTTPCLIENT_CONNECTION_TIMEOUT=5000
       - HTTPCLIENT_READ_TIMEOUT=10000
       - HTTPCLIENT_SOCKET_TIMEOUT=10000
@@ -55,7 +56,8 @@ services:
     environment:
       - SPRING_PROFILES_ACTIVE=prod
       - PAYMENT_BACKEND_MAIN_INSTANCE=false
-      - PAYMENT_BACKEND_WORKER_FALLBACK_DELAY=5
+      - PAYMENT_BACKEND_WORKER_FALLBACK_DELAY=2
+      - PAYMENT_BACKEND_WORKER_THREAD_DELAY=2
       - HTTPCLIENT_CONNECTION_TIMEOUT=5000
       - HTTPCLIENT_READ_TIMEOUT=10000
       - HTTPCLIENT_SOCKET_TIMEOUT=10000
@@ -82,7 +84,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.15"
+          cpus: "0.1"
           memory: "40MB" #Change in command line too.
 
 networks:
