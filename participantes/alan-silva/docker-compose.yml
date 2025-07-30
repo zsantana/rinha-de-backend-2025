@@ -30,7 +30,7 @@ services:
       - backend
       - payment-processor
     depends_on:
-      - rinha-db
+      - rinha-database
     deploy:
       resources:
         limits:
@@ -48,7 +48,7 @@ services:
       - backend
       - payment-processor
     depends_on:
-      - rinha-db
+      - rinha-database
     deploy:
       resources:
         limits:
@@ -66,16 +66,16 @@ services:
       - backend
       - payment-processor
     depends_on:
-      - rinha-db
+      - rinha-database
     deploy:
       resources:
         limits:
           cpus: "0.3"
           memory: "70MB"
 
-  rinha-db:
+  rinha-database:
     image: ghcr.io/alan-venv/rinha-database:6.3
-    container_name: rinha-db
+    container_name: rinha-database
     volumes:
       - sockets:/sockets:rw
     networks:
