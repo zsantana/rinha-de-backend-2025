@@ -1,25 +1,55 @@
 
-time="2025-07-20T23:28:08-03:00" level=warning msg="/home/rinha-user/rinha-de-backend-2025/participantes/joaoreisa-go/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+time="2025-07-29T23:51:50-03:00" level=warning msg="/home/rinha-user/rinha-de-backend-2025/participantes/joaoreisa-go/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+ api-2 Pulling 
+ api-1 Pulling 
+ 9824c27679d3 Already exists 
+ 4f4fb700ef54 Already exists 
+ 21ac4a629653 Pulling fs layer 
+ 9824c27679d3 Already exists 
+ 4f4fb700ef54 Already exists 
+ 21ac4a629653 Pulling fs layer 
+ 21ac4a629653 Downloading [>                                                  ]  61.44kB/6.053MB
+ 21ac4a629653 Downloading [>                                                  ]  61.44kB/6.053MB
+ 21ac4a629653 Downloading [==>                                                ]    254kB/6.053MB
+ 21ac4a629653 Downloading [==>                                                ]    254kB/6.053MB
+ 21ac4a629653 Downloading [====>                                              ]  561.2kB/6.053MB
+ 21ac4a629653 Downloading [====>                                              ]  561.2kB/6.053MB
+ 21ac4a629653 Downloading [==========>                                        ]  1.311MB/6.053MB
+ 21ac4a629653 Downloading [==========>                                        ]  1.311MB/6.053MB
+ 21ac4a629653 Downloading [======================>                            ]  2.757MB/6.053MB
+ 21ac4a629653 Downloading [======================>                            ]  2.757MB/6.053MB
+ 21ac4a629653 Downloading [=================================================> ]  6.025MB/6.053MB
+ 21ac4a629653 Downloading [=================================================> ]  6.025MB/6.053MB
+ 21ac4a629653 Download complete 
+ 21ac4a629653 Download complete 
+ 21ac4a629653 Extracting [>                                                  ]  65.54kB/6.053MB
+ 21ac4a629653 Extracting [>                                                  ]  65.54kB/6.053MB
+ 21ac4a629653 Extracting [==================================================>]  6.053MB/6.053MB
+ 21ac4a629653 Extracting [==================================================>]  6.053MB/6.053MB
+ 21ac4a629653 Pull complete 
+ 21ac4a629653 Pull complete 
+ api-2 Pulled 
+ api-1 Pulled 
  Network joaoreisa-go_backend  Creating
  Network joaoreisa-go_backend  Created
  Container redis-cache-rinha  Creating
  Container redis-cache-rinha  Created
- Container joaoreisa-go-api-2-1  Creating
  Container joaoreisa-go-api-1-1  Creating
+ Container joaoreisa-go-api-2-1  Creating
  Container joaoreisa-go-api-2-1  Created
  Container joaoreisa-go-api-1-1  Created
  Container load-balancer  Creating
  Container load-balancer  Created
 Attaching to api-1-1, api-2-1, load-balancer, redis-cache-rinha
-redis-cache-rinha  | 1:C 21 Jul 2025 02:28:10.378 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
-redis-cache-rinha  | 1:C 21 Jul 2025 02:28:10.378 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
-redis-cache-rinha  | 1:C 21 Jul 2025 02:28:10.378 * Redis version=7.4.5, bits=64, commit=00000000, modified=0, pid=1, just started
-redis-cache-rinha  | 1:C 21 Jul 2025 02:28:10.378 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf
-redis-cache-rinha  | 1:M 21 Jul 2025 02:28:10.378 * monotonic clock: POSIX clock_gettime
-redis-cache-rinha  | 1:M 21 Jul 2025 02:28:10.379 * Running mode=standalone, port=6379.
-redis-cache-rinha  | 1:M 21 Jul 2025 02:28:10.379 * Server initialized
-redis-cache-rinha  | 1:M 21 Jul 2025 02:28:10.379 * Ready to accept connections tcp
-api-2-1            | 2025/07/21 02:28:10 Initializing background worker...
+redis-cache-rinha  | 1:C 30 Jul 2025 02:51:56.770 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+redis-cache-rinha  | 1:C 30 Jul 2025 02:51:56.770 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+redis-cache-rinha  | 1:C 30 Jul 2025 02:51:56.770 * Redis version=7.4.5, bits=64, commit=00000000, modified=0, pid=1, just started
+redis-cache-rinha  | 1:C 30 Jul 2025 02:51:56.770 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf
+redis-cache-rinha  | 1:M 30 Jul 2025 02:51:56.771 * monotonic clock: POSIX clock_gettime
+redis-cache-rinha  | 1:M 30 Jul 2025 02:51:56.771 * Running mode=standalone, port=6379.
+redis-cache-rinha  | 1:M 30 Jul 2025 02:51:56.772 * Server initialized
+redis-cache-rinha  | 1:M 30 Jul 2025 02:51:56.772 * Ready to accept connections tcp
+api-2-1            | 2025/07/30 02:51:57 Initializing background worker...
 api-2-1            | 
 api-2-1            |  ┌───────────────────────────────────────────────────┐ 
 api-2-1            |  │                   Fiber v2.52.8                   │ 
@@ -30,9 +60,9 @@ api-2-1            |  │ Handlers ............. 6  Processes ........... 1 │
 api-2-1            |  │ Prefork ....... Disabled  PID ................. 1 │ 
 api-2-1            |  └───────────────────────────────────────────────────┘ 
 api-2-1            | 
-api-2-1            | 2025/07/21 02:28:10 Worker: Acquired leader lock. Starting health checks.
-api-2-1            | 2025/07/21 02:28:10 Leader: Running health checks...
-api-1-1            | 2025/07/21 02:28:10 Initializing background worker...
+api-2-1            | 2025/07/30 02:51:57 Worker: Acquired leader lock. Starting health checks.
+api-2-1            | 2025/07/30 02:51:57 Leader: Running health checks...
+api-1-1            | 2025/07/30 02:51:57 Initializing background worker...
 api-1-1            | 
 api-1-1            |  ┌───────────────────────────────────────────────────┐ 
 api-1-1            |  │                   Fiber v2.52.8                   │ 
@@ -43,7 +73,7 @@ api-1-1            |  │ Handlers ............. 6  Processes ........... 1 │
 api-1-1            |  │ Prefork ....... Disabled  PID ................. 1 │ 
 api-1-1            |  └───────────────────────────────────────────────────┘ 
 api-1-1            | 
-api-1-1            | 2025/07/21 02:28:10 Worker: Could not acquire lock, another instance is leader. Waiting.
+api-1-1            | 2025/07/30 02:51:57 Worker: Could not acquire lock, another instance is leader. Waiting.
 load-balancer      | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
 load-balancer      | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
 load-balancer      | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
@@ -53,949 +83,919 @@ load-balancer      | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-loc
 load-balancer      | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
 load-balancer      | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
 load-balancer      | /docker-entrypoint.sh: Configuration complete; ready for start up
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:13 +0000] "GET /payments-summary HTTP/1.1" 200 94 "-" "curl/7.88.1"
-api-2-1            | 2025/07/21 02:28:15 Leader: Performing health check...
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:19 +0000] "POST /purge-payments HTTP/1.1" 404 27 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:19 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:19 +0000] "GET /payments-summary?from=2025-07-21T02:28:09.747Z&to=2025-07-21T02:28:19.647Z HTTP/1.1" 200 94 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:19 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-9] Payment processed: 7f6af58d-07f4-446e-b9a5-24c2af792566
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:19 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:19 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-0] Payment processed: 193ff92f-a99c-4c67-a5a9-063c736d5ac4
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:19 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | [Worker worker-1753064890919622871-1] Payment processed: 3b849dae-c5f8-451f-83cb-95e00be924b2
-api-2-1            | 2025/07/21 02:28:19 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:20 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | [Worker worker-1753064890919622871-15] Payment processed: 3830a710-d5d4-462c-87b1-a2b61b28ab8f
-api-2-1            | 2025/07/21 02:28:20 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:20 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:20 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-13] Payment processed: 4841b955-d783-4dd2-84d7-ac3325d3e962
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:20 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:20 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-9] Payment processed: 4278101b-103e-45ac-af33-c0c2d98ed843
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:20 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | [Worker worker-1753064890919622871-9] Payment processed: 7424f2a0-9484-4729-807a-bb500cfb663d
-api-2-1            | 2025/07/21 02:28:20 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:20 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:20 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-9] Payment processed: 509e3e5d-7511-49a8-9acb-36776d993193
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:20 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-1-1            | 2025/07/21 02:28:20 PAYMENT SAVED ON REDIS
-api-1-1            | [Worker worker-1753064890960682179-9] Payment processed: 7ae92495-2826-4d53-9628-bc37692e4f8f
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:20 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-1-1            | [Worker worker-1753064890960682179-6] Payment processed: af505651-5c5d-494e-bd95-d596295f24ae
-api-1-1            | 2025/07/21 02:28:20 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:20 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | [Worker worker-1753064890919622871-11] Payment processed: 9ceab9a3-04da-40ab-bb85-d437e049fc5a
-api-2-1            | 2025/07/21 02:28:20 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:20 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:20 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:20 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:20 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-6] Payment processed: 9360e5e3-c9ab-4317-95b2-ee3a08b66eb5
-api-2-1            | [Worker worker-1753064890919622871-14] Payment processed: e7706c87-7920-443d-b33e-94b92ede8db2
-api-2-1            | 2025/07/21 02:28:20 Leader: Performing health check...
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:20 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:20 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:20 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:20 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-1] Payment processed: 1e931d7d-ad3f-4c70-9fac-e95282981b7f
-api-2-1            | [Worker worker-1753064890919622871-12] Payment processed: 42525ceb-0b26-430a-9cca-d0f0b085b195
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:21 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:21 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:21 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-7] Payment processed: 07f2d750-f5b8-48c7-ad6b-49b570d1e5c8
-api-2-1            | [Worker worker-1753064890919622871-10] Payment processed: e259d181-1155-477b-9494-d95e774f1241
-api-2-1            | 2025/07/21 02:28:21 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:21 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:21 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | [Worker worker-1753064890919622871-5] Payment processed: ce565b4d-dd69-4e9d-8d80-c52348bf2b46
-api-2-1            | [Worker worker-1753064890919622871-2] Payment processed: 0191202d-56c7-48e4-a3d4-c730bce2e41e
-api-2-1            | 2025/07/21 02:28:21 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:21 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:21 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:21 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | [Worker worker-1753064890919622871-0] Payment processed: c86a974d-e4da-4121-a2ed-9e04fae1ef6b
-api-2-1            | 2025/07/21 02:28:21 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-1] Payment processed: 1d8438fd-21d9-4ac6-8e28-76729dfbe2d2
-api-2-1            | 2025/07/21 02:28:21 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:21 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:21 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-8] Payment processed: a024e710-f96f-488d-9262-7592d3b7c1a0
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:21 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-1-1            | [Worker worker-1753064890960682179-6] Payment processed: d06636c4-5837-4e39-a496-744451472394
-api-1-1            | 2025/07/21 02:28:21 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:21 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | [Worker worker-1753064890919622871-3] Payment processed: 1a651192-322a-4e9f-9fa6-8c3cdc2fcf9b
-api-2-1            | 2025/07/21 02:28:21 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:21 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-1-1            | 2025/07/21 02:28:21 PAYMENT SAVED ON REDIS
-api-1-1            | [Worker worker-1753064890960682179-0] Payment processed: 28a9f2ae-bce0-4d8e-ab57-f323b8d09f40
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:21 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:21 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-1-1            | 2025/07/21 02:28:21 PAYMENT SAVED ON REDIS
-api-1-1            | 2025/07/21 02:28:21 PAYMENT SAVED ON REDIS
-api-1-1            | [Worker worker-1753064890960682179-13] Payment processed: bf0b832a-85b2-4ba7-a2c8-85e01e5f765e
-api-1-1            | [Worker worker-1753064890960682179-7] Payment processed: a0743c89-c7dd-4f2d-8b02-ad004cc9327a
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:21 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:21 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-1-1            | 2025/07/21 02:28:21 PAYMENT SAVED ON REDIS
-api-1-1            | 2025/07/21 02:28:21 PAYMENT SAVED ON REDIS
-api-1-1            | [Worker worker-1753064890960682179-11] Payment processed: a02aedc4-079d-4187-bfa7-d6d1a4aacd7a
-api-1-1            | [Worker worker-1753064890960682179-12] Payment processed: 592b9ee8-79ec-4746-9ee4-5fba98d82905
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:21 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:21 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-7] Payment processed: b89806df-4bec-43ab-aedd-85995f3cd3d8
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:21 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:21 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:21 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-9] Payment processed: 9f8bd4ff-61bf-4f29-a16b-6facbd71ac83
-api-1-1            | [Worker worker-1753064890960682179-6] Payment processed: 67908531-b1bb-4da7-a6bb-198a409cea21
-api-1-1            | 2025/07/21 02:28:21 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:21 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:21 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-4] Payment processed: 85db2050-1d40-4937-8cc3-87a16d43e65d
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:21 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-1-1            | 2025/07/21 02:28:21 PAYMENT SAVED ON REDIS
-api-1-1            | [Worker worker-1753064890960682179-14] Payment processed: 099e2393-1371-4e62-b6d4-e55a7ce3e928
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:21 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:21 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | [Worker worker-1753064890919622871-5] Payment processed: cef5dbdc-4cca-4ba1-91cb-6f8c506cdab0
-api-2-1            | [Worker worker-1753064890919622871-2] Payment processed: 55f0ea2f-28d6-4216-a7e9-f1cf926b2297
-api-2-1            | 2025/07/21 02:28:22 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:22 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:22 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-1-1            | [Worker worker-1753064890960682179-9] Payment processed: a5007f31-1677-49c2-9028-48fdac048940
-api-1-1            | 2025/07/21 02:28:22 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:22 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:22 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | [Worker worker-1753064890919622871-13] Payment processed: 1d8b0924-48c8-420c-a2de-f8df45349fd3
-api-2-1            | 2025/07/21 02:28:22 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:22 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-0] Payment processed: 7944b95f-0290-42a8-9199-cb56e1d15d48
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:22 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:22 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:22 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:22 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:22 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-11] Payment processed: 6c105f53-51d5-46ce-8be3-f5fe1b17205b
-api-2-1            | [Worker worker-1753064890919622871-10] Payment processed: 8f46907d-0a4d-408f-9adc-0a39d62a103c
-api-2-1            | [Worker worker-1753064890919622871-6] Payment processed: 16043400-3fe9-4805-bf3c-e917f7d0141d
-api-2-1            | 2025/07/21 02:28:22 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:22 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:22 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:22 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:22 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-12] Payment processed: 0fdbe832-aac3-4dc6-919c-51dffe72126f
-api-2-1            | [Worker worker-1753064890919622871-15] Payment processed: 0a45339a-bd95-4ff6-a478-05629ecc07c7
-api-2-1            | 2025/07/21 02:28:22 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-14] Payment processed: 29a0bfca-991c-4c9c-98f2-8623ea00bffb
-api-2-1            | 2025/07/21 02:28:22 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:22 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:22 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:22 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | [Worker worker-1753064890919622871-3] Payment processed: 8d611d6a-eb91-44dd-95f5-9385c930f08f
-api-2-1            | 2025/07/21 02:28:22 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:22 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-1] Payment processed: c87d529b-5e0a-4d21-b991-86fcb2417b60
-api-2-1            | [Worker worker-1753064890919622871-12] Payment processed: 8276112f-0bc6-49f2-bb98-b060544e1382
-api-2-1            | 2025/07/21 02:28:22 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:22 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:22 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | [Worker worker-1753064890919622871-11] Payment processed: 8cd6931c-a372-436d-8ef4-f0f86ba9eb2f
-api-2-1            | [Worker worker-1753064890919622871-8] Payment processed: 469ad92f-2bc6-476d-b9af-651c6f5ea5eb
-api-2-1            | 2025/07/21 02:28:22 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:22 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:22 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | [Worker worker-1753064890919622871-6] Payment processed: 2c096803-f669-4866-96f6-74bdce5baa6d
-api-2-1            | 2025/07/21 02:28:22 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:22 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:22 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:22 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:22 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-4] Payment processed: ac862c64-f830-4df8-b962-b4413cc3c59c
-api-2-1            | [Worker worker-1753064890919622871-12] Payment processed: b040fe4a-366d-4a53-8e0a-cb2a2e83e30e
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:22 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-1-1            | [Worker worker-1753064890960682179-2] Payment processed: 90a8c348-3b32-4c63-98bf-ed8e4c3bff1e
-api-1-1            | 2025/07/21 02:28:22 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:22 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:22 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-1] Payment processed: f27ad633-844e-40b0-8de3-03552518842b
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:22 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:22 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-1-1            | 2025/07/21 02:28:22 PAYMENT SAVED ON REDIS
-api-1-1            | 2025/07/21 02:28:22 PAYMENT SAVED ON REDIS
-api-1-1            | [Worker worker-1753064890960682179-3] Payment processed: 4776149a-d334-4f58-ab94-d8b15ba58608
-api-1-1            | [Worker worker-1753064890960682179-15] Payment processed: 038b475d-c814-4be0-a9d8-bed176cb10e6
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:22 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:22 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | [Worker worker-1753064890919622871-0] Payment processed: 9e50c2bf-9199-4ffc-b86a-dcfed551a979
-api-2-1            | [Worker worker-1753064890919622871-3] Payment processed: 2a50061c-e046-414b-87f9-855b08c6b2d2
-api-2-1            | 2025/07/21 02:28:22 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:22 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:22 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:22 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-1-1            | 2025/07/21 02:28:22 PAYMENT SAVED ON REDIS
-api-1-1            | 2025/07/21 02:28:22 PAYMENT SAVED ON REDIS
-api-1-1            | [Worker worker-1753064890960682179-4] Payment processed: 1fd84fc1-af7a-4e72-844f-83337d4ad38d
-api-1-1            | [Worker worker-1753064890960682179-10] Payment processed: e0c8345b-0424-47b8-b451-59ec0cea59f6
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:22 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:22 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-15] Payment processed: 6e4c9eb1-6ed8-457d-a714-7c9e182e5b14
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:22 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:22 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-6] Payment processed: a91235fc-27b6-4fae-ac67-09cec926ff27
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:22 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:22 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-1-1            | 2025/07/21 02:28:22 PAYMENT SAVED ON REDIS
-api-1-1            | [Worker worker-1753064890960682179-3] Payment processed: ebd273a1-3b97-45a7-9473-2bf642c14463
-api-2-1            | 2025/07/21 02:28:22 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-9] Payment processed: aac6c675-01ab-40be-98bf-6fda546ea142
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:22 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | [Worker worker-1753064890919622871-14] Payment processed: f1c95870-7bdd-41fe-b16b-6f6d087424ad
-api-2-1            | 2025/07/21 02:28:23 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:23 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:23 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-6] Payment processed: fb7d6842-08a8-4fda-956d-9dbb4e32ece3
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:23 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-1-1            | 2025/07/21 02:28:23 PAYMENT SAVED ON REDIS
-api-1-1            | [Worker worker-1753064890960682179-12] Payment processed: 35a175e5-9244-40f5-8d1d-42b50e0e456c
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:23 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:23 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | [Worker worker-1753064890919622871-7] Payment processed: 8173a3d0-cebc-43bf-8fc9-c6646b83a2a3
-api-2-1            | [Worker worker-1753064890919622871-13] Payment processed: b72dbaab-1241-4701-b910-558ddfb24859
-api-2-1            | 2025/07/21 02:28:23 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:23 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:23 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:23 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-1-1            | 2025/07/21 02:28:23 PAYMENT SAVED ON REDIS
-api-1-1            | 2025/07/21 02:28:23 PAYMENT SAVED ON REDIS
-api-1-1            | [Worker worker-1753064890960682179-15] Payment processed: b30f19f4-28af-4031-8cae-534e4de3a706
-api-1-1            | [Worker worker-1753064890960682179-8] Payment processed: 27d0a863-57cf-44c4-9987-7f30de621e4c
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:23 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:23 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:23 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:23 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-10] Payment processed: 64262862-3948-426f-9a69-8fbadb882c96
-api-2-1            | [Worker worker-1753064890919622871-5] Payment processed: 5a80edcd-fd22-494b-a7cb-3e9e3fb8d2f2
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:23 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-1-1            | 2025/07/21 02:28:23 PAYMENT SAVED ON REDIS
-api-1-1            | [Worker worker-1753064890960682179-4] Payment processed: 884b0009-6601-4a1e-9f8c-2a5195e09a15
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:23 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:23 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:23 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:23 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:23 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:23 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-2] Payment processed: 08a3e085-5223-45a5-b56b-86282711388a
-api-2-1            | [Worker worker-1753064890919622871-0] Payment processed: 931e8188-0f51-4a18-8fc2-c5f00fb8baeb
-api-2-1            | [Worker worker-1753064890919622871-11] Payment processed: 580a851b-e957-4298-8bdf-33cccae9db78
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:23 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-1-1            | [Worker worker-1753064890960682179-13] Payment processed: f814a692-186b-4f31-a590-83df855b3dbf
-api-1-1            | 2025/07/21 02:28:23 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:23 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:23 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:23 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:23 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:23 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:23 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-15] Payment processed: 6386f228-80d5-4468-aba9-4b1207c70f4c
-api-2-1            | [Worker worker-1753064890919622871-1] Payment processed: 7995c2fc-e4bf-4842-bc47-18a530aa810f
-api-2-1            | [Worker worker-1753064890919622871-4] Payment processed: 30bf346c-0d6c-49fb-a591-0b9a86ddf46f
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:23 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:23 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:23 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | [Worker worker-1753064890919622871-14] Payment processed: 35fb4400-34cb-4f1a-b651-625e35264e7c
-api-2-1            | 2025/07/21 02:28:23 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:23 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-3] Payment processed: 85513fbe-c491-4e0c-be9a-55fb9ca91678
-api-2-1            | [Worker worker-1753064890919622871-7] Payment processed: 407e23b2-93c5-45fc-b6db-82ae6ed04bb3
-api-2-1            | 2025/07/21 02:28:23 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:23 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:23 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-3] Payment processed: 6ecd53d6-c708-4194-bacc-337f64b617c9
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:23 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:23 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:23 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:23 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:23 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:23 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-13] Payment processed: 203b56ec-4c65-4c7a-9140-88e83939ac5a
-api-2-1            | [Worker worker-1753064890919622871-12] Payment processed: 2046bf54-cc0f-489a-a676-c310e5e615f6
-api-2-1            | [Worker worker-1753064890919622871-8] Payment processed: bc6809bb-2b09-4a61-921a-6d2241d5f501
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:23 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:23 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-6] Payment processed: 916a19b6-3cac-40fd-8a05-d801d13e5552
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:23 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:23 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:23 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:23 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-14] Payment processed: 8cadf3f8-8cdd-45d4-854a-46a119a0eb18
-api-2-1            | [Worker worker-1753064890919622871-5] Payment processed: f94ae06f-2573-4a12-876a-30fbb478cca1
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:23 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:23 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | [Worker worker-1753064890919622871-6] Payment processed: a8bfef41-cb5a-46be-8d27-512762be6b6d
-api-2-1            | 2025/07/21 02:28:23 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:23 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-6] Payment processed: 4addc687-d259-4fcc-ad08-629f31f995ce
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:23 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-1-1            | 2025/07/21 02:28:23 PAYMENT SAVED ON REDIS
-api-1-1            | [Worker worker-1753064890960682179-1] Payment processed: 8e7756ce-675b-4c9e-9706-a26ed7235345
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:23 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:23 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | [Worker worker-1753064890919622871-0] Payment processed: 7fe8badd-6792-44d4-91e0-99a3035ff18c
-api-2-1            | [Worker worker-1753064890919622871-15] Payment processed: ec8a2a4f-e853-4308-899d-2537b796d40b
-api-2-1            | 2025/07/21 02:28:23 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:23 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:23 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | [Worker worker-1753064890919622871-6] Payment processed: 65ecbc53-4085-4647-8002-768e8f9d5421
-api-2-1            | 2025/07/21 02:28:23 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:23 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-1-1            | [Worker worker-1753064890960682179-5] Payment processed: 173af236-a97d-4715-a9ee-87937818be6f
-api-1-1            | 2025/07/21 02:28:23 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:23 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:23 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:23 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:23 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:23 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-12] Payment processed: 22c528fa-e230-4ae7-997a-e7a3fca5d813
-api-2-1            | [Worker worker-1753064890919622871-10] Payment processed: 4028f260-d39f-43c1-8d75-5108dda44e3c
-api-2-1            | [Worker worker-1753064890919622871-8] Payment processed: c7dccf79-e3af-4b51-8c20-d1de50bf7559
-api-2-1            | 2025/07/21 02:28:23 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:23 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:23 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-6] Payment processed: 574456f8-c8dc-4e41-a6ad-0e1ec0c099a6
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:23 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-1-1            | [Worker worker-1753064890960682179-12] Payment processed: 30ecffff-74bf-468f-9cc2-bfc740068fa2
-api-1-1            | 2025/07/21 02:28:23 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:23 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:24 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-13] Payment processed: 378d200d-74f4-4fba-9af0-04263f985146
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:24 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:24 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | [Worker worker-1753064890919622871-6] Payment processed: a4b05691-5657-4c52-b275-bfddfd2066ac
-api-2-1            | 2025/07/21 02:28:24 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:24 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | [Worker worker-1753064890919622871-6] Payment processed: 4cd72ec5-dd81-4dd8-98d2-141a79c37958
-api-2-1            | 2025/07/21 02:28:24 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:24 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-6] Payment processed: 2c940ea4-ff7b-4842-9281-db34d188a339
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:24 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:24 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:24 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | [Worker worker-1753064890919622871-10] Payment processed: ab584068-6f0c-4434-b5bf-3d5532ca7d50
-api-2-1            | [Worker worker-1753064890919622871-12] Payment processed: 6b64fc1e-6fe7-45a2-a757-6aa26b8bc0ec
-api-2-1            | [Worker worker-1753064890919622871-0] Payment processed: fec5b55b-8774-447e-acc8-29d665cebc43
-api-2-1            | 2025/07/21 02:28:24 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:24 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:24 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:24 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:24 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-6] Payment processed: ef413e93-83fe-49f4-9759-bcde568d9b37
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:24 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-1-1            | [Worker worker-1753064890960682179-2] Payment processed: a9a2b5ca-5c02-485a-a3a5-9958ee6e792e
-api-1-1            | 2025/07/21 02:28:24 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:24 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:24 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:24 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:24 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-4] Payment processed: 004410d5-8b21-4e07-bdd4-878169ecc343
-api-2-1            | [Worker worker-1753064890919622871-8] Payment processed: 7e1b5f89-1efd-46c9-b459-656aff7f051a
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:24 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:24 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | [Worker worker-1753064890919622871-6] Payment processed: f55082f2-e607-43c2-9674-03489f4d1392
-api-2-1            | 2025/07/21 02:28:24 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-6] Payment processed: 39157eee-41e8-45a8-8d72-d86395a22748
-api-2-1            | 2025/07/21 02:28:24 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:24 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | [Worker worker-1753064890919622871-9] Payment processed: f3a82ddb-36fb-4c97-8099-951ebd58f969
-api-2-1            | 2025/07/21 02:28:24 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:24 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:24 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | [Worker worker-1753064890919622871-2] Payment processed: 29b84eb4-f725-42ba-b272-64d99cb71fcb
-api-2-1            | [Worker worker-1753064890919622871-3] Payment processed: 12b1ec63-656c-49c5-ad87-6c1284c23658
-api-2-1            | 2025/07/21 02:28:24 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:24 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:24 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | [Worker worker-1753064890919622871-6] Payment processed: f6fa65a7-adcb-4f31-9f76-e41da365b33c
-api-2-1            | 2025/07/21 02:28:24 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:24 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-1-1            | 2025/07/21 02:28:24 PAYMENT SAVED ON REDIS
-api-1-1            | [Worker worker-1753064890960682179-4] Payment processed: 6c9c5c73-94e5-4c94-ac9b-cb3411531bdc
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:24 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:24 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:24 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | [Worker worker-1753064890919622871-7] Payment processed: 6cf0c572-518f-47e7-b626-b3d36beb42b0
-api-2-1            | [Worker worker-1753064890919622871-1] Payment processed: bc3bb174-38cf-45a9-af38-d3837f709ec9
-api-2-1            | [Worker worker-1753064890919622871-15] Payment processed: 745ebab4-bb9a-41a2-a420-662fd6d0911c
-api-2-1            | 2025/07/21 02:28:24 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:24 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:24 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:24 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:24 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-6] Payment processed: eee7803f-c392-4594-ae6a-d652894da85c
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:24 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-1-1            | [Worker worker-1753064890960682179-8] Payment processed: 4aed29da-c2ea-46dd-9e71-0f131fc92828
-api-1-1            | 2025/07/21 02:28:24 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:24 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:24 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:24 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | [Worker worker-1753064890919622871-13] Payment processed: bc24b417-a8c5-40fb-bac8-24df66d9b026
-api-2-1            | [Worker worker-1753064890919622871-14] Payment processed: fb96ebde-7473-480c-bde1-f3d9146ade31
-api-2-1            | 2025/07/21 02:28:24 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:24 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-11] Payment processed: a79839a8-0b90-481d-8acd-23fa08e27c96
-api-2-1            | 2025/07/21 02:28:24 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:24 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:24 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-6] Payment processed: ece55038-cf80-43ab-a5be-0e1889a2f58e
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:24 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:24 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:24 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:24 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:24 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-5] Payment processed: 3ef6f816-0fd2-4ca0-9524-3571212e3f80
-api-2-1            | 2025/07/21 02:28:24 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:24 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-15] Payment processed: 38d671db-7298-4633-9b19-58e0a798145b
-api-2-1            | [Worker worker-1753064890919622871-8] Payment processed: 8b9068a4-7138-4b7c-8822-9a94b8bc82b0
-api-2-1            | 2025/07/21 02:28:24 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-4] Payment processed: f0b3221d-84ca-4baa-8962-1d8a092c529d
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:24 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-1-1            | [Worker worker-1753064890960682179-7] Payment processed: 84764f00-b32f-4bff-ab16-b55acbc76b5d
-api-1-1            | 2025/07/21 02:28:24 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:24 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:24 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | [Worker worker-1753064890919622871-5] Payment processed: a8288b6c-b9d1-4493-83b9-4bbbdbe57b44
-api-2-1            | [Worker worker-1753064890919622871-14] Payment processed: d8a74b52-b929-4efe-86a0-d163d3c1abb1
-api-2-1            | 2025/07/21 02:28:24 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:24 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:24 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:24 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:24 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-11] Payment processed: 76b71640-76de-456e-ba83-b3c59146b071
-api-2-1            | [Worker worker-1753064890919622871-11] Payment processed: d3a44240-6072-4d44-88c9-0b128c0d7c2a
-api-2-1            | 2025/07/21 02:28:24 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:24 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | [Worker worker-1753064890919622871-6] Payment processed: 2116a6c6-c172-4ed8-9b16-0d8c2de913d3
-api-2-1            | 2025/07/21 02:28:24 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:24 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:24 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:24 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:24 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:24 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-1] Payment processed: 63df570f-241a-4792-a51a-62e1a0477672
-api-2-1            | [Worker worker-1753064890919622871-13] Payment processed: 288836d0-f5e3-44c1-868b-a7f0beff2f4c
-api-2-1            | [Worker worker-1753064890919622871-12] Payment processed: a7f58d03-5691-4d86-b974-fe31e3d91102
-api-2-1            | 2025/07/21 02:28:24 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:24 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:24 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-8] Payment processed: b3b02ed5-b2d0-4ed5-a85b-1421b8d8afc5
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:24 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | [Worker worker-1753064890919622871-11] Payment processed: a3137d42-7687-4da2-8318-99a5c784f350
-api-2-1            | 2025/07/21 02:28:24 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:24 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-1-1            | 2025/07/21 02:28:24 PAYMENT SAVED ON REDIS
-api-1-1            | [Worker worker-1753064890960682179-10] Payment processed: 83db1184-2db3-4308-8e8b-4739ebe3aaf1
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:24 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:24 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:24 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | [Worker worker-1753064890919622871-0] Payment processed: 07207233-47c5-45fc-a5e3-62c927ca8bf3
-api-2-1            | [Worker worker-1753064890919622871-2] Payment processed: dad20dc7-4252-4655-a60c-ec11b4297095
-api-2-1            | [Worker worker-1753064890919622871-10] Payment processed: b69da00c-5812-43d0-81e4-8d2c57493433
-api-2-1            | 2025/07/21 02:28:24 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:24 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:24 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:24 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:24 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-11] Payment processed: bbc3599a-ea09-4171-b6ad-f9852fdfffdb
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:24 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-1-1            | 2025/07/21 02:28:24 PAYMENT SAVED ON REDIS
-api-1-1            | [Worker worker-1753064890960682179-12] Payment processed: 43042474-9384-4c33-b866-acdc1f05bc11
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:24 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:25 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:25 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:25 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | [Worker worker-1753064890919622871-3] Payment processed: 5af6bda7-e5da-4eaf-96fa-b5ce7e1b6ead
-api-2-1            | [Worker worker-1753064890919622871-7] Payment processed: 3c403321-66d8-4bda-a95e-8b30a1a3c09e
-api-2-1            | 2025/07/21 02:28:25 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:25 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-5] Payment processed: 4172e3ed-ba9d-4b59-a2bd-19ef09ef6a4c
-api-2-1            | [Worker worker-1753064890919622871-0] Payment processed: 6791c3e7-20a0-40ac-b9cd-bbc7ea0ec9af
-api-2-1            | 2025/07/21 02:28:25 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:25 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:25 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:25 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-11] Payment processed: 292ec874-9762-46a5-bbee-9d72804f8a98
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:25 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | [Worker worker-1753064890919622871-6] Payment processed: 2ee43b74-510f-4083-a149-f7d5eed890db
-api-2-1            | 2025/07/21 02:28:25 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:25 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:25 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:25 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:25 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:25 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:25 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-8] Payment processed: 420ef9f4-719b-42be-ab17-19bc4667cf1c
-api-2-1            | [Worker worker-1753064890919622871-12] Payment processed: 757902f0-6c14-45f0-9a0f-137096e38094
-api-2-1            | [Worker worker-1753064890919622871-13] Payment processed: 1069c4b6-678c-4a1f-8533-f556097062bd
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:25 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:25 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-11] Payment processed: 75ea8898-19e5-403a-a5b5-bb8cd46685dc
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:25 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-1-1            | [Worker worker-1753064890960682179-2] Payment processed: 5a16f038-81d4-48b0-b18e-c7dd36ca0556
-api-1-1            | 2025/07/21 02:28:25 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:25 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:25 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:25 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:25 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:25 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:25 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:25 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-15] Payment processed: 1812591f-096f-4d53-8126-6588fbd1c05b
-api-2-1            | [Worker worker-1753064890919622871-0] Payment processed: 30430d9d-6799-4985-97d6-3216e3567c16
-api-2-1            | [Worker worker-1753064890919622871-14] Payment processed: c8dbe155-508f-44bd-85c9-738a14c0a2f5
-api-2-1            | [Worker worker-1753064890919622871-2] Payment processed: 9c8c0005-1b40-4d33-ba1e-c4566b7ea2a2
-api-2-1            | 2025/07/21 02:28:25 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:25 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | [Worker worker-1753064890919622871-11] Payment processed: b7e696db-eb77-421f-b835-ff3e0f55dc66
-api-2-1            | 2025/07/21 02:28:25 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:25 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-1-1            | 2025/07/21 02:28:25 PAYMENT SAVED ON REDIS
-api-1-1            | [Worker worker-1753064890960682179-3] Payment processed: 9ed1cc58-1c08-4bad-8422-cc90458877da
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:25 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:25 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:25 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | [Worker worker-1753064890919622871-4] Payment processed: fafe8185-9d38-421d-b29c-719e61009630
-api-2-1            | 2025/07/21 02:28:25 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:25 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:25 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-5] Payment processed: cd72c506-54e1-43d8-8d80-4b1ee36a3ddd
-api-2-1            | [Worker worker-1753064890919622871-1] Payment processed: 35f7f3c0-3186-42dc-921f-603fb7b7182a
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:25 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | [Worker worker-1753064890919622871-2] Payment processed: 22e6fce5-71b1-4257-b254-fd58aa50a59b
-api-2-1            | 2025/07/21 02:28:25 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:25 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:25 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-11] Payment processed: 01e6c06d-0f95-4366-b731-85cfe47dabc4
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:25 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:25 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:25 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:25 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | [Worker worker-1753064890919622871-15] Payment processed: 04aa9788-b467-454d-9f8e-7c9eeaf0e5e4
-api-2-1            | [Worker worker-1753064890919622871-10] Payment processed: 073d9728-d554-4b5c-882c-51aac61b546d
-api-2-1            | [Worker worker-1753064890919622871-13] Payment processed: cd2cd14e-aec2-4292-8ae3-a8e7783dd92b
-api-2-1            | [Worker worker-1753064890919622871-8] Payment processed: 31dbd640-9cb4-4f4b-9484-86a3c72a1f3c
-api-2-1            | 2025/07/21 02:28:25 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:25 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:25 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:25 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:25 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:25 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-2] Payment processed: 4a2b450a-e0ec-4b53-85c7-9a26707f20fe
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:25 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-1-1            | 2025/07/21 02:28:25 PAYMENT SAVED ON REDIS
-api-1-1            | [Worker worker-1753064890960682179-9] Payment processed: 44de1403-243d-48f8-906c-1b697ae5233e
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:25 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:25 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:25 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | [Worker worker-1753064890919622871-7] Payment processed: b376c598-74e9-4b40-9f15-ddd5ed45824f
-api-2-1            | [Worker worker-1753064890919622871-3] Payment processed: 428f8a03-b47a-4d3e-964f-9b3ba06f805a
-api-2-1            | [Worker worker-1753064890919622871-12] Payment processed: 3eff5ad0-1b85-4a3e-8bed-7ce789779615
-api-2-1            | 2025/07/21 02:28:25 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:25 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:25 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:25 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:25 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-2] Payment processed: e2c9deee-3888-4bb6-b20d-1be96d7757eb
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:25 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | [Worker worker-1753064890919622871-11] Payment processed: c886a147-1445-4c87-8735-f9458a4b4c51
-api-2-1            | 2025/07/21 02:28:25 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:25 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-1-1            | [Worker worker-1753064890960682179-3] Payment processed: 06c690a2-b6fc-40ad-8583-4255de1d0659
-api-1-1            | 2025/07/21 02:28:25 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:25 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:25 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:25 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | [Worker worker-1753064890919622871-4] Payment processed: 9f536c3b-237e-481b-81cb-36d18f333283
-api-2-1            | [Worker worker-1753064890919622871-14] Payment processed: de6f9dba-c5ee-49d6-9a79-5fa5276a3530
-api-2-1            | [Worker worker-1753064890919622871-5] Payment processed: 45d64b15-e899-45c3-bb5c-82d28f25ee83
-api-2-1            | 2025/07/21 02:28:25 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:25 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:25 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:25 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | [Worker worker-1753064890919622871-2] Payment processed: 4df67c43-6d98-4812-a6e6-23d5fa13fd46
-api-2-1            | 2025/07/21 02:28:25 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:25 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-1-1            | [Worker worker-1753064890960682179-10] Payment processed: 3d9e8922-a4cb-4315-a477-f12e7c06971c
-api-1-1            | 2025/07/21 02:28:25 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:25 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:25 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:25 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:25 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | [Worker worker-1753064890919622871-3] Payment processed: ac559e31-f910-48a7-9e0e-70104aac9652
-api-2-1            | [Worker worker-1753064890919622871-1] Payment processed: c4553afa-ede6-4b2f-9729-f998dc180f6a
-api-2-1            | [Worker worker-1753064890919622871-0] Payment processed: 716c91fc-5af7-4326-bc20-55f9f1f7b6f8
-api-2-1            | [Worker worker-1753064890919622871-12] Payment processed: efa86a39-ac68-4b11-83ce-eb08fd9a5a4b
-api-2-1            | 2025/07/21 02:28:25 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:25 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:25 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:25 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:25 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:25 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | [Worker worker-1753064890919622871-11] Payment processed: 525d65d8-9b5d-435f-bc9e-f73cfa55ad7c
-api-2-1            | 2025/07/21 02:28:25 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:25 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-11] Payment processed: 1373ad15-845d-42b5-94a0-0f6e0d1c6440
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:25 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-1-1            | [Worker worker-1753064890960682179-6] Payment processed: b105b9e4-5da4-442b-874a-f3c86e8b5576
-api-1-1            | 2025/07/21 02:28:25 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:25 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:25 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:25 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:25 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-7] Payment processed: 1fc426d9-a9cb-4c34-9657-ab4cc79ef3fe
-api-2-1            | [Worker worker-1753064890919622871-3] Payment processed: ffc2e1c0-3115-4f6b-8cbf-e0c76d9e06ae
-api-2-1            | 2025/07/21 02:28:25 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:25 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-12] Payment processed: 830606f1-e2d1-444f-a946-4c6c46b9946a
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:25 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | [Worker worker-1753064890919622871-2] Payment processed: 9c522f87-4240-4dab-880d-9526e686de89
-api-2-1            | 2025/07/21 02:28:25 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:25 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:25 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | [Worker worker-1753064890919622871-9] Payment processed: c9530569-ba2e-4adf-aa7f-febd25c9feb7
-api-2-1            | [Worker worker-1753064890919622871-6] Payment processed: fd60c143-a7c7-4f24-9ede-1881e0bdea13
-api-2-1            | 2025/07/21 02:28:25 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:25 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:25 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:25 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:25 Leader: Performing health check...
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:25 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:25 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:25 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:25 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:25 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:25 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-15] Payment processed: 0a6b4d45-3dbd-4040-9772-8c8ef5f33748
-api-2-1            | [Worker worker-1753064890919622871-1] Payment processed: 10480f5d-1fbd-4ece-a074-264c2abdf2b0
-api-2-1            | [Worker worker-1753064890919622871-14] Payment processed: 7e520853-447f-445c-ad60-c43d8ad12e49
-api-2-1            | [Worker worker-1753064890919622871-7] Payment processed: 322e0ae5-4452-44e0-8f64-2a378a64ccaa
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:25 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:25 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-2] Payment processed: 9056d941-17d2-49dc-beea-6ba2fb6c91d1
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:25 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:25 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-1-1            | 2025/07/21 02:28:25 PAYMENT SAVED ON REDIS
-api-1-1            | [Worker worker-1753064890960682179-12] Payment processed: 9c260ce4-db44-45e5-b846-4d53d383f3e4
-api-1-1            | [Worker worker-1753064890960682179-15] Payment processed: 0f41c257-bcd4-4f72-b021-c5cd9944d991
-api-1-1            | 2025/07/21 02:28:25 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-13] Payment processed: f14c748e-8920-4e4b-a941-7346b0dfd47a
-api-2-1            | [Worker worker-1753064890919622871-4] Payment processed: 43892e02-27fe-404d-9fec-9b63ae61ced6
-api-2-1            | [Worker worker-1753064890919622871-10] Payment processed: 1454be97-6b01-48a4-b54a-ec85b0aeded4
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-2] Payment processed: 81ac07f1-1ecf-4dc2-b3ee-f7d7463feb72
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-11] Payment processed: 8b19d1ff-631a-4840-bbff-a44c607c0bda
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | [Worker worker-1753064890919622871-12] Payment processed: 5b8cc2cf-a126-4b03-94a6-7a190783366d
-api-2-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-15] Payment processed: 644df49e-0b9f-42a1-b875-82ac4690ac24
-api-2-1            | [Worker worker-1753064890919622871-1] Payment processed: e6af68cc-5a83-47ed-b1c7-a9f99572fd93
-api-2-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-14] Payment processed: c3566b9a-9a7b-44e0-ab66-cdac94ebf2e2
-api-2-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-8] Payment processed: 4b74fe23-4bad-4549-a1af-ebd311ea96ff
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | [Worker worker-1753064890919622871-2] Payment processed: 7294de93-ce07-4eeb-9e79-13b9d107290a
-api-2-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-1-1            | [Worker worker-1753064890960682179-5] Payment processed: 104a78d5-a22f-4d85-8515-f73b973cf7c7
-api-1-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | [Worker worker-1753064890919622871-4] Payment processed: 3c32423e-bbb2-43b4-bb66-2098b55108f0
-api-2-1            | [Worker worker-1753064890919622871-7] Payment processed: 5dda03a4-f128-4a48-8a16-3a42baf2a7c2
-api-2-1            | [Worker worker-1753064890919622871-5] Payment processed: cad429e3-568d-454e-9f45-e041c226e25d
-api-2-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-13] Payment processed: 3591e178-fc14-4167-8aaa-49677773d586
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | [Worker worker-1753064890919622871-2] Payment processed: 2adfc5a5-36a6-4f67-b5d5-076b273aa277
-api-2-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-2] Payment processed: 32da3b43-91f3-4a51-b052-4d26d63e446e
-api-2-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-12] Payment processed: ff275014-e7c9-4dd4-ba50-06b3f50fbf4c
-api-2-1            | [Worker worker-1753064890919622871-3] Payment processed: 9b9ce559-9e4b-4c73-9e00-44256fd69527
-api-2-1            | [Worker worker-1753064890919622871-1] Payment processed: f3811fec-1c52-42dc-b034-9cc4379252b5
-api-2-1            | [Worker worker-1753064890919622871-0] Payment processed: 5b9b1eb8-9b51-4935-b2ae-1db5f4f0d4ab
-api-2-1            | [Worker worker-1753064890919622871-14] Payment processed: 8ac95fcb-b9db-4a07-b6ad-04354e0bc70e
-api-2-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | [Worker worker-1753064890919622871-2] Payment processed: 156646e2-7e6b-444c-a194-a5da19827709
-api-2-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-1-1            | [Worker worker-1753064890960682179-15] Payment processed: 8985b733-7e76-4b5b-960d-5c01ab117c59
-api-1-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | [Worker worker-1753064890919622871-10] Payment processed: e6ea1dcf-46ae-467a-bf63-5b8a0eef126b
-api-2-1            | [Worker worker-1753064890919622871-8] Payment processed: deaa8a94-a6cf-4f48-83cf-ec21252e5ee7
-api-2-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-5] Payment processed: 0f037d6e-1ea9-4615-9c0d-f5a99a56b515
-api-2-1            | [Worker worker-1753064890919622871-4] Payment processed: cba9633a-3d47-49e6-a53b-4e50f8460be5
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-5] Payment processed: 09483772-8460-48fd-b890-8d1c30f9ce1c
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | [Worker worker-1753064890919622871-11] Payment processed: 4fb745f9-0966-4955-b106-3eaf0a01dd05
-api-2-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-3] Payment processed: 9cb924d3-0796-4956-b75c-772b124dba99
-api-2-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-7] Payment processed: 622060da-88c0-49e3-97b7-107c8ea6d668
-api-2-1            | [Worker worker-1753064890919622871-10] Payment processed: 75b07a02-fdc5-4fb1-aa2b-a5bfca71c439
-api-2-1            | [Worker worker-1753064890919622871-13] Payment processed: c3a2ca13-019a-4e44-b869-bf7fc0606e18
-api-2-1            | [Worker worker-1753064890919622871-15] Payment processed: 3f9b0f2c-2a71-4f62-beaa-a7e2c1f3d55c
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | [Worker worker-1753064890919622871-2] Payment processed: 77f36ff7-dddb-4b57-876c-77b5e8fe25f9
-api-2-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-6] Payment processed: 931e33b6-53db-4ae9-8f5a-e0c82015396a
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-1] Payment processed: 428be28b-9f02-4f8d-9a92-76dffa17fffc
-api-2-1            | [Worker worker-1753064890919622871-12] Payment processed: 2161b16f-9d65-4cfc-8fe9-a321044f4de5
-api-2-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-0] Payment processed: 83cb7e0e-bbff-4279-a57b-a75e354b4e5a
-api-2-1            | [Worker worker-1753064890919622871-8] Payment processed: 0803e2a1-d36f-4885-b9aa-8492c2e7f951
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | [Worker worker-1753064890919622871-0] Payment processed: a33a6957-9caa-4af1-8f9a-5524f8737ba8
-api-2-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-11] Payment processed: 8d34b675-b9bb-4ff5-936c-9d594efadc60
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-3] Payment processed: cb6c25d9-cb91-4061-9a29-45fd16909a48
-api-2-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-1] Payment processed: e55f1f57-46ef-4536-8e44-a5753859650f
-api-2-1            | [Worker worker-1753064890919622871-8] Payment processed: 257745a3-1cc9-4d33-a271-8934df7e231c
-api-2-1            | [Worker worker-1753064890919622871-7] Payment processed: 41091858-6793-455a-9c20-4a76997acf4a
-api-2-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-12] Payment processed: 15fff760-5cd9-4917-94b4-f2259405baed
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-14] Payment processed: d9bbb05a-ae3d-44eb-9c9f-4c7b56f01319
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-2] Payment processed: 2b38ebc9-472c-4da1-89b8-e7fea5995a55
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | [Worker worker-1753064890919622871-9] Payment processed: 12086515-7104-40c8-b89a-571b2791db65
-api-2-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-13] Payment processed: 9b90c923-6fad-4320-8538-f88dce6b8abb
-api-2-1            | [Worker worker-1753064890919622871-15] Payment processed: e2bc020f-6c0b-4fab-abe4-0aeb414956b6
-api-2-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-5] Payment processed: c4c15a1d-5c4a-4b63-92a3-1a3030806484
-api-2-1            | [Worker worker-1753064890919622871-4] Payment processed: f73d734b-c19c-44ff-a97e-37b24e0b9321
-api-2-1            | [Worker worker-1753064890919622871-10] Payment processed: 10b730db-d3d0-4b64-ad93-62f48314ff7e
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | [Worker worker-1753064890919622871-2] Payment processed: 4a7b34c6-7a41-4d37-ad08-3f2ef09c384d
-api-2-1            | [Worker worker-1753064890919622871-11] Payment processed: e2fef70a-44ff-4c6d-9fb2-47e3ca981433
-api-2-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-8] Payment processed: 03e437f4-7aa1-4ac7-a75b-7fe6b64e46c8
-api-2-1            | [Worker worker-1753064890919622871-5] Payment processed: ef5568a3-afaf-4b46-a870-5dfcc6b73e9d
-api-2-1            | [Worker worker-1753064890919622871-12] Payment processed: 0d3f3371-5f17-4241-baf5-23ec2fe47600
-api-2-1            | [Worker worker-1753064890919622871-13] Payment processed: 6fbb2ba4-1684-4ab7-bfe2-8aef906ba20e
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-14] Payment processed: 5cfa39b3-a022-405c-b9e3-bd85c7e95643
-api-2-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-14] Payment processed: 7fe98500-36eb-4cb1-ad5f-35e1ab103abc
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:26 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | [Worker worker-1753064890919622871-11] Payment processed: 7ea1fc37-43ae-4b97-bdef-cd8317317d6d
-api-2-1            | [Worker worker-1753064890919622871-2] Payment processed: f721ba0c-71b4-484f-ba6f-9aea3682b8d3
-api-2-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:26 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:27 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:27 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:27 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:27 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | [Worker worker-1753064890919622871-4] Payment processed: 500eb177-60c5-4c17-8092-b8edc2747d37
-api-2-1            | [Worker worker-1753064890919622871-7] Payment processed: c211311d-69c6-41c4-8df5-7abe561bef2b
-api-2-1            | [Worker worker-1753064890919622871-10] Payment processed: ed4f51ea-d69f-4971-b6ef-13c58dcddbe6
-api-2-1            | 2025/07/21 02:28:27 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:27 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:27 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:27 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-0] Payment processed: 2c56cc82-bb82-4358-9297-16867367ea80
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:27 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:27 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | [Worker worker-1753064890919622871-11] Payment processed: a28a2aad-72fc-4d1a-8726-8ab26d78e877
-api-2-1            | [Worker worker-1753064890919622871-2] Payment processed: ce50d50d-66cb-4c7a-91bc-3d174a9d7380
-api-2-1            | 2025/07/21 02:28:27 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:27 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:27 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:27 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-1-1            | [Worker worker-1753064890960682179-12] Payment processed: 23a2fa5b-e633-4988-90f7-1911f102a571
-api-1-1            | [Worker worker-1753064890960682179-2] Payment processed: 736ddfd5-be13-46d2-a070-e616d18ab333
-api-1-1            | 2025/07/21 02:28:27 PAYMENT SAVED ON REDIS
-api-1-1            | 2025/07/21 02:28:27 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:27 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:27 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:27 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | [Worker worker-1753064890919622871-3] Payment processed: c6237226-ecfe-4ba7-9f01-0b7d044f6adb
-api-2-1            | 2025/07/21 02:28:27 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:27 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-15] Payment processed: c69e6237-6b25-49a9-a9bf-4888196b8a8f
-api-2-1            | 2025/07/21 02:28:27 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-8] Payment processed: 404ff39d-10ac-4aed-9d1c-3adf8e5c4cbe
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:27 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:27 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-14] Payment processed: 19851bae-2c8d-4cff-b705-220c00435480
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:27 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:27 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:27 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:27 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-11] Payment processed: 5438dae1-32b3-440f-9904-c9a6db46c060
-api-2-1            | [Worker worker-1753064890919622871-2] Payment processed: 58982a38-bd5b-496a-bb42-de5055b30aa3
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:27 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:27 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:27 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-6] Payment processed: ebef922a-98cf-4c33-a3c2-b05d67fac2b8
-api-2-1            | 2025/07/21 02:28:27 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-9] Payment processed: f4baf029-aeee-4b0c-a5b3-772bb15db496
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:27 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:27 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:27 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | [Worker worker-1753064890919622871-7] Payment processed: 15353556-176b-458f-ae6a-b20df33a8419
-api-2-1            | [Worker worker-1753064890919622871-1] Payment processed: 7e74a293-b6a9-4693-ad01-d5a6355f32cf
-api-2-1            | [Worker worker-1753064890919622871-5] Payment processed: 80937b5c-752a-404f-b30c-b6ace621b49f
-api-2-1            | 2025/07/21 02:28:27 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:27 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:27 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:27 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:27 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-2] Payment processed: 0a7bc00b-da1c-4a75-98f2-f9623e28ec6f
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:27 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:27 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-1-1            | [Worker worker-1753064890960682179-4] Payment processed: 54d73188-02b0-4969-8232-fb849cc79e65
-api-1-1            | [Worker worker-1753064890960682179-13] Payment processed: 8086e9c4-505a-4a6c-947b-09872fc23a40
-api-1-1            | 2025/07/21 02:28:27 PAYMENT SAVED ON REDIS
-api-1-1            | 2025/07/21 02:28:27 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:27 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:27 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:27 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:27 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:27 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:27 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:27 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:27 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-10] Payment processed: 756aa398-a5f1-4bd4-a959-b6626407e11d
-api-2-1            | [Worker worker-1753064890919622871-0] Payment processed: 7f5c73ab-f6cb-4a5c-9485-ab43085ef626
-api-2-1            | [Worker worker-1753064890919622871-4] Payment processed: a9c90d0b-107a-44bc-b78f-58293e15287b
-api-2-1            | [Worker worker-1753064890919622871-13] Payment processed: 543ad145-0763-43f2-a33e-0e0a3bea8bc9
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:27 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | 2025/07/21 02:28:27 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-14] Payment processed: fd6802f0-d5b9-41e9-822e-2c210c89061c
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:27 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | [Worker worker-1753064890919622871-11] Payment processed: dc98fdc4-09a4-479f-8415-6c11957a7ec8
-api-2-1            | 2025/07/21 02:28:27 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:27 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:27 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | [Worker worker-1753064890919622871-9] Payment processed: ef49dded-8c86-4d10-b717-db9b281c5f53
-api-2-1            | [Worker worker-1753064890919622871-6] Payment processed: 0c007d35-d0c3-473e-821e-52fb8b1696b7
-api-2-1            | 2025/07/21 02:28:27 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:27 PAYMENT SAVED ON REDIS
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:27 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:27 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:27 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:27 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | [Worker worker-1753064890919622871-12] Payment processed: 9aefa94b-a1e3-41da-b692-eb6c1bc31869
-api-2-1            | 2025/07/21 02:28:27 PAYMENT SAVED ON REDIS
-api-2-1            | 2025/07/21 02:28:27 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-5] Payment processed: 1b4324cf-9f20-47e0-a0aa-d3fa77fa96fc
-api-2-1            | 2025/07/21 02:28:27 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-1] Payment processed: 408596db-bf16-449e-985f-450b2a50e5cc
-api-2-1            | 2025/07/21 02:28:27 PAYMENT SAVED ON REDIS
-api-2-1            | [Worker worker-1753064890919622871-8] Payment processed: be6d05c7-c09b-40cd-8eba-8e6540e92320
-load-balancer      | 172.20.0.1 - - [21/Jul/2025:02:28:27 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
-api-2-1            | [Worker worker-1753064890919622871-14] Payment processed: 422989d7-6b5d-4d16-a2de-1d948c2c30ca
-api-2-1            | 2025/07/21 02:28:27 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:00 +0000] "GET /payments-summary HTTP/1.1" 200 94 "-" "curl/7.88.1"
+api-2-1            | 2025/07/30 02:52:02 Leader: Performing health check...
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:06 +0000] "POST /purge-payments HTTP/1.1" 404 27 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:06 +0000] "GET /payments-summary?from=2025-07-30T02:51:56.545Z&to=2025-07-30T02:52:06.445Z HTTP/1.1" 200 94 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:06 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | [Worker worker-1753843917181731279-3] Payment processed: f1f3b93c-45cb-4817-989c-5c648ee6600d
+api-1-1            | 2025/07/30 02:52:06 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:06 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | [Worker worker-1753843917181731279-11] Payment processed: c1161d11-13ed-4b34-8519-c3ac7a16edcf
+api-1-1            | 2025/07/30 02:52:06 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:06 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | 2025/07/30 02:52:06 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-10] Payment processed: 4dd39347-5115-4c73-9d0c-5ee936e0b871
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:06 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | 2025/07/30 02:52:06 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-10] Payment processed: 069f71e9-5cc9-4b9e-a1a2-ab7e98244e30
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:06 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-2-1            | [Worker worker-1753843917134909670-7] Payment processed: 9720f4bf-4cfd-416d-9132-e0bb3d1e479c
+api-2-1            | 2025/07/30 02:52:07 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:07 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-2-1            | [Worker worker-1753843917134909670-10] Payment processed: 00d7bc7e-47ca-4d0a-8649-1d87cd2d38d1
+api-2-1            | 2025/07/30 02:52:07 PAYMENT SAVED ON REDIS
+api-2-1            | 2025/07/30 02:52:07 Leader: Performing health check...
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:07 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-2-1            | [Worker worker-1753843917134909670-5] Payment processed: 468ca718-1840-4e69-bc74-2166c159877b
+api-2-1            | 2025/07/30 02:52:07 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:07 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-2-1            | 2025/07/30 02:52:07 PAYMENT SAVED ON REDIS
+api-2-1            | [Worker worker-1753843917134909670-14] Payment processed: 1a46f691-b24e-40d4-a797-79f44a725dba
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:07 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-2-1            | [Worker worker-1753843917134909670-2] Payment processed: 14516b7d-3888-4c23-9582-518d26b9aa53
+api-2-1            | 2025/07/30 02:52:07 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:07 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:07 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | [Worker worker-1753843917181731279-12] Payment processed: f7b78fcd-5863-4924-8dfa-a4dfea17c31a
+api-1-1            | 2025/07/30 02:52:07 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-11] Payment processed: 4853fc9b-8c4a-4799-9524-5211c100ed16
+api-1-1            | 2025/07/30 02:52:07 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:07 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:07 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | [Worker worker-1753843917181731279-8] Payment processed: 526007ab-93b5-437f-b64c-71ba89368eb3
+api-1-1            | [Worker worker-1753843917181731279-13] Payment processed: aa9a89d5-8203-4f8c-920f-73960c2c3b78
+api-1-1            | 2025/07/30 02:52:07 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:07 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:07 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:07 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | 2025/07/30 02:52:07 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:07 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-1] Payment processed: 3d3152cc-abe2-40bd-bb83-d1cd8513377f
+api-1-1            | [Worker worker-1753843917181731279-2] Payment processed: ce64afb5-bd03-4b64-afe0-79a9d10a857c
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:07 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:07 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | 2025/07/30 02:52:07 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:07 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-7] Payment processed: 8a56b813-ebd5-4cf3-9673-6e76fac6ad9d
+api-1-1            | [Worker worker-1753843917181731279-9] Payment processed: 77493d98-2bd3-4374-924e-5820f70061e7
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:07 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:07 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | [Worker worker-1753843917181731279-1] Payment processed: 462e0010-7e17-491b-9184-1bdb42c4fe51
+api-1-1            | 2025/07/30 02:52:07 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-1] Payment processed: a7dc90e8-3111-45a5-bf15-4b224421c57c
+api-1-1            | 2025/07/30 02:52:07 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:08 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | [Worker worker-1753843917181731279-5] Payment processed: 761a0fe2-1fee-4cab-a996-85bfc8e7de7a
+api-1-1            | 2025/07/30 02:52:08 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:08 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-2-1            | 2025/07/30 02:52:08 PAYMENT SAVED ON REDIS
+api-2-1            | [Worker worker-1753843917134909670-6] Payment processed: e9953811-a01a-48f3-8fca-f4dd5854deda
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:08 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | [Worker worker-1753843917181731279-5] Payment processed: 758f55e1-ecd9-4dde-8bf1-74601bfc6710
+api-1-1            | 2025/07/30 02:52:08 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:08 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-2-1            | [Worker worker-1753843917134909670-7] Payment processed: 707436eb-d274-490b-a79c-1029c25aa7f1
+api-2-1            | 2025/07/30 02:52:08 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:08 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:08 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-2-1            | [Worker worker-1753843917134909670-0] Payment processed: 27e91ccf-b746-4f3f-8a65-1f73a9f50289
+api-2-1            | [Worker worker-1753843917134909670-10] Payment processed: b27b41b4-68de-4b30-886f-26efae24b92f
+api-2-1            | 2025/07/30 02:52:08 PAYMENT SAVED ON REDIS
+api-2-1            | 2025/07/30 02:52:08 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:08 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:08 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-2-1            | [Worker worker-1753843917134909670-7] Payment processed: fb1119b9-b938-4d7a-888c-c6bafcf8f017
+api-2-1            | [Worker worker-1753843917134909670-14] Payment processed: 45169363-5753-41ca-8728-a4a906fd3d3f
+api-2-1            | 2025/07/30 02:52:08 PAYMENT SAVED ON REDIS
+api-2-1            | 2025/07/30 02:52:08 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:08 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-2-1            | 2025/07/30 02:52:08 PAYMENT SAVED ON REDIS
+api-2-1            | [Worker worker-1753843917134909670-6] Payment processed: 992c1389-7848-458f-9280-4f56e5cdf507
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:08 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:08 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | [Worker worker-1753843917181731279-4] Payment processed: 3e67b5bc-d299-4afc-9fef-c884859a8a84
+api-1-1            | [Worker worker-1753843917181731279-12] Payment processed: 6f014d68-e125-4807-84f0-079ca700a506
+api-1-1            | 2025/07/30 02:52:08 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:08 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:08 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-2-1            | 2025/07/30 02:52:08 PAYMENT SAVED ON REDIS
+api-2-1            | [Worker worker-1753843917134909670-13] Payment processed: 19cc4e23-327b-4652-a91d-74aec74d3441
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:08 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:08 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | 2025/07/30 02:52:08 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:08 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-0] Payment processed: 550e6e7c-5a46-4985-9f31-a6c653f7aec8
+api-1-1            | [Worker worker-1753843917181731279-13] Payment processed: f9dfc716-40e4-4716-bbc0-a67329ac9d38
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:08 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-2-1            | [Worker worker-1753843917134909670-0] Payment processed: f5b2425e-86b3-45ea-9b7a-eebb5af4bbe8
+api-2-1            | 2025/07/30 02:52:08 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:08 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:08 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | 2025/07/30 02:52:08 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:08 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-15] Payment processed: b166ec9b-7c02-4211-be13-cd8335a55b75
+api-1-1            | [Worker worker-1753843917181731279-3] Payment processed: 69ead789-10ba-4041-af72-de38312125aa
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:08 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:08 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:08 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | 2025/07/30 02:52:08 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:08 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-8] Payment processed: 5abac6bc-579b-4fef-a39e-73847e328100
+api-1-1            | [Worker worker-1753843917181731279-2] Payment processed: 00fe75f5-74c5-4a43-b44a-91373f7fb433
+api-1-1            | [Worker worker-1753843917181731279-6] Payment processed: bc300b4a-47a3-43a3-a59e-603e007ca76f
+api-1-1            | 2025/07/30 02:52:08 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:08 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:08 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:08 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | 2025/07/30 02:52:08 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:08 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:08 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-14] Payment processed: d5325138-286a-4ebf-9fbd-e2ed2c4c9367
+api-1-1            | [Worker worker-1753843917181731279-11] Payment processed: 052de0a2-74fe-421d-a6ce-37a30f7d6c3f
+api-1-1            | [Worker worker-1753843917181731279-4] Payment processed: 06de8c6d-604e-4bb2-b0d0-aac2e052663a
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:09 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:09 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | 2025/07/30 02:52:09 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:09 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-15] Payment processed: 16fabe62-7e54-49b8-91d2-ed786c100ffc
+api-1-1            | [Worker worker-1753843917181731279-3] Payment processed: 6f68e9df-5321-42b6-900b-1b0cb0dc5b71
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:09 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | [Worker worker-1753843917181731279-9] Payment processed: 7c60c7a5-13ed-4455-be06-601419c14375
+api-1-1            | 2025/07/30 02:52:09 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:09 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:09 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | 2025/07/30 02:52:09 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:09 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-1] Payment processed: ee7000bc-c1a3-4965-b940-c90efc5a6681
+api-1-1            | [Worker worker-1753843917181731279-5] Payment processed: b4d799b4-5a4b-4098-b7c3-118d9c7f4258
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:09 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | [Worker worker-1753843917181731279-9] Payment processed: 86016888-2d20-4208-b8fd-7a9f26b1890f
+api-1-1            | 2025/07/30 02:52:09 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:09 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:09 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | 2025/07/30 02:52:09 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-13] Payment processed: a5f76700-dc1d-4042-8f45-7a826da09c22
+api-1-1            | [Worker worker-1753843917181731279-5] Payment processed: 7025aff0-c223-4790-b3a8-c4b09521ae83
+api-1-1            | 2025/07/30 02:52:09 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:09 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-2-1            | [Worker worker-1753843917134909670-12] Payment processed: 2d86af11-810c-4810-bb29-73734ddea63b
+api-2-1            | 2025/07/30 02:52:09 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:09 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | [Worker worker-1753843917181731279-14] Payment processed: c81602ff-f0bc-40d8-8c7c-7112e8e8f489
+api-1-1            | 2025/07/30 02:52:09 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:09 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | [Worker worker-1753843917181731279-9] Payment processed: da9cd752-5aab-4e19-9cc2-a8f062dfc655
+api-1-1            | 2025/07/30 02:52:09 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:09 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-2-1            | [Worker worker-1753843917134909670-1] Payment processed: 3931047b-89c9-43d6-961e-d48a4a06f71a
+api-2-1            | 2025/07/30 02:52:09 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:09 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | 2025/07/30 02:52:09 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-14] Payment processed: 90486de0-6de5-4655-91d9-28b194b4fd47
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:09 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:09 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-2-1            | [Worker worker-1753843917134909670-12] Payment processed: 96f7e708-4a34-41f3-9e79-250a259d45bd
+api-2-1            | 2025/07/30 02:52:09 PAYMENT SAVED ON REDIS
+api-2-1            | [Worker worker-1753843917134909670-11] Payment processed: be937e32-b0b3-4db2-bbac-0873e62e31c5
+api-2-1            | 2025/07/30 02:52:09 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:09 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | [Worker worker-1753843917181731279-11] Payment processed: d22f13ed-a238-4380-8610-dcae263edbc6
+api-1-1            | 2025/07/30 02:52:09 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:09 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | [Worker worker-1753843917181731279-9] Payment processed: 14cc518a-e800-478f-9e22-bbe1d2b04161
+api-1-1            | 2025/07/30 02:52:09 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:09 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:09 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:09 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | [Worker worker-1753843917181731279-4] Payment processed: b27451a2-8b07-4224-a175-c9d6913a422f
+api-1-1            | 2025/07/30 02:52:09 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:09 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:09 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-0] Payment processed: 9d323298-25d4-4711-ad5c-8196055d96ca
+api-1-1            | [Worker worker-1753843917181731279-12] Payment processed: 850872a6-9208-4d3d-90c1-dda8e7f3c1e7
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:09 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | 2025/07/30 02:52:09 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-9] Payment processed: ace92c13-d012-4110-971d-209f37463a41
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:09 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-2-1            | 2025/07/30 02:52:09 PAYMENT SAVED ON REDIS
+api-2-1            | [Worker worker-1753843917134909670-5] Payment processed: 714c2116-e531-4b94-a0f6-76d49d0006ae
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:09 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:09 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | 2025/07/30 02:52:09 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:09 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-8] Payment processed: 680eecb7-1324-42ae-949f-7515100a6590
+api-1-1            | [Worker worker-1753843917181731279-3] Payment processed: 77a38cde-4276-4165-ad10-fa2da5cef0c3
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:09 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-2-1            | [Worker worker-1753843917134909670-1] Payment processed: b55f5edd-c801-4eab-8e9f-87f828e14f96
+api-2-1            | 2025/07/30 02:52:09 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:09 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:09 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:09 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | 2025/07/30 02:52:09 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:09 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:09 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-11] Payment processed: de95c369-1e77-4a5d-8ba1-2a3eadf95058
+api-1-1            | [Worker worker-1753843917181731279-1] Payment processed: 88ef3a13-b732-4f84-9c66-69b9c1d18735
+api-1-1            | [Worker worker-1753843917181731279-4] Payment processed: 76bc4d6a-0374-456a-b508-f58d3832b3f7
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:09 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-2-1            | [Worker worker-1753843917134909670-12] Payment processed: aef4da0b-5d76-4286-be58-bb8301d6b453
+api-2-1            | 2025/07/30 02:52:09 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:09 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:09 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:09 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | [Worker worker-1753843917181731279-2] Payment processed: 215cb837-78ca-4b82-a5eb-3325963ec65c
+api-1-1            | [Worker worker-1753843917181731279-13] Payment processed: a3d3cb24-4851-4c93-899f-b9afb7ffabe1
+api-1-1            | [Worker worker-1753843917181731279-12] Payment processed: db298ccc-adba-446b-8922-a6548a7234ec
+api-1-1            | 2025/07/30 02:52:10 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:10 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:10 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:10 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:10 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:10 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:10 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | 2025/07/30 02:52:10 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:10 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-8] Payment processed: c537e284-0b3e-4f4e-8eca-8b725222de5d
+api-1-1            | 2025/07/30 02:52:10 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:10 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-4] Payment processed: b0c4926e-0e46-4a1a-b5a2-ddfe0ebd6607
+api-1-1            | [Worker worker-1753843917181731279-3] Payment processed: 4cf20922-2328-4e91-ad03-4818a5225018
+api-1-1            | [Worker worker-1753843917181731279-1] Payment processed: 3ccc499a-5b27-45f4-8c15-372c04123122
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:10 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:10 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:10 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | 2025/07/30 02:52:10 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-2] Payment processed: f854278f-a75d-4463-9b30-cf9ba40f4f75
+api-1-1            | [Worker worker-1753843917181731279-15] Payment processed: 284458ce-df5c-4a39-a3c2-dd5dca90ba8f
+api-1-1            | [Worker worker-1753843917181731279-13] Payment processed: 77970375-d453-4106-990b-0d04dbc9face
+api-1-1            | 2025/07/30 02:52:10 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:10 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:10 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | [Worker worker-1753843917181731279-9] Payment processed: 5c67682d-3f0c-43ee-b73a-99a7c504e4c2
+api-1-1            | 2025/07/30 02:52:10 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:10 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:10 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:10 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | [Worker worker-1753843917181731279-5] Payment processed: d4ed66d2-b10e-4493-9791-8a161f3a11cc
+api-1-1            | [Worker worker-1753843917181731279-12] Payment processed: b4faa1d0-bae9-4426-92b4-762f0c99f73d
+api-1-1            | 2025/07/30 02:52:10 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:10 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-11] Payment processed: 69c091d3-6023-44f7-b0ed-191dca7b3f79
+api-1-1            | 2025/07/30 02:52:10 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:10 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | [Worker worker-1753843917181731279-9] Payment processed: 3ffe444a-178a-4a91-a47f-2202d3c631e9
+api-1-1            | 2025/07/30 02:52:10 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:10 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:10 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | 2025/07/30 02:52:10 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:10 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-0] Payment processed: dbab08d5-968f-47a9-b6ed-06ff4eb1a754
+api-1-1            | [Worker worker-1753843917181731279-10] Payment processed: e47fbc44-319b-4ac2-95c3-2607bdf866aa
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:10 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:10 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | [Worker worker-1753843917181731279-9] Payment processed: 8bfe219b-d7aa-426a-a27c-fa75fbda8396
+api-1-1            | 2025/07/30 02:52:10 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:10 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-9] Payment processed: 9260853d-9251-401c-b836-a31068f34bf3
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:10 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:10 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | 2025/07/30 02:52:10 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:10 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-7] Payment processed: 891ecff6-6c19-41a7-95cf-7fa663295056
+api-1-1            | [Worker worker-1753843917181731279-11] Payment processed: 0ee712e3-c6fc-42c0-a5bc-f0663045cf7e
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:10 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | [Worker worker-1753843917181731279-9] Payment processed: 697669ff-5981-4db0-b263-0700d24972a0
+api-1-1            | 2025/07/30 02:52:10 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:10 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-2-1            | 2025/07/30 02:52:10 PAYMENT SAVED ON REDIS
+api-2-1            | [Worker worker-1753843917134909670-6] Payment processed: 03d0edaa-3ca1-478b-8302-2cba2ab7ff16
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:10 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:10 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | [Worker worker-1753843917181731279-5] Payment processed: 148fef06-b261-4444-a250-d71737fd939c
+api-1-1            | [Worker worker-1753843917181731279-7] Payment processed: 012637a7-09ea-4117-a076-be7b7eeb73ff
+api-1-1            | 2025/07/30 02:52:10 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:10 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:10 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | [Worker worker-1753843917181731279-9] Payment processed: d8f2340a-6c78-40b5-8740-2e65a16ca34d
+api-1-1            | 2025/07/30 02:52:10 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:10 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:10 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:10 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:10 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | [Worker worker-1753843917181731279-3] Payment processed: 4d57ff44-6083-45a9-8523-cf6296a6db70
+api-1-1            | 2025/07/30 02:52:10 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-0] Payment processed: d8f579a0-54f3-40b0-99c0-82f7e796880e
+api-1-1            | 2025/07/30 02:52:10 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:10 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-13] Payment processed: 653eedff-e0f1-4524-b3e6-adc6b474c242
+api-1-1            | [Worker worker-1753843917181731279-2] Payment processed: 5a745ea2-d3ea-41bd-aea2-ff0b388bc4a9
+api-1-1            | 2025/07/30 02:52:10 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:10 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:10 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | [Worker worker-1753843917181731279-9] Payment processed: 52b52f86-914b-4dfd-8239-7cc3037e73df
+api-1-1            | 2025/07/30 02:52:10 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:10 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-9] Payment processed: 2f737a22-6154-4451-891b-a64b1d882c40
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:10 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:10 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | 2025/07/30 02:52:10 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-14] Payment processed: 142bdd18-90cb-4a70-a4f4-78bdfa9dcfb7
+api-1-1            | [Worker worker-1753843917181731279-11] Payment processed: bdb848cb-1414-4626-81b9-a2183ee48444
+api-1-1            | 2025/07/30 02:52:10 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:10 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:10 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | [Worker worker-1753843917181731279-9] Payment processed: b2e888cc-8e4d-44cc-b5d9-19b88d8ff5ce
+api-1-1            | 2025/07/30 02:52:10 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:10 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-9] Payment processed: 3d24b455-53d4-4565-8ff4-663bf9bca2e2
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:10 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:10 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:10 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | [Worker worker-1753843917181731279-6] Payment processed: ef32a757-caae-4b38-9be8-142ced23eb14
+api-1-1            | 2025/07/30 02:52:10 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:10 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | [Worker worker-1753843917181731279-8] Payment processed: 3111e183-4066-410c-98d7-a1168878bf4d
+api-1-1            | 2025/07/30 02:52:10 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:10 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-7] Payment processed: b5683cf5-d311-46f2-8e29-42025f396c30
+api-1-1            | [Worker worker-1753843917181731279-8] Payment processed: b2eb1808-7573-4f49-8ca3-699a25f401c5
+api-1-1            | 2025/07/30 02:52:10 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:10 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | [Worker worker-1753843917181731279-9] Payment processed: 2bfc3061-facc-4757-b8ce-885b117232d9
+api-1-1            | 2025/07/30 02:52:10 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:10 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:10 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:10 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | 2025/07/30 02:52:11 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-1] Payment processed: cd8bbcf0-476a-4175-bbb2-f5ab61ebeec4
+api-1-1            | [Worker worker-1753843917181731279-4] Payment processed: 2a157261-3f6c-4422-9511-d7cb177787e8
+api-1-1            | 2025/07/30 02:52:11 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:11 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-15] Payment processed: 3050fac3-2f4f-4566-b305-95dbbeae2f64
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:11 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | 2025/07/30 02:52:11 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-7] Payment processed: e24cfc95-2881-40c9-bc43-7f47b14760fd
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:11 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-2-1            | [Worker worker-1753843917134909670-11] Payment processed: 2bcf03ce-f190-4a12-abe0-5e6fbe491b18
+api-2-1            | 2025/07/30 02:52:11 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:11 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:11 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:11 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | 2025/07/30 02:52:11 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-11] Payment processed: 28e0d8e2-024c-485b-8f97-8c37486cc6a0
+api-1-1            | [Worker worker-1753843917181731279-14] Payment processed: f242b7bf-0335-4a11-8513-da8023f7ff2f
+api-1-1            | 2025/07/30 02:52:11 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:11 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-13] Payment processed: c3efc925-9db4-4676-b4fd-8ae9051b332a
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:11 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | [Worker worker-1753843917181731279-9] Payment processed: f4d8c83b-bc5b-43f1-9008-59073e3a0b89
+api-1-1            | 2025/07/30 02:52:11 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:11 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:11 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:11 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:11 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | 2025/07/30 02:52:11 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-3] Payment processed: a2d58ab5-ee50-46de-92d5-f71020784812
+api-1-1            | [Worker worker-1753843917181731279-1] Payment processed: 34b85bb7-664d-43af-ba64-ff10f578676a
+api-1-1            | 2025/07/30 02:52:11 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:11 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:11 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-0] Payment processed: b61ba266-8b70-49ca-be99-e9d2abc12fcb
+api-1-1            | [Worker worker-1753843917181731279-15] Payment processed: fef3d743-0a2b-494a-84ff-3b543b675fe8
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:11 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-2-1            | 2025/07/30 02:52:11 PAYMENT SAVED ON REDIS
+api-2-1            | [Worker worker-1753843917134909670-11] Payment processed: fddbed5d-a616-4d03-9089-1b165f91ecdb
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:11 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:11 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:11 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | 2025/07/30 02:52:11 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-14] Payment processed: 70dc2287-01be-4443-ae00-12f709b697cc
+api-1-1            | 2025/07/30 02:52:11 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:11 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-4] Payment processed: b12f5cae-caa1-43cd-9022-e3f26882c7eb
+api-1-1            | [Worker worker-1753843917181731279-12] Payment processed: f3406827-b377-4636-a4f8-aeeeb796dcfb
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:11 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | [Worker worker-1753843917181731279-9] Payment processed: 5c824c0d-0bcf-4bab-a73c-d8047f387dc5
+api-1-1            | 2025/07/30 02:52:11 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:11 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:11 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:11 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:11 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | 2025/07/30 02:52:11 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:11 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:11 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-2] Payment processed: 02cad43e-a107-48e9-82e7-55d106ac2b48
+api-1-1            | [Worker worker-1753843917181731279-6] Payment processed: be9db8c3-d643-4db9-8117-7cb8a8558203
+api-1-1            | [Worker worker-1753843917181731279-3] Payment processed: 66c94e35-5fe7-4652-8542-91b0867931fa
+api-1-1            | [Worker worker-1753843917181731279-10] Payment processed: 2e69f385-3e54-4d11-b021-b07c069534b2
+api-1-1            | 2025/07/30 02:52:11 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:11 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | 2025/07/30 02:52:11 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-7] Payment processed: cc8aa82f-aa4a-4e13-97dc-48d6d9351bb6
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:11 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:11 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:11 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | 2025/07/30 02:52:11 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-1] Payment processed: 4c5d84c0-1a3e-46e0-a1ca-f6a349a4242b
+api-1-1            | [Worker worker-1753843917181731279-13] Payment processed: 1108c011-5f72-4044-9c8b-9855fcd5d963
+api-1-1            | [Worker worker-1753843917181731279-5] Payment processed: f49b6e1b-505b-4c20-b0ef-c52d002ab5a0
+api-1-1            | 2025/07/30 02:52:11 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:11 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:11 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | [Worker worker-1753843917181731279-8] Payment processed: 472d87e4-a8c5-4d9e-b7c5-0a85fda9204a
+api-1-1            | 2025/07/30 02:52:11 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:11 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | [Worker worker-1753843917181731279-9] Payment processed: a2581d97-c246-4f66-9a6d-29e754f9410a
+api-1-1            | 2025/07/30 02:52:11 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:11 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:11 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:11 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:11 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | 2025/07/30 02:52:11 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:11 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-6] Payment processed: 81b7db2f-3fbe-4bca-8ca3-a7b6ac509541
+api-1-1            | 2025/07/30 02:52:11 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:11 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-11] Payment processed: 08e9186d-5138-44ca-973b-00ee33f7baff
+api-1-1            | [Worker worker-1753843917181731279-3] Payment processed: bd8128bc-48fb-4da9-91f2-40d387929bdb
+api-1-1            | [Worker worker-1753843917181731279-2] Payment processed: 411d37d8-4879-4267-b31f-3405e782dfb8
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:11 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-2-1            | [Worker worker-1753843917134909670-10] Payment processed: b19a83ba-48b2-4bd1-b7db-88dff302894b
+api-2-1            | 2025/07/30 02:52:11 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:11 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:11 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:11 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:11 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | [Worker worker-1753843917181731279-14] Payment processed: 7931c048-38f7-4bb9-8aec-e9c09029a70e
+api-1-1            | [Worker worker-1753843917181731279-10] Payment processed: 09a19cc2-38bf-47e9-a292-f003fe534aea
+api-1-1            | 2025/07/30 02:52:11 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:11 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:11 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-15] Payment processed: 6a40b715-8ce6-4453-9d7e-d9d268e1fa7d
+api-1-1            | [Worker worker-1753843917181731279-4] Payment processed: d6da2de1-1d23-46c6-bdf1-66e5e688747b
+api-1-1            | 2025/07/30 02:52:11 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:11 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | [Worker worker-1753843917181731279-7] Payment processed: f11277e2-38aa-4022-bc17-a02a146d7e53
+api-1-1            | 2025/07/30 02:52:11 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:11 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | 2025/07/30 02:52:11 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-9] Payment processed: 52c4d82d-5b56-4bca-b61c-df47438a5d13
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:11 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:11 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:11 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | 2025/07/30 02:52:11 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:11 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-0] Payment processed: 6b625272-e4f3-4f60-8580-fde537809240
+api-1-1            | [Worker worker-1753843917181731279-1] Payment processed: af7a436b-e474-4642-8ee1-03f1b63b65f6
+api-1-1            | [Worker worker-1753843917181731279-12] Payment processed: b36c9cdf-f1bf-4cee-ba66-afcd63502ba4
+api-1-1            | 2025/07/30 02:52:11 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:11 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:11 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | 2025/07/30 02:52:11 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:11 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-8] Payment processed: 6663257f-06a8-4ade-97a9-5abe49a063b9
+api-1-1            | [Worker worker-1753843917181731279-7] Payment processed: e3756807-36be-4ea4-95a3-984e1e0bfb17
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:11 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-2-1            | [Worker worker-1753843917134909670-12] Payment processed: 250d40eb-b012-489e-b078-7a879273fa6c
+api-2-1            | 2025/07/30 02:52:11 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:11 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:11 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:11 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | [Worker worker-1753843917181731279-15] Payment processed: abf4da4c-aa0e-48c7-b52b-489fb68e51df
+api-1-1            | [Worker worker-1753843917181731279-13] Payment processed: 39ba988e-106f-453c-9489-e8f6d6ac91db
+api-1-1            | 2025/07/30 02:52:11 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:11 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:11 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-4] Payment processed: 9acc546e-76ce-47a9-ab44-a347cf3893a1
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:11 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | [Worker worker-1753843917181731279-7] Payment processed: 1f182309-000b-4b92-bf32-f2955c6da128
+api-1-1            | 2025/07/30 02:52:11 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:11 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | 2025/07/30 02:52:11 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-7] Payment processed: b69fda6e-d475-4f0a-a4a2-cad539d94c0e
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:11 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:11 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:11 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:12 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | [Worker worker-1753843917181731279-11] Payment processed: 13c60fe4-81f6-423e-8494-31537c71c873
+api-1-1            | [Worker worker-1753843917181731279-1] Payment processed: 83058328-1c9b-4746-8e5a-dc301b6e4b96
+api-1-1            | [Worker worker-1753843917181731279-2] Payment processed: eb9999c7-2e20-4821-9a7f-38434f468b2e
+api-1-1            | 2025/07/30 02:52:12 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:12 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:12 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:12 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-3] Payment processed: e2e330f0-259f-4703-a2a6-875995b33136
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:12 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | [Worker worker-1753843917181731279-8] Payment processed: 1d02f9db-ce0d-49fb-b44b-56b785bdf2c7
+api-1-1            | 2025/07/30 02:52:12 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:12 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-2-1            | 2025/07/30 02:52:12 PAYMENT SAVED ON REDIS
+api-2-1            | [Worker worker-1753843917134909670-12] Payment processed: a7013e3c-339b-4653-8366-bf8820bce880
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:12 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:12 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:12 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:12 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | 2025/07/30 02:52:12 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-13] Payment processed: 41e9e9b0-b20d-48b8-a48e-63a93bdba667
+api-1-1            | 2025/07/30 02:52:12 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-3] Payment processed: 42c4d079-ef14-4a35-a72b-23c406d02631
+api-1-1            | 2025/07/30 02:52:12 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:12 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-15] Payment processed: ee3922e0-dfe2-4e0c-bcd4-64519b233a8b
+api-1-1            | [Worker worker-1753843917181731279-4] Payment processed: 2b93288c-9a67-4f53-8356-0d3a52b22abf
+api-2-1            | 2025/07/30 02:52:12 Leader: Performing health check...
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:12 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | [Worker worker-1753843917181731279-8] Payment processed: f2ab9131-16b3-4b54-a06e-3a2bec0f7560
+api-1-1            | 2025/07/30 02:52:12 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:12 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:12 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:12 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:12 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | 2025/07/30 02:52:12 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:12 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:12 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-11] Payment processed: c665c95b-8d97-4a03-abba-9e6c01c86644
+api-1-1            | 2025/07/30 02:52:12 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-1] Payment processed: 3ae26e83-d596-4575-9fce-ba347fa48ebe
+api-1-1            | [Worker worker-1753843917181731279-12] Payment processed: f36237e5-f1db-4702-901d-38c472102799
+api-1-1            | [Worker worker-1753843917181731279-2] Payment processed: 1949b8ee-8a63-4676-811d-d7fc8222a790
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:12 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | 2025/07/30 02:52:12 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-8] Payment processed: c89ad005-457b-4194-8671-f4779a584f83
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:12 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-2-1            | [Worker worker-1753843917134909670-9] Payment processed: 4982e87f-ce64-45bd-8bd6-ff916d8596f3
+api-2-1            | 2025/07/30 02:52:12 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:12 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:12 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:12 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | [Worker worker-1753843917181731279-13] Payment processed: 103d1850-3c22-4043-b02c-eedcd2af2e80
+api-1-1            | 2025/07/30 02:52:12 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-0] Payment processed: e5302471-b79b-4663-9cc2-a40214126e32
+api-1-1            | 2025/07/30 02:52:12 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:12 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-14] Payment processed: 964d537b-9cfa-4688-8991-58d10702b913
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:12 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:12 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | 2025/07/30 02:52:12 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-7] Payment processed: 47d73519-d5c2-44d2-aa10-1ebbc7173d59
+api-1-1            | [Worker worker-1753843917181731279-8] Payment processed: bf75407a-a26a-445e-b456-6600c32aa761
+api-1-1            | 2025/07/30 02:52:12 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:12 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | [Worker worker-1753843917181731279-9] Payment processed: af79e54f-0ede-4045-b5df-daf6e37505a4
+api-1-1            | 2025/07/30 02:52:12 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:12 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:12 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:12 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | 2025/07/30 02:52:12 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:12 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:12 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-3] Payment processed: 7cf220ee-39ef-4426-9dd0-61e56dbc3255
+api-1-1            | [Worker worker-1753843917181731279-12] Payment processed: 75c75211-8c5c-43c5-a775-1ea7f2d72e88
+api-1-1            | [Worker worker-1753843917181731279-1] Payment processed: defacd7e-2a4c-4fd9-afa2-617e2d7a526a
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:12 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | [Worker worker-1753843917181731279-7] Payment processed: 7e0f4d12-7e60-4769-a093-6bdb0394a456
+api-1-1            | 2025/07/30 02:52:12 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:12 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-2-1            | [Worker worker-1753843917134909670-10] Payment processed: a59381b6-369e-42c4-8a31-0355df7d0f45
+api-2-1            | 2025/07/30 02:52:12 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:12 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:12 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:12 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | [Worker worker-1753843917181731279-10] Payment processed: 8f6cf15f-6e95-4ba5-8227-31b2f02f18fd
+api-1-1            | 2025/07/30 02:52:12 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-6] Payment processed: 42c0d0fb-9320-4d27-b8c4-7ef10c7b665b
+api-1-1            | [Worker worker-1753843917181731279-5] Payment processed: dfa4c0cf-6e5c-4ae7-b756-90b77e4c3aff
+api-1-1            | 2025/07/30 02:52:12 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:12 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:12 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:12 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | 2025/07/30 02:52:12 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-8] Payment processed: 2c61ef28-e750-4eb2-901d-9bd652555d3f
+api-1-1            | [Worker worker-1753843917181731279-7] Payment processed: f9e516b5-4599-4fc3-86bf-8cce49494365
+api-1-1            | 2025/07/30 02:52:12 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:12 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-2-1            | [Worker worker-1753843917134909670-8] Payment processed: 86c5cbaa-b279-4cb7-a45f-3a26a25413e3
+api-2-1            | 2025/07/30 02:52:12 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:12 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | 2025/07/30 02:52:12 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-9] Payment processed: ee178369-a198-4e86-a17e-039c58c45a4e
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:12 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:12 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:12 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | 2025/07/30 02:52:12 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-11] Payment processed: 02401e91-f85f-44fd-a2b3-e55fca7e8af2
+api-1-1            | 2025/07/30 02:52:12 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-4] Payment processed: d8358282-db5d-4c20-bb47-34f473870d81
+api-1-1            | 2025/07/30 02:52:12 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-2] Payment processed: ba637d1f-1e48-4766-a6d0-e82c3a8aa3d3
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:12 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:12 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-2-1            | [Worker worker-1753843917134909670-14] Payment processed: ff188292-9c1e-4cb0-9123-c39d8f9d7182
+api-2-1            | [Worker worker-1753843917134909670-15] Payment processed: 8b1e56d7-2fe1-4144-ab3c-1ba0d291677b
+api-2-1            | 2025/07/30 02:52:12 PAYMENT SAVED ON REDIS
+api-2-1            | 2025/07/30 02:52:12 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:12 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:12 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:12 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:12 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:12 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | 2025/07/30 02:52:12 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-3] Payment processed: 6d42f47e-4f9b-4f59-bb34-ef9fff17c6d1
+api-1-1            | 2025/07/30 02:52:12 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-10] Payment processed: eef4b6af-726e-4c68-bdac-cbb57fab3172
+api-1-1            | 2025/07/30 02:52:12 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:12 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-15] Payment processed: 740dbbaa-23ec-4bf5-abf7-c127744d1fe3
+api-1-1            | [Worker worker-1753843917181731279-0] Payment processed: f50d2fcf-49fd-4c7b-b05f-855e801e28a6
+api-1-1            | [Worker worker-1753843917181731279-13] Payment processed: ed92071a-70f5-4381-87a1-d6723dd9ec58
+api-1-1            | 2025/07/30 02:52:12 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:12 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | [Worker worker-1753843917181731279-7] Payment processed: 2db47bf3-5825-4669-bbe6-23f66cd083a3
+api-1-1            | 2025/07/30 02:52:12 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:12 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-2-1            | [Worker worker-1753843917134909670-7] Payment processed: c319aef7-e11d-4f29-ac5b-a859949f218d
+api-2-1            | 2025/07/30 02:52:12 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:12 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:12 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:12 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:12 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | [Worker worker-1753843917181731279-4] Payment processed: d6705fad-0c61-42a3-be22-0e258bc26edc
+api-1-1            | 2025/07/30 02:52:12 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:12 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-2] Payment processed: d38e58d4-441e-4c08-8aa8-726b04b08c2b
+api-1-1            | [Worker worker-1753843917181731279-14] Payment processed: fae0fbb1-7308-4c5b-8a0b-f43e23ebd06e
+api-1-1            | [Worker worker-1753843917181731279-12] Payment processed: 1e0de7ad-c983-4e17-bd1a-0332eb96be56
+api-1-1            | 2025/07/30 02:52:12 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:12 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:12 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:12 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | [Worker worker-1753843917181731279-8] Payment processed: 2c316255-af7e-48ea-b0e8-7cc880c4f4ac
+api-1-1            | [Worker worker-1753843917181731279-7] Payment processed: f60a971e-3553-46be-82bf-c9db8418c477
+api-1-1            | 2025/07/30 02:52:12 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:12 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:12 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:12 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:12 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:12 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:12 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | 2025/07/30 02:52:12 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:12 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:12 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-11] Payment processed: efe2077e-efdc-4870-a042-77452b234f98
+api-1-1            | [Worker worker-1753843917181731279-5] Payment processed: 512ccb93-c182-4c5f-a311-7a48e3d0a6a3
+api-1-1            | [Worker worker-1753843917181731279-1] Payment processed: 29c1c1b0-a10d-4225-9666-ae1f45ee4de5
+api-1-1            | [Worker worker-1753843917181731279-3] Payment processed: d18a42f0-6510-416f-9508-4d13ce14459c
+api-1-1            | [Worker worker-1753843917181731279-6] Payment processed: 4f3a1832-fcea-47ec-9600-ef3b0c3e3be1
+api-1-1            | 2025/07/30 02:52:12 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:12 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:12 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | [Worker worker-1753843917181731279-7] Payment processed: e97eaaee-9e9b-4d65-96a4-ffe13176b278
+api-1-1            | 2025/07/30 02:52:12 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:12 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-2-1            | 2025/07/30 02:52:12 PAYMENT SAVED ON REDIS
+api-2-1            | [Worker worker-1753843917134909670-8] Payment processed: 20f0b799-fd7b-4550-bd32-bf79a7c05fe4
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:12 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:12 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:12 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | [Worker worker-1753843917181731279-15] Payment processed: 099a018c-ca91-46c3-941a-59f346611b43
+api-1-1            | [Worker worker-1753843917181731279-4] Payment processed: e44fc24e-4266-4b2d-98b9-8748560dedcf
+api-1-1            | [Worker worker-1753843917181731279-2] Payment processed: 1a5b7604-9d28-4af4-905e-85b7dec9e6ac
+api-1-1            | [Worker worker-1753843917181731279-0] Payment processed: deb86a19-2644-4a9a-b987-0b39bd7846e5
+api-1-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-5] Payment processed: 59c22224-2b87-4e7e-9c3f-c9c30cb86904
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-8] Payment processed: c5e805ef-cba4-4ff5-9a95-ecba4a9ea855
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-14] Payment processed: 682f7195-7f18-4097-b55f-cda184a2d76e
+api-1-1            | [Worker worker-1753843917181731279-13] Payment processed: af814e58-c409-490c-9bd6-f55acb20e482
+api-1-1            | [Worker worker-1753843917181731279-12] Payment processed: 967d36b8-a016-4968-afed-23b7460b949d
+api-1-1            | [Worker worker-1753843917181731279-10] Payment processed: 66fa2dfc-d24a-43c6-a56c-cc427fd00066
+api-1-1            | [Worker worker-1753843917181731279-11] Payment processed: 89c2c731-6a1a-44f3-8f59-c4c58feedfce
+api-1-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | [Worker worker-1753843917181731279-7] Payment processed: f8960455-45b1-4633-b761-7cfeb42f8343
+api-1-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-8] Payment processed: a2c9c5a6-f273-4146-90b8-c0e7aae269ce
+api-1-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-8] Payment processed: 1fc353a4-dbc8-48c0-b608-e3e34dedd67d
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-15] Payment processed: 008b45d1-1c30-4004-a625-4bfd96b1f66d
+api-1-1            | [Worker worker-1753843917181731279-10] Payment processed: b9eb3b06-1520-44cd-8d51-77635524edf4
+api-1-1            | [Worker worker-1753843917181731279-2] Payment processed: f805f014-38d0-43c4-881c-a22f935b8cbe
+api-1-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-1] Payment processed: fcf90f90-d47f-47ef-8be7-a1a0e750ee69
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-7] Payment processed: 4aa11a52-25d4-4a41-8b69-59ee0742d6dc
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-8] Payment processed: f6508e62-7667-491e-b682-f33800978878
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-4] Payment processed: e4c9d58b-dc34-4877-98da-0862d8bfa111
+api-1-1            | [Worker worker-1753843917181731279-0] Payment processed: 62ecbed3-c77a-4ff5-ace7-286040b3f18f
+api-1-1            | [Worker worker-1753843917181731279-12] Payment processed: 00933c9e-ad6b-4f0e-883a-e42400d85501
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-7] Payment processed: a80b749a-463d-49cd-92d0-f0b3dc856f4f
+api-1-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-7] Payment processed: 78cd0142-ac06-4eda-a22f-72961a6fc778
+api-1-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-7] Payment processed: 59878eaf-3a82-46dc-b179-f6187a10b2e7
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-8] Payment processed: e47c43e6-57d9-4f00-8768-317eb697119b
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-13] Payment processed: 774fe937-17eb-4644-9c1c-afc90a0fc40d
+api-1-1            | [Worker worker-1753843917181731279-14] Payment processed: 3c3f4448-53d9-4926-a2fa-44f93a169984
+api-1-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-0] Payment processed: ec8908cf-0762-4ef3-969b-99d0fa0519a1
+api-1-1            | [Worker worker-1753843917181731279-2] Payment processed: be33e53e-96e5-4b73-94c2-a35aa0ee88df
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | [Worker worker-1753843917181731279-7] Payment processed: 5972c9cd-197f-48d3-b0cd-0f420bfe3047
+api-1-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-8] Payment processed: 63d08c1d-f443-4e77-9e9b-5509d999ec8b
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-11] Payment processed: 62f9bdf0-135b-458a-9621-40099fc42c57
+api-1-1            | [Worker worker-1753843917181731279-13] Payment processed: b3e6aa9a-ca09-4e82-8fef-f4b66d4c7148
+api-1-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-2] Payment processed: 88f63aa7-f308-4429-841c-492b63627219
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | [Worker worker-1753843917181731279-3] Payment processed: 5044666b-5df5-4e47-a259-ce3d4e32e42c
+api-1-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-3] Payment processed: b8cc811b-f49c-47a9-a1b7-aded243b6dee
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-2-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+api-2-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+api-2-1            | [Worker worker-1753843917134909670-5] Payment processed: a867cf65-a528-4c45-88b7-514e45df8aeb
+api-2-1            | [Worker worker-1753843917134909670-3] Payment processed: e4d7d4cf-babd-455b-a707-86de8405c4f5
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-8] Payment processed: e0dd66a2-f47a-4d5d-8803-ea5c56c9927c
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-14] Payment processed: 4e0a3740-ca44-4470-a33c-7a99ebbc4620
+api-1-1            | [Worker worker-1753843917181731279-15] Payment processed: 137a25e2-15e4-4e84-9e6d-ae64892649d2
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-2-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+api-2-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+api-2-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+api-2-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+api-2-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+api-2-1            | [Worker worker-1753843917134909670-2] Payment processed: 2496a85c-8a7c-400b-8a6e-d26f2bae507d
+api-2-1            | [Worker worker-1753843917134909670-11] Payment processed: 0a22f11d-a69d-4e13-bdb7-9835200f2c7b
+api-2-1            | [Worker worker-1753843917134909670-9] Payment processed: 3d9b49c4-1738-418e-927d-2309afef679a
+api-2-1            | [Worker worker-1753843917134909670-7] Payment processed: 29961f6b-e543-45de-bc84-616b8d57f1d5
+api-2-1            | [Worker worker-1753843917134909670-4] Payment processed: ef2c104f-75e3-49cc-9d3f-4f6e750ebc81
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | [Worker worker-1753843917181731279-0] Payment processed: ce1165f6-0005-449c-84af-bd661283df8f
+api-1-1            | [Worker worker-1753843917181731279-1] Payment processed: 414e0647-b8c3-4eeb-95f5-b701650db531
+api-1-1            | [Worker worker-1753843917181731279-4] Payment processed: 12b45c4b-b408-489b-8adf-e801509391d8
+api-1-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | [Worker worker-1753843917181731279-6] Payment processed: 050e1dd7-86d6-487c-bc5f-118263227b7c
+api-1-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-2-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+api-2-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+api-2-1            | [Worker worker-1753843917134909670-0] Payment processed: fa918ff5-b738-4eb2-ba86-209ba77e43dc
+api-2-1            | [Worker worker-1753843917134909670-15] Payment processed: 7216c9c9-345f-49ef-8796-843a46251a93
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | [Worker worker-1753843917181731279-8] Payment processed: d97be438-f24e-479d-9c4e-bcd4c5d47588
+api-1-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-8] Payment processed: 81acffe1-584c-4a4d-80ac-e5940e37a8da
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | [Worker worker-1753843917181731279-5] Payment processed: 936647b3-dec9-4f1b-889d-12aa1d238906
+api-1-1            | [Worker worker-1753843917181731279-11] Payment processed: be9a62c1-daa7-445e-881d-5ac24bc32eca
+api-1-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-13] Payment processed: 11a8bd99-435c-4ec3-bd53-5775a93870ed
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-2-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+api-2-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+api-2-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+api-2-1            | [Worker worker-1753843917134909670-11] Payment processed: 728c3911-fdf4-45ca-90f0-c3d16fb8aac6
+api-2-1            | [Worker worker-1753843917134909670-7] Payment processed: e1eede8f-a202-4be5-8837-591a9365918e
+api-2-1            | [Worker worker-1753843917134909670-9] Payment processed: 562de895-250c-40e2-80c8-1f0fb01f1dde
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-8] Payment processed: 112d286a-ca26-42f7-92f5-c66d6ee4ed69
+api-1-1            | [Worker worker-1753843917181731279-8] Payment processed: 5d454f1f-d087-4cde-bb80-df6289bcccfd
+api-1-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | [Worker worker-1753843917181731279-4] Payment processed: d51eb5b9-2b78-4653-b5d6-024be87d5cb8
+api-1-1            | [Worker worker-1753843917181731279-1] Payment processed: 02f4130d-c051-471e-ada4-3363494a08ab
+api-1-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | [Worker worker-1753843917181731279-3] Payment processed: 7565c0d7-77d8-4379-bc39-edecde77becd
+api-1-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-7] Payment processed: 45f8339a-3a59-4142-b13f-f892dbe4e6b8
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-8] Payment processed: 21549c66-8ba8-4521-94cd-a9def1e838af
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | [Worker worker-1753843917181731279-8] Payment processed: e180d3f8-373a-4895-8392-a40dc70b07c1
+api-1-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:13 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | 2025/07/30 02:52:13 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-8] Payment processed: 4cf8a78a-0985-4e1d-8ff5-dff703b4603f
+api-1-1            | [Worker worker-1753843917181731279-8] Payment processed: 246efe76-4a93-4f3f-b908-139fdd0398f8
+api-1-1            | 2025/07/30 02:52:14 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:14 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:14 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | [Worker worker-1753843917181731279-13] Payment processed: 481d6e59-d55c-4431-8047-39d5aee59a40
+api-1-1            | [Worker worker-1753843917181731279-15] Payment processed: bfd9528f-a617-4bd6-90b2-63d0d3464f0f
+api-1-1            | 2025/07/30 02:52:14 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:14 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:14 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:14 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | [Worker worker-1753843917181731279-9] Payment processed: d1edcfc6-4642-47d3-a272-42511bd7828f
+api-1-1            | 2025/07/30 02:52:14 PAYMENT SAVED ON REDIS
+api-2-1            | 2025/07/30 02:52:14 PAYMENT SAVED ON REDIS
+api-2-1            | [Worker worker-1753843917134909670-11] Payment processed: b26353b5-59a0-4f26-9957-7a4cfd9c87ce
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:14 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:14 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | 2025/07/30 02:52:14 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-8] Payment processed: 60549cf6-c386-415f-ae05-1492759da8c5
+api-1-1            | [Worker worker-1753843917181731279-8] Payment processed: 06ba8de9-0630-4d77-bad8-796b78fb5893
+api-1-1            | 2025/07/30 02:52:14 PAYMENT SAVED ON REDIS
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:14 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:14 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:14 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+load-balancer      | 172.20.0.1 - - [30/Jul/2025:02:52:14 +0000] "POST /payments HTTP/1.1" 201 7 "-" "Grafana k6/1.1.0"
+api-1-1            | [Worker worker-1753843917181731279-10] Payment processed: 56f13fcd-79be-4968-9bdd-45e4033ff92c
+api-1-1            | 2025/07/30 02:52:14 PAYMENT SAVED ON REDIS
+api-1-1            | 2025/07/30 02:52:14 PAYMENT SAVED ON REDIS
+api-1-1            | [Worker worker-1753843917181731279-4] Payment processed: ffc30cb5-71a5-4e50-af5c-e9f5cdd2ee96
+api-1-1            | 2025/07/30 02:52:14 PAYMENT SAVED ON REDIS
 log truncated at line 1000

@@ -1,0 +1,107 @@
+name: 'rinha-de-backend-3'
+
+#  1.5 CPUs = 0.2 Redis + 2 x 0.55 Spring Boot (1.10)+ 0.2 NGinx
+#   350  MB =  30 Redis + 2 x  150 Spring Boot (310) +  20 NGinx
+
+services:
+
+  # rinha redis
+  javinha-redis:
+    image: redis:7.2-alpine
+    container_name: javinha-redis
+    hostname: javinha-redis
+    environment:
+      - REDIS_PASSWORD=rinha
+    deploy:
+      resources:
+        limits:
+          cpus: "0.20"
+          memory: "30MB"
+    networks:
+      - back-end
+    healthcheck:
+      test: ["CMD", "redis-cli", "-a", "rinha", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+      start_period: 10s
+
+  # rinha API 1
+  javinha1: &api
+    image: docker.io/boaglio/player456:latest
+    hostname: javinha1
+    container_name: javinha1
+    networks:
+      - back-end
+      - payment-processor
+    environment:
+      - ENABLE_SCHEDULING=true
+      - SERVER_PORT=8081
+      - REDIS_SERVER=javinha-redis
+      - REDIS_PASSWORD=rinha
+      - REDIS_PORT=6379
+      - PAYMENT_DEFAULT_SERVER=http://payment-processor-default:8080
+      - PAYMENT_FALLBACK_SERVER=http://payment-processor-fallback:8080
+      - JAVA_TOOL_OPTIONS=-Xmx120m -Xms50m -XX:+UseSerialGC -XX:MinHeapFreeRatio=20 -XX:MaxHeapFreeRatio=40 -XX:NewRatio=3 -XX:+UseStringDeduplication -XX:MaxMetaspaceSize=30m -XX:CompressedClassSpaceSize=8m -XX:+DisableExplicitGC -Djava.util.concurrent.ForkJoinPool.common.parallelism=2
+    depends_on:
+      javinha-redis:
+        condition: service_healthy
+    ulimits:
+      nofile:
+        soft: 1000000
+        hard: 1000000
+    deploy:
+      resources:
+        limits:
+          cpus: "0.55"
+          memory: "150MB"
+
+# rinha API 2
+  javinha2:
+    <<: *api
+    hostname: javinha2
+    container_name: javinha2
+    environment:
+      - ENABLE_SCHEDULING=false
+      - SERVER_PORT=8082
+      - REDIS_SERVER=javinha-redis
+      - REDIS_PASSWORD=rinha
+      - REDIS_PORT=6379
+      - PAYMENT_DEFAULT_SERVER=http://payment-processor-default:8080
+      - PAYMENT_FALLBACK_SERVER=http://payment-processor-fallback:8080
+      - JAVA_TOOL_OPTIONS=-Xmx120m -Xms50m -XX:+UseSerialGC -XX:MinHeapFreeRatio=20 -XX:MaxHeapFreeRatio=40 -XX:NewRatio=3 -XX:+UseStringDeduplication -XX:MaxMetaspaceSize=30m -XX:CompressedClassSpaceSize=8m -XX:+DisableExplicitGC -Djava.util.concurrent.ForkJoinPool.common.parallelism=2
+    deploy:
+      resources:
+        limits:
+          cpus: "0.55"
+          memory: "150MB"
+
+  # rinha LB
+  nginx:
+    image: nginx:1.29.0-alpine-slim
+    container_name: javinha-nginx
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - javinha1
+      - javinha2
+    ports:
+      - "9999:9999"
+    ulimits:
+      nproc: 1000000
+      nofile:
+        soft: 1000000
+        hard: 1000000
+    networks:
+      - back-end
+    deploy:
+      resources:
+        limits:
+          cpus: "0.2"
+          memory: "20MB"
+
+networks:
+  back-end:
+    driver: bridge
+  payment-processor:
+    external: true

@@ -1,6 +1,6 @@
 services:
   service1: &service
-    image: willian666/rinha-back-lua-2025:v0.1
+    image: willian666/rinha-back-lua-2025:v0.2
     environment:
       - PAYMENT_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080
       - PAYMENT_PROCESSOR_URL_FALLBACK=http://payment-processor-fallback:8080
@@ -41,6 +41,12 @@ services:
 
   service6:
     <<: *service
+  
+  service7:
+    <<: *service
+  
+  service8:
+    <<: *service
 
   redis:
     image: redis:latest
@@ -51,8 +57,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.2"
-          memory: "90MB"
+          cpus: "0.15"
+          memory: "60MB"
     networks:
       - backend
   
@@ -80,7 +86,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.2"
+          cpus: "0.15"
           memory: "50MB"
 
 networks:

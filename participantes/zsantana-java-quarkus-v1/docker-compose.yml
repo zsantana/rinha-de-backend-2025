@@ -21,18 +21,11 @@ services:
           cpus: "0.5"
           memory: "25MB"
 
-  # redisinsight:
-  #   image: redislabs/redisinsight
-  #   hostname: redisinsight
-  #   ports:
-  #   - "5540:5540"
-  #   networks:
-  #   - rinha-net
 
 
   # Produtores ========================================================================
   api01: &api
-    image: 442494/rinha-backend-2025-produtor:latest
+    image: 442494/rinha-backend-2025-produtor:v2
     hostname: api01
     networks:
       - rinha-net
@@ -69,7 +62,7 @@ services:
 
   # Consumidores ========================================================================
   api03:
-    image: 442494/rinha-backend-2025-consumidor:latest
+    image: 442494/rinha-backend-2025-consumidor:v2
     hostname: api03
     networks:
       - rinha-net

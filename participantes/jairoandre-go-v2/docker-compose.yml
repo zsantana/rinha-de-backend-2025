@@ -19,7 +19,6 @@ services:
   service-health:
     image: docker.io/jairoandre/rb2025-health:latest
     container_name: service-health
-    host_name: service-health
     networks:
       - backend
       - payment-processor

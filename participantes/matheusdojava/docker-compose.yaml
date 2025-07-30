@@ -15,13 +15,13 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.2"
+          cpus: "0.15"
           memory: "30MB"
 
   api1: &api
-    image: matheuspieropan/rinhabackend2025:1.0
+    image: matheuspieropan/rinhabackend2025:achoquefoi
     depends_on:
-      mongodb:
+      redis:
         condition: service_healthy
     hostname: api1
     networks:
@@ -32,37 +32,41 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.5"
-          memory: "90MB"
+          cpus: "0.6"
+          memory: "140MB"
 
   api2:
     <<: *api
     hostname: api2
     ports:
       - "8081:8080"
-    deploy:
-      resources:
-        limits:
-          cpus: "0.5"
-          memory: "90MB"
 
-  mongodb:
-    image: mongo:7.0
-    container_name: mongodb
+  redis:
+    image: redis:7.2-alpine
+    container_name: redis
+    command: [
+      "redis-server",
+      "--save", "",
+      "--appendonly", "no",
+      "--databases", "1",
+      "--loglevel", "warning",
+      "--logfile", "/dev/null",
+      "--tcp-keepalive", "60"
+    ]
     healthcheck:
-      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      test: [ "CMD", "redis-cli", "ping" ]
       interval: 5s
       timeout: 3s
       retries: 5
     ports:
-      - "27017:27017"
+      - "6379:6379"
     networks:
       - backend
     deploy:
       resources:
         limits:
-          cpus: "0.3"
-          memory: "140MB"
+          cpus: "0.15"
+          memory: "40MB"
 
 networks:
   backend:
