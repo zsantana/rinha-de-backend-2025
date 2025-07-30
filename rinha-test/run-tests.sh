@@ -39,7 +39,6 @@ while true; do
         echo "  Participant $participant starting..."
         echo "========================================"
 
-        
         testedFile="$directory/partial-results.json"
 
         if ! test -f $testedFile; then
@@ -89,6 +88,8 @@ while true; do
             echo "  Skipping $participant"
             echo "================================="
         fi
+
+        sleep 15
     )
     done
 
