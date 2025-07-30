@@ -10,7 +10,7 @@ services:
     networks:
       - payment-processor
       - redis-network
-      - processor-service
+      - backend
     depends_on:
       - redis
     deploy:
@@ -28,7 +28,7 @@ services:
     hostname: redis
     networks:
       - redis-network
-      - processor-service
+      - backend
     ports:
       - "6379:6379"
     command: ["redis-server", "--appendonly", "yes", "--appendfsync", "everysec"]
@@ -48,7 +48,7 @@ services:
     networks:
       - payment-processor
       - redis-network
-      - processor-service
+      - backend
     ports:
       - "9999:9999"
     deploy:
@@ -62,5 +62,5 @@ networks:
     external: true
   redis-network:
     driver: bridge
-  processor-service:
+  backend:
     driver: bridge

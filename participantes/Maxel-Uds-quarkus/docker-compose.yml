@@ -45,8 +45,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.4"
-          memory: "85MB"
+          cpus: "0.3"
+          memory: "75MB"
     networks:
       - payment-router
       - payment-processor
@@ -68,8 +68,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.5"
-          memory: "80MB"
+          cpus: "0.7"
+          memory: "100MB"
     networks:
       - payment-router
 
