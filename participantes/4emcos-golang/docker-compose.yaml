@@ -1,5 +1,3 @@
-version: "3.5"
-
 services:
   api01: &api
     image: ghcr.io/4emcos/rinha-backend-2025-golang:latest
@@ -12,6 +10,7 @@ services:
     networks:
       - payment-processor
       - redis-network
+      - processor-service
     depends_on:
       - redis
     deploy:
@@ -29,6 +28,7 @@ services:
     hostname: redis
     networks:
       - redis-network
+      - processor-service
     ports:
       - "6379:6379"
     command: ["redis-server", "--appendonly", "yes", "--appendfsync", "everysec"]
@@ -48,6 +48,7 @@ services:
     networks:
       - payment-processor
       - redis-network
+      - processor-service
     ports:
       - "9999:9999"
     deploy:
@@ -58,10 +59,8 @@ services:
 
 networks:
   payment-processor:
-    name: payment-processor
-    driver: bridge
     external: true
-  payment-processor-db:
-    driver: bridge
   redis-network:
+    driver: bridge
+  processor-service:
     driver: bridge
