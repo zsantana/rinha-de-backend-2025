@@ -1,12 +1,12 @@
 {
   "participante": "anibalferreira-rust-2",
-  "total_liquido": 358308.1565,
+  "total_liquido": 352058.7207,
   "total_bruto": 333126,
-  "total_taxas": 21553.69,
+  "total_taxas": 21569.61,
   "descricao": "'total_liquido' é sua pontuação final. Equivale ao seu lucro. Fórmula: total_liquido + (total_liquido * p99.bonus) - (total_liquido * multa.porcentagem)",
   "p99": {
-    "valor": "3.52ms",
-    "bonus": "15%",
+    "valor": "4.68ms",
+    "bonus": "13%",
     "max_requests": "550",
     "descricao": "Fórmula para o bônus: max((11 - p99.valor) * 0.02, 0)"
   },
@@ -34,15 +34,15 @@
     "descricao": "'qtd_sucesso' foram requests bem sucedidos para 'POST /payments' e 'qtd_falha' os requests com erro."
   },
   "pagamentos_realizados_default": {
-    "total_bruto": 284152.1,
-    "num_pagamentos": 14279,
-    "total_taxas": 14207.605,
+    "total_bruto": 283992.9,
+    "num_pagamentos": 14271,
+    "total_taxas": 14199.645,
     "descricao": "Informações do backend sobre solicitações de pagamento para o Payment Processor Default."
   },
   "pagamentos_realizados_fallback": {
-    "total_bruto": 48973.9,
-    "num_pagamentos": 2461,
-    "total_taxas": 7346.085,
+    "total_bruto": 49133.1,
+    "num_pagamentos": 2469,
+    "total_taxas": 7369.965,
     "descricao": "Informações do backend sobre solicitações de pagamento para o Payment Processor Fallback."
   }
 }
