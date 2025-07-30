@@ -14,7 +14,7 @@
 **Suba o `docker-compose` dos Payment Processors**  
 (conforme instruções do [repositório oficial](https://github.com/Rinha-de-Backend-Official/2025)).
 
-**Projeto**: https://github.com/djbrunomonteiro/rinha-backend-2025
+**Projeto**: https://github.com/djbrunomonteiro/api-rinha-backend-2025
 
 **Depois, suba este compose:**
 
