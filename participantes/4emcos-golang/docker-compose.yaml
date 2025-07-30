@@ -1,7 +1,8 @@
 services:
   api01: &api
     image: ghcr.io/4emcos/rinha-backend-2025-golang:latest
-    hostname: api01
+    container_name: backend-01
+    hostname: backend-01
     environment:
       APP_PORT: 5000
       PAYMENT_PROCESSOR_FALLBACK: http://payment-processor-fallback:8080
@@ -9,7 +10,6 @@ services:
       REDIS_URL: redis:6379
     networks:
       - payment-processor
-      - redis-network
       - backend
     depends_on:
       - redis
@@ -21,13 +21,13 @@ services:
 
   api02:
     <<: *api
-    hostname: api02
+    container_name: backend-02
+    hostname: backend-02
 
   redis:
     image: redis:8.0.3-alpine
     hostname: redis
     networks:
-      - redis-network
       - backend
     ports:
       - "6379:6379"
@@ -47,7 +47,6 @@ services:
       - api02
     networks:
       - payment-processor
-      - redis-network
       - backend
     ports:
       - "9999:9999"
@@ -58,9 +57,7 @@ services:
           memory: "15MB"
 
 networks:
-  payment-processor:
-    external: true
-  redis-network:
-    driver: bridge
   backend:
     driver: bridge
+  payment-processor:
+    external: true
