@@ -1,12 +1,12 @@
 {
   "participante": "libardi-dotnet-3",
-  "total_liquido": 367117.5482,
+  "total_liquido": 329102.618,
   "total_bruto": 333185.7,
-  "total_taxas": 16705.055,
+  "total_taxas": 16740.875,
   "descricao": "'total_liquido' é sua pontuação final. Equivale ao seu lucro. Fórmula: total_liquido + (total_liquido * p99.bonus) - (total_liquido * multa.porcentagem)",
   "p99": {
-    "valor": "3.06ms",
-    "bonus": "16%",
+    "valor": "8.76ms",
+    "bonus": "4%",
     "max_requests": "550",
     "descricao": "Fórmula para o bônus: max((11 - p99.valor) * 0.02, 0)"
   },
@@ -34,15 +34,15 @@
     "descricao": "'qtd_sucesso' foram requests bem sucedidos para 'POST /payments' e 'qtd_falha' os requests com erro."
   },
   "pagamentos_realizados_default": {
-    "total_bruto": 332728,
-    "num_pagamentos": 16720,
-    "total_taxas": 16636.4,
+    "total_bruto": 332369.8,
+    "num_pagamentos": 16702,
+    "total_taxas": 16618.49,
     "descricao": "Informações do backend sobre solicitações de pagamento para o Payment Processor Default."
   },
   "pagamentos_realizados_fallback": {
-    "total_bruto": 457.7,
-    "num_pagamentos": 23,
-    "total_taxas": 68.655,
+    "total_bruto": 815.9,
+    "num_pagamentos": 41,
+    "total_taxas": 122.385,
     "descricao": "Informações do backend sobre solicitações de pagamento para o Payment Processor Fallback."
   }
 }

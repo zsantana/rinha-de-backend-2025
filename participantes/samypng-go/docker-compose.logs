@@ -1,27 +1,122 @@
 
  backend1 Pulling 
  backend2 Pulling 
- backend2 Pulled 
+ 9824c27679d3 Already exists 
+ a153787a2048 Pulling fs layer 
+ 4f4fb700ef54 Pulling fs layer 
+ 083ad867fa37 Pulling fs layer 
+ 9824c27679d3 Already exists 
+ 4f4fb700ef54 Downloading [==================================================>]      32B/32B
+ 4f4fb700ef54 Verifying Checksum 
+ 4f4fb700ef54 Download complete 
+ a153787a2048 Pulling fs layer 
+ 4f4fb700ef54 Pulling fs layer 
+ 083ad867fa37 Pulling fs layer 
+ 4f4fb700ef54 Download complete 
+ a153787a2048 Downloading [>                                                  ]  3.745kB/282.5kB
+ a153787a2048 Downloading [>                                                  ]  3.745kB/282.5kB
+ a153787a2048 Download complete 
+ a153787a2048 Download complete 
+ a153787a2048 Extracting [=====>                                             ]  32.77kB/282.5kB
+ a153787a2048 Extracting [=====>                                             ]  32.77kB/282.5kB
+ 083ad867fa37 Downloading [>                                                  ]  134.8kB/13.07MB
+ 083ad867fa37 Downloading [>                                                  ]  134.8kB/13.07MB
+ a153787a2048 Extracting [==================================================>]  282.5kB/282.5kB
+ a153787a2048 Extracting [==================================================>]  282.5kB/282.5kB
+ a153787a2048 Extracting [==================================================>]  282.5kB/282.5kB
+ a153787a2048 Extracting [==================================================>]  282.5kB/282.5kB
+ 083ad867fa37 Downloading [=====================================>             ]  9.699MB/13.07MB
+ 083ad867fa37 Downloading [=====================================>             ]  9.699MB/13.07MB
+ 083ad867fa37 Verifying Checksum 
+ 083ad867fa37 Download complete 
+ 083ad867fa37 Verifying Checksum 
+ 083ad867fa37 Download complete 
+ a153787a2048 Pull complete 
+ a153787a2048 Pull complete 
+ 4f4fb700ef54 Extracting [==================================================>]      32B/32B
+ 4f4fb700ef54 Extracting [==================================================>]      32B/32B
+ 4f4fb700ef54 Extracting [==================================================>]      32B/32B
+ 4f4fb700ef54 Extracting [==================================================>]      32B/32B
+ 4f4fb700ef54 Pull complete 
+ 4f4fb700ef54 Pull complete 
+ 083ad867fa37 Extracting [>                                                  ]  131.1kB/13.07MB
+ 083ad867fa37 Extracting [>                                                  ]  131.1kB/13.07MB
+ 083ad867fa37 Extracting [==================>                                ]  4.719MB/13.07MB
+ 083ad867fa37 Extracting [==================>                                ]  4.719MB/13.07MB
+ 083ad867fa37 Extracting [==================================================>]  13.07MB/13.07MB
+ 083ad867fa37 Extracting [==================================================>]  13.07MB/13.07MB
+ 083ad867fa37 Pull complete 
+ 083ad867fa37 Pull complete 
  backend1 Pulled 
+ backend2 Pulled 
  Network samypng-go_rinha-network  Creating
  Network samypng-go_rinha-network  Created
  Container rinha-redis  Creating
  Container rinha-redis  Created
- Container rinha-backend-1  Creating
  Container rinha-backend-2  Creating
+ Container rinha-backend-1  Creating
  Container rinha-backend-2  Created
  Container rinha-backend-1  Created
  Container rinha-nginx  Creating
  Container rinha-nginx  Created
 Attaching to rinha-backend-1, rinha-backend-2, rinha-nginx, rinha-redis
-rinha-redis      | 1:C 27 Jul 2025 06:19:36.087 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
-rinha-redis      | 1:C 27 Jul 2025 06:19:36.087 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
-rinha-redis      | 1:C 27 Jul 2025 06:19:36.087 * Redis version=7.4.5, bits=64, commit=00000000, modified=0, pid=1, just started
-rinha-redis      | 1:C 27 Jul 2025 06:19:36.087 * Configuration loaded
-rinha-redis      | 1:M 27 Jul 2025 06:19:36.088 * monotonic clock: POSIX clock_gettime
-rinha-redis      | 1:M 27 Jul 2025 06:19:36.088 * Running mode=standalone, port=6379.
-rinha-redis      | 1:M 27 Jul 2025 06:19:36.088 * Server initialized
-rinha-redis      | 1:M 27 Jul 2025 06:19:36.088 * Ready to accept connections tcp
+rinha-redis      | Starting Redis Server
+rinha-redis      | 1:C 30 Jul 2025 04:25:41.367 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+rinha-redis      | 1:C 30 Jul 2025 04:25:41.367 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+rinha-redis      | 1:C 30 Jul 2025 04:25:41.367 * Redis version=8.0.3, bits=64, commit=00000000, modified=1, pid=1, just started
+rinha-redis      | 1:C 30 Jul 2025 04:25:41.367 * Configuration loaded
+rinha-redis      | 1:M 30 Jul 2025 04:25:41.367 * monotonic clock: POSIX clock_gettime
+rinha-redis      | 1:M 30 Jul 2025 04:25:41.368 * Running mode=standalone, port=6379.
+rinha-redis      | 1:M 30 Jul 2025 04:25:41.369 * <bf> RedisBloom version 8.0.1 (Git=unknown)
+rinha-redis      | 1:M 30 Jul 2025 04:25:41.369 * <bf> Registering configuration options: [
+rinha-redis      | 1:M 30 Jul 2025 04:25:41.369 * <bf> 	{ bf-error-rate       :      0.01 }
+rinha-redis      | 1:M 30 Jul 2025 04:25:41.369 * <bf> 	{ bf-initial-size     :       100 }
+rinha-redis      | 1:M 30 Jul 2025 04:25:41.369 * <bf> 	{ bf-expansion-factor :         2 }
+rinha-redis      | 1:M 30 Jul 2025 04:25:41.369 * <bf> 	{ cf-bucket-size      :         2 }
+rinha-redis      | 1:M 30 Jul 2025 04:25:41.369 * <bf> 	{ cf-initial-size     :      1024 }
+rinha-redis      | 1:M 30 Jul 2025 04:25:41.369 * <bf> 	{ cf-max-iterations   :        20 }
+rinha-redis      | 1:M 30 Jul 2025 04:25:41.369 * <bf> 	{ cf-expansion-factor :         1 }
+rinha-redis      | 1:M 30 Jul 2025 04:25:41.369 * <bf> 	{ cf-max-expansions   :        32 }
+rinha-redis      | 1:M 30 Jul 2025 04:25:41.369 * <bf> ]
+rinha-redis      | 1:M 30 Jul 2025 04:25:41.369 * Module 'bf' loaded from /usr/local/lib/redis/modules//redisbloom.so
+rinha-redis      | 1:M 30 Jul 2025 04:25:41.372 * <search> Redis version found by RedisSearch : 8.0.3 - oss
+rinha-redis      | 1:M 30 Jul 2025 04:25:41.372 * <search> RediSearch version 8.0.1 (Git=5688fcc)
+rinha-redis      | 1:M 30 Jul 2025 04:25:41.372 * <search> Low level api version 1 initialized successfully
+rinha-redis      | 1:M 30 Jul 2025 04:25:41.372 * <search> gc: ON, prefix min length: 2, min word length to stem: 4, prefix max expansions: 200, query timeout (ms): 500, timeout policy: return, cursor read size: 1000, cursor max idle (ms): 300000, max doctable size: 1000000, max number of search results:  1000000, 
+rinha-redis      | 1:M 30 Jul 2025 04:25:41.372 * <search> Initialized thread pools!
+rinha-redis      | 1:M 30 Jul 2025 04:25:41.372 * <search> Disabled workers threadpool of size 0
+rinha-redis      | 1:M 30 Jul 2025 04:25:41.372 * <search> Subscribe to config changes
+rinha-redis      | 1:M 30 Jul 2025 04:25:41.372 * <search> Enabled role change notification
+rinha-redis      | 1:M 30 Jul 2025 04:25:41.372 * <search> Cluster configuration: AUTO partitions, type: 0, coordinator timeout: 0ms
+rinha-redis      | 1:M 30 Jul 2025 04:25:41.373 * <search> Register write commands
+rinha-redis      | 1:M 30 Jul 2025 04:25:41.373 * Module 'search' loaded from /usr/local/lib/redis/modules//redisearch.so
+rinha-redis      | 1:M 30 Jul 2025 04:25:41.374 * <timeseries> RedisTimeSeries version 80001, git_sha=577bfa8b5909e7ee572f0b651399be8303dc6641
+rinha-redis      | 1:M 30 Jul 2025 04:25:41.374 * <timeseries> Redis version found by RedisTimeSeries : 8.0.3 - oss
+rinha-redis      | 1:M 30 Jul 2025 04:25:41.374 * <timeseries> Registering configuration options: [
+rinha-redis      | 1:M 30 Jul 2025 04:25:41.374 * <timeseries> 	{ ts-compaction-policy   :              }
+rinha-redis      | 1:M 30 Jul 2025 04:25:41.374 * <timeseries> 	{ ts-num-threads         :            3 }
+rinha-redis      | 1:M 30 Jul 2025 04:25:41.374 * <timeseries> 	{ ts-retention-policy    :            0 }
+rinha-redis      | 1:M 30 Jul 2025 04:25:41.374 * <timeseries> 	{ ts-duplicate-policy    :        block }
+rinha-redis      | 1:M 30 Jul 2025 04:25:41.374 * <timeseries> 	{ ts-chunk-size-bytes    :         4096 }
+rinha-redis      | 1:M 30 Jul 2025 04:25:41.374 * <timeseries> 	{ ts-encoding            :   compressed }
+rinha-redis      | 1:M 30 Jul 2025 04:25:41.374 * <timeseries> 	{ ts-ignore-max-time-diff:            0 }
+rinha-redis      | 1:M 30 Jul 2025 04:25:41.374 * <timeseries> 	{ ts-ignore-max-val-diff :     0.000000 }
+rinha-redis      | 1:M 30 Jul 2025 04:25:41.374 * <timeseries> ]
+rinha-redis      | 1:M 30 Jul 2025 04:25:41.374 * <timeseries> Detected redis oss
+rinha-redis      | 1:M 30 Jul 2025 04:25:41.374 * Module 'timeseries' loaded from /usr/local/lib/redis/modules//redistimeseries.so
+rinha-redis      | 1:M 30 Jul 2025 04:25:41.376 * <ReJSON> Created new data type 'ReJSON-RL'
+rinha-redis      | 1:M 30 Jul 2025 04:25:41.376 * <ReJSON> version: 80001 git sha: unknown branch: unknown
+rinha-redis      | 1:M 30 Jul 2025 04:25:41.376 * <ReJSON> Exported RedisJSON_V1 API
+rinha-redis      | 1:M 30 Jul 2025 04:25:41.376 * <ReJSON> Exported RedisJSON_V2 API
+rinha-redis      | 1:M 30 Jul 2025 04:25:41.376 * <ReJSON> Exported RedisJSON_V3 API
+rinha-redis      | 1:M 30 Jul 2025 04:25:41.376 * <ReJSON> Exported RedisJSON_V4 API
+rinha-redis      | 1:M 30 Jul 2025 04:25:41.376 * <ReJSON> Exported RedisJSON_V5 API
+rinha-redis      | 1:M 30 Jul 2025 04:25:41.376 * <ReJSON> Enabled diskless replication
+rinha-redis      | 1:M 30 Jul 2025 04:25:41.376 * <ReJSON> Initialized shared string cache, thread safe: false.
+rinha-redis      | 1:M 30 Jul 2025 04:25:41.376 * Module 'ReJSON' loaded from /usr/local/lib/redis/modules//rejson.so
+rinha-redis      | 1:M 30 Jul 2025 04:25:41.376 * <search> Acquired RedisJSON_V5 API
+rinha-redis      | 1:M 30 Jul 2025 04:25:41.376 * Server initialized
+rinha-redis      | 1:M 30 Jul 2025 04:25:41.377 * Ready to accept connections tcp
 rinha-backend-2  | 
 rinha-backend-2  |  ┌───────────────────────────────────────────────────┐ 
 rinha-backend-2  |  │                   Fiber v2.52.8                   │ 
@@ -52,10 +147,9 @@ rinha-nginx      | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envs
 rinha-nginx      | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
 rinha-nginx      | /docker-entrypoint.sh: Configuration complete; ready for start up
 [Krinha-nginx exited with code 0
-[Krinha-backend-2 exited with code 137
-[Krinha-backend-1 exited with code 137
-rinha-redis      | 1:signal-handler (1753597267) Received SIGTERM scheduling shutdown...
-rinha-redis      | 1:M 27 Jul 2025 06:21:07.673 * User requested shutdown...
-rinha-redis      | 1:M 27 Jul 2025 06:21:07.673 # Redis is now ready to exit, bye bye...
+[Krinha-backend-2 exited with code 0
+rinha-redis      | 1:signal-handler (1753849624) Received SIGTERM scheduling shutdown...
+rinha-redis      | 1:M 30 Jul 2025 04:27:04.839 * User requested shutdown...
+rinha-redis      | 1:M 30 Jul 2025 04:27:04.839 # Redis is now ready to exit, bye bye...
 [Krinha-redis exited with code 0
 log truncated at line 1000

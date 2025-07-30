@@ -1,20 +1,20 @@
 {
   "participante": "ccs1201-02-sprg-redis-native",
-  "total_liquido": 240433.193,
+  "total_liquido": 343375.296,
   "total_bruto": 333126,
-  "total_taxas": 20875.1,
+  "total_taxas": 20966.64,
   "descricao": "'total_liquido' é sua pontuação final. Equivale ao seu lucro. Fórmula: total_liquido + (total_liquido * p99.bonus) - (total_liquido * multa.porcentagem)",
   "p99": {
-    "valor": "5.23ms",
-    "bonus": "12%",
+    "valor": "5.82ms",
+    "bonus": "10%",
     "max_requests": "550",
     "descricao": "Fórmula para o bônus: max((11 - p99.valor) * 0.02, 0)"
   },
   "multa": {
-    "porcentagem": 0.35,
-    "total": 109287.815,
+    "porcentagem": 0,
+    "total": 0,
     "composicao": {
-      "num_inconsistencias": 3,
+      "num_inconsistencias": 0,
       "descricao": "Se 'num_inconsistencias' > 0, há multa de 35%."
     }
   },
@@ -34,15 +34,15 @@
     "descricao": "'qtd_sucesso' foram requests bem sucedidos para 'POST /payments' e 'qtd_falha' os requests com erro."
   },
   "pagamentos_realizados_default": {
-    "total_bruto": 290938,
-    "num_pagamentos": 14620,
-    "total_taxas": 14546.9,
+    "total_bruto": 290022.6,
+    "num_pagamentos": 14574,
+    "total_taxas": 14501.13,
     "descricao": "Informações do backend sobre solicitações de pagamento para o Payment Processor Default."
   },
   "pagamentos_realizados_fallback": {
-    "total_bruto": 42188,
-    "num_pagamentos": 2120,
-    "total_taxas": 6328.2,
+    "total_bruto": 43103.4,
+    "num_pagamentos": 2166,
+    "total_taxas": 6465.51,
     "descricao": "Informações do backend sobre solicitações de pagamento para o Payment Processor Fallback."
   }
 }

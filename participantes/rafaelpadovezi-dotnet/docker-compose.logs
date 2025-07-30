@@ -17,47 +17,44 @@
  5eaab2666e24 Pulling fs layer 
  166facfcf7e1 Pulling fs layer 
  166facfcf7e1 Waiting 
+ 1a0d935c67ab Download complete 
+ 1a0d935c67ab Download complete 
+ 1a0d935c67ab Extracting [==================================================>]      96B/96B
+ 1a0d935c67ab Extracting [==================================================>]      96B/96B
+ 1a0d935c67ab Extracting [==================================================>]      96B/96B
+ 1a0d935c67ab Extracting [==================================================>]      96B/96B
+ 4f4fb700ef54 Verifying Checksum 
+ 4f4fb700ef54 Download complete 
  4f4fb700ef54 Downloading [==================================================>]      32B/32B
+ 4f4fb700ef54 Verifying Checksum 
  4f4fb700ef54 Download complete 
- 4f4fb700ef54 Download complete 
- 5eaab2666e24 Downloading [>                                                  ]  232.9kB/23.22MB
- 5eaab2666e24 Downloading [>                                                  ]  232.9kB/23.22MB
- 5eaab2666e24 Downloading [===================>                               ]  8.903MB/23.22MB
- 5eaab2666e24 Downloading [===================>                               ]  8.903MB/23.22MB
- 5eaab2666e24 Downloading [======================================>            ]  17.84MB/23.22MB
- 5eaab2666e24 Downloading [======================================>            ]  17.84MB/23.22MB
- 5eaab2666e24 Verifying Checksum 
- 5eaab2666e24 Download complete 
- 5eaab2666e24 Verifying Checksum 
- 5eaab2666e24 Download complete 
- 1a0d935c67ab Downloading [==================================================>]      96B/96B
- 1a0d935c67ab Verifying Checksum 
- 1a0d935c67ab Download complete 
- 1a0d935c67ab Extracting [==================================================>]      96B/96B
- 1a0d935c67ab Download complete 
- 1a0d935c67ab Extracting [==================================================>]      96B/96B
- 1a0d935c67ab Extracting [==================================================>]      96B/96B
- 1a0d935c67ab Extracting [==================================================>]      96B/96B
  1a0d935c67ab Pull complete 
  1a0d935c67ab Pull complete 
+ 5eaab2666e24 Downloading [>                                                  ]  232.9kB/23.22MB
+ 5eaab2666e24 Downloading [>                                                  ]  232.9kB/23.22MB
  4f4fb700ef54 Extracting [==================================================>]      32B/32B
  4f4fb700ef54 Extracting [==================================================>]      32B/32B
  4f4fb700ef54 Extracting [==================================================>]      32B/32B
  4f4fb700ef54 Extracting [==================================================>]      32B/32B
  4f4fb700ef54 Pull complete 
  4f4fb700ef54 Pull complete 
+ 5eaab2666e24 Downloading [=======================>                           ]  10.88MB/23.22MB
+ 5eaab2666e24 Downloading [=======================>                           ]  10.88MB/23.22MB
+ 5eaab2666e24 Downloading [=================================================> ]  22.83MB/23.22MB
+ 5eaab2666e24 Downloading [=================================================> ]  22.83MB/23.22MB
+ 5eaab2666e24 Download complete 
+ 5eaab2666e24 Verifying Checksum 
+ 5eaab2666e24 Download complete 
  5eaab2666e24 Extracting [>                                                  ]  262.1kB/23.22MB
  5eaab2666e24 Extracting [>                                                  ]  262.1kB/23.22MB
  166facfcf7e1 Downloading [==================================================>]      93B/93B
  166facfcf7e1 Verifying Checksum 
  166facfcf7e1 Download complete 
- 166facfcf7e1 Downloading [==================================================>]      93B/93B
- 166facfcf7e1 Verifying Checksum 
  166facfcf7e1 Download complete 
- 5eaab2666e24 Extracting [====================>                              ]  9.437MB/23.22MB
- 5eaab2666e24 Extracting [====================>                              ]  9.437MB/23.22MB
- 5eaab2666e24 Extracting [==========================================>        ]  19.92MB/23.22MB
- 5eaab2666e24 Extracting [==========================================>        ]  19.92MB/23.22MB
+ 5eaab2666e24 Extracting [=====================>                             ]  9.961MB/23.22MB
+ 5eaab2666e24 Extracting [=====================>                             ]  9.961MB/23.22MB
+ 5eaab2666e24 Extracting [===========================================>       ]  20.19MB/23.22MB
+ 5eaab2666e24 Extracting [===========================================>       ]  20.19MB/23.22MB
  5eaab2666e24 Extracting [=================================================> ]  22.81MB/23.22MB
  5eaab2666e24 Extracting [=================================================> ]  22.81MB/23.22MB
  5eaab2666e24 Extracting [==================================================>]  23.22MB/23.22MB
@@ -70,84 +67,76 @@
  166facfcf7e1 Extracting [==================================================>]      93B/93B
  166facfcf7e1 Pull complete 
  166facfcf7e1 Pull complete 
- api1 Pulled 
  api2 Pulled 
+ api1 Pulled 
  Network rafaelpadovezi-dotnet_backend  Creating
  Network rafaelpadovezi-dotnet_backend  Created
  Container rafaelpadovezi-dotnet-redis-1  Creating
  Container rafaelpadovezi-dotnet-redis-1  Created
  Container rafaelpadovezi-dotnet-api2-1  Creating
  Container rafaelpadovezi-dotnet-api1-1  Creating
- Container rafaelpadovezi-dotnet-api2-1  Created
  Container rafaelpadovezi-dotnet-api1-1  Created
+ Container rafaelpadovezi-dotnet-api2-1  Created
  Container rafaelpadovezi-dotnet-nginx-1  Creating
  Container rafaelpadovezi-dotnet-nginx-1  Created
 Attaching to api1-1, api2-1, nginx-1, redis-1
 redis-1  | Starting Redis Server
-redis-1  | 1:C 28 Jul 2025 12:17:41.115 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
-redis-1  | 1:C 28 Jul 2025 12:17:41.115 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
-redis-1  | 1:C 28 Jul 2025 12:17:41.115 * Redis version=8.0.3, bits=64, commit=00000000, modified=1, pid=1, just started
-redis-1  | 1:C 28 Jul 2025 12:17:41.115 * Configuration loaded
-redis-1  | 1:M 28 Jul 2025 12:17:41.115 * monotonic clock: POSIX clock_gettime
-redis-1  | 1:M 28 Jul 2025 12:17:41.116 * Running mode=standalone, port=6379.
-redis-1  | 1:M 28 Jul 2025 12:17:41.117 * <bf> RedisBloom version 8.0.1 (Git=unknown)
-redis-1  | 1:M 28 Jul 2025 12:17:41.117 * <bf> Registering configuration options: [
-redis-1  | 1:M 28 Jul 2025 12:17:41.117 * <bf> 	{ bf-error-rate       :      0.01 }
-redis-1  | 1:M 28 Jul 2025 12:17:41.117 * <bf> 	{ bf-initial-size     :       100 }
-redis-1  | 1:M 28 Jul 2025 12:17:41.117 * <bf> 	{ bf-expansion-factor :         2 }
-redis-1  | 1:M 28 Jul 2025 12:17:41.117 * <bf> 	{ cf-bucket-size      :         2 }
-redis-1  | 1:M 28 Jul 2025 12:17:41.117 * <bf> 	{ cf-initial-size     :      1024 }
-redis-1  | 1:M 28 Jul 2025 12:17:41.117 * <bf> 	{ cf-max-iterations   :        20 }
-redis-1  | 1:M 28 Jul 2025 12:17:41.117 * <bf> 	{ cf-expansion-factor :         1 }
-redis-1  | 1:M 28 Jul 2025 12:17:41.117 * <bf> 	{ cf-max-expansions   :        32 }
-redis-1  | 1:M 28 Jul 2025 12:17:41.117 * <bf> ]
-redis-1  | 1:M 28 Jul 2025 12:17:41.117 * Module 'bf' loaded from /usr/local/lib/redis/modules//redisbloom.so
-redis-1  | 1:M 28 Jul 2025 12:17:41.121 * <search> Redis version found by RedisSearch : 8.0.3 - oss
-redis-1  | 1:M 28 Jul 2025 12:17:41.121 * <search> RediSearch version 8.0.1 (Git=5688fcc)
-redis-1  | 1:M 28 Jul 2025 12:17:41.121 * <search> Low level api version 1 initialized successfully
-redis-1  | 1:M 28 Jul 2025 12:17:41.121 * <search> gc: ON, prefix min length: 2, min word length to stem: 4, prefix max expansions: 200, query timeout (ms): 500, timeout policy: return, cursor read size: 1000, cursor max idle (ms): 300000, max doctable size: 1000000, max number of search results:  1000000, 
-redis-1  | 1:M 28 Jul 2025 12:17:41.121 * <search> Initialized thread pools!
-redis-1  | 1:M 28 Jul 2025 12:17:41.121 * <search> Disabled workers threadpool of size 0
-redis-1  | 1:M 28 Jul 2025 12:17:41.121 * <search> Subscribe to config changes
-redis-1  | 1:M 28 Jul 2025 12:17:41.121 * <search> Enabled role change notification
-redis-1  | 1:M 28 Jul 2025 12:17:41.122 * <search> Cluster configuration: AUTO partitions, type: 0, coordinator timeout: 0ms
-redis-1  | 1:M 28 Jul 2025 12:17:41.122 * <search> Register write commands
-redis-1  | 1:M 28 Jul 2025 12:17:41.122 * Module 'search' loaded from /usr/local/lib/redis/modules//redisearch.so
-redis-1  | 1:M 28 Jul 2025 12:17:41.123 * <timeseries> RedisTimeSeries version 80001, git_sha=577bfa8b5909e7ee572f0b651399be8303dc6641
-redis-1  | 1:M 28 Jul 2025 12:17:41.123 * <timeseries> Redis version found by RedisTimeSeries : 8.0.3 - oss
-redis-1  | 1:M 28 Jul 2025 12:17:41.123 * <timeseries> Registering configuration options: [
-redis-1  | 1:M 28 Jul 2025 12:17:41.123 * <timeseries> 	{ ts-compaction-policy   :              }
-redis-1  | 1:M 28 Jul 2025 12:17:41.123 * <timeseries> 	{ ts-num-threads         :            3 }
-redis-1  | 1:M 28 Jul 2025 12:17:41.123 * <timeseries> 	{ ts-retention-policy    :            0 }
-redis-1  | 1:M 28 Jul 2025 12:17:41.123 * <timeseries> 	{ ts-duplicate-policy    :        block }
-redis-1  | 1:M 28 Jul 2025 12:17:41.123 * <timeseries> 	{ ts-chunk-size-bytes    :         4096 }
-redis-1  | 1:M 28 Jul 2025 12:17:41.123 * <timeseries> 	{ ts-encoding            :   compressed }
-redis-1  | 1:M 28 Jul 2025 12:17:41.123 * <timeseries> 	{ ts-ignore-max-time-diff:            0 }
-redis-1  | 1:M 28 Jul 2025 12:17:41.123 * <timeseries> 	{ ts-ignore-max-val-diff :     0.000000 }
-redis-1  | 1:M 28 Jul 2025 12:17:41.123 * <timeseries> ]
-redis-1  | 1:M 28 Jul 2025 12:17:41.123 * <timeseries> Detected redis oss
-redis-1  | 1:M 28 Jul 2025 12:17:41.123 * Module 'timeseries' loaded from /usr/local/lib/redis/modules//redistimeseries.so
-redis-1  | 1:M 28 Jul 2025 12:17:41.125 * <ReJSON> Created new data type 'ReJSON-RL'
-redis-1  | 1:M 28 Jul 2025 12:17:41.125 * <ReJSON> version: 80001 git sha: unknown branch: unknown
-redis-1  | 1:M 28 Jul 2025 12:17:41.125 * <ReJSON> Exported RedisJSON_V1 API
-redis-1  | 1:M 28 Jul 2025 12:17:41.125 * <ReJSON> Exported RedisJSON_V2 API
-redis-1  | 1:M 28 Jul 2025 12:17:41.125 * <ReJSON> Exported RedisJSON_V3 API
-redis-1  | 1:M 28 Jul 2025 12:17:41.125 * <ReJSON> Exported RedisJSON_V4 API
-redis-1  | 1:M 28 Jul 2025 12:17:41.125 * <ReJSON> Exported RedisJSON_V5 API
-redis-1  | 1:M 28 Jul 2025 12:17:41.125 * <ReJSON> Enabled diskless replication
-redis-1  | 1:M 28 Jul 2025 12:17:41.125 * <ReJSON> Initialized shared string cache, thread safe: false.
-redis-1  | 1:M 28 Jul 2025 12:17:41.125 * Module 'ReJSON' loaded from /usr/local/lib/redis/modules//rejson.so
-redis-1  | 1:M 28 Jul 2025 12:17:41.126 * <search> Acquired RedisJSON_V5 API
-redis-1  | 1:M 28 Jul 2025 12:17:41.126 * Server initialized
-redis-1  | 1:M 28 Jul 2025 12:17:41.126 * Ready to accept connections tcp
-api1-1   | info: Microsoft.Hosting.Lifetime[14]
-api1-1   |       Now listening on: http://[::]:8080
-api1-1   | info: Microsoft.Hosting.Lifetime[0]
-api1-1   |       Application started. Press Ctrl+C to shut down.
-api1-1   | info: Microsoft.Hosting.Lifetime[0]
-api1-1   |       Hosting environment: Production
-api1-1   | info: Microsoft.Hosting.Lifetime[0]
-api1-1   |       Content root path: /app
+redis-1  | 1:C 30 Jul 2025 03:59:11.502 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+redis-1  | 1:C 30 Jul 2025 03:59:11.502 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+redis-1  | 1:C 30 Jul 2025 03:59:11.502 * Redis version=8.0.3, bits=64, commit=00000000, modified=1, pid=1, just started
+redis-1  | 1:C 30 Jul 2025 03:59:11.502 * Configuration loaded
+redis-1  | 1:M 30 Jul 2025 03:59:11.503 * monotonic clock: POSIX clock_gettime
+redis-1  | 1:M 30 Jul 2025 03:59:11.504 * Running mode=standalone, port=6379.
+redis-1  | 1:M 30 Jul 2025 03:59:11.504 * <bf> RedisBloom version 8.0.1 (Git=unknown)
+redis-1  | 1:M 30 Jul 2025 03:59:11.504 * <bf> Registering configuration options: [
+redis-1  | 1:M 30 Jul 2025 03:59:11.504 * <bf> 	{ bf-error-rate       :      0.01 }
+redis-1  | 1:M 30 Jul 2025 03:59:11.505 * <bf> 	{ bf-initial-size     :       100 }
+redis-1  | 1:M 30 Jul 2025 03:59:11.505 * <bf> 	{ bf-expansion-factor :         2 }
+redis-1  | 1:M 30 Jul 2025 03:59:11.505 * <bf> 	{ cf-bucket-size      :         2 }
+redis-1  | 1:M 30 Jul 2025 03:59:11.505 * <bf> 	{ cf-initial-size     :      1024 }
+redis-1  | 1:M 30 Jul 2025 03:59:11.505 * <bf> 	{ cf-max-iterations   :        20 }
+redis-1  | 1:M 30 Jul 2025 03:59:11.505 * <bf> 	{ cf-expansion-factor :         1 }
+redis-1  | 1:M 30 Jul 2025 03:59:11.505 * <bf> 	{ cf-max-expansions   :        32 }
+redis-1  | 1:M 30 Jul 2025 03:59:11.505 * <bf> ]
+redis-1  | 1:M 30 Jul 2025 03:59:11.505 * Module 'bf' loaded from /usr/local/lib/redis/modules//redisbloom.so
+redis-1  | 1:M 30 Jul 2025 03:59:11.506 * <search> Redis version found by RedisSearch : 8.0.3 - oss
+redis-1  | 1:M 30 Jul 2025 03:59:11.506 * <search> RediSearch version 8.0.1 (Git=5688fcc)
+redis-1  | 1:M 30 Jul 2025 03:59:11.506 * <search> Low level api version 1 initialized successfully
+redis-1  | 1:M 30 Jul 2025 03:59:11.506 * <search> gc: ON, prefix min length: 2, min word length to stem: 4, prefix max expansions: 200, query timeout (ms): 500, timeout policy: return, cursor read size: 1000, cursor max idle (ms): 300000, max doctable size: 1000000, max number of search results:  1000000, 
+redis-1  | 1:M 30 Jul 2025 03:59:11.506 * <search> Initialized thread pools!
+redis-1  | 1:M 30 Jul 2025 03:59:11.506 * <search> Disabled workers threadpool of size 0
+redis-1  | 1:M 30 Jul 2025 03:59:11.506 * <search> Subscribe to config changes
+redis-1  | 1:M 30 Jul 2025 03:59:11.506 * <search> Enabled role change notification
+redis-1  | 1:M 30 Jul 2025 03:59:11.506 * <search> Cluster configuration: AUTO partitions, type: 0, coordinator timeout: 0ms
+redis-1  | 1:M 30 Jul 2025 03:59:11.506 * <search> Register write commands
+redis-1  | 1:M 30 Jul 2025 03:59:11.507 * Module 'search' loaded from /usr/local/lib/redis/modules//redisearch.so
+redis-1  | 1:M 30 Jul 2025 03:59:11.507 * <timeseries> RedisTimeSeries version 80001, git_sha=577bfa8b5909e7ee572f0b651399be8303dc6641
+redis-1  | 1:M 30 Jul 2025 03:59:11.507 * <timeseries> Redis version found by RedisTimeSeries : 8.0.3 - oss
+redis-1  | 1:M 30 Jul 2025 03:59:11.507 * <timeseries> Registering configuration options: [
+redis-1  | 1:M 30 Jul 2025 03:59:11.507 * <timeseries> 	{ ts-compaction-policy   :              }
+redis-1  | 1:M 30 Jul 2025 03:59:11.507 * <timeseries> 	{ ts-num-threads         :            3 }
+redis-1  | 1:M 30 Jul 2025 03:59:11.507 * <timeseries> 	{ ts-retention-policy    :            0 }
+redis-1  | 1:M 30 Jul 2025 03:59:11.507 * <timeseries> 	{ ts-duplicate-policy    :        block }
+redis-1  | 1:M 30 Jul 2025 03:59:11.507 * <timeseries> 	{ ts-chunk-size-bytes    :         4096 }
+redis-1  | 1:M 30 Jul 2025 03:59:11.507 * <timeseries> 	{ ts-encoding            :   compressed }
+redis-1  | 1:M 30 Jul 2025 03:59:11.507 * <timeseries> 	{ ts-ignore-max-time-diff:            0 }
+redis-1  | 1:M 30 Jul 2025 03:59:11.507 * <timeseries> 	{ ts-ignore-max-val-diff :     0.000000 }
+redis-1  | 1:M 30 Jul 2025 03:59:11.507 * <timeseries> ]
+redis-1  | 1:M 30 Jul 2025 03:59:11.507 * <timeseries> Detected redis oss
+redis-1  | 1:M 30 Jul 2025 03:59:11.507 * Module 'timeseries' loaded from /usr/local/lib/redis/modules//redistimeseries.so
+redis-1  | 1:M 30 Jul 2025 03:59:11.508 * <ReJSON> Created new data type 'ReJSON-RL'
+redis-1  | 1:M 30 Jul 2025 03:59:11.508 * <ReJSON> version: 80001 git sha: unknown branch: unknown
+redis-1  | 1:M 30 Jul 2025 03:59:11.508 * <ReJSON> Exported RedisJSON_V1 API
+redis-1  | 1:M 30 Jul 2025 03:59:11.508 * <ReJSON> Exported RedisJSON_V2 API
+redis-1  | 1:M 30 Jul 2025 03:59:11.508 * <ReJSON> Exported RedisJSON_V3 API
+redis-1  | 1:M 30 Jul 2025 03:59:11.508 * <ReJSON> Exported RedisJSON_V4 API
+redis-1  | 1:M 30 Jul 2025 03:59:11.508 * <ReJSON> Exported RedisJSON_V5 API
+redis-1  | 1:M 30 Jul 2025 03:59:11.508 * <ReJSON> Enabled diskless replication
+redis-1  | 1:M 30 Jul 2025 03:59:11.508 * <ReJSON> Initialized shared string cache, thread safe: false.
+redis-1  | 1:M 30 Jul 2025 03:59:11.508 * Module 'ReJSON' loaded from /usr/local/lib/redis/modules//rejson.so
+redis-1  | 1:M 30 Jul 2025 03:59:11.508 * <search> Acquired RedisJSON_V5 API
+redis-1  | 1:M 30 Jul 2025 03:59:11.508 * Server initialized
+redis-1  | 1:M 30 Jul 2025 03:59:11.508 * Ready to accept connections tcp
 api2-1   | info: Microsoft.Hosting.Lifetime[14]
 api2-1   |       Now listening on: http://[::]:8080
 api2-1   | info: Microsoft.Hosting.Lifetime[0]
@@ -156,6 +145,14 @@ api2-1   | info: Microsoft.Hosting.Lifetime[0]
 api2-1   |       Hosting environment: Production
 api2-1   | info: Microsoft.Hosting.Lifetime[0]
 api2-1   |       Content root path: /app
+api1-1   | info: Microsoft.Hosting.Lifetime[14]
+api1-1   |       Now listening on: http://[::]:8080
+api1-1   | info: Microsoft.Hosting.Lifetime[0]
+api1-1   |       Application started. Press Ctrl+C to shut down.
+api1-1   | info: Microsoft.Hosting.Lifetime[0]
+api1-1   |       Hosting environment: Production
+api1-1   | info: Microsoft.Hosting.Lifetime[0]
+api1-1   |       Content root path: /app
 nginx-1  | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
 nginx-1  | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
 nginx-1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
@@ -166,140 +163,138 @@ nginx-1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-
 nginx-1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
 nginx-1  | /docker-entrypoint.sh: Configuration complete; ready for start up
 api1-1   | info: Rinha[0]
-api1-1   |       Request GET /payments-summary took 8ms
-api1-1   | info: Rinha[0]
-api1-1   |       Request GET /payments-summary?from=2025-07-28T12:17:45.054Z&to=2025-07-28T12:17:54.954Z took 22ms
+api1-1   |       Request GET /payments-summary?from=2025-07-30T03:59:17.072Z&to=2025-07-30T03:59:26.972Z took 16ms
 api2-1   | info: Rinha[0]
-api2-1   |       Request GET /payments-summary?from=2025-07-28T12:18:05.152Z&to=2025-07-28T12:18:15.052Z took 26ms
+api2-1   |       Request GET /payments-summary?from=2025-07-30T03:59:27.093Z&to=2025-07-30T03:59:36.993Z took 13ms
 api1-1   | warn: Rinha.PaymentConsumerWorker[0]
-api1-1   |       Payment failed for a50078d3-0439-4b5e-aea8-f2c5da2cae4e. Retrying...
-api2-1   | warn: Rinha.PaymentConsumerWorker[0]
-api2-1   |       Payment failed for 4ee78871-3758-4688-be6d-ea38ebf83e8b. Retrying...
+api1-1   |       Payment failed for aa028341-f1fd-471a-a995-9b0eb531b4f5. Retrying...
 api1-1   | warn: Rinha.PaymentConsumerWorker[0]
-api1-1   |       Payment failed for 8da31c72-e68a-47df-bb84-32c75a1f1eb5. Retrying...
-api2-1   | warn: Rinha.PaymentConsumerWorker[0]
-api2-1   |       Payment failed for acd95305-3abc-4f05-959f-480cb69b682a. Retrying...
-api2-1   | warn: Rinha.PaymentConsumerWorker[0]
-api2-1   |       Payment failed for 92c48cc0-ee21-41da-ae85-a58eb6b7d2f5. Retrying...
-api2-1   | warn: Rinha.PaymentConsumerWorker[0]
-api2-1   |       Payment failed for 6a23a76b-e62c-4bb4-ba95-8525541c7084. Retrying...
-api2-1   | warn: Rinha.PaymentConsumerWorker[0]
-api2-1   |       Payment failed for adb937a6-0456-4b3e-9593-c3395ad544c2. Retrying...
-api2-1   | warn: Rinha.PaymentConsumerWorker[0]
-api2-1   |       Payment failed for 1ea7a040-2763-447d-82d6-517c63ff7286. Retrying...
-api2-1   | warn: Rinha.PaymentConsumerWorker[0]
-api2-1   |       Payment failed for fec5172a-494f-4185-ba9e-e31be3559f29. Retrying...
+api1-1   |       Payment failed for b2b8f42b-5c7b-43d7-9430-e68b62038950. Retrying...
 api1-1   | warn: Rinha.PaymentConsumerWorker[0]
-api1-1   |       Payment failed for 8b1561a5-96f3-41f3-8d9d-d145d0ae8208. Retrying...
+api1-1   |       Payment failed for 2497d044-793a-42b9-95c0-33f0fdc9f75d. Retrying...
 api1-1   | warn: Rinha.PaymentConsumerWorker[0]
-api1-1   |       Payment failed for c3447df9-e7a9-4d0c-8d64-e2fa5f6391e6. Retrying...
+api1-1   |       Payment failed for 6107cfb6-fdda-4955-bdfa-a796e7f8ba05. Retrying...
 api1-1   | warn: Rinha.PaymentConsumerWorker[0]
-api1-1   |       Payment failed for f9f30dda-5223-4b25-b417-2edc37b4f1ee. Retrying...
-api1-1   | warn: Rinha.PaymentConsumerWorker[0]
-api1-1   |       Payment failed for 274929f1-9435-473b-87b1-118b2999a7fe. Retrying...
-api1-1   | warn: Rinha.PaymentConsumerWorker[0]
-api1-1   |       Payment failed for 35f1375c-d143-48f9-8911-da8bd93e3880. Retrying...
+api1-1   |       Payment failed for 029befc5-da6b-4512-973c-9f7d96271f80. Retrying...
 api2-1   | warn: Rinha.PaymentConsumerWorker[0]
-api2-1   |       Payment failed for 617c6fbf-fd84-496c-ac9b-d900a0157bac. Retrying...
+api2-1   |       Payment failed for 68e2cd7a-77b9-40b2-abca-3420f650940b. Retrying...
 api2-1   | warn: Rinha.PaymentConsumerWorker[0]
-api2-1   |       Payment failed for c50b26a5-2a8c-42f0-bd72-feb11d9d4c7c. Retrying...
+api2-1   |       Payment failed for c8029ae3-ffb9-42b2-a1eb-0f36cadd9f43. Retrying...
 api2-1   | warn: Rinha.PaymentConsumerWorker[0]
-api2-1   |       Payment failed for e013e234-5c00-4230-bf0d-ce214a066699. Retrying...
+api2-1   |       Payment failed for 3226e960-3f79-4f8f-a2c5-8b2c98815289. Retrying...
 api1-1   | warn: Rinha.PaymentConsumerWorker[0]
-api1-1   |       Payment failed for 182742bf-65e1-47ed-aab4-2908650893e3. Retrying...
+api1-1   |       Payment failed for 26ee9111-76b8-4ca5-b6e8-e0049da7d57e. Retrying...
 api1-1   | warn: Rinha.PaymentConsumerWorker[0]
-api1-1   |       Payment failed for d52b00ef-a628-4ce7-94e2-c9a58f2e9265. Retrying...
-api1-1   | warn: Rinha.PaymentConsumerWorker[0]
-api1-1   |       Payment failed for 691fafa4-4310-4fc8-a162-a122cd4b6ee2. Retrying...
-api1-1   | warn: Rinha.PaymentConsumerWorker[0]
-api1-1   |       Payment failed for 62a88563-e402-4b28-91b9-d89bc86ec283. Retrying...
+api1-1   |       Payment failed for 3ef2fa48-9114-41e1-9958-fabefc1f9256. Retrying...
 api2-1   | warn: Rinha.PaymentConsumerWorker[0]
-api2-1   |       Payment failed for 43b15531-3985-42e3-ad07-3c2fac5a2c7d. Retrying...
+api2-1   |       Payment failed for 6cdc0ac3-706c-45a6-a460-8c8f07f14a11. Retrying...
 api1-1   | warn: Rinha.PaymentConsumerWorker[0]
-api1-1   |       Payment failed for 9cccfe63-9680-4469-ab50-dd7887be10c3. Retrying...
-api2-1   | warn: Rinha.PaymentConsumerWorker[0]
-api2-1   |       Payment failed for 4dd95832-8f99-49c2-92d2-92b4608a7c1d. Retrying...
-api2-1   | warn: Rinha.PaymentConsumerWorker[0]
-api2-1   |       Payment failed for a079ab49-abce-42bd-9d16-b4f5a69e6731. Retrying...
-api2-1   | warn: Rinha.PaymentConsumerWorker[0]
-api2-1   |       Payment failed for 2c29826b-b7dc-4162-9507-a4dbe3bf07be. Retrying...
-api2-1   | warn: Rinha.PaymentConsumerWorker[0]
-api2-1   |       Payment failed for 916ddec1-c890-448f-983d-090ff133930b. Retrying...
-api2-1   | warn: Rinha.PaymentConsumerWorker[0]
-api2-1   |       Payment failed for 185927e8-0572-4449-a6d4-c776719347aa. Retrying...
-api2-1   | warn: Rinha.PaymentConsumerWorker[0]
-api2-1   |       Payment failed for f6a351e4-5d1b-480c-80e9-a3925c2ebc3d. Retrying...
+api1-1   |       Payment failed for 0e3b6246-ff22-4281-af8f-f1c87969bebb. Retrying...
 api1-1   | warn: Rinha.PaymentConsumerWorker[0]
-api1-1   |       Payment failed for e621195f-1692-4478-a67e-e66dd27bbe8a. Retrying...
+api1-1   |       Payment failed for 0039c9a8-a6b2-4384-86c7-006c5a487bb2. Retrying...
 api1-1   | warn: Rinha.PaymentConsumerWorker[0]
-api1-1   |       Payment failed for e4a92c5b-b716-4037-8bc5-3884aed1b411. Retrying...
+api1-1   |       Payment failed for b0e136f6-65a8-400e-991a-86e659abb43c. Retrying...
 api2-1   | warn: Rinha.PaymentConsumerWorker[0]
-api2-1   |       Payment failed for bbca0b07-388e-44f9-b12b-24d83bcfbc36. Retrying...
+api2-1   |       Payment failed for 00ec781f-826a-4f64-b051-2a6870df8e81. Retrying...
 api2-1   | warn: Rinha.PaymentConsumerWorker[0]
-api2-1   |       Payment failed for f80dad1e-a189-4e65-82a8-72b051737205. Retrying...
-api1-1   | warn: Rinha.PaymentConsumerWorker[0]
+api2-1   |       Payment failed for 02ca6420-c745-4a8d-a795-8643e5acc218. Retrying...
 api2-1   | warn: Rinha.PaymentConsumerWorker[0]
-api1-1   |       Payment failed for e34c7282-aa3e-4fd3-ab4e-d4fba65e30a7. Retrying...
-api1-1   | warn: Rinha.PaymentConsumerWorker[0]
-api1-1   |       Payment failed for 3b4684e8-2587-41fb-bc95-68bb0a4e1f84. Retrying...
-api1-1   | warn: Rinha.PaymentConsumerWorker[0]
-api1-1   |       Payment failed for fb32f914-d6fa-4d9e-9a96-93d946026649. Retrying...
-api2-1   |       Payment failed for 0aa272ae-a5cb-4e16-99e6-b08dceff9c10. Retrying...
-api1-1   | warn: Rinha.PaymentConsumerWorker[0]
-api1-1   |       Payment failed for 97b6b633-0956-4ff4-8d95-6f51f459dd77. Retrying...
-api1-1   | warn: Rinha.PaymentConsumerWorker[0]
-api1-1   |       Payment failed for 5c812e09-31c9-425d-ad19-4063f1321f33. Retrying...
-api1-1   | warn: Rinha.PaymentConsumerWorker[0]
-api1-1   |       Payment failed for f520a694-b495-4164-bb9d-1903242f5ed0. Retrying...
-api1-1   | warn: Rinha.PaymentConsumerWorker[0]
-api1-1   |       Payment failed for 92ebdc15-acf5-4c28-9b38-a3975b79c7a1. Retrying...
+api2-1   |       Payment failed for b984918c-ff3a-47f0-b9be-e936518b0731. Retrying...
 api2-1   | warn: Rinha.PaymentConsumerWorker[0]
-api2-1   |       Payment failed for 53288a91-36e7-4be1-be7a-5ce79feae5a2. Retrying...
+api2-1   |       Payment failed for 3abbf261-3a68-4167-9935-666e838153f9. Retrying...
 api2-1   | warn: Rinha.PaymentConsumerWorker[0]
-api2-1   |       Payment failed for 83a35814-809f-48ea-b83f-b9d07ad1dbd0. Retrying...
-api1-1   | warn: Rinha.PaymentConsumerWorker[0]
-api1-1   |       Payment failed for 5a5629ce-75cf-4c2f-ac5a-949781496ad8. Retrying...
+api2-1   |       Payment failed for 6b45b468-1693-4708-bc45-3d741b711874. Retrying...
 api2-1   | warn: Rinha.PaymentConsumerWorker[0]
-api2-1   |       Payment failed for 14313343-c50e-4187-bc23-db919a121240. Retrying...
+api2-1   |       Payment failed for 349119dc-94bd-4084-a3fc-70de35f53dcd. Retrying...
+api1-1   | warn: Rinha.PaymentConsumerWorker[0]
+api1-1   |       Payment failed for bd16087d-c748-4134-99e9-6c3db6a1e8d1. Retrying...
+api1-1   | warn: Rinha.PaymentConsumerWorker[0]
+api1-1   |       Payment failed for 4da61f25-07bd-4af9-82da-6733261b257a. Retrying...
+api1-1   | warn: Rinha.PaymentConsumerWorker[0]
+api1-1   |       Payment failed for cb397da0-e8b8-445b-9d18-c99f025c9812. Retrying...
+api1-1   | warn: Rinha.PaymentConsumerWorker[0]
+api1-1   |       Payment failed for 6ce8619a-b748-49e7-b451-1ba62933ff64. Retrying...
+api1-1   | warn: Rinha.PaymentConsumerWorker[0]
+api1-1   |       Payment failed for 0494d0c8-881f-484f-9ce9-bc37dc9d63ca. Retrying...
 api2-1   | warn: Rinha.PaymentConsumerWorker[0]
-api2-1   |       Payment failed for 33528472-2fa0-453f-92d0-5bd60272f7f4. Retrying...
+api2-1   |       Payment failed for ccb5d0e5-daf0-4a5f-aa8e-284bb7a591ce. Retrying...
 api2-1   | warn: Rinha.PaymentConsumerWorker[0]
-api2-1   |       Payment failed for 65a53345-9185-4c71-9b31-b621a16e41bf. Retrying...
+api2-1   |       Payment failed for 22afe3a0-d2ec-47d5-9780-efd59422a3a9. Retrying...
 api2-1   | warn: Rinha.PaymentConsumerWorker[0]
-api2-1   |       Payment failed for 1a107a8f-26d7-445b-8091-d2c4013270f0. Retrying...
+api2-1   |       Payment failed for 5507e8cb-9877-4c02-89ec-9e02cb7bd49d. Retrying...
+api1-1   | warn: Rinha.PaymentConsumerWorker[0]
+api1-1   |       Payment failed for 2af530c8-26b5-4f30-b5d6-4166be8cc46b. Retrying...
+api1-1   | warn: Rinha.PaymentConsumerWorker[0]
+api1-1   |       Payment failed for a91aebb7-7e04-489a-9146-81876f364e28. Retrying...
 api2-1   | warn: Rinha.PaymentConsumerWorker[0]
-api2-1   |       Payment failed for d1c4835a-9d87-4f64-9c3d-2e517fbde841. Retrying...
+api2-1   |       Payment failed for 2ef8c24b-749e-4212-bc89-0d57c5d3f55f. Retrying...
 api1-1   | warn: Rinha.PaymentConsumerWorker[0]
-api1-1   |       Payment failed for d2de9a83-b058-4600-9b59-c99ad8c02d9e. Retrying...
+api1-1   |       Payment failed for 8b0a37d3-13b8-4d71-b7ca-62a22a3e83c9. Retrying...
 api1-1   | warn: Rinha.PaymentConsumerWorker[0]
-api1-1   |       Payment failed for fac071de-f68d-49dd-8704-47bb74becfd9. Retrying...
+api1-1   |       Payment failed for b9ed112e-c77b-4570-a68e-4cd17aafcdbc. Retrying...
+api1-1   | warn: Rinha.PaymentConsumerWorker[0]
+api1-1   |       Payment failed for 258bfec0-55bb-4cef-ba57-8c92d6e0f48f. Retrying...
 api2-1   | warn: Rinha.PaymentConsumerWorker[0]
-api2-1   |       Payment failed for 68b88a26-7ffd-4e5d-9cb1-450169a737f9. Retrying...
-api1-1   | warn: Rinha.PaymentConsumerWorker[0]
-api1-1   |       Payment failed for b05bf09a-75bd-47f8-93c9-aa3128d0af29. Retrying...
-api1-1   | warn: Rinha.PaymentConsumerWorker[0]
-api1-1   |       Payment failed for 30ab3d0f-29b8-4e08-8bab-e6a70dadfbc9. Retrying...
-api1-1   | warn: Rinha.PaymentConsumerWorker[0]
-api1-1   |       Payment failed for a4f3b053-c7f0-4b04-b419-96c68ba20406. Retrying...
+api2-1   |       Payment failed for 69f85c14-c36c-457a-8289-1194ddb13fc9. Retrying...
 api2-1   | warn: Rinha.PaymentConsumerWorker[0]
-api2-1   |       Payment failed for d012c4d9-9a3f-4118-a457-46ba30c7dd3d. Retrying...
+api2-1   |       Payment failed for c0cb2e97-54d9-49e1-bee2-a0014ffd4727. Retrying...
 api2-1   | warn: Rinha.PaymentConsumerWorker[0]
-api2-1   |       Payment failed for 15d89ed1-7840-45af-9aa8-7f62a63967bf. Retrying...
+api2-1   |       Payment failed for 85c65f7c-5a05-44a1-9b20-1c64d557b27e. Retrying...
+api2-1   | warn: Rinha.PaymentConsumerWorker[0]
+api2-1   |       Payment failed for bdb68423-6d4d-4c54-b282-1a32de96c32c. Retrying...
+api2-1   | warn: Rinha.PaymentConsumerWorker[0]
+api2-1   |       Payment failed for 675032e2-4cbd-4329-bd54-9ca309a5617a. Retrying...
+api2-1   | warn: Rinha.PaymentConsumerWorker[0]
+api2-1   |       Payment failed for 52b8a8bc-27a4-4013-a9bc-821cfd385e94. Retrying...
 api1-1   | warn: Rinha.PaymentConsumerWorker[0]
-api1-1   |       Payment failed for 4d5b169f-5b6f-4953-95e7-a9b00e198cdd. Retrying...
+api1-1   |       Payment failed for f09e0d1a-a743-4ac0-92c6-e35001f90888. Retrying...
 api1-1   | warn: Rinha.PaymentConsumerWorker[0]
-api1-1   |       Payment failed for 2d0a0480-208c-4133-8daf-a4f614b54269. Retrying...
+api1-1   |       Payment failed for 6e013853-3c4d-423b-a159-de2f819b5805. Retrying...
 api1-1   | warn: Rinha.PaymentConsumerWorker[0]
-api1-1   |       Payment failed for e3c9d8e4-a234-4075-b82b-b8bf55314692. Retrying...
-redis-1  | 1:M 28 Jul 2025 12:18:43.877 * 10000 changes in 60 seconds. Saving...
-redis-1  | 1:M 28 Jul 2025 12:18:43.878 * Background saving started by pid 69
-redis-1  | 69:C 28 Jul 2025 12:18:43.942 * DB saved on disk
-redis-1  | 69:C 28 Jul 2025 12:18:43.942 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
-redis-1  | 1:M 28 Jul 2025 12:18:43.979 * Background saving terminated with success
-api1-1   | info: Rinha[0]
-api1-1   |       Request GET /payments-summary?from=2025-07-28T12:18:35.198Z&to=2025-07-28T12:18:45.098Z took 12ms
-api1-1   | info: Rinha[0]
-api1-1   |       Request GET /payments-summary?from=2025-07-28T12:17:46.012Z&to=2025-07-28T12:18:56.012Z took 36ms
+api1-1   |       Payment failed for 6e14013c-1e25-4e06-9f06-fc330f477d5d. Retrying...
+api1-1   | warn: Rinha.PaymentConsumerWorker[0]
+api1-1   |       Payment failed for c8ddeea1-f622-457b-88a6-13c966bdc367. Retrying...
+api1-1   | warn: Rinha.PaymentConsumerWorker[0]
+api1-1   |       Payment failed for 72694f0e-d72d-44e3-9226-1951a0102d69. Retrying...
+api2-1   | warn: Rinha.PaymentConsumerWorker[0]
+api2-1   |       Payment failed for 253bfb34-6b95-44e4-9943-9542836fa5cd. Retrying...
+api2-1   | warn: Rinha.PaymentConsumerWorker[0]
+api2-1   |       Payment failed for b2c1357e-1afa-4dfc-8d10-126d961914be. Retrying...
+api2-1   | warn: Rinha.PaymentConsumerWorker[0]
+api2-1   |       Payment failed for 03c66d76-44c6-4e03-bf68-75964172bee1. Retrying...
+api1-1   | warn: Rinha.PaymentConsumerWorker[0]
+api1-1   |       Payment failed for 44e2327b-5634-4925-9784-3b7e4c4f7e95. Retrying...
+api2-1   | warn: Rinha.PaymentConsumerWorker[0]
+api2-1   |       Payment failed for 0c961c56-e2c6-4452-b1ea-38388ef74dec. Retrying...
+api1-1   | warn: Rinha.PaymentConsumerWorker[0]
+api1-1   |       Payment failed for a92d6558-b801-4648-aa9a-17375c597596. Retrying...
+api1-1   | warn: Rinha.PaymentConsumerWorker[0]
+api1-1   |       Payment failed for e73752f5-ad20-4ff1-9434-b55c6e1632cf. Retrying...
+api1-1   | warn: Rinha.PaymentConsumerWorker[0]
+api1-1   |       Payment failed for 5c5f25df-9df1-4e0d-ad36-a7c7b35fddd7. Retrying...
+api1-1   | warn: Rinha.PaymentConsumerWorker[0]
+api1-1   |       Payment failed for 5222a2bb-7a92-4c07-9652-144ab5d3a690. Retrying...
+api2-1   | warn: Rinha.PaymentConsumerWorker[0]
+api2-1   |       Payment failed for 15d19f6d-794a-438b-8e2d-aaa7ed29ab31. Retrying...
+api2-1   | warn: Rinha.PaymentConsumerWorker[0]
+api2-1   |       Payment failed for 6afb4382-77b4-4f57-90a1-feb526ca2ece. Retrying...
+api2-1   | warn: Rinha.PaymentConsumerWorker[0]
+api2-1   |       Payment failed for 86a75371-b1b8-495c-9e50-c299704f6c87. Retrying...
+api2-1   | warn: Rinha.PaymentConsumerWorker[0]
+api2-1   |       Payment failed for af70f64b-60be-4afe-ac74-bcf0611b86cb. Retrying...
+api2-1   | warn: Rinha.PaymentConsumerWorker[0]
+api2-1   |       Payment failed for 19a3b246-a1b7-4590-b0fa-d0a06cc9e696. Retrying...
+api2-1   | warn: Rinha.PaymentConsumerWorker[0]
+api2-1   |       Payment failed for be9f6f19-0807-4441-8ded-dd671a46afbd. Retrying...
+redis-1  | 1:M 30 Jul 2025 04:00:14.943 * 10000 changes in 60 seconds. Saving...
+redis-1  | 1:M 30 Jul 2025 04:00:14.944 * Background saving started by pid 67
+redis-1  | 67:C 30 Jul 2025 04:00:14.998 * DB saved on disk
+redis-1  | 67:C 30 Jul 2025 04:00:14.999 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+redis-1  | 1:M 30 Jul 2025 04:00:15.044 * Background saving terminated with success
+api2-1   | info: Rinha[0]
+api2-1   |       Request GET /payments-summary?from=2025-07-30T04:00:07.123Z&to=2025-07-30T04:00:17.023Z took 13ms
+api2-1   | info: Rinha[0]
+api2-1   |       Request GET /payments-summary?from=2025-07-30T03:59:18.041Z&to=2025-07-30T04:00:28.041Z took 44ms
 [Knginx-1 exited with code 0
 api2-1   | info: Microsoft.Hosting.Lifetime[0]
 api2-1   |       Application is shutting down...
@@ -307,12 +302,12 @@ api2-1   | Processing cancelled
 api1-1   | info: Microsoft.Hosting.Lifetime[0]
 api1-1   |       Application is shutting down...
 api1-1   | Processing cancelled
-[Kapi2-1 exited with code 0
 [Kapi1-1 exited with code 0
-redis-1  | 1:signal-handler (1753705137) Received SIGTERM scheduling shutdown...
-redis-1  | 1:M 28 Jul 2025 12:18:57.482 * User requested shutdown...
-redis-1  | 1:M 28 Jul 2025 12:18:57.482 * Saving the final RDB snapshot before exiting.
-redis-1  | 1:M 28 Jul 2025 12:18:57.539 * DB saved on disk
-redis-1  | 1:M 28 Jul 2025 12:18:57.539 # Redis is now ready to exit, bye bye...
+[Kapi2-1 exited with code 0
+redis-1  | 1:signal-handler (1753848029) Received SIGTERM scheduling shutdown...
+redis-1  | 1:M 30 Jul 2025 04:00:29.464 * User requested shutdown...
+redis-1  | 1:M 30 Jul 2025 04:00:29.464 * Saving the final RDB snapshot before exiting.
+redis-1  | 1:M 30 Jul 2025 04:00:29.539 * DB saved on disk
+redis-1  | 1:M 30 Jul 2025 04:00:29.540 # Redis is now ready to exit, bye bye...
 [Kredis-1 exited with code 0
 log truncated at line 1000
