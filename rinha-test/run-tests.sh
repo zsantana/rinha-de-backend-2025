@@ -29,7 +29,7 @@ MAX_REQUESTS=550
 
 while true; do
 
-    docker system prune -a -f --volumes
+    # docker system prune -a -f --volumes
 
     for directory in ../participantes/*; do
     (
@@ -78,8 +78,14 @@ while true; do
             git commit -m "add $participant's partial result"
             git push
 
+            echo "================================="
+            echo "  Finished testing $participant!"
+            echo "================================="
+
         else
-            echo "skipping $participant"
+            echo "================================="
+            echo "  Skipping $participant"
+            echo "================================="
         fi
     )
     done
