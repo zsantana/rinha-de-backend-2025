@@ -1,5 +1,5 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Wed Jul 30 07:02:37 PM -03 2025**
+Atualizado em **Wed Jul 30 07:10:36 PM -03 2025**
 178 submissões / 157 resultados / 21 submissões com erro
 
 
@@ -112,7 +112,7 @@ Atualizado em **Wed Jul 30 07:02:37 PM -03 2025**
 |	marcospaulo-java-2	|	14.69ms	|	0%	|	0	|	0	|	[marcospaulo-java-2](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/marcospaulo-java-2)
 |	matheusdojava	|	5.67ms	|	11%	|	0	|	351197.4288	|	[matheusdojava](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/matheusdojava)
 |	matheusf-lucas-and-luizcastro-java2	|	73.45ms	|	0%	|	0	|	0	|	[matheusf-lucas-and-luizcastro-java2](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/matheusf-lucas-and-luizcastro-java2)
-|	Maxel-Uds-quarkus	|	2.89ms	|	16%	|	110837.17925	|	256508.90055	|	[Maxel-Uds-quarkus](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/Maxel-Uds-quarkus)
+|	Maxel-Uds-quarkus	|	2.5ms	|	17%	|	110804.0955	|	259598.1666	|	[Maxel-Uds-quarkus](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/Maxel-Uds-quarkus)
 |	maxsonferovante	|	51.41ms	|	0%	|	86057.4505	|	159820.9795	|	[maxsonferovante](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/maxsonferovante)
 |	micheloliveira-com-dotnet-csharp-postgres	|	2.79ms	|	16%	|	0	|	367280.2904	|	[micheloliveira-com-dotnet-csharp-postgres](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/micheloliveira-com-dotnet-csharp-postgres)
 |	micheloliveira-com-dotnet-csharp-redis	|	3.68ms	|	15%	|	0	|	364092.34025	|	[micheloliveira-com-dotnet-csharp-redis](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/micheloliveira-com-dotnet-csharp-redis)
