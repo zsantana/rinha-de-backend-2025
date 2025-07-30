@@ -1,14 +1,14 @@
 services:
   backend:
-    image: felipeschirmann/rinha-backend-2025:12.0.0
+    image: felipeschirmann/rinha-backend-2025:12.1.0
 #    image: rinha-backend:latest
-    container_name: felipeschirmann-rinha-v12
+    container_name: felipeschirmann-rinha
     environment:
       # --- Performance Tuning: Reduced queue sizes to match limited CPU resources ---
       # This prevents the application from accepting too many requests too quickly,
       # which leads to resource starvation and timeouts.
       APP_QUEUE_MAX_CAPACITY: "20000"
-      APP_QUEUE_BASE_CAPACITY: "40000"
+      APP_QUEUE_BASE_CAPACITY: "10000"
 
       # --- Performance Tuning: Reduced batch size ---
       # Smaller batches require less CPU per processing cycle, keeping the application responsive.
