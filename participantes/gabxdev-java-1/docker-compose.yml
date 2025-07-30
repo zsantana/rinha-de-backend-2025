@@ -1,6 +1,6 @@
 services:
   api-1:
-    image: gabxdevv/rinha-backend-2025-java-super-bolado-native:1.0.3
+    image: gabxdevv/rinha-backend-2025-java-super-bolado-native:1.0.4
     container_name: gaxdev-backend-1
     environment:
       RETRY_API_DEFAULT: 15
@@ -36,7 +36,7 @@ services:
           memory: '175MB'
 
   api-2:
-    image: gabxdevv/rinha-backend-2025-java-super-bolado-native:1.0.3
+    image: gabxdevv/rinha-backend-2025-java-super-bolado-native:1.0.4
     container_name: gaxdev-backend-2
     restart: always
     environment:
