@@ -13,11 +13,13 @@ services:
       - backend
     depends_on:
       - redis
+    expose:
+      - 5000
     deploy:
       resources:
         limits:
           cpus: "0.40"
-          memory: "70MB"
+          memory: "120MB"
 
   api02:
     <<: *api
@@ -46,7 +48,6 @@ services:
       - api01
       - api02
     networks:
-      - payment-processor
       - backend
     ports:
       - "9999:9999"
