@@ -1,11 +1,12 @@
 services:
   api-1:
-    image: gabxdevv/rinha-backend-2025-java-super-bolado-native:1.0.4
+    hostname: api-1
+    image: gabxdevv/rinha-backend-2025-java-super-bolado-native-nginx:1.0.0
     container_name: gaxdev-backend-1
     environment:
       RETRY_API_DEFAULT: 15
       WORKER_POOL_SIZE: 14
-      WORKERS_THREAD_POOL_SIZE: 13
+      WORKERS_THREAD_POOL_SIZE: 14
       USER_SERVER: true
       URL_PROCESSOR_DEFAULT: http://payment-processor-default:8080/payments
       URL_PROCESSOR_FALLBACK: http://payment-processor-fallback:8080/payments
@@ -14,29 +15,20 @@ services:
       UDP_CHANNEL_INTERNAL_PORT: 9003
       EXTERNAL_UDP_HOST: api-2
       EXTERNAL_UDP_PORT: 9004
-      JAVA_OPTS: >-
-        -server
-        -XX:+UseG1GC
-        -XX:+UseFastAccessorMethods
-        -Xlog:disable
-        -XX:-PrintGC
-        -XX:+UseStringCache
-        -XX:-PrintGCDetails
-        -XX:-FlightRecorder
-        -XX:+DisableExplicitGC
+      SERVER_PORT: 8080
+
     networks:
       - backend
       - payment-processor
-    ports:
-      - "9999:9999"
     deploy:
       resources:
         limits:
-          cpus: '1'
-          memory: '175MB'
+          cpus: '0.625'
+          memory: '150MB'
 
   api-2:
-    image: gabxdevv/rinha-backend-2025-java-super-bolado-native:1.0.4
+    hostname: api-2
+    image: gabxdevv/rinha-backend-2025-java-super-bolado-native-nginx:1.0.0
     container_name: gaxdev-backend-2
     restart: always
     environment:
@@ -50,24 +42,35 @@ services:
       UDP_CHANNEL_INTERNAL_PORT: 9004
       EXTERNAL_UDP_HOST: api-1
       EXTERNAL_UDP_PORT: 9003
-      JAVA_OPTS: >-
-        -server
-        -XX:+UseG1GC
-        -XX:+UseFastAccessorMethods
-        -Xlog:disable
-        -XX:-PrintGC
-        -XX:+UseStringCache
-        -XX:-PrintGCDetails
-        -XX:-FlightRecorder
-        -XX:+DisableExplicitGC
+      SERVER_PORT: 8080
+
     networks:
       - backend
       - payment-processor
     deploy:
       resources:
         limits:
-          cpus: '0.5'
-          memory: '175MB'
+          cpus: '0.625'
+          memory: '150MB'
+
+  load-balancer:
+    image: nginx:alpine
+    restart: always
+    container_name: gabxdev-load-balancer
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+#    depends_on:
+#      - api-1
+#      - api-2
+    ports:
+      - "9999:9999"
+    networks:
+      - backend
+    deploy:
+      resources:
+        limits:
+          cpus: "0.25"
+          memory: "50MB"
 
 networks:
   backend:
