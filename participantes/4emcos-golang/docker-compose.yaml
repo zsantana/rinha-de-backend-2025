@@ -1,5 +1,5 @@
 services:
-  api01: &api
+  backend-01: &backend
     image: ghcr.io/4emcos/rinha-backend-2025-golang:latest
     container_name: backend-01
     hostname: backend-01
@@ -21,8 +21,8 @@ services:
           cpus: "0.40"
           memory: "120MB"
 
-  api02:
-    <<: *api
+  backend-02:
+    <<: *backend
     container_name: backend-02
     hostname: backend-02
 
@@ -33,7 +33,12 @@ services:
       - backend
     ports:
       - "6379:6379"
-    command: ["redis-server", "--appendonly", "yes", "--appendfsync", "everysec"]
+    command: [ "redis-server", "--save", "", "--appendonly", "no" ]
+    healthcheck:
+      test: [ "CMD", "redis-cli", "ping" ]
+      interval: 2s
+      timeout: 2s
+      retries: 5
     deploy:
       resources:
         limits:
@@ -45,8 +50,8 @@ services:
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf:ro
     depends_on:
-      - api01
-      - api02
+      - backend-01
+      - backend-02
     networks:
       - backend
     ports:
