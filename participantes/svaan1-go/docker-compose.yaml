@@ -6,7 +6,7 @@ x-api-template: &api-template
     deploy:
       resources:
         limits:
-          cpus: "0.5"
+          cpus: "0.55"
           memory: "120MB"
 
 services:
@@ -43,7 +43,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.2"
+          cpus: "0.15"
           memory: "40MB"
 
   haproxy:
@@ -61,7 +61,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.25"
+          cpus: "0.2"
           memory: "60MB"
 
 networks:
