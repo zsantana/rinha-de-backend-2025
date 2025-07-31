@@ -1,8 +1,6 @@
 x-service-templates:
   payment-gateway: &payment-gateway
-    build:
-      dockerfile: Dockerfile
-      no_cache: true
+    image: phaalonso/rinha-backend-2025-java:latest
     hostname: api01
     networks:
       - payment-processor
