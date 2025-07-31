@@ -4,7 +4,7 @@ services:
     image: gabxdevv/rinha-backend-2025-java-super-bolado-native-nginx:1.0.0
     environment:
       RETRY_API_DEFAULT: 15
-      WORKER_POOL_SIZE: 16
+      WORKER_POOL_SIZE: 14
       WORKERS_THREAD_POOL_SIZE: 12
       USER_SERVER: true
       URL_PROCESSOR_DEFAULT: http://payment-processor-default:8080/payments
@@ -15,13 +15,23 @@ services:
       EXTERNAL_UDP_HOST: api-2
       EXTERNAL_UDP_PORT: 9004
       SERVER_PORT: 8080
+      JAVA_OPTS: >-
+        -server
+        -XX:+UseG1GC
+        -XX:+UseFastAccessorMethods
+        -Xlog:disable
+        -XX:-PrintGC
+        -XX:+UseStringCache
+        -XX:-PrintGCDetails
+        -XX:-FlightRecorder
+        -XX:+DisableExplicitGC
     networks:
       - backend
       - payment-processor
     deploy:
       resources:
         limits:
-          cpus: '0.625'
+          cpus: '0.675'
           memory: '150MB'
 
   api-2:
@@ -30,8 +40,8 @@ services:
     restart: always
     environment:
       RETRY_API_DEFAULT: 15
-      WORKER_POOL_SIZE: 16
-      API_ROUTER_POOL_SIZE: 6
+      WORKER_POOL_SIZE: 14
+      WORKERS_THREAD_POOL_SIZE: 12
       URL_PROCESSOR_DEFAULT: http://payment-processor-default:8080/payments
       URL_PROCESSOR_FALLBACK: http://payment-processor-fallback:8080/payments
       USER_SERVER: false
@@ -40,13 +50,23 @@ services:
       EXTERNAL_UDP_HOST: api-1
       EXTERNAL_UDP_PORT: 9003
       SERVER_PORT: 8080
+      JAVA_OPTS: >-
+        -server
+        -XX:+UseG1GC
+        -XX:+UseFastAccessorMethods
+        -Xlog:disable
+        -XX:-PrintGC
+        -XX:+UseStringCache
+        -XX:-PrintGCDetails
+        -XX:-FlightRecorder
+        -XX:+DisableExplicitGC
     networks:
       - backend
       - payment-processor
     deploy:
       resources:
         limits:
-          cpus: '0.625'
+          cpus: '0.675'
           memory: '150MB'
 
   load-balancer:
@@ -64,7 +84,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.25"
+          cpus: "0.15"
           memory: "50MB"
 
 
