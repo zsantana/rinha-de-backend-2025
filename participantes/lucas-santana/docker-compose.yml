@@ -94,10 +94,8 @@ services:
     ports:
       - "9999:9999"
     depends_on:
-      api01:
-        condition: service_healthy
-      api02:
-        condition: service_healthy
+      - api01
+      - api02
     deploy:
       resources:
         limits:
@@ -112,3 +110,4 @@ networks:
     driver: bridge
   payment-processor:
     external: true
+
