@@ -6,9 +6,7 @@ x-service-templates:
     networks:
       - backend
       - payment-processor
-    depends_on:
-      redis:
-        condition: service_healthy
+
 
 services:
   api1:
