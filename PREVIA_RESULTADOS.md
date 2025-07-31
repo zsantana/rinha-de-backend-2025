@@ -1,6 +1,6 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Thu Jul 31 06:03:39 AM -03 2025**
-181 submissões / 158 resultados / 23 submissões com erro
+Atualizado em **Thu Jul 31 06:11:11 AM -03 2025**
+182 submissões / 158 resultados / 24 submissões com erro
 
 
 | participante | p99 | bônus por desempenho (%) | multa ($) | lucro | submissão |
@@ -178,6 +178,7 @@ Atualizado em **Thu Jul 31 06:03:39 AM -03 2025**
 | diofeher | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/diofeher) |
 | dotnetRinha | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/dotnetRinha) |
 | emilemoraes-java | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/emilemoraes-java) |
+| franklaercio | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/franklaercio) |
 | gabrieleiro | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/gabrieleiro) |
 | hoffmano | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/hoffmano) |
 | lbattochio-dotnet | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/lbattochio-dotnet) |
