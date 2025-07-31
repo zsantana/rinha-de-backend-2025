@@ -1,0 +1,24 @@
+
+ Network rinha-de-backend-2025  Creating
+ Network rinha-de-backend-2025  Created
+ Container gabrieleiro-tracker-1  Creating
+ tracker The requested image's platform (linux/arm64/v8) does not match the detected host platform (linux/amd64/v3) and no specific platform was requested 
+ Container gabrieleiro-tracker-1  Created
+ Container gabrieleiro-api-1-1  Creating
+ Container gabrieleiro-api-2-1  Creating
+ api-1 The requested image's platform (linux/arm64/v8) does not match the detected host platform (linux/amd64/v3) and no specific platform was requested 
+ api-2 The requested image's platform (linux/arm64/v8) does not match the detected host platform (linux/amd64/v3) and no specific platform was requested 
+ Container gabrieleiro-api-1-1  Created
+ Container gabrieleiro-api-2-1  Created
+ Container gabrieleiro-load-balancer-1  Creating
+ load-balancer The requested image's platform (linux/arm64/v8) does not match the detected host platform (linux/amd64/v3) and no specific platform was requested 
+ Container gabrieleiro-load-balancer-1  Created
+Attaching to api-1-1, api-2-1, load-balancer-1, tracker-1
+tracker-1        | exec /usr/local/bin/tracker: exec format error
+[Ktracker-1 exited with code 255
+api-1-1          | exec /usr/local/bin/api: exec format error
+api-2-1          | exec /usr/local/bin/api: exec format error
+[Kapi-1-1 exited with code 255
+[Kapi-2-1 exited with code 255
+load-balancer-1  | exec /usr/local/bin/loadbalancer: exec format error
+[Kload-balancer-1 exited with code 255

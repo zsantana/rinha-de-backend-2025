@@ -1,13 +1,29 @@
 
  Network gabxdev-java-1_backend  Creating
  Network gabxdev-java-1_backend  Created
- Container gabxdev-java-1-backend-1-1  Creating
- Container gabxdev-java-1-backend-2-1  Creating
- Container gabxdev-java-1-backend-2-1  Created
- Container gabxdev-java-1-backend-1-1  Created
+ Container gabxdev-java-1-api-1-1  Creating
+ Container gabxdev-java-1-api-2-1  Creating
+ Container gabxdev-java-1-api-1-1  Created
+ Container gabxdev-java-1-api-2-1  Created
  Container gabxdev-load-balancer  Creating
  Container gabxdev-load-balancer  Created
-Attaching to backend-1-1, backend-2-1, gabxdev-load-balancer
+Attaching to api-1-1, api-2-1, gabxdev-load-balancer
+api-1-1                | Jul 31, 2025 4:01:24 AM io.undertow.Undertow start
+api-1-1                | INFO: starting server: Undertow - 2.3.18.Final
+api-1-1                | Jul 31, 2025 4:01:24 AM org.xnio.Xnio <clinit>
+api-1-1                | INFO: XNIO version 3.8.16.Final
+api-1-1                | Jul 31, 2025 4:01:24 AM org.xnio.nio.NioXnio <clinit>
+api-1-1                | INFO: XNIO NIO Implementation Version 3.8.16.Final
+api-1-1                | Jul 31, 2025 4:01:24 AM org.jboss.threads.Version <clinit>
+api-1-1                | INFO: JBoss Threads version 3.5.0.Final
+api-2-1                | Jul 31, 2025 4:01:24 AM io.undertow.Undertow start
+api-2-1                | INFO: starting server: Undertow - 2.3.18.Final
+api-2-1                | Jul 31, 2025 4:01:24 AM org.xnio.Xnio <clinit>
+api-2-1                | INFO: XNIO version 3.8.16.Final
+api-2-1                | Jul 31, 2025 4:01:24 AM org.xnio.nio.NioXnio <clinit>
+api-2-1                | INFO: XNIO NIO Implementation Version 3.8.16.Final
+api-2-1                | Jul 31, 2025 4:01:24 AM org.jboss.threads.Version <clinit>
+api-2-1                | INFO: JBoss Threads version 3.5.0.Final
 gabxdev-load-balancer  | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
 gabxdev-load-balancer  | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
 gabxdev-load-balancer  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
@@ -18,6 +34,5 @@ gabxdev-load-balancer  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/2
 gabxdev-load-balancer  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
 gabxdev-load-balancer  | /docker-entrypoint.sh: Configuration complete; ready for start up
 [Kgabxdev-load-balancer exited with code 0
-[Kbackend-1-1 exited with code 143
-[Kbackend-2-1 exited with code 143
+[Kapi-2-1 exited with code 137
 log truncated at line 1000

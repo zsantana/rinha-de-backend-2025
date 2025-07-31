@@ -1,99 +1,90 @@
 
- api Pulling 
+ backend Pulling 
  59e22667830b Already exists 
- d7fb7b5ce8cf Pulling fs layer 
- 7fc98e72d5ed Pulling fs layer 
- d7fb7b5ce8cf Downloading [==============>                                    ]  1.009kB/3.404kB
- d7fb7b5ce8cf Download complete 
- d7fb7b5ce8cf Extracting [==================================================>]  3.404kB/3.404kB
- d7fb7b5ce8cf Extracting [==================================================>]  3.404kB/3.404kB
- d7fb7b5ce8cf Pull complete 
- 7fc98e72d5ed Downloading [>                                                  ]  528.4kB/52.58MB
- 7fc98e72d5ed Downloading [=>                                                 ]  1.061MB/52.58MB
- 7fc98e72d5ed Downloading [=>                                                 ]  1.589MB/52.58MB
- 7fc98e72d5ed Downloading [==>                                                ]  2.646MB/52.58MB
- 7fc98e72d5ed Downloading [===>                                               ]  3.703MB/52.58MB
- 7fc98e72d5ed Downloading [=====>                                             ]  5.325MB/52.58MB
- 7fc98e72d5ed Downloading [=======>                                           ]  7.442MB/52.58MB
- 7fc98e72d5ed Downloading [=========>                                         ]   10.1MB/52.58MB
- 7fc98e72d5ed Downloading [=============>                                     ]  13.81MB/52.58MB
- 7fc98e72d5ed Downloading [================>                                  ]  17.52MB/52.58MB
- 7fc98e72d5ed Downloading [=====================>                             ]  22.83MB/52.58MB
- 7fc98e72d5ed Downloading [============================>                      ]  30.27MB/52.58MB
- 7fc98e72d5ed Downloading [=================================>                 ]  35.57MB/52.58MB
- 7fc98e72d5ed Downloading [=====================================>             ]  39.82MB/52.58MB
- 7fc98e72d5ed Downloading [==========================================>        ]  45.14MB/52.58MB
- 7fc98e72d5ed Downloading [==============================================>    ]  48.87MB/52.58MB
- 7fc98e72d5ed Verifying Checksum 
- 7fc98e72d5ed Download complete 
- 7fc98e72d5ed Extracting [>                                                  ]  557.1kB/52.58MB
- 7fc98e72d5ed Extracting [========>                                          ]  8.913MB/52.58MB
- 7fc98e72d5ed Extracting [===============>                                   ]  16.71MB/52.58MB
- 7fc98e72d5ed Extracting [======================>                            ]  23.95MB/52.58MB
- 7fc98e72d5ed Extracting [=============================>                     ]  30.64MB/52.58MB
- 7fc98e72d5ed Extracting [====================================>              ]  37.88MB/52.58MB
- 7fc98e72d5ed Extracting [===========================================>       ]  46.24MB/52.58MB
- 7fc98e72d5ed Extracting [==================================================>]  52.58MB/52.58MB
- 7fc98e72d5ed Pull complete 
- api Pulled 
- Container felipeschirmann-rinha-v9  Creating
- Container felipeschirmann-rinha-v9  Created
-Attaching to felipeschirmann-rinha-v9
-felipeschirmann-rinha-v9  | 
-felipeschirmann-rinha-v9  |   .   ____          _            __ _ _
-felipeschirmann-rinha-v9  |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
-felipeschirmann-rinha-v9  | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
-felipeschirmann-rinha-v9  |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
-felipeschirmann-rinha-v9  |   '  |____| .__|_| |_|_| |_\__, | / / / /
-felipeschirmann-rinha-v9  |  =========|_|==============|___/=/_/_/_/
-felipeschirmann-rinha-v9  | 
-felipeschirmann-rinha-v9  |  :: Spring Boot ::                (v3.5.4)
-felipeschirmann-rinha-v9  | 
-felipeschirmann-rinha-v9  | 2025-07-27T16:03:41.144Z  INFO 1 --- [rinha-v2] [           main] b.d.f.rinha_v2.RinhaV2Application        : Starting AOT-processed RinhaV2Application using Java 21.0.7 with PID 1 (/app/rinha-v2 started by nonroot in /app)
-felipeschirmann-rinha-v9  | 2025-07-27T16:03:41.144Z  INFO 1 --- [rinha-v2] [           main] b.d.f.rinha_v2.RinhaV2Application        : No active profile set, falling back to 1 default profile: "default"
-felipeschirmann-rinha-v9  | 2025-07-27T16:03:41.162Z  INFO 1 --- [rinha-v2] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9999 (http)
-felipeschirmann-rinha-v9  | 2025-07-27T16:03:41.162Z  INFO 1 --- [rinha-v2] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-felipeschirmann-rinha-v9  | 2025-07-27T16:03:41.162Z  INFO 1 --- [rinha-v2] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
-felipeschirmann-rinha-v9  | 2025-07-27T16:03:41.168Z  INFO 1 --- [rinha-v2] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-felipeschirmann-rinha-v9  | 2025-07-27T16:03:41.168Z  INFO 1 --- [rinha-v2] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 24 ms
-felipeschirmann-rinha-v9  | FILA INICIALIZADA: Capacidade Lógica Inicial: 20000
-felipeschirmann-rinha-v9  | 2025-07-27T16:03:41.243Z  WARN 1 --- [rinha-v2] [           main] i.m.c.i.binder.jvm.JvmGcMetrics          : GC notifications will not be available because no GarbageCollectorMXBean of the JVM provides any. GCs=[young generation scavenger, complete scavenger]
-felipeschirmann-rinha-v9  | 2025-07-27T16:03:41.253Z  INFO 1 --- [rinha-v2] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-felipeschirmann-rinha-v9  | 2025-07-27T16:03:41.259Z  INFO 1 --- [rinha-v2] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9999 (http) with context path '/'
-felipeschirmann-rinha-v9  | 2025-07-27T16:03:41.260Z  INFO 1 --- [rinha-v2] [           main] b.d.f.rinha_v2.RinhaV2Application        : Started RinhaV2Application in 0.127 seconds (process running for 0.131)
-felipeschirmann-rinha-v9  | 2025-07-27T16:03:42.874Z  INFO 1 --- [rinha-v2] [nio-9999-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-felipeschirmann-rinha-v9  | 2025-07-27T16:03:42.874Z  INFO 1 --- [rinha-v2] [nio-9999-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-felipeschirmann-rinha-v9  | 2025-07-27T16:03:42.875Z  INFO 1 --- [rinha-v2] [nio-9999-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-felipeschirmann-rinha-v9  | CAPACIDADE DA FILA ATUALIZADA: 20000 -> 7500
-felipeschirmann-rinha-v9  | HEALTH-CHECK [FAIL]: Processador 'fallback' offline. Causa: Type definition error: [simple type, class br.dev.felipeschirmann.rinha_v2.dto.HealthStatus]
-felipeschirmann-rinha-v9  | HEALTH-CHECK [FAIL]: Processador 'default' offline. Causa: Type definition error: [simple type, class br.dev.felipeschirmann.rinha_v2.dto.HealthStatus]
-felipeschirmann-rinha-v9  | HEALTH-CHECK [FAIL]: Processador 'fallback' offline. Causa: Type definition error: [simple type, class br.dev.felipeschirmann.rinha_v2.dto.HealthStatus]
-felipeschirmann-rinha-v9  | HEALTH-CHECK [FAIL]: Processador 'default' offline. Causa: Type definition error: [simple type, class br.dev.felipeschirmann.rinha_v2.dto.HealthStatus]
-felipeschirmann-rinha-v9  | HEALTH-CHECK [FAIL]: Processador 'fallback' offline. Causa: Type definition error: [simple type, class br.dev.felipeschirmann.rinha_v2.dto.HealthStatus]
-felipeschirmann-rinha-v9  | HEALTH-CHECK [FAIL]: Processador 'default' offline. Causa: Type definition error: [simple type, class br.dev.felipeschirmann.rinha_v2.dto.HealthStatus]
-felipeschirmann-rinha-v9  | HEALTH-CHECK [FAIL]: Processador 'default' offline. Causa: Type definition error: [simple type, class br.dev.felipeschirmann.rinha_v2.dto.HealthStatus]
-felipeschirmann-rinha-v9  | HEALTH-CHECK [FAIL]: Processador 'fallback' offline. Causa: Type definition error: [simple type, class br.dev.felipeschirmann.rinha_v2.dto.HealthStatus]
-felipeschirmann-rinha-v9  | HEALTH-CHECK [FAIL]: Processador 'default' offline. Causa: Type definition error: [simple type, class br.dev.felipeschirmann.rinha_v2.dto.HealthStatus]
-felipeschirmann-rinha-v9  | HEALTH-CHECK [FAIL]: Processador 'fallback' offline. Causa: Type definition error: [simple type, class br.dev.felipeschirmann.rinha_v2.dto.HealthStatus]
-felipeschirmann-rinha-v9  | HEALTH-CHECK [FAIL]: Processador 'default' offline. Causa: Type definition error: [simple type, class br.dev.felipeschirmann.rinha_v2.dto.HealthStatus]
-felipeschirmann-rinha-v9  | HEALTH-CHECK [FAIL]: Processador 'fallback' offline. Causa: Type definition error: [simple type, class br.dev.felipeschirmann.rinha_v2.dto.HealthStatus]
-felipeschirmann-rinha-v9  | HEALTH-CHECK [FAIL]: Processador 'default' offline. Causa: Type definition error: [simple type, class br.dev.felipeschirmann.rinha_v2.dto.HealthStatus]
-felipeschirmann-rinha-v9  | HEALTH-CHECK [FAIL]: Processador 'fallback' offline. Causa: Type definition error: [simple type, class br.dev.felipeschirmann.rinha_v2.dto.HealthStatus]
-felipeschirmann-rinha-v9  | HEALTH-CHECK [FAIL]: Processador 'default' offline. Causa: Type definition error: [simple type, class br.dev.felipeschirmann.rinha_v2.dto.HealthStatus]
-felipeschirmann-rinha-v9  | HEALTH-CHECK [FAIL]: Processador 'fallback' offline. Causa: Type definition error: [simple type, class br.dev.felipeschirmann.rinha_v2.dto.HealthStatus]
-felipeschirmann-rinha-v9  | HEALTH-CHECK [FAIL]: Processador 'default' offline. Causa: Type definition error: [simple type, class br.dev.felipeschirmann.rinha_v2.dto.HealthStatus]
-felipeschirmann-rinha-v9  | HEALTH-CHECK [FAIL]: Processador 'fallback' offline. Causa: Type definition error: [simple type, class br.dev.felipeschirmann.rinha_v2.dto.HealthStatus]
-felipeschirmann-rinha-v9  | HEALTH-CHECK [FAIL]: Processador 'default' offline. Causa: Type definition error: [simple type, class br.dev.felipeschirmann.rinha_v2.dto.HealthStatus]
-felipeschirmann-rinha-v9  | HEALTH-CHECK [FAIL]: Processador 'fallback' offline. Causa: Type definition error: [simple type, class br.dev.felipeschirmann.rinha_v2.dto.HealthStatus]
-felipeschirmann-rinha-v9  | HEALTH-CHECK [FAIL]: Processador 'default' offline. Causa: Type definition error: [simple type, class br.dev.felipeschirmann.rinha_v2.dto.HealthStatus]
-felipeschirmann-rinha-v9  | HEALTH-CHECK [FAIL]: Processador 'fallback' offline. Causa: Type definition error: [simple type, class br.dev.felipeschirmann.rinha_v2.dto.HealthStatus]
-felipeschirmann-rinha-v9  | HEALTH-CHECK [FAIL]: Processador 'default' offline. Causa: Type definition error: [simple type, class br.dev.felipeschirmann.rinha_v2.dto.HealthStatus]
-felipeschirmann-rinha-v9  | HEALTH-CHECK [FAIL]: Processador 'fallback' offline. Causa: Type definition error: [simple type, class br.dev.felipeschirmann.rinha_v2.dto.HealthStatus]
-felipeschirmann-rinha-v9  | HEALTH-CHECK [FAIL]: Processador 'default' offline. Causa: Type definition error: [simple type, class br.dev.felipeschirmann.rinha_v2.dto.HealthStatus]
-felipeschirmann-rinha-v9  | HEALTH-CHECK [FAIL]: Processador 'fallback' offline. Causa: Type definition error: [simple type, class br.dev.felipeschirmann.rinha_v2.dto.HealthStatus]
-felipeschirmann-rinha-v9  | HEALTH-CHECK [FAIL]: Processador 'default' offline. Causa: Type definition error: [simple type, class br.dev.felipeschirmann.rinha_v2.dto.HealthStatus]
-felipeschirmann-rinha-v9  | 2025-07-27T16:04:50.019Z  INFO 1 --- [rinha-v2] [ionShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-felipeschirmann-rinha-v9  | 2025-07-27T16:04:50.022Z  INFO 1 --- [rinha-v2] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-felipeschirmann-rinha-v9  | HEALTH-CHECK [FAIL]: Processador 'fallback' offline. Causa: Type definition error: [simple type, class br.dev.felipeschirmann.rinha_v2.dto.HealthStatus]
-[Kfelipeschirmann-rinha-v9 exited with code 137
+ 92e2f9c84064 Pulling fs layer 
+ 7dda2fedd76b Pulling fs layer 
+ 7dda2fedd76b Downloading [>                                                  ]  475.1kB/46.42MB
+ 7dda2fedd76b Downloading [=>                                                 ]  1.413MB/46.42MB
+ 7dda2fedd76b Downloading [===>                                               ]  3.281MB/46.42MB
+ 7dda2fedd76b Downloading [=======>                                           ]   6.57MB/46.42MB
+ 7dda2fedd76b Downloading [=============>                                     ]  12.19MB/46.42MB
+ 7dda2fedd76b Downloading [========================>                          ]  22.93MB/46.42MB
+ 7dda2fedd76b Downloading [====================================>              ]  34.17MB/46.42MB
+ 7dda2fedd76b Downloading [============================================>      ]  41.21MB/46.42MB
+ 7dda2fedd76b Verifying Checksum 
+ 7dda2fedd76b Download complete 
+ 92e2f9c84064 Downloading [==============>                                    ]  1.009kB/3.392kB
+ 92e2f9c84064 Downloading [==================================================>]  3.392kB/3.392kB
+ 92e2f9c84064 Verifying Checksum 
+ 92e2f9c84064 Download complete 
+ 92e2f9c84064 Extracting [==================================================>]  3.392kB/3.392kB
+ 92e2f9c84064 Extracting [==================================================>]  3.392kB/3.392kB
+ 92e2f9c84064 Pull complete 
+ 7dda2fedd76b Extracting [>                                                  ]  491.5kB/46.42MB
+ 7dda2fedd76b Extracting [=========>                                         ]  8.356MB/46.42MB
+ 7dda2fedd76b Extracting [=================>                                 ]  16.22MB/46.42MB
+ 7dda2fedd76b Extracting [=========================>                         ]  23.59MB/46.42MB
+ 7dda2fedd76b Extracting [================================>                  ]  30.47MB/46.42MB
+ 7dda2fedd76b Extracting [========================================>          ]  37.85MB/46.42MB
+ 7dda2fedd76b Extracting [==================================================>]  46.42MB/46.42MB
+ 7dda2fedd76b Pull complete 
+ backend Pulled 
+ Container felipeschirmann-rinha  Creating
+ Container felipeschirmann-rinha  Created
+Attaching to felipeschirmann-rinha
+felipeschirmann-rinha  | 
+felipeschirmann-rinha  |   .   ____          _            __ _ _
+felipeschirmann-rinha  |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+felipeschirmann-rinha  | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+felipeschirmann-rinha  |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+felipeschirmann-rinha  |   '  |____| .__|_| |_|_| |_\__, | / / / /
+felipeschirmann-rinha  |  =========|_|==============|___/=/_/_/_/
+felipeschirmann-rinha  | 
+felipeschirmann-rinha  |  :: Spring Boot ::                (v3.5.4)
+felipeschirmann-rinha  | 
+felipeschirmann-rinha  | 2025-07-30T23:47:36.710Z  INFO 1 --- [rinha-v2] [           main] b.d.f.rinha_v2.RinhaV2Application        : Starting AOT-processed RinhaV2Application using Java 21.0.7 with PID 1 (/app/rinha-v2 started by nonroot in /app)
+felipeschirmann-rinha  | 2025-07-30T23:47:36.710Z  INFO 1 --- [rinha-v2] [           main] b.d.f.rinha_v2.RinhaV2Application        : No active profile set, falling back to 1 default profile: "default"
+felipeschirmann-rinha  | ==================================================
+felipeschirmann-rinha  | =         PAYMENT PROCESSOR CONFIGURATION        =
+felipeschirmann-rinha  | = Default URL:  http://payment-processor-default:8080
+felipeschirmann-rinha  | = Fallback URL: http://payment-processor-fallback:8080
+felipeschirmann-rinha  | ==================================================
+felipeschirmann-rinha  | QUEUE INITIALIZED: Initial Logical Capacity: 10000
+felipeschirmann-rinha  | 2025-07-30T23:47:36.772Z  INFO 1 --- [rinha-v2] [           main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8080 (http)
+felipeschirmann-rinha  | 2025-07-30T23:47:36.773Z  INFO 1 --- [rinha-v2] [           main] b.d.f.rinha_v2.RinhaV2Application        : Started RinhaV2Application in 0.074 seconds (process running for 0.08)
+felipeschirmann-rinha  | HEALTH-CHECK [OK]: Processor 'default' is online. Status: HealthStatus[failing=false, minResponseTime=0]
+felipeschirmann-rinha  | HEALTH-CHECK [OK]: Processor 'fallback' is online. Status: HealthStatus[failing=false, minResponseTime=0]
+felipeschirmann-rinha  | HEALTH-CHECK [OK]: Processor 'default' is online. Status: HealthStatus[failing=false, minResponseTime=0]
+felipeschirmann-rinha  | HEALTH-CHECK [OK]: Processor 'fallback' is online. Status: HealthStatus[failing=false, minResponseTime=0]
+felipeschirmann-rinha  | HEALTH-CHECK [OK]: Processor 'default' is online. Status: HealthStatus[failing=false, minResponseTime=0]
+felipeschirmann-rinha  | HEALTH-CHECK [OK]: Processor 'fallback' is online. Status: HealthStatus[failing=false, minResponseTime=0]
+felipeschirmann-rinha  | HEALTH-CHECK [OK]: Processor 'default' is online. Status: HealthStatus[failing=false, minResponseTime=0]
+felipeschirmann-rinha  | HEALTH-CHECK [OK]: Processor 'fallback' is online. Status: HealthStatus[failing=false, minResponseTime=0]
+felipeschirmann-rinha  | HEALTH-CHECK [OK]: Processor 'default' is online. Status: HealthStatus[failing=false, minResponseTime=100]
+felipeschirmann-rinha  | HEALTH-CHECK [OK]: Processor 'fallback' is online. Status: HealthStatus[failing=false, minResponseTime=0]
+felipeschirmann-rinha  | HEALTH-CHECK [OK]: Processor 'default' is online. Status: HealthStatus[failing=false, minResponseTime=100]
+felipeschirmann-rinha  | HEALTH-CHECK [OK]: Processor 'fallback' is online. Status: HealthStatus[failing=false, minResponseTime=0]
+felipeschirmann-rinha  | HEALTH-CHECK [OK]: Processor 'fallback' is online. Status: HealthStatus[failing=false, minResponseTime=0]
+felipeschirmann-rinha  | QUEUE CAPACITY UPDATED: 10000 -> 5000
+felipeschirmann-rinha  | HEALTH-CHECK [FAIL]: Processor 'default' is offline or slow. Status: HealthStatus[failing=true, minResponseTime=100]
+felipeschirmann-rinha  | HEALTH-CHECK [OK]: Processor 'fallback' is online. Status: HealthStatus[failing=false, minResponseTime=0]
+felipeschirmann-rinha  | HEALTH-CHECK [FAIL]: Processor 'default' is offline or slow. Status: HealthStatus[failing=true, minResponseTime=100]
+felipeschirmann-rinha  | QUEUE CAPACITY UPDATED: 5000 -> 3750
+felipeschirmann-rinha  | HEALTH-CHECK [FAIL]: Processor 'default' is offline or slow. Status: HealthStatus[failing=true, minResponseTime=2000]
+felipeschirmann-rinha  | HEALTH-CHECK [FAIL]: Processor 'fallback' is offline or slow. Status: HealthStatus[failing=true, minResponseTime=1000]
+felipeschirmann-rinha  | HEALTH-CHECK [FAIL]: Processor 'default' is offline or slow. Status: HealthStatus[failing=true, minResponseTime=2000]
+felipeschirmann-rinha  | HEALTH-CHECK [FAIL]: Processor 'fallback' is offline or slow. Status: HealthStatus[failing=true, minResponseTime=1000]
+felipeschirmann-rinha  | HEALTH-CHECK [OK]: Processor 'default' is online. Status: HealthStatus[failing=false, minResponseTime=20]
+felipeschirmann-rinha  | HEALTH-CHECK [OK]: Processor 'fallback' is online. Status: HealthStatus[failing=false, minResponseTime=20]
+felipeschirmann-rinha  | QUEUE CAPACITY UPDATED: 3750 -> 10000
+felipeschirmann-rinha  | HEALTH-CHECK [OK]: Processor 'default' is online. Status: HealthStatus[failing=false, minResponseTime=20]
+felipeschirmann-rinha  | HEALTH-CHECK [OK]: Processor 'fallback' is online. Status: HealthStatus[failing=false, minResponseTime=20]
+felipeschirmann-rinha  | HEALTH-CHECK [OK]: Processor 'default' is online. Status: HealthStatus[failing=false, minResponseTime=0]
+felipeschirmann-rinha  | HEALTH-CHECK [OK]: Processor 'fallback' is online. Status: HealthStatus[failing=false, minResponseTime=5000]
+felipeschirmann-rinha  | QUEUE CAPACITY UPDATED: 10000 -> 1000
+felipeschirmann-rinha  | HEALTH-CHECK [OK]: Processor 'default' is online. Status: HealthStatus[failing=false, minResponseTime=0]
+felipeschirmann-rinha  | HEALTH-CHECK [OK]: Processor 'fallback' is online. Status: HealthStatus[failing=false, minResponseTime=5000]
+felipeschirmann-rinha  | 2025-07-30T23:48:45.652Z  INFO 1 --- [rinha-v2] [ionShutdownHook] o.s.b.w.embedded.netty.GracefulShutdown  : Commencing graceful shutdown. Waiting for active requests to complete
+felipeschirmann-rinha  | 2025-07-30T23:48:45.653Z  INFO 1 --- [rinha-v2] [ netty-shutdown] o.s.b.w.embedded.netty.GracefulShutdown  : Graceful shutdown complete
+[Kfelipeschirmann-rinha exited with code 137
 log truncated at line 1000

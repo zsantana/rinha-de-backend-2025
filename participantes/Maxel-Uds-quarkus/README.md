@@ -5,6 +5,7 @@ Este projeto foi construído com foco em performance e resiliência.
 
 ## 🚀 Tecnologias Utilizadas
 
+- **Lua**
 - **Java 17**
 - **Quarkus** (modo nativo via GraalVM)
 - **Maven** (gerenciador de dependências)

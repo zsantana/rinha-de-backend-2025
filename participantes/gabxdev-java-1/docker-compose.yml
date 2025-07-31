@@ -1,14 +1,20 @@
 services:
-  backend-1:
-    image: gabxdevv/rinha-backend-2025-java-1:1.0.0
+  api-1:
+    hostname: api-1
+    image: gabxdevv/rinha-backend-2025-java-super-bolado-native-nginx:1.0.0
     environment:
-      RETRY_API_DEFAULT: 16
-      WORKER_POOL_SIZE: 25
-      PAYMENT_PROCESSOR_URL_DEFAULT: http://payment-processor-default:8080/payments
-      PAYMENT_PROCESSOR_URL_FALLBACK: http://payment-processor-fallback:8080/payments
-      LOG_LEVEL: off
-      SERVER_PORT: 8080
+      RETRY_API_DEFAULT: 15
+      WORKER_POOL_SIZE: 14
+      WORKERS_THREAD_POOL_SIZE: 10
+      USER_SERVER: true
+      URL_PROCESSOR_DEFAULT: http://payment-processor-default:8080/payments
+      URL_PROCESSOR_FALLBACK: http://payment-processor-fallback:8080/payments
       BACK_END_URL: http://backend-2:8080
+      UDP_CHANNEL_PORT: 9001
+      UDP_CHANNEL_INTERNAL_PORT: 9003
+      EXTERNAL_UDP_HOST: api-2
+      EXTERNAL_UDP_PORT: 9004
+      SERVER_PORT: 8080
       JAVA_OPTS: >-
         -server
         -XX:+UseG1GC
@@ -25,20 +31,27 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '0.625'
-          memory: '140MB'
+          cpus: '0.675'
+          memory: '150MB'
 
-  backend-2:
-    image: gabxdevv/rinha-backend-2025-java-1:1.0.0
+
+  api-2:
+    hostname: api-2
+    image: gabxdevv/rinha-backend-2025-java-super-bolado-native-nginx:1.0.0
     restart: always
     environment:
-      RETRY_API_DEFAULT: 16
-      WORKER_POOL_SIZE: 25
-      PAYMENT_PROCESSOR_URL_DEFAULT: http://payment-processor-default:8080/payments
-      PAYMENT_PROCESSOR_URL_FALLBACK: http://payment-processor-fallback:8080/payments
-      LOG_LEVEL: off
-      SERVER_PORT: 8080
+      RETRY_API_DEFAULT: 15
+      WORKER_POOL_SIZE: 14
+      WORKERS_THREAD_POOL_SIZE: 10
+      API_ROUTER_POOL_SIZE: 6
+      URL_PROCESSOR_DEFAULT: http://payment-processor-default:8080/payments
+      URL_PROCESSOR_FALLBACK: http://payment-processor-fallback:8080/payments
+      USER_SERVER: false
       BACK_END_URL: http://backend-1:8080
+      UDP_CHANNEL_INTERNAL_PORT: 9004
+      EXTERNAL_UDP_HOST: api-1
+      EXTERNAL_UDP_PORT: 9003
+      SERVER_PORT: 8080
       JAVA_OPTS: >-
         -server
         -XX:+UseG1GC
@@ -55,8 +68,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '0.625'
-          memory: '140MB'
+          cpus: '0.675'
+          memory: '150MB'
 
   load-balancer:
     image: nginx:alpine
@@ -65,8 +78,8 @@ services:
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf:ro
     depends_on:
-      - backend-1
-      - backend-2
+      - api-1
+      - api-2
     ports:
       - "9999:9999"
     networks:
@@ -74,8 +87,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.25"
-          memory: "70MB"
+          cpus: "0.15"
+          memory: "50MB"
 
 networks:
   backend:

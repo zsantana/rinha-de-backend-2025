@@ -1,12 +1,12 @@
 {
   "participante": "hamilton-golang-mongo",
-  "total_liquido": 349173.8375999739,
-  "total_bruto": 333145.8999999757,
-  "total_taxas": 21383.54499999899,
+  "total_liquido": 355395.47309997334,
+  "total_bruto": 333145.8999999756,
+  "total_taxas": 21395.484999998982,
   "descricao": "'total_liquido' é sua pontuação final. Equivale ao seu lucro. Fórmula: total_liquido + (total_liquido * p99.bonus) - (total_liquido * multa.porcentagem)",
   "p99": {
-    "valor": "4.93ms",
-    "bonus": "12%",
+    "valor": "4.19ms",
+    "bonus": "14%",
     "max_requests": "550",
     "descricao": "Fórmula para o bônus: max((11 - p99.valor) * 0.02, 0)"
   },
@@ -34,15 +34,15 @@
     "descricao": "'qtd_sucesso' foram requests bem sucedidos para 'POST /payments' e 'qtd_falha' os requests com erro."
   },
   "pagamentos_realizados_default": {
-    "total_bruto": 285883.39999997366,
-    "num_pagamentos": 14366,
-    "total_taxas": 14294.169999998683,
+    "total_bruto": 285763.9999999735,
+    "num_pagamentos": 14360,
+    "total_taxas": 14288.199999998675,
     "descricao": "Informações do backend sobre solicitações de pagamento para o Payment Processor Default."
   },
   "pagamentos_realizados_fallback": {
-    "total_bruto": 47262.500000002045,
-    "num_pagamentos": 2375,
-    "total_taxas": 7089.3750000003065,
+    "total_bruto": 47381.90000000205,
+    "num_pagamentos": 2381,
+    "total_taxas": 7107.285000000307,
     "descricao": "Informações do backend sobre solicitações de pagamento para o Payment Processor Fallback."
   }
 }

@@ -5,9 +5,9 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.3"
-          memory: 30M
-    image: nginx
+          cpus: "0.2"
+          memory: 100M
+    image: nginx:stable-alpine
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf:ro
     ports:
@@ -23,8 +23,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.5"
-          memory: 30M
+          cpus: "0.55"
+          memory: 50M
     image: daviddeltasierra/rinha-2025-go
     restart: always
     environment:
@@ -40,8 +40,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.5"
-          memory: 30M
+          cpus: "0.55"
+          memory: 50M
     image: daviddeltasierra/rinha-2025-go
     restart: always
     environment:
@@ -56,8 +56,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.3"
-          memory: 260M
+          cpus: "0.2"
+          memory: 150M
     image: postgres:alpine
     user: postgres
     healthcheck:
