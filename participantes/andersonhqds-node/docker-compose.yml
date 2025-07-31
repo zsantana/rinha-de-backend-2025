@@ -48,9 +48,10 @@ services:
           memory: 160MB
 
   backend1: &backend
-    image: andersonhqds/nestjs-rinha-be-2025:1.0.0
+    image: andersonhqds/nestjs-rinha-be-2025:1.0.1
     container_name: backend1
     hostname: backend1
+    platform: linux/amd64
     ports:
       - 3000:3000
     depends_on:

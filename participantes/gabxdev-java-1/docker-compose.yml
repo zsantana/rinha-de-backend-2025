@@ -1,7 +1,7 @@
 services:
   api-1:
-    hostname: api-1
-    image: gabxdevv/rinha-backend-2025-java-super-bolado-native-nginx:1.0.0
+    image: gabxdevv/rinha-backend-2025-java-super-bolado-native:1.0.5
+    container_name: gaxdev-backend-1
     environment:
       RETRY_API_DEFAULT: 15
       WORKER_POOL_SIZE: 16
@@ -10,11 +10,11 @@ services:
       URL_PROCESSOR_DEFAULT: http://payment-processor-default:8080/payments
       URL_PROCESSOR_FALLBACK: http://payment-processor-fallback:8080/payments
       BACK_END_URL: http://backend-2:8080
+      SERVER_PORT: 8080
       UDP_CHANNEL_PORT: 9001
       UDP_CHANNEL_INTERNAL_PORT: 9003
       EXTERNAL_UDP_HOST: api-2
       EXTERNAL_UDP_PORT: 9004
-      SERVER_PORT: 8080
       JAVA_OPTS: >-
         -server
         -XX:+UseG1GC
@@ -31,18 +31,16 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '0.675'
+          cpus: '0.8'
           memory: '150MB'
 
-
   api-2:
-    hostname: api-2
-    image: gabxdevv/rinha-backend-2025-java-super-bolado-native-nginx:1.0.0
+    image: gabxdevv/rinha-backend-2025-java-super-bolado-native:1.0.5
+    container_name: gaxdev-backend-2
     restart: always
     environment:
       RETRY_API_DEFAULT: 15
       WORKER_POOL_SIZE: 16
-      WORKERS_THREAD_POOL_SIZE: 12
       API_ROUTER_POOL_SIZE: 6
       URL_PROCESSOR_DEFAULT: http://payment-processor-default:8080/payments
       URL_PROCESSOR_FALLBACK: http://payment-processor-fallback:8080/payments
@@ -51,7 +49,6 @@ services:
       UDP_CHANNEL_INTERNAL_PORT: 9004
       EXTERNAL_UDP_HOST: api-1
       EXTERNAL_UDP_PORT: 9003
-      SERVER_PORT: 8080
       JAVA_OPTS: >-
         -server
         -XX:+UseG1GC
@@ -68,13 +65,12 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '0.675'
+          cpus: '0.5'
           memory: '150MB'
 
   load-balancer:
     image: nginx:alpine
     restart: always
-    container_name: gabxdev-load-balancer
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf:ro
     depends_on:
@@ -87,7 +83,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.15"
+          cpus: "0.2"
           memory: "50MB"
 
 networks:

@@ -1,6 +1,6 @@
 services:
   backend:
-    image: felipeschirmann/rinha-backend-2025:12.1.0
+    image: felipeschirmann/rinha-backend-2025:12.3.0
 #    image: rinha-backend:latest
     container_name: felipeschirmann-rinha
     environment:
@@ -24,6 +24,8 @@ services:
       APP_WORKER_LOG_HTTP_FAILURES: "false"
       APP_WORKER_LOG_NETWORK_FAILURES: "false"
       APP_WORKER_LOG_SUCCESSFUL_PAYMENTS: "false"
+    sysctls:
+      net.core.somaxconn: 4096
     ports:
       - "9999:8080"
     networks:
