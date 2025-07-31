@@ -1,0 +1,290 @@
+
+ app1 Pulling 
+ app2 Pulling 
+ 1d387567261e Already exists 
+ 72b40d63a4e8 Already exists 
+ febceb7d4415 Pulling fs layer 
+ 1d387567261e Already exists 
+ 72b40d63a4e8 Already exists 
+ febceb7d4415 Pulling fs layer 
+ febceb7d4415 Downloading [>                                                  ]  229.4kB/22.34MB
+ febceb7d4415 Downloading [>                                                  ]  229.4kB/22.34MB
+ febceb7d4415 Downloading [=============>                                     ]  5.943MB/22.34MB
+ febceb7d4415 Downloading [=============>                                     ]  5.943MB/22.34MB
+ febceb7d4415 Downloading [==================>                                ]  8.466MB/22.34MB
+ febceb7d4415 Downloading [==================>                                ]  8.466MB/22.34MB
+ febceb7d4415 Downloading [============================>                      ]  12.81MB/22.34MB
+ febceb7d4415 Downloading [============================>                      ]  12.81MB/22.34MB
+ febceb7d4415 Downloading [=======================================>           ]  17.61MB/22.34MB
+ febceb7d4415 Downloading [=======================================>           ]  17.61MB/22.34MB
+ febceb7d4415 Download complete 
+ febceb7d4415 Verifying Checksum 
+ febceb7d4415 Download complete 
+ febceb7d4415 Extracting [>                                                  ]  229.4kB/22.34MB
+ febceb7d4415 Extracting [>                                                  ]  229.4kB/22.34MB
+ febceb7d4415 Extracting [================>                                  ]   7.34MB/22.34MB
+ febceb7d4415 Extracting [================>                                  ]   7.34MB/22.34MB
+ febceb7d4415 Extracting [=================================>                 ]  15.14MB/22.34MB
+ febceb7d4415 Extracting [=================================>                 ]  15.14MB/22.34MB
+ febceb7d4415 Extracting [==================================================>]  22.34MB/22.34MB
+ febceb7d4415 Extracting [==================================================>]  22.34MB/22.34MB
+ febceb7d4415 Pull complete 
+ febceb7d4415 Pull complete 
+ app2 Pulled 
+ app1 Pulled 
+ Network ccs1201-04-java-puro_backend  Creating
+ Network ccs1201-04-java-puro_backend  Created
+ Container backend-db  Creating
+ Container backend-db  Created
+ Container backend-api1  Creating
+ Container backend-api2  Creating
+ Container backend-api1  Created
+ Container backend-api2  Created
+ Container backend-nginx  Creating
+ Container backend-nginx  Created
+Attaching to backend-api1, backend-api2, backend-db, backend-nginx
+backend-db     | The files belonging to this database system will be owned by user "postgres".
+backend-db     | This user must also own the server process.
+backend-db     | 
+backend-db     | The database cluster will be initialized with locale "en_US.utf8".
+backend-db     | The default database encoding has accordingly been set to "UTF8".
+backend-db     | The default text search configuration will be set to "english".
+backend-db     | 
+backend-db     | Data page checksums are disabled.
+backend-db     | 
+backend-db     | fixing permissions on existing directory /var/lib/postgresql/data ... ok
+backend-db     | creating subdirectories ... ok
+backend-db     | selecting dynamic shared memory implementation ... posix
+backend-db     | selecting default "max_connections" ... 100
+backend-db     | selecting default "shared_buffers" ... 128MB
+backend-db     | selecting default time zone ... UTC
+backend-db     | creating configuration files ... ok
+backend-db     | running bootstrap script ... ok
+backend-db     | sh: locale: not found
+backend-db     | 2025-07-31 10:36:00.714 UTC [36] WARNING:  no usable system locales were found
+backend-db     | performing post-bootstrap initialization ... ok
+backend-db     | syncing data to disk ... ok
+backend-db     | 
+backend-db     | 
+backend-db     | Success. You can now start the database server using:
+backend-db     | 
+backend-db     |     pg_ctl -D /var/lib/postgresql/data -l logfile start
+backend-db     | 
+backend-db     | initdb: warning: enabling "trust" authentication for local connections
+backend-db     | initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
+backend-db     | waiting for server to start....2025-07-31 10:36:04.602 UTC [48] LOG:  starting PostgreSQL 17.5 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
+backend-db     | 2025-07-31 10:36:04.610 UTC [48] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+backend-db     | 2025-07-31 10:36:04.708 UTC [57] LOG:  database system was shut down at 2025-07-31 10:36:04 UTC
+backend-db     | 2025-07-31 10:36:04.709 UTC [58] FATAL:  the database system is starting up
+backend-db     | 2025-07-31 10:36:04.718 UTC [48] LOG:  database system is ready to accept connections
+backend-db     |  done
+backend-db     | server started
+backend-db     | CREATE DATABASE
+backend-db     | 
+backend-db     | 
+backend-db     | /usr/local/bin/docker-entrypoint.sh: running /docker-entrypoint-initdb.d/init.sql
+backend-db     | CREATE TABLE
+backend-db     | CREATE INDEX
+backend-db     | 
+backend-db     | 
+backend-db     | waiting for server to shut down....2025-07-31 10:36:05.223 UTC [48] LOG:  received fast shutdown request
+backend-db     | 2025-07-31 10:36:05.229 UTC [48] LOG:  aborting any active transactions
+backend-db     | 2025-07-31 10:36:05.303 UTC [48] LOG:  background worker "logical replication launcher" (PID 61) exited with exit code 1
+backend-db     | 2025-07-31 10:36:05.303 UTC [55] LOG:  shutting down
+backend-db     | 2025-07-31 10:36:05.308 UTC [55] LOG:  checkpoint starting: shutdown immediate
+backend-db     | 2025-07-31 10:36:05.452 UTC [55] LOG:  checkpoint complete: wrote 927 buffers (5.7%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.058 s, sync=0.040 s, total=0.150 s; sync files=305, longest=0.012 s, average=0.001 s; distance=4268 kB, estimate=4268 kB; lsn=0/1918220, redo lsn=0/1918220
+backend-db     | 2025-07-31 10:36:05.460 UTC [48] LOG:  database system is shut down
+backend-db     |  done
+backend-db     | server stopped
+backend-db     | 
+backend-db     | PostgreSQL init process complete; ready for start up.
+backend-db     | 
+backend-db     | 2025-07-31 10:36:05.558 UTC [1] LOG:  starting PostgreSQL 17.5 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
+backend-db     | 2025-07-31 10:36:05.558 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+backend-db     | 2025-07-31 10:36:05.558 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+backend-db     | 2025-07-31 10:36:05.570 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+backend-db     | 2025-07-31 10:36:05.610 UTC [73] LOG:  database system was shut down at 2025-07-31 10:36:05 UTC
+backend-db     | 2025-07-31 10:36:05.621 UTC [1] LOG:  database system is ready to accept connections
+backend-api2   | 10:36:08.432 [main] INFO br.com.ccs.rinha.App -- Starting server on port: 8080
+backend-api2   | 10:36:08.433 [main] INFO br.com.ccs.rinha.config.ExecutorConfig -- Thread pool size: 8
+backend-api2   | 10:36:08.433 [main] INFO br.com.ccs.rinha.config.ExecutorConfig -- Thread pool Queue size 100
+backend-api2   | 10:36:08.434 [main] INFO br.com.ccs.rinha.config.DataSourceFactory -- Data Source URL: jdbc:postgresql://postgres:5432/rinha
+backend-api2   | 10:36:08.434 [main] INFO br.com.ccs.rinha.config.DataSourceFactory -- Data Source Username: rinha
+backend-api2   | 10:36:08.434 [main] INFO br.com.ccs.rinha.config.DataSourceFactory -- Data Source Password: rinha
+backend-api2   | 10:36:08.434 [main] INFO br.com.ccs.rinha.config.DataSourceFactory -- Data Source Timeout: 20000
+backend-api2   | 10:36:08.434 [main] INFO br.com.ccs.rinha.config.DataSourceFactory -- Data Source Minimum Idle: 3
+backend-api2   | 10:36:08.434 [main] INFO br.com.ccs.rinha.config.DataSourceFactory -- Data Source Maximum Pool Size: 3
+backend-api2   | 10:36:08.434 [main] INFO br.com.ccs.rinha.config.DataSourceFactory -- Data Source Configured com.zaxxer.hikari.HikariConfig@66a0d4a8
+backend-api1   | 10:36:08.438 [main] INFO br.com.ccs.rinha.App -- Starting server on port: 8080
+backend-api1   | 10:36:08.438 [main] INFO br.com.ccs.rinha.config.ExecutorConfig -- Thread pool size: 8
+backend-api1   | 10:36:08.438 [main] INFO br.com.ccs.rinha.config.ExecutorConfig -- Thread pool Queue size 100
+backend-api1   | 10:36:08.438 [main] INFO br.com.ccs.rinha.config.DataSourceFactory -- Data Source URL: jdbc:postgresql://postgres:5432/rinha
+backend-api1   | 10:36:08.438 [main] INFO br.com.ccs.rinha.config.DataSourceFactory -- Data Source Username: rinha
+backend-api1   | 10:36:08.438 [main] INFO br.com.ccs.rinha.config.DataSourceFactory -- Data Source Password: rinha
+backend-api1   | 10:36:08.438 [main] INFO br.com.ccs.rinha.config.DataSourceFactory -- Data Source Timeout: 20000
+backend-api1   | 10:36:08.438 [main] INFO br.com.ccs.rinha.config.DataSourceFactory -- Data Source Minimum Idle: 3
+backend-api1   | 10:36:08.438 [main] INFO br.com.ccs.rinha.config.DataSourceFactory -- Data Source Maximum Pool Size: 3
+backend-api1   | 10:36:08.438 [main] INFO br.com.ccs.rinha.config.DataSourceFactory -- Data Source Configured com.zaxxer.hikari.HikariConfig@7924561d
+backend-api1   | 10:36:08.458 [main] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- JdbcPaymentRepository workers started
+backend-api2   | 10:36:08.458 [main] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- JdbcPaymentRepository workers started
+backend-api1   | 10:36:08.459 [main] INFO br.com.ccs.rinha.service.PaymentProcessorClient -- Default service URL: http://payment-processor-default:8080/payments 
+backend-api1   | 10:36:08.459 [main] INFO br.com.ccs.rinha.service.PaymentProcessorClient -- Fallback fallback URL: http://payment-processor-fallback:8080/payments
+backend-api2   | 10:36:08.459 [main] INFO br.com.ccs.rinha.service.PaymentProcessorClient -- Default service URL: http://payment-processor-default:8080/payments 
+backend-api2   | 10:36:08.459 [main] INFO br.com.ccs.rinha.service.PaymentProcessorClient -- Fallback fallback URL: http://payment-processor-fallback:8080/payments
+backend-api2   | 10:36:08.459 [main] INFO br.com.ccs.rinha.service.PaymentProcessorClient -- Payment processor workers: 2
+backend-api1   | 10:36:08.459 [main] INFO br.com.ccs.rinha.service.PaymentProcessorClient -- Payment processor workers: 2
+backend-api2   | 10:36:08.459 [main] INFO br.com.ccs.rinha.service.PaymentProcessorClient -- Timeout: 6000
+backend-api2   | 10:36:08.459 [main] INFO br.com.ccs.rinha.App -- Servidor iniciado na porta: 8080 
+backend-api1   | 10:36:08.459 [main] INFO br.com.ccs.rinha.service.PaymentProcessorClient -- Timeout: 6000
+backend-api1   | 10:36:08.459 [main] INFO br.com.ccs.rinha.App -- Servidor iniciado na porta: 8080 
+backend-nginx  | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+backend-nginx  | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+backend-nginx  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+backend-nginx  | 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+backend-nginx  | 10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
+backend-nginx  | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+backend-nginx  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+backend-nginx  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+backend-nginx  | /docker-entrypoint.sh: Configuration complete; ready for start up
+backend-api2   | 10:36:57.131 [repository-worker-1] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 21 Processed in 2ms Queue size 21
+backend-api2   | 10:36:57.132 [repository-worker-0] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 25 Processed in 3ms Queue size 25
+backend-api2   | 10:36:57.163 [repository-worker-0] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 11 Processed in 3ms Queue size 11
+backend-api2   | 10:36:57.165 [repository-worker-1] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 15 Processed in 5ms Queue size 15
+backend-api1   | 10:36:57.334 [repository-worker-1] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 10 Processed in 61ms Queue size 10
+backend-api1   | 10:36:57.358 [repository-worker-0] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 41 Processed in 25ms Queue size 41
+backend-api1   | 10:36:57.359 [repository-worker-1] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 31 Processed in 25ms Queue size 31
+backend-api1   | 10:36:57.360 [repository-worker-0] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 14 Processed in 2ms Queue size 14
+backend-api1   | 10:36:57.361 [repository-worker-1] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 14 Processed in 2ms Queue size 14
+backend-api1   | 10:36:57.402 [repository-worker-1] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 17 Processed in 17ms Queue size 17
+backend-api1   | 10:36:57.421 [repository-worker-0] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 12 Processed in 19ms Queue size 12
+backend-api2   | 10:36:57.347 [repository-worker-0] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 92 Processed in 5ms Queue size 92
+backend-api1   | 10:36:57.507 [repository-worker-0] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 29 Processed in 86ms Queue size 29
+backend-api1   | 10:36:57.508 [repository-worker-1] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 64 Processed in 56ms Queue size 64
+backend-api1   | 10:36:57.518 [repository-worker-0] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 52 Processed in 11ms Queue size 52
+backend-api2   | 10:36:57.521 [repository-worker-1] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 81 Processed in 216ms Queue size 81
+backend-api2   | 10:36:57.527 [repository-worker-1] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 100 Processed in 6ms Queue size 100
+backend-api2   | 10:36:57.533 [repository-worker-1] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 66 Processed in 6ms Queue size 66
+backend-api2   | 10:36:57.533 [repository-worker-0] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 100 Processed in 106ms Queue size 100
+backend-api1   | 10:36:57.544 [repository-worker-1] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 20 Processed in 35ms Queue size 20
+backend-api2   | 10:36:57.553 [repository-worker-1] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 12 Processed in 20ms Queue size 12
+backend-api1   | 10:36:57.563 [repository-worker-0] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 20 Processed in 45ms Queue size 20
+backend-api2   | 10:36:57.565 [repository-worker-0] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 74 Processed in 32ms Queue size 74
+backend-api2   | 10:36:57.607 [repository-worker-0] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 19 Processed in 42ms Queue size 19
+backend-api2   | 10:36:57.634 [repository-worker-1] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 27 Processed in 30ms Queue size 27
+backend-api2   | 10:36:57.635 [repository-worker-1] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 20 Processed in 0ms Queue size 20
+backend-api2   | 10:36:57.636 [repository-worker-0] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 26 Processed in 28ms Queue size 26
+backend-api2   | 10:36:57.637 [repository-worker-0] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 19 Processed in 1ms Queue size 19
+backend-api2   | 10:36:57.655 [repository-worker-0] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 18 Processed in 4ms Queue size 18
+backend-api2   | 10:36:57.703 [repository-worker-0] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 11 Processed in 48ms Queue size 11
+backend-api2   | 10:36:57.718 [repository-worker-0] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 14 Processed in 1ms Queue size 14
+backend-api2   | 10:36:57.722 [repository-worker-1] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 22 Processed in 19ms Queue size 22
+backend-api2   | 10:36:57.723 [repository-worker-1] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 16 Processed in 1ms Queue size 16
+backend-api2   | 10:36:57.819 [repository-worker-0] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 53 Processed in 15ms Queue size 53
+backend-api2   | 10:36:57.824 [repository-worker-1] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 23 Processed in 20ms Queue size 23
+backend-api2   | 10:36:57.831 [repository-worker-1] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 21 Processed in 7ms Queue size 21
+backend-api2   | 10:36:57.840 [repository-worker-0] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 12 Processed in 1ms Queue size 12
+backend-api2   | 10:36:57.840 [repository-worker-1] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 10 Processed in 4ms Queue size 10
+backend-api2   | 10:36:57.846 [repository-worker-1] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 18 Processed in 1ms Queue size 18
+backend-api2   | 10:36:57.902 [repository-worker-1] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 19 Processed in 51ms Queue size 19
+backend-api2   | 10:36:57.903 [repository-worker-1] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 10 Processed in 1ms Queue size 10
+backend-api2   | 10:36:57.903 [repository-worker-0] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 21 Processed in 52ms Queue size 21
+backend-api1   | 10:36:57.883 [repository-worker-1] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 42 Processed in 321ms Queue size 42
+backend-api2   | 10:36:57.925 [repository-worker-1] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 12 Processed in 8ms Queue size 12
+backend-api1   | 10:36:57.929 [repository-worker-0] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 21 Processed in 365ms Queue size 21
+backend-api1   | 10:36:57.930 [repository-worker-1] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 74 Processed in 21ms Queue size 74
+backend-api1   | 10:36:57.934 [repository-worker-0] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 100 Processed in 4ms Queue size 100
+backend-api2   | 10:36:57.935 [repository-worker-0] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 15 Processed in 19ms Queue size 15
+backend-api2   | 10:36:57.936 [repository-worker-0] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 28 Processed in 1ms Queue size 28
+backend-api2   | 10:36:57.950 [repository-worker-1] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 11 Processed in 0ms Queue size 11
+backend-api2   | 10:36:57.969 [repository-worker-0] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 13 Processed in 1ms Queue size 13
+backend-api1   | 10:36:57.975 [repository-worker-1] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 67 Processed in 0ms Queue size 67
+backend-api1   | 10:36:57.977 [repository-worker-0] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 55 Processed in 1ms Queue size 55
+backend-api2   | 10:36:58.009 [repository-worker-1] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 13 Processed in 4ms Queue size 13
+backend-api2   | 10:36:58.011 [repository-worker-0] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 14 Processed in 6ms Queue size 14
+backend-api1   | 10:36:58.030 [repository-worker-0] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 11 Processed in 0ms Queue size 11
+backend-api1   | 10:36:58.035 [repository-worker-1] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 17 Processed in 1ms Queue size 17
+backend-api2   | 10:36:58.037 [repository-worker-0] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 26 Processed in 1ms Queue size 26
+backend-api2   | 10:36:58.038 [repository-worker-1] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 24 Processed in 1ms Queue size 24
+backend-api1   | 10:36:58.236 [repository-worker-0] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 29 Processed in 1ms Queue size 29
+backend-api1   | 10:36:58.236 [repository-worker-1] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 47 Processed in 1ms Queue size 47
+backend-api2   | 10:36:58.237 [repository-worker-1] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 24 Processed in 122ms Queue size 24
+backend-api2   | 10:36:58.237 [repository-worker-1] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 21 Processed in 0ms Queue size 21
+backend-api1   | 10:36:58.251 [repository-worker-0] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 17 Processed in 4ms Queue size 17
+backend-api1   | 10:36:58.251 [repository-worker-1] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 18 Processed in 1ms Queue size 18
+backend-api2   | 10:36:58.265 [repository-worker-0] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 68 Processed in 3ms Queue size 68
+backend-api1   | 10:36:58.306 [repository-worker-1] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 14 Processed in 1ms Queue size 14
+backend-api1   | 10:36:58.308 [repository-worker-0] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 20 Processed in 6ms Queue size 20
+backend-api2   | 10:36:58.314 [repository-worker-1] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 57 Processed in 10ms Queue size 57
+backend-api2   | 10:36:58.334 [repository-worker-1] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 14 Processed in 1ms Queue size 14
+backend-api2   | 10:36:58.352 [repository-worker-0] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 12 Processed in 0ms Queue size 12
+backend-api1   | 10:36:58.355 [repository-worker-1] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 10 Processed in 20ms Queue size 10
+backend-api1   | 10:36:58.357 [repository-worker-0] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 17 Processed in 11ms Queue size 17
+backend-api2   | 10:36:58.370 [repository-worker-0] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 16 Processed in 4ms Queue size 16
+backend-api2   | 10:36:58.370 [repository-worker-1] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 15 Processed in 4ms Queue size 15
+backend-api2   | 10:36:58.409 [repository-worker-0] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 18 Processed in 1ms Queue size 18
+backend-api1   | 10:36:58.411 [repository-worker-0] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 13 Processed in 48ms Queue size 13
+backend-api1   | 10:36:58.428 [repository-worker-0] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 23 Processed in 17ms Queue size 23
+backend-api1   | 10:36:58.430 [repository-worker-1] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 72 Processed in 1ms Queue size 72
+backend-api1   | 10:36:58.445 [repository-worker-0] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 34 Processed in 17ms Queue size 34
+backend-api1   | 10:36:58.516 [repository-worker-1] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 43 Processed in 11ms Queue size 43
+backend-api1   | 10:36:58.516 [repository-worker-0] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 20 Processed in 71ms Queue size 20
+backend-api1   | 10:36:58.552 [repository-worker-1] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 13 Processed in 36ms Queue size 13
+backend-api1   | 10:36:58.554 [repository-worker-0] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 40 Processed in 2ms Queue size 40
+backend-api1   | 10:36:58.556 [repository-worker-1] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 11 Processed in 4ms Queue size 11
+backend-api2   | 10:36:58.711 [repository-worker-0] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 11 Processed in 1ms Queue size 11
+backend-api2   | 10:36:58.711 [repository-worker-1] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 12 Processed in 1ms Queue size 12
+backend-api1   | 10:36:58.712 [repository-worker-0] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 16 Processed in 0ms Queue size 16
+backend-api1   | 10:36:58.719 [repository-worker-1] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 10 Processed in 7ms Queue size 10
+backend-api1   | 10:36:58.747 [repository-worker-0] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 16 Processed in 28ms Queue size 16
+backend-api1   | 10:36:58.748 [repository-worker-1] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 28 Processed in 7ms Queue size 28
+backend-api1   | 10:36:58.753 [repository-worker-0] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 26 Processed in 6ms Queue size 26
+backend-api1   | 10:36:58.754 [repository-worker-1] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 10 Processed in 1ms Queue size 10
+backend-api1   | 10:36:58.805 [repository-worker-0] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 12 Processed in 52ms Queue size 12
+backend-api1   | 10:36:58.809 [repository-worker-1] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 22 Processed in 4ms Queue size 22
+backend-api1   | 10:36:58.809 [repository-worker-0] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 30 Processed in 4ms Queue size 30
+backend-api1   | 10:36:58.820 [repository-worker-1] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 11 Processed in 2ms Queue size 11
+backend-api1   | 10:36:58.826 [repository-worker-0] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 16 Processed in 4ms Queue size 16
+backend-api1   | 10:36:58.828 [repository-worker-1] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 10 Processed in 3ms Queue size 10
+backend-api1   | 10:36:58.829 [repository-worker-0] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 13 Processed in 3ms Queue size 13
+backend-api1   | 10:36:58.829 [repository-worker-1] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 10 Processed in 1ms Queue size 10
+backend-api1   | 10:36:58.835 [repository-worker-0] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 13 Processed in 1ms Queue size 13
+backend-api1   | 10:36:58.835 [repository-worker-1] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 10 Processed in 1ms Queue size 10
+backend-api1   | 10:36:58.848 [repository-worker-1] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 25 Processed in 1ms Queue size 25
+backend-api1   | 10:36:58.848 [repository-worker-0] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 23 Processed in 0ms Queue size 23
+backend-api1   | 10:36:58.952 [repository-worker-1] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 13 Processed in 1ms Queue size 13
+backend-api1   | 10:36:58.954 [repository-worker-0] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 14 Processed in 3ms Queue size 14
+backend-api1   | 10:36:59.013 [repository-worker-0] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 11 Processed in 59ms Queue size 11
+backend-api1   | 10:36:59.015 [repository-worker-1] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 21 Processed in 2ms Queue size 21
+backend-api1   | 10:36:59.042 [repository-worker-1] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 17 Processed in 3ms Queue size 17
+backend-api1   | 10:36:59.051 [repository-worker-0] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 32 Processed in 4ms Queue size 32
+backend-api1   | 10:36:59.102 [repository-worker-1] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 11 Processed in 46ms Queue size 11
+backend-api1   | 10:36:59.103 [repository-worker-0] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 16 Processed in 47ms Queue size 16
+backend-api1   | 10:36:59.103 [repository-worker-1] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 10 Processed in 0ms Queue size 10
+backend-api1   | 10:36:59.106 [repository-worker-0] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 13 Processed in 1ms Queue size 13
+backend-api1   | 10:36:59.113 [repository-worker-0] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 12 Processed in 3ms Queue size 12
+backend-api1   | 10:36:59.114 [repository-worker-1] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 20 Processed in 0ms Queue size 20
+backend-api1   | 10:36:59.149 [repository-worker-1] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 11 Processed in 1ms Queue size 11
+backend-api1   | 10:36:59.209 [repository-worker-0] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 23 Processed in 2ms Queue size 23
+backend-api1   | 10:36:59.210 [repository-worker-1] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 12 Processed in 1ms Queue size 12
+backend-api1   | 10:37:07.203 [repository-worker-1] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 18 Processed in 1ms Queue size 18
+backend-api2   | 10:37:07.203 [repository-worker-0] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 21 Processed in 0ms Queue size 21
+backend-api1   | 10:37:10.203 [repository-worker-1] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 13 Processed in 1ms Queue size 13
+backend-api1   | 10:37:10.303 [repository-worker-0] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 10 Processed in 1ms Queue size 10
+backend-api2   | 10:37:13.402 [repository-worker-0] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 11 Processed in 0ms Queue size 11
+backend-api2   | 10:37:13.402 [repository-worker-1] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 10 Processed in 0ms Queue size 10
+backend-api1   | 10:37:13.403 [repository-worker-0] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 12 Processed in 1ms Queue size 12
+backend-api1   | 10:37:13.403 [repository-worker-1] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 10 Processed in 0ms Queue size 10
+backend-api1   | 10:37:15.242 [repository-worker-0] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 10 Processed in 2ms Queue size 10
+backend-api1   | 10:37:16.503 [repository-worker-0] INFO br.com.ccs.rinha.repository.JdbcPaymentRepository -- BATCH Size 14 Processed in 1ms Queue size 14
+[Kbackend-nginx exited with code 0
+[Kbackend-api2 exited with code 137
+[Kbackend-api1 exited with code 137
+backend-db     | 2025-07-31 10:37:29.577 UTC [1] LOG:  received fast shutdown request
+backend-db     | 2025-07-31 10:37:29.584 UTC [1] LOG:  aborting any active transactions
+backend-db     | 2025-07-31 10:37:29.587 UTC [1] LOG:  background worker "logical replication launcher" (PID 76) exited with exit code 1
+backend-db     | 2025-07-31 10:37:29.590 UTC [71] LOG:  shutting down
+backend-db     | 2025-07-31 10:37:29.599 UTC [71] LOG:  checkpoint starting: shutdown immediate
+backend-db     | 2025-07-31 10:37:29.675 UTC [71] LOG:  checkpoint complete: wrote 215 buffers (1.3%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.014 s, sync=0.035 s, total=0.085 s; sync files=21, longest=0.027 s, average=0.002 s; distance=585 kB, estimate=585 kB; lsn=0/19AA680, redo lsn=0/19AA680
+backend-db     | 2025-07-31 10:37:29.680 UTC [1] LOG:  database system is shut down
+[Kbackend-db exited with code 0
+log truncated at line 1000
