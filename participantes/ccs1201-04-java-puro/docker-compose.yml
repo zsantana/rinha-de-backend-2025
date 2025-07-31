@@ -3,7 +3,7 @@ x-backend-templates:
 #    build:
 #      context: .
 #      dockerfile: Dockerfile
-    image: csouzadocker/java-http-server-postgres:0.0.2
+    image: csouzadocker/java-http-server-postgres:0.0.3
     depends_on:
       backend-db:
         condition: service_healthy
