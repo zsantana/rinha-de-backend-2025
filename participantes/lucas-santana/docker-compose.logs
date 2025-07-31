@@ -1,0 +1,78 @@
+
+ Network lucas-santana_default  Creating
+ Network lucas-santana_default  Created
+ Container lucas-santana-keydb-1  Creating
+ Container lucas-santana-keydb-1  Created
+ Container lucas-santana-worker-1  Creating
+ Container lucas-santana-worker-1  Created
+ Container lucas-santana-api01-1  Creating
+ Container lucas-santana-api02-1  Creating
+ Container lucas-santana-api02-1  Created
+ Container lucas-santana-api01-1  Created
+ Container lucas-santana-lighttpd-1  Creating
+ Container lucas-santana-lighttpd-1  Created
+Attaching to api01-1, api02-1, keydb-1, lighttpd-1, worker-1
+keydb-1     | 1:1:C 31 Jul 2025 23:24:13.103 # oO0OoO0OoO0Oo KeyDB is starting oO0OoO0OoO0Oo
+keydb-1     | 1:1:C 31 Jul 2025 23:24:13.103 # KeyDB version=6.3.4, bits=64, commit=7e7e5e57, modified=1, pid=1, just started
+keydb-1     | 1:1:C 31 Jul 2025 23:24:13.103 # Configuration loaded
+keydb-1     | 1:1:C 31 Jul 2025 23:24:13.103 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+keydb-1     | 1:1:M 31 Jul 2025 23:24:13.104 * monotonic clock: POSIX clock_gettime
+keydb-1     |                                                                       
+keydb-1     |                   _                                                   
+keydb-1     |                _-(+)-_                                                
+keydb-1     |             _-- /   \ --_                                            
+keydb-1     |          _--   /     \   --_            KeyDB  6.3.4 (7e7e5e57/1) 64 bit     
+keydb-1     |      __--     /       \     --__                                     
+keydb-1     |     (+) _    /         \    _ (+)       Running in standalone mode
+keydb-1     |      |   -- /           \ --   |        Port: 6379
+keydb-1     |      |     /--_   _   _--\     |        PID: 1
+keydb-1     |      |    /     -(+)-     \    |                                     
+keydb-1     |      |   /        |        \   |        https://docs.keydb.dev       
+keydb-1     |      |  /         |         \  |                                     
+keydb-1     |      | /          |          \ |                                     
+keydb-1     |     (+)_ -- -- -- | -- -- -- _(+)                                     
+keydb-1     |         --_       |       _--                                         
+keydb-1     |             --_   |   _--                                             
+keydb-1     |                 -(+)-        KeyDB has now joined Snap! See the announcement at:  https://docs.keydb.dev/news
+keydb-1     | 
+keydb-1     |                                                                      
+keydb-1     | 1:1:M 31 Jul 2025 23:24:13.380 # Server initialized
+keydb-1     | 1:27:M 31 Jul 2025 23:24:13.381 * Thread 0 alive.
+keydb-1     | 1:28:M 31 Jul 2025 23:24:13.381 * Thread 1 alive.
+keydb-1     | 1:29:M 31 Jul 2025 23:24:13.381 * Thread 2 alive.
+lighttpd-1  | 2025-07-31 23:24:14: (server.c.1974) server started (lighttpd/1.4.79)
+lighttpd-1  | 2025-07-31 23:24:15: (gw_backend.c.288) establishing connection failed: socket: tcp:172.20.0.4:9999: Connection refused
+lighttpd-1  | 2025-07-31 23:24:15: (gw_backend.c.288) establishing connection failed: socket: tcp:172.20.0.5:9999: Connection refused
+lighttpd-1  | 2025-07-31 23:24:15: (gw_backend.c.971) all handlers for /payments-summary? on  are down.
+lighttpd-1  | 2025-07-31 23:24:17: (gw_backend.c.365) gw-server re-enabled: tcp:172.20.0.4:9999 172.20.0.4 9999 
+lighttpd-1  | 2025-07-31 23:24:17: (gw_backend.c.365) gw-server re-enabled: tcp:172.20.0.5:9999 172.20.0.5 9999 
+keydb-1     | 1:27:M 31 Jul 2025 23:25:14.010 * 10000 changes in 60 seconds. Saving...
+keydb-1     | 1:27:M 31 Jul 2025 23:25:14.011 * Background saving started by pid 33
+keydb-1     | 1:27:M 31 Jul 2025 23:25:14.011 * Background saving started
+keydb-1     | 33:27:C 31 Jul 2025 23:25:14.102 * DB saved on disk
+keydb-1     | 33:27:C 31 Jul 2025 23:25:14.103 * RDB: 1 MB of memory used by copy-on-write
+keydb-1     | 1:27:M 31 Jul 2025 23:25:14.112 * Background saving terminated with success
+lighttpd-1  | 2025-07-31 23:25:27: (server.c.2370) server stopped by UID = 0 PID = 0
+[Klighttpd-1 exited with code 0
+[Kapi02-1 exited with code 137
+worker-1    | [2025-07-31 23:25:38,869] WARNING:huey:Dummy-1:Received exit signal, b51c146a-161c-48ac-92cd-b229ce150b5b did not finish.
+worker-1    | [2025-07-31 23:25:38,870] WARNING:huey:Dummy-2:Received exit signal, 8a7bed5f-8538-4e1a-8d3b-ecab040d0199 did not finish.
+worker-1    | [2025-07-31 23:25:38,871] WARNING:huey:Dummy-3:Received exit signal, 37d3d106-74ff-442d-80c7-4f7c3dc395aa did not finish.
+worker-1    | [2025-07-31 23:25:38,871] WARNING:huey:Dummy-4:Received exit signal, 548d1dcd-6e79-4801-9467-18723c83e4d1 did not finish.
+worker-1    | [2025-07-31 23:25:38,872] WARNING:huey:Dummy-5:Received exit signal, d8440082-51ac-4944-bceb-598dfaf7ea97 did not finish.
+worker-1    | [2025-07-31 23:25:38,872] WARNING:huey:Dummy-6:Received exit signal, 6f286a9a-69e9-48f1-a478-6e9996215bd1 did not finish.
+worker-1    | [2025-07-31 23:25:38,873] WARNING:huey:Dummy-7:Received exit signal, 741a2d56-d7fb-4c6d-9ebc-0a1b555e4e2b did not finish.
+worker-1    | [2025-07-31 23:25:38,873] WARNING:huey:Dummy-8:Received exit signal, 28cf35ff-3b03-4bee-aa70-a18d5641c869 did not finish.
+worker-1    | [2025-07-31 23:25:38,874] WARNING:huey:Dummy-9:Received exit signal, 962f16b0-896f-49c2-9565-e1ce92560911 did not finish.
+worker-1    | [2025-07-31 23:25:38,874] WARNING:huey:Dummy-10:Received exit signal, 783999f6-ec19-4ee2-91a6-ebe6b92c8acd did not finish.
+worker-1    | [2025-07-31 23:25:38,875] WARNING:huey:Dummy-11:Received exit signal, 6e80adf3-fdc4-46da-b8d7-335dd07a4b44 did not finish.
+worker-1    | [2025-07-31 23:25:38,876] WARNING:huey:Dummy-12:Received exit signal, b5112083-3ffa-4a33-bcaa-86f50c149bdb did not finish.
+[Kworker-1 exited with code 0
+keydb-1     | 1:signal-handler (1754004339) Received SIGTERM scheduling shutdown...
+keydb-1     | 1:27:M 31 Jul 2025 23:25:39.483 # User requested shutdown...
+keydb-1     | 1:27:M 31 Jul 2025 23:25:39.483 * Saving the final RDB snapshot before exiting.
+keydb-1     | 1:27:M 31 Jul 2025 23:25:39.609 * DB saved on disk
+keydb-1     | 1:27:M 31 Jul 2025 23:25:39.609 * Removing the pid file.
+keydb-1     | 1:27:M 31 Jul 2025 23:25:39.609 # KeyDB is now ready to exit, bye bye...
+[Kkeydb-1 exited with code 0
+log truncated at line 1000
