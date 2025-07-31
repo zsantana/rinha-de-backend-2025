@@ -11,6 +11,8 @@ services:
         condition: service_healthy
       payment-api-2:
         condition: service_healthy
+      payment-api-3:
+        condition: service_healthy
     networks:
       - backend
       - payment-processor
@@ -23,7 +25,7 @@ services:
   # 0.3 x 3 = 0.9 CPUs
   # 50MB x 3 = 150MB memória
   payment-api-1: &api
-    image: libardi/rinha-2025-2:latest
+    image: libardi/rinha-2025-2:1
     container_name: payment-api-1
     hostname: payment-api-1
     environment:

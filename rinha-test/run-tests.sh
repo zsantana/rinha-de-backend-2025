@@ -28,13 +28,17 @@ stopContainers() {
 MAX_REQUESTS=550
 
 while true; do
+
+    # docker system prune -a -f --volumes
+
     for directory in ../participantes/*; do
     (
         git pull
         participant=$(echo $directory | sed -e 's/..\/participantes\///g' -e 's/\///g')
-        echo "participant: $participant"
+        echo "========================================"
+        echo "  Participant $participant starting..."
+        echo "========================================"
 
-        
         testedFile="$directory/partial-results.json"
 
         if ! test -f $testedFile; then
@@ -75,8 +79,16 @@ while true; do
             git commit -m "add $participant's partial result"
             git push
 
+            echo "================================="
+            echo "  Finished testing $participant!"
+            echo "================================="
+
+            sleep 5
+
         else
-            echo "skipping $participant"
+            echo "================================="
+            echo "  Skipping $participant"
+            echo "================================="
         fi
     )
     done
