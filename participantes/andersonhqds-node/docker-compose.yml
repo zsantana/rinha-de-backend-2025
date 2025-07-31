@@ -25,19 +25,17 @@ services:
           memory: 60MB
   
   rabbitmq:
-    image: rabbitmq:3-alpine
+    image: masstransit/rabbitmq
     ports:
       - 15672:15672
       - 5672:5672
     environment:
       - RABBITMQ_DEFAULT_USER=admin
       - RABBITMQ_DEFAULT_PASS=admin
-    volumes:
-      - ./rabbitmq.conf:/etc/rabbitmq/rabbitmq.conf
     healthcheck:
-      test: ["CMD", "rabbitmq-diagnostics", "check_running"]
-      interval: 3s
-      timeout: 3s
+      test: ["CMD", "rabbitmq-diagnostics", "-q", "ping"]
+      interval: 5s
+      timeout: 5s
       retries: 5
     networks:
       - backend
