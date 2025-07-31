@@ -40,7 +40,6 @@ services:
       EXTERNAL_UDP_HOST: api-1
       EXTERNAL_UDP_PORT: 9003
       SERVER_PORT: 8080
-
     networks:
       - backend
       - payment-processor
@@ -51,16 +50,15 @@ services:
           memory: '150MB'
 
   load-balancer:
-    image: nginx:alpine
+    image: haproxy:3.2.3-alpine
     restart: always
-    container_name: gabxdev-load-balancer
     volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
     depends_on:
       - api-1
       - api-2
     ports:
-      - "9999:9999"
+      - "9999:80"
     networks:
       - backend
     deploy:
@@ -68,6 +66,7 @@ services:
         limits:
           cpus: "0.25"
           memory: "50MB"
+
 
 networks:
   backend:
