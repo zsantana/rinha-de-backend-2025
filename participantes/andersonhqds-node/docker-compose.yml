@@ -51,6 +51,7 @@ services:
     image: andersonhqds/nestjs-rinha-be-2025:1.0.0
     container_name: backend1
     hostname: backend1
+    platform: linux/amd64
     ports:
       - 3000:3000
     depends_on:
