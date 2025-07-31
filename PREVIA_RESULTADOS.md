@@ -1,10 +1,11 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Thu Jul 31 07:22:44 PM -03 2025**
-184 submissões / 164 resultados / 20 submissões com erro
+Atualizado em **Thu Jul 31 07:32:22 PM -03 2025**
+186 submissões / 165 resultados / 21 submissões com erro
 
 
 | participante | p99 | bônus por desempenho (%) | multa ($) | lucro | submissão |
 | -- | -- | -- | -- | -- | -- |
+|	active-workers-wellington-pacheco	|	3.64ms	|	15%	|	0	|	361026.8945	|	[active-workers-wellington-pacheco](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/active-workers-wellington-pacheco)
 |	adriano-moreira	|	88.97ms	|	0%	|	0	|	314985.16	|	[adriano-moreira](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/adriano-moreira)
 |	adrianosilva-go	|	4.72ms	|	13%	|	0	|	349396.2599	|	[adrianosilva-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/adrianosilva-go)
 |	alan-silva	|	1.73ms	|	19%	|	0	|	376778.9186	|	[alan-silva](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/alan-silva)
@@ -185,6 +186,7 @@ Atualizado em **Thu Jul 31 07:22:44 PM -03 2025**
 | emilemoraes-java | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/emilemoraes-java) |
 | franklaercio | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/franklaercio) |
 | hoffmano | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/hoffmano) |
+| lucas-santana | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/lucas-santana) |
 | matheusf-lucas-and-luis-java1 | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/matheusf-lucas-and-luis-java1) |
 | mbenencase-python | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/mbenencase-python) |
 | phaalonso-java-1 | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/phaalonso-java-1) |
