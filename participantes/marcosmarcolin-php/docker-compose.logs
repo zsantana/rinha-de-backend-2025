@@ -1,39 +1,0 @@
-
- Network marcosmarcolin-php_backend  Creating
- Network marcosmarcolin-php_backend  Created
- Container marcosmarcolin-php-redis-1  Creating
- Container marcosmarcolin-php-redis-1  Created
- Container marcosmarcolin-php-worker-payments-1  Creating
- Container marcosmarcolin-php-worker-health-1  Creating
- Container marcosmarcolin-php-api02-1  Creating
- Container marcosmarcolin-php-api01-1  Creating
- Container marcosmarcolin-php-api02-1  Created
- Container marcosmarcolin-php-worker-health-1  Created
- Container marcosmarcolin-php-worker-payments-1  Created
- Container marcosmarcolin-php-api01-1  Created
- Container marcosmarcolin-php-haproxy-1  Creating
- Container marcosmarcolin-php-haproxy-1  Created
-Attaching to api01-1, api02-1, haproxy-1, redis-1, worker-health-1, worker-payments-1
-redis-1            | Starting Redis Server
-api01-1            | [Swoole] Servidor iniciado na porta 9501
-worker-health-1    | [WorkerHealth] Iniciando monitoramento...
-api02-1            | [Swoole] Servidor iniciado na porta 9501
-worker-payments-1  | [RedisPool] 39 conexões Redis disponíveis para Coroutines
-worker-payments-1  | [WorkerDefault] Iniciando processamento com 20 Coroutines
-worker-payments-1  | [WorkerFallback] Iniciando processamento com 16 Coroutines
-haproxy-1          | [NOTICE]   (1) : Initializing new worker (8)
-haproxy-1          | [NOTICE]   (1) : Loading success.
-haproxy-1          | [NOTICE]   (1) : haproxy version is 3.2.3-1844da7
-haproxy-1          | [NOTICE]   (1) : path to executable is /usr/local/sbin/haproxy
-haproxy-1          | [WARNING]  (1) : Exiting Master process...
-haproxy-1          | [WARNING]  (8) : Proxy frontend stopped (cumulated conns: FE: 553, BE: 0).
-haproxy-1          | [WARNING]  (8) : Proxy backend stopped (cumulated conns: FE: 0, BE: 16699).
-haproxy-1          | [WARNING]  (1) : Current worker (8) exited with code 0 (Exit)
-haproxy-1          | [WARNING]  (1) : All workers exited. Exiting... (0)
-[Khaproxy-1 exited with code 0
-[Kapi01-1 exited with code 0
-[Kapi02-1 exited with code 0
-[Kworker-health-1 exited with code 137
-[Kworker-payments-1 exited with code 137
-[Kredis-1 exited with code 0
-log truncated at line 1000
