@@ -1,6 +1,6 @@
 x-service-templates:
   api: &api
-    image: marcosmarcolin/rinhadebackend2025:1.0.1
+    image: marcosmarcolin/rinhadebackend2025:1.0.3
     entrypoint: [ "php", "/opt/www/nano/public/index.php", 'start' ]
     depends_on:
       redis:
@@ -15,7 +15,7 @@ x-service-templates:
           memory: "80M"
 
   worker-template: &worker
-    image: marcosmarcolin/rinhadebackend2025:1.0.1
+    image: marcosmarcolin/rinhadebackend2025:1.0.3
     depends_on:
       redis:
         condition: service_healthy
@@ -31,7 +31,7 @@ services:
       resources:
         limits:
           cpus: "0.2"
-          memory: "50M"
+          memory: "60M"
 
   worker-health:
     <<: *worker
@@ -40,7 +40,7 @@ services:
       resources:
         limits:
           cpus: "0.15"
-          memory: "40M"
+          memory: "30M"
 
   nginx:
     image: nginx:latest
@@ -63,7 +63,14 @@ services:
     image: redis:latest
     networks:
       - backend
-    command: [ "redis-server", "--save", "", "--appendonly", "no" ]
+    command:
+      [
+        "redis-server",
+        "--save", "",
+        "--appendonly", "no",
+        "--loglevel", "debug",
+        "--logfile", "/dev/null"
+      ]
     healthcheck:
       test: [ "CMD", "redis-cli", "ping" ]
       interval: 10s
