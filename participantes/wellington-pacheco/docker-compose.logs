@@ -1,12 +1,69 @@
 
+ api2 Pulling 
+ api1 Pulling 
+ fe07684b16b8 Already exists 
+ 9084b4c3aa37 Already exists 
+ 6d35cecdf75a Already exists 
+ ac0472343a61 Already exists 
+ a87d5cc6e2de Pulling fs layer 
+ d6eaf9d05d0d Pulling fs layer 
+ fe07684b16b8 Already exists 
+ 9084b4c3aa37 Already exists 
+ 6d35cecdf75a Already exists 
+ ac0472343a61 Already exists 
+ a87d5cc6e2de Pulling fs layer 
+ d6eaf9d05d0d Pulling fs layer 
+ d6eaf9d05d0d Downloading [==================================================>]     224B/224B
+ d6eaf9d05d0d Verifying Checksum 
+ d6eaf9d05d0d Download complete 
+ d6eaf9d05d0d Downloading [==================================================>]     224B/224B
+ d6eaf9d05d0d Verifying Checksum 
+ d6eaf9d05d0d Download complete 
+ a87d5cc6e2de Downloading [>                                                  ]  94.21kB/9.232MB
+ a87d5cc6e2de Downloading [>                                                  ]  94.21kB/9.232MB
+ a87d5cc6e2de Downloading [==>                                                ]  389.1kB/9.232MB
+ a87d5cc6e2de Downloading [==>                                                ]  389.1kB/9.232MB
+ a87d5cc6e2de Downloading [====>                                              ]  876.5kB/9.232MB
+ a87d5cc6e2de Downloading [====>                                              ]  876.5kB/9.232MB
+ a87d5cc6e2de Downloading [==========>                                        ]  1.925MB/9.232MB
+ a87d5cc6e2de Downloading [==========>                                        ]  1.925MB/9.232MB
+ a87d5cc6e2de Downloading [=====================>                             ]  4.006MB/9.232MB
+ a87d5cc6e2de Downloading [=====================>                             ]  4.006MB/9.232MB
+ a87d5cc6e2de Downloading [=============================================>     ]  8.319MB/9.232MB
+ a87d5cc6e2de Downloading [=============================================>     ]  8.319MB/9.232MB
+ a87d5cc6e2de Verifying Checksum 
+ a87d5cc6e2de Download complete 
+ a87d5cc6e2de Download complete 
+ a87d5cc6e2de Extracting [>                                                  ]   98.3kB/9.232MB
+ a87d5cc6e2de Extracting [>                                                  ]   98.3kB/9.232MB
+ a87d5cc6e2de Extracting [===================>                               ]  3.539MB/9.232MB
+ a87d5cc6e2de Extracting [===================>                               ]  3.539MB/9.232MB
+ a87d5cc6e2de Extracting [============================>                      ]   5.21MB/9.232MB
+ a87d5cc6e2de Extracting [============================>                      ]   5.21MB/9.232MB
+ a87d5cc6e2de Extracting [=====================================>             ]   6.98MB/9.232MB
+ a87d5cc6e2de Extracting [=====================================>             ]   6.98MB/9.232MB
+ a87d5cc6e2de Extracting [===============================================>   ]  8.847MB/9.232MB
+ a87d5cc6e2de Extracting [===============================================>   ]  8.847MB/9.232MB
+ a87d5cc6e2de Extracting [==================================================>]  9.232MB/9.232MB
+ a87d5cc6e2de Extracting [==================================================>]  9.232MB/9.232MB
+ a87d5cc6e2de Pull complete 
+ a87d5cc6e2de Pull complete 
+ d6eaf9d05d0d Extracting [==================================================>]     224B/224B
+ d6eaf9d05d0d Extracting [==================================================>]     224B/224B
+ d6eaf9d05d0d Extracting [==================================================>]     224B/224B
+ d6eaf9d05d0d Extracting [==================================================>]     224B/224B
+ d6eaf9d05d0d Pull complete 
+ d6eaf9d05d0d Pull complete 
+ api1 Pulled 
+ api2 Pulled 
  Network wellington-pacheco_rinha-backend-ex  Creating
  Network wellington-pacheco_rinha-backend-ex  Created
  Container rinha-db  Creating
  Container rinha-db  Created
- Container api-1  Creating
  Container api-2  Creating
- Container api-1  Created
+ Container api-1  Creating
  Container api-2  Created
+ Container api-1  Created
  Container wellington-pacheco-lb-1  Creating
  Container wellington-pacheco-lb-1  Created
 Attaching to api-1, api-2, rinha-db, lb-1
@@ -37,10 +94,48 @@ lb-1      | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker
 lb-1      | /docker-entrypoint.sh: Configuration complete; ready for start up
 rinha-db  | running bootstrap script ... ok
 rinha-db  | sh: locale: not found
-rinha-db  | 2025-07-30 20:47:59.707 UTC [36] WARNING:  no usable system locales were found
+rinha-db  | 2025-07-31 04:17:36.108 UTC [35] WARNING:  no usable system locales were found
+api-2     | 
+api-2     | 04:17:37.528 [error] Postgrex.Protocol (#PID<0.1572.0>) failed to connect: ** (DBConnection.ConnectionError) tcp connect (rinha-db:5432): connection refused - :econnrefused
+api-2     | 
+api-2     | 04:17:37.528 [error] Postgrex.Protocol (#PID<0.1573.0>) failed to connect: ** (DBConnection.ConnectionError) tcp connect (rinha-db:5432): connection refused - :econnrefused
+api-2     | 
+api-2     | 04:17:37.528 [error] Postgrex.Protocol (#PID<0.1568.0>) failed to connect: ** (DBConnection.ConnectionError) tcp connect (rinha-db:5432): connection refused - :econnrefused
+api-2     | 
+api-2     | 04:17:37.528 [error] Postgrex.Protocol (#PID<0.1569.0>) failed to connect: ** (DBConnection.ConnectionError) tcp connect (rinha-db:5432): connection refused - :econnrefused
+api-2     | 
+api-2     | 04:17:37.528 [error] Postgrex.Protocol (#PID<0.1574.0>) failed to connect: ** (DBConnection.ConnectionError) tcp connect (rinha-db:5432): connection refused - :econnrefused
+api-2     | 
+api-2     | 04:17:37.528 [error] Postgrex.Protocol (#PID<0.1575.0>) failed to connect: ** (DBConnection.ConnectionError) tcp connect (rinha-db:5432): connection refused - :econnrefused
+api-2     | 
+api-2     | 04:17:37.528 [error] Postgrex.Protocol (#PID<0.1576.0>) failed to connect: ** (DBConnection.ConnectionError) tcp connect (rinha-db:5432): connection refused - :econnrefused
+api-2     | 
+api-2     | 04:17:37.528 [error] Postgrex.Protocol (#PID<0.1577.0>) failed to connect: ** (DBConnection.ConnectionError) tcp connect (rinha-db:5432): connection refused - :econnrefused
+api-2     | 
+api-2     | 04:17:37.528 [error] Postgrex.Protocol (#PID<0.1578.0>) failed to connect: ** (DBConnection.ConnectionError) tcp connect (rinha-db:5432): connection refused - :econnrefused
+api-2     | 
+api-2     | 04:17:37.528 [error] Postgrex.Protocol (#PID<0.1579.0>) failed to connect: ** (DBConnection.ConnectionError) tcp connect (rinha-db:5432): connection refused - :econnrefused
+api-1     | 
+api-1     | 04:17:37.712 [error] Postgrex.Protocol (#PID<0.1572.0>) failed to connect: ** (DBConnection.ConnectionError) tcp connect (rinha-db:5432): connection refused - :econnrefused
+api-1     | 
+api-1     | 04:17:37.712 [error] Postgrex.Protocol (#PID<0.1573.0>) failed to connect: ** (DBConnection.ConnectionError) tcp connect (rinha-db:5432): connection refused - :econnrefused
+api-1     | 
+api-1     | 04:17:37.712 [error] Postgrex.Protocol (#PID<0.1568.0>) failed to connect: ** (DBConnection.ConnectionError) tcp connect (rinha-db:5432): connection refused - :econnrefused
+api-1     | 
+api-1     | 04:17:37.712 [error] Postgrex.Protocol (#PID<0.1569.0>) failed to connect: ** (DBConnection.ConnectionError) tcp connect (rinha-db:5432): connection refused - :econnrefused
+api-1     | 
+api-1     | 04:17:37.713 [error] Postgrex.Protocol (#PID<0.1574.0>) failed to connect: ** (DBConnection.ConnectionError) tcp connect (rinha-db:5432): connection refused - :econnrefused
+api-1     | 
+api-1     | 04:17:37.713 [error] Postgrex.Protocol (#PID<0.1575.0>) failed to connect: ** (DBConnection.ConnectionError) tcp connect (rinha-db:5432): connection refused - :econnrefused
+api-1     | 
+api-1     | 04:17:37.713 [error] Postgrex.Protocol (#PID<0.1576.0>) failed to connect: ** (DBConnection.ConnectionError) tcp connect (rinha-db:5432): connection refused - :econnrefused
+api-1     | 
+api-1     | 04:17:37.713 [error] Postgrex.Protocol (#PID<0.1577.0>) failed to connect: ** (DBConnection.ConnectionError) tcp connect (rinha-db:5432): connection refused - :econnrefused
+api-1     | 
+api-1     | 04:17:37.713 [error] Postgrex.Protocol (#PID<0.1578.0>) failed to connect: ** (DBConnection.ConnectionError) tcp connect (rinha-db:5432): connection refused - :econnrefused
+api-1     | 
+api-1     | 04:17:37.713 [error] Postgrex.Protocol (#PID<0.1579.0>) failed to connect: ** (DBConnection.ConnectionError) tcp connect (rinha-db:5432): connection refused - :econnrefused
 rinha-db  | performing post-bootstrap initialization ... ok
-rinha-db  | initdb: warning: enabling "trust" authentication for local connections
-rinha-db  | initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
 rinha-db  | syncing data to disk ... ok
 rinha-db  | 
 rinha-db  | 
@@ -48,10 +143,12 @@ rinha-db  | Success. You can now start the database server using:
 rinha-db  | 
 rinha-db  |     pg_ctl -D /var/lib/postgresql/data -l logfile start
 rinha-db  | 
-rinha-db  | waiting for server to start....2025-07-30 20:48:03.035 UTC [42] LOG:  starting PostgreSQL 17.5 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
-rinha-db  | 2025-07-30 20:48:03.044 UTC [42] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
-rinha-db  | 2025-07-30 20:48:03.066 UTC [45] LOG:  database system was shut down at 2025-07-30 20:48:02 UTC
-rinha-db  | 2025-07-30 20:48:03.078 UTC [42] LOG:  database system is ready to accept connections
+rinha-db  | initdb: warning: enabling "trust" authentication for local connections
+rinha-db  | initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
+rinha-db  | waiting for server to start....2025-07-31 04:17:38.344 UTC [41] LOG:  starting PostgreSQL 17.5 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
+rinha-db  | 2025-07-31 04:17:38.349 UTC [41] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+rinha-db  | 2025-07-31 04:17:38.428 UTC [44] LOG:  database system was shut down at 2025-07-31 04:17:38 UTC
+rinha-db  | 2025-07-31 04:17:38.437 UTC [41] LOG:  database system is ready to accept connections
 rinha-db  |  done
 rinha-db  | server started
 rinha-db  | CREATE DATABASE
@@ -65,34 +162,40 @@ rinha-db  | CREATE TABLE
 rinha-db  | DELETE 0
 rinha-db  | 
 rinha-db  | 
-rinha-db  | waiting for server to shut down....2025-07-30 20:48:03.529 UTC [42] LOG:  received fast shutdown request
-rinha-db  | 2025-07-30 20:48:03.534 UTC [42] LOG:  aborting any active transactions
-rinha-db  | 2025-07-30 20:48:03.538 UTC [42] LOG:  background worker "logical replication launcher" (PID 48) exited with exit code 1
-rinha-db  | 2025-07-30 20:48:03.602 UTC [43] LOG:  shutting down
-rinha-db  | 2025-07-30 20:48:03.607 UTC [43] LOG:  checkpoint starting: shutdown immediate
-rinha-db  | 2025-07-30 20:48:03.734 UTC [43] LOG:  checkpoint complete: wrote 930 buffers (5.7%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.032 s, sync=0.071 s, total=0.133 s; sync files=309, longest=0.029 s, average=0.001 s; distance=4288 kB, estimate=4288 kB; lsn=0/191D3E8, redo lsn=0/191D3E8
-rinha-db  | 2025-07-30 20:48:03.742 UTC [42] LOG:  database system is shut down
+rinha-db  | waiting for server to shut down....2025-07-31 04:17:38.819 UTC [41] LOG:  received fast shutdown request
+rinha-db  | 2025-07-31 04:17:38.827 UTC [41] LOG:  aborting any active transactions
+rinha-db  | 2025-07-31 04:17:38.829 UTC [41] LOG:  background worker "logical replication launcher" (PID 47) exited with exit code 1
+rinha-db  | 2025-07-31 04:17:38.833 UTC [42] LOG:  shutting down
+rinha-db  | 2025-07-31 04:17:38.840 UTC [42] LOG:  checkpoint starting: shutdown immediate
+api-2     | 
+api-2     | 04:17:38.885 [error] Postgrex.Protocol (#PID<0.1572.0>) failed to connect: ** (DBConnection.ConnectionError) tcp connect (rinha-db:5432): connection refused - :econnrefused
+api-1     | 
+api-1     | 04:17:38.921 [error] Postgrex.Protocol (#PID<0.1578.0>) failed to connect: ** (DBConnection.ConnectionError) tcp connect (rinha-db:5432): connection refused - :econnrefused
+api-1     | 
+api-1     | 04:17:38.928 [error] Postgrex.Protocol (#PID<0.1574.0>) failed to connect: ** (DBConnection.ConnectionError) tcp connect (rinha-db:5432): connection refused - :econnrefused
+rinha-db  | 2025-07-31 04:17:38.977 UTC [42] LOG:  checkpoint complete: wrote 930 buffers (5.7%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.065 s, sync=0.052 s, total=0.145 s; sync files=309, longest=0.010 s, average=0.001 s; distance=4288 kB, estimate=4288 kB; lsn=0/191D3E8, redo lsn=0/191D3E8
+rinha-db  | 2025-07-31 04:17:38.985 UTC [41] LOG:  database system is shut down
 rinha-db  |  done
 rinha-db  | server stopped
 rinha-db  | 
 rinha-db  | PostgreSQL init process complete; ready for start up.
 rinha-db  | 
-rinha-db  | 2025-07-30 20:48:03.858 UTC [1] LOG:  starting PostgreSQL 17.5 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
-rinha-db  | 2025-07-30 20:48:03.858 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
-rinha-db  | 2025-07-30 20:48:03.858 UTC [1] LOG:  listening on IPv6 address "::", port 5432
-rinha-db  | 2025-07-30 20:48:03.874 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
-rinha-db  | 2025-07-30 20:48:03.888 UTC [60] LOG:  database system was shut down at 2025-07-30 20:48:03 UTC
-rinha-db  | 2025-07-30 20:48:03.898 UTC [1] LOG:  database system is ready to accept connections
+rinha-db  | 2025-07-31 04:17:39.063 UTC [1] LOG:  starting PostgreSQL 17.5 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
+rinha-db  | 2025-07-31 04:17:39.063 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+rinha-db  | 2025-07-31 04:17:39.063 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+rinha-db  | 2025-07-31 04:17:39.084 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+rinha-db  | 2025-07-31 04:17:39.100 UTC [59] LOG:  database system was shut down at 2025-07-31 04:17:38 UTC
+rinha-db  | 2025-07-31 04:17:39.118 UTC [1] LOG:  database system is ready to accept connections
 [Klb-1 exited with code 0
-rinha-db  | 2025-07-30 20:49:33.142 UTC [83] LOG:  unexpected EOF on client connection with an open transaction
+rinha-db  | 2025-07-31 04:18:56.874 UTC [73] LOG:  unexpected EOF on client connection with an open transaction
 [Kapi-1 exited with code 137
 [Kapi-2 exited with code 137
-rinha-db  | 2025-07-30 20:49:33.718 UTC [1] LOG:  received fast shutdown request
-rinha-db  | 2025-07-30 20:49:33.727 UTC [1] LOG:  aborting any active transactions
-rinha-db  | 2025-07-30 20:49:33.730 UTC [1] LOG:  background worker "logical replication launcher" (PID 63) exited with exit code 1
-rinha-db  | 2025-07-30 20:49:33.733 UTC [58] LOG:  shutting down
-rinha-db  | 2025-07-30 20:49:33.742 UTC [58] LOG:  checkpoint starting: shutdown immediate
-rinha-db  | 2025-07-30 20:49:33.827 UTC [58] LOG:  checkpoint complete: wrote 265 buffers (1.6%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.014 s, sync=0.032 s, total=0.094 s; sync files=22, longest=0.025 s, average=0.002 s; distance=3737 kB, estimate=3737 kB; lsn=0/1CC3AE8, redo lsn=0/1CC3AE8
-rinha-db  | 2025-07-30 20:49:33.832 UTC [1] LOG:  database system is shut down
+rinha-db  | 2025-07-31 04:18:57.447 UTC [1] LOG:  received fast shutdown request
+rinha-db  | 2025-07-31 04:18:57.454 UTC [1] LOG:  aborting any active transactions
+rinha-db  | 2025-07-31 04:18:57.457 UTC [1] LOG:  background worker "logical replication launcher" (PID 62) exited with exit code 1
+rinha-db  | 2025-07-31 04:18:57.459 UTC [57] LOG:  shutting down
+rinha-db  | 2025-07-31 04:18:57.470 UTC [57] LOG:  checkpoint starting: shutdown immediate
+rinha-db  | 2025-07-31 04:18:57.570 UTC [57] LOG:  checkpoint complete: wrote 282 buffers (1.7%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.018 s, sync=0.054 s, total=0.111 s; sync files=22, longest=0.048 s, average=0.003 s; distance=3889 kB, estimate=3889 kB; lsn=0/1CE9AB8, redo lsn=0/1CE9AB8
+rinha-db  | 2025-07-31 04:18:57.575 UTC [1] LOG:  database system is shut down
 [Krinha-db exited with code 0
 log truncated at line 1000
