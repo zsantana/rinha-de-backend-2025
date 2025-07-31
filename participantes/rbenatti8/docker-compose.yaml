@@ -17,6 +17,7 @@ services:
   pod1: &pod
     image: rbenatti8/rinha-backend-2025-api:latest
     container_name: pod1
+    pull_policy: always
     networks:
       - backend
       - payment-processor
@@ -24,10 +25,10 @@ services:
       - REDIS_ADDRESS=redis:6379
       - PAYMENT_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080
       - PAYMENT_PROCESSOR_URL_FALLBACK=http://payment-processor-fallback:8080
-      - ACTOR_POOL_SIZE=300
+      - ACTOR_POOL_SIZE=100
       - WRITE_TIMEOUT=500
       - READ_TIMEOUT=500
-      - HEAP_SIZE=40000
+      - HEAP_SIZE=15000
       - USE_PREFORK=true
       - IS_PUBLISHER=true
     depends_on:
@@ -45,10 +46,10 @@ services:
       - REDIS_ADDRESS=redis:6379
       - PAYMENT_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080
       - PAYMENT_PROCESSOR_URL_FALLBACK=http://payment-processor-fallback:8080
-      - ACTOR_POOL_SIZE=300
+      - ACTOR_POOL_SIZE=100
       - WRITE_TIMEOUT=500
       - READ_TIMEOUT=500
-      - HEAP_SIZE=40000
+      - HEAP_SIZE=15000
       - USE_PREFORK=true
       - IS_PUBLISHER=false
   pod3:
@@ -58,10 +59,10 @@ services:
       - REDIS_ADDRESS=redis:6379
       - PAYMENT_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080
       - PAYMENT_PROCESSOR_URL_FALLBACK=http://payment-processor-fallback:8080
-      - ACTOR_POOL_SIZE=300
+      - ACTOR_POOL_SIZE=100
       - WRITE_TIMEOUT=500
       - READ_TIMEOUT=500
-      - HEAP_SIZE=40000
+      - HEAP_SIZE=15000
       - USE_PREFORK=true
       - IS_PUBLISHER=false
   pod4:
@@ -71,10 +72,10 @@ services:
       - REDIS_ADDRESS=redis:6379
       - PAYMENT_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080
       - PAYMENT_PROCESSOR_URL_FALLBACK=http://payment-processor-fallback:8080
-      - ACTOR_POOL_SIZE=300
+      - ACTOR_POOL_SIZE=100
       - WRITE_TIMEOUT=500
       - READ_TIMEOUT=500
-      - HEAP_SIZE=40000
+      - HEAP_SIZE=15000
       - USE_PREFORK=true
       - IS_PUBLISHER=false
   redis:

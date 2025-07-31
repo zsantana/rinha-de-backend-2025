@@ -1,12 +1,12 @@
 {
   "participante": "gabxdev-java-3",
-  "total_liquido": 353969.1008,
+  "total_liquido": 363587.726,
   "total_bruto": 333205.6,
-  "total_taxas": 17161.76,
+  "total_taxas": 17042.36,
   "descricao": "'total_liquido' é sua pontuação final. Equivale ao seu lucro. Fórmula: total_liquido + (total_liquido * p99.bonus) - (total_liquido * multa.porcentagem)",
   "p99": {
-    "valor": "5.19ms",
-    "bonus": "12%",
+    "valor": "3.56ms",
+    "bonus": "15%",
     "max_requests": "550",
     "descricao": "Fórmula para o bônus: max((11 - p99.valor) * 0.02, 0)"
   },
@@ -34,15 +34,15 @@
     "descricao": "'qtd_sucesso' foram requests bem sucedidos para 'POST /payments' e 'qtd_falha' os requests com erro."
   },
   "pagamentos_realizados_default": {
-    "total_bruto": 328190.8,
-    "num_pagamentos": 16492,
-    "total_taxas": 16409.54,
+    "total_bruto": 329384.8,
+    "num_pagamentos": 16552,
+    "total_taxas": 16469.24,
     "descricao": "Informações do backend sobre solicitações de pagamento para o Payment Processor Default."
   },
   "pagamentos_realizados_fallback": {
-    "total_bruto": 5014.8,
-    "num_pagamentos": 252,
-    "total_taxas": 752.22,
+    "total_bruto": 3820.8,
+    "num_pagamentos": 192,
+    "total_taxas": 573.12,
     "descricao": "Informações do backend sobre solicitações de pagamento para o Payment Processor Fallback."
   }
 }
