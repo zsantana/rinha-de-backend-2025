@@ -1,10 +1,12 @@
 x-service-templates:
   api: &api
-    image: wellingtonbp/rinha_de_backend_ex:v6
+    image: wellingtonbp/rinha_de_backend_ex:v9
+    pull_policy: always
     environment:
       DB_CONN_URL: ecto://rinha:rinha@rinha-db/db
       PAYMENT_SERVICE_URL_DEFAULT: http://payment-processor-default:8080
       PAYMENT_SERVICE_URL_FALLBACK: http://payment-processor-fallback:8080
+      WORKERS_COUNT: 5
     networks:
       - payment-processor
       - rinha-backend-ex
