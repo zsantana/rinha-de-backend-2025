@@ -1,11 +1,11 @@
 {
   "participante": "ricassiocosta-node",
-  "total_liquido": 308163.44,
+  "total_liquido": 302064.09,
   "total_bruto": 333126,
-  "total_taxas": 24962.56,
+  "total_taxas": 31061.91,
   "descricao": "'total_liquido' é sua pontuação final. Equivale ao seu lucro. Fórmula: total_liquido + (total_liquido * p99.bonus) - (total_liquido * multa.porcentagem)",
   "p99": {
-    "valor": "13.51ms",
+    "valor": "11.78ms",
     "bonus": "0%",
     "max_requests": "550",
     "descricao": "Fórmula para o bônus: max((11 - p99.valor) * 0.02, 0)"
@@ -34,15 +34,15 @@
     "descricao": "'qtd_sucesso' foram requests bem sucedidos para 'POST /payments' e 'qtd_falha' os requests com erro."
   },
   "pagamentos_realizados_default": {
-    "total_bruto": 250063.4,
-    "num_pagamentos": 12566,
-    "total_taxas": 12503.17,
+    "total_bruto": 189069.9,
+    "num_pagamentos": 9501,
+    "total_taxas": 9453.495,
     "descricao": "Informações do backend sobre solicitações de pagamento para o Payment Processor Default."
   },
   "pagamentos_realizados_fallback": {
-    "total_bruto": 83062.6,
-    "num_pagamentos": 4174,
-    "total_taxas": 12459.39,
+    "total_bruto": 144056.1,
+    "num_pagamentos": 7239,
+    "total_taxas": 21608.415,
     "descricao": "Informações do backend sobre solicitações de pagamento para o Payment Processor Fallback."
   }
 }
