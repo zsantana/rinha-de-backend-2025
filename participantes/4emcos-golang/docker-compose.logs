@@ -1,0 +1,1001 @@
+
+ backend-02 Pulling 
+ backend-01 Pulling 
+ 9824c27679d3 Already exists 
+ 1c434862dd36 Already exists 
+ cc56bb2be2d3 Already exists 
+ c966e474a278 Pulling fs layer 
+ 9824c27679d3 Already exists 
+ 1c434862dd36 Already exists 
+ cc56bb2be2d3 Already exists 
+ c966e474a278 Pulling fs layer 
+ c966e474a278 Downloading [>                                                  ]  80.72kB/7.713MB
+ c966e474a278 Downloading [>                                                  ]  80.72kB/7.713MB
+ c966e474a278 Downloading [======================================>            ]  5.997MB/7.713MB
+ c966e474a278 Downloading [======================================>            ]  5.997MB/7.713MB
+ c966e474a278 Download complete 
+ c966e474a278 Downloading [==================================================>]  7.713MB/7.713MB
+ c966e474a278 Download complete 
+ c966e474a278 Extracting [>                                                  ]   98.3kB/7.713MB
+ c966e474a278 Extracting [>                                                  ]   98.3kB/7.713MB
+ c966e474a278 Extracting [==================================================>]  7.713MB/7.713MB
+ c966e474a278 Extracting [==================================================>]  7.713MB/7.713MB
+ c966e474a278 Pull complete 
+ c966e474a278 Pull complete 
+ backend-02 Pulled 
+ backend-01 Pulled 
+ Network 4emcos-golang_backend  Creating
+ Network 4emcos-golang_backend  Created
+ Container 4emcos-golang-redis-1  Creating
+ Container 4emcos-golang-redis-1  Created
+ Container backend-02  Creating
+ Container backend-01  Creating
+ Container backend-01  Created
+ Container backend-02  Created
+ Container 4emcos-golang-nginx-1  Creating
+ Container 4emcos-golang-nginx-1  Created
+Attaching to nginx-1, redis-1, backend-01, backend-02
+redis-1     | Starting Redis Server
+redis-1     | 1:C 01 Aug 2025 11:02:22.131 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+redis-1     | 1:C 01 Aug 2025 11:02:22.131 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+redis-1     | 1:C 01 Aug 2025 11:02:22.131 * Redis version=8.0.3, bits=64, commit=00000000, modified=1, pid=1, just started
+redis-1     | 1:C 01 Aug 2025 11:02:22.131 * Configuration loaded
+redis-1     | 1:M 01 Aug 2025 11:02:22.132 * monotonic clock: POSIX clock_gettime
+redis-1     | 1:M 01 Aug 2025 11:02:22.133 * Running mode=standalone, port=6379.
+redis-1     | 1:M 01 Aug 2025 11:02:22.133 * <bf> RedisBloom version 8.0.1 (Git=unknown)
+redis-1     | 1:M 01 Aug 2025 11:02:22.133 * <bf> Registering configuration options: [
+redis-1     | 1:M 01 Aug 2025 11:02:22.133 * <bf> 	{ bf-error-rate       :      0.01 }
+redis-1     | 1:M 01 Aug 2025 11:02:22.133 * <bf> 	{ bf-initial-size     :       100 }
+redis-1     | 1:M 01 Aug 2025 11:02:22.133 * <bf> 	{ bf-expansion-factor :         2 }
+redis-1     | 1:M 01 Aug 2025 11:02:22.133 * <bf> 	{ cf-bucket-size      :         2 }
+redis-1     | 1:M 01 Aug 2025 11:02:22.133 * <bf> 	{ cf-initial-size     :      1024 }
+redis-1     | 1:M 01 Aug 2025 11:02:22.133 * <bf> 	{ cf-max-iterations   :        20 }
+redis-1     | 1:M 01 Aug 2025 11:02:22.133 * <bf> 	{ cf-expansion-factor :         1 }
+redis-1     | 1:M 01 Aug 2025 11:02:22.133 * <bf> 	{ cf-max-expansions   :        32 }
+redis-1     | 1:M 01 Aug 2025 11:02:22.133 * <bf> ]
+redis-1     | 1:M 01 Aug 2025 11:02:22.134 * Module 'bf' loaded from /usr/local/lib/redis/modules//redisbloom.so
+redis-1     | 1:M 01 Aug 2025 11:02:22.136 * <search> Redis version found by RedisSearch : 8.0.3 - oss
+redis-1     | 1:M 01 Aug 2025 11:02:22.136 * <search> RediSearch version 8.0.1 (Git=5688fcc)
+redis-1     | 1:M 01 Aug 2025 11:02:22.136 * <search> Low level api version 1 initialized successfully
+redis-1     | 1:M 01 Aug 2025 11:02:22.136 * <search> gc: ON, prefix min length: 2, min word length to stem: 4, prefix max expansions: 200, query timeout (ms): 500, timeout policy: return, cursor read size: 1000, cursor max idle (ms): 300000, max doctable size: 1000000, max number of search results:  1000000, 
+redis-1     | 1:M 01 Aug 2025 11:02:22.136 * <search> Initialized thread pools!
+redis-1     | 1:M 01 Aug 2025 11:02:22.136 * <search> Disabled workers threadpool of size 0
+redis-1     | 1:M 01 Aug 2025 11:02:22.136 * <search> Subscribe to config changes
+redis-1     | 1:M 01 Aug 2025 11:02:22.136 * <search> Enabled role change notification
+redis-1     | 1:M 01 Aug 2025 11:02:22.136 * <search> Cluster configuration: AUTO partitions, type: 0, coordinator timeout: 0ms
+redis-1     | 1:M 01 Aug 2025 11:02:22.136 * <search> Register write commands
+redis-1     | 1:M 01 Aug 2025 11:02:22.136 * Module 'search' loaded from /usr/local/lib/redis/modules//redisearch.so
+redis-1     | 1:M 01 Aug 2025 11:02:22.137 * <timeseries> RedisTimeSeries version 80001, git_sha=577bfa8b5909e7ee572f0b651399be8303dc6641
+redis-1     | 1:M 01 Aug 2025 11:02:22.137 * <timeseries> Redis version found by RedisTimeSeries : 8.0.3 - oss
+redis-1     | 1:M 01 Aug 2025 11:02:22.137 * <timeseries> Registering configuration options: [
+redis-1     | 1:M 01 Aug 2025 11:02:22.137 * <timeseries> 	{ ts-compaction-policy   :              }
+redis-1     | 1:M 01 Aug 2025 11:02:22.137 * <timeseries> 	{ ts-num-threads         :            3 }
+redis-1     | 1:M 01 Aug 2025 11:02:22.137 * <timeseries> 	{ ts-retention-policy    :            0 }
+redis-1     | 1:M 01 Aug 2025 11:02:22.137 * <timeseries> 	{ ts-duplicate-policy    :        block }
+redis-1     | 1:M 01 Aug 2025 11:02:22.137 * <timeseries> 	{ ts-chunk-size-bytes    :         4096 }
+redis-1     | 1:M 01 Aug 2025 11:02:22.137 * <timeseries> 	{ ts-encoding            :   compressed }
+redis-1     | 1:M 01 Aug 2025 11:02:22.137 * <timeseries> 	{ ts-ignore-max-time-diff:            0 }
+redis-1     | 1:M 01 Aug 2025 11:02:22.137 * <timeseries> 	{ ts-ignore-max-val-diff :     0.000000 }
+redis-1     | 1:M 01 Aug 2025 11:02:22.137 * <timeseries> ]
+redis-1     | 1:M 01 Aug 2025 11:02:22.137 * <timeseries> Detected redis oss
+redis-1     | 1:M 01 Aug 2025 11:02:22.137 * Module 'timeseries' loaded from /usr/local/lib/redis/modules//redistimeseries.so
+redis-1     | 1:M 01 Aug 2025 11:02:22.138 * <ReJSON> Created new data type 'ReJSON-RL'
+redis-1     | 1:M 01 Aug 2025 11:02:22.139 * <ReJSON> version: 80001 git sha: unknown branch: unknown
+redis-1     | 1:M 01 Aug 2025 11:02:22.139 * <ReJSON> Exported RedisJSON_V1 API
+redis-1     | 1:M 01 Aug 2025 11:02:22.139 * <ReJSON> Exported RedisJSON_V2 API
+redis-1     | 1:M 01 Aug 2025 11:02:22.139 * <ReJSON> Exported RedisJSON_V3 API
+redis-1     | 1:M 01 Aug 2025 11:02:22.139 * <ReJSON> Exported RedisJSON_V4 API
+redis-1     | 1:M 01 Aug 2025 11:02:22.139 * <ReJSON> Exported RedisJSON_V5 API
+redis-1     | 1:M 01 Aug 2025 11:02:22.139 * <ReJSON> Enabled diskless replication
+redis-1     | 1:M 01 Aug 2025 11:02:22.139 * <ReJSON> Initialized shared string cache, thread safe: false.
+redis-1     | 1:M 01 Aug 2025 11:02:22.139 * Module 'ReJSON' loaded from /usr/local/lib/redis/modules//rejson.so
+redis-1     | 1:M 01 Aug 2025 11:02:22.139 * <search> Acquired RedisJSON_V5 API
+redis-1     | 1:M 01 Aug 2025 11:02:22.202 * Server initialized
+redis-1     | 1:M 01 Aug 2025 11:02:22.202 * Ready to accept connections tcp
+backend-02  | 2025/08/01 11:02:22.524639 main.go:318: [Info] Starting application...
+backend-02  | 2025/08/01 11:02:22.524790 main.go:321: [Info] Could not load .env file: %vopen .env: no such file or directory
+backend-02  | 2025/08/01 11:02:22.524800 main.go:331: [Info] Connecting to Redis at redis:6379
+backend-02  | Started 5 payment workers
+backend-02  | 2025/08/01 11:02:22.526056 main.go:340: [Info] Connected to Redis successfully
+backend-02  | 2025/08/01 11:02:22.526103 main.go:352: [Info] Starting Fiber on port 5000
+backend-02  | 
+backend-02  |     _______ __             
+backend-02  |    / ____(_) /_  ___  _____
+backend-02  |   / /_  / / __ \/ _ \/ ___/
+backend-02  |  / __/ / / /_/ /  __/ /    
+backend-02  | /_/   /_/_.___/\___/_/          v3.0.0-beta.5
+backend-02  | --------------------------------------------------
+backend-02  | INFO Server started on: 	http://127.0.0.1:5000 (bound on host 0.0.0.0 and port 5000)
+backend-02  | INFO Total handlers count: 	4
+backend-02  | INFO Prefork: 			Disabled
+backend-02  | INFO PID: 			1
+backend-02  | INFO Total process count: 	1
+backend-02  | 
+backend-01  | 2025/08/01 11:02:22.557843 main.go:318: [Info] Starting application...
+backend-01  | 2025/08/01 11:02:22.557959 main.go:321: [Info] Could not load .env file: %vopen .env: no such file or directory
+backend-01  | 2025/08/01 11:02:22.557967 main.go:331: [Info] Connecting to Redis at redis:6379
+backend-01  | 2025/08/01 11:02:22.559085 main.go:340: [Info] Connected to Redis successfully
+backend-01  | 2025/08/01 11:02:22.559118 main.go:352: [Info] Starting Fiber on port 5000
+backend-01  | Started 5 payment workers
+backend-01  | 
+backend-01  |     _______ __             
+backend-01  |    / ____(_) /_  ___  _____
+backend-01  |   / /_  / / __ \/ _ \/ ___/
+backend-01  |  / __/ / / /_/ /  __/ /    
+backend-01  | /_/   /_/_.___/\___/_/          v3.0.0-beta.5
+backend-01  | --------------------------------------------------
+backend-01  | INFO Server started on: 	http://127.0.0.1:5000 (bound on host 0.0.0.0 and port 5000)
+backend-01  | INFO Total handlers count: 	4
+backend-01  | INFO Prefork: 			Disabled
+backend-01  | INFO PID: 			1
+backend-01  | INFO Total process count: 	1
+backend-01  | 
+backend-02  | 2025-08-01 11:02:27 | [92m200[0m |     211.169µs | [96mGET[0m /health | 127.0.0.1
+backend-01  | 2025-08-01 11:02:27 | [92m200[0m |     204.777µs | [96mGET[0m /health | 127.0.0.1
+nginx-1     | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+nginx-1     | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+nginx-1     | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+nginx-1     | 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+nginx-1     | 10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
+nginx-1     | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+nginx-1     | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+nginx-1     | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+nginx-1     | /docker-entrypoint.sh: Configuration complete; ready for start up
+backend-02  | 2025-08-01 11:02:32 | [92m200[0m |     204.968µs | [96mGET[0m /health | 127.0.0.1
+backend-01  | 2025-08-01 11:02:32 | [92m200[0m |     153.797µs | [96mGET[0m /health | 127.0.0.1
+backend-01  | 2025-08-01 11:02:32 | [92m200[0m |      330.69µs | [96mGET[0m /payments-summary | 172.20.0.5
+backend-02  | 2025-08-01 11:02:37 | [92m200[0m |      133.45µs | [96mGET[0m /health | 127.0.0.1
+backend-01  | 2025-08-01 11:02:37 | [92m200[0m |      207.28µs | [96mGET[0m /health | 127.0.0.1
+backend-01  | 2025-08-01 11:02:38 | [93m404[0m |       9.748µs | [92mPOST[0m /purge-payments | 172.20.0.5
+backend-01  | 2025-08-01 11:02:38 | [92m200[0m |    1.288989ms | [96mGET[0m /payments-summary | 172.20.0.5
+backend-01  | 2025/08/01 11:02:38.439724 main.go:392: [Info] Enqueueing payment: {CorrelationId:464fbc53-c991-4886-b46d-9b02bdc990c9 Amount:19.9 RequestedAt:2025-08-01T11:02:38.439Z}
+backend-01  | 2025-08-01 11:02:38 | [92m204[0m |     103.862µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:38.546499 main.go:392: [Info] Enqueueing payment: {CorrelationId:a260614d-fd71-46b7-9e22-5807d8c799b9 Amount:19.9 RequestedAt:2025-08-01T11:02:38.546Z}
+backend-02  | 2025-08-01 11:02:38 | [92m204[0m |      99.004µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:38.655763 main.go:392: [Info] Enqueueing payment: {CorrelationId:4a844b99-70a4-4bff-a56b-5f0c17e4b4c1 Amount:19.9 RequestedAt:2025-08-01T11:02:38.655Z}
+backend-01  | 2025-08-01 11:02:38 | [92m204[0m |      54.847µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025-08-01 11:02:38 | [92m204[0m |      58.908µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:38.764652 main.go:392: [Info] Enqueueing payment: {CorrelationId:f7c14667-056c-42b2-84b8-ecc21bc82622 Amount:19.9 RequestedAt:2025-08-01T11:02:38.764Z}
+backend-01  | 2025-08-01 11:02:38 | [92m204[0m |      53.482µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:38.873728 main.go:392: [Info] Enqueueing payment: {CorrelationId:c9fcaab7-c007-4063-9a82-50acb3d69a57 Amount:19.9 RequestedAt:2025-08-01T11:02:38.873Z}
+backend-02  | 2025-08-01 11:02:38 | [92m204[0m |      73.433µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:38.984125 main.go:392: [Info] Enqueueing payment: {CorrelationId:a4256633-267a-4c5a-bfd1-ccc0b505de17 Amount:19.9 RequestedAt:2025-08-01T11:02:38.984Z}
+backend-01  | 2025/08/01 11:02:39.092369 main.go:392: [Info] Enqueueing payment: {CorrelationId:fef209c5-b446-45aa-b5d3-ed57a03084ed Amount:19.9 RequestedAt:2025-08-01T11:02:39.092Z}
+backend-01  | 2025-08-01 11:02:39 | [92m204[0m |      73.494µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025-08-01 11:02:39 | [92m204[0m |      53.806µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:39.201477 main.go:392: [Info] Enqueueing payment: {CorrelationId:48ed1cd7-34ab-4df3-8de5-9428be9259ca Amount:19.9 RequestedAt:2025-08-01T11:02:39.201Z}
+backend-01  | 2025/08/01 11:02:39.311462 main.go:392: [Info] Enqueueing payment: {CorrelationId:16900c48-95e3-4b35-93e8-cfbe3bf8c4eb Amount:19.9 RequestedAt:2025-08-01T11:02:39.311Z}
+backend-01  | 2025-08-01 11:02:39 | [92m204[0m |      53.457µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:39.420786 main.go:392: [Info] Enqueueing payment: {CorrelationId:31c57aa4-99e5-40c7-ba90-19e8554c69d4 Amount:19.9 RequestedAt:2025-08-01T11:02:39.420Z}
+backend-02  | 2025-08-01 11:02:39 | [92m204[0m |     102.632µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:39.441411 main.go:392: [Info] Enqueueing payment: {CorrelationId:548b3d26-bbae-4c87-a75a-de2bf3b6a0e1 Amount:19.9 RequestedAt:2025-08-01T11:02:39.441Z}
+backend-02  | 2025-08-01 11:02:39 | [92m204[0m |      85.654µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:39.529729 main.go:392: [Info] Enqueueing payment: {CorrelationId:a4d4f8b3-7834-47d3-9384-60600c9a1e2a Amount:19.9 RequestedAt:2025-08-01T11:02:39.529Z}
+backend-01  | 2025-08-01 11:02:39 | [92m204[0m |      55.027µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025-08-01 11:02:39 | [92m204[0m |      56.785µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:39.547769 main.go:392: [Info] Enqueueing payment: {CorrelationId:4b9690e6-6218-4829-a67d-07a4047999e6 Amount:19.9 RequestedAt:2025-08-01T11:02:39.547Z}
+backend-01  | 2025-08-01 11:02:39 | [92m204[0m |      52.146µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:39.639676 main.go:392: [Info] Enqueueing payment: {CorrelationId:65950809-e512-4b47-b1e9-fdcc234d1eaf Amount:19.9 RequestedAt:2025-08-01T11:02:39.639Z}
+backend-02  | 2025-08-01 11:02:39 | [92m204[0m |      53.594µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:39.657010 main.go:392: [Info] Enqueueing payment: {CorrelationId:8f67382c-633e-4d9b-9df5-55e6a09be783 Amount:19.9 RequestedAt:2025-08-01T11:02:39.656Z}
+backend-01  | 2025/08/01 11:02:39.749165 main.go:392: [Info] Enqueueing payment: {CorrelationId:74e0fbd4-158e-487d-9ed8-2e762036b4b9 Amount:19.9 RequestedAt:2025-08-01T11:02:39.749Z}
+backend-01  | 2025-08-01 11:02:39 | [92m204[0m |     100.772µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:39.766159 main.go:392: [Info] Enqueueing payment: {CorrelationId:90a13c51-9fdb-4233-9b07-3146f8e4e99c Amount:19.9 RequestedAt:2025-08-01T11:02:39.766Z}
+backend-02  | 2025-08-01 11:02:39 | [92m204[0m |      55.665µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:39.858325 main.go:392: [Info] Enqueueing payment: {CorrelationId:e6b55772-2c2e-4dce-a02a-9029bee8b3f3 Amount:19.9 RequestedAt:2025-08-01T11:02:39.858Z}
+backend-01  | 2025-08-01 11:02:39 | [92m204[0m |      57.769µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:39.875553 main.go:392: [Info] Enqueueing payment: {CorrelationId:39fe8351-a38c-481a-9501-a8c5a0d737b9 Amount:19.9 RequestedAt:2025-08-01T11:02:39.875Z}
+backend-02  | 2025-08-01 11:02:39 | [92m204[0m |      67.784µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:39.967543 main.go:392: [Info] Enqueueing payment: {CorrelationId:091c13c9-ac08-412d-acdf-4407a75cbad5 Amount:19.9 RequestedAt:2025-08-01T11:02:39.967Z}
+backend-01  | 2025-08-01 11:02:39 | [92m204[0m |      74.896µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025-08-01 11:02:39 | [92m204[0m |      49.172µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:39.985588 main.go:392: [Info] Enqueueing payment: {CorrelationId:861618b5-2379-4597-8810-6282cd837529 Amount:19.9 RequestedAt:2025-08-01T11:02:39.985Z}
+backend-01  | 2025/08/01 11:02:40.076650 main.go:392: [Info] Enqueueing payment: {CorrelationId:78257043-5c7c-4c31-a43b-271999a300d5 Amount:19.9 RequestedAt:2025-08-01T11:02:40.076Z}
+backend-01  | 2025-08-01 11:02:39 | [92m204[0m |      54.735µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025-08-01 11:02:40 | [92m204[0m |      49.251µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:40.093922 main.go:392: [Info] Enqueueing payment: {CorrelationId:5527c05c-0798-4a97-9314-10b1970e9e69 Amount:19.9 RequestedAt:2025-08-01T11:02:40.093Z}
+backend-01  | 2025/08/01 11:02:40.186199 main.go:392: [Info] Enqueueing payment: {CorrelationId:a2e0a3cb-2cb7-4ddb-a83f-8e40e6830f26 Amount:19.9 RequestedAt:2025-08-01T11:02:40.186Z}
+backend-01  | 2025-08-01 11:02:40 | [92m204[0m |      58.499µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025-08-01 11:02:40 | [92m204[0m |      71.338µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:40.203651 main.go:392: [Info] Enqueueing payment: {CorrelationId:d11ae899-77ff-4093-b8b3-11f3572efe72 Amount:19.9 RequestedAt:2025-08-01T11:02:40.203Z}
+backend-02  | 2025/08/01 11:02:40.294792 main.go:392: [Info] Enqueueing payment: {CorrelationId:eaa96e13-299a-4a5b-9247-87428b6c0267 Amount:19.9 RequestedAt:2025-08-01T11:02:40.294Z}
+backend-02  | 2025-08-01 11:02:40 | [92m204[0m |      78.072µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:40.313144 main.go:392: [Info] Enqueueing payment: {CorrelationId:34b2c759-6bd2-437b-a5be-b6939bcebfe7 Amount:19.9 RequestedAt:2025-08-01T11:02:40.313Z}
+backend-01  | 2025-08-01 11:02:40 | [92m204[0m |      58.268µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:40.418439 main.go:392: [Info] Enqueueing payment: {CorrelationId:77b1f10c-530b-437d-a8eb-08b79010384a Amount:19.9 RequestedAt:2025-08-01T11:02:40.418Z}
+backend-01  | 2025-08-01 11:02:40 | [92m204[0m |       53.95µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:40.422485 main.go:392: [Info] Enqueueing payment: {CorrelationId:dd580b2d-9c75-4373-bc44-b7a4ea3967d1 Amount:19.9 RequestedAt:2025-08-01T11:02:40.422Z}
+backend-02  | 2025-08-01 11:02:40 | [92m204[0m |      86.693µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:40.442734 main.go:392: [Info] Enqueueing payment: {CorrelationId:2d25c4ec-afe3-4fa5-b73d-fae5aef82b39 Amount:19.9 RequestedAt:2025-08-01T11:02:40.442Z}
+backend-01  | 2025-08-01 11:02:40 | [92m204[0m |      61.138µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:40.513892 main.go:392: [Info] Enqueueing payment: {CorrelationId:82bb4e3f-e682-4fc1-92f2-650e24c7f59c Amount:19.9 RequestedAt:2025-08-01T11:02:40.513Z}
+backend-02  | 2025-08-01 11:02:40 | [92m204[0m |      56.484µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:40.531155 main.go:392: [Info] Enqueueing payment: {CorrelationId:18e1cee5-d86a-4042-9121-52cb45de4b7f Amount:19.9 RequestedAt:2025-08-01T11:02:40.531Z}
+backend-01  | 2025-08-01 11:02:40 | [92m204[0m |      59.637µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:40.549425 main.go:392: [Info] Enqueueing payment: {CorrelationId:20e61d56-dfd1-4e26-810e-8340a5d18b88 Amount:19.9 RequestedAt:2025-08-01T11:02:40.549Z}
+backend-02  | 2025-08-01 11:02:40 | [92m204[0m |      55.683µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:40.623212 main.go:392: [Info] Enqueueing payment: {CorrelationId:59c4a0d5-9c04-46ad-baa9-74ccd3866bbb Amount:19.9 RequestedAt:2025-08-01T11:02:40.623Z}
+backend-01  | 2025-08-01 11:02:40 | [92m204[0m |      66.693µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:40.641330 main.go:392: [Info] Enqueueing payment: {CorrelationId:05d11ef8-d62e-47f8-87a2-69cd3c3afc7e Amount:19.9 RequestedAt:2025-08-01T11:02:40.641Z}
+backend-01  | 2025-08-01 11:02:40 | [92m204[0m |       65.04µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:40.658762 main.go:392: [Info] Enqueueing payment: {CorrelationId:d4b4408a-04c9-4c9f-94e3-80637838618f Amount:19.9 RequestedAt:2025-08-01T11:02:40.658Z}
+backend-02  | 2025-08-01 11:02:40 | [92m204[0m |      70.616µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025-08-01 11:02:40 | [92m204[0m |      69.525µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:40.732440 main.go:392: [Info] Enqueueing payment: {CorrelationId:2569ce19-3938-43c5-b506-c67167c89ddb Amount:19.9 RequestedAt:2025-08-01T11:02:40.732Z}
+backend-01  | 2025/08/01 11:02:40.750685 main.go:392: [Info] Enqueueing payment: {CorrelationId:83d883ce-3bb7-4553-9b41-e833991d8eff Amount:19.9 RequestedAt:2025-08-01T11:02:40.750Z}
+backend-01  | 2025-08-01 11:02:40 | [92m204[0m |       84.96µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:40.767766 main.go:392: [Info] Enqueueing payment: {CorrelationId:e2363796-0a90-454a-acc3-0dc951806057 Amount:19.9 RequestedAt:2025-08-01T11:02:40.767Z}
+backend-02  | 2025-08-01 11:02:40 | [92m204[0m |      57.554µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:40.841487 main.go:392: [Info] Enqueueing payment: {CorrelationId:f37069d2-0de7-4e0f-a76e-958f00230329 Amount:19.9 RequestedAt:2025-08-01T11:02:40.841Z}
+backend-01  | 2025-08-01 11:02:40 | [92m204[0m |     105.923µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:40.859972 main.go:392: [Info] Enqueueing payment: {CorrelationId:340a79e4-b09d-4c50-9be3-3d6315a1bb73 Amount:19.9 RequestedAt:2025-08-01T11:02:40.859Z}
+backend-01  | 2025-08-01 11:02:40 | [92m204[0m |      57.318µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:40.877033 main.go:392: [Info] Enqueueing payment: {CorrelationId:c40c0616-2379-4ae0-a3ad-f59027c13a47 Amount:19.9 RequestedAt:2025-08-01T11:02:40.877Z}
+backend-02  | 2025-08-01 11:02:40 | [92m204[0m |      53.749µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:40.950865 main.go:392: [Info] Enqueueing payment: {CorrelationId:e78ded2a-4125-42bd-b044-c498020bbf43 Amount:19.9 RequestedAt:2025-08-01T11:02:40.950Z}
+backend-02  | 2025-08-01 11:02:40 | [92m204[0m |      67.317µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:40.968969 main.go:392: [Info] Enqueueing payment: {CorrelationId:9409c33d-a792-4d28-a6c9-e33df09ec90c Amount:19.9 RequestedAt:2025-08-01T11:02:40.968Z}
+backend-01  | 2025-08-01 11:02:40 | [92m204[0m |      59.353µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025-08-01 11:02:40 | [92m204[0m |      67.741µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:40.987057 main.go:392: [Info] Enqueueing payment: {CorrelationId:cb9a3b45-ef5b-4930-8471-e30ffeded920 Amount:19.9 RequestedAt:2025-08-01T11:02:40.987Z}
+backend-01  | 2025/08/01 11:02:41.060284 main.go:392: [Info] Enqueueing payment: {CorrelationId:f387820c-0d04-4791-b281-af536ec52c3c Amount:19.9 RequestedAt:2025-08-01T11:02:41.060Z}
+backend-01  | 2025-08-01 11:02:40 | [92m204[0m |      59.178µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:41.078328 main.go:392: [Info] Enqueueing payment: {CorrelationId:e4004cd2-eda5-4301-abd2-8616112d9876 Amount:19.9 RequestedAt:2025-08-01T11:02:41.078Z}
+backend-01  | 2025-08-01 11:02:40 | [92m204[0m |      60.987µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025-08-01 11:02:41 | [92m204[0m |      78.579µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:41.095382 main.go:392: [Info] Enqueueing payment: {CorrelationId:51bc0c52-7a2a-49e7-aa2c-74a6b3d81128 Amount:19.9 RequestedAt:2025-08-01T11:02:41.095Z}
+backend-02  | 2025/08/01 11:02:41.169320 main.go:392: [Info] Enqueueing payment: {CorrelationId:a239387a-9673-4b75-a1f4-3c33ef7d1ec3 Amount:19.9 RequestedAt:2025-08-01T11:02:41.169Z}
+backend-02  | 2025-08-01 11:02:41 | [92m204[0m |      53.481µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:41.187454 main.go:392: [Info] Enqueueing payment: {CorrelationId:dbb3ad7c-f5fb-4a77-8dfa-748117e4bcc9 Amount:19.9 RequestedAt:2025-08-01T11:02:41.187Z}
+backend-01  | 2025-08-01 11:02:41 | [92m204[0m |      74.278µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025-08-01 11:02:41 | [92m204[0m |      52.714µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:41.205582 main.go:392: [Info] Enqueueing payment: {CorrelationId:bb193d3a-5cd4-46d0-afbf-bc98b8a0d273 Amount:19.9 RequestedAt:2025-08-01T11:02:41.205Z}
+backend-01  | 2025/08/01 11:02:41.278260 main.go:392: [Info] Enqueueing payment: {CorrelationId:608a306b-ea99-4b7b-9b53-c1a83e18a562 Amount:19.9 RequestedAt:2025-08-01T11:02:41.278Z}
+backend-01  | 2025-08-01 11:02:41 | [92m204[0m |      57.018µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:41.296345 main.go:392: [Info] Enqueueing payment: {CorrelationId:4af92c56-8a9d-4715-acd8-8893154f5cc5 Amount:19.9 RequestedAt:2025-08-01T11:02:41.296Z}
+backend-02  | 2025-08-01 11:02:41 | [92m204[0m |      64.467µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025-08-01 11:02:41 | [92m204[0m |      87.647µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:41.314497 main.go:392: [Info] Enqueueing payment: {CorrelationId:16658c46-8097-4c46-a20f-30321ce4526c Amount:19.9 RequestedAt:2025-08-01T11:02:41.314Z}
+backend-01  | 2025/08/01 11:02:41.388215 main.go:392: [Info] Enqueueing payment: {CorrelationId:006d67c5-d5d7-4f96-bc8d-29805d65ba0b Amount:19.9 RequestedAt:2025-08-01T11:02:41.388Z}
+backend-01  | 2025-08-01 11:02:41 | [92m204[0m |      58.324µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:41.419721 main.go:392: [Info] Enqueueing payment: {CorrelationId:016cecca-b0d0-4b9f-a7a8-1486e5546ffc Amount:19.9 RequestedAt:2025-08-01T11:02:41.419Z}
+backend-02  | 2025-08-01 11:02:41 | [92m204[0m |      76.774µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025-08-01 11:02:41 | [92m204[0m |      63.315µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:41.423678 main.go:392: [Info] Enqueueing payment: {CorrelationId:bd9b0e12-030a-4a94-985e-b66bf6e416ad Amount:19.9 RequestedAt:2025-08-01T11:02:41.423Z}
+backend-02  | 2025/08/01 11:02:41.443986 main.go:392: [Info] Enqueueing payment: {CorrelationId:ec1c0b24-932a-4628-a8b1-0a3a1ba03e3b Amount:19.9 RequestedAt:2025-08-01T11:02:41.443Z}
+backend-02  | 2025-08-01 11:02:41 | [92m204[0m |      77.107µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:41.496479 main.go:392: [Info] Enqueueing payment: {CorrelationId:e0ede2ec-6fba-4259-aa8a-72351b20fd90 Amount:19.9 RequestedAt:2025-08-01T11:02:41.496Z}
+backend-01  | 2025-08-01 11:02:41 | [92m204[0m |      60.659µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025-08-01 11:02:41 | [92m204[0m |       52.32µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:41.515763 main.go:392: [Info] Enqueueing payment: {CorrelationId:4a1c65eb-76cf-4eaa-aeef-78c90c038aa7 Amount:19.9 RequestedAt:2025-08-01T11:02:41.515Z}
+backend-01  | 2025-08-01 11:02:41 | [92m204[0m |      57.291µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:41.532857 main.go:392: [Info] Enqueueing payment: {CorrelationId:11666a69-94bb-4e97-835c-4e965db5bedb Amount:19.9 RequestedAt:2025-08-01T11:02:41.532Z}
+backend-02  | 2025/08/01 11:02:41.551094 main.go:392: [Info] Enqueueing payment: {CorrelationId:ba142ee2-e151-44ed-92a2-bfecf406b1e6 Amount:19.9 RequestedAt:2025-08-01T11:02:41.551Z}
+backend-02  | 2025-08-01 11:02:41 | [92m204[0m |      48.317µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:41.607004 main.go:392: [Info] Enqueueing payment: {CorrelationId:ad6585b1-a9ec-42be-ae26-d28bade3fe40 Amount:19.9 RequestedAt:2025-08-01T11:02:41.606Z}
+backend-01  | 2025-08-01 11:02:41 | [92m204[0m |      60.713µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:41.624293 main.go:392: [Info] Enqueueing payment: {CorrelationId:c5f41da4-d968-42b9-ad40-43ba57471620 Amount:19.9 RequestedAt:2025-08-01T11:02:41.624Z}
+backend-02  | 2025-08-01 11:02:41 | [92m204[0m |      54.621µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:41.642220 main.go:392: [Info] Enqueueing payment: {CorrelationId:28e07ae5-a405-4f1b-b1d2-984b316dd596 Amount:19.9 RequestedAt:2025-08-01T11:02:41.642Z}
+backend-01  | 2025-08-01 11:02:41 | [92m204[0m |      54.365µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025-08-01 11:02:41 | [92m204[0m |       75.39µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:41.660520 main.go:392: [Info] Enqueueing payment: {CorrelationId:311aa58b-126c-4a95-8381-1df8473572d1 Amount:19.9 RequestedAt:2025-08-01T11:02:41.660Z}
+backend-01  | 2025/08/01 11:02:41.716253 main.go:392: [Info] Enqueueing payment: {CorrelationId:381534d3-867f-42f9-ac2b-0d3c8ee4f887 Amount:19.9 RequestedAt:2025-08-01T11:02:41.716Z}
+backend-01  | 2025-08-01 11:02:41 | [92m204[0m |      52.869µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:41.734229 main.go:392: [Info] Enqueueing payment: {CorrelationId:44c726f9-4fd8-47c3-8ed8-42b0b5745ed2 Amount:19.9 RequestedAt:2025-08-01T11:02:41.734Z}
+backend-02  | 2025-08-01 11:02:41 | [92m204[0m |      53.114µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:41.751541 main.go:392: [Info] Enqueueing payment: {CorrelationId:3335fda8-49bb-48a4-a153-faa3d89d2f2e Amount:19.9 RequestedAt:2025-08-01T11:02:41.751Z}
+backend-01  | 2025-08-01 11:02:41 | [92m204[0m |      74.385µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:41.769586 main.go:392: [Info] Enqueueing payment: {CorrelationId:4fa50c60-509e-4991-a883-ddf937deccad Amount:19.9 RequestedAt:2025-08-01T11:02:41.769Z}
+backend-02  | 2025-08-01 11:02:41 | [92m204[0m |      57.349µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:41.825220 main.go:392: [Info] Enqueueing payment: {CorrelationId:ad60f40c-d9ce-4881-a8b5-1d18d2f0180d Amount:19.9 RequestedAt:2025-08-01T11:02:41.825Z}
+backend-01  | 2025-08-01 11:02:41 | [92m204[0m |      54.092µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:41.843378 main.go:392: [Info] Enqueueing payment: {CorrelationId:93176c62-bf25-4baf-b580-9c770ffcb6c6 Amount:19.9 RequestedAt:2025-08-01T11:02:41.843Z}
+backend-02  | 2025-08-01 11:02:41 | [92m204[0m |      73.028µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:41.861860 main.go:392: [Info] Enqueueing payment: {CorrelationId:e018dba4-647d-445f-a92c-58959e133f70 Amount:19.9 RequestedAt:2025-08-01T11:02:41.861Z}
+backend-01  | 2025-08-01 11:02:41 | [92m204[0m |      57.846µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:41.878960 main.go:392: [Info] Enqueueing payment: {CorrelationId:80f23793-c480-4203-ba83-c37518319b89 Amount:19.9 RequestedAt:2025-08-01T11:02:41.878Z}
+backend-02  | 2025-08-01 11:02:41 | [92m204[0m |      62.562µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025-08-01 11:02:41 | [92m204[0m |      68.988µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:41.934494 main.go:392: [Info] Enqueueing payment: {CorrelationId:209adc7b-c9ea-4709-891f-5ae1ce403fd8 Amount:19.9 RequestedAt:2025-08-01T11:02:41.934Z}
+backend-02  | 2025/08/01 11:02:41.951802 main.go:392: [Info] Enqueueing payment: {CorrelationId:d6414436-07d6-4bc3-ba0f-90a053dab7c1 Amount:19.9 RequestedAt:2025-08-01T11:02:41.951Z}
+backend-02  | 2025-08-01 11:02:41 | [92m204[0m |      61.569µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:41.970900 main.go:392: [Info] Enqueueing payment: {CorrelationId:90f49d9c-47c8-4713-9d55-14d2b637bae8 Amount:19.9 RequestedAt:2025-08-01T11:02:41.970Z}
+backend-01  | 2025-08-01 11:02:41 | [92m204[0m |      72.618µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025-08-01 11:02:41 | [92m204[0m |      70.266µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:41.989039 main.go:392: [Info] Enqueueing payment: {CorrelationId:e989549b-3cf3-42db-b374-653a5340df63 Amount:19.9 RequestedAt:2025-08-01T11:02:41.989Z}
+backend-02  | 2025/08/01 11:02:42.044008 main.go:392: [Info] Enqueueing payment: {CorrelationId:4161317f-d9b9-44c6-93a9-59e471431959 Amount:19.9 RequestedAt:2025-08-01T11:02:42.043Z}
+backend-02  | 2025-08-01 11:02:41 | [92m204[0m |     113.901µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:42.061281 main.go:392: [Info] Enqueueing payment: {CorrelationId:bf977271-1560-44ce-9ca0-1712a688a5a7 Amount:19.9 RequestedAt:2025-08-01T11:02:42.061Z}
+backend-01  | 2025-08-01 11:02:41 | [92m204[0m |      56.038µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025-08-01 11:02:41 | [92m204[0m |      67.257µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:42.079514 main.go:392: [Info] Enqueueing payment: {CorrelationId:f393e7b0-b045-4c8e-87bb-f1005844daf6 Amount:19.9 RequestedAt:2025-08-01T11:02:42.079Z}
+backend-02  | 2025/08/01 11:02:42.096678 main.go:392: [Info] Enqueueing payment: {CorrelationId:cb0cf4c6-3e57-487b-803a-89d9708e3262 Amount:19.9 RequestedAt:2025-08-01T11:02:42.096Z}
+backend-02  | 2025-08-01 11:02:42 | [92m204[0m |      55.455µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025-08-01 11:02:42 | [92m204[0m |      78.814µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:42.155328 main.go:392: [Info] Enqueueing payment: {CorrelationId:a29b40c3-7f13-428c-abb6-504839ffc009 Amount:19.9 RequestedAt:2025-08-01T11:02:42.155Z}
+backend-02  | 2025-08-01 11:02:42 | [92m204[0m |      89.881µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:42.171502 main.go:392: [Info] Enqueueing payment: {CorrelationId:971744b3-aa5d-4932-a7ea-3f8927e85f1a Amount:19.9 RequestedAt:2025-08-01T11:02:42.171Z}
+backend-01  | 2025-08-01 11:02:42 | [92m204[0m |       66.78µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:42.188667 main.go:392: [Info] Enqueueing payment: {CorrelationId:80958776-e7cc-4613-9eeb-d43f207e3588 Amount:19.9 RequestedAt:2025-08-01T11:02:42.188Z}
+backend-02  | 2025/08/01 11:02:42.207157 main.go:392: [Info] Enqueueing payment: {CorrelationId:f63fd041-951b-4c28-a3d9-eb7449d4b441 Amount:19.9 RequestedAt:2025-08-01T11:02:42.207Z}
+backend-02  | 2025-08-01 11:02:42 | [92m204[0m |      59.962µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025-08-01 11:02:42 | [92m204[0m |      58.543µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:42.262169 main.go:392: [Info] Enqueueing payment: {CorrelationId:4d7db2b5-428e-4f59-b779-760ed279df9c Amount:19.9 RequestedAt:2025-08-01T11:02:42.262Z}
+backend-01  | 2025-08-01 11:02:42 | [92m204[0m |      58.701µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:42.280243 main.go:392: [Info] Enqueueing payment: {CorrelationId:82c71a79-77d7-4de6-8114-fcb59680acac Amount:19.9 RequestedAt:2025-08-01T11:02:42.280Z}
+backend-02  | 2025/08/01 11:02:42.297735 main.go:392: [Info] Enqueueing payment: {CorrelationId:592ee128-751c-481d-b32d-076dc7ea8547 Amount:19.9 RequestedAt:2025-08-01T11:02:42.297Z}
+backend-02  | 2025-08-01 11:02:42 | [92m204[0m |      69.372µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:42.315767 main.go:392: [Info] Enqueueing payment: {CorrelationId:99b76b83-c004-4319-bf6f-9129feabe30a Amount:19.9 RequestedAt:2025-08-01T11:02:42.315Z}
+backend-01  | 2025-08-01 11:02:42 | [92m204[0m |       67.08µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:42.371446 main.go:392: [Info] Enqueueing payment: {CorrelationId:1e70f4c3-d1a6-4bc5-afa0-97af2d8403b9 Amount:19.9 RequestedAt:2025-08-01T11:02:42.371Z}
+backend-01  | 2025-08-01 11:02:42 | [92m204[0m |      54.208µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:42.389455 main.go:392: [Info] Enqueueing payment: {CorrelationId:aa51be39-4c52-492f-afea-af4bac3851f0 Amount:19.9 RequestedAt:2025-08-01T11:02:42.389Z}
+backend-01  | 2025-08-01 11:02:42 | [92m204[0m |      52.305µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:42.421125 main.go:392: [Info] Enqueueing payment: {CorrelationId:585202dd-391b-4ade-a23e-744fcfa6db78 Amount:19.9 RequestedAt:2025-08-01T11:02:42.421Z}
+backend-02  | 2025-08-01 11:02:42 | [92m204[0m |       55.42µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025-08-01 11:02:42 | [92m204[0m |       44.41µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:42.425080 main.go:392: [Info] Enqueueing payment: {CorrelationId:6205a4e7-c3c0-45c2-a20f-a67ccd53dd3f Amount:19.9 RequestedAt:2025-08-01T11:02:42.425Z}
+backend-01  | 2025/08/01 11:02:42.445085 main.go:392: [Info] Enqueueing payment: {CorrelationId:08791c0c-776f-41c1-bb09-32cf4701013e Amount:19.9 RequestedAt:2025-08-01T11:02:42.445Z}
+backend-01  | 2025-08-01 11:02:42 | [92m204[0m |      55.687µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025-08-01 11:02:42 | [92m204[0m |      63.058µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:42.480994 main.go:392: [Info] Enqueueing payment: {CorrelationId:4c0faf41-20f2-4119-95b5-8f55f4c5c3fd Amount:19.9 RequestedAt:2025-08-01T11:02:42.480Z}
+backend-01  | 2025/08/01 11:02:42.498224 main.go:392: [Info] Enqueueing payment: {CorrelationId:4d0026bc-0139-466f-beab-f3b3174b2a0d Amount:19.9 RequestedAt:2025-08-01T11:02:42.498Z}
+backend-01  | 2025-08-01 11:02:42 | [92m204[0m |       85.14µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:42.517482 main.go:392: [Info] Enqueueing payment: {CorrelationId:3cdc7343-90ea-4df2-ba96-451edfcc957b Amount:19.9 RequestedAt:2025-08-01T11:02:42.517Z}
+backend-02  | 2025-08-01 11:02:42 | [92m204[0m |      68.128µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:42.534625 main.go:392: [Info] Enqueueing payment: {CorrelationId:ef2100c2-2815-4b80-af33-557e05ebf017 Amount:19.9 RequestedAt:2025-08-01T11:02:42.534Z}
+backend-01  | 2025-08-01 11:02:42 | [92m204[0m |      71.025µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025-08-01 11:02:42 | [92m204[0m |      62.489µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:42.552933 main.go:392: [Info] Enqueueing payment: {CorrelationId:8a90acef-fb83-4460-a875-d913217bb742 Amount:19.9 RequestedAt:2025-08-01T11:02:42.552Z}
+backend-01  | 2025/08/01 11:02:42.590447 main.go:392: [Info] Enqueueing payment: {CorrelationId:bc0f387c-9633-4e89-98d4-91fabaf9f982 Amount:19.9 RequestedAt:2025-08-01T11:02:42.590Z}
+backend-01  | 2025-08-01 11:02:42 | [92m204[0m |      52.586µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025-08-01 11:02:42 | [92m204[0m |      56.911µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:42.608806 main.go:392: [Info] Enqueueing payment: {CorrelationId:87bcba9a-6b54-40e0-978e-481c1ac35e81 Amount:19.9 RequestedAt:2025-08-01T11:02:42.608Z}
+backend-02  | 2025/08/01 11:02:42.625843 main.go:392: [Info] Enqueueing payment: {CorrelationId:4f47619b-90c8-4e17-b27d-f20e384d8b4e Amount:19.9 RequestedAt:2025-08-01T11:02:42.625Z}
+backend-02  | 2025-08-01 11:02:42 | [92m204[0m |      53.251µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:42.643731 main.go:392: [Info] Enqueueing payment: {CorrelationId:15082647-5af7-461a-ade6-2f3f143cf5eb Amount:19.9 RequestedAt:2025-08-01T11:02:42.643Z}
+backend-01  | 2025-08-01 11:02:42 | [92m204[0m |      54.107µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:42.662129 main.go:392: [Info] Enqueueing payment: {CorrelationId:5f1acaa5-326b-447e-a1c5-9a4be1920bbd Amount:19.9 RequestedAt:2025-08-01T11:02:42.662Z}
+backend-02  | 2025-08-01 11:02:42 | [92m204[0m |       54.71µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025-08-01 11:02:42 | [92m204[0m |      55.077µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:42.718014 main.go:392: [Info] Enqueueing payment: {CorrelationId:82fde401-4a18-48a4-ae60-f265ca701061 Amount:19.9 RequestedAt:2025-08-01T11:02:42.718Z}
+backend-02  | 2025-08-01 11:02:42 | [92m204[0m |      70.899µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:42.722417 main.go:392: [Info] Enqueueing payment: {CorrelationId:278d247b-3b37-40d0-9d72-c5ffb7676c0b Amount:19.9 RequestedAt:2025-08-01T11:02:42.722Z}
+backend-02  | 2025-08-01 11:02:42 | [92m204[0m |      77.052µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:42.735683 main.go:392: [Info] Enqueueing payment: {CorrelationId:03fa8772-e3c0-42b0-b923-64ff857beab2 Amount:19.9 RequestedAt:2025-08-01T11:02:42.735Z}
+backend-01  | 2025/08/01 11:02:42.753484 main.go:392: [Info] Enqueueing payment: {CorrelationId:ca34ef56-d204-4a44-b891-8dfa7cd6a34e Amount:19.9 RequestedAt:2025-08-01T11:02:42.753Z}
+backend-01  | 2025-08-01 11:02:42 | [92m204[0m |      63.805µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025-08-01 11:02:42 | [92m204[0m |      59.108µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:42.770643 main.go:392: [Info] Enqueueing payment: {CorrelationId:9ca10356-d01c-4c5b-8854-4b4d589e4aec Amount:19.9 RequestedAt:2025-08-01T11:02:42.770Z}
+backend-01  | 2025-08-01 11:02:42 | [92m200[0m |     179.499µs | [96mGET[0m /health | 127.0.0.1
+backend-02  | 2025-08-01 11:02:42 | [92m200[0m |     1.97224ms | [96mGET[0m /health | 127.0.0.1
+backend-01  | 2025-08-01 11:02:42 | [92m204[0m |      64.098µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:42.808517 main.go:392: [Info] Enqueueing payment: {CorrelationId:f54ab1df-5ff4-49ee-98db-f563a13beae8 Amount:19.9 RequestedAt:2025-08-01T11:02:42.808Z}
+backend-01  | 2025-08-01 11:02:42 | [92m204[0m |      54.656µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:42.826702 main.go:392: [Info] Enqueueing payment: {CorrelationId:2b24fa8b-4da8-4fa5-b880-ff85e0bf7efe Amount:19.9 RequestedAt:2025-08-01T11:02:42.826Z}
+backend-02  | 2025/08/01 11:02:42.844864 main.go:392: [Info] Enqueueing payment: {CorrelationId:c58b9b66-2cbf-4689-a8be-68dd3fa368ea Amount:19.9 RequestedAt:2025-08-01T11:02:42.844Z}
+backend-02  | 2025-08-01 11:02:42 | [92m204[0m |      56.454µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:42.863136 main.go:392: [Info] Enqueueing payment: {CorrelationId:d245a313-24de-4eb2-a4cd-e125c4066991 Amount:19.9 RequestedAt:2025-08-01T11:02:42.863Z}
+backend-01  | 2025-08-01 11:02:42 | [92m204[0m |      56.893µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:42.881203 main.go:392: [Info] Enqueueing payment: {CorrelationId:dfa80960-2324-4baf-98ce-e6bb7bdc7229 Amount:19.9 RequestedAt:2025-08-01T11:02:42.881Z}
+backend-02  | 2025-08-01 11:02:42 | [92m204[0m |      69.734µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:42.917835 main.go:392: [Info] Enqueueing payment: {CorrelationId:ecbfe298-a1fa-462c-8ff1-7c2cef922a5e Amount:19.9 RequestedAt:2025-08-01T11:02:42.917Z}
+backend-02  | 2025-08-01 11:02:42 | [92m204[0m |      56.355µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:42.935929 main.go:392: [Info] Enqueueing payment: {CorrelationId:757c752e-c1da-4eb4-ba77-4b3f68fcc413 Amount:19.9 RequestedAt:2025-08-01T11:02:42.935Z}
+backend-01  | 2025-08-01 11:02:42 | [92m204[0m |      56.154µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025-08-01 11:02:42 | [92m204[0m |      52.691µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:42.953186 main.go:392: [Info] Enqueueing payment: {CorrelationId:b59f3693-4550-492f-934b-a535b7478b58 Amount:19.9 RequestedAt:2025-08-01T11:02:42.953Z}
+backend-01  | 2025/08/01 11:02:42.972126 main.go:392: [Info] Enqueueing payment: {CorrelationId:a9ab72aa-ebd0-4c7e-8c89-a0ebba14d322 Amount:19.9 RequestedAt:2025-08-01T11:02:42.972Z}
+backend-01  | 2025-08-01 11:02:42 | [92m204[0m |      65.036µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025-08-01 11:02:42 | [92m204[0m |      56.111µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:42.990317 main.go:392: [Info] Enqueueing payment: {CorrelationId:1e532914-83f7-4363-b530-9444afe3aae1 Amount:19.9 RequestedAt:2025-08-01T11:02:42.990Z}
+backend-01  | 2025/08/01 11:02:43.026933 main.go:392: [Info] Enqueueing payment: {CorrelationId:7e4ed55a-5276-43bd-a422-adcbc374c0e0 Amount:19.9 RequestedAt:2025-08-01T11:02:43.026Z}
+backend-01  | 2025-08-01 11:02:42 | [92m204[0m |      56.461µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:43.046057 main.go:392: [Info] Enqueueing payment: {CorrelationId:17c80824-fc35-4831-bdbf-fe788a91535e Amount:19.9 RequestedAt:2025-08-01T11:02:43.046Z}
+backend-02  | 2025-08-01 11:02:42 | [92m204[0m |      83.465µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025-08-01 11:02:42 | [92m204[0m |      69.664µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:43.063361 main.go:392: [Info] Enqueueing payment: {CorrelationId:f79bd52e-11ac-47de-8504-2e015f293a42 Amount:19.9 RequestedAt:2025-08-01T11:02:43.063Z}
+backend-01  | 2025/08/01 11:02:43.081436 main.go:392: [Info] Enqueueing payment: {CorrelationId:b4458541-6eee-49ca-9170-90dd3e510069 Amount:19.9 RequestedAt:2025-08-01T11:02:43.081Z}
+backend-01  | 2025-08-01 11:02:42 | [92m204[0m |       52.85µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:43.098548 main.go:392: [Info] Enqueueing payment: {CorrelationId:a1d4d474-ac0a-45a9-b15e-cf76400a510c Amount:19.9 RequestedAt:2025-08-01T11:02:43.098Z}
+backend-02  | 2025-08-01 11:02:43 | [92m204[0m |      55.108µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:43.136029 main.go:392: [Info] Enqueueing payment: {CorrelationId:2dbf78f4-c7c7-4c19-bb1e-3272bda5baea Amount:19.9 RequestedAt:2025-08-01T11:02:43.136Z}
+backend-01  | 2025-08-01 11:02:43 | [92m204[0m |      54.191µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025-08-01 11:02:43 | [92m204[0m |      62.254µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:43.157290 main.go:392: [Info] Enqueueing payment: {CorrelationId:b1c7e37f-e226-4e86-a7c4-47783e588394 Amount:19.9 RequestedAt:2025-08-01T11:02:43.157Z}
+backend-02  | 2025/08/01 11:02:43.173306 main.go:392: [Info] Enqueueing payment: {CorrelationId:d0863606-6fd0-490c-a183-571ebc0e3db1 Amount:19.9 RequestedAt:2025-08-01T11:02:43.173Z}
+backend-02  | 2025-08-01 11:02:43 | [92m204[0m |      55.047µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:43.190488 main.go:392: [Info] Enqueueing payment: {CorrelationId:dd3c628e-6087-4999-b519-314a4f3722c6 Amount:19.9 RequestedAt:2025-08-01T11:02:43.190Z}
+backend-01  | 2025-08-01 11:02:43 | [92m204[0m |      74.763µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025-08-01 11:02:43 | [92m204[0m |      80.578µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:43.208801 main.go:392: [Info] Enqueueing payment: {CorrelationId:14839a40-a9f4-4d88-887a-d99c2a7b32d9 Amount:19.9 RequestedAt:2025-08-01T11:02:43.208Z}
+backend-01  | 2025/08/01 11:02:43.246409 main.go:392: [Info] Enqueueing payment: {CorrelationId:733c766f-ef03-4d81-8a7f-f1856a9869bd Amount:19.9 RequestedAt:2025-08-01T11:02:43.246Z}
+backend-01  | 2025-08-01 11:02:43 | [92m204[0m |      54.797µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:43.263837 main.go:392: [Info] Enqueueing payment: {CorrelationId:3aadeaa0-4653-45a4-a380-7ab81d0292ff Amount:19.9 RequestedAt:2025-08-01T11:02:43.263Z}
+backend-02  | 2025-08-01 11:02:43 | [92m204[0m |      53.352µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025-08-01 11:02:43 | [92m204[0m |      55.329µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:43.281916 main.go:392: [Info] Enqueueing payment: {CorrelationId:8e1775c3-9a09-4048-9d96-6398bd1d92d6 Amount:19.9 RequestedAt:2025-08-01T11:02:43.281Z}
+backend-02  | 2025/08/01 11:02:43.299259 main.go:392: [Info] Enqueueing payment: {CorrelationId:f683a526-3138-47e7-9809-87d617ced900 Amount:19.9 RequestedAt:2025-08-01T11:02:43.299Z}
+backend-02  | 2025-08-01 11:02:43 | [92m204[0m |      56.534µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:43.317227 main.go:392: [Info] Enqueueing payment: {CorrelationId:c0d23a9f-ba6b-4949-9f2b-096b2a2edb68 Amount:19.9 RequestedAt:2025-08-01T11:02:43.317Z}
+backend-01  | 2025-08-01 11:02:43 | [92m204[0m |      54.441µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:43.355081 main.go:392: [Info] Enqueueing payment: {CorrelationId:a3ff151a-05dc-4020-b084-52e430317f21 Amount:19.9 RequestedAt:2025-08-01T11:02:43.355Z}
+backend-01  | 2025-08-01 11:02:43 | [92m204[0m |      55.831µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:43.373393 main.go:392: [Info] Enqueueing payment: {CorrelationId:1fa531e2-1b8e-4ed4-b795-6d8b83ac0756 Amount:19.9 RequestedAt:2025-08-01T11:02:43.373Z}
+backend-02  | 2025-08-01 11:02:43 | [92m204[0m |      79.124µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:43.391452 main.go:392: [Info] Enqueueing payment: {CorrelationId:d2ab125d-1e9c-451d-b5ed-90a1ca35eba5 Amount:19.9 RequestedAt:2025-08-01T11:02:43.391Z}
+backend-01  | 2025-08-01 11:02:43 | [92m204[0m |      56.876µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:43.422838 main.go:392: [Info] Enqueueing payment: {CorrelationId:8a4027d8-194e-462f-b3d3-2bfe9ffb3b79 Amount:19.9 RequestedAt:2025-08-01T11:02:43.422Z}
+backend-02  | 2025-08-01 11:02:43 | [92m204[0m |      63.185µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025-08-01 11:02:43 | [92m204[0m |      50.859µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:43.426966 main.go:392: [Info] Enqueueing payment: {CorrelationId:3bd47284-2c77-424c-9d13-45200dc7f330 Amount:19.9 RequestedAt:2025-08-01T11:02:43.426Z}
+backend-02  | 2025-08-01 11:02:43 | [92m204[0m |      54.349µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:43.446150 main.go:392: [Info] Enqueueing payment: {CorrelationId:15da19e0-2d48-44fa-a90c-6f9f58bf1d9b Amount:19.9 RequestedAt:2025-08-01T11:02:43.446Z}
+backend-01  | 2025-08-01 11:02:43 | [92m204[0m |      68.037µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:43.464763 main.go:392: [Info] Enqueueing payment: {CorrelationId:4140aa5f-0d13-43d9-959c-0ad28f0f3cf4 Amount:19.9 RequestedAt:2025-08-01T11:02:43.464Z}
+backend-02  | 2025/08/01 11:02:43.482959 main.go:392: [Info] Enqueueing payment: {CorrelationId:5f8f0746-a0d8-488d-a246-d1c55418dd2e Amount:19.9 RequestedAt:2025-08-01T11:02:43.482Z}
+backend-02  | 2025-08-01 11:02:43 | [92m204[0m |      70.451µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025-08-01 11:02:43 | [92m204[0m |       54.78µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:43.499296 main.go:392: [Info] Enqueueing payment: {CorrelationId:a5c789bf-cb4c-4f3d-9004-3e1b7c0cded2 Amount:19.9 RequestedAt:2025-08-01T11:02:43.499Z}
+backend-02  | 2025-08-01 11:02:43 | [92m204[0m |       57.06µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:43.519440 main.go:392: [Info] Enqueueing payment: {CorrelationId:66c1051d-c775-4944-8d03-64dde4b02060 Amount:19.9 RequestedAt:2025-08-01T11:02:43.519Z}
+backend-01  | 2025-08-01 11:02:43 | [92m204[0m |      72.773µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:43.536851 main.go:392: [Info] Enqueueing payment: {CorrelationId:a4f0a6ab-57a1-4bd1-a7d9-0f1837ef82cf Amount:19.9 RequestedAt:2025-08-01T11:02:43.536Z}
+backend-02  | 2025-08-01 11:02:43 | [92m204[0m |      51.333µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:43.555154 main.go:392: [Info] Enqueueing payment: {CorrelationId:6411b9e6-18a6-450d-9e53-664a0ac6c640 Amount:19.9 RequestedAt:2025-08-01T11:02:43.555Z}
+backend-01  | 2025/08/01 11:02:43.592382 main.go:392: [Info] Enqueueing payment: {CorrelationId:ee802264-4b60-4cbd-a4fc-da94af1725ec Amount:19.9 RequestedAt:2025-08-01T11:02:43.592Z}
+backend-01  | 2025-08-01 11:02:43 | [92m204[0m |      56.624µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025-08-01 11:02:43 | [92m204[0m |      49.344µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:43.598610 main.go:392: [Info] Enqueueing payment: {CorrelationId:73a52ca1-4843-4673-a95b-6a48f7d90f8e Amount:19.9 RequestedAt:2025-08-01T11:02:43.598Z}
+backend-01  | 2025/08/01 11:02:43.610657 main.go:392: [Info] Enqueueing payment: {CorrelationId:bf9d3c4c-10e2-4943-88a8-7bc43cdc61bf Amount:19.9 RequestedAt:2025-08-01T11:02:43.610Z}
+backend-01  | 2025-08-01 11:02:43 | [92m204[0m |      77.097µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025-08-01 11:02:43 | [92m204[0m |      54.708µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:43.627764 main.go:392: [Info] Enqueueing payment: {CorrelationId:bf4c9041-5dc8-43ce-8e32-21792d774931 Amount:19.9 RequestedAt:2025-08-01T11:02:43.627Z}
+backend-01  | 2025-08-01 11:02:43 | [92m204[0m |      52.171µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:43.644891 main.go:392: [Info] Enqueueing payment: {CorrelationId:cdf01b9e-148b-4980-8e7d-34e6a029aff5 Amount:19.9 RequestedAt:2025-08-01T11:02:43.644Z}
+backend-02  | 2025-08-01 11:02:43 | [92m204[0m |      72.332µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:43.663290 main.go:392: [Info] Enqueueing payment: {CorrelationId:98dc3a39-0a99-4967-a206-168b3ab8e9eb Amount:19.9 RequestedAt:2025-08-01T11:02:43.663Z}
+backend-01  | 2025/08/01 11:02:43.682845 main.go:392: [Info] Enqueueing payment: {CorrelationId:83bfd543-89e8-47cf-bf4a-c5f476df5e7c Amount:19.9 RequestedAt:2025-08-01T11:02:43.682Z}
+backend-01  | 2025-08-01 11:02:43 | [92m204[0m |      73.632µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025-08-01 11:02:43 | [92m204[0m |      52.094µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:43.719398 main.go:392: [Info] Enqueueing payment: {CorrelationId:2ed65dab-715a-490f-9fef-57948441f88d Amount:19.9 RequestedAt:2025-08-01T11:02:43.719Z}
+backend-02  | 2025-08-01 11:02:43 | [92m204[0m |      49.178µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:43.724457 main.go:392: [Info] Enqueueing payment: {CorrelationId:5dda827b-e95a-4b3a-aec5-64f0859b8f0d Amount:19.9 RequestedAt:2025-08-01T11:02:43.724Z}
+backend-02  | 2025/08/01 11:02:43.737486 main.go:392: [Info] Enqueueing payment: {CorrelationId:07edab52-5b77-41b6-9f29-5d1a5d5a6f87 Amount:19.9 RequestedAt:2025-08-01T11:02:43.737Z}
+backend-02  | 2025-08-01 11:02:43 | [92m204[0m |      80.532µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025-08-01 11:02:43 | [92m204[0m |       67.04µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:43.754865 main.go:392: [Info] Enqueueing payment: {CorrelationId:f5c933f6-a963-4314-8c60-656c8053764a Amount:19.9 RequestedAt:2025-08-01T11:02:43.754Z}
+backend-02  | 2025/08/01 11:02:43.772025 main.go:392: [Info] Enqueueing payment: {CorrelationId:7fc19808-8ba0-49f6-892b-44297ca48823 Amount:19.9 RequestedAt:2025-08-01T11:02:43.772Z}
+backend-02  | 2025-08-01 11:02:43 | [92m204[0m |       55.33µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:43.792656 main.go:392: [Info] Enqueueing payment: {CorrelationId:442ab538-d35b-4c1f-967f-24e98f0fd496 Amount:19.9 RequestedAt:2025-08-01T11:02:43.792Z}
+backend-01  | 2025-08-01 11:02:43 | [92m204[0m |      57.835µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:43.810038 main.go:392: [Info] Enqueueing payment: {CorrelationId:120b3867-7f44-4ae6-9172-e0a824dc0e4f Amount:19.9 RequestedAt:2025-08-01T11:02:43.810Z}
+backend-01  | 2025-08-01 11:02:43 | [92m204[0m |      76.529µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:43.828352 main.go:392: [Info] Enqueueing payment: {CorrelationId:deb51b6b-df75-42c1-b9d1-5f86271d3bbe Amount:19.9 RequestedAt:2025-08-01T11:02:43.828Z}
+backend-01  | 2025-08-01 11:02:43 | [92m204[0m |      50.331µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:43.846671 main.go:392: [Info] Enqueueing payment: {CorrelationId:52f95651-7061-4075-acb8-79c4e5838475 Amount:19.9 RequestedAt:2025-08-01T11:02:43.846Z}
+backend-02  | 2025-08-01 11:02:43 | [92m204[0m |      66.532µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025-08-01 11:02:43 | [92m204[0m |      69.552µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:43.865067 main.go:392: [Info] Enqueueing payment: {CorrelationId:e5bd0803-3dd4-4044-b1de-2d20be14ab17 Amount:19.9 RequestedAt:2025-08-01T11:02:43.865Z}
+backend-02  | 2025/08/01 11:02:43.883356 main.go:392: [Info] Enqueueing payment: {CorrelationId:4c2c7f62-1714-4768-8b2a-bb0ad89a92be Amount:19.9 RequestedAt:2025-08-01T11:02:43.883Z}
+backend-02  | 2025-08-01 11:02:43 | [92m204[0m |      52.575µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:43.901979 main.go:392: [Info] Enqueueing payment: {CorrelationId:cddfb11d-956d-4eb5-bc77-1afa2391f987 Amount:19.9 RequestedAt:2025-08-01T11:02:43.901Z}
+backend-02  | 2025-08-01 11:02:43 | [92m204[0m |      64.988µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025-08-01 11:02:43 | [92m204[0m |      59.378µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:43.918985 main.go:392: [Info] Enqueueing payment: {CorrelationId:74cb0b10-e929-46ee-b02d-774e5035ab07 Amount:19.9 RequestedAt:2025-08-01T11:02:43.918Z}
+backend-01  | 2025-08-01 11:02:43 | [92m204[0m |      50.253µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:43.937192 main.go:392: [Info] Enqueueing payment: {CorrelationId:c8c566e1-23b2-4835-8be0-0176494c5189 Amount:19.9 RequestedAt:2025-08-01T11:02:43.937Z}
+backend-02  | 2025/08/01 11:02:43.954688 main.go:392: [Info] Enqueueing payment: {CorrelationId:83032486-7f16-4f0f-a17c-6c8f2e2c2aa9 Amount:19.9 RequestedAt:2025-08-01T11:02:43.954Z}
+backend-02  | 2025-08-01 11:02:43 | [92m204[0m |      51.442µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:43.973916 main.go:392: [Info] Enqueueing payment: {CorrelationId:3c84974e-8e5b-4349-8f7f-ed23278fc7f3 Amount:19.9 RequestedAt:2025-08-01T11:02:43.973Z}
+backend-01  | 2025-08-01 11:02:43 | [92m204[0m |      60.422µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:43.992083 main.go:392: [Info] Enqueueing payment: {CorrelationId:a6ddfcae-afa2-4bc9-8fe7-22b5aaf2af98 Amount:19.9 RequestedAt:2025-08-01T11:02:43.992Z}
+backend-02  | 2025-08-01 11:02:43 | [92m204[0m |      50.532µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:44.011131 main.go:392: [Info] Enqueueing payment: {CorrelationId:b5adef67-9fa3-471f-a59a-5596511fed7b Amount:19.9 RequestedAt:2025-08-01T11:02:44.011Z}
+backend-01  | 2025-08-01 11:02:43 | [92m204[0m |      59.006µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:44.028214 main.go:392: [Info] Enqueueing payment: {CorrelationId:12a5c277-1c5c-4d61-8e66-65f332acaf0c Amount:19.9 RequestedAt:2025-08-01T11:02:44.028Z}
+backend-01  | 2025-08-01 11:02:43 | [92m204[0m |      57.423µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:44.047304 main.go:392: [Info] Enqueueing payment: {CorrelationId:2ab8e1d3-efec-4cfd-8fa4-d384750213fb Amount:19.9 RequestedAt:2025-08-01T11:02:44.047Z}
+backend-02  | 2025-08-01 11:02:43 | [92m204[0m |      56.804µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025-08-01 11:02:43 | [92m204[0m |      84.568µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:44.064489 main.go:392: [Info] Enqueueing payment: {CorrelationId:a32cd7ff-f4f8-41a7-9312-c7a65f59f641 Amount:19.9 RequestedAt:2025-08-01T11:02:44.064Z}
+backend-01  | 2025-08-01 11:02:43 | [92m204[0m |      51.493µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:44.082629 main.go:392: [Info] Enqueueing payment: {CorrelationId:b3085de4-bf61-430c-85b4-5c4777f8c514 Amount:19.9 RequestedAt:2025-08-01T11:02:44.082Z}
+backend-02  | 2025/08/01 11:02:44.099976 main.go:392: [Info] Enqueueing payment: {CorrelationId:53140e67-87bd-4e6c-8604-1632336d1ba1 Amount:19.9 RequestedAt:2025-08-01T11:02:44.099Z}
+backend-02  | 2025-08-01 11:02:44 | [92m204[0m |      70.193µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025-08-01 11:02:44 | [92m204[0m |      53.522µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:44.120366 main.go:392: [Info] Enqueueing payment: {CorrelationId:9d727e6e-8eb3-4fb6-8346-fa515da39b43 Amount:19.9 RequestedAt:2025-08-01T11:02:44.120Z}
+backend-01  | 2025-08-01 11:02:44 | [92m204[0m |      82.263µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:44.137495 main.go:392: [Info] Enqueueing payment: {CorrelationId:fe3482c3-f27f-4be5-a4a4-a48fa8493ee5 Amount:19.9 RequestedAt:2025-08-01T11:02:44.137Z}
+backend-02  | 2025/08/01 11:02:44.158949 main.go:392: [Info] Enqueueing payment: {CorrelationId:d8cd3fbb-5c0d-49a7-aadc-efe50e3d71d8 Amount:19.9 RequestedAt:2025-08-01T11:02:44.158Z}
+backend-02  | 2025-08-01 11:02:44 | [92m204[0m |      55.546µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025-08-01 11:02:44 | [92m204[0m |      65.457µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:44.175161 main.go:392: [Info] Enqueueing payment: {CorrelationId:c7f195f3-adf7-4ef2-a6e7-7151d33b3cd3 Amount:19.9 RequestedAt:2025-08-01T11:02:44.175Z}
+backend-01  | 2025-08-01 11:02:44 | [92m204[0m |      73.675µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:44.192501 main.go:392: [Info] Enqueueing payment: {CorrelationId:08754fc4-89ff-4d4e-aeec-ee92ab1cada6 Amount:19.9 RequestedAt:2025-08-01T11:02:44.192Z}
+backend-02  | 2025-08-01 11:02:44 | [92m204[0m |      70.397µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:44.209925 main.go:392: [Info] Enqueueing payment: {CorrelationId:ccc9378e-4ef8-4ac8-820c-092a2eb3a916 Amount:19.9 RequestedAt:2025-08-01T11:02:44.209Z}
+backend-01  | 2025-08-01 11:02:44 | [92m204[0m |      59.594µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:44.229418 main.go:392: [Info] Enqueueing payment: {CorrelationId:1ac95eb1-74ac-47cb-a2ea-10a10d1d0085 Amount:19.9 RequestedAt:2025-08-01T11:02:44.229Z}
+backend-01  | 2025/08/01 11:02:44.247567 main.go:392: [Info] Enqueueing payment: {CorrelationId:26a352d0-b363-46fd-bfc0-1243e7dc3af2 Amount:19.9 RequestedAt:2025-08-01T11:02:44.247Z}
+backend-01  | 2025-08-01 11:02:44 | [92m204[0m |      58.193µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:44.265860 main.go:392: [Info] Enqueueing payment: {CorrelationId:4d912f40-7528-49a5-b270-183647e67829 Amount:19.9 RequestedAt:2025-08-01T11:02:44.265Z}
+backend-02  | 2025-08-01 11:02:44 | [92m204[0m |      57.579µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:44.282923 main.go:392: [Info] Enqueueing payment: {CorrelationId:6adbbf51-026a-4571-8791-34625d8bc30d Amount:19.9 RequestedAt:2025-08-01T11:02:44.282Z}
+backend-01  | 2025-08-01 11:02:44 | [92m204[0m |      53.277µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025-08-01 11:02:44 | [92m204[0m |      59.843µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:44.301258 main.go:392: [Info] Enqueueing payment: {CorrelationId:7588152b-4ac3-41ef-a188-4ab3068e4bc7 Amount:19.9 RequestedAt:2025-08-01T11:02:44.301Z}
+backend-01  | 2025/08/01 11:02:44.319370 main.go:392: [Info] Enqueueing payment: {CorrelationId:b5be7c55-add2-4a1a-af30-e871cd37ed67 Amount:19.9 RequestedAt:2025-08-01T11:02:44.319Z}
+backend-01  | 2025-08-01 11:02:44 | [92m204[0m |      75.265µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025-08-01 11:02:44 | [92m204[0m |      78.219µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:44.339305 main.go:392: [Info] Enqueueing payment: {CorrelationId:dd1abdda-cd57-4d26-bd07-5fa611929ed2 Amount:19.9 RequestedAt:2025-08-01T11:02:44.339Z}
+backend-01  | 2025/08/01 11:02:44.356838 main.go:392: [Info] Enqueueing payment: {CorrelationId:b644acd3-6eb2-4973-ac4a-8bfb20c03a69 Amount:19.9 RequestedAt:2025-08-01T11:02:44.356Z}
+backend-01  | 2025-08-01 11:02:44 | [92m204[0m |      55.715µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:44.375071 main.go:392: [Info] Enqueueing payment: {CorrelationId:fd56f34a-7a21-4c51-9fa7-2c0b1088f26e Amount:19.9 RequestedAt:2025-08-01T11:02:44.375Z}
+backend-02  | 2025-08-01 11:02:44 | [92m204[0m |      55.663µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:44.393324 main.go:392: [Info] Enqueueing payment: {CorrelationId:083ba9ef-a8e6-4550-a92f-f49c5e7b3e31 Amount:19.9 RequestedAt:2025-08-01T11:02:44.393Z}
+backend-01  | 2025-08-01 11:02:44 | [92m204[0m |      54.665µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025-08-01 11:02:44 | [92m204[0m |      62.718µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:44.424898 main.go:392: [Info] Enqueueing payment: {CorrelationId:f24d2cd2-074b-4718-8cab-19d3481ee1a7 Amount:19.9 RequestedAt:2025-08-01T11:02:44.424Z}
+backend-02  | 2025/08/01 11:02:44.428907 main.go:392: [Info] Enqueueing payment: {CorrelationId:64358f47-151b-4991-be6b-88db9eb1a3dc Amount:19.9 RequestedAt:2025-08-01T11:02:44.428Z}
+backend-02  | 2025-08-01 11:02:44 | [92m204[0m |      81.372µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:44.448292 main.go:392: [Info] Enqueueing payment: {CorrelationId:357839a3-8fa2-4699-857d-3b9944567061 Amount:19.9 RequestedAt:2025-08-01T11:02:44.448Z}
+backend-01  | 2025-08-01 11:02:44 | [92m204[0m |      61.543µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:44.448641 main.go:392: [Info] Enqueueing payment: {CorrelationId:62f9594a-971d-4e54-a762-8ebf40199216 Amount:19.9 RequestedAt:2025-08-01T11:02:44.448Z}
+backend-02  | 2025-08-01 11:02:44 | [92m204[0m |      94.706µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025-08-01 11:02:44 | [92m204[0m |       62.54µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:44.466753 main.go:392: [Info] Enqueueing payment: {CorrelationId:5df85b02-62ca-4c07-a0ce-1d544a9c2cd7 Amount:19.9 RequestedAt:2025-08-01T11:02:44.466Z}
+backend-02  | 2025-08-01 11:02:44 | [92m204[0m |      57.877µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:44.485032 main.go:392: [Info] Enqueueing payment: {CorrelationId:646451b2-2b8d-436e-a322-258baf819fcf Amount:19.9 RequestedAt:2025-08-01T11:02:44.485Z}
+backend-01  | 2025/08/01 11:02:44.500186 main.go:392: [Info] Enqueueing payment: {CorrelationId:438fe4b0-ffa8-4ec3-aeca-8c7b8f95f5d7 Amount:19.9 RequestedAt:2025-08-01T11:02:44.500Z}
+backend-01  | 2025-08-01 11:02:44 | [92m204[0m |      53.045µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025-08-01 11:02:44 | [92m204[0m |      58.796µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:44.520371 main.go:392: [Info] Enqueueing payment: {CorrelationId:f9c17eeb-3bd7-4a4b-a2fb-5c6b8c533e42 Amount:19.9 RequestedAt:2025-08-01T11:02:44.520Z}
+backend-01  | 2025/08/01 11:02:44.538443 main.go:392: [Info] Enqueueing payment: {CorrelationId:8827f9c8-8aed-44f8-9364-db812f3dce0d Amount:19.9 RequestedAt:2025-08-01T11:02:44.538Z}
+backend-01  | 2025-08-01 11:02:44 | [92m204[0m |      51.847µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:44.557211 main.go:392: [Info] Enqueueing payment: {CorrelationId:481605e1-1039-49ef-ae86-0d7c2c8ed1d1 Amount:19.9 RequestedAt:2025-08-01T11:02:44.557Z}
+backend-02  | 2025-08-01 11:02:44 | [92m204[0m |      63.811µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:44.558130 main.go:392: [Info] Enqueueing payment: {CorrelationId:db351a22-0722-4c2d-a044-47d01bbf4ce5 Amount:19.9 RequestedAt:2025-08-01T11:02:44.558Z}
+backend-01  | 2025-08-01 11:02:44 | [92m204[0m |      51.516µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:44.594157 main.go:392: [Info] Enqueueing payment: {CorrelationId:bd2ad68a-7990-4f66-b671-0af8f2e183df Amount:19.9 RequestedAt:2025-08-01T11:02:44.594Z}
+backend-01  | 2025-08-01 11:02:44 | [92m204[0m |      72.373µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025-08-01 11:02:44 | [92m204[0m |      68.509µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:44.600615 main.go:392: [Info] Enqueueing payment: {CorrelationId:92c8fb8f-e226-402f-b3f6-da80c02c53e9 Amount:19.9 RequestedAt:2025-08-01T11:02:44.600Z}
+backend-01  | 2025/08/01 11:02:44.611936 main.go:392: [Info] Enqueueing payment: {CorrelationId:8603346c-a767-40a8-8454-7ab3fef5d3ca Amount:19.9 RequestedAt:2025-08-01T11:02:44.611Z}
+backend-01  | 2025-08-01 11:02:44 | [92m204[0m |      51.632µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:44.629061 main.go:392: [Info] Enqueueing payment: {CorrelationId:b6776c5d-6a65-4676-80f6-9fdb239f772e Amount:19.9 RequestedAt:2025-08-01T11:02:44.629Z}
+backend-02  | 2025-08-01 11:02:44 | [92m204[0m |      57.727µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025-08-01 11:02:44 | [92m204[0m |      79.102µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:44.646078 main.go:392: [Info] Enqueueing payment: {CorrelationId:c535dbd1-11a1-4045-837d-4186fe0e45b3 Amount:19.9 RequestedAt:2025-08-01T11:02:44.646Z}
+backend-02  | 2025-08-01 11:02:44 | [92m204[0m |      83.347µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:44.665313 main.go:392: [Info] Enqueueing payment: {CorrelationId:76b431a2-9513-49b6-9286-b9c65392a2ff Amount:19.9 RequestedAt:2025-08-01T11:02:44.665Z}
+backend-02  | 2025-08-01 11:02:44 | [92m204[0m |      66.369µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:44.665843 main.go:392: [Info] Enqueueing payment: {CorrelationId:2c47a77d-4d35-4ea9-94e1-e423d1491d45 Amount:19.9 RequestedAt:2025-08-01T11:02:44.665Z}
+backend-01  | 2025/08/01 11:02:44.685135 main.go:392: [Info] Enqueueing payment: {CorrelationId:21a5ad30-9640-48a5-8414-8f7fd4be7b37 Amount:19.9 RequestedAt:2025-08-01T11:02:44.685Z}
+backend-01  | 2025-08-01 11:02:44 | [92m204[0m |      61.864µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:44.720696 main.go:392: [Info] Enqueueing payment: {CorrelationId:8c2e5fe2-f218-4558-8791-0f2f1cafac7a Amount:19.9 RequestedAt:2025-08-01T11:02:44.720Z}
+backend-01  | 2025-08-01 11:02:44 | [92m204[0m |      69.036µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:44.725692 main.go:392: [Info] Enqueueing payment: {CorrelationId:96ebf931-a7fa-4ebe-b6c1-8c301a97ad25 Amount:19.9 RequestedAt:2025-08-01T11:02:44.725Z}
+backend-02  | 2025-08-01 11:02:44 | [92m204[0m |      46.749µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025-08-01 11:02:44 | [92m204[0m |      52.267µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:44.738758 main.go:392: [Info] Enqueueing payment: {CorrelationId:fed5b8c9-b873-4b5c-832a-0c0b92c11937 Amount:19.9 RequestedAt:2025-08-01T11:02:44.738Z}
+backend-01  | 2025/08/01 11:02:44.756176 main.go:392: [Info] Enqueueing payment: {CorrelationId:51a869a2-2591-486a-bfc4-c9639d6ae7dd Amount:19.9 RequestedAt:2025-08-01T11:02:44.756Z}
+backend-01  | 2025-08-01 11:02:44 | [92m204[0m |      64.031µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:44.773544 main.go:392: [Info] Enqueueing payment: {CorrelationId:23284043-cbd9-41c8-a918-69bd6ea1810a Amount:19.9 RequestedAt:2025-08-01T11:02:44.773Z}
+backend-02  | 2025-08-01 11:02:44 | [92m204[0m |      80.818µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:44.775928 main.go:392: [Info] Enqueueing payment: {CorrelationId:3703e8b1-f415-4e16-b2ee-19755ce2b382 Amount:19.9 RequestedAt:2025-08-01T11:02:44.775Z}
+backend-01  | 2025-08-01 11:02:44 | [92m204[0m |      58.368µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025-08-01 11:02:44 | [92m204[0m |      68.563µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:44.794041 main.go:392: [Info] Enqueueing payment: {CorrelationId:54dd2d2a-d8f1-4340-b35e-220a11e47063 Amount:19.9 RequestedAt:2025-08-01T11:02:44.794Z}
+backend-01  | 2025-08-01 11:02:44 | [92m204[0m |      57.076µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:44.811636 main.go:392: [Info] Enqueueing payment: {CorrelationId:ebbd7852-89a6-4d86-91a7-2bb68ec7f4f5 Amount:19.9 RequestedAt:2025-08-01T11:02:44.811Z}
+backend-01  | 2025/08/01 11:02:44.829845 main.go:392: [Info] Enqueueing payment: {CorrelationId:39a4f581-e53d-4154-a1f1-a8af981c523a Amount:19.9 RequestedAt:2025-08-01T11:02:44.829Z}
+backend-01  | 2025-08-01 11:02:44 | [92m204[0m |      55.371µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:44.847951 main.go:392: [Info] Enqueueing payment: {CorrelationId:0ca43099-07a8-4142-9b78-74620e516b5c Amount:19.9 RequestedAt:2025-08-01T11:02:44.847Z}
+backend-02  | 2025-08-01 11:02:44 | [92m204[0m |      59.232µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025-08-01 11:02:44 | [92m204[0m |      74.902µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:44.866483 main.go:392: [Info] Enqueueing payment: {CorrelationId:085ad244-2c5b-4ecd-a404-616237c7cdd7 Amount:19.9 RequestedAt:2025-08-01T11:02:44.866Z}
+backend-02  | 2025-08-01 11:02:44 | [92m204[0m |      76.568µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:44.884677 main.go:392: [Info] Enqueueing payment: {CorrelationId:1d51d310-5331-45fd-a183-fdd8ee186258 Amount:19.9 RequestedAt:2025-08-01T11:02:44.884Z}
+backend-01  | 2025-08-01 11:02:44 | [92m204[0m |      51.116µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:44.885212 main.go:392: [Info] Enqueueing payment: {CorrelationId:a7212797-32a6-44dd-ac09-99ae898be47f Amount:19.9 RequestedAt:2025-08-01T11:02:44.885Z}
+backend-02  | 2025-08-01 11:02:44 | [92m204[0m |      76.967µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:44.903998 main.go:392: [Info] Enqueueing payment: {CorrelationId:45c561b0-f5c5-4881-b0fc-2db38d55bb72 Amount:19.9 RequestedAt:2025-08-01T11:02:44.903Z}
+backend-02  | 2025/08/01 11:02:44.920317 main.go:392: [Info] Enqueueing payment: {CorrelationId:48dd1795-fe46-4632-98ed-d62c6fb7b984 Amount:19.9 RequestedAt:2025-08-01T11:02:44.920Z}
+backend-02  | 2025-08-01 11:02:44 | [92m204[0m |      55.482µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:44.938385 main.go:392: [Info] Enqueueing payment: {CorrelationId:0a0a9e64-06cc-46b5-b3f5-b64140f7e089 Amount:19.9 RequestedAt:2025-08-01T11:02:44.938Z}
+backend-01  | 2025-08-01 11:02:44 | [92m204[0m |      56.327µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025-08-01 11:02:44 | [92m204[0m |      57.424µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:44.956745 main.go:392: [Info] Enqueueing payment: {CorrelationId:02ee0bd5-9de0-44d6-80f3-a4c864d672c4 Amount:19.9 RequestedAt:2025-08-01T11:02:44.956Z}
+backend-01  | 2025-08-01 11:02:44 | [92m204[0m |      71.526µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:44.975069 main.go:392: [Info] Enqueueing payment: {CorrelationId:262d75dc-e92a-41e1-8336-099f63e739fe Amount:19.9 RequestedAt:2025-08-01T11:02:44.975Z}
+backend-02  | 2025-08-01 11:02:44 | [92m204[0m |      79.742µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:44.993381 main.go:392: [Info] Enqueueing payment: {CorrelationId:3b5f5c28-3ea1-4f5b-a36e-9e5998ac2fc2 Amount:19.9 RequestedAt:2025-08-01T11:02:44.993Z}
+backend-01  | 2025/08/01 11:02:44.993682 main.go:392: [Info] Enqueueing payment: {CorrelationId:04be1de7-8963-4361-80d0-5f2c225a980c Amount:19.9 RequestedAt:2025-08-01T11:02:44.993Z}
+backend-01  | 2025-08-01 11:02:44 | [92m204[0m |      44.243µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:45.013185 main.go:392: [Info] Enqueueing payment: {CorrelationId:b3c081fc-68dc-42d9-af56-f384f2d9f07d Amount:19.9 RequestedAt:2025-08-01T11:02:45.013Z}
+backend-02  | 2025-08-01 11:02:44 | [92m204[0m |      53.757µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:45.029571 main.go:392: [Info] Enqueueing payment: {CorrelationId:e30e8af1-d236-4126-bc07-d076a5ec5cf6 Amount:19.9 RequestedAt:2025-08-01T11:02:45.029Z}
+backend-01  | 2025-08-01 11:02:44 | [92m204[0m |      54.467µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025-08-01 11:02:44 | [92m204[0m |      57.176µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:45.048614 main.go:392: [Info] Enqueueing payment: {CorrelationId:84af906e-5ff4-4ecd-98d7-2881bc4c83be Amount:19.9 RequestedAt:2025-08-01T11:02:45.048Z}
+backend-01  | 2025/08/01 11:02:45.065606 main.go:392: [Info] Enqueueing payment: {CorrelationId:906c3a48-04b4-419e-afb0-c2c646ffecb8 Amount:19.9 RequestedAt:2025-08-01T11:02:45.065Z}
+backend-01  | 2025-08-01 11:02:44 | [92m204[0m |     117.167µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025-08-01 11:02:44 | [92m204[0m |      52.028µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:45.083817 main.go:392: [Info] Enqueueing payment: {CorrelationId:a5689cc0-953a-462f-83e1-37adf4737bb3 Amount:19.9 RequestedAt:2025-08-01T11:02:45.083Z}
+backend-02  | 2025/08/01 11:02:45.101206 main.go:392: [Info] Enqueueing payment: {CorrelationId:e9b6a9ce-4a23-4439-9604-178f8f578f99 Amount:19.9 RequestedAt:2025-08-01T11:02:45.101Z}
+backend-02  | 2025-08-01 11:02:45 | [92m204[0m |      57.047µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025-08-01 11:02:45 | [92m204[0m |      51.344µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:45.103752 main.go:392: [Info] Enqueueing payment: {CorrelationId:44fb7969-e7ec-4d7e-b7d8-04b0cdc9ccf1 Amount:19.9 RequestedAt:2025-08-01T11:02:45.103Z}
+backend-02  | 2025-08-01 11:02:45 | [92m204[0m |      54.681µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:45.121869 main.go:392: [Info] Enqueueing payment: {CorrelationId:dea69d24-bf1f-4fe0-98ab-bb35d16c5732 Amount:19.9 RequestedAt:2025-08-01T11:02:45.121Z}
+backend-01  | 2025-08-01 11:02:45 | [92m204[0m |       55.72µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:45.138999 main.go:392: [Info] Enqueueing payment: {CorrelationId:edf093f9-4c90-42f9-8bb2-2e0096b933f0 Amount:19.9 RequestedAt:2025-08-01T11:02:45.138Z}
+backend-02  | 2025/08/01 11:02:45.160317 main.go:392: [Info] Enqueueing payment: {CorrelationId:5eed684b-dc5b-4520-8a77-2df5afab33b6 Amount:19.9 RequestedAt:2025-08-01T11:02:45.160Z}
+backend-02  | 2025-08-01 11:02:45 | [92m204[0m |      56.323µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:45.176654 main.go:392: [Info] Enqueueing payment: {CorrelationId:b5cdd631-5a3d-4061-ba00-aaa5b2ff33af Amount:19.9 RequestedAt:2025-08-01T11:02:45.176Z}
+backend-02  | 2025-08-01 11:02:45 | [92m204[0m |       59.86µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:45.193709 main.go:392: [Info] Enqueueing payment: {CorrelationId:5478f173-58fd-4982-9647-236bb09f1c17 Amount:19.9 RequestedAt:2025-08-01T11:02:45.193Z}
+backend-01  | 2025-08-01 11:02:45 | [92m204[0m |      55.878µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025-08-01 11:02:45 | [92m204[0m |      57.009µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:45.211155 main.go:392: [Info] Enqueueing payment: {CorrelationId:7c1111ff-23ef-4e48-9cec-7b9d4794cfe2 Amount:19.9 RequestedAt:2025-08-01T11:02:45.211Z}
+backend-01  | 2025/08/01 11:02:45.212292 main.go:392: [Info] Enqueueing payment: {CorrelationId:816f59aa-8ad7-4043-afd2-613f0ebc8da0 Amount:19.9 RequestedAt:2025-08-01T11:02:45.212Z}
+backend-01  | 2025-08-01 11:02:45 | [92m204[0m |      47.317µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:45.231450 main.go:392: [Info] Enqueueing payment: {CorrelationId:8319c4c1-1450-478d-bc14-192904ce60e4 Amount:19.9 RequestedAt:2025-08-01T11:02:45.231Z}
+backend-02  | 2025-08-01 11:02:45 | [92m204[0m |      65.879µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025-08-01 11:02:45 | [92m204[0m |      53.993µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:45.249042 main.go:392: [Info] Enqueueing payment: {CorrelationId:a16c7644-1394-42d2-9911-697269b05a9a Amount:19.9 RequestedAt:2025-08-01T11:02:45.249Z}
+backend-02  | 2025/08/01 11:02:45.267164 main.go:392: [Info] Enqueueing payment: {CorrelationId:eeec769b-17c2-4a06-92b3-e934ad68a859 Amount:19.9 RequestedAt:2025-08-01T11:02:45.267Z}
+backend-02  | 2025-08-01 11:02:45 | [92m204[0m |      57.011µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025-08-01 11:02:45 | [92m204[0m |      57.184µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:45.284254 main.go:392: [Info] Enqueueing payment: {CorrelationId:02439a23-4fb4-4458-948e-c5f20d3628dc Amount:19.9 RequestedAt:2025-08-01T11:02:45.284Z}
+backend-02  | 2025-08-01 11:02:45 | [92m204[0m |      69.663µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:45.302981 main.go:392: [Info] Enqueueing payment: {CorrelationId:6def0365-bb7c-4de1-b0e9-76147d14c025 Amount:19.9 RequestedAt:2025-08-01T11:02:45.302Z}
+backend-01  | 2025/08/01 11:02:45.320574 main.go:392: [Info] Enqueueing payment: {CorrelationId:ce8255ec-ddf3-4858-95b1-e18991fc074e Amount:19.9 RequestedAt:2025-08-01T11:02:45.320Z}
+backend-01  | 2025-08-01 11:02:45 | [92m204[0m |      58.286µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:45.321640 main.go:392: [Info] Enqueueing payment: {CorrelationId:05f6f4f0-1a33-4c3c-a61a-d76d7317de2a Amount:19.9 RequestedAt:2025-08-01T11:02:45.321Z}
+backend-01  | 2025-08-01 11:02:45 | [92m204[0m |      36.341µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025-08-01 11:02:45 | [92m204[0m |      58.634µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:45.340657 main.go:392: [Info] Enqueueing payment: {CorrelationId:37cbe130-7711-42bf-ba45-344b1b240c01 Amount:19.9 RequestedAt:2025-08-01T11:02:45.340Z}
+backend-01  | 2025/08/01 11:02:45.358201 main.go:392: [Info] Enqueueing payment: {CorrelationId:887a4162-f71d-4f57-96d7-9db8193b1a8c Amount:19.9 RequestedAt:2025-08-01T11:02:45.358Z}
+backend-01  | 2025-08-01 11:02:45 | [92m204[0m |      54.466µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025-08-01 11:02:45 | [92m204[0m |      54.226µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:45.376270 main.go:392: [Info] Enqueueing payment: {CorrelationId:6b8ac198-0f29-4d21-85b8-79142e1a7f8e Amount:19.9 RequestedAt:2025-08-01T11:02:45.376Z}
+backend-01  | 2025-08-01 11:02:45 | [92m204[0m |      66.485µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:45.394584 main.go:392: [Info] Enqueueing payment: {CorrelationId:02c2cfe3-e151-438e-86b7-4f8e98e6eadd Amount:19.9 RequestedAt:2025-08-01T11:02:45.394Z}
+backend-02  | 2025-08-01 11:02:45 | [92m204[0m |      58.022µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:45.427110 main.go:392: [Info] Enqueueing payment: {CorrelationId:80c7e900-d996-472d-88f2-31e3698110aa Amount:19.9 RequestedAt:2025-08-01T11:02:45.427Z}
+backend-02  | 2025/08/01 11:02:45.430095 main.go:392: [Info] Enqueueing payment: {CorrelationId:87baffb8-409a-4355-82f2-90d524802945 Amount:19.9 RequestedAt:2025-08-01T11:02:45.430Z}
+backend-02  | 2025-08-01 11:02:45 | [92m204[0m |      68.657µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:45.431099 main.go:392: [Info] Enqueueing payment: {CorrelationId:633d73b8-4835-4fef-8e5b-6421c0eea12d Amount:19.9 RequestedAt:2025-08-01T11:02:45.431Z}
+backend-01  | 2025-08-01 11:02:45 | [92m204[0m |      41.212µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025-08-01 11:02:45 | [92m204[0m |      44.897µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:45.449618 main.go:392: [Info] Enqueueing payment: {CorrelationId:17ecc42b-4b5e-47b0-9da4-68c55d03b0e3 Amount:19.9 RequestedAt:2025-08-01T11:02:45.449Z}
+backend-02  | 2025-08-01 11:02:45 | [92m204[0m |      54.424µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:45.449468 main.go:392: [Info] Enqueueing payment: {CorrelationId:b163b1d0-c81b-495f-a008-00cc2965a83f Amount:19.9 RequestedAt:2025-08-01T11:02:45.449Z}
+backend-01  | 2025/08/01 11:02:45.467699 main.go:392: [Info] Enqueueing payment: {CorrelationId:f429853a-a02e-47ce-ac4d-b6183606b2dc Amount:19.9 RequestedAt:2025-08-01T11:02:45.467Z}
+backend-01  | 2025-08-01 11:02:45 | [92m204[0m |       50.41µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:45.486746 main.go:392: [Info] Enqueueing payment: {CorrelationId:e5a3a688-38c9-4366-a7cd-33724bf98cff Amount:19.9 RequestedAt:2025-08-01T11:02:45.486Z}
+backend-02  | 2025-08-01 11:02:45 | [92m204[0m |      67.649µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025-08-01 11:02:45 | [92m204[0m |      55.461µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:45.501981 main.go:392: [Info] Enqueueing payment: {CorrelationId:64d89703-cb6a-4b9e-a506-8a0daf2fb182 Amount:19.9 RequestedAt:2025-08-01T11:02:45.501Z}
+backend-02  | 2025/08/01 11:02:45.522127 main.go:392: [Info] Enqueueing payment: {CorrelationId:744aedd9-d5a5-4f52-b8b9-8df77b35ef38 Amount:19.9 RequestedAt:2025-08-01T11:02:45.522Z}
+backend-02  | 2025-08-01 11:02:45 | [92m204[0m |      55.009µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025-08-01 11:02:45 | [92m204[0m |      53.857µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025-08-01 11:02:45 | [92m204[0m |      46.741µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:45.540646 main.go:392: [Info] Enqueueing payment: {CorrelationId:954747df-91e9-45f6-999f-54a46c7c7de4 Amount:19.9 RequestedAt:2025-08-01T11:02:45.540Z}
+backend-01  | 2025/08/01 11:02:45.540382 main.go:392: [Info] Enqueueing payment: {CorrelationId:d4c1f0cc-8e15-4d44-bd17-55d29a484a50 Amount:19.9 RequestedAt:2025-08-01T11:02:45.540Z}
+backend-02  | 2025-08-01 11:02:45 | [92m204[0m |      49.068µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:45.559136 main.go:392: [Info] Enqueueing payment: {CorrelationId:63d38ccb-467e-433b-ae37-bfd7aff2ba93 Amount:19.9 RequestedAt:2025-08-01T11:02:45.559Z}
+backend-02  | 2025/08/01 11:02:45.559136 main.go:392: [Info] Enqueueing payment: {CorrelationId:1b6aea56-7fdf-4734-9d48-dfa80101e331 Amount:19.9 RequestedAt:2025-08-01T11:02:45.559Z}
+backend-01  | 2025-08-01 11:02:45 | [92m204[0m |      48.975µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:45.595672 main.go:392: [Info] Enqueueing payment: {CorrelationId:6b373b81-51fe-424f-9e53-29fb0a78fbf9 Amount:19.9 RequestedAt:2025-08-01T11:02:45.595Z}
+backend-01  | 2025-08-01 11:02:45 | [92m204[0m |      74.968µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025-08-01 11:02:45 | [92m204[0m |      61.303µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:45.601941 main.go:392: [Info] Enqueueing payment: {CorrelationId:922f16a5-5565-48a2-b731-aad36f86f250 Amount:19.9 RequestedAt:2025-08-01T11:02:45.601Z}
+backend-01  | 2025/08/01 11:02:45.613422 main.go:392: [Info] Enqueueing payment: {CorrelationId:f79ee4ec-eb4c-4eab-b509-f668fcf74d11 Amount:19.9 RequestedAt:2025-08-01T11:02:45.613Z}
+backend-01  | 2025-08-01 11:02:45 | [92m204[0m |      63.193µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025-08-01 11:02:45 | [92m204[0m |      72.911µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:45.630679 main.go:392: [Info] Enqueueing payment: {CorrelationId:86779d8d-25bf-4d5a-af27-818f67bb1b81 Amount:19.9 RequestedAt:2025-08-01T11:02:45.630Z}
+backend-02  | 2025-08-01 11:02:45 | [92m204[0m |      71.653µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:45.648125 main.go:392: [Info] Enqueueing payment: {CorrelationId:3bc9419e-3c8d-4b4c-9ead-f4872f7944a5 Amount:19.9 RequestedAt:2025-08-01T11:02:45.648Z}
+backend-01  | 2025/08/01 11:02:45.650431 main.go:392: [Info] Enqueueing payment: {CorrelationId:594e1863-214e-4419-bd81-bede7e5c9b48 Amount:19.9 RequestedAt:2025-08-01T11:02:45.650Z}
+backend-01  | 2025-08-01 11:02:45 | [92m204[0m |      58.541µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:45.666730 main.go:392: [Info] Enqueueing payment: {CorrelationId:bb676c82-6314-4134-978e-9b3754da2137 Amount:19.9 RequestedAt:2025-08-01T11:02:45.666Z}
+backend-02  | 2025-08-01 11:02:45 | [92m204[0m |     103.326µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025-08-01 11:02:45 | [92m204[0m |      44.152µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:45.666691 main.go:392: [Info] Enqueueing payment: {CorrelationId:0d4e3c1c-6286-4224-9ac5-938fc65d3911 Amount:19.9 RequestedAt:2025-08-01T11:02:45.666Z}
+backend-01  | 2025/08/01 11:02:45.687132 main.go:392: [Info] Enqueueing payment: {CorrelationId:aef1007c-d27a-40c0-8494-30f81f5f7aa0 Amount:19.9 RequestedAt:2025-08-01T11:02:45.687Z}
+backend-01  | 2025-08-01 11:02:45 | [92m204[0m |      57.282µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:45.722615 main.go:392: [Info] Enqueueing payment: {CorrelationId:4e222c34-24b4-4b52-a560-4547d94f87a1 Amount:19.9 RequestedAt:2025-08-01T11:02:45.722Z}
+backend-01  | 2025-08-01 11:02:45 | [92m204[0m |      53.923µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:45.726504 main.go:392: [Info] Enqueueing payment: {CorrelationId:8cab023e-b9e1-40dd-8d00-864701d5dd51 Amount:19.9 RequestedAt:2025-08-01T11:02:45.726Z}
+backend-02  | 2025-08-01 11:02:45 | [92m204[0m |      96.838µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025-08-01 11:02:45 | [92m204[0m |      54.722µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:45.740580 main.go:392: [Info] Enqueueing payment: {CorrelationId:ff362327-005a-4bfb-8490-06dfcd6c6230 Amount:19.9 RequestedAt:2025-08-01T11:02:45.740Z}
+backend-01  | 2025/08/01 11:02:45.758254 main.go:392: [Info] Enqueueing payment: {CorrelationId:996c058c-e029-408b-ac36-39f86f39a274 Amount:19.9 RequestedAt:2025-08-01T11:02:45.758Z}
+backend-01  | 2025-08-01 11:02:45 | [92m204[0m |      67.411µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025-08-01 11:02:45 | [92m204[0m |      43.656µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:45.759274 main.go:392: [Info] Enqueueing payment: {CorrelationId:34863939-9a94-46b7-830b-cfb5b663f304 Amount:19.9 RequestedAt:2025-08-01T11:02:45.759Z}
+backend-01  | 2025/08/01 11:02:45.775343 main.go:392: [Info] Enqueueing payment: {CorrelationId:41226dd4-5168-4955-ae74-60a5f8a83df3 Amount:19.9 RequestedAt:2025-08-01T11:02:45.775Z}
+backend-01  | 2025-08-01 11:02:45 | [92m204[0m |      61.418µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025-08-01 11:02:45 | [92m204[0m |      52.358µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:45.777181 main.go:392: [Info] Enqueueing payment: {CorrelationId:7761f97b-20a7-4b0b-bffe-280b09271f3c Amount:19.9 RequestedAt:2025-08-01T11:02:45.777Z}
+backend-01  | 2025/08/01 11:02:45.795211 main.go:392: [Info] Enqueueing payment: {CorrelationId:f64e04fc-19b0-4f13-b647-7ee29f6abdec Amount:19.9 RequestedAt:2025-08-01T11:02:45.795Z}
+backend-01  | 2025-08-01 11:02:45 | [92m204[0m |      59.501µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:45.813567 main.go:392: [Info] Enqueueing payment: {CorrelationId:df3367c2-435a-49ce-a080-28b730292744 Amount:19.9 RequestedAt:2025-08-01T11:02:45.813Z}
+backend-01  | 2025-08-01 11:02:45 | [92m204[0m |      66.653µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:45.831743 main.go:392: [Info] Enqueueing payment: {CorrelationId:f99be710-f473-4fa7-9755-7949aff1082d Amount:19.9 RequestedAt:2025-08-01T11:02:45.831Z}
+backend-01  | 2025-08-01 11:02:45 | [92m204[0m |      71.769µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:45.850169 main.go:392: [Info] Enqueueing payment: {CorrelationId:b5f0b590-2154-463d-a9ae-844b486ff980 Amount:19.9 RequestedAt:2025-08-01T11:02:45.850Z}
+backend-02  | 2025-08-01 11:02:45 | [92m204[0m |      65.328µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:45.868318 main.go:392: [Info] Enqueueing payment: {CorrelationId:f9f2c189-ba75-4ce1-85f3-e5f07727e336 Amount:19.9 RequestedAt:2025-08-01T11:02:45.868Z}
+backend-02  | 2025-08-01 11:02:45 | [92m204[0m |     100.427µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025-08-01 11:02:45 | [92m204[0m |      36.209µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:45.868564 main.go:392: [Info] Enqueueing payment: {CorrelationId:0bb358e6-46ae-4725-ba5d-8ac6f2c4c128 Amount:19.9 RequestedAt:2025-08-01T11:02:45.868Z}
+backend-02  | 2025-08-01 11:02:45 | [92m204[0m |      54.359µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:45.886752 main.go:392: [Info] Enqueueing payment: {CorrelationId:2e3b4e8b-a93f-4c17-90ad-b421263c6219 Amount:19.9 RequestedAt:2025-08-01T11:02:45.886Z}
+backend-02  | 2025/08/01 11:02:45.886752 main.go:392: [Info] Enqueueing payment: {CorrelationId:b6eb6fd3-e2c7-47a8-b0b3-92db09af37b6 Amount:19.9 RequestedAt:2025-08-01T11:02:45.886Z}
+backend-02  | 2025-08-01 11:02:45 | [92m204[0m |     128.584µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025-08-01 11:02:45 | [92m204[0m |      86.974µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:45.906492 main.go:392: [Info] Enqueueing payment: {CorrelationId:0b6a4e49-547d-4413-af7a-f4a95259b93a Amount:19.9 RequestedAt:2025-08-01T11:02:45.906Z}
+backend-02  | 2025/08/01 11:02:45.921571 main.go:392: [Info] Enqueueing payment: {CorrelationId:d3a29113-565a-4799-b5d0-bafeb4adf338 Amount:19.9 RequestedAt:2025-08-01T11:02:45.921Z}
+backend-02  | 2025-08-01 11:02:45 | [92m204[0m |      79.186µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025-08-01 11:02:45 | [92m204[0m |      69.823µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:45.939871 main.go:392: [Info] Enqueueing payment: {CorrelationId:5ba13873-15e0-459a-843e-c873c366b803 Amount:19.9 RequestedAt:2025-08-01T11:02:45.939Z}
+backend-02  | 2025/08/01 11:02:45.958554 main.go:392: [Info] Enqueueing payment: {CorrelationId:b2061562-a779-4cfc-a48a-7114ff7349f6 Amount:19.9 RequestedAt:2025-08-01T11:02:45.958Z}
+backend-02  | 2025-08-01 11:02:45 | [92m204[0m |     115.877µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025-08-01 11:02:45 | [92m204[0m |      67.658µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:45.976780 main.go:392: [Info] Enqueueing payment: {CorrelationId:17a03307-a39a-42a5-bb5e-f78a06487b88 Amount:19.9 RequestedAt:2025-08-01T11:02:45.976Z}
+backend-02  | 2025/08/01 11:02:45.977544 main.go:392: [Info] Enqueueing payment: {CorrelationId:e269269e-a4cd-47ea-9cb8-22feb9d29fe0 Amount:19.9 RequestedAt:2025-08-01T11:02:45.977Z}
+backend-02  | 2025-08-01 11:02:45 | [92m204[0m |      81.127µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:45.994776 main.go:392: [Info] Enqueueing payment: {CorrelationId:d2966181-fb43-45d4-9b4a-762e95ded6b6 Amount:19.9 RequestedAt:2025-08-01T11:02:45.994Z}
+backend-02  | 2025-08-01 11:02:45 | [92m204[0m |      61.003µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:45.994775 main.go:392: [Info] Enqueueing payment: {CorrelationId:db0072a6-fb18-488e-8b61-ee598eddf298 Amount:19.9 RequestedAt:2025-08-01T11:02:45.994Z}
+backend-01  | 2025-08-01 11:02:45 | [92m204[0m |      61.094µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025-08-01 11:02:45 | [92m204[0m |      61.246µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:46.015340 main.go:392: [Info] Enqueueing payment: {CorrelationId:a7df4519-9f09-4e2b-aedf-7bfa041461e6 Amount:19.9 RequestedAt:2025-08-01T11:02:46.015Z}
+backend-01  | 2025-08-01 11:02:45 | [92m204[0m |      62.774µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:46.031556 main.go:392: [Info] Enqueueing payment: {CorrelationId:98661a9c-642c-488b-9bd7-597e3d55dda6 Amount:19.9 RequestedAt:2025-08-01T11:02:46.031Z}
+backend-02  | 2025/08/01 11:02:46.049824 main.go:392: [Info] Enqueueing payment: {CorrelationId:7ed534e8-689e-4ad5-bfce-14ad17ded3d8 Amount:19.9 RequestedAt:2025-08-01T11:02:46.049Z}
+backend-02  | 2025-08-01 11:02:45 | [92m204[0m |      60.485µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:46.067847 main.go:392: [Info] Enqueueing payment: {CorrelationId:5faad475-7f54-4789-adbb-7c43f056fe53 Amount:19.9 RequestedAt:2025-08-01T11:02:46.067Z}
+backend-01  | 2025-08-01 11:02:45 | [92m204[0m |      68.415µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:46.085167 main.go:392: [Info] Enqueueing payment: {CorrelationId:24589ac5-e4f3-4c8b-a2be-8a838966dc35 Amount:19.9 RequestedAt:2025-08-01T11:02:46.085Z}
+backend-02  | 2025-08-01 11:02:46 | [92m204[0m |      75.484µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:46.088274 main.go:392: [Info] Enqueueing payment: {CorrelationId:b9ea73dd-741e-41dc-9849-07f341d1016a Amount:19.9 RequestedAt:2025-08-01T11:02:46.088Z}
+backend-01  | 2025-08-01 11:02:45 | [92m204[0m |     146.008µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025-08-01 11:02:46 | [92m204[0m |      78.239µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:46.103132 main.go:392: [Info] Enqueueing payment: {CorrelationId:6fc9d435-6323-44bc-a341-16825b860813 Amount:19.9 RequestedAt:2025-08-01T11:02:46.103Z}
+backend-02  | 2025/08/01 11:02:46.105819 main.go:392: [Info] Enqueueing payment: {CorrelationId:32805efa-59e1-4c1a-8b4d-118ee348901f Amount:19.9 RequestedAt:2025-08-01T11:02:46.105Z}
+backend-02  | 2025-08-01 11:02:46 | [92m204[0m |      88.964µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025-08-01 11:02:46 | [92m204[0m |      55.894µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:46.123385 main.go:392: [Info] Enqueueing payment: {CorrelationId:d6a9045b-04e1-46ed-835e-4636fa046339 Amount:19.9 RequestedAt:2025-08-01T11:02:46.123Z}
+backend-01  | 2025-08-01 11:02:46 | [92m204[0m |       61.66µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:46.140574 main.go:392: [Info] Enqueueing payment: {CorrelationId:bd93c5a3-6d4d-4e7a-b2b5-ee96d012e4d5 Amount:19.9 RequestedAt:2025-08-01T11:02:46.140Z}
+backend-02  | 2025/08/01 11:02:46.162273 main.go:392: [Info] Enqueueing payment: {CorrelationId:bd8ea810-34d6-400e-85a9-6ddcc1ccfb00 Amount:19.9 RequestedAt:2025-08-01T11:02:46.162Z}
+backend-02  | 2025-08-01 11:02:46 | [92m204[0m |      57.029µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:46.178491 main.go:392: [Info] Enqueueing payment: {CorrelationId:cad288bc-9224-4589-a833-537818fc127a Amount:19.9 RequestedAt:2025-08-01T11:02:46.178Z}
+backend-02  | 2025-08-01 11:02:46 | [92m204[0m |      64.646µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025-08-01 11:02:46 | [92m204[0m |      81.382µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:46.195531 main.go:392: [Info] Enqueueing payment: {CorrelationId:606f363d-6588-4f44-bfc6-dccefb8e7486 Amount:19.9 RequestedAt:2025-08-01T11:02:46.195Z}
+backend-02  | 2025-08-01 11:02:46 | [92m204[0m |      64.213µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:46.196149 main.go:392: [Info] Enqueueing payment: {CorrelationId:66773e2c-dca7-4595-85e0-12afed29477e Amount:19.9 RequestedAt:2025-08-01T11:02:46.196Z}
+backend-01  | 2025-08-01 11:02:46 | [92m204[0m |      74.217µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:46.212409 main.go:392: [Info] Enqueueing payment: {CorrelationId:a1237932-77e7-49d5-9151-ee9e14ef726d Amount:19.9 RequestedAt:2025-08-01T11:02:46.212Z}
+backend-02  | 2025-08-01 11:02:46 | [92m204[0m |      53.686µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:46.213180 main.go:392: [Info] Enqueueing payment: {CorrelationId:a115a0c5-77c5-4ef2-9a19-9feda8097db7 Amount:19.9 RequestedAt:2025-08-01T11:02:46.213Z}
+backend-01  | 2025-08-01 11:02:46 | [92m204[0m |      63.799µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:46.233342 main.go:392: [Info] Enqueueing payment: {CorrelationId:dca3e7ba-dce0-4e85-9239-3a95e1374d3f Amount:19.9 RequestedAt:2025-08-01T11:02:46.233Z}
+backend-01  | 2025-08-01 11:02:46 | [92m204[0m |      56.137µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:46.251032 main.go:392: [Info] Enqueueing payment: {CorrelationId:fb688527-b71b-4acc-b2a7-bd3a6eb0a159 Amount:19.9 RequestedAt:2025-08-01T11:02:46.251Z}
+backend-02  | 2025-08-01 11:02:46 | [92m204[0m |      56.394µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:46.268221 main.go:392: [Info] Enqueueing payment: {CorrelationId:5bd5a193-6b92-400c-a9db-5ba85689692d Amount:19.9 RequestedAt:2025-08-01T11:02:46.268Z}
+backend-01  | 2025-08-01 11:02:46 | [92m204[0m |      86.623µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:46.285513 main.go:392: [Info] Enqueueing payment: {CorrelationId:acfc1cd5-e6f3-46ab-93bc-021ddd941515 Amount:19.9 RequestedAt:2025-08-01T11:02:46.285Z}
+backend-02  | 2025-08-01 11:02:46 | [92m204[0m |     129.228µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:46.305159 main.go:392: [Info] Enqueueing payment: {CorrelationId:0ea046db-d889-42e6-b594-384044bcf79a Amount:19.9 RequestedAt:2025-08-01T11:02:46.305Z}
+backend-02  | 2025-08-01 11:02:46 | [92m204[0m |      56.782µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:46.305502 main.go:392: [Info] Enqueueing payment: {CorrelationId:d61efc00-d6f8-4d93-acc9-d281f0d4637f Amount:19.9 RequestedAt:2025-08-01T11:02:46.305Z}
+backend-01  | 2025/08/01 11:02:46.321683 main.go:392: [Info] Enqueueing payment: {CorrelationId:ca1bc165-bda4-4245-a3ea-74f30fcfe0cf Amount:19.9 RequestedAt:2025-08-01T11:02:46.321Z}
+backend-01  | 2025-08-01 11:02:46 | [92m204[0m |      58.399µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:46.322540 main.go:392: [Info] Enqueueing payment: {CorrelationId:71f7174b-20b1-450b-9ff3-ab9a1e196e01 Amount:19.9 RequestedAt:2025-08-01T11:02:46.322Z}
+backend-02  | 2025-08-01 11:02:46 | [92m204[0m |      56.011µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:46.342750 main.go:392: [Info] Enqueueing payment: {CorrelationId:9f19991b-42ab-4519-b516-50a4d0eac929 Amount:19.9 RequestedAt:2025-08-01T11:02:46.342Z}
+backend-01  | 2025-08-01 11:02:46 | [92m204[0m |      56.857µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025-08-01 11:02:46 | [92m204[0m |      55.931µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:46.359423 main.go:392: [Info] Enqueueing payment: {CorrelationId:9bf6af52-d98c-47bd-922a-58c2c6cb6c54 Amount:19.9 RequestedAt:2025-08-01T11:02:46.359Z}
+backend-02  | 2025/08/01 11:02:46.377489 main.go:392: [Info] Enqueueing payment: {CorrelationId:7cbf44ce-9a60-4f92-9f01-da1deb7792ca Amount:19.9 RequestedAt:2025-08-01T11:02:46.377Z}
+backend-02  | 2025-08-01 11:02:46 | [92m204[0m |      79.149µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025-08-01 11:02:46 | [92m204[0m |      55.164µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:46.395685 main.go:392: [Info] Enqueueing payment: {CorrelationId:efb00bd8-d4d0-49d5-aeaa-25b4f571c550 Amount:19.9 RequestedAt:2025-08-01T11:02:46.395Z}
+backend-02  | 2025-08-01 11:02:46 | [92m204[0m |      56.133µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:46.415459 main.go:392: [Info] Enqueueing payment: {CorrelationId:15077dbd-8093-4769-8de5-d71dd36da6db Amount:19.9 RequestedAt:2025-08-01T11:02:46.415Z}
+backend-02  | 2025/08/01 11:02:46.428491 main.go:392: [Info] Enqueueing payment: {CorrelationId:fb179026-12d4-4693-9377-d48855ddb46f Amount:19.9 RequestedAt:2025-08-01T11:02:46.428Z}
+backend-02  | 2025-08-01 11:02:46 | [92m204[0m |      62.089µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:46.431410 main.go:392: [Info] Enqueueing payment: {CorrelationId:c275e1ed-5ba0-4eb9-8e77-ebf55490367c Amount:19.9 RequestedAt:2025-08-01T11:02:46.431Z}
+backend-01  | 2025-08-01 11:02:46 | [92m204[0m |      52.622µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:46.432461 main.go:392: [Info] Enqueueing payment: {CorrelationId:0ed02aa0-fa08-4a7e-9b13-c80906c48f22 Amount:19.9 RequestedAt:2025-08-01T11:02:46.432Z}
+backend-02  | 2025-08-01 11:02:46 | [92m204[0m |       45.25µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025-08-01 11:02:46 | [92m204[0m |      53.761µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:46.450877 main.go:392: [Info] Enqueueing payment: {CorrelationId:4e0574e6-6bf9-4cd8-bd62-2a6356515261 Amount:19.9 RequestedAt:2025-08-01T11:02:46.450Z}
+backend-02  | 2025/08/01 11:02:46.450877 main.go:392: [Info] Enqueueing payment: {CorrelationId:d58f492a-62df-4a78-995b-3753b9cdb89c Amount:19.9 RequestedAt:2025-08-01T11:02:46.450Z}
+backend-02  | 2025-08-01 11:02:46 | [92m204[0m |     409.796µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025-08-01 11:02:46 | [92m204[0m |      54.385µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:46.469381 main.go:392: [Info] Enqueueing payment: {CorrelationId:c8851ed1-b9ca-4b96-8702-24791982604d Amount:19.9 RequestedAt:2025-08-01T11:02:46.469Z}
+backend-02  | 2025/08/01 11:02:46.488405 main.go:392: [Info] Enqueueing payment: {CorrelationId:a11ec782-a0e7-42ba-b286-7dfef0707d7a Amount:19.9 RequestedAt:2025-08-01T11:02:46.488Z}
+backend-02  | 2025-08-01 11:02:46 | [92m204[0m |      56.968µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:46.503742 main.go:392: [Info] Enqueueing payment: {CorrelationId:524d2144-c72c-41bc-a138-b4e33b5d4060 Amount:19.9 RequestedAt:2025-08-01T11:02:46.503Z}
+backend-01  | 2025-08-01 11:02:46 | [92m204[0m |       54.27µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:46.523816 main.go:392: [Info] Enqueueing payment: {CorrelationId:3a4b7807-6707-4673-a12c-bb3f660087af Amount:19.9 RequestedAt:2025-08-01T11:02:46.523Z}
+backend-02  | 2025-08-01 11:02:46 | [92m204[0m |     166.215µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:46.524121 main.go:392: [Info] Enqueueing payment: {CorrelationId:da446b7a-75c0-4912-ab32-ab52363db3cc Amount:19.9 RequestedAt:2025-08-01T11:02:46.524Z}
+backend-02  | 2025-08-01 11:02:46 | [92m204[0m |      34.577µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025-08-01 11:02:46 | [92m204[0m |      60.134µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025-08-01 11:02:46 | [92m204[0m |       58.12µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:46.542161 main.go:392: [Info] Enqueueing payment: {CorrelationId:1e21a12a-0618-4e1e-a563-fd698d7d109e Amount:19.9 RequestedAt:2025-08-01T11:02:46.542Z}
+backend-01  | 2025/08/01 11:02:46.542154 main.go:392: [Info] Enqueueing payment: {CorrelationId:c138b5c0-06e0-4724-b107-3a1a5233280c Amount:19.9 RequestedAt:2025-08-01T11:02:46.542Z}
+backend-01  | 2025-08-01 11:02:46 | [92m204[0m |      61.879µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025-08-01 11:02:46 | [92m204[0m |      62.337µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:46.560693 main.go:392: [Info] Enqueueing payment: {CorrelationId:24c0922d-7dd5-4fac-beb0-68735d1235f1 Amount:19.9 RequestedAt:2025-08-01T11:02:46.560Z}
+backend-01  | 2025/08/01 11:02:46.560693 main.go:392: [Info] Enqueueing payment: {CorrelationId:8c987acf-303d-4239-a141-441bf8667435 Amount:19.9 RequestedAt:2025-08-01T11:02:46.560Z}
+backend-01  | 2025-08-01 11:02:46 | [92m204[0m |      52.764µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:46.597024 main.go:392: [Info] Enqueueing payment: {CorrelationId:c129c7d1-32b9-4968-a43c-cdd8bd41c01e Amount:19.9 RequestedAt:2025-08-01T11:02:46.597Z}
+backend-02  | 2025/08/01 11:02:46.604017 main.go:392: [Info] Enqueueing payment: {CorrelationId:33b07ce8-597d-4de1-ba46-0053609030d3 Amount:19.9 RequestedAt:2025-08-01T11:02:46.604Z}
+backend-02  | 2025-08-01 11:02:46 | [92m204[0m |      48.966µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025-08-01 11:02:46 | [92m204[0m |       57.21µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:46.615093 main.go:392: [Info] Enqueueing payment: {CorrelationId:1a4a744f-e241-4702-b4d3-a39433d77ff2 Amount:19.9 RequestedAt:2025-08-01T11:02:46.615Z}
+backend-02  | 2025/08/01 11:02:46.632223 main.go:392: [Info] Enqueueing payment: {CorrelationId:094fa529-c592-4841-89b5-aaca75f43295 Amount:19.9 RequestedAt:2025-08-01T11:02:46.632Z}
+backend-02  | 2025-08-01 11:02:46 | [92m204[0m |      53.017µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:46.633174 main.go:392: [Info] Enqueueing payment: {CorrelationId:671fba65-75d8-4614-8947-6c9701d529e2 Amount:19.9 RequestedAt:2025-08-01T11:02:46.633Z}
+backend-02  | 2025-08-01 11:02:46 | [92m204[0m |      38.864µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:46.649380 main.go:392: [Info] Enqueueing payment: {CorrelationId:421d931d-164e-48e0-8f4e-6fbb37dd8e5a Amount:19.9 RequestedAt:2025-08-01T11:02:46.649Z}
+backend-01  | 2025-08-01 11:02:46 | [92m204[0m |      52.917µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:46.651457 main.go:392: [Info] Enqueueing payment: {CorrelationId:921855a3-2d6d-41b0-8571-8ec513fc0ec8 Amount:19.9 RequestedAt:2025-08-01T11:02:46.651Z}
+backend-02  | 2025-08-01 11:02:46 | [92m204[0m |       46.32µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025-08-01 11:02:46 | [92m204[0m |       81.33µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:46.668499 main.go:392: [Info] Enqueueing payment: {CorrelationId:6555f3d1-af21-43c8-9775-944b660b4ee5 Amount:19.9 RequestedAt:2025-08-01T11:02:46.668Z}
+backend-01  | 2025-08-01 11:02:46 | [92m204[0m |      82.638µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:46.668499 main.go:392: [Info] Enqueueing payment: {CorrelationId:eb8bf522-8e90-4489-9ef1-5b569f549e2d Amount:19.9 RequestedAt:2025-08-01T11:02:46.668Z}
+backend-01  | 2025/08/01 11:02:46.689145 main.go:392: [Info] Enqueueing payment: {CorrelationId:3bc64873-694f-4b4f-b371-02cee546b2a3 Amount:19.9 RequestedAt:2025-08-01T11:02:46.689Z}
+backend-01  | 2025-08-01 11:02:46 | [92m204[0m |      55.412µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025-08-01 11:02:46 | [92m204[0m |      66.697µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:46.724643 main.go:392: [Info] Enqueueing payment: {CorrelationId:4d88c71e-c4b8-470b-a8fd-8a5aff3f679c Amount:19.9 RequestedAt:2025-08-01T11:02:46.724Z}
+backend-02  | 2025-08-01 11:02:46 | [92m204[0m |      59.004µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:46.727864 main.go:392: [Info] Enqueueing payment: {CorrelationId:459bd790-a0ee-42b5-82be-123f9b113cbb Amount:19.9 RequestedAt:2025-08-01T11:02:46.727Z}
+backend-02  | 2025-08-01 11:02:46 | [92m204[0m |       63.91µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025-08-01 11:02:46 | [92m204[0m |      31.369µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:46.742450 main.go:392: [Info] Enqueueing payment: {CorrelationId:1dd84ffd-e39d-417e-aba6-4232f6f8b8af Amount:19.9 RequestedAt:2025-08-01T11:02:46.742Z}
+backend-02  | 2025/08/01 11:02:46.742539 main.go:392: [Info] Enqueueing payment: {CorrelationId:b0e2b0ac-855e-4ed8-bae1-73ed50f41f6d Amount:19.9 RequestedAt:2025-08-01T11:02:46.742Z}
+backend-02  | 2025-08-01 11:02:46 | [92m204[0m |      40.002µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:46.760450 main.go:392: [Info] Enqueueing payment: {CorrelationId:fb96e447-ca56-4a83-822a-8482ac8f4164 Amount:19.9 RequestedAt:2025-08-01T11:02:46.760Z}
+backend-01  | 2025-08-01 11:02:46 | [92m204[0m |      98.683µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:46.760264 main.go:392: [Info] Enqueueing payment: {CorrelationId:0817cd7f-34f4-4d0c-b924-b0fa5e12fa8a Amount:19.9 RequestedAt:2025-08-01T11:02:46.760Z}
+backend-01  | 2025/08/01 11:02:46.776908 main.go:392: [Info] Enqueueing payment: {CorrelationId:566d68c5-27f2-45d4-854c-455b18ed68ea Amount:19.9 RequestedAt:2025-08-01T11:02:46.776Z}
+backend-01  | 2025-08-01 11:02:46 | [92m204[0m |      67.934µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:46.779062 main.go:392: [Info] Enqueueing payment: {CorrelationId:94340938-fd43-4cc8-a944-c1e9da1e40ef Amount:19.9 RequestedAt:2025-08-01T11:02:46.779Z}
+backend-01  | 2025-08-01 11:02:46 | [92m204[0m |      60.745µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:46.796293 main.go:392: [Info] Enqueueing payment: {CorrelationId:6f9c291c-199c-472d-b77c-7f30c6107ec8 Amount:19.9 RequestedAt:2025-08-01T11:02:46.796Z}
+backend-02  | 2025-08-01 11:02:46 | [92m204[0m |      70.322µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:46.814648 main.go:392: [Info] Enqueueing payment: {CorrelationId:5d0c2ff1-cb2e-4d2e-94e3-37ffc5d6c416 Amount:19.9 RequestedAt:2025-08-01T11:02:46.814Z}
+backend-01  | 2025-08-01 11:02:46 | [92m204[0m |      58.452µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025-08-01 11:02:46 | [92m204[0m |      74.837µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:46.833777 main.go:392: [Info] Enqueueing payment: {CorrelationId:c4062e95-068b-4169-a1c6-fc68dce6fe7c Amount:19.9 RequestedAt:2025-08-01T11:02:46.833Z}
+backend-02  | 2025-08-01 11:02:46 | [92m204[0m |      70.265µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:46.851226 main.go:392: [Info] Enqueueing payment: {CorrelationId:147367ea-5d17-4b7c-828d-2d9e7fefd4cf Amount:19.9 RequestedAt:2025-08-01T11:02:46.851Z}
+backend-02  | 2025/08/01 11:02:46.851715 main.go:392: [Info] Enqueueing payment: {CorrelationId:aa05df95-8098-4979-a3e9-e40e803dac21 Amount:19.9 RequestedAt:2025-08-01T11:02:46.851Z}
+backend-02  | 2025-08-01 11:02:46 | [92m204[0m |      33.942µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025-08-01 11:02:46 | [92m204[0m |      63.745µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:46.869726 main.go:392: [Info] Enqueueing payment: {CorrelationId:dfca6e95-14ac-409f-b34e-934aa1bbce04 Amount:19.9 RequestedAt:2025-08-01T11:02:46.869Z}
+backend-02  | 2025-08-01 11:02:46 | [92m204[0m |      63.722µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:46.869726 main.go:392: [Info] Enqueueing payment: {CorrelationId:289276ab-5be2-485a-a646-c88820b149ac Amount:19.9 RequestedAt:2025-08-01T11:02:46.869Z}
+backend-01  | 2025-08-01 11:02:46 | [92m204[0m |      78.617µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025-08-01 11:02:46 | [92m204[0m |      28.758µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:46.888011 main.go:392: [Info] Enqueueing payment: {CorrelationId:6dd665a2-220f-487f-a724-7f70757a044f Amount:19.9 RequestedAt:2025-08-01T11:02:46.887Z}
+backend-01  | 2025/08/01 11:02:46.888207 main.go:392: [Info] Enqueueing payment: {CorrelationId:10f1774d-c689-49f0-96b5-f439baab5d54 Amount:19.9 RequestedAt:2025-08-01T11:02:46.888Z}
+backend-02  | 2025-08-01 11:02:46 | [92m204[0m |      69.192µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:46.908429 main.go:392: [Info] Enqueueing payment: {CorrelationId:0bba0203-5e47-483d-927d-d6b72a6d52fa Amount:19.9 RequestedAt:2025-08-01T11:02:46.908Z}
+backend-02  | 2025-08-01 11:02:46 | [92m204[0m |       74.74µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:46.923175 main.go:392: [Info] Enqueueing payment: {CorrelationId:869627ad-65a4-4564-8b86-805e72c8564b Amount:19.9 RequestedAt:2025-08-01T11:02:46.923Z}
+backend-01  | 2025-08-01 11:02:46 | [92m204[0m |      88.251µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:46.941493 main.go:392: [Info] Enqueueing payment: {CorrelationId:8d803a82-c0aa-43a7-be73-8bf04c596276 Amount:19.9 RequestedAt:2025-08-01T11:02:46.941Z}
+backend-02  | 2025/08/01 11:02:46.960057 main.go:392: [Info] Enqueueing payment: {CorrelationId:fe6f35dc-a75c-45a2-8a28-335922e8e261 Amount:19.9 RequestedAt:2025-08-01T11:02:46.960Z}
+backend-02  | 2025-08-01 11:02:46 | [92m204[0m |      53.527µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025-08-01 11:02:46 | [92m204[0m |       45.81µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:46.961138 main.go:392: [Info] Enqueueing payment: {CorrelationId:bba5ecdf-025e-46da-9506-104145cd607e Amount:19.9 RequestedAt:2025-08-01T11:02:46.961Z}
+backend-01  | 2025/08/01 11:02:46.978093 main.go:392: [Info] Enqueueing payment: {CorrelationId:5cbf50eb-e2ce-4072-a7f1-caa8d6ee72bc Amount:19.9 RequestedAt:2025-08-01T11:02:46.978Z}
+backend-01  | 2025-08-01 11:02:46 | [92m204[0m |      84.259µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:46.978977 main.go:392: [Info] Enqueueing payment: {CorrelationId:b5b8071a-caed-4de6-a759-24f48093a6a4 Amount:19.9 RequestedAt:2025-08-01T11:02:46.978Z}
+backend-02  | 2025-08-01 11:02:46 | [92m204[0m |      38.221µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:46.995954 main.go:392: [Info] Enqueueing payment: {CorrelationId:5d71a904-cca4-4263-b64c-5d7f55417e36 Amount:19.9 RequestedAt:2025-08-01T11:02:46.995Z}
+backend-01  | 2025/08/01 11:02:46.995963 main.go:392: [Info] Enqueueing payment: {CorrelationId:e5e15480-a73d-41f3-b23a-15fad423479a Amount:19.9 RequestedAt:2025-08-01T11:02:46.995Z}
+backend-01  | 2025-08-01 11:02:46 | [92m204[0m |      48.759µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025-08-01 11:02:46 | [92m204[0m |      57.952µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025-08-01 11:02:46 | [92m204[0m |      55.605µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:47.016797 main.go:392: [Info] Enqueueing payment: {CorrelationId:97674c91-430c-4202-949a-f63a4466b986 Amount:19.9 RequestedAt:2025-08-01T11:02:47.016Z}
+backend-01  | 2025/08/01 11:02:47.033203 main.go:392: [Info] Enqueueing payment: {CorrelationId:5c7aad60-c79b-4657-b06c-75be674acca4 Amount:19.9 RequestedAt:2025-08-01T11:02:47.033Z}
+backend-01  | 2025-08-01 11:02:46 | [92m204[0m |      55.349µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025-08-01 11:02:46 | [92m204[0m |      52.177µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:47.051411 main.go:392: [Info] Enqueueing payment: {CorrelationId:9639d338-f9c1-4346-80d8-434987e6989a Amount:19.9 RequestedAt:2025-08-01T11:02:47.051Z}
+backend-01  | 2025-08-01 11:02:46 | [92m204[0m |      57.202µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:47.069474 main.go:392: [Info] Enqueueing payment: {CorrelationId:8d030236-65d7-4e8c-981c-d96f591953eb Amount:19.9 RequestedAt:2025-08-01T11:02:47.069Z}
+backend-02  | 2025/08/01 11:02:47.070840 main.go:392: [Info] Enqueueing payment: {CorrelationId:3c6a8739-5ffe-4da4-98bf-58bb766ff901 Amount:19.9 RequestedAt:2025-08-01T11:02:47.070Z}
+backend-02  | 2025-08-01 11:02:47 | [92m204[0m |      47.759µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:47.086844 main.go:392: [Info] Enqueueing payment: {CorrelationId:a2b8d302-bea4-4a26-9884-cee4d2edf1db Amount:19.9 RequestedAt:2025-08-01T11:02:47.086Z}
+backend-01  | 2025-08-01 11:02:46 | [92m204[0m |      54.277µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:47.089900 main.go:392: [Info] Enqueueing payment: {CorrelationId:53277476-91e8-436d-9306-4061b98ffbac Amount:19.9 RequestedAt:2025-08-01T11:02:47.089Z}
+backend-02  | 2025-08-01 11:02:47 | [92m204[0m |      49.849µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:47.106245 main.go:392: [Info] Enqueueing payment: {CorrelationId:2a3dd711-1d2a-4db8-97e8-e3a9734a2550 Amount:19.9 RequestedAt:2025-08-01T11:02:47.106Z}
+backend-01  | 2025-08-01 11:02:47 | [92m204[0m |      58.517µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:47.110145 main.go:392: [Info] Enqueueing payment: {CorrelationId:9d9fa9f8-1927-4396-958d-52c606499c29 Amount:19.9 RequestedAt:2025-08-01T11:02:47.110Z}
+backend-01  | 2025-08-01 11:02:47 | [92m204[0m |       45.72µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:47.125149 main.go:392: [Info] Enqueueing payment: {CorrelationId:54f64350-c1cd-412a-abfd-4017a4193cf5 Amount:19.9 RequestedAt:2025-08-01T11:02:47.125Z}
+backend-02  | 2025-08-01 11:02:47 | [92m204[0m |      54.892µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025-08-01 11:02:47 | [92m204[0m |      88.375µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:47.142248 main.go:392: [Info] Enqueueing payment: {CorrelationId:6f455213-d010-4ba3-80b3-3f6d7aef6d48 Amount:19.9 RequestedAt:2025-08-01T11:02:47.142Z}
+backend-02  | 2025/08/01 11:02:47.163402 main.go:392: [Info] Enqueueing payment: {CorrelationId:07d25a91-d77d-4c5c-b043-d432848d4b3f Amount:19.9 RequestedAt:2025-08-01T11:02:47.163Z}
+backend-02  | 2025-08-01 11:02:47 | [92m204[0m |      56.903µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025-08-01 11:02:47 | [92m204[0m |      70.149µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:47.179620 main.go:392: [Info] Enqueueing payment: {CorrelationId:03d6a629-758c-499f-a9cd-8c4b48131aa2 Amount:19.9 RequestedAt:2025-08-01T11:02:47.179Z}
+backend-02  | 2025/08/01 11:02:47.179841 main.go:392: [Info] Enqueueing payment: {CorrelationId:67d425f7-be31-4cf8-96b5-afa9e253e884 Amount:19.9 RequestedAt:2025-08-01T11:02:47.179Z}
+backend-02  | 2025-08-01 11:02:47 | [92m204[0m |      28.894µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:47.196989 main.go:392: [Info] Enqueueing payment: {CorrelationId:0017b124-2655-4657-abef-3fdeff3cf47b Amount:19.9 RequestedAt:2025-08-01T11:02:47.196Z}
+backend-02  | 2025-08-01 11:02:47 | [92m204[0m |      45.686µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025-08-01 11:02:47 | [92m204[0m |      72.455µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:47.197067 main.go:392: [Info] Enqueueing payment: {CorrelationId:3708fb8c-2624-4a7a-87b5-6ed61bab26fa Amount:19.9 RequestedAt:2025-08-01T11:02:47.197Z}
+backend-01  | 2025/08/01 11:02:47.214496 main.go:392: [Info] Enqueueing payment: {CorrelationId:c87a50ac-3bcc-4b2c-ab65-f84656379bad Amount:19.9 RequestedAt:2025-08-01T11:02:47.214Z}
+backend-01  | 2025/08/01 11:02:47.214496 main.go:392: [Info] Enqueueing payment: {CorrelationId:867c62cf-9ecc-45f9-bba3-d4236effc167 Amount:19.9 RequestedAt:2025-08-01T11:02:47.214Z}
+backend-01  | 2025-08-01 11:02:47 | [92m204[0m |      85.649µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025-08-01 11:02:47 | [92m204[0m |     101.972µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:47.234884 main.go:392: [Info] Enqueueing payment: {CorrelationId:57440243-5b6e-477e-b681-ab5038989ec3 Amount:19.9 RequestedAt:2025-08-01T11:02:47.234Z}
+backend-02  | 2025-08-01 11:02:47 | [92m204[0m |      57.162µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:47.252514 main.go:392: [Info] Enqueueing payment: {CorrelationId:0a3e23f5-556a-4e04-ac71-3145f41c90f5 Amount:19.9 RequestedAt:2025-08-01T11:02:47.252Z}
+backend-01  | 2025-08-01 11:02:47 | [92m204[0m |      66.772µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025-08-01 11:02:47 | [92m204[0m |      84.216µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:47.269641 main.go:392: [Info] Enqueueing payment: {CorrelationId:e7776985-6ec0-405a-9961-18d35540bf95 Amount:19.9 RequestedAt:2025-08-01T11:02:47.269Z}
+backend-01  | 2025-08-01 11:02:47 | [92m204[0m |      77.636µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:47.287447 main.go:392: [Info] Enqueueing payment: {CorrelationId:0b695e92-d96f-403e-af87-5c03df37433d Amount:19.9 RequestedAt:2025-08-01T11:02:47.287Z}
+backend-02  | 2025-08-01 11:02:47 | [92m204[0m |      57.766µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:47.289911 main.go:392: [Info] Enqueueing payment: {CorrelationId:19629cb0-60f6-40cd-a459-4c303325474c Amount:19.9 RequestedAt:2025-08-01T11:02:47.289Z}
+backend-01  | 2025/08/01 11:02:47.307118 main.go:392: [Info] Enqueueing payment: {CorrelationId:5bac0006-66f6-487d-beac-a30ff2c08c2c Amount:19.9 RequestedAt:2025-08-01T11:02:47.307Z}
+backend-02  | 2025-08-01 11:02:47 | [92m204[0m |      65.322µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025-08-01 11:02:47 | [92m204[0m |      62.923µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:47.307118 main.go:392: [Info] Enqueueing payment: {CorrelationId:bf05f6bd-d67b-497e-873b-75e70651f99a Amount:19.9 RequestedAt:2025-08-01T11:02:47.307Z}
+backend-01  | 2025-08-01 11:02:47 | [92m204[0m |      65.804µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025-08-01 11:02:47 | [92m204[0m |      87.416µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:47.323493 main.go:392: [Info] Enqueueing payment: {CorrelationId:46d76d32-c13c-4305-9467-498a9732d3df Amount:19.9 RequestedAt:2025-08-01T11:02:47.323Z}
+backend-01  | 2025/08/01 11:02:47.323493 main.go:392: [Info] Enqueueing payment: {CorrelationId:311f81e5-18b6-49f4-b17d-76fcaa31f25f Amount:19.9 RequestedAt:2025-08-01T11:02:47.323Z}
+backend-02  | 2025-08-01 11:02:47 | [92m204[0m |      67.253µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:47.344930 main.go:392: [Info] Enqueueing payment: {CorrelationId:f05b7c6b-c2e7-450b-bb2c-82bed3fa57c8 Amount:19.9 RequestedAt:2025-08-01T11:02:47.344Z}
+backend-01  | 2025/08/01 11:02:47.361557 main.go:392: [Info] Enqueueing payment: {CorrelationId:60d097bd-2cbd-4516-a695-de7401316b27 Amount:19.9 RequestedAt:2025-08-01T11:02:47.361Z}
+backend-01  | 2025-08-01 11:02:47 | [92m204[0m |      70.922µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025-08-01 11:02:47 | [92m204[0m |      66.946µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:47.378970 main.go:392: [Info] Enqueueing payment: {CorrelationId:28879aae-7978-45f6-a8ab-adcc7bc5cce5 Amount:19.9 RequestedAt:2025-08-01T11:02:47.378Z}
+backend-02  | 2025/08/01 11:02:47.397411 main.go:392: [Info] Enqueueing payment: {CorrelationId:7510840b-6490-4126-a9ca-7069b42e558e Amount:19.9 RequestedAt:2025-08-01T11:02:47.397Z}
+backend-02  | 2025-08-01 11:02:47 | [92m204[0m |      62.892µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025-08-01 11:02:47 | [92m204[0m |      62.358µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:47.417230 main.go:392: [Info] Enqueueing payment: {CorrelationId:9a8834db-2d3a-407b-bdc5-1079d014e519 Amount:19.9 RequestedAt:2025-08-01T11:02:47.417Z}
+backend-02  | 2025/08/01 11:02:47.430394 main.go:392: [Info] Enqueueing payment: {CorrelationId:7f69caaf-fb20-4c4b-8072-1f6584590eb2 Amount:19.9 RequestedAt:2025-08-01T11:02:47.430Z}
+backend-01  | 2025-08-01 11:02:47 | [92m204[0m |      89.914µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:47.430390 main.go:392: [Info] Enqueueing payment: {CorrelationId:2b29c70f-8bff-43ee-b419-442c9dfeaef6 Amount:19.9 RequestedAt:2025-08-01T11:02:47.430Z}
+backend-02  | 2025-08-01 11:02:47 | [92m204[0m |      51.463µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025-08-01 11:02:47 | [92m204[0m |      54.675µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:47.433148 main.go:392: [Info] Enqueueing payment: {CorrelationId:ce3d222c-e79a-4965-9946-a73c2e41a86b Amount:19.9 RequestedAt:2025-08-01T11:02:47.433Z}
+backend-01  | 2025-08-01 11:02:47 | [92m204[0m |      71.623µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:47.433646 main.go:392: [Info] Enqueueing payment: {CorrelationId:ca117e24-0580-4cc1-9827-d01723fee80f Amount:19.9 RequestedAt:2025-08-01T11:02:47.433Z}
+backend-02  | 2025-08-01 11:02:47 | [92m204[0m |      59.549µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:47.452091 main.go:392: [Info] Enqueueing payment: {CorrelationId:fcbece3d-8b11-42c4-ae7a-0fbfc4d63b61 Amount:19.9 RequestedAt:2025-08-01T11:02:47.452Z}
+backend-01  | 2025/08/01 11:02:47.452090 main.go:392: [Info] Enqueueing payment: {CorrelationId:5aeddb49-c00b-4c8e-9ea3-d4161cc22670 Amount:19.9 RequestedAt:2025-08-01T11:02:47.452Z}
+backend-01  | 2025-08-01 11:02:47 | [92m204[0m |       56.88µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:47.471138 main.go:392: [Info] Enqueueing payment: {CorrelationId:8ac6e514-5f9b-4691-98a8-f9b0cca64c23 Amount:19.9 RequestedAt:2025-08-01T11:02:47.471Z}
+backend-01  | 2025-08-01 11:02:47 | [92m204[0m |      70.163µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:47.490323 main.go:392: [Info] Enqueueing payment: {CorrelationId:c5e8d459-67d3-4c20-b0e0-838d84914daf Amount:19.9 RequestedAt:2025-08-01T11:02:47.490Z}
+backend-02  | 2025-08-01 11:02:47 | [92m204[0m |      70.339µs | [92mPOST[0m /payments | 172.20.0.5
+backend-01  | 2025/08/01 11:02:47.505920 main.go:392: [Info] Enqueueing payment: {CorrelationId:329c47bd-dafa-47c7-a53b-86147347e73b Amount:19.9 RequestedAt:2025-08-01T11:02:47.505Z}
+backend-01  | 2025-08-01 11:02:47 | [92m204[0m |      74.263µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:47.508511 main.go:392: [Info] Enqueueing payment: {CorrelationId:7563cb8f-d28e-455b-84ff-47b309f6e9e6 Amount:19.9 RequestedAt:2025-08-01T11:02:47.508Z}
+backend-02  | 2025-08-01 11:02:47 | [92m204[0m |      74.573µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025-08-01 11:02:47 | [92m204[0m |      80.071µs | [92mPOST[0m /payments | 172.20.0.5
+backend-02  | 2025/08/01 11:02:47.525869 main.go:392: [Info] Enqueueing payment: {CorrelationId:3fbceef1-1f8f-42cc-97ef-f13eaf2ca00f Amount:19.9 RequestedAt:2025-08-01T11:02:47.525Z}
+log truncated at line 1000
