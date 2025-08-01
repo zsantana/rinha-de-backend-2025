@@ -25,10 +25,10 @@ services:
       resources:
         limits:
           cpus: "0.3"
-          memory: "70MB"
+          memory: "65MB"
 
   api01: &api
-    image: silvaangelolambda/rinha-api-2025:20250731-2
+    image: silvaangelolambda/rinha-api-2025:20250801-1
     command: >
       bun --optimize-for-size /api/index.js
     environment:
@@ -46,11 +46,19 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.525"
-          memory: "125MB"
+          cpus: "0.3"
+          memory: "85MB"
 
   api02:
     <<: *api
+
+  worker01:
+    <<: *api
+    environment:
+      - REDIS_URL=redis://redis:6379
+      - PROCESSOR_DEFAULT_URL=http://payment-processor-default:8080
+      - PROCESSOR_FALLBACK_URL=http://payment-processor-fallback:8080
+      - WORKER_INSTANCE=worker_instance
 
   haproxy:
     image: haproxy:2.9-alpine
@@ -67,7 +75,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.2"
+          cpus: "0.3"
           memory: "30MB"
 
 networks:
