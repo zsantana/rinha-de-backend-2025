@@ -1,6 +1,8 @@
 services:
   app1: &app
-    image: caiogallo2401/onecent:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
     container_name: go-app-1
     restart: unless-stopped
     networks:
@@ -12,10 +14,10 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.4"
+          cpus: "0.5"
           memory: 40M
         reservations:
-          cpus: "0.3"
+          cpus: "0.4"
           memory: 30M
     environment:
       - APP_ENV=production
@@ -52,7 +54,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.25"
+          cpus: "0.20"
           memory: 40M
         reservations:
           cpus: "0.15"
@@ -84,7 +86,6 @@ services:
     ports:
       - "5433:5432"
     volumes:
-      - postgres_data:/var/lib/postgresql/data
       - ./postgresql.conf:/etc/postgresql/postgresql.conf:ro
     networks:
       - backend
@@ -93,7 +94,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.45"
+          cpus: "0.40"
           memory: 230M
         reservations:
           cpus: "0.35"
@@ -104,10 +105,6 @@ services:
       timeout: 10s
       retries: 3
       start_period: 30s
-
-volumes:
-  postgres_data:
-    driver: local
 
 networks:
   backend:
