@@ -10,7 +10,7 @@ services:
     ports:
       - "5432:5432"
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready"]
+      test: ["CMD-SHELL", "pg_isready -U postgres -d postgres -h localhost"]
       interval: 5s
       timeout: 5s
       retries: 5
@@ -45,7 +45,7 @@ services:
           memory: "50MB"
 
   go_rinha_1: &go_rinha_template
-    image: ghcr.io/lucaslimafernandes/rinha-backend-2025-go:v1.0.1
+    image: ghcr.io/lucaslimafernandes/rinha-backend-2025-go:v1.2.1
     container_name: go_rinha_1
     networks:
       - backend
@@ -69,6 +69,11 @@ services:
   go_rinha_2:
     <<: *go_rinha_template
     container_name: go_rinha_2
+    environment:
+      - PG_DSN=user=postgres password=password host=db_pg port=5432 dbname=postgres sslmode=disable
+      - PAYMENT_PROCESSOR_DEFAULT_URL=http://payment-processor-default:8080
+      - PAYMENT_PROCESSOR_FALLBACK_URL=http://payment-processor-fallback:8080
+      - CREATE_SCHEMA=true
 
 volumes:
   db_pg-data:
