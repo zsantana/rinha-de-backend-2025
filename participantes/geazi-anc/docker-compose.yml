@@ -32,7 +32,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "1.50"
+          cpus: "0.9"
           memory: "100MB"
     depends_on:
       - valkey-server
@@ -48,7 +48,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.20"
+          cpus: "0.10"
           memory: "25MB"
     networks:
       - backend
