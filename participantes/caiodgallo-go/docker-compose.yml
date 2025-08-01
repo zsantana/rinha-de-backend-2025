@@ -1,8 +1,6 @@
 services:
   app1: &app
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: caiogallo2401/onecent:latest
     container_name: go-app-1
     restart: unless-stopped
     networks:
