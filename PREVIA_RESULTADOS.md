@@ -1,6 +1,6 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Fri Aug  1 01:03:33 PM -03 2025**
-194 submissões / 172 resultados / 22 submissões com erro
+Atualizado em **Fri Aug  1 01:14:38 PM -03 2025**
+195 submissões / 173 resultados / 22 submissões com erro
 
 
 | participante | p99 | bônus por desempenho (%) | multa ($) | lucro | submissão |
@@ -36,6 +36,7 @@ Atualizado em **Fri Aug  1 01:03:33 PM -03 2025**
 |	danielsuhett-nestjs	|	71.86ms	|	0%	|	0	|	309976.33	|	[danielsuhett-nestjs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/danielsuhett-nestjs)
 |	danielwisky	|	178.63ms	|	0%	|	26495.90475000105	|	49206.68025000195	|	[danielwisky](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/danielwisky)
 |	daniilha-php	|	8.4ms	|	5%	|	0	|	309592.857	|	[daniilha-php](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/daniilha-php)
+|	daniloneto	|	12.6ms	|	0%	|	0	|	309256.945	|	[daniloneto](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/daniloneto)
 |	danilosantana-dotnet	|	76.62ms	|	0%	|	38951.066	|	72337.694	|	[danilosantana-dotnet](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/danilosantana-dotnet)
 |	davidalecrim1-go-1	|	4.19ms	|	14%	|	0	|	344105.7852	|	[davidalecrim1-go-1](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/davidalecrim1-go-1)
 |	davidalecrim1-go-2	|	12.42ms	|	0%	|	105314.63075	|	195584.31425	|	[davidalecrim1-go-2](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/davidalecrim1-go-2)
@@ -153,7 +154,7 @@ Atualizado em **Fri Aug  1 01:03:33 PM -03 2025**
 |	rodrigocaldeira-elixir	|	12.91ms	|	0%	|	106636.58775	|	198039.37725	|	[rodrigocaldeira-elixir](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/rodrigocaldeira-elixir)
 |	rodrigo-militao	|	4.58ms	|	13%	|	0	|	350029.2689499472	|	[rodrigo-militao](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/rodrigo-militao)
 |	rodrigo-schonardt-go	|	6.03ms	|	10%	|	0	|	137051.101	|	[rodrigo-schonardt-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/rodrigo-schonardt-go)
-|	ronssm-CopiRinhaGo	|	279.81ms	|	0%	|	81628.05875	|	151594.96625	|	[ronssm-CopiRinhaGo](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/ronssm-CopiRinhaGo)
+|	ronssm-CopiRinhaGo	|	104.17ms	|	0%	|	42376.80125	|	78699.77375	|	[ronssm-CopiRinhaGo](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/ronssm-CopiRinhaGo)
 |	RuanPabloCR-Rruim	|	1407.72ms	|	0%	|	0	|	0	|	[RuanPabloCR-Rruim](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/RuanPabloCR-Rruim)
 |	ryangst-bun	|	1219.99ms	|	0%	|	0	|	0	|	[ryangst-bun](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/ryangst-bun)
 |	ryrden-clojure	|	123.05ms	|	0%	|	67151.30625	|	124709.56875	|	[ryrden-clojure](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/ryrden-clojure)
@@ -166,7 +167,7 @@ Atualizado em **Fri Aug  1 01:03:33 PM -03 2025**
 |	vctrhugo-fastapi	|	1449.12ms	|	0%	|	74511.22175	|	138377.98325	|	[vctrhugo-fastapi](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/vctrhugo-fastapi)
 |	victorverdoodt-cs	|	87.79ms	|	0%	|	108586.4395	|	201660.5305	|	[victorverdoodt-cs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/victorverdoodt-cs)
 |	victorverdoodt-cs-redis	|	86.08ms	|	0%	|	108896.03375	|	202235.49125	|	[victorverdoodt-cs-redis](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/victorverdoodt-cs-redis)
-|	wellington-pacheco-fine-tunning	|	3.75ms	|	15%	|	0	|	364114.081	|	[wellington-pacheco-fine-tunning](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/wellington-pacheco-fine-tunning)
+|	wellington-pacheco-fine-tunning	|	11.39ms	|	0%	|	0	|	316294.58	|	[wellington-pacheco-fine-tunning](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/wellington-pacheco-fine-tunning)
 |	wellington-pacheco	|	2.84ms	|	16%	|	0	|	367208.73000003176	|	[wellington-pacheco](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/wellington-pacheco)
 |	wiliansimoes-dotnet	|	48.92ms	|	0%	|	0	|	307595.295	|	[wiliansimoes-dotnet](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/wiliansimoes-dotnet)
 |	willianmarquess-lua-luvit	|	25.1ms	|	0%	|	0	|	0	|	[willianmarquess-lua-luvit](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/willianmarquess-lua-luvit)
