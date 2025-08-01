@@ -1,0 +1,43 @@
+
+ Network lucas-santana_default  Creating
+ Network lucas-santana_default  Created
+ Container lucas-santana-keydb-1  Creating
+ Container lucas-santana-keydb-1  Created
+ Container lucas-santana-api02-1  Creating
+ Container lucas-santana-worker-1  Creating
+ Container lucas-santana-api01-1  Creating
+ Container lucas-santana-worker-1  Created
+ Container lucas-santana-api02-1  Created
+ Container lucas-santana-api01-1  Created
+ Container lucas-santana-lighttpd-1  Creating
+ Container lucas-santana-lighttpd-1  Created
+Attaching to api01-1, api02-1, keydb-1, lighttpd-1, worker-1
+keydb-1     | 1:1:C 01 Aug 2025 00:28:04.632 # oO0OoO0OoO0Oo KeyDB is starting oO0OoO0OoO0Oo
+keydb-1     | 1:1:C 01 Aug 2025 00:28:04.632 # KeyDB version=6.3.4, bits=64, commit=7e7e5e57, modified=1, pid=1, just started
+keydb-1     | 1:1:C 01 Aug 2025 00:28:04.632 # Configuration loaded
+keydb-1     | 1:1:C 01 Aug 2025 00:28:04.633 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+keydb-1     | 1:1:M 01 Aug 2025 00:28:04.634 * monotonic clock: POSIX clock_gettime
+keydb-1     |                                                                       
+keydb-1     |                   _                                                   
+keydb-1     |                _-(+)-_                                                
+keydb-1     |             _-- /   \ --_                                            
+keydb-1     |          _--   /     \   --_            KeyDB  6.3.4 (7e7e5e57/1) 64 bit     
+keydb-1     |      __--     /       \     --__                                     
+keydb-1     |     (+) _    /         \    _ (+)       Running in standalone mode
+keydb-1     |      |   -- /           \ --   |        Port: 6379
+keydb-1     |      |     /--_   _   _--\     |        PID: 1
+keydb-1     |      |    /     -(+)-     \    |                                     
+keydb-1     |      |   /        |        \   |        https://docs.keydb.dev       
+keydb-1     |      |  /         |         \  |                                     
+keydb-1     |      | /          |          \ |                                     
+keydb-1     |     (+)_ -- -- -- | -- -- -- _(+)                                     
+keydb-1     |         --_       |       _--                                         
+keydb-1     |             --_   |   _--                                             
+keydb-1     |                 -(+)-        KeyDB has now joined Snap! See the announcement at:  https://docs.keydb.dev/news
+keydb-1     | 
+keydb-1     |                                                                      
+keydb-1     | 1:1:M 01 Aug 2025 00:28:04.867 # Server initialized
+keydb-1     | 1:26:M 01 Aug 2025 00:28:04.868 * Thread 0 alive.
+keydb-1     | 1:27:M 01 Aug 2025 00:28:04.868 * Thread 1 alive.
+keydb-1     | 1:29:M 01 Aug 2025 00:28:04.868 * Thread 2 alive.
+dependency failed to start: container lucas-santana-api01-1 is unhealthy
