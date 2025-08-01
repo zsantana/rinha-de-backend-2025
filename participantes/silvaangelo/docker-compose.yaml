@@ -2,10 +2,10 @@ services:
   redis:
     build:
       context: .
-      dockerfile: ./redis/Dockerfile
+      dockerfile: ./Dockerfile
     hostname: redis
     volumes:
-      - ./redis/redis.conf:/usr/local/etc/redis/redis.conf
+      - ./redis.conf:/usr/local/etc/redis/redis.conf
       - redis-socket:/var/run/redis
     command: >
       redis-server
