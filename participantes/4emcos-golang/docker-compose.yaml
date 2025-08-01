@@ -1,5 +1,5 @@
 services:
-  backend-01: &backend
+  backend-01:
     image: ghcr.io/4emcos/rinha-backend-2025-golang:1.0.1
     container_name: backend-01
     hostname: backend-01
@@ -26,9 +26,30 @@ services:
           memory: "70MB"
 
   backend-02:
-    <<: *backend
+    image: ghcr.io/4emcos/rinha-backend-2025-golang:1.0.1
     container_name: backend-02
     hostname: backend-02
+    environment:
+      APP_PORT: 5000
+      PAYMENT_PROCESSOR_FALLBACK: http://payment-processor-fallback:8080
+      PAYMENT_PROCESSOR_DEFAULT: http://payment-processor-default:8080
+      REDIS_URL: redis:6379
+    networks:
+      - payment-processor
+      - backend
+    depends_on:
+      - redis
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/health"]
+      interval: 5s
+      timeout: 2s
+      retries: 5
+      start_period: 5s
+    deploy:
+      resources:
+        limits:
+          cpus: "0.50"
+          memory: "70MB"
 
   redis:
     image: redis:8.0.3-alpine
@@ -58,7 +79,6 @@ services:
         condition: service_healthy
       backend-02:
         condition: service_healthy
-
     networks:
       - backend
     ports:
