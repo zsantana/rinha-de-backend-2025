@@ -25,7 +25,7 @@ services:
       resources:
         limits:
           cpus: "0.3"
-          memory: "70MB"
+          memory: "60MB"
 
   api01: &api
     image: silvaangelolambda/rinha-api-2025:20250801-2
@@ -59,6 +59,11 @@ services:
       - PROCESSOR_DEFAULT_URL=http://payment-processor-default:8080
       - PROCESSOR_FALLBACK_URL=http://payment-processor-fallback:8080
       - API_INSTANCE=api02
+    deploy:
+      resources:
+        limits:
+          cpus: "0.3"
+          memory: "90MB"
 
   worker01:
     <<: *api
@@ -67,6 +72,11 @@ services:
       - PROCESSOR_DEFAULT_URL=http://payment-processor-default:8080
       - PROCESSOR_FALLBACK_URL=http://payment-processor-fallback:8080
       - WORKER_INSTANCE=worker_instance
+    deploy:
+      resources:
+        limits:
+          cpus: "0.3"
+          memory: "80MB"
 
   haproxy:
     image: haproxy:2.9-alpine
