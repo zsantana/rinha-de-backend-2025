@@ -1,0 +1,176 @@
+
+ backend-1 Pulling 
+ worker Pulling 
+ backend-2 Pulling 
+ 44cf07d57ee4 Pulling fs layer 
+ f885a9d5ef2e Pulling fs layer 
+ 00765b813b2a Pulling fs layer 
+ 44cf07d57ee4 Pulling fs layer 
+ f885a9d5ef2e Pulling fs layer 
+ fb757874c7a1 Pulling fs layer 
+ fb757874c7a1 Waiting 
+ 44cf07d57ee4 Pulling fs layer 
+ f885a9d5ef2e Pulling fs layer 
+ 00765b813b2a Pulling fs layer 
+ f885a9d5ef2e Downloading [==================================================>]      93B/93B
+ f885a9d5ef2e Downloading [==================================================>]      93B/93B
+ f885a9d5ef2e Downloading [==================================================>]      93B/93B
+ f885a9d5ef2e Verifying Checksum 
+ f885a9d5ef2e Download complete 
+ f885a9d5ef2e Verifying Checksum 
+ f885a9d5ef2e Download complete 
+ f885a9d5ef2e Verifying Checksum 
+ f885a9d5ef2e Download complete 
+ 44cf07d57ee4 Downloading [>                                                  ]  35.02kB/3.418MB
+ 44cf07d57ee4 Downloading [>                                                  ]  35.02kB/3.418MB
+ 44cf07d57ee4 Downloading [>                                                  ]  35.02kB/3.418MB
+ 44cf07d57ee4 Verifying Checksum 
+ 44cf07d57ee4 Verifying Checksum 
+ 44cf07d57ee4 Download complete 
+ 44cf07d57ee4 Download complete 
+ 44cf07d57ee4 Download complete 
+ 44cf07d57ee4 Extracting [>                                                  ]  65.54kB/3.418MB
+ 44cf07d57ee4 Extracting [>                                                  ]  65.54kB/3.418MB
+ 44cf07d57ee4 Extracting [>                                                  ]  65.54kB/3.418MB
+ 44cf07d57ee4 Extracting [==================================================>]  3.418MB/3.418MB
+ 44cf07d57ee4 Extracting [==================================================>]  3.418MB/3.418MB
+ 44cf07d57ee4 Extracting [==================================================>]  3.418MB/3.418MB
+ 44cf07d57ee4 Pull complete 
+ 44cf07d57ee4 Pull complete 
+ 44cf07d57ee4 Pull complete 
+ f885a9d5ef2e Extracting [==================================================>]      93B/93B
+ f885a9d5ef2e Extracting [==================================================>]      93B/93B
+ f885a9d5ef2e Extracting [==================================================>]      93B/93B
+ f885a9d5ef2e Extracting [==================================================>]      93B/93B
+ f885a9d5ef2e Extracting [==================================================>]      93B/93B
+ f885a9d5ef2e Extracting [==================================================>]      93B/93B
+ f885a9d5ef2e Pull complete 
+ f885a9d5ef2e Pull complete 
+ f885a9d5ef2e Pull complete 
+ fb757874c7a1 Downloading [>                                                  ]  63.92kB/6.086MB
+ fb757874c7a1 Verifying Checksum 
+ fb757874c7a1 Download complete 
+ fb757874c7a1 Extracting [>                                                  ]  65.54kB/6.086MB
+ fb757874c7a1 Extracting [==================================================>]  6.086MB/6.086MB
+ fb757874c7a1 Pull complete 
+ worker Pulled 
+ 00765b813b2a Downloading [>                                                  ]  29.31kB/2.844MB
+ 00765b813b2a Downloading [>                                                  ]  29.31kB/2.844MB
+ 00765b813b2a Downloading [==>                                                ]  145.9kB/2.844MB
+ 00765b813b2a Downloading [==>                                                ]  145.9kB/2.844MB
+ 00765b813b2a Downloading [==========>                                        ]  590.4kB/2.844MB
+ 00765b813b2a Downloading [==========>                                        ]  590.4kB/2.844MB
+ 00765b813b2a Downloading [=====================>                             ]  1.225MB/2.844MB
+ 00765b813b2a Downloading [=====================>                             ]  1.225MB/2.844MB
+ 00765b813b2a Verifying Checksum 
+ 00765b813b2a Download complete 
+ 00765b813b2a Extracting [>                                                  ]  32.77kB/2.844MB
+ 00765b813b2a Download complete 
+ 00765b813b2a Extracting [>                                                  ]  32.77kB/2.844MB
+ 00765b813b2a Extracting [==================================================>]  2.844MB/2.844MB
+ 00765b813b2a Extracting [==================================================>]  2.844MB/2.844MB
+ 00765b813b2a Pull complete 
+ 00765b813b2a Pull complete 
+ backend-2 Pulled 
+ backend-1 Pulled 
+ Network rodrigo-militao_backend  Creating
+ Network rodrigo-militao_backend  Created
+ Container rodrigo-militao-backend-1-1  Creating
+ Container rodrigo-militao-backend-2-1  Creating
+ Container redis  Creating
+ Container rodrigo-militao-worker-1  Creating
+ Container rodrigo-militao-backend-2-1  Created
+ Container rodrigo-militao-backend-1-1  Created
+ Container nginx-lb  Creating
+ Container rodrigo-militao-worker-1  Created
+ Container redis  Created
+ Container nginx-lb  Created
+Attaching to nginx-lb, redis, backend-1-1, backend-2-1, worker-1
+redis        | 1:C 01 Aug 2025 00:07:48.826 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+redis        | 1:C 01 Aug 2025 00:07:48.826 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+redis        | 1:C 01 Aug 2025 00:07:48.826 * Redis version=7.4.5, bits=64, commit=00000000, modified=0, pid=1, just started
+redis        | 1:C 01 Aug 2025 00:07:48.826 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf
+redis        | 1:M 01 Aug 2025 00:07:48.826 * monotonic clock: POSIX clock_gettime
+redis        | 1:M 01 Aug 2025 00:07:48.827 * Running mode=standalone, port=6379.
+redis        | 1:M 01 Aug 2025 00:07:48.827 * Server initialized
+redis        | 1:M 01 Aug 2025 00:07:48.827 * Ready to accept connections tcp
+backend-2-1  | 2025/08/01 00:07:48 API iniciada. Pressione Ctrl+C para encerrar.
+backend-2-1  | 2025/08/01 00:07:48 Servidor HTTP escutando em :8080
+worker-1     | 2025/08/01 00:07:48 Iniciando 4 workers...
+worker-1     | 2025/08/01 00:07:48 Workers rodando. Pressione Ctrl+C para encerrar.
+backend-1-1  | 2025/08/01 00:07:49 API iniciada. Pressione Ctrl+C para encerrar.
+backend-1-1  | 2025/08/01 00:07:49 Servidor HTTP escutando em :8080
+nginx-lb     | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+nginx-lb     | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+nginx-lb     | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+nginx-lb     | 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+nginx-lb     | 10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
+nginx-lb     | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+nginx-lb     | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+nginx-lb     | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+nginx-lb     | /docker-entrypoint.sh: Configuration complete; ready for start up
+redis        | 1:M 01 Aug 2025 00:08:49.050 * 10000 changes in 60 seconds. Saving...
+redis        | 1:M 01 Aug 2025 00:08:49.050 * Background saving started by pid 360
+redis        | 360:C 01 Aug 2025 00:08:49.082 * DB saved on disk
+redis        | 360:C 01 Aug 2025 00:08:49.083 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+redis        | 1:M 01 Aug 2025 00:08:49.151 * Background saving terminated with success
+redis        | 1:signal-handler (1754006938) Received SIGTERM scheduling shutdown...
+worker-1     | 2025/08/01 00:08:58 [Worker 0] Redis error: context canceled
+worker-1     | 2025/08/01 00:08:58 Encerrando workers...
+worker-1     | 2025/08/01 00:08:58 [Worker 2] Redis error: context canceled
+worker-1     | 2025/08/01 00:08:58 [Worker 1] Redis error: context canceled
+worker-1     | 2025/08/01 00:08:58 [Worker 3] Redis error: context canceled
+redis        | 1:M 01 Aug 2025 00:08:58.845 * User requested shutdown...
+redis        | 1:M 01 Aug 2025 00:08:58.845 * Saving the final RDB snapshot before exiting.
+redis        | 1:M 01 Aug 2025 00:08:58.899 * DB saved on disk
+redis        | 1:M 01 Aug 2025 00:08:58.899 # Redis is now ready to exit, bye bye...
+[Knginx-lb exited with code 0
+[Kredis exited with code 0
+backend-2-1  | 2025/08/01 00:08:59 Encerrando servidor HTTP...
+backend-2-1  | 2025/08/01 00:08:59 Servidor HTTP encerrado.
+backend-1-1  | 2025/08/01 00:08:59 Encerrando servidor HTTP...
+backend-1-1  | 2025/08/01 00:08:59 Servidor HTTP encerrado.
+[Kbackend-2-1 exited with code 0
+[Kbackend-1-1 exited with code 0
+worker-1     | 2025/08/01 00:08:59 [Worker 3] Redis error: context canceled
+worker-1     | 2025/08/01 00:08:59 [Worker 2] Redis error: context canceled
+worker-1     | 2025/08/01 00:08:59 [Worker 1] Redis error: context canceled
+worker-1     | 2025/08/01 00:08:59 [Worker 0] Redis error: context canceled
+worker-1     | 2025/08/01 00:09:00 [Worker 0] Redis error: context canceled
+worker-1     | 2025/08/01 00:09:00 [Worker 2] Redis error: context canceled
+worker-1     | 2025/08/01 00:09:00 [Worker 3] Redis error: context canceled
+worker-1     | 2025/08/01 00:09:00 [Worker 1] Redis error: context canceled
+worker-1     | 2025/08/01 00:09:01 [Worker 1] Redis error: context canceled
+worker-1     | 2025/08/01 00:09:01 [Worker 3] Redis error: context canceled
+worker-1     | 2025/08/01 00:09:01 [Worker 0] Redis error: context canceled
+worker-1     | 2025/08/01 00:09:01 [Worker 2] Redis error: context canceled
+worker-1     | 2025/08/01 00:09:02 [Worker 2] Redis error: context canceled
+worker-1     | 2025/08/01 00:09:02 [Worker 0] Redis error: context canceled
+worker-1     | 2025/08/01 00:09:02 [Worker 1] Redis error: context canceled
+worker-1     | 2025/08/01 00:09:02 [Worker 3] Redis error: context canceled
+worker-1     | 2025/08/01 00:09:03 [Worker 2] Redis error: context canceled
+worker-1     | 2025/08/01 00:09:03 [Worker 3] Redis error: context canceled
+worker-1     | 2025/08/01 00:09:03 [Worker 0] Redis error: context canceled
+worker-1     | 2025/08/01 00:09:03 [Worker 1] Redis error: context canceled
+worker-1     | 2025/08/01 00:09:04 [Worker 1] Redis error: context canceled
+worker-1     | 2025/08/01 00:09:04 [Worker 2] Redis error: context canceled
+worker-1     | 2025/08/01 00:09:04 [Worker 0] Redis error: context canceled
+worker-1     | 2025/08/01 00:09:04 [Worker 3] Redis error: context canceled
+worker-1     | 2025/08/01 00:09:05 [Worker 0] Redis error: context canceled
+worker-1     | 2025/08/01 00:09:05 [Worker 2] Redis error: context canceled
+worker-1     | 2025/08/01 00:09:05 [Worker 3] Redis error: context canceled
+worker-1     | 2025/08/01 00:09:05 [Worker 1] Redis error: context canceled
+worker-1     | 2025/08/01 00:09:06 [Worker 1] Redis error: context canceled
+worker-1     | 2025/08/01 00:09:06 [Worker 3] Redis error: context canceled
+worker-1     | 2025/08/01 00:09:06 [Worker 0] Redis error: context canceled
+worker-1     | 2025/08/01 00:09:06 [Worker 2] Redis error: context canceled
+worker-1     | 2025/08/01 00:09:07 [Worker 0] Redis error: context canceled
+worker-1     | 2025/08/01 00:09:07 [Worker 2] Redis error: context canceled
+worker-1     | 2025/08/01 00:09:07 [Worker 1] Redis error: context canceled
+worker-1     | 2025/08/01 00:09:07 [Worker 3] Redis error: context canceled
+worker-1     | 2025/08/01 00:09:08 [Worker 3] Redis error: context canceled
+worker-1     | 2025/08/01 00:09:08 [Worker 1] Redis error: context canceled
+worker-1     | 2025/08/01 00:09:08 [Worker 0] Redis error: context canceled
+worker-1     | 2025/08/01 00:09:08 [Worker 2] Redis error: context canceled
+[Kworker-1 exited with code 137
+log truncated at line 1000
