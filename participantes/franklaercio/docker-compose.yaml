@@ -3,6 +3,7 @@ version: "3.8"
 services:
   postgres:
     image: postgres:15-alpine
+    hostname: postgres
     command: postgres -c max_connections=450 -c shared_buffers=40MB -c effective_cache_size=120MB -c work_mem=4MB -c maintenance_work_mem=16MB -c synchronous_commit=off -c fsync=off
     container_name: db
     restart: unless-stopped
@@ -17,9 +18,9 @@ services:
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U postgres -d rinha"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
+      interval: 2s
+      timeout: 2s
+      retries: 10
     deploy:
       resources:
         limits:
@@ -28,6 +29,7 @@ services:
 
   redis:
     image: redis:7-alpine
+    hostname: redis
     container_name: redis
     restart: unless-stopped
     networks:
@@ -65,6 +67,7 @@ services:
 
   api1: &api1
     image: franklaercio/rinha-backend-2025:latest
+    hostname: api1
     depends_on:
       postgres:
         condition: service_healthy
@@ -85,6 +88,11 @@ services:
       PAYMENT_URL_DEFAULT: "http://payment-processor-default:8080"
       PAYMENT_URL_FALLBACK: "http://payment-processor-fallback:8080"
     deploy:
+      restart_policy:
+        condition: on-failure
+        delay: 2s
+        max_attempts: 10
+        window: 5s
       resources:
         limits:
           cpus: "0.3"
