@@ -1,19 +1,19 @@
 x-service-templates:
   backend-service: &backend-service
-    image: ghcr.io/4emcos/rinha-backend-2025-golang:1.0.5
+    image: ghcr.io/4emcos/rinha-backend-2025-golang:1.0.6
     environment: &backend-env
       APP_PORT: 5000
       PAYMENT_PROCESSOR_FALLBACK: http://payment-processor-fallback:8080
       PAYMENT_PROCESSOR_DEFAULT: http://payment-processor-default:8080
-      REDIS_URL: redis:6379
+      WRITER_HOST: writer:6666
     networks:
       - payment-processor
       - backend
+      - writer-network
     depends_on:
-      redis:
-        condition: service_healthy
+      - writer
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:5000/health"]
+      test: [ "CMD", "curl", "-f", "http://localhost:5000/health" ]
       interval: 10s
       timeout: 3s
       retries: 3
@@ -21,7 +21,7 @@ x-service-templates:
     deploy:
       resources:
         limits:
-          cpus: "0.50"
+          cpus: "0.45"
           memory: "70MB"
 
 services:
@@ -35,34 +35,16 @@ services:
     container_name: backend-02
     hostname: backend-02
 
-  redis:
-    image: redis:8.0.3-alpine
-    container_name: redis
-    hostname: redis
+  writer:
+    hostname: writer
+    image: ghcr.io/4emcos/writer:1.0.0
     networks:
-      - backend
-    ports:
-      - "6379:6379"
-    command: |
-      redis-server 
-      --save ""
-      --appendonly no
-      --maxmemory 40mb
-      --maxmemory-policy allkeys-lru
-      --tcp-keepalive 60
-      --timeout 300
-    healthcheck:
-      test: ["CMD", "redis-cli", "--raw", "incr", "ping"]
-      interval: 5s
-      timeout: 3s
-      retries: 3
-      start_period: 10s
-    restart: unless-stopped
+      - writer-network
     deploy:
       resources:
         limits:
-          cpus: "0.3"
-          memory: "50MB"
+          cpus: "0.40"
+          memory: "85MB"
 
   nginx:
     image: nginx:1.27-alpine
@@ -86,6 +68,8 @@ services:
 
 networks:
   backend:
+    driver: bridge
+  writer-network:
     driver: bridge
   payment-processor:
     external: true
