@@ -1,0 +1,65 @@
+
+ Network svaan1-go_backend  Creating
+ Network svaan1-go_backend  Created
+ Container svaan1-go-redis-1  Creating
+ Container health  Creating
+ Container health  Created
+ Container svaan1-go-redis-1  Created
+ Container api2  Creating
+ Container api1  Creating
+ Container api2  Created
+ Container api1  Created
+ Container haproxy  Creating
+ Container haproxy  Created
+Attaching to api1, api2, haproxy, health, redis-1
+redis-1  | 1:C 31 Jul 2025 00:15:33.906 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+redis-1  | 1:C 31 Jul 2025 00:15:33.906 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+redis-1  | 1:C 31 Jul 2025 00:15:33.906 * Redis version=7.4.5, bits=64, commit=00000000, modified=0, pid=1, just started
+redis-1  | 1:C 31 Jul 2025 00:15:33.906 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf
+redis-1  | 1:M 31 Jul 2025 00:15:33.906 * monotonic clock: POSIX clock_gettime
+redis-1  | 1:M 31 Jul 2025 00:15:33.907 * Running mode=standalone, port=6379.
+redis-1  | 1:M 31 Jul 2025 00:15:33.907 * Server initialized
+redis-1  | 1:M 31 Jul 2025 00:15:33.907 * Ready to accept connections tcp
+health   | 2025/07/31 00:15:34 Starting server at :8080
+api2     | 
+api2     |  ┌───────────────────────────────────────────────────┐ 
+api2     |  │                   Fiber v2.52.9                   │ 
+api2     |  │                http://127.0.0.1:80                │ 
+api2     |  │        (bound on host 0.0.0.0 and port 80)        │ 
+api2     |  │                                                   │ 
+api2     |  │ Handlers ............. 4  Processes ........... 1 │ 
+api2     |  │ Prefork ....... Disabled  PID ................. 1 │ 
+api2     |  └───────────────────────────────────────────────────┘ 
+api2     | 
+api1     | 
+api1     |  ┌───────────────────────────────────────────────────┐ 
+api1     |  │                   Fiber v2.52.9                   │ 
+api1     |  │                http://127.0.0.1:80                │ 
+api1     |  │        (bound on host 0.0.0.0 and port 80)        │ 
+api1     |  │                                                   │ 
+api1     |  │ Handlers ............. 4  Processes ........... 1 │ 
+api1     |  │ Prefork ....... Disabled  PID ................. 1 │ 
+api1     |  └───────────────────────────────────────────────────┘ 
+api1     | 
+haproxy  | [NOTICE]   (1) : Initializing new worker (8)
+haproxy  | [NOTICE]   (1) : Loading success.
+redis-1  | 1:M 31 Jul 2025 00:16:34.015 * 10000 changes in 60 seconds. Saving...
+redis-1  | 1:M 31 Jul 2025 00:16:34.016 * Background saving started by pid 22
+redis-1  | 22:C 31 Jul 2025 00:16:34.145 * DB saved on disk
+redis-1  | 22:C 31 Jul 2025 00:16:34.146 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+redis-1  | 1:M 31 Jul 2025 00:16:34.219 * Background saving terminated with success
+haproxy  | [NOTICE]   (1) : haproxy version is 3.2.3-1844da7
+haproxy  | [WARNING]  (1) : Exiting Master process...
+haproxy  | [WARNING]  (8) : Proxy frontend stopped (cumulated conns: FE: 553, BE: 0).
+haproxy  | [WARNING]  (8) : Proxy backend stopped (cumulated conns: FE: 0, BE: 16757).
+haproxy  | [WARNING]  (1) : Current worker (8) exited with code 0 (Exit)
+haproxy  | [WARNING]  (1) : All workers exited. Exiting... (0)
+[Khaproxy exited with code 0
+[Kapi2 exited with code 2
+redis-1  | 1:signal-handler (1753921004) Received SIGTERM scheduling shutdown...
+redis-1  | 1:M 31 Jul 2025 00:16:44.721 * User requested shutdown...
+redis-1  | 1:M 31 Jul 2025 00:16:44.721 * Saving the final RDB snapshot before exiting.
+redis-1  | 1:M 31 Jul 2025 00:16:44.756 * DB saved on disk
+redis-1  | 1:M 31 Jul 2025 00:16:44.756 # Redis is now ready to exit, bye bye...
+[Khealth exited with code 2
+log truncated at line 1000

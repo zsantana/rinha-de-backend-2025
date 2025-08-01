@@ -35,9 +35,10 @@ while true; do
     (
         git pull
         participant=$(echo $directory | sed -e 's/..\/participantes\///g' -e 's/\///g')
-        echo "participant: $participant"
+        echo "========================================"
+        echo "  Participant $participant starting..."
+        echo "========================================"
 
-        
         testedFile="$directory/partial-results.json"
 
         if ! test -f $testedFile; then
@@ -81,6 +82,8 @@ while true; do
             echo "================================="
             echo "  Finished testing $participant!"
             echo "================================="
+
+            sleep 5
 
         else
             echo "================================="
