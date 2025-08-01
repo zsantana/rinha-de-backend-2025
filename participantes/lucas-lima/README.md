@@ -1,6 +1,6 @@
 # Rinha de Backend 2025 - Submissão
 
-Autor: Lucas Lima Fernandes
+Autor: Lucas de Lima Chaves
 
 [Github](https://github.com/gitlucaslima/)
 [Linkedin](https://www.linkedin.com/in/llchaves/)
