@@ -1,6 +1,6 @@
 x-service-templates:
   base: &base
-    image: josiney/rdb25_02-amd64:69d188da
+    image: josiney/rdb25_02-amd64:cde0095f
     networks:
       - backend
       - payment-processor
@@ -44,6 +44,25 @@ services:
     depends_on:
       - worker1
 
+  api3:
+    <<: *base
+    container_name: api3
+    hostname: api3
+    deploy:
+      resources:
+        limits:
+          cpus: "0.1"
+          memory: "30MB"
+    environment:
+      - PORT=9994
+      - PAYMENTS_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080/payments
+      - PAYMENTS_PROCESSOR_URL_FALLBACK=http://payment-processor-fallback:8080/payments
+      - HEALTH_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080/payments/service-health
+      - HEALTH_PROCESSOR_URL_FALLBACK=http://payment-processor-fallback:8080/payments/service-health
+    command: ./api
+    depends_on:
+      - worker1
+
   worker1:
     <<: *base
     container_name: worker1
@@ -51,7 +70,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "1.0"
+          cpus: "0.8"
           memory: "150MB"
     ports:
       - "9996:9996"
@@ -71,6 +90,7 @@ services:
     depends_on:
       - api1
       - api2
+      - api3
     ports:
       - "9999:9999"
     networks:
