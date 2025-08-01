@@ -1,17 +1,19 @@
 services:
   payment-service-1:
-    image: tiagodolphine/payment-service-quarkus:0.0.1
+    image: tiagodolphine/payment-service-quarkus:0.0.2
     environment:
       - PAYMENT_PROCESSOR_DEFAULT=payment-processor-default
       - PAYMENT_PROCESSOR_DEFAULT_PORT=8080
       - PAYMENT_PROCESSOR_FALLBACK=payment-processor-fallback
       - PAYMENT_PROCESSOR_FALLBACK_PORT=8080
-      - CHUNK_SIZE=105
-      - POLL_INTERVAL=400
+      - CHUNK_SIZE=2
+      - POLL_INTERVAL=5
+      - PROCESSOR_RETRY_MAX=500
       - REDIS_HOST=redis
       - REDIS_MAX_POOL_SIZE=405
-      - QUARKUS_VERTX_EVENT_LOOPS_POOL_SIZE=3
-      - QUARKUS_HTTP_IO_THREADS=4
+      - QUARKUS_VERTX_EVENT_LOOPS_POOL_SIZE=2
+      - QUARKUS_HTTP_IO_THREADS=1
+      - QUARKUS_VERTX_INTERNAL_BLOCKING_POOL_SIZE=1
       - QUARKUS_LOG_LEVEL=OFF
     networks:
       - backend
@@ -26,18 +28,20 @@ services:
         condition: service_healthy
 
   payment-service-2:
-    image: tiagodolphine/payment-service-quarkus:0.0.1
+    image: tiagodolphine/payment-service-quarkus:0.0.2
     environment:
       - PAYMENT_PROCESSOR_DEFAULT=payment-processor-default
       - PAYMENT_PROCESSOR_DEFAULT_PORT=8080
       - PAYMENT_PROCESSOR_FALLBACK=payment-processor-fallback
       - PAYMENT_PROCESSOR_FALLBACK_PORT=8080
-      - CHUNK_SIZE=105
-      - POLL_INTERVAL=400
+      - CHUNK_SIZE=2
+      - POLL_INTERVAL=5
+      - PROCESSOR_RETRY_MAX=500
       - REDIS_HOST=redis
       - REDIS_MAX_POOL_SIZE=405
-      - QUARKUS_VERTX_EVENT_LOOPS_POOL_SIZE=3
-      - QUARKUS_HTTP_IO_THREADS=4
+      - QUARKUS_VERTX_EVENT_LOOPS_POOL_SIZE=2
+      - QUARKUS_HTTP_IO_THREADS=1
+      - QUARKUS_VERTX_INTERNAL_BLOCKING_POOL_SIZE=1
       - QUARKUS_LOG_LEVEL=OFF
     networks:
       - backend
