@@ -1,89 +1,51 @@
 
- api1 Pulling 
- api2 Pulling 
- worker1 Pulling 
- 9824c27679d3 Already exists 
- 204e61c7a39b Already exists 
- 6325aea18f23 Already exists 
- 2db023856c08 Pulling fs layer 
- 810bfb7b14f1 Pulling fs layer 
- 9824c27679d3 Already exists 
- 204e61c7a39b Already exists 
- 6325aea18f23 Already exists 
- 2db023856c08 Pulling fs layer 
- 810bfb7b14f1 Pulling fs layer 
- 9824c27679d3 Already exists 
- 204e61c7a39b Already exists 
- 6325aea18f23 Already exists 
- 2db023856c08 Pulling fs layer 
- 810bfb7b14f1 Pulling fs layer 
- 2db023856c08 Downloading [>                                                  ]   21.9kB/2.114MB
- 2db023856c08 Downloading [>                                                  ]   21.9kB/2.114MB
- 2db023856c08 Downloading [>                                                  ]   21.9kB/2.114MB
- 2db023856c08 Download complete 
- 2db023856c08 Download complete 
- 2db023856c08 Download complete 
- 2db023856c08 Extracting [>                                                  ]  32.77kB/2.114MB
- 2db023856c08 Extracting [>                                                  ]  32.77kB/2.114MB
- 2db023856c08 Extracting [>                                                  ]  32.77kB/2.114MB
- 2db023856c08 Extracting [==================================================>]  2.114MB/2.114MB
- 2db023856c08 Extracting [==================================================>]  2.114MB/2.114MB
- 2db023856c08 Extracting [==================================================>]  2.114MB/2.114MB
- 2db023856c08 Pull complete 
- 2db023856c08 Pull complete 
- 2db023856c08 Pull complete 
- 810bfb7b14f1 Downloading [>                                                  ]  32.77kB/3.163MB
- 810bfb7b14f1 Downloading [>                                                  ]  32.77kB/3.163MB
- 810bfb7b14f1 Downloading [>                                                  ]  32.77kB/3.163MB
- 810bfb7b14f1 Verifying Checksum 
- 810bfb7b14f1 Download complete 
- 810bfb7b14f1 Download complete 
- 810bfb7b14f1 Extracting [>                                                  ]  32.77kB/3.163MB
- 810bfb7b14f1 Extracting [>                                                  ]  32.77kB/3.163MB
- 810bfb7b14f1 Download complete 
- 810bfb7b14f1 Extracting [>                                                  ]  32.77kB/3.163MB
- 810bfb7b14f1 Extracting [==================================================>]  3.163MB/3.163MB
- 810bfb7b14f1 Extracting [==================================================>]  3.163MB/3.163MB
- 810bfb7b14f1 Extracting [==================================================>]  3.163MB/3.163MB
- 810bfb7b14f1 Pull complete 
- 810bfb7b14f1 Pull complete 
- 810bfb7b14f1 Pull complete 
- worker1 Pulled 
- api2 Pulled 
- api1 Pulled 
  Network josineyjr-go-2_backend  Creating
  Network josineyjr-go-2_backend  Created
+ Volume "josineyjr-go-2_sockets"  Creating
+ Volume "josineyjr-go-2_sockets"  Created
  Container worker1  Creating
  Container worker1  Created
- Container api2  Creating
+ Container api3  Creating
+ Container api4  Creating
  Container api1  Creating
- Container api2  Created
+ Container api5  Creating
+ Container api2  Creating
+ Container api4  Created
  Container api1  Created
+ Container api3  Created
+ Container api2  Created
+ Container api5  Created
  Container haproxy_lb  Creating
  Container haproxy_lb  Created
-Attaching to api1, api2, haproxy_lb, worker1
-worker1     | {"level":"info","time":"2025-07-30T02:59:41Z","message":"Worker starting gnet HTTP server on port 9995..."}
-worker1     | {"level":"info","time":"2025-07-30T02:59:41Z","message":"Worker starting UDP listener on port 9996..."}
-worker1     | [gnet] 2025-07-30T02:59:41.423234422Z	INFO	logging/logger.go:256	Launching gnet with 3 event-loops, listening on: tcp://:9995
-api1        | 2025/07/30 02:59:42 Gnet server starting on tcp://:9997
-api1        | [gnet] 2025-07-30T02:59:42.239726576Z	INFO	logging/logger.go:256	Launching gnet with 3 event-loops, listening on: tcp://:9997
-api1        | {"level":"info","time":"2025-07-30T02:59:42Z","message":"Gnet server started on port 9997"}
-api2        | 2025/07/30 02:59:42 Gnet server starting on tcp://:9998
-api2        | [gnet] 2025-07-30T02:59:42.287538844Z	INFO	logging/logger.go:256	Launching gnet with 3 event-loops, listening on: tcp://:9998
-api2        | {"level":"info","time":"2025-07-30T02:59:42Z","message":"Gnet server started on port 9998"}
+Attaching to api1, api2, api3, api4, api5, haproxy_lb, worker1
+worker1     | {"level":"info","time":"2025-08-01T01:05:25Z","message":"Worker starting gnet HTTP server on unix:///sockets/worker_http.sock"}
+worker1     | [gnet] 2025-08-01T01:05:25.946939982Z	INFO	logging/logger.go:256	Launching gnet with 4 event-loops, listening on: unix:///sockets/worker_http.sock
+api5        | [gnet] 2025-08-01T01:05:26.60433167Z	INFO	logging/logger.go:256	Launching gnet with 4 event-loops, listening on: unix:///sockets/api5.sock
+api5        | {"level":"info","time":"2025-08-01T01:05:26Z","message":"Gnet server started on port 9999"}
+api5        | 2025/08/01 01:05:26 Gnet server starting on unix:///sockets/api5.sock
+api4        | 2025/08/01 01:05:26 Gnet server starting on unix:///sockets/api4.sock
+api4        | [gnet] 2025-08-01T01:05:26.737283609Z	INFO	logging/logger.go:256	Launching gnet with 4 event-loops, listening on: unix:///sockets/api4.sock
+api4        | {"level":"info","time":"2025-08-01T01:05:26Z","message":"Gnet server started on port 9999"}
+api3        | [gnet] 2025-08-01T01:05:26.790229333Z	INFO	logging/logger.go:256	Launching gnet with 4 event-loops, listening on: unix:///sockets/api3.sock
+api3        | {"level":"info","time":"2025-08-01T01:05:26Z","message":"Gnet server started on port 9999"}
+api3        | 2025/08/01 01:05:26 Gnet server starting on unix:///sockets/api3.sock
+api1        | 2025/08/01 01:05:26 Gnet server starting on unix:///sockets/api1.sock
+api1        | [gnet] 2025-08-01T01:05:26.791902109Z	INFO	logging/logger.go:256	Launching gnet with 4 event-loops, listening on: unix:///sockets/api1.sock
+api1        | {"level":"info","time":"2025-08-01T01:05:26Z","message":"Gnet server started on port 9999"}
+api2        | 2025/08/01 01:05:26 Gnet server starting on unix:///sockets/api2.sock
+api2        | [gnet] 2025-08-01T01:05:26.830148258Z	INFO	logging/logger.go:256	Launching gnet with 4 event-loops, listening on: unix:///sockets/api2.sock
+api2        | {"level":"info","time":"2025-08-01T01:05:26Z","message":"Gnet server started on port 9999"}
 haproxy_lb  | [NOTICE]   (1) : Initializing new worker (8)
 haproxy_lb  | [NOTICE]   (1) : Loading success.
 haproxy_lb  | [NOTICE]   (1) : haproxy version is 3.2.3-1844da7
 haproxy_lb  | [NOTICE]   (1) : path to executable is /usr/local/sbin/haproxy
 haproxy_lb  | [WARNING]  (1) : Exiting Master process...
-haproxy_lb  | [WARNING]  (8) : Proxy http-in stopped (cumulated conns: FE: 553, BE: 0).
-haproxy_lb  | [WARNING]  (8) : Proxy servers stopped (cumulated conns: FE: 0, BE: 16747).
-haproxy_lb  | [WARNING]  (8) : Proxy worker_backend stopped (cumulated conns: FE: 0, BE: 9).
+haproxy_lb  | [WARNING]  (8) : Proxy frontend stopped (cumulated conns: FE: 553, BE: 0).
+haproxy_lb  | [WARNING]  (8) : Proxy backend stopped (cumulated conns: FE: 0, BE: 16750).
 haproxy_lb  | [WARNING]  (1) : Current worker (8) exited with code 0 (Exit)
 haproxy_lb  | [WARNING]  (1) : All workers exited. Exiting... (0)
 [Khaproxy_lb exited with code 0
-[Kapi1 exited with code 2
-[Kapi2 exited with code 2
-worker1     | {"level":"info","time":"2025-07-30T03:00:53Z","message":"Worker stopped gracefully"}
+[Kapi3 exited with code 2
+worker1     | {"level":"info","time":"2025-08-01T01:06:37Z","message":"Worker stopped gracefully"}
 [Kworker1 exited with code 0
 log truncated at line 1000

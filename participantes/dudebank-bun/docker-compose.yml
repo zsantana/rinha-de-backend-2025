@@ -1,6 +1,6 @@
 services:
   api1: &api-service
-    image: eber404/dudebank:0.0.2
+    image: eber404/dudebank:0.0.3
     env_file:
       - .env
     ports:
@@ -24,7 +24,7 @@ services:
       - '3002:8080'
 
   memorydb:
-    image: eber404/dudebank-db:0.0.2
+    image: eber404/dudebank-db:0.0.3
     volumes:
       - memorydb_data:/app/data
     networks:
