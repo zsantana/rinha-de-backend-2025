@@ -1,5 +1,5 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Thu Jul 31 11:01:42 PM -03 2025**
+Atualizado em **Thu Jul 31 11:10:51 PM -03 2025**
 189 submissões / 166 resultados / 23 submissões com erro
 
 
@@ -71,9 +71,9 @@ Atualizado em **Thu Jul 31 11:01:42 PM -03 2025**
 |	guilhermegules-payflow-node	|	291.37ms	|	0%	|	0	|	48839.575	|	[guilhermegules-payflow-node](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/guilhermegules-payflow-node)
 |	guilhermesouza-nodejs	|	283.59ms	|	0%	|	0	|	300399.455	|	[guilhermesouza-nodejs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/guilhermesouza-nodejs)
 |	gustavo-miranda	|	147.56ms	|	0%	|	0	|	0	|	[gustavo-miranda](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/gustavo-miranda)
-|	hamilton-golang-mongo-default	|	6.19ms	|	10%	|	110771.01175000962	|	237366.45375002062	|	[hamilton-golang-mongo-default](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/hamilton-golang-mongo-default)
+|	hamilton-golang-mongo-default	|	8.26ms	|	5%	|	110757.77825000961	|	221515.55650001921	|	[hamilton-golang-mongo-default](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/hamilton-golang-mongo-default)
 |	hamilton-golang-mongo	|	4.19ms	|	14%	|	0	|	355395.47309997334	|	[hamilton-golang-mongo](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/hamilton-golang-mongo)
-|	hamilton-golang-with-retries	|	587.55ms	|	0%	|	0	|	27903.780000000705	|	[hamilton-golang-with-retries](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/hamilton-golang-with-retries)
+|	hamilton-golang-with-retries	|	175.04ms	|	0%	|	92336.74624998806	|	171482.52874997782	|	[hamilton-golang-with-retries](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/hamilton-golang-with-retries)
 |	henriqueramos13-node	|	36.41ms	|	0%	|	60010.5625	|	111448.1875	|	[henriqueramos13-node](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/henriqueramos13-node)
 |	henriquevalcanaia-swift-vapor	|	159.61ms	|	0%	|	73381.86765	|	136280.61135	|	[henriquevalcanaia-swift-vapor](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/henriquevalcanaia-swift-vapor)
 |	jairoandre-go-v2	|	22.8ms	|	0%	|	0	|	309353.46	|	[jairoandre-go-v2](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/jairoandre-go-v2)
