@@ -1,55 +1,43 @@
 
- db Pulling 
  payment-processor-mid-1 Pulling 
  payment-processor-mid-2 Pulling 
  0368fd46e3c6 Already exists 
  0670596c9dd1 Already exists 
  b2683b5bf4e2 Already exists 
  4a805e037314 Already exists 
- db Pulled 
  6f730f3f37cf Already exists 
  f7ee2846e40e Already exists 
- da62deea6d4d Pulling fs layer 
- 547160fc315e Pulling fs layer 
+ da62deea6d4d Already exists 
+ 2755f43c708b Pulling fs layer 
  0368fd46e3c6 Already exists 
  0670596c9dd1 Already exists 
  b2683b5bf4e2 Already exists 
  4a805e037314 Already exists 
  6f730f3f37cf Already exists 
- 547160fc315e Downloading [>                                                  ]  14.48kB/1.37MB
+ 2755f43c708b Downloading [>                                                  ]  14.48kB/1.37MB
  f7ee2846e40e Already exists 
- da62deea6d4d Pulling fs layer 
- 547160fc315e Pulling fs layer 
- 547160fc315e Downloading [>                                                  ]  14.48kB/1.37MB
- da62deea6d4d Download complete 
- da62deea6d4d Extracting [==================================================>]      92B/92B
- da62deea6d4d Downloading [==================================================>]      92B/92B
- da62deea6d4d Download complete 
- da62deea6d4d Extracting [==================================================>]      92B/92B
- da62deea6d4d Extracting [==================================================>]      92B/92B
- da62deea6d4d Extracting [==================================================>]      92B/92B
- 547160fc315e Verifying Checksum 
- 547160fc315e Download complete 
- 547160fc315e Verifying Checksum 
- 547160fc315e Download complete 
- da62deea6d4d Pull complete 
- da62deea6d4d Pull complete 
- 547160fc315e Extracting [=>                                                 ]  32.77kB/1.37MB
- 547160fc315e Extracting [=>                                                 ]  32.77kB/1.37MB
- 547160fc315e Extracting [==================================================>]   1.37MB/1.37MB
- 547160fc315e Extracting [==================================================>]   1.37MB/1.37MB
- 547160fc315e Pull complete 
- 547160fc315e Pull complete 
- payment-processor-mid-1 Pulled 
+ 2755f43c708b Verifying Checksum 
+ 2755f43c708b Download complete 
+ 2755f43c708b Extracting [=>                                                 ]  32.77kB/1.37MB
+ da62deea6d4d Already exists 
+ 2755f43c708b Pulling fs layer 
+ 2755f43c708b Extracting [=>                                                 ]  32.77kB/1.37MB
+ 2755f43c708b Extracting [==================================================>]   1.37MB/1.37MB
+ 2755f43c708b Extracting [==================================================>]   1.37MB/1.37MB
+ 2755f43c708b Extracting [==================================================>]   1.37MB/1.37MB
+ 2755f43c708b Extracting [==================================================>]   1.37MB/1.37MB
+ 2755f43c708b Pull complete 
+ 2755f43c708b Pull complete 
  payment-processor-mid-2 Pulled 
+ payment-processor-mid-1 Pulled 
  Network fhgm-dani-ed_backend  Creating
  Network fhgm-dani-ed_backend  Created
  Container db  Creating
  Container db  Created
- Container payment-processor-mid-1  Creating
  Container payment-processor-mid-2  Creating
- Container payment-processor-mid-1  Created
+ Container payment-processor-mid-1  Creating
  Container payment-processor-mid-2  Created
+ Container payment-processor-mid-1  Created
  Container nginx  Creating
  Container nginx  Created
 Attaching to db, nginx, payment-processor-mid-1, payment-processor-mid-2
@@ -69,7 +57,6 @@ db                       | selecting default "max_connections" ... 100
 db                       | selecting default "shared_buffers" ... 128MB
 db                       | selecting default time zone ... Etc/UTC
 db                       | creating configuration files ... ok
-db                       | running bootstrap script ... ok
 nginx                    | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
 nginx                    | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
 nginx                    | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
@@ -79,7 +66,12 @@ nginx                    | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/
 nginx                    | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
 nginx                    | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
 nginx                    | /docker-entrypoint.sh: Configuration complete; ready for start up
+nginx                    | 2025/07/30 22:22:13 [error] 29#29: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.20.0.1, server: , request: "GET /payments-summary HTTP/1.1", upstream: "http://172.20.0.4:80/payments-summary", host: "localhost:9999"
+nginx                    | 2025/07/30 22:22:13 [error] 29#29: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.20.0.1, server: , request: "GET /payments-summary HTTP/1.1", upstream: "http://172.20.0.3:80/payments-summary", host: "localhost:9999"
+db                       | running bootstrap script ... ok
 db                       | performing post-bootstrap initialization ... ok
+db                       | initdb: warning: enabling "trust" authentication for local connections
+db                       | initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
 db                       | syncing data to disk ... ok
 db                       | 
 db                       | 
@@ -87,12 +79,10 @@ db                       | Success. You can now start the database server using:
 db                       | 
 db                       |     pg_ctl -D /var/lib/postgresql/data -l logfile start
 db                       | 
-db                       | initdb: warning: enabling "trust" authentication for local connections
-db                       | initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
-db                       | waiting for server to start....2025-07-30 00:19:46.219 UTC [48] LOG:  starting PostgreSQL 17.5 (Debian 17.5-1.pgdg120+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14) 12.2.0, 64-bit
-db                       | 2025-07-30 00:19:46.219 UTC [48] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
-db                       | 2025-07-30 00:19:46.221 UTC [51] LOG:  database system was shut down at 2025-07-30 00:19:45 UTC
-db                       | 2025-07-30 00:19:46.225 UTC [48] LOG:  database system is ready to accept connections
+db                       | waiting for server to start....2025-07-30 22:22:15.003 UTC [48] LOG:  starting PostgreSQL 17.5 (Debian 17.5-1.pgdg120+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14) 12.2.0, 64-bit
+db                       | 2025-07-30 22:22:15.003 UTC [48] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db                       | 2025-07-30 22:22:15.005 UTC [51] LOG:  database system was shut down at 2025-07-30 22:22:14 UTC
+db                       | 2025-07-30 22:22:15.008 UTC [48] LOG:  database system is ready to accept connections
 db                       |  done
 db                       | server started
 db                       | CREATE DATABASE
@@ -103,47 +93,47 @@ db                       | CREATE TABLE
 db                       | CREATE INDEX
 db                       | 
 db                       | 
-db                       | waiting for server to shut down....2025-07-30 00:19:46.802 UTC [48] LOG:  received fast shutdown request
-db                       | 2025-07-30 00:19:46.802 UTC [48] LOG:  aborting any active transactions
-db                       | 2025-07-30 00:19:46.804 UTC [48] LOG:  background worker "logical replication launcher" (PID 54) exited with exit code 1
-db                       | 2025-07-30 00:19:46.804 UTC [61] FATAL:  terminating connection due to administrator command
-db                       | 2025-07-30 00:19:46.804 UTC [61] LOG:  could not send data to client: Broken pipe
-db                       | 2025-07-30 00:19:46.807 UTC [49] LOG:  shutting down
-db                       | 2025-07-30 00:19:46.807 UTC [49] LOG:  checkpoint starting: shutdown immediate
-db                       | 2025-07-30 00:19:46.815 UTC [49] LOG:  checkpoint complete: wrote 923 buffers (5.6%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.008 s, sync=0.001 s, total=0.008 s; sync files=0, longest=0.000 s, average=0.000 s; distance=4255 kB, estimate=4255 kB; lsn=0/190CD68, redo lsn=0/190CD68
-db                       | 2025-07-30 00:19:46.821 UTC [48] LOG:  database system is shut down
+db                       | waiting for server to shut down...2025-07-30 22:22:15.517 UTC [48] LOG:  received fast shutdown request
+db                       | .2025-07-30 22:22:15.517 UTC [48] LOG:  aborting any active transactions
+db                       | 2025-07-30 22:22:15.520 UTC [48] LOG:  background worker "logical replication launcher" (PID 54) exited with exit code 1
+db                       | 2025-07-30 22:22:15.603 UTC [49] LOG:  shutting down
+db                       | 2025-07-30 22:22:15.603 UTC [49] LOG:  checkpoint starting: shutdown immediate
+db                       | 2025-07-30 22:22:15.612 UTC [49] LOG:  checkpoint complete: wrote 923 buffers (5.6%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.010 s, sync=0.001 s, total=0.010 s; sync files=0, longest=0.000 s, average=0.000 s; distance=4255 kB, estimate=4255 kB; lsn=0/190CD68, redo lsn=0/190CD68
+db                       | 2025-07-30 22:22:15.621 UTC [48] LOG:  database system is shut down
 db                       |  done
 db                       | server stopped
 db                       | 
 db                       | PostgreSQL init process complete; ready for start up.
 db                       | 
-db                       | 2025-07-30 00:19:46.915 UTC [1] LOG:  starting PostgreSQL 17.5 (Debian 17.5-1.pgdg120+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14) 12.2.0, 64-bit
-db                       | 2025-07-30 00:19:46.915 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
-db                       | 2025-07-30 00:19:46.915 UTC [1] LOG:  listening on IPv6 address "::", port 5432
-db                       | 2025-07-30 00:19:46.915 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
-db                       | 2025-07-30 00:19:46.917 UTC [66] LOG:  database system was shut down at 2025-07-30 00:19:46 UTC
-db                       | 2025-07-30 00:19:46.921 UTC [1] LOG:  database system is ready to accept connections
-payment-processor-mid-1  | fail: Infrastructure.PaymentChannelProcessor[0]
-payment-processor-mid-1  |       Payment 6cd09e6e-9c34-4fb2-a0d6-d5371ccb4284 has been sent to the channel again
+db                       | 2025-07-30 22:22:15.741 UTC [1] LOG:  starting PostgreSQL 17.5 (Debian 17.5-1.pgdg120+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14) 12.2.0, 64-bit
+db                       | 2025-07-30 22:22:15.741 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+db                       | 2025-07-30 22:22:15.741 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+db                       | 2025-07-30 22:22:15.741 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db                       | 2025-07-30 22:22:15.744 UTC [66] LOG:  database system was shut down at 2025-07-30 22:22:15 UTC
+db                       | 2025-07-30 22:22:15.802 UTC [1] LOG:  database system is ready to accept connections
+nginx                    | 2025/07/30 22:22:18 [error] 29#29: *4 no live upstreams while connecting to upstream, client: 172.20.0.1, server: , request: "GET /payments-summary HTTP/1.1", upstream: "http://api/payments-summary", host: "localhost:9999"
+nginx                    | 2025/07/30 22:22:23 [error] 29#29: *5 no live upstreams while connecting to upstream, client: 172.20.0.1, server: , request: "GET /payments-summary HTTP/1.1", upstream: "http://api/payments-summary", host: "localhost:9999"
 payment-processor-mid-2  | fail: Infrastructure.PaymentChannelProcessor[0]
-payment-processor-mid-2  |       Payment a67bfe72-20fe-41c9-8241-8cada698bd44 has been sent to the channel again
+payment-processor-mid-2  |       Payment 6d2acc87-71da-49a6-82f4-bbc1f534f049 has been sent to the channel again
 payment-processor-mid-1  | fail: Infrastructure.PaymentChannelProcessor[0]
-payment-processor-mid-1  |       Payment 7579e60a-c697-41cc-a0ae-22a7c357bc11 has been sent to the channel again
+payment-processor-mid-1  |       Payment 4b7e0ab2-dc04-4133-97d1-f699403ce8c8 has been sent to the channel again
 payment-processor-mid-2  | fail: Infrastructure.PaymentChannelProcessor[0]
-payment-processor-mid-2  |       Payment 5631ba1b-a469-4adf-aa87-a4865240d7c7 has been sent to the channel again
+payment-processor-mid-2  |       Payment 21518b54-046e-47fb-8cd4-b0fa90f5f461 has been sent to the channel again
 payment-processor-mid-1  | fail: Infrastructure.PaymentChannelProcessor[0]
-payment-processor-mid-1  |       Payment 228b9b12-835d-43d4-98b9-ded15c669244 has been sent to the channel again
+payment-processor-mid-1  |       Payment 23a13ffd-fee6-4421-a7fa-b084dd856801 has been sent to the channel again
 payment-processor-mid-2  | fail: Infrastructure.PaymentChannelProcessor[0]
-payment-processor-mid-2  |       Payment c5a20e1a-a611-4268-904c-73ecd95c83b5 has been sent to the channel again
+payment-processor-mid-2  |       Payment f3548045-bae6-4de8-9e69-7264ebfe60c9 has been sent to the channel again
+payment-processor-mid-1  | fail: Infrastructure.PaymentChannelProcessor[0]
+payment-processor-mid-1  |       Payment 060aec5d-5707-4cd6-b80c-d2b3b91d9913 has been sent to the channel again
 [Knginx exited with code 0
-[Kpayment-processor-mid-2 exited with code 0
 [Kpayment-processor-mid-1 exited with code 0
-db                       | 2025-07-30 00:20:58.915 UTC [1] LOG:  received fast shutdown request
-db                       | 2025-07-30 00:20:58.915 UTC [1] LOG:  aborting any active transactions
-db                       | 2025-07-30 00:20:58.917 UTC [1] LOG:  background worker "logical replication launcher" (PID 69) exited with exit code 1
-db                       | 2025-07-30 00:20:58.920 UTC [64] LOG:  shutting down
-db                       | 2025-07-30 00:20:58.920 UTC [64] LOG:  checkpoint starting: shutdown immediate
-db                       | 2025-07-30 00:20:58.922 UTC [64] LOG:  checkpoint complete: wrote 237 buffers (1.4%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.001 s, total=0.003 s; sync files=0, longest=0.000 s, average=0.000 s; distance=680 kB, estimate=680 kB; lsn=0/19B6F80, redo lsn=0/19B6F80
-db                       | 2025-07-30 00:20:58.927 UTC [1] LOG:  database system is shut down
+[Kpayment-processor-mid-2 exited with code 0
+db                       | 2025-07-30 22:23:37.290 UTC [1] LOG:  received fast shutdown request
+db                       | 2025-07-30 22:23:37.290 UTC [1] LOG:  aborting any active transactions
+db                       | 2025-07-30 22:23:37.291 UTC [1] LOG:  background worker "logical replication launcher" (PID 69) exited with exit code 1
+db                       | 2025-07-30 22:23:37.293 UTC [64] LOG:  shutting down
+db                       | 2025-07-30 22:23:37.293 UTC [64] LOG:  checkpoint starting: shutdown immediate
+db                       | 2025-07-30 22:23:37.295 UTC [64] LOG:  checkpoint complete: wrote 259 buffers (1.6%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.001 s, total=0.003 s; sync files=0, longest=0.000 s, average=0.000 s; distance=751 kB, estimate=751 kB; lsn=0/19C8A80, redo lsn=0/19C8A80
+db                       | 2025-07-30 22:23:37.300 UTC [1] LOG:  database system is shut down
 [Kdb exited with code 0
 log truncated at line 1000

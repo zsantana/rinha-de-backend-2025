@@ -1,11 +1,11 @@
 {
   "participante": "fhgm-dani-ed",
-  "total_liquido": 255300.085,
-  "total_bruto": 269147.5,
-  "total_taxas": 13847.415,
+  "total_liquido": 299613.405,
+  "total_bruto": 315793.1,
+  "total_taxas": 16179.695,
   "descricao": "'total_liquido' é sua pontuação final. Equivale ao seu lucro. Fórmula: total_liquido + (total_liquido * p99.bonus) - (total_liquido * multa.porcentagem)",
   "p99": {
-    "valor": "58.89ms",
+    "valor": "57.78ms",
     "bonus": "0%",
     "max_requests": "550",
     "descricao": "Fórmula para o bônus: max((11 - p99.valor) * 0.02, 0)"
@@ -23,20 +23,20 @@
     "descricao": "Se 'lag' for negativo, significa que seu backend registrou mais pagamentos do que solicitado, automaticamente desclassificando sua submissão!"
   },
   "lag": {
-    "num_pagamentos_total": 13525,
-    "num_pagamentos_solicitados": 16700,
-    "lag": 3175,
+    "num_pagamentos_total": 15869,
+    "num_pagamentos_solicitados": 16693,
+    "lag": 824,
     "descricao": "Lag é a diferença entre a quantidade de solicitações de pagamentos e o que foi realmente computado pelo backend. Mostra a perda de pagamentos possivelmente por estarem enfileirados."
   },
   "pagamentos_solicitados": {
-    "qtd_sucesso": 16700,
+    "qtd_sucesso": 16693,
     "qtd_falha": 0,
     "descricao": "'qtd_sucesso' foram requests bem sucedidos para 'POST /payments' e 'qtd_falha' os requests com erro."
   },
   "pagamentos_realizados_default": {
-    "total_bruto": 265247.1,
-    "num_pagamentos": 13329,
-    "total_taxas": 13262.355,
+    "total_bruto": 311892.7,
+    "num_pagamentos": 15673,
+    "total_taxas": 15594.635,
     "descricao": "Informações do backend sobre solicitações de pagamento para o Payment Processor Default."
   },
   "pagamentos_realizados_fallback": {
