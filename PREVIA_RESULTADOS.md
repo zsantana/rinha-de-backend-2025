@@ -1,5 +1,5 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Thu Jul 31 11:23:08 PM -03 2025**
+Atualizado em **Thu Jul 31 11:31:05 PM -03 2025**
 189 submissões / 166 resultados / 23 submissões com erro
 
 
@@ -47,7 +47,7 @@ Atualizado em **Thu Jul 31 11:23:08 PM -03 2025**
 |	diegodario-go	|	7.26ms	|	7%	|	0	|	333742.2234	|	[diegodario-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/diegodario-go)
 |	diogomassis-go	|	11.68ms	|	0%	|	84706.93699998943	|	157312.88299998036	|	[diogomassis-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/diogomassis-go)
 |	djbrunomonteiro	|	350.71ms	|	0%	|	15724.184	|	29202.056	|	[djbrunomonteiro](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/djbrunomonteiro)
-|	dolphs	|	27.27ms	|	0%	|	84456.1969999828	|	156847.22299996807	|	[dolphs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/dolphs)
+|	dolphs	|	65.58ms	|	0%	|	0	|	310414.13	|	[dolphs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/dolphs)
 |	dudebank-bun	|	4.23ms	|	14%	|	0	|	355486.2171	|	[dudebank-bun](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/dudebank-bun)
 |	el_yawd-crab	|	2.03ms	|	18%	|	109076.07899999434	|	258666.13019998657	|	[el_yawd-crab](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/el_yawd-crab)
 |	emiliosheinz-go	|	5.47ms	|	11%	|	74232.97	|	161191.592	|	[emiliosheinz-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/emiliosheinz-go)
