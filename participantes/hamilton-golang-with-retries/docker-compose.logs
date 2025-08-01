@@ -1,0 +1,1001 @@
+
+time="2025-07-31T22:41:18-03:00" level=warning msg="/home/rinha-user/rinha-de-backend-2025/participantes/hamilton-golang-with-retries/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+ rinha-api-2 Pulling 
+ rinha-api-3 Pulling 
+ rinha-api-1 Pulling 
+ 9824c27679d3 Already exists 
+ a5c68c270f68 Pulling fs layer 
+ 4f4fb700ef54 Pulling fs layer 
+ 91596d721e33 Pulling fs layer 
+ 9824c27679d3 Already exists 
+ a5c68c270f68 Pulling fs layer 
+ 4f4fb700ef54 Pulling fs layer 
+ 91596d721e33 Pulling fs layer 
+ 4f4fb700ef54 Downloading [==================================================>]      32B/32B
+ 4f4fb700ef54 Verifying Checksum 
+ 4f4fb700ef54 Download complete 
+ 4f4fb700ef54 Downloading [==================================================>]      32B/32B
+ 4f4fb700ef54 Verifying Checksum 
+ 4f4fb700ef54 Download complete 
+ 91596d721e33 Downloading [>                                                  ]  77.52kB/7.708MB
+ 91596d721e33 Downloading [>                                                  ]  77.52kB/7.708MB
+ a5c68c270f68 Downloading [>                                                  ]  4.107kB/282.5kB
+ a5c68c270f68 Downloading [>                                                  ]  4.107kB/282.5kB
+ a5c68c270f68 Downloading [==================================================>]  282.5kB/282.5kB
+ a5c68c270f68 Download complete 
+ a5c68c270f68 Extracting [=====>                                             ]  32.77kB/282.5kB
+ a5c68c270f68 Downloading [==================================================>]  282.5kB/282.5kB
+ a5c68c270f68 Download complete 
+ a5c68c270f68 Extracting [=====>                                             ]  32.77kB/282.5kB
+ a5c68c270f68 Extracting [==================================================>]  282.5kB/282.5kB
+ a5c68c270f68 Extracting [==================================================>]  282.5kB/282.5kB
+ a5c68c270f68 Extracting [==================================================>]  282.5kB/282.5kB
+ a5c68c270f68 Extracting [==================================================>]  282.5kB/282.5kB
+ 91596d721e33 Verifying Checksum 
+ 91596d721e33 Download complete 
+ 91596d721e33 Verifying Checksum 
+ 91596d721e33 Download complete 
+ a5c68c270f68 Pull complete 
+ a5c68c270f68 Pull complete 
+ 4f4fb700ef54 Extracting [==================================================>]      32B/32B
+ 4f4fb700ef54 Extracting [==================================================>]      32B/32B
+ 4f4fb700ef54 Extracting [==================================================>]      32B/32B
+ 4f4fb700ef54 Extracting [==================================================>]      32B/32B
+ 9824c27679d3 Already exists 
+ a5c68c270f68 Already exists 
+ 4f4fb700ef54 Pulling fs layer 
+ 91596d721e33 Pulling fs layer 
+ 91596d721e33 Download complete 
+ 4f4fb700ef54 Extracting [==================================================>]      32B/32B
+ 4f4fb700ef54 Pull complete 
+ 4f4fb700ef54 Pull complete 
+ 4f4fb700ef54 Pull complete 
+ 91596d721e33 Extracting [>                                                  ]   98.3kB/7.708MB
+ 91596d721e33 Extracting [>                                                  ]   98.3kB/7.708MB
+ 91596d721e33 Extracting [>                                                  ]   98.3kB/7.708MB
+ 91596d721e33 Extracting [==================================================>]  7.708MB/7.708MB
+ 91596d721e33 Extracting [==================================================>]  7.708MB/7.708MB
+ 91596d721e33 Extracting [==================================================>]  7.708MB/7.708MB
+ 91596d721e33 Pull complete 
+ 91596d721e33 Pull complete 
+ 91596d721e33 Pull complete 
+ rinha-api-2 Pulled 
+ rinha-api-3 Pulled 
+ rinha-api-1 Pulled 
+ Network hamilton-golang-with-retries_app-network  Creating
+ Network hamilton-golang-with-retries_app-network  Created
+ Volume "hamilton-golang-with-retries_mongo_data"  Creating
+ Volume "hamilton-golang-with-retries_mongo_data"  Created
+ Container mongodb  Creating
+ Container mongodb  Created
+ Container rinha-api-2  Creating
+ Container rinha-api-3  Creating
+ Container rinha-api-1  Creating
+ Container rinha-api-2  Created
+ Container rinha-api-3  Created
+ Container rinha-api-1  Created
+ Container nginx_load_balancer  Creating
+ Container nginx_load_balancer  Created
+Attaching to mongodb, nginx_load_balancer, rinha-api-1, rinha-api-2, rinha-api-3
+mongodb              | about to fork child process, waiting until server is ready for connections.
+mongodb              | forked process: 28
+mongodb              | 
+mongodb              | {"t":{"$date":"2025-08-01T01:41:22.760+00:00"},"s":"I",  "c":"CONTROL",  "id":20698,   "ctx":"main","msg":"***** SERVER RESTARTED *****"}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:22.765+00:00"},"s":"I",  "c":"CONTROL",  "id":23285,   "ctx":"main","msg":"Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'"}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:22.766+00:00"},"s":"I",  "c":"CONTROL",  "id":5945603, "ctx":"main","msg":"Multi threading initialized"}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:22.766+00:00"},"s":"I",  "c":"NETWORK",  "id":4648601, "ctx":"main","msg":"Implicit TCP FastOpen unavailable. If TCP FastOpen is required, set at least one of the related parameters","attr":{"relatedParameters":["tcpFastOpenServer","tcpFastOpenClient","tcpFastOpenQueueSize"]}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:22.768+00:00"},"s":"I",  "c":"NETWORK",  "id":4915701, "ctx":"main","msg":"Initialized wire specification","attr":{"spec":{"incomingExternalClient":{"minWireVersion":0,"maxWireVersion":25},"incomingInternalClient":{"minWireVersion":0,"maxWireVersion":25},"outgoing":{"minWireVersion":6,"maxWireVersion":25},"isInternalClient":true}}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:22.802+00:00"},"s":"I",  "c":"TENANT_M", "id":7091600, "ctx":"main","msg":"Starting TenantMigrationAccessBlockerRegistry"}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:22.802+00:00"},"s":"I",  "c":"CONTROL",  "id":4615611, "ctx":"initandlisten","msg":"MongoDB starting","attr":{"pid":28,"port":27017,"dbPath":"/data/db","architecture":"64-bit","host":"11db1024cabb"}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:22.802+00:00"},"s":"W",  "c":"CONTROL",  "id":20720,   "ctx":"initandlisten","msg":"Memory available to mongo process is less than total system memory","attr":{"availableMemSizeMB":245,"systemMemSizeMB":7823}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:22.802+00:00"},"s":"I",  "c":"CONTROL",  "id":23403,   "ctx":"initandlisten","msg":"Build Info","attr":{"buildInfo":{"version":"8.0.12","gitVersion":"b60fc6875b5fb4b63cc0dbbd8dda0d6d6277921a","openSSLVersion":"OpenSSL 3.0.13 30 Jan 2024","modules":[],"allocator":"tcmalloc-google","environment":{"distmod":"ubuntu2404","distarch":"x86_64","target_arch":"x86_64"}}}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:22.802+00:00"},"s":"I",  "c":"CONTROL",  "id":51765,   "ctx":"initandlisten","msg":"Operating System","attr":{"os":{"name":"Ubuntu","version":"24.04"}}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:22.802+00:00"},"s":"I",  "c":"CONTROL",  "id":21951,   "ctx":"initandlisten","msg":"Options set by command line","attr":{"options":{"net":{"bindIp":"127.0.0.1","port":27017,"tls":{"mode":"disabled"}},"processManagement":{"fork":true,"pidFilePath":"/tmp/docker-entrypoint-temp-mongod.pid"},"systemLog":{"destination":"file","logAppend":true,"path":"/proc/1/fd/1"}}}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:22.803+00:00"},"s":"I",  "c":"STORAGE",  "id":22297,   "ctx":"initandlisten","msg":"Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem","tags":["startupWarnings"]}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:22.803+00:00"},"s":"I",  "c":"STORAGE",  "id":22300,   "ctx":"initandlisten","msg":"The configured WiredTiger cache size is more than 80% of available RAM. See http://dochub.mongodb.org/core/faq-memory-diagnostics-wt","tags":["startupWarnings"]}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:22.803+00:00"},"s":"I",  "c":"STORAGE",  "id":22315,   "ctx":"initandlisten","msg":"Opening WiredTiger","attr":{"config":"create,cache_size=256M,session_max=33000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,remove=true,path=journal,compressor=snappy),builtin_extension_config=(zstd=(compression_level=6)),file_manager=(close_idle_time=600,close_scan_interval=10,close_handle_minimum=2000),statistics_log=(wait=0),json_output=(error,message),verbose=[recovery_progress:1,checkpoint_progress:1,compact_progress:1,backup:0,checkpoint:0,compact:0,evict:0,history_store:0,recovery:0,rts:0,salvage:0,tiered:0,timestamp:0,transaction:0,verify:0,log:0],prefetch=(available=true,default=false),"}}
+rinha-api-2          | Servidor rodando em http://localhost:3000
+rinha-api-3          | Servidor rodando em http://localhost:3000
+rinha-api-1          | Servidor rodando em http://localhost:3000
+nginx_load_balancer  | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+nginx_load_balancer  | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+nginx_load_balancer  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+nginx_load_balancer  | 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+nginx_load_balancer  | 10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
+nginx_load_balancer  | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+nginx_load_balancer  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+nginx_load_balancer  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+nginx_load_balancer  | /docker-entrypoint.sh: Configuration complete; ready for start up
+mongodb              | {"t":{"$date":"2025-08-01T01:41:23.602+00:00"},"s":"I",  "c":"WTRECOV",  "id":22430,   "ctx":"initandlisten","msg":"WiredTiger message","attr":{"message":{"ts_sec":1754012483,"ts_usec":602922,"thread":"28:0x7f714fab0680","session_name":"txn-recover","category":"WT_VERB_RECOVERY_PROGRESS","category_id":34,"verbose_level":"DEBUG_1","verbose_level_id":1,"msg":"recovery log replay has successfully finished and ran for 0 milliseconds"}}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:23.603+00:00"},"s":"I",  "c":"WTRECOV",  "id":22430,   "ctx":"initandlisten","msg":"WiredTiger message","attr":{"message":{"ts_sec":1754012483,"ts_usec":603017,"thread":"28:0x7f714fab0680","session_name":"txn-recover","category":"WT_VERB_RECOVERY_PROGRESS","category_id":34,"verbose_level":"DEBUG_1","verbose_level_id":1,"msg":"Set global recovery timestamp: (0, 0)"}}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:23.603+00:00"},"s":"I",  "c":"WTRECOV",  "id":22430,   "ctx":"initandlisten","msg":"WiredTiger message","attr":{"message":{"ts_sec":1754012483,"ts_usec":603063,"thread":"28:0x7f714fab0680","session_name":"txn-recover","category":"WT_VERB_RECOVERY_PROGRESS","category_id":34,"verbose_level":"DEBUG_1","verbose_level_id":1,"msg":"Set global oldest timestamp: (0, 0)"}}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:23.603+00:00"},"s":"I",  "c":"WTRECOV",  "id":22430,   "ctx":"initandlisten","msg":"WiredTiger message","attr":{"message":{"ts_sec":1754012483,"ts_usec":603152,"thread":"28:0x7f714fab0680","session_name":"txn-recover","category":"WT_VERB_RECOVERY_PROGRESS","category_id":34,"verbose_level":"DEBUG_1","verbose_level_id":1,"msg":"recovery was completed successfully and took 0ms, including 0ms for the log replay, 0ms for the rollback to stable, and 0ms for the checkpoint."}}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:23.635+00:00"},"s":"I",  "c":"STORAGE",  "id":4795906, "ctx":"initandlisten","msg":"WiredTiger opened","attr":{"durationMillis":832}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:23.635+00:00"},"s":"I",  "c":"RECOVERY", "id":23987,   "ctx":"initandlisten","msg":"WiredTiger recoveryTimestamp","attr":{"recoveryTimestamp":{"$timestamp":{"t":0,"i":0}}}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:23.684+00:00"},"s":"I",  "c":"STORAGE",  "id":9529901, "ctx":"initandlisten","msg":"Initializing durable catalog","attr":{"numRecords":0}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:23.684+00:00"},"s":"I",  "c":"STORAGE",  "id":9529902, "ctx":"initandlisten","msg":"Retrieving all idents from storage engine"}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:23.684+00:00"},"s":"I",  "c":"STORAGE",  "id":9529903, "ctx":"initandlisten","msg":"Initializing all collections in durable catalog","attr":{"numEntries":0}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:23.703+00:00"},"s":"W",  "c":"CONTROL",  "id":22120,   "ctx":"initandlisten","msg":"Access control is not enabled for the database. Read and write access to data and configuration is unrestricted","tags":["startupWarnings"]}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:23.703+00:00"},"s":"W",  "c":"CONTROL",  "id":9068900, "ctx":"initandlisten","msg":"For customers running the current memory allocator, we suggest changing the contents of the following sysfsFile","attr":{"allocator":"tcmalloc-google","sysfsFile":"/sys/kernel/mm/transparent_hugepage/defrag","currentValue":"madvise","desiredValue":"defer+madvise"},"tags":["startupWarnings"]}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:23.703+00:00"},"s":"W",  "c":"CONTROL",  "id":8640302, "ctx":"initandlisten","msg":"We suggest setting the contents of sysfsFile to 0.","attr":{"sysfsFile":"/sys/kernel/mm/transparent_hugepage/khugepaged/max_ptes_none","currentValue":511},"tags":["startupWarnings"]}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:23.703+00:00"},"s":"W",  "c":"NETWORK",  "id":5123300, "ctx":"initandlisten","msg":"vm.max_map_count is too low","attr":{"currentValue":65530,"recommendedMinimum":1677720,"maxConns":838860},"tags":["startupWarnings"]}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:23.703+00:00"},"s":"W",  "c":"CONTROL",  "id":8386700, "ctx":"initandlisten","msg":"We suggest setting swappiness to 0 or 1, as swapping can cause performance problems.","attr":{"sysfsFile":"/proc/sys/vm/swappiness","currentValue":60},"tags":["startupWarnings"]}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:23.703+00:00"},"s":"I",  "c":"STORAGE",  "id":20320,   "ctx":"initandlisten","msg":"createCollection","attr":{"namespace":"admin.system.version","uuidDisposition":"provided","uuid":{"uuid":{"$uuid":"19d01d2c-c88f-41b1-8c11-c1a09ed04f26"}},"options":{"uuid":{"$uuid":"19d01d2c-c88f-41b1-8c11-c1a09ed04f26"}}}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:23.746+00:00"},"s":"I",  "c":"INDEX",    "id":20345,   "ctx":"initandlisten","msg":"Index build: done building","attr":{"buildUUID":null,"collectionUUID":{"uuid":{"$uuid":"19d01d2c-c88f-41b1-8c11-c1a09ed04f26"}},"namespace":"admin.system.version","index":"_id_","ident":"index-1-11981721767766944883","collectionIdent":"collection-0-11981721767766944883","commitTimestamp":null}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:23.746+00:00"},"s":"I",  "c":"REPL",     "id":20459,   "ctx":"initandlisten","msg":"Setting featureCompatibilityVersion","attr":{"newVersion":"8.0"}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:23.746+00:00"},"s":"I",  "c":"REPL",     "id":5853300, "ctx":"initandlisten","msg":"current featureCompatibilityVersion value","attr":{"featureCompatibilityVersion":"8.0","context":"setFCV"}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:23.746+00:00"},"s":"I",  "c":"NETWORK",  "id":4915702, "ctx":"initandlisten","msg":"Updated wire specification","attr":{"oldSpec":{"incomingExternalClient":{"minWireVersion":0,"maxWireVersion":25},"incomingInternalClient":{"minWireVersion":0,"maxWireVersion":25},"outgoing":{"minWireVersion":6,"maxWireVersion":25},"isInternalClient":true},"newSpec":{"incomingExternalClient":{"minWireVersion":0,"maxWireVersion":25},"incomingInternalClient":{"minWireVersion":25,"maxWireVersion":25},"outgoing":{"minWireVersion":25,"maxWireVersion":25},"isInternalClient":true}}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:23.746+00:00"},"s":"I",  "c":"NETWORK",  "id":4915702, "ctx":"initandlisten","msg":"Updated wire specification","attr":{"oldSpec":{"incomingExternalClient":{"minWireVersion":0,"maxWireVersion":25},"incomingInternalClient":{"minWireVersion":25,"maxWireVersion":25},"outgoing":{"minWireVersion":25,"maxWireVersion":25},"isInternalClient":true},"newSpec":{"incomingExternalClient":{"minWireVersion":0,"maxWireVersion":25},"incomingInternalClient":{"minWireVersion":25,"maxWireVersion":25},"outgoing":{"minWireVersion":25,"maxWireVersion":25},"isInternalClient":true}}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:23.746+00:00"},"s":"I",  "c":"REPL",     "id":5853300, "ctx":"initandlisten","msg":"current featureCompatibilityVersion value","attr":{"featureCompatibilityVersion":"8.0","context":"startup"}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:23.746+00:00"},"s":"I",  "c":"STORAGE",  "id":5071100, "ctx":"initandlisten","msg":"Clearing temp directory"}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:23.746+00:00"},"s":"I",  "c":"CONTROL",  "id":6608200, "ctx":"initandlisten","msg":"Initializing cluster server parameters from disk"}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:23.746+00:00"},"s":"I",  "c":"CONTROL",  "id":20536,   "ctx":"initandlisten","msg":"Flow Control is enabled on this deployment"}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:23.747+00:00"},"s":"I",  "c":"FTDC",     "id":20625,   "ctx":"initandlisten","msg":"Initializing full-time diagnostic data capture","attr":{"dataDirectory":"/data/db/diagnostic.data"}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:23.748+00:00"},"s":"I",  "c":"STORAGE",  "id":20320,   "ctx":"initandlisten","msg":"createCollection","attr":{"namespace":"local.startup_log","uuidDisposition":"generated","uuid":{"uuid":{"$uuid":"783e26ad-fef7-433a-aa9b-e9f58c765a58"}},"options":{"capped":true,"size":10485760}}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:23.785+00:00"},"s":"I",  "c":"INDEX",    "id":20345,   "ctx":"initandlisten","msg":"Index build: done building","attr":{"buildUUID":null,"collectionUUID":{"uuid":{"$uuid":"783e26ad-fef7-433a-aa9b-e9f58c765a58"}},"namespace":"local.startup_log","index":"_id_","ident":"index-3-11981721767766944883","collectionIdent":"collection-2-11981721767766944883","commitTimestamp":null}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:23.786+00:00"},"s":"I",  "c":"REPL",     "id":6015317, "ctx":"initandlisten","msg":"Setting new configuration state","attr":{"newState":"ConfigReplicationDisabled","oldState":"ConfigPreStart"}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:23.786+00:00"},"s":"I",  "c":"STORAGE",  "id":22262,   "ctx":"initandlisten","msg":"Timestamp monitor starting"}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:23.786+00:00"},"s":"I",  "c":"STORAGE",  "id":7333401, "ctx":"initandlisten","msg":"Starting the DiskSpaceMonitor"}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:23.787+00:00"},"s":"I",  "c":"NETWORK",  "id":23015,   "ctx":"listener","msg":"Listening on","attr":{"address":"/tmp/mongodb-27017.sock"}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:23.787+00:00"},"s":"I",  "c":"NETWORK",  "id":23015,   "ctx":"listener","msg":"Listening on","attr":{"address":"127.0.0.1:27017"}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:23.787+00:00"},"s":"I",  "c":"NETWORK",  "id":23016,   "ctx":"listener","msg":"Waiting for connections","attr":{"port":27017,"ssl":"off"}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:23.787+00:00"},"s":"I",  "c":"CONTROL",  "id":8423403, "ctx":"initandlisten","msg":"mongod startup complete","attr":{"Summary of time elapsed":{"Startup from clean shutdown?":true,"Statistics":{"Set up periodic runner":"0 ms","Set up online certificate status protocol manager":"0 ms","Transport layer setup":"0 ms","Run initial syncer crash recovery":"0 ms","Create storage engine lock file in the data directory":"0 ms","Get metadata describing storage engine":"0 ms","Create storage engine":"881 ms","Write current PID to file":"0 ms","Write a new metadata for storage engine":"19 ms","Initialize FCV before rebuilding indexes":"0 ms","Drop abandoned idents and get back indexes that need to be rebuilt or builds that need to be restarted":"0 ms","Rebuild indexes for collections":"0 ms","Load cluster parameters from disk for a standalone":"0 ms","Build user and roles graph":"0 ms","Set up the background thread pool responsible for waiting for opTimes to be majority committed":"0 ms","Start up the replication coordinator":"1 ms","Ensure the change stream collections on startup contain consistent data":"0 ms","Write startup options to the audit log":"0 ms","Start transport layer":"0 ms","_initAndListen total elapsed time":"985 ms"}}}}
+mongodb              | child process started successfully, parent exiting
+mongodb              | {"t":{"$date":"2025-08-01T01:41:23.789+00:00"},"s":"I",  "c":"CONTROL",  "id":20712,   "ctx":"LogicalSessionCacheReap","msg":"Sessions collection is not set up; waiting until next sessions reap interval","attr":{"error":"NamespaceNotFound: config.system.sessions does not exist"}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:23.789+00:00"},"s":"I",  "c":"STORAGE",  "id":20320,   "ctx":"LogicalSessionCacheRefresh","msg":"createCollection","attr":{"namespace":"config.system.sessions","uuidDisposition":"generated","uuid":{"uuid":{"$uuid":"81c4f502-f260-4d40-9534-95dc4666029d"}},"options":{}}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:23.849+00:00"},"s":"I",  "c":"INDEX",    "id":20345,   "ctx":"LogicalSessionCacheRefresh","msg":"Index build: done building","attr":{"buildUUID":null,"collectionUUID":{"uuid":{"$uuid":"81c4f502-f260-4d40-9534-95dc4666029d"}},"namespace":"config.system.sessions","index":"_id_","ident":"index-5-11981721767766944883","collectionIdent":"collection-4-11981721767766944883","commitTimestamp":null}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:23.849+00:00"},"s":"I",  "c":"INDEX",    "id":20345,   "ctx":"LogicalSessionCacheRefresh","msg":"Index build: done building","attr":{"buildUUID":null,"collectionUUID":{"uuid":{"$uuid":"81c4f502-f260-4d40-9534-95dc4666029d"}},"namespace":"config.system.sessions","index":"lsidTTLIndex","ident":"index-6-11981721767766944883","collectionIdent":"collection-4-11981721767766944883","commitTimestamp":null}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:24.005+00:00"},"s":"W",  "c":"CONTROL",  "id":636300,  "ctx":"ftdc","msg":"Use of deprecated server parameter name","attr":{"deprecatedName":"internalQueryCacheSize","canonicalName":"internalQueryCacheMaxEntriesPerCollection"}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:24.005+00:00"},"s":"W",  "c":"CONTROL",  "id":636300,  "ctx":"ftdc","msg":"Use of deprecated server parameter name","attr":{"deprecatedName":"oplogSamplingLogIntervalSeconds","canonicalName":"collectionSamplingLogIntervalSeconds"}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:24.006+00:00"},"s":"W",  "c":"NETWORK",  "id":23803,   "ctx":"ftdc","msg":"Use of deprecated server parameter 'sslMode', please use 'tlsMode' instead."}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:24.006+00:00"},"s":"W",  "c":"CONTROL",  "id":636300,  "ctx":"ftdc","msg":"Use of deprecated server parameter name","attr":{"deprecatedName":"wiredTigerConcurrentReadTransactions","canonicalName":"storageEngineConcurrentReadTransactions"}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:24.006+00:00"},"s":"W",  "c":"CONTROL",  "id":636300,  "ctx":"ftdc","msg":"Use of deprecated server parameter name","attr":{"deprecatedName":"wiredTigerConcurrentWriteTransactions","canonicalName":"storageEngineConcurrentWriteTransactions"}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:24.425+00:00"},"s":"I",  "c":"NETWORK",  "id":22943,   "ctx":"listener","msg":"Connection accepted","attr":{"remote":"127.0.0.1:36314","isLoadBalanced":false,"uuid":{"uuid":{"$uuid":"0011323a-9a7d-409f-987c-5251e8ed3410"}},"connectionId":1,"connectionCount":1}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:24.429+00:00"},"s":"I",  "c":"NETWORK",  "id":51800,   "ctx":"conn1","msg":"client metadata","attr":{"remote":"127.0.0.1:36314","client":"conn1","negotiatedCompressors":[],"doc":{"application":{"name":"mongosh 2.5.6"},"driver":{"name":"nodejs|mongosh","version":"6.16.0|2.5.6"},"platform":"Node.js v20.19.4, LE","os":{"name":"linux","architecture":"x64","version":"3.10.0-327.22.2.el7.x86_64","type":"Linux"},"env":{"container":{"runtime":"docker"}}}}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:24.552+00:00"},"s":"I",  "c":"NETWORK",  "id":22943,   "ctx":"listener","msg":"Connection accepted","attr":{"remote":"127.0.0.1:36318","isLoadBalanced":false,"uuid":{"uuid":{"$uuid":"166be9c3-b0af-44b2-9039-aa4f4ac0dafa"}},"connectionId":2,"connectionCount":2}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:24.552+00:00"},"s":"I",  "c":"NETWORK",  "id":22943,   "ctx":"listener","msg":"Connection accepted","attr":{"remote":"127.0.0.1:36330","isLoadBalanced":false,"uuid":{"uuid":{"$uuid":"89b2f16e-c5df-4d23-bf33-5a982279328d"}},"connectionId":3,"connectionCount":3}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:24.553+00:00"},"s":"I",  "c":"NETWORK",  "id":51800,   "ctx":"conn2","msg":"client metadata","attr":{"remote":"127.0.0.1:36318","client":"conn2","negotiatedCompressors":[],"doc":{"application":{"name":"mongosh 2.5.6"},"driver":{"name":"nodejs|mongosh","version":"6.16.0|2.5.6"},"platform":"Node.js v20.19.4, LE","os":{"name":"linux","architecture":"x64","version":"3.10.0-327.22.2.el7.x86_64","type":"Linux"},"env":{"container":{"runtime":"docker"}}}}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:24.554+00:00"},"s":"I",  "c":"NETWORK",  "id":51800,   "ctx":"conn3","msg":"client metadata","attr":{"remote":"127.0.0.1:36330","client":"conn3","negotiatedCompressors":[],"doc":{"application":{"name":"mongosh 2.5.6"},"driver":{"name":"nodejs|mongosh","version":"6.16.0|2.5.6"},"platform":"Node.js v20.19.4, LE","os":{"name":"linux","architecture":"x64","version":"3.10.0-327.22.2.el7.x86_64","type":"Linux"},"env":{"container":{"runtime":"docker"}}}}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:24.556+00:00"},"s":"I",  "c":"NETWORK",  "id":22943,   "ctx":"listener","msg":"Connection accepted","attr":{"remote":"127.0.0.1:36344","isLoadBalanced":false,"uuid":{"uuid":{"$uuid":"1d91302a-c581-4de4-a517-84f6980ddd38"}},"connectionId":4,"connectionCount":4}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:24.557+00:00"},"s":"I",  "c":"NETWORK",  "id":6788700, "ctx":"conn2","msg":"Received first command on ingress connection since session start or auth handshake","attr":{"elapsedMillis":3}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:24.557+00:00"},"s":"I",  "c":"NETWORK",  "id":22944,   "ctx":"conn1","msg":"Connection ended","attr":{"remote":"127.0.0.1:36314","isLoadBalanced":false,"uuid":{"uuid":{"$uuid":"0011323a-9a7d-409f-987c-5251e8ed3410"}},"connectionId":1,"connectionCount":3}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:24.558+00:00"},"s":"I",  "c":"NETWORK",  "id":22944,   "ctx":"conn2","msg":"Connection ended","attr":{"remote":"127.0.0.1:36318","isLoadBalanced":false,"uuid":{"uuid":{"$uuid":"166be9c3-b0af-44b2-9039-aa4f4ac0dafa"}},"connectionId":2,"connectionCount":2}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:24.558+00:00"},"s":"I",  "c":"NETWORK",  "id":22944,   "ctx":"conn4","msg":"Connection ended","attr":{"remote":"127.0.0.1:36344","isLoadBalanced":false,"uuid":{"uuid":{"$uuid":"1d91302a-c581-4de4-a517-84f6980ddd38"}},"connectionId":4,"connectionCount":1}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:24.562+00:00"},"s":"I",  "c":"NETWORK",  "id":22944,   "ctx":"conn3","msg":"Connection ended","attr":{"remote":"127.0.0.1:36330","isLoadBalanced":false,"uuid":{"uuid":{"$uuid":"89b2f16e-c5df-4d23-bf33-5a982279328d"}},"connectionId":3,"connectionCount":0}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:25.239+00:00"},"s":"I",  "c":"NETWORK",  "id":22943,   "ctx":"listener","msg":"Connection accepted","attr":{"remote":"127.0.0.1:36354","isLoadBalanced":false,"uuid":{"uuid":{"$uuid":"cd929d79-97ed-4577-95cc-c60c85b996c6"}},"connectionId":5,"connectionCount":1}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:25.243+00:00"},"s":"I",  "c":"NETWORK",  "id":51800,   "ctx":"conn5","msg":"client metadata","attr":{"remote":"127.0.0.1:36354","client":"conn5","negotiatedCompressors":[],"doc":{"application":{"name":"mongosh 2.5.6"},"driver":{"name":"nodejs|mongosh","version":"6.16.0|2.5.6"},"platform":"Node.js v20.19.4, LE","os":{"name":"linux","architecture":"x64","version":"3.10.0-327.22.2.el7.x86_64","type":"Linux"},"env":{"container":{"runtime":"docker"}}}}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:25.346+00:00"},"s":"I",  "c":"NETWORK",  "id":22943,   "ctx":"listener","msg":"Connection accepted","attr":{"remote":"127.0.0.1:36370","isLoadBalanced":false,"uuid":{"uuid":{"$uuid":"deddea16-feb7-48ba-892c-8f66c5b4e883"}},"connectionId":6,"connectionCount":2}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:25.346+00:00"},"s":"I",  "c":"NETWORK",  "id":22943,   "ctx":"listener","msg":"Connection accepted","attr":{"remote":"127.0.0.1:36374","isLoadBalanced":false,"uuid":{"uuid":{"$uuid":"a1e212e8-d896-4468-962a-e2f47dafd003"}},"connectionId":7,"connectionCount":3}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:25.348+00:00"},"s":"I",  "c":"NETWORK",  "id":51800,   "ctx":"conn6","msg":"client metadata","attr":{"remote":"127.0.0.1:36370","client":"conn6","negotiatedCompressors":[],"doc":{"application":{"name":"mongosh 2.5.6"},"driver":{"name":"nodejs|mongosh","version":"6.16.0|2.5.6"},"platform":"Node.js v20.19.4, LE","os":{"name":"linux","architecture":"x64","version":"3.10.0-327.22.2.el7.x86_64","type":"Linux"},"env":{"container":{"runtime":"docker"}}}}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:25.350+00:00"},"s":"I",  "c":"NETWORK",  "id":51800,   "ctx":"conn7","msg":"client metadata","attr":{"remote":"127.0.0.1:36374","client":"conn7","negotiatedCompressors":[],"doc":{"application":{"name":"mongosh 2.5.6"},"driver":{"name":"nodejs|mongosh","version":"6.16.0|2.5.6"},"platform":"Node.js v20.19.4, LE","os":{"name":"linux","architecture":"x64","version":"3.10.0-327.22.2.el7.x86_64","type":"Linux"},"env":{"container":{"runtime":"docker"}}}}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:25.402+00:00"},"s":"I",  "c":"NETWORK",  "id":6788700, "ctx":"conn6","msg":"Received first command on ingress connection since session start or auth handshake","attr":{"elapsedMillis":54}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:25.403+00:00"},"s":"I",  "c":"NETWORK",  "id":22943,   "ctx":"listener","msg":"Connection accepted","attr":{"remote":"127.0.0.1:36388","isLoadBalanced":false,"uuid":{"uuid":{"$uuid":"7b692742-09d1-4e60-b751-fb257c8eebda"}},"connectionId":8,"connectionCount":4}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:25.408+00:00"},"s":"I",  "c":"NETWORK",  "id":51800,   "ctx":"conn8","msg":"client metadata","attr":{"remote":"127.0.0.1:36388","client":"conn8","negotiatedCompressors":[],"doc":{"application":{"name":"mongosh 2.5.6"},"driver":{"name":"nodejs|mongosh","version":"6.16.0|2.5.6"},"platform":"Node.js v20.19.4, LE","os":{"name":"linux","architecture":"x64","version":"3.10.0-327.22.2.el7.x86_64","type":"Linux"},"env":{"container":{"runtime":"docker"}}}}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:25.412+00:00"},"s":"I",  "c":"NETWORK",  "id":6788700, "ctx":"conn8","msg":"Received first command on ingress connection since session start or auth handshake","attr":{"elapsedMillis":4}}
+mongodb              | admin> ... ... ... ... {"t":{"$date":"2025-08-01T01:41:26.212+00:00"},"s":"I",  "c":"STORAGE",  "id":20320,   "ctx":"conn8","msg":"createCollection","attr":{"namespace":"admin.system.users","uuidDisposition":"generated","uuid":{"uuid":{"$uuid":"17256fbd-4810-4265-a95d-ce1673c4b534"}},"options":{}}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.265+00:00"},"s":"I",  "c":"INDEX",    "id":20345,   "ctx":"conn8","msg":"Index build: done building","attr":{"buildUUID":null,"collectionUUID":{"uuid":{"$uuid":"17256fbd-4810-4265-a95d-ce1673c4b534"}},"namespace":"admin.system.users","index":"_id_","ident":"index-8-11981721767766944883","collectionIdent":"collection-7-11981721767766944883","commitTimestamp":null}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.265+00:00"},"s":"I",  "c":"INDEX",    "id":20345,   "ctx":"conn8","msg":"Index build: done building","attr":{"buildUUID":null,"collectionUUID":{"uuid":{"$uuid":"17256fbd-4810-4265-a95d-ce1673c4b534"}},"namespace":"admin.system.users","index":"user_1_db_1","ident":"index-9-11981721767766944883","collectionIdent":"collection-7-11981721767766944883","commitTimestamp":null}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.265+00:00"},"s":"I",  "c":"COMMAND",  "id":51803,   "ctx":"conn8","msg":"Slow query","attr":{"type":"command","isFromUserConnection":true,"ns":"admin.$cmd","collectionType":"admin","appName":"mongosh 2.5.6","command":{"createUser":"root","pwd":"xxx","roles":[{"role":"root","db":"admin"}],"lsid":{"id":{"$uuid":"c63e62b2-3a34-4042-a996-ae928a2392fe"}},"$db":"admin"},"numYields":0,"reslen":38,"locks":{"ReplicationStateTransition":{"acquireCount":{"w":4}},"Global":{"acquireCount":{"w":4}},"Database":{"acquireCount":{"w":4}},"Collection":{"acquireCount":{"w":4}},"Mutex":{"acquireCount":{"r":1}}},"flowControl":{"acquireCount":4},"storage":{"data":{"txnBytesDirty":2396}},"cpuNanos":39147243,"remote":"127.0.0.1:36388","protocol":"op_msg","queues":{"execution":{"admissions":5},"ingress":{"admissions":3}},"workingMillis":144,"durationMillis":144}}
+mongodb              | { ok: 1 }
+mongodb              | admin> {"t":{"$date":"2025-08-01T01:41:26.274+00:00"},"s":"I",  "c":"-",        "id":20883,   "ctx":"conn5","msg":"Interrupted operation as its client disconnected","attr":{"opId":16385}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.275+00:00"},"s":"I",  "c":"NETWORK",  "id":22944,   "ctx":"conn8","msg":"Connection ended","attr":{"remote":"127.0.0.1:36388","isLoadBalanced":false,"uuid":{"uuid":{"$uuid":"7b692742-09d1-4e60-b751-fb257c8eebda"}},"connectionId":8,"connectionCount":3}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.275+00:00"},"s":"I",  "c":"NETWORK",  "id":22944,   "ctx":"conn5","msg":"Connection ended","attr":{"remote":"127.0.0.1:36354","isLoadBalanced":false,"uuid":{"uuid":{"$uuid":"cd929d79-97ed-4577-95cc-c60c85b996c6"}},"connectionId":5,"connectionCount":2}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.276+00:00"},"s":"I",  "c":"NETWORK",  "id":22944,   "ctx":"conn7","msg":"Connection ended","attr":{"remote":"127.0.0.1:36374","isLoadBalanced":false,"uuid":{"uuid":{"$uuid":"a1e212e8-d896-4468-962a-e2f47dafd003"}},"connectionId":7,"connectionCount":1}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.276+00:00"},"s":"I",  "c":"NETWORK",  "id":22944,   "ctx":"conn6","msg":"Connection ended","attr":{"remote":"127.0.0.1:36370","isLoadBalanced":false,"uuid":{"uuid":{"$uuid":"deddea16-feb7-48ba-892c-8f66c5b4e883"}},"connectionId":6,"connectionCount":0}}
+mongodb              | 
+mongodb              | /usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
+mongodb              | 
+mongodb              | 
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.316+00:00"},"s":"I",  "c":"CONTROL",  "id":20698,   "ctx":"main","msg":"***** SERVER RESTARTED *****"}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.317+00:00"},"s":"I",  "c":"CONTROL",  "id":23285,   "ctx":"main","msg":"Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'"}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.318+00:00"},"s":"I",  "c":"CONTROL",  "id":5945603, "ctx":"main","msg":"Multi threading initialized"}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.318+00:00"},"s":"I",  "c":"NETWORK",  "id":4648601, "ctx":"main","msg":"Implicit TCP FastOpen unavailable. If TCP FastOpen is required, set at least one of the related parameters","attr":{"relatedParameters":["tcpFastOpenServer","tcpFastOpenClient","tcpFastOpenQueueSize"]}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.318+00:00"},"s":"I",  "c":"NETWORK",  "id":4915701, "ctx":"main","msg":"Initialized wire specification","attr":{"spec":{"incomingExternalClient":{"minWireVersion":0,"maxWireVersion":25},"incomingInternalClient":{"minWireVersion":0,"maxWireVersion":25},"outgoing":{"minWireVersion":6,"maxWireVersion":25},"isInternalClient":true}}}
+mongodb              | Killing process with pid: 28
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.319+00:00"},"s":"I",  "c":"CONTROL",  "id":23377,   "ctx":"SignalHandler","msg":"Received signal","attr":{"signal":15,"error":"Terminated"}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.319+00:00"},"s":"I",  "c":"CONTROL",  "id":23378,   "ctx":"SignalHandler","msg":"Signal was sent by kill(2)","attr":{"pid":111,"uid":999}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.319+00:00"},"s":"I",  "c":"CONTROL",  "id":23381,   "ctx":"SignalHandler","msg":"will terminate after current cmd ends"}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.320+00:00"},"s":"I",  "c":"REPL",     "id":4784900, "ctx":"SignalHandler","msg":"Stepping down the ReplicationCoordinator for shutdown","attr":{"waitTimeMillis":15000}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.320+00:00"},"s":"I",  "c":"REPL",     "id":4794602, "ctx":"SignalHandler","msg":"Attempting to enter quiesce mode"}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.320+00:00"},"s":"I",  "c":"STORAGE",  "id":7333402, "ctx":"SignalHandler","msg":"Shutting down the DiskSpaceMonitor"}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.320+00:00"},"s":"I",  "c":"-",        "id":6371601, "ctx":"SignalHandler","msg":"Shutting down the FLE Crud thread pool"}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.321+00:00"},"s":"I",  "c":"COMMAND",  "id":4784901, "ctx":"SignalHandler","msg":"Shutting down the MirrorMaestro"}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.321+00:00"},"s":"I",  "c":"SHARDING", "id":4784902, "ctx":"SignalHandler","msg":"Shutting down the WaitForMajorityService"}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.321+00:00"},"s":"I",  "c":"CONTROL",  "id":4784903, "ctx":"SignalHandler","msg":"Shutting down the LogicalSessionCache"}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.321+00:00"},"s":"I",  "c":"NETWORK",  "id":8314100, "ctx":"SignalHandler","msg":"Shutdown: Closing listener sockets"}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.321+00:00"},"s":"I",  "c":"NETWORK",  "id":23017,   "ctx":"listener","msg":"removing socket file","attr":{"path":"/tmp/mongodb-27017.sock"}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.321+00:00"},"s":"I",  "c":"NETWORK",  "id":4784905, "ctx":"SignalHandler","msg":"Shutting down the global connection pool"}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.321+00:00"},"s":"I",  "c":"CONTROL",  "id":4784906, "ctx":"SignalHandler","msg":"Shutting down the FlowControlTicketholder"}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.321+00:00"},"s":"I",  "c":"-",        "id":20520,   "ctx":"SignalHandler","msg":"Stopping further Flow Control ticket acquisitions."}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.322+00:00"},"s":"I",  "c":"CONTROL",  "id":4784908, "ctx":"SignalHandler","msg":"Shutting down the PeriodicThreadToAbortExpiredTransactions"}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.322+00:00"},"s":"I",  "c":"REPL",     "id":4784909, "ctx":"SignalHandler","msg":"Shutting down the ReplicationCoordinator"}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.322+00:00"},"s":"I",  "c":"SHARDING", "id":4784910, "ctx":"SignalHandler","msg":"Shutting down the ShardingInitializationMongoD"}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.322+00:00"},"s":"I",  "c":"REPL",     "id":4784911, "ctx":"SignalHandler","msg":"Enqueuing the ReplicationStateTransitionLock for shutdown"}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.322+00:00"},"s":"I",  "c":"-",        "id":4784912, "ctx":"SignalHandler","msg":"Killing all operations for shutdown"}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.322+00:00"},"s":"I",  "c":"-",        "id":4695300, "ctx":"SignalHandler","msg":"Interrupted all currently running operations","attr":{"opsKilled":3}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.322+00:00"},"s":"I",  "c":"TENANT_M", "id":5093807, "ctx":"SignalHandler","msg":"Shutting down all TenantMigrationAccessBlockers on global shutdown"}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.322+00:00"},"s":"I",  "c":"ASIO",     "id":22582,   "ctx":"TenantMigrationBlockerNet","msg":"Killing all outstanding egress activity."}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.322+00:00"},"s":"I",  "c":"ASIO",     "id":6529201, "ctx":"SignalHandler","msg":"Network interface redundant shutdown","attr":{"state":"Stopped"}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.322+00:00"},"s":"I",  "c":"ASIO",     "id":22582,   "ctx":"SignalHandler","msg":"Killing all outstanding egress activity."}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.322+00:00"},"s":"I",  "c":"COMMAND",  "id":4784913, "ctx":"SignalHandler","msg":"Shutting down all open transactions"}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.322+00:00"},"s":"I",  "c":"REPL",     "id":4784914, "ctx":"SignalHandler","msg":"Acquiring the ReplicationStateTransitionLock for shutdown"}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.322+00:00"},"s":"I",  "c":"INDEX",    "id":4784915, "ctx":"SignalHandler","msg":"Shutting down the IndexBuildsCoordinator"}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.322+00:00"},"s":"I",  "c":"NETWORK",  "id":4784918, "ctx":"SignalHandler","msg":"Shutting down the ReplicaSetMonitor"}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.322+00:00"},"s":"I",  "c":"SHARDING", "id":4784921, "ctx":"SignalHandler","msg":"Shutting down the MigrationUtilExecutor"}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.323+00:00"},"s":"I",  "c":"ASIO",     "id":22582,   "ctx":"MigrationUtil-TaskExecutor","msg":"Killing all outstanding egress activity."}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.323+00:00"},"s":"I",  "c":"NETWORK",  "id":20562,   "ctx":"SignalHandler","msg":"Shutdown: Closing open transport sessions"}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.323+00:00"},"s":"I",  "c":"NETWORK",  "id":4784923, "ctx":"SignalHandler","msg":"Shutting down the ASIO transport SessionManager"}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.323+00:00"},"s":"I",  "c":"CONTROL",  "id":4784927, "ctx":"SignalHandler","msg":"Shutting down the HealthLog"}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.323+00:00"},"s":"I",  "c":"CONTROL",  "id":4784928, "ctx":"SignalHandler","msg":"Shutting down the TTL monitor"}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.323+00:00"},"s":"I",  "c":"INDEX",    "id":3684100, "ctx":"SignalHandler","msg":"Shutting down TTL collection monitor thread"}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.323+00:00"},"s":"I",  "c":"INDEX",    "id":3684101, "ctx":"SignalHandler","msg":"Finished shutting down TTL collection monitor thread"}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.323+00:00"},"s":"I",  "c":"CONTROL",  "id":6278511, "ctx":"SignalHandler","msg":"Shutting down the Change Stream Expired Pre-images Remover"}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.323+00:00"},"s":"I",  "c":"CONTROL",  "id":4784929, "ctx":"SignalHandler","msg":"Acquiring the global lock for shutdown"}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.323+00:00"},"s":"I",  "c":"CONTROL",  "id":4784930, "ctx":"SignalHandler","msg":"Shutting down the storage engine"}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.323+00:00"},"s":"I",  "c":"STORAGE",  "id":22320,   "ctx":"SignalHandler","msg":"Shutting down journal flusher thread"}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.323+00:00"},"s":"I",  "c":"STORAGE",  "id":22321,   "ctx":"SignalHandler","msg":"Finished shutting down journal flusher thread"}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.323+00:00"},"s":"I",  "c":"STORAGE",  "id":22322,   "ctx":"SignalHandler","msg":"Shutting down checkpoint thread"}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.323+00:00"},"s":"I",  "c":"STORAGE",  "id":22323,   "ctx":"SignalHandler","msg":"Finished shutting down checkpoint thread"}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.323+00:00"},"s":"I",  "c":"STORAGE",  "id":22261,   "ctx":"SignalHandler","msg":"Timestamp monitor shutting down"}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.323+00:00"},"s":"I",  "c":"STORAGE",  "id":20282,   "ctx":"SignalHandler","msg":"Deregistering all the collections"}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.324+00:00"},"s":"I",  "c":"STORAGE",  "id":22317,   "ctx":"SignalHandler","msg":"WiredTigerKVEngine shutting down"}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.324+00:00"},"s":"I",  "c":"STORAGE",  "id":22318,   "ctx":"SignalHandler","msg":"Shutting down session sweeper thread"}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.324+00:00"},"s":"I",  "c":"STORAGE",  "id":22319,   "ctx":"SignalHandler","msg":"Finished shutting down session sweeper thread"}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.330+00:00"},"s":"I",  "c":"STORAGE",  "id":4795902, "ctx":"SignalHandler","msg":"Closing WiredTiger","attr":{"closeConfig":"leak_memory=true,use_timestamp=false,"}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.333+00:00"},"s":"I",  "c":"WTCHKPT",  "id":22430,   "ctx":"SignalHandler","msg":"WiredTiger message","attr":{"message":{"ts_sec":1754012486,"ts_usec":333146,"thread":"28:0x7f714fa8c6c0","session_name":"close_ckpt","category":"WT_VERB_CHECKPOINT_PROGRESS","category_id":7,"verbose_level":"DEBUG_1","verbose_level_id":1,"msg":"saving checkpoint snapshot min: 46, snapshot max: 46 snapshot count: 0, oldest timestamp: (0, 0) , meta checkpoint timestamp: (0, 0) base write gen: 1"}}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.437+00:00"},"s":"I",  "c":"WTRECOV",  "id":22430,   "ctx":"SignalHandler","msg":"WiredTiger message","attr":{"message":{"ts_sec":1754012486,"ts_usec":437648,"thread":"28:0x7f714fa8c6c0","session_name":"WT_CONNECTION.close","category":"WT_VERB_RECOVERY_PROGRESS","category_id":34,"verbose_level":"DEBUG_1","verbose_level_id":1,"msg":"shutdown checkpoint has successfully finished and ran for 106 milliseconds"}}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.437+00:00"},"s":"I",  "c":"WTRECOV",  "id":22430,   "ctx":"SignalHandler","msg":"WiredTiger message","attr":{"message":{"ts_sec":1754012486,"ts_usec":437836,"thread":"28:0x7f714fa8c6c0","session_name":"WT_CONNECTION.close","category":"WT_VERB_RECOVERY_PROGRESS","category_id":34,"verbose_level":"DEBUG_1","verbose_level_id":1,"msg":"shutdown was completed successfully and took 106ms, including 0ms for the rollback to stable, and 106ms for the checkpoint."}}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.535+00:00"},"s":"I",  "c":"STORAGE",  "id":4795901, "ctx":"SignalHandler","msg":"WiredTiger closed","attr":{"durationMillis":205}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.535+00:00"},"s":"I",  "c":"STORAGE",  "id":22279,   "ctx":"SignalHandler","msg":"shutdown: removing fs lock..."}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.535+00:00"},"s":"I",  "c":"-",        "id":4784931, "ctx":"SignalHandler","msg":"Dropping the scope cache for shutdown"}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.535+00:00"},"s":"I",  "c":"FTDC",     "id":20626,   "ctx":"SignalHandler","msg":"Shutting down full-time diagnostic data capture"}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.538+00:00"},"s":"I",  "c":"CONTROL",  "id":20565,   "ctx":"SignalHandler","msg":"Now exiting"}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.539+00:00"},"s":"I",  "c":"CONTROL",  "id":8423404, "ctx":"SignalHandler","msg":"mongod shutdown complete","attr":{"Summary of time elapsed":{"Statistics":{"Enter terminal shutdown":"0 ms","Step down the replication coordinator for shutdown":"0 ms","Time spent in quiesce mode":"0 ms","Shut down FLE Crud subsystem":"0 ms","Shut down MirrorMaestro":"1 ms","Shut down WaitForMajorityService":"0 ms","Shut down the logical session cache":"0 ms","Shut down the global connection pool":"0 ms","Shut down the flow control ticket holder":"0 ms","Shut down the thread that aborts expired transactions":"1 ms","Kill all operations for shutdown":"0 ms","Shut down all tenant migration access blockers on global shutdown":"0 ms","Shut down all open transactions":"0 ms","Acquire the RSTL for shutdown":"0 ms","Shut down the IndexBuildsCoordinator and wait for index builds to finish":"0 ms","Shut down the replica set monitor":"0 ms","Shut down the migration util executor":"1 ms","Shut down the transport layer":"0 ms","Shut down the health log":"0 ms","Shut down the TTL monitor":"0 ms","Shut down expired pre-images and documents removers":"0 ms","Shut down the storage engine":"212 ms","Wait for the oplog cap maintainer thread to stop":"0 ms","Shut down full-time data capture":"0 ms","Shut down online certificate status protocol manager":"0 ms","shutdownTask total elapsed time":"218 ms"}}}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:26.539+00:00"},"s":"I",  "c":"CONTROL",  "id":23138,   "ctx":"SignalHandler","msg":"Shutting down","attr":{"exitCode":0}}
+mongodb              | 
+mongodb              | MongoDB init process complete; ready for start up.
+mongodb              | 
+mongodb              | {"t":{"$date":"2025-08-01T01:41:27.354+00:00"},"s":"I",  "c":"CONTROL",  "id":23285,   "ctx":"main","msg":"Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'"}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:27.354+00:00"},"s":"I",  "c":"CONTROL",  "id":5945603, "ctx":"main","msg":"Multi threading initialized"}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:27.355+00:00"},"s":"I",  "c":"NETWORK",  "id":4648601, "ctx":"main","msg":"Implicit TCP FastOpen unavailable. If TCP FastOpen is required, set at least one of the related parameters","attr":{"relatedParameters":["tcpFastOpenServer","tcpFastOpenClient","tcpFastOpenQueueSize"]}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:27.355+00:00"},"s":"I",  "c":"NETWORK",  "id":4915701, "ctx":"main","msg":"Initialized wire specification","attr":{"spec":{"incomingExternalClient":{"minWireVersion":0,"maxWireVersion":25},"incomingInternalClient":{"minWireVersion":0,"maxWireVersion":25},"outgoing":{"minWireVersion":6,"maxWireVersion":25},"isInternalClient":true}}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:27.356+00:00"},"s":"I",  "c":"TENANT_M", "id":7091600, "ctx":"main","msg":"Starting TenantMigrationAccessBlockerRegistry"}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:27.356+00:00"},"s":"I",  "c":"CONTROL",  "id":4615611, "ctx":"initandlisten","msg":"MongoDB starting","attr":{"pid":1,"port":27017,"dbPath":"/data/db","architecture":"64-bit","host":"11db1024cabb"}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:27.356+00:00"},"s":"W",  "c":"CONTROL",  "id":20720,   "ctx":"initandlisten","msg":"Memory available to mongo process is less than total system memory","attr":{"availableMemSizeMB":245,"systemMemSizeMB":7823}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:27.356+00:00"},"s":"I",  "c":"CONTROL",  "id":23403,   "ctx":"initandlisten","msg":"Build Info","attr":{"buildInfo":{"version":"8.0.12","gitVersion":"b60fc6875b5fb4b63cc0dbbd8dda0d6d6277921a","openSSLVersion":"OpenSSL 3.0.13 30 Jan 2024","modules":[],"allocator":"tcmalloc-google","environment":{"distmod":"ubuntu2404","distarch":"x86_64","target_arch":"x86_64"}}}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:27.356+00:00"},"s":"I",  "c":"CONTROL",  "id":51765,   "ctx":"initandlisten","msg":"Operating System","attr":{"os":{"name":"Ubuntu","version":"24.04"}}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:27.356+00:00"},"s":"I",  "c":"CONTROL",  "id":21951,   "ctx":"initandlisten","msg":"Options set by command line","attr":{"options":{"net":{"bindIp":"*"},"security":{"authorization":"enabled"}}}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:27.357+00:00"},"s":"I",  "c":"STORAGE",  "id":22270,   "ctx":"initandlisten","msg":"Storage engine to use detected by data files","attr":{"dbpath":"/data/db","storageEngine":"wiredTiger"}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:27.357+00:00"},"s":"I",  "c":"STORAGE",  "id":22297,   "ctx":"initandlisten","msg":"Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem","tags":["startupWarnings"]}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:27.357+00:00"},"s":"I",  "c":"STORAGE",  "id":22300,   "ctx":"initandlisten","msg":"The configured WiredTiger cache size is more than 80% of available RAM. See http://dochub.mongodb.org/core/faq-memory-diagnostics-wt","tags":["startupWarnings"]}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:27.357+00:00"},"s":"I",  "c":"STORAGE",  "id":22315,   "ctx":"initandlisten","msg":"Opening WiredTiger","attr":{"config":"create,cache_size=256M,session_max=33000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,remove=true,path=journal,compressor=snappy),builtin_extension_config=(zstd=(compression_level=6)),file_manager=(close_idle_time=600,close_scan_interval=10,close_handle_minimum=2000),statistics_log=(wait=0),json_output=(error,message),verbose=[recovery_progress:1,checkpoint_progress:1,compact_progress:1,backup:0,checkpoint:0,compact:0,evict:0,history_store:0,recovery:0,rts:0,salvage:0,tiered:0,timestamp:0,transaction:0,verify:0,log:0],prefetch=(available=true,default=false),"}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:28.136+00:00"},"s":"I",  "c":"WTRECOV",  "id":22430,   "ctx":"initandlisten","msg":"WiredTiger message","attr":{"message":{"ts_sec":1754012488,"ts_usec":136001,"thread":"1:0x7f1b521d7680","session_name":"txn-recover","category":"WT_VERB_RECOVERY_PROGRESS","category_id":34,"verbose_level":"DEBUG_1","verbose_level_id":1,"msg":"Recovering log 1 through 2"}}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:28.208+00:00"},"s":"I",  "c":"WTRECOV",  "id":22430,   "ctx":"initandlisten","msg":"WiredTiger message","attr":{"message":{"ts_sec":1754012488,"ts_usec":208745,"thread":"1:0x7f1b521d7680","session_name":"txn-recover","category":"WT_VERB_RECOVERY_PROGRESS","category_id":34,"verbose_level":"DEBUG_1","verbose_level_id":1,"msg":"Recovering log 2 through 2"}}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:28.408+00:00"},"s":"I",  "c":"WTRECOV",  "id":22430,   "ctx":"initandlisten","msg":"WiredTiger message","attr":{"message":{"ts_sec":1754012488,"ts_usec":407356,"thread":"1:0x7f1b521d7680","session_name":"txn-recover","category":"WT_VERB_RECOVERY_PROGRESS","category_id":34,"verbose_level":"DEBUG_1","verbose_level_id":1,"msg":"Main recovery loop: starting at 1/32128 to 2/256"}}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:29.139+00:00"},"s":"I",  "c":"WTRECOV",  "id":22430,   "ctx":"initandlisten","msg":"WiredTiger message","attr":{"message":{"ts_sec":1754012489,"ts_usec":139723,"thread":"1:0x7f1b521d7680","session_name":"txn-recover","category":"WT_VERB_RECOVERY_PROGRESS","category_id":34,"verbose_level":"DEBUG_1","verbose_level_id":1,"msg":"Recovering log 1 through 2"}}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:29.224+00:00"},"s":"I",  "c":"WTRECOV",  "id":22430,   "ctx":"initandlisten","msg":"WiredTiger message","attr":{"message":{"ts_sec":1754012489,"ts_usec":224677,"thread":"1:0x7f1b521d7680","session_name":"txn-recover","category":"WT_VERB_RECOVERY_PROGRESS","category_id":34,"verbose_level":"DEBUG_1","verbose_level_id":1,"msg":"Recovering log 2 through 2"}}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:29.251+00:00"},"s":"I",  "c":"WTRECOV",  "id":22430,   "ctx":"initandlisten","msg":"WiredTiger message","attr":{"message":{"ts_sec":1754012489,"ts_usec":251046,"thread":"1:0x7f1b521d7680","session_name":"txn-recover","category":"WT_VERB_RECOVERY_PROGRESS","category_id":34,"verbose_level":"DEBUG_1","verbose_level_id":1,"msg":"recovery log replay has successfully finished and ran for 1115 milliseconds"}}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:29.251+00:00"},"s":"I",  "c":"WTRECOV",  "id":22430,   "ctx":"initandlisten","msg":"WiredTiger message","attr":{"message":{"ts_sec":1754012489,"ts_usec":251137,"thread":"1:0x7f1b521d7680","session_name":"txn-recover","category":"WT_VERB_RECOVERY_PROGRESS","category_id":34,"verbose_level":"DEBUG_1","verbose_level_id":1,"msg":"Set global recovery timestamp: (0, 0)"}}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:29.251+00:00"},"s":"I",  "c":"WTRECOV",  "id":22430,   "ctx":"initandlisten","msg":"WiredTiger message","attr":{"message":{"ts_sec":1754012489,"ts_usec":251156,"thread":"1:0x7f1b521d7680","session_name":"txn-recover","category":"WT_VERB_RECOVERY_PROGRESS","category_id":34,"verbose_level":"DEBUG_1","verbose_level_id":1,"msg":"Set global oldest timestamp: (0, 0)"}}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:29.252+00:00"},"s":"I",  "c":"WTRECOV",  "id":22430,   "ctx":"initandlisten","msg":"WiredTiger message","attr":{"message":{"ts_sec":1754012489,"ts_usec":252293,"thread":"1:0x7f1b521d7680","session_name":"txn-recover","category":"WT_VERB_RECOVERY_PROGRESS","category_id":34,"verbose_level":"DEBUG_1","verbose_level_id":1,"msg":"recovery rollback to stable has successfully finished and ran for 1 milliseconds"}}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:29.262+00:00"},"s":"I",  "c":"WTCHKPT",  "id":22430,   "ctx":"initandlisten","msg":"WiredTiger message","attr":{"message":{"ts_sec":1754012489,"ts_usec":262234,"thread":"1:0x7f1b521d7680","session_name":"WT_SESSION.checkpoint","category":"WT_VERB_CHECKPOINT_PROGRESS","category_id":7,"verbose_level":"DEBUG_1","verbose_level_id":1,"msg":"saving checkpoint snapshot min: 1, snapshot max: 1 snapshot count: 0, oldest timestamp: (0, 0) , meta checkpoint timestamp: (0, 0) base write gen: 7"}}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:29.290+00:00"},"s":"I",  "c":"WTRECOV",  "id":22430,   "ctx":"initandlisten","msg":"WiredTiger message","attr":{"message":{"ts_sec":1754012489,"ts_usec":290624,"thread":"1:0x7f1b521d7680","session_name":"txn-recover","category":"WT_VERB_RECOVERY_PROGRESS","category_id":34,"verbose_level":"DEBUG_1","verbose_level_id":1,"msg":"recovery checkpoint has successfully finished and ran for 38 milliseconds"}}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:29.291+00:00"},"s":"I",  "c":"WTRECOV",  "id":22430,   "ctx":"initandlisten","msg":"WiredTiger message","attr":{"message":{"ts_sec":1754012489,"ts_usec":290845,"thread":"1:0x7f1b521d7680","session_name":"txn-recover","category":"WT_VERB_RECOVERY_PROGRESS","category_id":34,"verbose_level":"DEBUG_1","verbose_level_id":1,"msg":"recovery was completed successfully and took 1155ms, including 1115ms for the log replay, 1ms for the rollback to stable, and 38ms for the checkpoint."}}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:29.296+00:00"},"s":"I",  "c":"STORAGE",  "id":4795906, "ctx":"initandlisten","msg":"WiredTiger opened","attr":{"durationMillis":1939}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:29.302+00:00"},"s":"I",  "c":"RECOVERY", "id":23987,   "ctx":"initandlisten","msg":"WiredTiger recoveryTimestamp","attr":{"recoveryTimestamp":{"$timestamp":{"t":0,"i":0}}}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:29.310+00:00"},"s":"I",  "c":"STORAGE",  "id":9529901, "ctx":"initandlisten","msg":"Initializing durable catalog","attr":{"numRecords":4}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:29.311+00:00"},"s":"I",  "c":"STORAGE",  "id":9529902, "ctx":"initandlisten","msg":"Retrieving all idents from storage engine"}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:29.312+00:00"},"s":"I",  "c":"STORAGE",  "id":9529903, "ctx":"initandlisten","msg":"Initializing all collections in durable catalog","attr":{"numEntries":4}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:29.325+00:00"},"s":"W",  "c":"CONTROL",  "id":9068900, "ctx":"initandlisten","msg":"For customers running the current memory allocator, we suggest changing the contents of the following sysfsFile","attr":{"allocator":"tcmalloc-google","sysfsFile":"/sys/kernel/mm/transparent_hugepage/defrag","currentValue":"madvise","desiredValue":"defer+madvise"},"tags":["startupWarnings"]}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:29.325+00:00"},"s":"W",  "c":"CONTROL",  "id":8640302, "ctx":"initandlisten","msg":"We suggest setting the contents of sysfsFile to 0.","attr":{"sysfsFile":"/sys/kernel/mm/transparent_hugepage/khugepaged/max_ptes_none","currentValue":511},"tags":["startupWarnings"]}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:29.326+00:00"},"s":"W",  "c":"NETWORK",  "id":5123300, "ctx":"initandlisten","msg":"vm.max_map_count is too low","attr":{"currentValue":65530,"recommendedMinimum":1677720,"maxConns":838860},"tags":["startupWarnings"]}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:29.327+00:00"},"s":"W",  "c":"CONTROL",  "id":8386700, "ctx":"initandlisten","msg":"We suggest setting swappiness to 0 or 1, as swapping can cause performance problems.","attr":{"sysfsFile":"/proc/sys/vm/swappiness","currentValue":60},"tags":["startupWarnings"]}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:29.337+00:00"},"s":"I",  "c":"NETWORK",  "id":4915702, "ctx":"initandlisten","msg":"Updated wire specification","attr":{"oldSpec":{"incomingExternalClient":{"minWireVersion":0,"maxWireVersion":25},"incomingInternalClient":{"minWireVersion":0,"maxWireVersion":25},"outgoing":{"minWireVersion":6,"maxWireVersion":25},"isInternalClient":true},"newSpec":{"incomingExternalClient":{"minWireVersion":0,"maxWireVersion":25},"incomingInternalClient":{"minWireVersion":25,"maxWireVersion":25},"outgoing":{"minWireVersion":25,"maxWireVersion":25},"isInternalClient":true}}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:29.337+00:00"},"s":"I",  "c":"REPL",     "id":5853300, "ctx":"initandlisten","msg":"current featureCompatibilityVersion value","attr":{"featureCompatibilityVersion":"8.0","context":"startup"}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:29.337+00:00"},"s":"I",  "c":"STORAGE",  "id":5071100, "ctx":"initandlisten","msg":"Clearing temp directory"}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:29.338+00:00"},"s":"I",  "c":"CONTROL",  "id":6608200, "ctx":"initandlisten","msg":"Initializing cluster server parameters from disk"}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:29.339+00:00"},"s":"I",  "c":"CONTROL",  "id":20536,   "ctx":"initandlisten","msg":"Flow Control is enabled on this deployment"}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:29.340+00:00"},"s":"I",  "c":"FTDC",     "id":20625,   "ctx":"initandlisten","msg":"Initializing full-time diagnostic data capture","attr":{"dataDirectory":"/data/db/diagnostic.data"}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:29.346+00:00"},"s":"I",  "c":"REPL",     "id":6015317, "ctx":"initandlisten","msg":"Setting new configuration state","attr":{"newState":"ConfigReplicationDisabled","oldState":"ConfigPreStart"}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:29.346+00:00"},"s":"I",  "c":"STORAGE",  "id":22262,   "ctx":"initandlisten","msg":"Timestamp monitor starting"}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:29.346+00:00"},"s":"I",  "c":"STORAGE",  "id":7333401, "ctx":"initandlisten","msg":"Starting the DiskSpaceMonitor"}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:29.349+00:00"},"s":"I",  "c":"NETWORK",  "id":23015,   "ctx":"listener","msg":"Listening on","attr":{"address":"/tmp/mongodb-27017.sock"}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:29.349+00:00"},"s":"I",  "c":"NETWORK",  "id":23015,   "ctx":"listener","msg":"Listening on","attr":{"address":"0.0.0.0:27017"}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:29.349+00:00"},"s":"I",  "c":"NETWORK",  "id":23016,   "ctx":"listener","msg":"Waiting for connections","attr":{"port":27017,"ssl":"off"}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:29.349+00:00"},"s":"I",  "c":"CONTROL",  "id":8423403, "ctx":"initandlisten","msg":"mongod startup complete","attr":{"Summary of time elapsed":{"Startup from clean shutdown?":true,"Statistics":{"Set up periodic runner":"0 ms","Set up online certificate status protocol manager":"0 ms","Transport layer setup":"0 ms","Run initial syncer crash recovery":"0 ms","Create storage engine lock file in the data directory":"0 ms","Get metadata describing storage engine":"0 ms","Validate options in metadata against current startup options":"0 ms","Create storage engine":"1955 ms","Write current PID to file":"7 ms","Initialize FCV before rebuilding indexes":"10 ms","Drop abandoned idents and get back indexes that need to be rebuilt or builds that need to be restarted":"0 ms","Rebuild indexes for collections":"0 ms","Load cluster parameters from disk for a standalone":"1 ms","Build user and roles graph":"0 ms","Verify indexes for admin.system.users collection":"0 ms","Set up the background thread pool responsible for waiting for opTimes to be majority committed":"0 ms","Start up the replication coordinator":"2 ms","Ensure the change stream collections on startup contain consistent data":"0 ms","Write startup options to the audit log":"0 ms","Start transport layer":"1 ms","_initAndListen total elapsed time":"1993 ms"}}}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:29.686+00:00"},"s":"I",  "c":"NETWORK",  "id":22943,   "ctx":"listener","msg":"Connection accepted","attr":{"remote":"172.20.0.5:37498","isLoadBalanced":false,"uuid":{"uuid":{"$uuid":"4a386e8f-b8ca-425b-a1b9-3181b9805350"}},"connectionId":1,"connectionCount":1}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:29.687+00:00"},"s":"I",  "c":"NETWORK",  "id":51800,   "ctx":"conn1","msg":"client metadata","attr":{"remote":"172.20.0.5:37498","client":"conn1","negotiatedCompressors":[],"doc":{"driver":{"name":"mongo-go-driver","version":"1.17.4"},"os":{"type":"linux","architecture":"amd64"},"platform":"go1.24.5","env":{"container":{"runtime":"docker"}}}}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:29.689+00:00"},"s":"I",  "c":"NETWORK",  "id":22943,   "ctx":"listener","msg":"Connection accepted","attr":{"remote":"172.20.0.5:37510","isLoadBalanced":false,"uuid":{"uuid":{"$uuid":"6d3e5149-6d5a-48db-be53-0fb6d4012954"}},"connectionId":2,"connectionCount":2}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:29.689+00:00"},"s":"I",  "c":"NETWORK",  "id":22943,   "ctx":"listener","msg":"Connection accepted","attr":{"remote":"172.20.0.5:37518","isLoadBalanced":false,"uuid":{"uuid":{"$uuid":"16b96bcb-48d1-40ad-bc3d-0a058d1e4829"}},"connectionId":3,"connectionCount":3}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:29.689+00:00"},"s":"I",  "c":"NETWORK",  "id":51800,   "ctx":"conn2","msg":"client metadata","attr":{"remote":"172.20.0.5:37510","client":"conn2","negotiatedCompressors":[],"doc":{"driver":{"name":"mongo-go-driver","version":"1.17.4"},"os":{"type":"linux","architecture":"amd64"},"platform":"go1.24.5","env":{"container":{"runtime":"docker"}}}}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:29.689+00:00"},"s":"I",  "c":"NETWORK",  "id":51800,   "ctx":"conn3","msg":"client metadata","attr":{"remote":"172.20.0.5:37518","client":"conn3","negotiatedCompressors":[],"doc":{"driver":{"name":"mongo-go-driver","version":"1.17.4"},"os":{"type":"linux","architecture":"amd64"},"platform":"go1.24.5","env":{"container":{"runtime":"docker"}}}}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:29.693+00:00"},"s":"I",  "c":"ACCESS",   "id":6788604, "ctx":"conn3","msg":"Auth metrics report","attr":{"metric":"acquireUser","micros":0}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:29.701+00:00"},"s":"I",  "c":"ACCESS",   "id":5286306, "ctx":"conn3","msg":"Successfully authenticated","attr":{"client":"172.20.0.5:37518","isSpeculative":true,"isClusterMember":false,"mechanism":"SCRAM-SHA-256","user":"root","db":"admin","result":0,"metrics":{"conversation_duration":{"micros":7395,"summary":{"0":{"step":1,"step_total":2,"duration_micros":52},"1":{"step":2,"step_total":2,"duration_micros":18}}}},"extraInfo":{}}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:29.701+00:00"},"s":"I",  "c":"NETWORK",  "id":6788700, "ctx":"conn3","msg":"Received first command on ingress connection since session start or auth handshake","attr":{"elapsedMillis":0}}
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:29 +0000] "GET /payments-summary HTTP/1.1" 200 94 "-" "curl/7.88.1"
+mongodb              | {"t":{"$date":"2025-08-01T01:41:30.006+00:00"},"s":"W",  "c":"CONTROL",  "id":636300,  "ctx":"ftdc","msg":"Use of deprecated server parameter name","attr":{"deprecatedName":"internalQueryCacheSize","canonicalName":"internalQueryCacheMaxEntriesPerCollection"}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:30.006+00:00"},"s":"W",  "c":"CONTROL",  "id":636300,  "ctx":"ftdc","msg":"Use of deprecated server parameter name","attr":{"deprecatedName":"oplogSamplingLogIntervalSeconds","canonicalName":"collectionSamplingLogIntervalSeconds"}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:30.006+00:00"},"s":"W",  "c":"NETWORK",  "id":23803,   "ctx":"ftdc","msg":"Use of deprecated server parameter 'sslMode', please use 'tlsMode' instead."}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:30.006+00:00"},"s":"W",  "c":"CONTROL",  "id":636300,  "ctx":"ftdc","msg":"Use of deprecated server parameter name","attr":{"deprecatedName":"wiredTigerConcurrentReadTransactions","canonicalName":"storageEngineConcurrentReadTransactions"}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:30.006+00:00"},"s":"W",  "c":"CONTROL",  "id":636300,  "ctx":"ftdc","msg":"Use of deprecated server parameter name","attr":{"deprecatedName":"wiredTigerConcurrentWriteTransactions","canonicalName":"storageEngineConcurrentWriteTransactions"}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:33.079+00:00"},"s":"I",  "c":"NETWORK",  "id":22943,   "ctx":"listener","msg":"Connection accepted","attr":{"remote":"172.20.0.3:55156","isLoadBalanced":false,"uuid":{"uuid":{"$uuid":"0a533025-ddfc-48ec-aae1-78c2caddd089"}},"connectionId":4,"connectionCount":4}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:33.080+00:00"},"s":"I",  "c":"NETWORK",  "id":51800,   "ctx":"conn4","msg":"client metadata","attr":{"remote":"172.20.0.3:55156","client":"conn4","negotiatedCompressors":[],"doc":{"driver":{"name":"mongo-go-driver","version":"1.17.4"},"os":{"type":"linux","architecture":"amd64"},"platform":"go1.24.5","env":{"container":{"runtime":"docker"}}}}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:33.080+00:00"},"s":"I",  "c":"NETWORK",  "id":22943,   "ctx":"listener","msg":"Connection accepted","attr":{"remote":"172.20.0.3:55164","isLoadBalanced":false,"uuid":{"uuid":{"$uuid":"b26c5f10-6ef1-4ec1-ac61-06ff8e2ad5b2"}},"connectionId":5,"connectionCount":5}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:33.080+00:00"},"s":"I",  "c":"NETWORK",  "id":51800,   "ctx":"conn5","msg":"client metadata","attr":{"remote":"172.20.0.3:55164","client":"conn5","negotiatedCompressors":[],"doc":{"driver":{"name":"mongo-go-driver","version":"1.17.4"},"os":{"type":"linux","architecture":"amd64"},"platform":"go1.24.5","env":{"container":{"runtime":"docker"}}}}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:33.139+00:00"},"s":"I",  "c":"NETWORK",  "id":22943,   "ctx":"listener","msg":"Connection accepted","attr":{"remote":"172.20.0.4:35882","isLoadBalanced":false,"uuid":{"uuid":{"$uuid":"53196cc6-97bf-416e-a349-0bbfb9ff76b3"}},"connectionId":6,"connectionCount":6}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:33.139+00:00"},"s":"I",  "c":"NETWORK",  "id":51800,   "ctx":"conn6","msg":"client metadata","attr":{"remote":"172.20.0.4:35882","client":"conn6","negotiatedCompressors":[],"doc":{"driver":{"name":"mongo-go-driver","version":"1.17.4"},"os":{"type":"linux","architecture":"amd64"},"platform":"go1.24.5","env":{"container":{"runtime":"docker"}}}}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:33.140+00:00"},"s":"I",  "c":"NETWORK",  "id":22943,   "ctx":"listener","msg":"Connection accepted","attr":{"remote":"172.20.0.4:35898","isLoadBalanced":false,"uuid":{"uuid":{"$uuid":"9e559a12-2a78-40b5-8c83-c37aa42a69bc"}},"connectionId":7,"connectionCount":7}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:33.140+00:00"},"s":"I",  "c":"NETWORK",  "id":51800,   "ctx":"conn7","msg":"client metadata","attr":{"remote":"172.20.0.4:35898","client":"conn7","negotiatedCompressors":[],"doc":{"driver":{"name":"mongo-go-driver","version":"1.17.4"},"os":{"type":"linux","architecture":"amd64"},"platform":"go1.24.5","env":{"container":{"runtime":"docker"}}}}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:35.362+00:00"},"s":"I",  "c":"NETWORK",  "id":22943,   "ctx":"listener","msg":"Connection accepted","attr":{"remote":"172.20.0.3:54402","isLoadBalanced":false,"uuid":{"uuid":{"$uuid":"997df09e-64d8-49a5-89c4-ff18bb3e2648"}},"connectionId":8,"connectionCount":8}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:35.363+00:00"},"s":"I",  "c":"NETWORK",  "id":51800,   "ctx":"conn8","msg":"client metadata","attr":{"remote":"172.20.0.3:54402","client":"conn8","negotiatedCompressors":[],"doc":{"driver":{"name":"mongo-go-driver","version":"1.17.4"},"os":{"type":"linux","architecture":"amd64"},"platform":"go1.24.5","env":{"container":{"runtime":"docker"}}}}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:35.363+00:00"},"s":"I",  "c":"ACCESS",   "id":6788604, "ctx":"conn8","msg":"Auth metrics report","attr":{"metric":"acquireUser","micros":0}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:35.371+00:00"},"s":"I",  "c":"ACCESS",   "id":5286306, "ctx":"conn8","msg":"Successfully authenticated","attr":{"client":"172.20.0.3:54402","isSpeculative":true,"isClusterMember":false,"mechanism":"SCRAM-SHA-256","user":"root","db":"admin","result":0,"metrics":{"conversation_duration":{"micros":8228,"summary":{"0":{"step":1,"step_total":2,"duration_micros":29},"1":{"step":2,"step_total":2,"duration_micros":26}}}},"extraInfo":{}}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:35.372+00:00"},"s":"I",  "c":"NETWORK",  "id":6788700, "ctx":"conn8","msg":"Received first command on ingress connection since session start or auth handshake","attr":{"elapsedMillis":0}}
+rinha-api-2          | 2025/08/01 01:41:35 Histórico de pagamentos limpo com sucesso.
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:35 +0000] "POST /purge-payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:35 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+mongodb              | {"t":{"$date":"2025-08-01T01:41:35.377+00:00"},"s":"I",  "c":"NETWORK",  "id":22943,   "ctx":"listener","msg":"Connection accepted","attr":{"remote":"172.20.0.4:39340","isLoadBalanced":false,"uuid":{"uuid":{"$uuid":"fab8ffda-332d-45fc-ab59-1a155ff67c3d"}},"connectionId":9,"connectionCount":9}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:35.378+00:00"},"s":"I",  "c":"NETWORK",  "id":51800,   "ctx":"conn9","msg":"client metadata","attr":{"remote":"172.20.0.4:39340","client":"conn9","negotiatedCompressors":[],"doc":{"driver":{"name":"mongo-go-driver","version":"1.17.4"},"os":{"type":"linux","architecture":"amd64"},"platform":"go1.24.5","env":{"container":{"runtime":"docker"}}}}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:35.378+00:00"},"s":"I",  "c":"ACCESS",   "id":6788604, "ctx":"conn9","msg":"Auth metrics report","attr":{"metric":"acquireUser","micros":0}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:35.380+00:00"},"s":"I",  "c":"STORAGE",  "id":20320,   "ctx":"conn3","msg":"createCollection","attr":{"namespace":"payment.payment_history","uuidDisposition":"generated","uuid":{"uuid":{"$uuid":"6b990f4f-68bc-4a0d-b285-29966be88240"}},"options":{}}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:35.386+00:00"},"s":"I",  "c":"ACCESS",   "id":5286306, "ctx":"conn9","msg":"Successfully authenticated","attr":{"client":"172.20.0.4:39340","isSpeculative":true,"isClusterMember":false,"mechanism":"SCRAM-SHA-256","user":"root","db":"admin","result":0,"metrics":{"conversation_duration":{"micros":8419,"summary":{"0":{"step":1,"step_total":2,"duration_micros":73},"1":{"step":2,"step_total":2,"duration_micros":26}}}},"extraInfo":{}}}
+mongodb              | {"t":{"$date":"2025-08-01T01:41:35.386+00:00"},"s":"I",  "c":"NETWORK",  "id":6788700, "ctx":"conn9","msg":"Received first command on ingress connection since session start or auth handshake","attr":{"elapsedMillis":0}}
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:35 +0000] "GET /payments-summary?from=2025-08-01T01:41:20.374Z&to=2025-08-01T01:41:33.874Z HTTP/1.1" 200 94 "-" "Grafana k6/1.1.0"
+mongodb              | {"t":{"$date":"2025-08-01T01:41:35.453+00:00"},"s":"I",  "c":"INDEX",    "id":20345,   "ctx":"conn3","msg":"Index build: done building","attr":{"buildUUID":null,"collectionUUID":{"uuid":{"$uuid":"6b990f4f-68bc-4a0d-b285-29966be88240"}},"namespace":"payment.payment_history","index":"_id_","ident":"index-1-13907429340436055540","collectionIdent":"collection-0-13907429340436055540","commitTimestamp":null}}
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:35 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:35 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:35 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:35 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:35 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:36 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:36 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:36 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:36 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:36 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:36 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:36 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:36 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:36 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:36 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:36 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:36 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:36 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:36 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:36 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:37 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:37 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:37 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:37 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:37 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:37 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:37 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:37 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:37 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:37 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:37 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:37 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:37 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:37 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:37 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:37 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:37 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:37 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:37 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:37 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:37 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:37 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:37 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:37 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:37 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:38 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:38 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:38 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:38 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:38 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:38 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:38 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:38 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:38 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:38 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:38 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:38 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:38 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:38 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:38 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:38 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:38 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:38 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:38 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:38 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:38 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:38 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:38 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:38 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:38 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:38 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:38 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:38 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:38 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:38 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:38 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:38 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:38 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:38 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:39 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:39 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:39 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:39 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:39 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:39 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:39 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:39 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:39 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:39 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:39 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:39 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:39 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:39 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:39 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:39 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:39 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:39 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:39 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:39 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:39 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:39 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:39 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:39 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:39 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:39 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:39 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:39 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:39 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:39 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:39 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:39 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:39 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:39 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:39 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:39 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:39 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:39 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:39 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:39 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:39 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:39 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:40 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:40 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:40 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:40 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:40 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:40 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:40 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:40 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:40 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:40 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:40 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:40 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:40 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:40 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:40 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:40 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:40 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:40 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:40 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:40 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:40 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:40 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:40 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:40 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:40 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:40 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:40 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:40 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:40 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:40 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:40 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:40 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:40 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:40 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:40 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:40 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:40 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:40 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:40 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:40 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:40 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:40 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:40 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:40 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:40 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:40 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:40 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:40 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:40 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:40 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:40 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:40 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "GET /payments-summary?from=2025-08-01T01:41:30.388Z&to=2025-08-01T01:41:43.888Z HTTP/1.1" 200 112 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx_load_balancer  | 172.20.0.1 - - [01/Aug/2025:01:41:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+log truncated at line 1000
