@@ -1,6 +1,6 @@
 services:
   backend-01:
-    image: ghcr.io/4emcos/rinha-backend-2025-golang:1.0.2
+    image: ghcr.io/4emcos/rinha-backend-2025-golang:1.0.3
     container_name: backend-01
     hostname: backend-01
     environment:
@@ -26,7 +26,7 @@ services:
           memory: "70MB"
 
   backend-02:
-    image: ghcr.io/4emcos/rinha-backend-2025-golang:1.0.2
+    image: ghcr.io/4emcos/rinha-backend-2025-golang:1.0.3
     container_name: backend-02
     hostname: backend-02
     environment:
@@ -81,13 +81,14 @@ services:
         condition: service_healthy
     networks:
       - backend
+      - payment-processor
     ports:
       - "9999:9999"
     deploy:
       resources:
         limits:
           cpus: "0.2"
-          memory: "75MB"
+          memory: "25MB"
 
 networks:
   backend:

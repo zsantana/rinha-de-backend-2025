@@ -2,10 +2,10 @@ services:
   redis:
     build:
       context: .
-      dockerfile: ./redis/Dockerfile
+      dockerfile: ./Dockerfile
     hostname: redis
     volumes:
-      - ./redis/redis.conf:/usr/local/etc/redis/redis.conf
+      - ./redis.conf:/usr/local/etc/redis/redis.conf
       - redis-socket:/var/run/redis
     command: >
       redis-server
@@ -28,7 +28,7 @@ services:
           memory: "70MB"
 
   api01: &api
-    image: silvaangelolambda/rinha-api-2025:20250731
+    image: silvaangelolambda/rinha-api-2025:20250731-2
     command: >
       bun --optimize-for-size /api/index.js
     environment:
