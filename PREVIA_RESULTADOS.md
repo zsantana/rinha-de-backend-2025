@@ -1,6 +1,6 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Fri Aug  1 09:03:45 AM -03 2025**
-192 submissões / 169 resultados / 23 submissões com erro
+Atualizado em **Fri Aug  1 09:11:39 AM -03 2025**
+193 submissões / 170 resultados / 23 submissões com erro
 
 
 | participante | p99 | bônus por desempenho (%) | multa ($) | lucro | submissão |
@@ -92,6 +92,7 @@ Atualizado em **Fri Aug  1 09:03:45 AM -03 2025**
 |	josineyjr-go-2	|	4.34ms	|	13%	|	0	|	354085.92375	|	[josineyjr-go-2](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/josineyjr-go-2)
 |	josineyjr-go-3	|	6.09ms	|	10%	|	0	|	341191.7685	|	[josineyjr-go-3](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/josineyjr-go-3)
 |	jrblatt-nodejs-1	|	7.35ms	|	7%	|	0	|	338137.0986	|	[jrblatt-nodejs-1](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/jrblatt-nodejs-1)
+|	jrblatt-nodejs-faf	|	2.69ms	|	17%	|	0	|	370534.9752	|	[jrblatt-nodejs-faf](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/jrblatt-nodejs-faf)
 |	juanmedeiros-dotnet	|	3.86ms	|	14%	|	0	|	360947.8716	|	[juanmedeiros-dotnet](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/juanmedeiros-dotnet)
 |	jvsandrade-rust-mini	|	3.01ms	|	16%	|	0	|	367280.2904	|	[jvsandrade-rust-mini](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/jvsandrade-rust-mini)
 |	kauan-carvalho-elixir	|	40.82ms	|	0%	|	0	|	309587.285	|	[kauan-carvalho-elixir](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/kauan-carvalho-elixir)
