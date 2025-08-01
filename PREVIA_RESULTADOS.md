@@ -1,11 +1,11 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Thu Jul 31 10:32:20 PM -03 2025**
+Atualizado em **Thu Jul 31 10:43:22 PM -03 2025**
 190 submissões / 167 resultados / 23 submissões com erro
 
 
 | participante | p99 | bônus por desempenho (%) | multa ($) | lucro | submissão |
 | -- | -- | -- | -- | -- | -- |
-|	active-workers-wellington-pacheco	|	3.64ms	|	15%	|	0	|	361026.8945	|	[active-workers-wellington-pacheco](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/active-workers-wellington-pacheco)
+|	active-workers-wellington-pacheco	|	25.51ms	|	0%	|	0	|	304729.695	|	[active-workers-wellington-pacheco](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/active-workers-wellington-pacheco)
 |	adriano-moreira	|	88.97ms	|	0%	|	0	|	314985.16	|	[adriano-moreira](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/adriano-moreira)
 |	adrianosilva-go	|	4.72ms	|	13%	|	0	|	349396.2599	|	[adrianosilva-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/adrianosilva-go)
 |	alan-silva	|	1.73ms	|	19%	|	0	|	376778.9186	|	[alan-silva](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/alan-silva)
@@ -72,9 +72,9 @@ Atualizado em **Thu Jul 31 10:32:20 PM -03 2025**
 |	guilhermegules-payflow-node	|	291.37ms	|	0%	|	0	|	48839.575	|	[guilhermegules-payflow-node](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/guilhermegules-payflow-node)
 |	guilhermesouza-nodejs	|	283.59ms	|	0%	|	0	|	300399.455	|	[guilhermesouza-nodejs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/guilhermesouza-nodejs)
 |	gustavo-miranda	|	147.56ms	|	0%	|	0	|	0	|	[gustavo-miranda](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/gustavo-miranda)
-|	hamilton-golang-mongo-default	|	4.93ms	|	12%	|	0	|	354467.2376000308	|	[hamilton-golang-mongo-default](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/hamilton-golang-mongo-default)
+|	hamilton-golang-mongo-default	|	12.53ms	|	0%	|	110711.46100000956	|	205606.99900001773	|	[hamilton-golang-mongo-default](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/hamilton-golang-mongo-default)
 |	hamilton-golang-mongo	|	4.19ms	|	14%	|	0	|	355395.47309997334	|	[hamilton-golang-mongo](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/hamilton-golang-mongo)
-|	hamilton-golang-with-retries	|	45.15ms	|	0%	|	93388.8094999893	|	173436.3604999801	|	[hamilton-golang-with-retries](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/hamilton-golang-with-retries)
+|	hamilton-golang-with-retries	|	45.11ms	|	0%	|	0	|	266522.68999996904	|	[hamilton-golang-with-retries](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/hamilton-golang-with-retries)
 |	henriqueramos13-node	|	36.41ms	|	0%	|	60010.5625	|	111448.1875	|	[henriqueramos13-node](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/henriqueramos13-node)
 |	henriquevalcanaia-swift-vapor	|	159.61ms	|	0%	|	73381.86765	|	136280.61135	|	[henriquevalcanaia-swift-vapor](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/henriquevalcanaia-swift-vapor)
 |	jairoandre-go-v2	|	22.8ms	|	0%	|	0	|	309353.46	|	[jairoandre-go-v2](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/jairoandre-go-v2)
