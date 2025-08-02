@@ -20,7 +20,7 @@ services:
           memory: "40MB"
   api-1: &api
     container_name: api-1
-    image: ghcr.io/alanlviana/rinha-de-backend-2025-dotnet:v1.1.4
+    image: ghcr.io/alanlviana/rinha-de-backend-2025-dotnet:v1.1.5
     hostname: api1
     environment:
       - ASPNETCORE_ENVIRONMENT=Production
