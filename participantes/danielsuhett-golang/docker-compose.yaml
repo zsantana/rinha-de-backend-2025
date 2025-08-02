@@ -1,7 +1,7 @@
 services:
-  nginx:
+  haproxy:
     image: haproxy:2.8-alpine
-    container_name: go-rinha-haproxy
+    container_name: go-rinha-haproxy-2
     volumes:
       - ./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
     depends_on:
@@ -32,7 +32,7 @@ services:
       - HEALTH_INTERVAL=3000
       - LATENCY_DIFF_TO_USE_FALLBACK=5000
       - BATCH_SIZE=25
-      - WORKER_POOL_SIZE=2
+      - WORKER_POOL_SIZE=12
       - REQUEUE_POOL_SIZE=2
       - WORKER_CHAN_BUFFER=400
       - REQUEUE_CHAN_BUFFER=6000
@@ -63,7 +63,7 @@ services:
       - HEALTH_INTERVAL=3000
       - LATENCY_DIFF_TO_USE_FALLBACK=5000
       - BATCH_SIZE=25
-      - WORKER_POOL_SIZE=2
+      - WORKER_POOL_SIZE=12
       - REQUEUE_POOL_SIZE=2
       - WORKER_CHAN_BUFFER=400
       - REQUEUE_CHAN_BUFFER=6000

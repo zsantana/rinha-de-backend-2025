@@ -1,27 +1,0 @@
-
- Network danielsuhett-golang_backend  Creating
- Network danielsuhett-golang_backend  Created
- Container go-rinha-redis  Creating
- Container go-rinha-redis  Created
- Container danielsuhett-golang-api1-1  Creating
- Container danielsuhett-golang-api2-1  Creating
- Container danielsuhett-golang-api2-1  Created
- Container danielsuhett-golang-api1-1  Created
- Container go-rinha-haproxy  Creating
- Container go-rinha-haproxy  Created
-Attaching to api1-1, api2-1, go-rinha-haproxy, go-rinha-redis
-go-rinha-redis    | 1:C 02 Aug 2025 16:32:24.185 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
-go-rinha-redis    | 1:C 02 Aug 2025 16:32:24.185 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
-go-rinha-redis    | 1:C 02 Aug 2025 16:32:24.185 * Redis version=7.2.10, bits=64, commit=00000000, modified=0, pid=1, just started
-go-rinha-redis    | 1:C 02 Aug 2025 16:32:24.185 * Configuration loaded
-go-rinha-redis    | 1:M 02 Aug 2025 16:32:24.185 * monotonic clock: POSIX clock_gettime
-go-rinha-redis    | 1:M 02 Aug 2025 16:32:24.186 * Running mode=standalone, port=6379.
-go-rinha-redis    | 1:M 02 Aug 2025 16:32:24.186 * Server initialized
-go-rinha-redis    | 1:M 02 Aug 2025 16:32:24.186 * Ready to accept connections tcp
-[Kgo-rinha-haproxy exited with code 1
-[Kapi2-1 exited with code 0
-[Kapi1-1 exited with code 0
-go-rinha-redis    | 1:signal-handler (1754152417) Received SIGTERM scheduling shutdown...
-go-rinha-redis    | 1:M 02 Aug 2025 16:33:37.818 * User requested shutdown...
-go-rinha-redis    | 1:M 02 Aug 2025 16:33:37.818 # Redis is now ready to exit, bye bye...
-[Kgo-rinha-redis exited with code 0
