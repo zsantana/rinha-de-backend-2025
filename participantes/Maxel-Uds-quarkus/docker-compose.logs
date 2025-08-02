@@ -1,0 +1,90 @@
+
+time="2025-08-02T12:58:33-03:00" level=warning msg="/home/rinha-user/rinha-de-backend-2025/participantes/Maxel-Uds-quarkus/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+ api01 Pulling 
+ api02 Pulling 
+ fcce199ebec0 Already exists 
+ 4f4fb700ef54 Already exists 
+ fcce199ebec0 Already exists 
+ ec661f466405 Already exists 
+ 4f4fb700ef54 Already exists 
+ b76405cb56cd Already exists 
+ ec661f466405 Already exists 
+ b76405cb56cd Already exists 
+ 71747c571095 Pulling fs layer 
+ 671ea98911bc Pulling fs layer 
+ 9688054d2a75 Pulling fs layer 
+ b46fb0d2ad0d Pulling fs layer 
+ aed95efa901b Pulling fs layer 
+ 4e89efbb905d Pulling fs layer 
+ b46fb0d2ad0d Waiting 
+ aed95efa901b Waiting 
+ 4e89efbb905d Waiting 
+ 71747c571095 Downloading [==================================================>]      94B/94B
+ 71747c571095 Verifying Checksum 
+ 71747c571095 Download complete 
+ 71747c571095 Extracting [==================================================>]      94B/94B
+ 71747c571095 Extracting [==================================================>]      94B/94B
+ 71747c571095 Pull complete 
+ 9688054d2a75 Downloading [>                                                  ]  200.7kB/19.91MB
+ 671ea98911bc Downloading [==================================================>]     102B/102B
+ 671ea98911bc Verifying Checksum 
+ 671ea98911bc Download complete 
+ 671ea98911bc Extracting [==================================================>]     102B/102B
+ 671ea98911bc Extracting [==================================================>]     102B/102B
+ 671ea98911bc Pull complete 
+ 9688054d2a75 Downloading [==>                                                ]  819.2kB/19.91MB
+ 9688054d2a75 Downloading [======>                                            ]  2.449MB/19.91MB
+ 9688054d2a75 Downloading [=========>                                         ]   3.69MB/19.91MB
+ 9688054d2a75 Downloading [=====================>                             ]  8.598MB/19.91MB
+ 9688054d2a75 Downloading [===========================>                       ]  11.05MB/19.91MB
+ 9688054d2a75 Downloading [===================================>               ]  14.29MB/19.91MB
+ 9688054d2a75 Downloading [================================================>  ]  19.37MB/19.91MB
+ 9688054d2a75 Verifying Checksum 
+ 9688054d2a75 Download complete 
+ 9688054d2a75 Extracting [>                                                  ]  229.4kB/19.91MB
+ 9688054d2a75 Extracting [================>                                  ]  6.652MB/19.91MB
+ 9688054d2a75 Extracting [================================>                  ]  12.85MB/19.91MB
+ 9688054d2a75 Extracting [==================================================>]  19.91MB/19.91MB
+ 9688054d2a75 Pull complete 
+ api02 Pulled 
+ aed95efa901b Download complete 
+ b46fb0d2ad0d Downloading [==================================================>]      94B/94B
+ b46fb0d2ad0d Verifying Checksum 
+ b46fb0d2ad0d Download complete 
+ b46fb0d2ad0d Extracting [==================================================>]      94B/94B
+ b46fb0d2ad0d Extracting [==================================================>]      94B/94B
+ b46fb0d2ad0d Pull complete 
+ aed95efa901b Extracting [==================================================>]     102B/102B
+ aed95efa901b Extracting [==================================================>]     102B/102B
+ aed95efa901b Pull complete 
+ 4e89efbb905d Downloading [>                                                  ]  205.1kB/20.34MB
+ 4e89efbb905d Downloading [=>                                                 ]  614.4kB/20.34MB
+ 4e89efbb905d Downloading [====>                                              ]  1.647MB/20.34MB
+ 4e89efbb905d Downloading [=========>                                         ]  3.719MB/20.34MB
+ 4e89efbb905d Downloading [===================>                               ]  8.061MB/20.34MB
+ 4e89efbb905d Downloading [=====================================>             ]  15.34MB/20.34MB
+ 4e89efbb905d Verifying Checksum 
+ 4e89efbb905d Download complete 
+ 4e89efbb905d Extracting [>                                                  ]  229.4kB/20.34MB
+ 4e89efbb905d Extracting [================>                                  ]  6.652MB/20.34MB
+ 4e89efbb905d Extracting [=================================>                 ]  13.76MB/20.34MB
+ 4e89efbb905d Extracting [==================================================>]  20.34MB/20.34MB
+ 4e89efbb905d Pull complete 
+ api01 Pulled 
+ Network maxel-uds-quarkus_payment-router  Creating
+ Network maxel-uds-quarkus_payment-router  Created
+ Container api1  Creating
+ Container api2  Creating
+ Container api2  Created
+ Container api1  Created
+ Container load_balancer  Creating
+ Container load_balancer  Created
+Attaching to api1, api2, load_balancer
+api2           | __  ____  __  _____   ___  __ ____  ______ 
+api2           |  --/ __ \/ / / / _ | / _ \/ //_/ / / / __/ 
+api2           |  -/ /_/ / /_/ / __ |/ , _/ ,< / /_/ /\ \   
+api2           | --\___\_\____/_/ |_/_/|_/_/|_|\____/___/   
+api2           | 2025-08-02 15:58:42,523 INFO  [io.quarkus] (main) payment-storage 1.0.0 native (powered by Quarkus 3.25.0) started in 0.023s. Listening on: http://0.0.0.0:8080
+api2           | 2025-08-02 15:58:42,523 INFO  [io.quarkus] (main) Profile prod activated. 
+api2           | 2025-08-02 15:58:42,524 INFO  [io.quarkus] (main) Installed features: [cdi, rest, rest-jackson, smallrye-context-propagation, vertx]
+Error response from daemon: failed to set up container networking: driver failed programming external connectivity on endpoint api1 (c42e16c7d48b202b6736bbde3c1fe78dac314a3ef0667bc7aeb7ad2d3aa913ce): Bind for 0.0.0.0:8081 failed: port is already allocated
