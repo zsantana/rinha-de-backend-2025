@@ -41,7 +41,6 @@ services:
           memory: "130MB"
   api1:
       <<: *apibase
-      <<: *apibase
       container_name: api1
       environment:
         - CONN_STRING=postgres://rinha25:rinha25@db:5432/payments_db?sslmode=disable
@@ -62,7 +61,6 @@ services:
         - db
         - redis
   api2:
-    <<: *apibase
     <<: *apibase
     container_name: api2
     environment:
@@ -128,7 +126,6 @@ services:
 
   worker:
       <<: *apibase
-      <<: *apibase
       container_name: worker
       environment:
         - CONN_STRING=postgres://rinha25:rinha25@db:5432/payments_db?sslmode=disable
@@ -163,7 +160,6 @@ services:
       resources:
         limits:
           cpus: '0.2'
-          memory: "50MB"
           memory: "50MB"
     networks:
       - backend
