@@ -25,7 +25,7 @@ gh repo clone machadoah/rinha-de-backend-2025-python
 2. Rode os serviços:
 
 ```bash
-docker-compose -f docker-compose.yaml up --build
+docker-compose -f docker-compose.yml up --build
 ```
 
 ## Estrutura do Projeto
@@ -40,7 +40,7 @@ A estrutura do projeto é a seguinte:
 ├── worker
 │   ├── Dockerfile
 │   └── ...
-├── docker-compose.yaml # Utiliza as imagens do Docker Hub
+├── docker-compose.yml # Utiliza as imagens do Docker Hub
 ├── compose.yaml # Builda as imagens localmente
 └── README.md
 ```
