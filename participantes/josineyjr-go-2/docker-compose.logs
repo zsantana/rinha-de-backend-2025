@@ -1,0 +1,133 @@
+
+ api4 Pulling 
+ worker1 Pulling 
+ lb Pulling 
+ api1 Pulling 
+ api2 Pulling 
+ api3 Pulling 
+ 9824c27679d3 Already exists 
+ 929d3807d95e Pulling fs layer 
+ 344fcc8e48f7 Pulling fs layer 
+ 45e714c7af4d Pulling fs layer 
+ 344fcc8e48f7 Downloading [>                                                  ]  21.47kB/2.117MB
+ 45e714c7af4d Downloading [>                                                  ]  32.28kB/3.161MB
+ 929d3807d95e Downloading [==================================================>]      93B/93B
+ 929d3807d95e Verifying Checksum 
+ 929d3807d95e Download complete 
+ 929d3807d95e Extracting [==================================================>]      93B/93B
+ 929d3807d95e Extracting [==================================================>]      93B/93B
+ 344fcc8e48f7 Verifying Checksum 
+ 344fcc8e48f7 Download complete 
+ 45e714c7af4d Verifying Checksum 
+ 45e714c7af4d Download complete 
+ 9824c27679d3 Already exists 
+ 929d3807d95e Pull complete 
+ 929d3807d95e Already exists 
+ 344fcc8e48f7 Extracting [>                                                  ]  32.77kB/2.117MB
+ 344fcc8e48f7 Pulling fs layer 
+ 45e714c7af4d Pulling fs layer 
+ 45e714c7af4d Download complete 
+ 344fcc8e48f7 Extracting [>                                                  ]  32.77kB/2.117MB
+ 344fcc8e48f7 Extracting [==================================================>]  2.117MB/2.117MB
+ 344fcc8e48f7 Extracting [==================================================>]  2.117MB/2.117MB
+ 344fcc8e48f7 Pull complete 
+ 344fcc8e48f7 Pull complete 
+ 45e714c7af4d Extracting [>                                                  ]  32.77kB/3.161MB
+ 45e714c7af4d Extracting [>                                                  ]  32.77kB/3.161MB
+ 45e714c7af4d Extracting [==================================================>]  3.161MB/3.161MB
+ 45e714c7af4d Extracting [==================================================>]  3.161MB/3.161MB
+ 45e714c7af4d Pull complete 
+ 45e714c7af4d Pull complete 
+ 59e22667830b Already exists 
+ 4a2c2cecdfbc Pulling fs layer 
+ 029c46ae4624 Pulling fs layer 
+ 36fcda7a3d34 Pulling fs layer 
+ af654b24c75f Pulling fs layer 
+ 4f4fb700ef54 Pulling fs layer 
+ af654b24c75f Waiting 
+ 4f4fb700ef54 Waiting 
+ worker1 Pulled 
+ api3 Pulled 
+ api4 Pulled 
+ api1 Pulled 
+ api2 Pulled 
+ 029c46ae4624 Downloading [=============================================>     ]  1.049kB/1.155kB
+ 029c46ae4624 Downloading [==================================================>]  1.155kB/1.155kB
+ 029c46ae4624 Download complete 
+ 4a2c2cecdfbc Downloading [>                                                  ]  35.09kB/3.507MB
+ 36fcda7a3d34 Downloading [>                                                  ]  110.7kB/10.86MB
+ 4a2c2cecdfbc Verifying Checksum 
+ 4a2c2cecdfbc Download complete 
+ 4a2c2cecdfbc Extracting [>                                                  ]  65.54kB/3.507MB
+ 36fcda7a3d34 Downloading [====================>                              ]  4.485MB/10.86MB
+ 4a2c2cecdfbc Extracting [==============>                                    ]    983kB/3.507MB
+ 36fcda7a3d34 Verifying Checksum 
+ 36fcda7a3d34 Download complete 
+ 4a2c2cecdfbc Extracting [==================================================>]  3.507MB/3.507MB
+ 4a2c2cecdfbc Pull complete 
+ 029c46ae4624 Extracting [==================================================>]  1.155kB/1.155kB
+ 029c46ae4624 Extracting [==================================================>]  1.155kB/1.155kB
+ 029c46ae4624 Pull complete 
+ 36fcda7a3d34 Extracting [>                                                  ]  131.1kB/10.86MB
+ af654b24c75f Downloading [==================================================>]     448B/448B
+ af654b24c75f Verifying Checksum 
+ af654b24c75f Download complete 
+ 36fcda7a3d34 Extracting [========================>                          ]  5.243MB/10.86MB
+ 36fcda7a3d34 Extracting [==================================================>]  10.86MB/10.86MB
+ 36fcda7a3d34 Extracting [==================================================>]  10.86MB/10.86MB
+ 4f4fb700ef54 Downloading [==================================================>]      32B/32B
+ 4f4fb700ef54 Download complete 
+ 36fcda7a3d34 Pull complete 
+ af654b24c75f Extracting [==================================================>]     448B/448B
+ af654b24c75f Extracting [==================================================>]     448B/448B
+ af654b24c75f Pull complete 
+ 4f4fb700ef54 Extracting [==================================================>]      32B/32B
+ 4f4fb700ef54 Extracting [==================================================>]      32B/32B
+ 4f4fb700ef54 Pull complete 
+ lb Pulled 
+ Network josineyjr-go-2_backend  Creating
+ Network josineyjr-go-2_backend  Created
+ Volume "josineyjr-go-2_sockets"  Creating
+ Volume "josineyjr-go-2_sockets"  Created
+ Container worker1  Creating
+ Container worker1  Created
+ Container api3  Creating
+ Container api1  Creating
+ Container api2  Creating
+ Container api4  Creating
+ Container api3  Created
+ Container api2  Created
+ Container api1  Created
+ Container api4  Created
+ Container haproxy_lb  Creating
+ Container haproxy_lb  Created
+Attaching to api1, api2, api3, api4, haproxy_lb, worker1
+worker1     | {"level":"info","time":"2025-08-02T14:34:26Z","message":"Worker starting gnet HTTP server on unix:///sockets/worker_http.sock"}
+worker1     | [gnet] 2025-08-02T14:34:26.610128561Z	INFO	logging/logger.go:256	Launching gnet with 4 event-loops, listening on: unix:///sockets/worker_http.sock
+api3        | 2025/08/02 14:34:27 Gnet server starting on unix:///sockets/api3.sock
+api3        | [gnet] 2025-08-02T14:34:27.430227327Z	INFO	logging/logger.go:256	Launching gnet with 4 event-loops, listening on: unix:///sockets/api3.sock
+api3        | {"level":"info","time":"2025-08-02T14:34:27Z","message":"Gnet server started on port 9999"}
+api1        | [gnet] 2025-08-02T14:34:27.483002797Z	INFO	logging/logger.go:256	Launching gnet with 4 event-loops, listening on: unix:///sockets/api1.sock
+api1        | {"level":"info","time":"2025-08-02T14:34:27Z","message":"Gnet server started on port 9999"}
+api1        | 2025/08/02 14:34:27 Gnet server starting on unix:///sockets/api1.sock
+api4        | 2025/08/02 14:34:27 Gnet server starting on unix:///sockets/api4.sock
+api4        | [gnet] 2025-08-02T14:34:27.528474772Z	INFO	logging/logger.go:256	Launching gnet with 4 event-loops, listening on: unix:///sockets/api4.sock
+api4        | {"level":"info","time":"2025-08-02T14:34:27Z","message":"Gnet server started on port 9999"}
+api2        | [gnet] 2025-08-02T14:34:27.568728127Z	INFO	logging/logger.go:256	Launching gnet with 4 event-loops, listening on: unix:///sockets/api2.sock
+api2        | {"level":"info","time":"2025-08-02T14:34:27Z","message":"Gnet server started on port 9999"}
+api2        | 2025/08/02 14:34:27 Gnet server starting on unix:///sockets/api2.sock
+haproxy_lb  | [NOTICE]   (1) : Initializing new worker (8)
+haproxy_lb  | [NOTICE]   (1) : Loading success.
+haproxy_lb  | [NOTICE]   (1) : haproxy version is 3.2.3-1844da7
+haproxy_lb  | [NOTICE]   (1) : path to executable is /usr/local/sbin/haproxy
+haproxy_lb  | [WARNING]  (1) : Exiting Master process...
+haproxy_lb  | [WARNING]  (8) : Proxy frontend stopped (cumulated conns: FE: 553, BE: 0).
+haproxy_lb  | [WARNING]  (8) : Proxy backend stopped (cumulated conns: FE: 0, BE: 16752).
+haproxy_lb  | [WARNING]  (1) : Current worker (8) exited with code 0 (Exit)
+haproxy_lb  | [WARNING]  (1) : All workers exited. Exiting... (0)
+[Khaproxy_lb exited with code 0
+[Kapi2 exited with code 2
+[Kapi4 exited with code 2
+worker1     | {"level":"info","time":"2025-08-02T14:35:40Z","message":"Worker stopped gracefully"}
+[Kworker1 exited with code 0
+log truncated at line 1000
