@@ -18,10 +18,10 @@ config:
   layout: dagre
 ---
 flowchart TD
-    A[nginx] <-->|HTTP| B(api0)
-    A[nginx] <-->|HTTP| C(api1)
-    C <-->|RPC| D[Worker]
-    B <-->|RPC| D[Worker]
+    A[nginx] <-->|uds HTTP| B(api0)
+    A[nginx] <-->|uds HTTP| C(api1)
+    C <-->|uds bincode| D[Worker]
+    B <-->|uds bincode| D[Worker]
     D <--> E[(SQLite)]
 ```
 
