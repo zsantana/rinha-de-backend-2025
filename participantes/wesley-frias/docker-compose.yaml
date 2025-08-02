@@ -28,7 +28,7 @@ services:
       resources:
         limits:
           cpus: "0.3"
-          memory: "110MB"
+          memory: "100MB"
 
   app2:
     <<: *api
@@ -44,7 +44,7 @@ services:
       resources:
         limits:
           cpus: "0.3"
-          memory: "50MB"
+          memory: "60MB"
 
   redis:
     image: redis:alpine
