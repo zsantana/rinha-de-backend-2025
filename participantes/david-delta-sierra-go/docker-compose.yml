@@ -5,7 +5,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.2"
+          cpus: "0.3"
           memory: 50M
     image: nginx:stable-alpine
     volumes:
@@ -59,7 +59,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.4"
+          cpus: "0.3"
           memory: 200M
     image: postgres:alpine
     user: postgres
