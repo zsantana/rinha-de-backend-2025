@@ -36,7 +36,7 @@ services:
       - REDIS_URL=redis://redis:6379
       - PROCESSOR_DEFAULT_URL=http://payment-processor-default:8080
       - PROCESSOR_FALLBACK_URL=http://payment-processor-fallback:8080
-      - QUEUE_CONCURRENCY=200
+      - QUEUE_CONCURRENCY=210
     networks:
       - backend
       - payment-processor
