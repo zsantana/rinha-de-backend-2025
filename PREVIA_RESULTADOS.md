@@ -1,5 +1,5 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Sat Aug  2 04:35:04 PM -03 2025**
+Atualizado em **Sat Aug  2 04:44:45 PM -03 2025**
 209 submissões / 182 resultados / 27 submissões com erro
 
 
@@ -65,8 +65,8 @@ Atualizado em **Sat Aug  2 04:35:04 PM -03 2025**
 |	francoggm-go	|	5.04ms	|	12%	|	0	|	343545.0032	|	[francoggm-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/francoggm-go)
 |	gabrieleiro	|	2.18ms	|	18%	|	0	|	89078.967	|	[gabrieleiro](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/gabrieleiro)
 |	gabriell915-bun-hono-01	|	102.02ms	|	0%	|	0	|	295475.19999995147	|	[gabriell915-bun-hono-01](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/gabriell915-bun-hono-01)
-|	gabxdev-java-1	|	2.72ms	|	17%	|	0	|	370065.82275	|	[gabxdev-java-1](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/gabxdev-java-1)
-|	gabxdev-java-2	|	2.62ms	|	17%	|	0	|	369999.4662	|	[gabxdev-java-2](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/gabxdev-java-2)
+|	gabxdev-java-1	|	2ms	|	18%	|	0	|	373206.4706	|	[gabxdev-java-1](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/gabxdev-java-1)
+|	gabxdev-java-2	|	1.74ms	|	19%	|	0	|	376324.2434	|	[gabxdev-java-2](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/gabxdev-java-2)
 |	gaoliveira21	|	22.62ms	|	0%	|	0	|	316412.985	|	[gaoliveira21](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/gaoliveira21)
 |	gdx64-rs-sqlite	|	3.18ms	|	16%	|	0	|	358875.406	|	[gdx64-rs-sqlite](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/gdx64-rs-sqlite)
 |	geazi-anc	|	4.62ms	|	13%	|	82937.13049998994	|	184831.3193999776	|	[geazi-anc](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/geazi-anc)
