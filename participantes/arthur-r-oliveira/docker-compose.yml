@@ -12,7 +12,7 @@ services:
     ports:
       - "9999:9999"
     volumes:
-      - ../../haproxy/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:z
+      - ./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:z
     stop_signal: SIGINT
     depends_on:
       - api01
