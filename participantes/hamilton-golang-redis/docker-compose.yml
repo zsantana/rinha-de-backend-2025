@@ -1,24 +1,23 @@
 x-rinha-api-base: &rinha-api-base
   image: jhamiltonjunior/rinha-go-redis:0.0.1
-  volumes:
-    - ./:/app
   depends_on:
     - redis
   networks:
     - app-network
     - payment-processor
-  environment:
-    - APP_PORT=3000
-    - REDIS_ADDR=redis:6379
-    - POSTGRES_URL=postgres://user:password-very-har@postgres:5432/rinha_de_backend?sslmode=disable
-    - NATS_URL=nats://nats:4222
-    - PAYMENT_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080
-    - PAYMENT_PROCESSOR_URL_FALLBACK=http://payment-processor-fallback:8080
   deploy:
     resources:
       limits:
         cpus: "0.25"
         memory: "40MB"
+
+  environment: &common-environment
+    APP_PORT: 3000
+    REDIS_ADDR: redis:6379
+    POSTGRES_URL: postgres://user:password-very-har@postgres:5432/rinha_de_backend?sslmode=disable
+    NATS_URL: nats://nats:4222
+    PAYMENT_PROCESSOR_URL_DEFAULT: http://payment-processor-default:8080
+    PAYMENT_PROCESSOR_URL_FALLBACK: http://payment-processor-fallback:8080
 
 services:
   nginx:
