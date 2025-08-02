@@ -8,7 +8,7 @@ x-rinha-api-base: &rinha-api-base
   deploy: &rinha-api-deploy
     resources:
       limits:
-        cpus: "0.25"
+        cpus: "0.3"
         memory: "40MB"
 
   environment: &common-environment
@@ -54,10 +54,9 @@ services:
     <<: *rinha-api-base
     container_name: rinha-api-3
 
-  rinha-api-4:
-    <<: *rinha-api-base
-    container_name: rinha-api-4
-    cpus: "0.2"
+  # rinha-api-4:
+  #   <<: *rinha-api-base
+  #   container_name: rinha-api-4
 
   redis:
     image: redis:7.2.4-alpine
@@ -69,7 +68,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.25"
+          cpus: "0.35"
           memory: "40MB"
 
 networks:
