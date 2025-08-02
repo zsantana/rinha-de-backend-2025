@@ -27,7 +27,7 @@ services:
       - REDIS_PORT=6379
       - PROCESSOR_DEFAULT_URL=http://payment-processor-default:8080
       - PROCESSOR_FALLBACK_URL=http://payment-processor-fallback:8080
-      - POOLING_INTERVAL=25
+      - POOLING_INTERVAL=200
       - HEALTH_TIMEOUT=1000
       - HEALTH_INTERVAL=3000
       - LATENCY_DIFF_TO_USE_FALLBACK=5000
@@ -58,7 +58,7 @@ services:
       - REDIS_PORT=6379
       - PROCESSOR_DEFAULT_URL=http://payment-processor-default:8080
       - PROCESSOR_FALLBACK_URL=http://payment-processor-fallback:8080
-      - POOLING_INTERVAL=25
+      - POOLING_INTERVAL=200
       - HEALTH_TIMEOUT=1000
       - HEALTH_INTERVAL=3000
       - LATENCY_DIFF_TO_USE_FALLBACK=5000
