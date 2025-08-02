@@ -1,0 +1,1001 @@
+
+ backend-02 Pulling 
+ writer Pulling 
+ backend-01 Pulling 
+ 9824c27679d3 Already exists 
+ 9824c27679d3 Already exists 
+ 991394f0a14d Pulling fs layer 
+ 0e5b1b4311da Pulling fs layer 
+ 1c434862dd36 Already exists 
+ cc56bb2be2d3 Already exists 
+ 3097613fe01f Pulling fs layer 
+ 9824c27679d3 Already exists 
+ 1c434862dd36 Already exists 
+ cc56bb2be2d3 Already exists 
+ 3097613fe01f Pulling fs layer 
+ 0e5b1b4311da Downloading [>                                                  ]  23.27kB/2.254MB
+ 0e5b1b4311da Verifying Checksum 
+ 0e5b1b4311da Download complete 
+ 991394f0a14d Downloading [==================================================>]     130B/130B
+ 991394f0a14d Verifying Checksum 
+ 991394f0a14d Download complete 
+ 991394f0a14d Extracting [==================================================>]     130B/130B
+ 991394f0a14d Extracting [==================================================>]     130B/130B
+ 991394f0a14d Pull complete 
+ 0e5b1b4311da Extracting [>                                                  ]  32.77kB/2.254MB
+ 0e5b1b4311da Extracting [==================================================>]  2.254MB/2.254MB
+ 0e5b1b4311da Extracting [==================================================>]  2.254MB/2.254MB
+ 0e5b1b4311da Pull complete 
+ 3097613fe01f Downloading [>                                                  ]  79.98kB/7.297MB
+ 3097613fe01f Downloading [>                                                  ]  79.98kB/7.297MB
+ writer Pulled 
+ 3097613fe01f Downloading [==========================================>        ]  6.226MB/7.297MB
+ 3097613fe01f Downloading [==========================================>        ]  6.226MB/7.297MB
+ 3097613fe01f Download complete 
+ 3097613fe01f Verifying Checksum 
+ 3097613fe01f Download complete 
+ 3097613fe01f Extracting [>                                                  ]   98.3kB/7.297MB
+ 3097613fe01f Extracting [>                                                  ]   98.3kB/7.297MB
+ 3097613fe01f Extracting [==================================================>]  7.297MB/7.297MB
+ 3097613fe01f Extracting [==================================================>]  7.297MB/7.297MB
+ 3097613fe01f Pull complete 
+ 3097613fe01f Pull complete 
+ backend-02 Pulled 
+ backend-01 Pulled 
+ Network 4emcos-golang_writer-network  Creating
+ Network 4emcos-golang_writer-network  Created
+ Network 4emcos-golang_backend  Creating
+ Network 4emcos-golang_backend  Created
+ Container 4emcos-golang-writer-1  Creating
+ Container 4emcos-golang-writer-1  Created
+ Container backend-02  Creating
+ Container backend-01  Creating
+ Container backend-01  Created
+ Container backend-02  Created
+ Container nginx  Creating
+ Container nginx  Created
+Attaching to writer-1, backend-01, backend-02, nginx
+writer-1    | 2025/08/01 20:51:52 UDP server listening on 0.0.0.0:6666
+backend-02  | 2025/08/01 20:51:52.719974 main.go:291: [Warn] Warning: Error loading .env file: %vopen .env: no such file or directory
+backend-02  | Started 35 payment workers
+backend-02  | 2025/08/01 20:51:52.722233 main.go:420: [Info] Connected to UDP server successfully
+backend-02  | 
+backend-02  |     _______ __             
+backend-02  |    / ____(_) /_  ___  _____
+backend-02  |   / /_  / / __ \/ _ \/ ___/
+backend-02  |  / __/ / / /_/ /  __/ /    
+backend-02  | /_/   /_/_.___/\___/_/          v3.0.0-beta.5
+backend-02  | --------------------------------------------------
+backend-02  | INFO Server started on: 	http://127.0.0.1:5000 (bound on host 0.0.0.0 and port 5000)
+backend-02  | INFO Total handlers count: 	3
+backend-02  | INFO Prefork: 			Disabled
+backend-02  | INFO PID: 			1
+backend-02  | INFO Total process count: 	1
+backend-02  | 
+backend-01  | 2025/08/01 20:51:52.753109 main.go:291: [Warn] Warning: Error loading .env file: %vopen .env: no such file or directory
+backend-01  | 2025/08/01 20:51:52.753873 main.go:420: [Info] Connected to UDP server successfully
+backend-01  | Started 35 payment workers
+backend-01  | 
+backend-01  |     _______ __             
+backend-01  |    / ____(_) /_  ___  _____
+backend-01  |   / /_  / / __ \/ _ \/ ___/
+backend-01  |  / __/ / / /_/ /  __/ /    
+backend-01  | /_/   /_/_.___/\___/_/          v3.0.0-beta.5
+backend-01  | --------------------------------------------------
+backend-01  | INFO Server started on: 	http://127.0.0.1:5000 (bound on host 0.0.0.0 and port 5000)
+backend-01  | INFO Total handlers count: 	3
+backend-01  | INFO Prefork: 			Disabled
+backend-01  | INFO PID: 			1
+backend-01  | INFO Total process count: 	1
+backend-01  | 
+nginx       | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+nginx       | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+nginx       | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+nginx       | 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+nginx       | 10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
+nginx       | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+nginx       | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+nginx       | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+nginx       | /docker-entrypoint.sh: Configuration complete; ready for start up
+writer-1    | 2025/08/01 20:52:03 Stored item with ID: 
+writer-1    | 2025/08/01 20:52:03 Stored Data: CorrelationId=, UseFallback=false, Amount=0, RequestedAt=, DateTo=-6.795364578871345e+18, DateFrom=-6.795364578871345e+18, UnixValue=0
+writer-1    | 2025/08/01 20:52:03 DateTo=-6.795364578871345e+18, DateFrom=-6.795364578871345e+18
+writer-1    | 2025/08/01 20:52:03 Sent payment summary to 172.21.0.4:47169: {"default":{"totalRequests":0,"totalAmount":0},"fallback":{"totalRequests":0,"totalAmount":0}}
+writer-1    | 2025/08/01 20:52:09 Stored item with ID: 
+writer-1    | 2025/08/01 20:52:09 Stored Data: CorrelationId=, UseFallback=false, Amount=0, RequestedAt=, DateTo=1.754081527663e+18, DateFrom=1.754081514163e+18, UnixValue=0
+writer-1    | 2025/08/01 20:52:09 DateTo=1.754081527663e+18, DateFrom=1.754081514163e+18
+writer-1    | 2025/08/01 20:52:09 Sent payment summary to 172.21.0.4:47169: {"default":{"totalRequests":0,"totalAmount":0},"fallback":{"totalRequests":0,"totalAmount":0}}
+writer-1    | 2025/08/01 20:52:09 Stored item with ID: d24037a0-7502-48be-942d-38e0648afe48
+writer-1    | 2025/08/01 20:52:09 Stored Data: CorrelationId=d24037a0-7502-48be-942d-38e0648afe48, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:09.167Z, DateTo=0, DateFrom=0, UnixValue=1.754081529167e+18
+writer-1    | 2025/08/01 20:52:09 Stored item with ID: 258fd95f-6aae-4a1a-a46a-bde53d39eb24
+writer-1    | 2025/08/01 20:52:09 Stored Data: CorrelationId=258fd95f-6aae-4a1a-a46a-bde53d39eb24, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:09.274Z, DateTo=0, DateFrom=0, UnixValue=1.754081529274e+18
+writer-1    | 2025/08/01 20:52:09 Stored item with ID: 2f319ad1-dc3a-4161-b21a-5a3916447949
+writer-1    | 2025/08/01 20:52:09 Stored Data: CorrelationId=2f319ad1-dc3a-4161-b21a-5a3916447949, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:09.383Z, DateTo=0, DateFrom=0, UnixValue=1.754081529383e+18
+writer-1    | 2025/08/01 20:52:09 Stored item with ID: 15b255ba-bacd-4117-bf40-75f0f322f4cb
+writer-1    | 2025/08/01 20:52:09 Stored Data: CorrelationId=15b255ba-bacd-4117-bf40-75f0f322f4cb, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:09.492Z, DateTo=0, DateFrom=0, UnixValue=1.754081529492e+18
+writer-1    | 2025/08/01 20:52:09 Stored item with ID: ca52b3bf-aa8b-4519-af78-0f73cea3892c
+writer-1    | 2025/08/01 20:52:09 Stored Data: CorrelationId=ca52b3bf-aa8b-4519-af78-0f73cea3892c, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:09.602Z, DateTo=0, DateFrom=0, UnixValue=1.754081529602e+18
+writer-1    | 2025/08/01 20:52:09 Stored item with ID: 2f6c32bd-b9c5-459d-bdbe-e7c783d7c173
+writer-1    | 2025/08/01 20:52:09 Stored Data: CorrelationId=2f6c32bd-b9c5-459d-bdbe-e7c783d7c173, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:09.711Z, DateTo=0, DateFrom=0, UnixValue=1.754081529711e+18
+writer-1    | 2025/08/01 20:52:09 Stored item with ID: a0951ed0-ccd1-46bf-8c3e-5681ea61b5c7
+writer-1    | 2025/08/01 20:52:09 Stored Data: CorrelationId=a0951ed0-ccd1-46bf-8c3e-5681ea61b5c7, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:09.820Z, DateTo=0, DateFrom=0, UnixValue=1.75408152982e+18
+writer-1    | 2025/08/01 20:52:09 Stored item with ID: d96801f0-1569-44b6-b1be-5f5f7b3d9f3d
+writer-1    | 2025/08/01 20:52:09 Stored Data: CorrelationId=d96801f0-1569-44b6-b1be-5f5f7b3d9f3d, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:09.929Z, DateTo=0, DateFrom=0, UnixValue=1.754081529929e+18
+writer-1    | 2025/08/01 20:52:10 Stored item with ID: a37c85c2-4d0d-4467-bf37-d62cf1cb5439
+writer-1    | 2025/08/01 20:52:10 Stored Data: CorrelationId=a37c85c2-4d0d-4467-bf37-d62cf1cb5439, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:10.038Z, DateTo=0, DateFrom=0, UnixValue=1.754081530038e+18
+writer-1    | 2025/08/01 20:52:10 Stored item with ID: d4ea9c22-357a-4b58-8d68-696d394ab2f0
+writer-1    | 2025/08/01 20:52:10 Stored Data: CorrelationId=d4ea9c22-357a-4b58-8d68-696d394ab2f0, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:10.147Z, DateTo=0, DateFrom=0, UnixValue=1.754081530147e+18
+writer-1    | 2025/08/01 20:52:10 Stored item with ID: 568c19ed-851d-44c2-81d4-a2642b87e914
+writer-1    | 2025/08/01 20:52:10 Stored Data: CorrelationId=568c19ed-851d-44c2-81d4-a2642b87e914, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:10.169Z, DateTo=0, DateFrom=0, UnixValue=1.754081530169e+18
+writer-1    | 2025/08/01 20:52:10 Stored item with ID: cf679646-8677-43c2-81d2-b7f384fd3065
+writer-1    | 2025/08/01 20:52:10 Stored Data: CorrelationId=cf679646-8677-43c2-81d2-b7f384fd3065, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:10.257Z, DateTo=0, DateFrom=0, UnixValue=1.754081530257e+18
+writer-1    | 2025/08/01 20:52:10 Stored item with ID: 8ee0ea5d-fc24-41e3-a88f-974877211929
+writer-1    | 2025/08/01 20:52:10 Stored Data: CorrelationId=8ee0ea5d-fc24-41e3-a88f-974877211929, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:10.275Z, DateTo=0, DateFrom=0, UnixValue=1.754081530275e+18
+writer-1    | 2025/08/01 20:52:10 Stored item with ID: a916d6e3-51a3-462b-a0e4-f23bdb041617
+writer-1    | 2025/08/01 20:52:10 Stored Data: CorrelationId=a916d6e3-51a3-462b-a0e4-f23bdb041617, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:10.367Z, DateTo=0, DateFrom=0, UnixValue=1.754081530367e+18
+writer-1    | 2025/08/01 20:52:10 Stored item with ID: 395d3924-4b54-4713-aef5-7c2dab84c52d
+writer-1    | 2025/08/01 20:52:10 Stored Data: CorrelationId=395d3924-4b54-4713-aef5-7c2dab84c52d, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:10.384Z, DateTo=0, DateFrom=0, UnixValue=1.754081530384e+18
+writer-1    | 2025/08/01 20:52:10 Stored item with ID: 0b3d8b0a-a131-4832-b24d-2cb4ab70cffb
+writer-1    | 2025/08/01 20:52:10 Stored Data: CorrelationId=0b3d8b0a-a131-4832-b24d-2cb4ab70cffb, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:10.476Z, DateTo=0, DateFrom=0, UnixValue=1.754081530476e+18
+writer-1    | 2025/08/01 20:52:10 Stored item with ID: ceda1a08-3dae-4c91-b7b0-5b909a623965
+writer-1    | 2025/08/01 20:52:10 Stored Data: CorrelationId=ceda1a08-3dae-4c91-b7b0-5b909a623965, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:10.494Z, DateTo=0, DateFrom=0, UnixValue=1.754081530494e+18
+writer-1    | 2025/08/01 20:52:10 Stored item with ID: ccdff5ac-8b3b-4e8b-ae2c-75c0ddd5a134
+writer-1    | 2025/08/01 20:52:10 Stored Data: CorrelationId=ccdff5ac-8b3b-4e8b-ae2c-75c0ddd5a134, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:10.585Z, DateTo=0, DateFrom=0, UnixValue=1.754081530585e+18
+writer-1    | 2025/08/01 20:52:10 Stored item with ID: b3930131-41ba-4f30-a102-d92fb0cae6ac
+writer-1    | 2025/08/01 20:52:10 Stored Data: CorrelationId=b3930131-41ba-4f30-a102-d92fb0cae6ac, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:10.604Z, DateTo=0, DateFrom=0, UnixValue=1.754081530604e+18
+writer-1    | 2025/08/01 20:52:10 Stored item with ID: 247e64cd-db5c-4af0-ba4d-3138536f1b53
+writer-1    | 2025/08/01 20:52:10 Stored Data: CorrelationId=247e64cd-db5c-4af0-ba4d-3138536f1b53, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:10.695Z, DateTo=0, DateFrom=0, UnixValue=1.754081530695e+18
+writer-1    | 2025/08/01 20:52:10 Stored item with ID: 8e644ea3-066d-48d9-b196-64408963810d
+writer-1    | 2025/08/01 20:52:10 Stored Data: CorrelationId=8e644ea3-066d-48d9-b196-64408963810d, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:10.712Z, DateTo=0, DateFrom=0, UnixValue=1.754081530712e+18
+writer-1    | 2025/08/01 20:52:10 Stored item with ID: 98e7cc92-628e-40d1-b625-09bc368b1dd1
+writer-1    | 2025/08/01 20:52:10 Stored Data: CorrelationId=98e7cc92-628e-40d1-b625-09bc368b1dd1, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:10.804Z, DateTo=0, DateFrom=0, UnixValue=1.754081530804e+18
+writer-1    | 2025/08/01 20:52:10 Stored item with ID: afe41980-c757-4c3a-a678-331761dd97ae
+writer-1    | 2025/08/01 20:52:10 Stored Data: CorrelationId=afe41980-c757-4c3a-a678-331761dd97ae, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:10.822Z, DateTo=0, DateFrom=0, UnixValue=1.754081530822e+18
+writer-1    | 2025/08/01 20:52:10 Stored item with ID: 740d550b-bccc-48be-81b1-8b56389c6733
+writer-1    | 2025/08/01 20:52:10 Stored Data: CorrelationId=740d550b-bccc-48be-81b1-8b56389c6733, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:10.913Z, DateTo=0, DateFrom=0, UnixValue=1.754081530913e+18
+writer-1    | 2025/08/01 20:52:10 Stored item with ID: 6fb96406-b822-406b-a98a-cafb947a48d4
+writer-1    | 2025/08/01 20:52:10 Stored Data: CorrelationId=6fb96406-b822-406b-a98a-cafb947a48d4, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:10.930Z, DateTo=0, DateFrom=0, UnixValue=1.75408153093e+18
+writer-1    | 2025/08/01 20:52:11 Stored item with ID: 662fcaa7-eeb6-4030-962e-bdf71fe47ca2
+writer-1    | 2025/08/01 20:52:11 Stored Data: CorrelationId=662fcaa7-eeb6-4030-962e-bdf71fe47ca2, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:11.023Z, DateTo=0, DateFrom=0, UnixValue=1.754081531023e+18
+writer-1    | 2025/08/01 20:52:11 Stored item with ID: 124a5e64-82c6-4e1a-bb46-cd97480ed18d
+writer-1    | 2025/08/01 20:52:11 Stored Data: CorrelationId=124a5e64-82c6-4e1a-bb46-cd97480ed18d, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:11.040Z, DateTo=0, DateFrom=0, UnixValue=1.75408153104e+18
+writer-1    | 2025/08/01 20:52:11 Stored item with ID: 786a727a-5eea-4f10-b7f0-e3e159c99f87
+writer-1    | 2025/08/01 20:52:11 Stored Data: CorrelationId=786a727a-5eea-4f10-b7f0-e3e159c99f87, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:11.146Z, DateTo=0, DateFrom=0, UnixValue=1.754081531146e+18
+writer-1    | 2025/08/01 20:52:11 Stored item with ID: 83f30972-37dc-4bb5-b0fd-7705c298a168
+writer-1    | 2025/08/01 20:52:11 Stored Data: CorrelationId=83f30972-37dc-4bb5-b0fd-7705c298a168, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:11.149Z, DateTo=0, DateFrom=0, UnixValue=1.754081531149e+18
+writer-1    | 2025/08/01 20:52:11 Stored item with ID: 1cb7fa19-043e-4304-b25a-60ea2a9f6a7f
+writer-1    | 2025/08/01 20:52:11 Stored Data: CorrelationId=1cb7fa19-043e-4304-b25a-60ea2a9f6a7f, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:11.171Z, DateTo=0, DateFrom=0, UnixValue=1.754081531171e+18
+writer-1    | 2025/08/01 20:52:11 Stored item with ID: 9aad7ec4-481e-40f3-a91f-bd69d7e39052
+writer-1    | 2025/08/01 20:52:11 Stored Data: CorrelationId=9aad7ec4-481e-40f3-a91f-bd69d7e39052, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:11.240Z, DateTo=0, DateFrom=0, UnixValue=1.75408153124e+18
+writer-1    | 2025/08/01 20:52:11 Stored item with ID: 07a997ab-89bc-4b52-9759-baecc11043a0
+writer-1    | 2025/08/01 20:52:11 Stored Data: CorrelationId=07a997ab-89bc-4b52-9759-baecc11043a0, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:11.259Z, DateTo=0, DateFrom=0, UnixValue=1.754081531259e+18
+writer-1    | 2025/08/01 20:52:11 Stored item with ID: 8761a71d-6eb1-42e5-bb50-ff7e5bfe936a
+writer-1    | 2025/08/01 20:52:11 Stored Data: CorrelationId=8761a71d-6eb1-42e5-bb50-ff7e5bfe936a, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:11.276Z, DateTo=0, DateFrom=0, UnixValue=1.754081531276e+18
+writer-1    | 2025/08/01 20:52:11 Stored item with ID: c6793683-6b8a-48c9-9eac-b5481b0a0cd7
+writer-1    | 2025/08/01 20:52:11 Stored Data: CorrelationId=c6793683-6b8a-48c9-9eac-b5481b0a0cd7, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:11.350Z, DateTo=0, DateFrom=0, UnixValue=1.75408153135e+18
+writer-1    | 2025/08/01 20:52:11 Stored item with ID: d932b0f0-1c26-4adc-8072-55cb689c5abd
+writer-1    | 2025/08/01 20:52:11 Stored Data: CorrelationId=d932b0f0-1c26-4adc-8072-55cb689c5abd, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:11.368Z, DateTo=0, DateFrom=0, UnixValue=1.754081531368e+18
+writer-1    | 2025/08/01 20:52:11 Stored item with ID: c476a73e-b12e-4daf-8d36-6e402604c8f5
+writer-1    | 2025/08/01 20:52:11 Stored Data: CorrelationId=c476a73e-b12e-4daf-8d36-6e402604c8f5, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:11.386Z, DateTo=0, DateFrom=0, UnixValue=1.754081531386e+18
+writer-1    | 2025/08/01 20:52:11 Stored item with ID: 0d07b693-0d86-4dbd-909e-2b8f282fd620
+writer-1    | 2025/08/01 20:52:11 Stored Data: CorrelationId=0d07b693-0d86-4dbd-909e-2b8f282fd620, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:11.459Z, DateTo=0, DateFrom=0, UnixValue=1.754081531459e+18
+writer-1    | 2025/08/01 20:52:11 Stored item with ID: c3c28de4-eb97-4870-bc1e-49498ff596a9
+writer-1    | 2025/08/01 20:52:11 Stored Data: CorrelationId=c3c28de4-eb97-4870-bc1e-49498ff596a9, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:11.478Z, DateTo=0, DateFrom=0, UnixValue=1.754081531478e+18
+writer-1    | 2025/08/01 20:52:11 Stored item with ID: 1b5da858-1c24-446d-8fd9-87063c993ac7
+writer-1    | 2025/08/01 20:52:11 Stored Data: CorrelationId=1b5da858-1c24-446d-8fd9-87063c993ac7, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:11.495Z, DateTo=0, DateFrom=0, UnixValue=1.754081531495e+18
+writer-1    | 2025/08/01 20:52:11 Stored item with ID: 1ed464a6-27c4-4219-bba9-1928e3167f5f
+writer-1    | 2025/08/01 20:52:11 Stored Data: CorrelationId=1ed464a6-27c4-4219-bba9-1928e3167f5f, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:11.569Z, DateTo=0, DateFrom=0, UnixValue=1.754081531569e+18
+writer-1    | 2025/08/01 20:52:11 Stored item with ID: d2984191-5df9-477a-9f57-3c61d2d53d40
+writer-1    | 2025/08/01 20:52:11 Stored Data: CorrelationId=d2984191-5df9-477a-9f57-3c61d2d53d40, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:11.587Z, DateTo=0, DateFrom=0, UnixValue=1.754081531587e+18
+writer-1    | 2025/08/01 20:52:11 Stored item with ID: e7b5e9c6-ce74-43d5-b09d-e4589cb4e7e2
+writer-1    | 2025/08/01 20:52:11 Stored Data: CorrelationId=e7b5e9c6-ce74-43d5-b09d-e4589cb4e7e2, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:11.605Z, DateTo=0, DateFrom=0, UnixValue=1.754081531605e+18
+writer-1    | 2025/08/01 20:52:11 Stored item with ID: ba0cfcd9-e20c-4fa6-a49a-153d1fedfc92
+writer-1    | 2025/08/01 20:52:11 Stored Data: CorrelationId=ba0cfcd9-e20c-4fa6-a49a-153d1fedfc92, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:11.678Z, DateTo=0, DateFrom=0, UnixValue=1.754081531678e+18
+writer-1    | 2025/08/01 20:52:11 Stored item with ID: 7f50996f-370f-447e-a38a-9940d2dfb43a
+writer-1    | 2025/08/01 20:52:11 Stored Data: CorrelationId=7f50996f-370f-447e-a38a-9940d2dfb43a, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:11.697Z, DateTo=0, DateFrom=0, UnixValue=1.754081531697e+18
+writer-1    | 2025/08/01 20:52:11 Stored item with ID: a38d6981-0132-4bf7-9f2a-a1edce6a7032
+writer-1    | 2025/08/01 20:52:11 Stored Data: CorrelationId=a38d6981-0132-4bf7-9f2a-a1edce6a7032, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:11.713Z, DateTo=0, DateFrom=0, UnixValue=1.754081531713e+18
+writer-1    | 2025/08/01 20:52:11 Stored item with ID: e0700188-fe7f-4738-8894-3527c86df573
+writer-1    | 2025/08/01 20:52:11 Stored Data: CorrelationId=e0700188-fe7f-4738-8894-3527c86df573, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:11.787Z, DateTo=0, DateFrom=0, UnixValue=1.754081531787e+18
+writer-1    | 2025/08/01 20:52:11 Stored item with ID: e038036f-0a85-43b7-8389-656e5da393a3
+writer-1    | 2025/08/01 20:52:11 Stored Data: CorrelationId=e038036f-0a85-43b7-8389-656e5da393a3, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:11.806Z, DateTo=0, DateFrom=0, UnixValue=1.754081531806e+18
+writer-1    | 2025/08/01 20:52:11 Stored item with ID: 6793c11e-f5ec-4ec2-b615-7c1675054bc9
+writer-1    | 2025/08/01 20:52:11 Stored Data: CorrelationId=6793c11e-f5ec-4ec2-b615-7c1675054bc9, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:11.823Z, DateTo=0, DateFrom=0, UnixValue=1.754081531823e+18
+writer-1    | 2025/08/01 20:52:11 Stored item with ID: 8cb282db-2d27-4a06-a955-d461ef251564
+writer-1    | 2025/08/01 20:52:11 Stored Data: CorrelationId=8cb282db-2d27-4a06-a955-d461ef251564, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:11.897Z, DateTo=0, DateFrom=0, UnixValue=1.754081531897e+18
+writer-1    | 2025/08/01 20:52:11 Stored item with ID: c1c9f505-6685-4bb1-a73b-1f4480fdb81c
+writer-1    | 2025/08/01 20:52:11 Stored Data: CorrelationId=c1c9f505-6685-4bb1-a73b-1f4480fdb81c, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:11.915Z, DateTo=0, DateFrom=0, UnixValue=1.754081531915e+18
+writer-1    | 2025/08/01 20:52:11 Stored item with ID: bd520eb3-15b2-4a14-8de2-eb821509991a
+writer-1    | 2025/08/01 20:52:11 Stored Data: CorrelationId=bd520eb3-15b2-4a14-8de2-eb821509991a, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:11.932Z, DateTo=0, DateFrom=0, UnixValue=1.754081531932e+18
+writer-1    | 2025/08/01 20:52:12 Stored item with ID: 694d044f-c83d-4fc7-8f69-a7f545d10d73
+writer-1    | 2025/08/01 20:52:12 Stored Data: CorrelationId=694d044f-c83d-4fc7-8f69-a7f545d10d73, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:12.005Z, DateTo=0, DateFrom=0, UnixValue=1.754081532005e+18
+writer-1    | 2025/08/01 20:52:12 Stored item with ID: da346920-99e9-4781-a8dc-ea685fcef8ab
+writer-1    | 2025/08/01 20:52:12 Stored Data: CorrelationId=da346920-99e9-4781-a8dc-ea685fcef8ab, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:12.024Z, DateTo=0, DateFrom=0, UnixValue=1.754081532024e+18
+writer-1    | 2025/08/01 20:52:12 Stored item with ID: bf14c7d9-f27c-4f4a-9460-3efda76d03c6
+writer-1    | 2025/08/01 20:52:12 Stored Data: CorrelationId=bf14c7d9-f27c-4f4a-9460-3efda76d03c6, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:12.041Z, DateTo=0, DateFrom=0, UnixValue=1.754081532041e+18
+writer-1    | 2025/08/01 20:52:12 Stored item with ID: 16f8ab65-863b-4f90-a45c-6aba152815e9
+writer-1    | 2025/08/01 20:52:12 Stored Data: CorrelationId=16f8ab65-863b-4f90-a45c-6aba152815e9, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:12.115Z, DateTo=0, DateFrom=0, UnixValue=1.754081532115e+18
+writer-1    | 2025/08/01 20:52:12 Stored item with ID: 28c694f6-93e7-4250-8e0e-5df899217434
+writer-1    | 2025/08/01 20:52:12 Stored Data: CorrelationId=28c694f6-93e7-4250-8e0e-5df899217434, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:12.147Z, DateTo=0, DateFrom=0, UnixValue=1.754081532147e+18
+writer-1    | 2025/08/01 20:52:12 Stored item with ID: fb07e7f2-501e-4d1c-9d66-818439d38788
+writer-1    | 2025/08/01 20:52:12 Stored Data: CorrelationId=fb07e7f2-501e-4d1c-9d66-818439d38788, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:12.150Z, DateTo=0, DateFrom=0, UnixValue=1.75408153215e+18
+writer-1    | 2025/08/01 20:52:12 Stored item with ID: f8c56e62-f83c-4dcd-8c5d-9a18744b70f5
+writer-1    | 2025/08/01 20:52:12 Stored Data: CorrelationId=f8c56e62-f83c-4dcd-8c5d-9a18744b70f5, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:12.173Z, DateTo=0, DateFrom=0, UnixValue=1.754081532173e+18
+writer-1    | 2025/08/01 20:52:12 Stored item with ID: d9b2bf79-e079-4a07-bf75-f4e31b4fa4b8
+writer-1    | 2025/08/01 20:52:12 Stored Data: CorrelationId=d9b2bf79-e079-4a07-bf75-f4e31b4fa4b8, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:12.225Z, DateTo=0, DateFrom=0, UnixValue=1.754081532225e+18
+writer-1    | 2025/08/01 20:52:12 Stored item with ID: 41c18dd2-8d41-4a2a-b94e-8b6a024de921
+writer-1    | 2025/08/01 20:52:12 Stored Data: CorrelationId=41c18dd2-8d41-4a2a-b94e-8b6a024de921, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:12.242Z, DateTo=0, DateFrom=0, UnixValue=1.754081532242e+18
+writer-1    | 2025/08/01 20:52:12 Stored item with ID: 27f1aa2e-4d01-48d3-bfb2-a72e303ce122
+writer-1    | 2025/08/01 20:52:12 Stored Data: CorrelationId=27f1aa2e-4d01-48d3-bfb2-a72e303ce122, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:12.260Z, DateTo=0, DateFrom=0, UnixValue=1.75408153226e+18
+writer-1    | 2025/08/01 20:52:12 Stored item with ID: cb1106a4-266c-4eb7-aff1-c0336c4b88bb
+writer-1    | 2025/08/01 20:52:12 Stored Data: CorrelationId=cb1106a4-266c-4eb7-aff1-c0336c4b88bb, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:12.277Z, DateTo=0, DateFrom=0, UnixValue=1.754081532277e+18
+writer-1    | 2025/08/01 20:52:12 Stored item with ID: 5a52d5f3-abf8-455d-a299-a7145e2ffe55
+writer-1    | 2025/08/01 20:52:12 Stored Data: CorrelationId=5a52d5f3-abf8-455d-a299-a7145e2ffe55, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:12.334Z, DateTo=0, DateFrom=0, UnixValue=1.754081532334e+18
+writer-1    | 2025/08/01 20:52:12 Stored item with ID: 13687d8b-9745-43ec-a881-3b2cfea1c7a8
+writer-1    | 2025/08/01 20:52:12 Stored Data: CorrelationId=13687d8b-9745-43ec-a881-3b2cfea1c7a8, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:12.351Z, DateTo=0, DateFrom=0, UnixValue=1.754081532351e+18
+writer-1    | 2025/08/01 20:52:12 Stored item with ID: bcb63b01-1f7e-4b14-9f8e-a1497a0aed33
+writer-1    | 2025/08/01 20:52:12 Stored Data: CorrelationId=bcb63b01-1f7e-4b14-9f8e-a1497a0aed33, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:12.370Z, DateTo=0, DateFrom=0, UnixValue=1.75408153237e+18
+writer-1    | 2025/08/01 20:52:12 Stored item with ID: 235ea385-23f1-4580-91bd-7d20a51343cb
+writer-1    | 2025/08/01 20:52:12 Stored Data: CorrelationId=235ea385-23f1-4580-91bd-7d20a51343cb, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:12.388Z, DateTo=0, DateFrom=0, UnixValue=1.754081532388e+18
+writer-1    | 2025/08/01 20:52:12 Stored item with ID: 71c489e9-732c-466f-8e40-e8a9dc2f5d9d
+writer-1    | 2025/08/01 20:52:12 Stored Data: CorrelationId=71c489e9-732c-466f-8e40-e8a9dc2f5d9d, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:12.443Z, DateTo=0, DateFrom=0, UnixValue=1.754081532443e+18
+writer-1    | 2025/08/01 20:52:12 Stored item with ID: 7c3b9e34-1723-4531-ac6a-205b903087c0
+writer-1    | 2025/08/01 20:52:12 Stored Data: CorrelationId=7c3b9e34-1723-4531-ac6a-205b903087c0, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:12.461Z, DateTo=0, DateFrom=0, UnixValue=1.754081532461e+18
+writer-1    | 2025/08/01 20:52:12 Stored item with ID: f5c3edb9-c056-4e21-983e-5c1f0c15b076
+writer-1    | 2025/08/01 20:52:12 Stored Data: CorrelationId=f5c3edb9-c056-4e21-983e-5c1f0c15b076, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:12.479Z, DateTo=0, DateFrom=0, UnixValue=1.754081532479e+18
+writer-1    | 2025/08/01 20:52:12 Stored item with ID: c157af49-be2a-4eb6-9455-c79e04416812
+writer-1    | 2025/08/01 20:52:12 Stored Data: CorrelationId=c157af49-be2a-4eb6-9455-c79e04416812, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:12.496Z, DateTo=0, DateFrom=0, UnixValue=1.754081532496e+18
+writer-1    | 2025/08/01 20:52:12 Stored item with ID: 6fccd241-c8db-4cd7-9d69-a5d28c697a59
+writer-1    | 2025/08/01 20:52:12 Stored Data: CorrelationId=6fccd241-c8db-4cd7-9d69-a5d28c697a59, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:12.552Z, DateTo=0, DateFrom=0, UnixValue=1.754081532552e+18
+writer-1    | 2025/08/01 20:52:12 Stored item with ID: 58a19b3d-3d58-4608-85c6-241d2692cd91
+writer-1    | 2025/08/01 20:52:12 Stored Data: CorrelationId=58a19b3d-3d58-4608-85c6-241d2692cd91, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:12.570Z, DateTo=0, DateFrom=0, UnixValue=1.75408153257e+18
+writer-1    | 2025/08/01 20:52:12 Stored item with ID: 52328b3f-94f9-4150-80db-69ccdc1aa113
+writer-1    | 2025/08/01 20:52:12 Stored Data: CorrelationId=52328b3f-94f9-4150-80db-69ccdc1aa113, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:12.588Z, DateTo=0, DateFrom=0, UnixValue=1.754081532588e+18
+writer-1    | 2025/08/01 20:52:12 Stored item with ID: 0a795377-7c5b-40de-af84-a8e894c1a262
+writer-1    | 2025/08/01 20:52:12 Stored Data: CorrelationId=0a795377-7c5b-40de-af84-a8e894c1a262, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:12.606Z, DateTo=0, DateFrom=0, UnixValue=1.754081532606e+18
+writer-1    | 2025/08/01 20:52:12 Stored item with ID: d0a75f0e-8ba2-4ded-80d0-a838e8a51bb1
+writer-1    | 2025/08/01 20:52:12 Stored Data: CorrelationId=d0a75f0e-8ba2-4ded-80d0-a838e8a51bb1, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:12.661Z, DateTo=0, DateFrom=0, UnixValue=1.754081532661e+18
+writer-1    | 2025/08/01 20:52:12 Stored item with ID: 3378afc6-8d1f-4043-9240-78ec5b529cbd
+writer-1    | 2025/08/01 20:52:12 Stored Data: CorrelationId=3378afc6-8d1f-4043-9240-78ec5b529cbd, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:12.680Z, DateTo=0, DateFrom=0, UnixValue=1.75408153268e+18
+writer-1    | 2025/08/01 20:52:12 Stored item with ID: d12bac63-01b0-4b25-82fe-47ae86fa51a3
+writer-1    | 2025/08/01 20:52:12 Stored Data: CorrelationId=d12bac63-01b0-4b25-82fe-47ae86fa51a3, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:12.699Z, DateTo=0, DateFrom=0, UnixValue=1.754081532699e+18
+writer-1    | 2025/08/01 20:52:12 Stored item with ID: 3e6d475d-d7c0-4cc9-9190-7a05de33afdd
+writer-1    | 2025/08/01 20:52:12 Stored Data: CorrelationId=3e6d475d-d7c0-4cc9-9190-7a05de33afdd, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:12.715Z, DateTo=0, DateFrom=0, UnixValue=1.754081532715e+18
+writer-1    | 2025/08/01 20:52:12 Stored item with ID: 05a834df-d795-4cf6-90ba-cb95e7fe186d
+writer-1    | 2025/08/01 20:52:12 Stored Data: CorrelationId=05a834df-d795-4cf6-90ba-cb95e7fe186d, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:12.771Z, DateTo=0, DateFrom=0, UnixValue=1.754081532771e+18
+writer-1    | 2025/08/01 20:52:12 Stored item with ID: 36110361-876c-406c-b2b4-cdb39037aa2b
+writer-1    | 2025/08/01 20:52:12 Stored Data: CorrelationId=36110361-876c-406c-b2b4-cdb39037aa2b, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:12.789Z, DateTo=0, DateFrom=0, UnixValue=1.754081532789e+18
+writer-1    | 2025/08/01 20:52:12 Stored item with ID: 42d9a8f4-c115-4946-b42c-3ce8054c59e2
+writer-1    | 2025/08/01 20:52:12 Stored Data: CorrelationId=42d9a8f4-c115-4946-b42c-3ce8054c59e2, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:12.808Z, DateTo=0, DateFrom=0, UnixValue=1.754081532808e+18
+writer-1    | 2025/08/01 20:52:12 Stored item with ID: 174a5b62-db42-4e97-9566-bf99a0a55285
+writer-1    | 2025/08/01 20:52:12 Stored Data: CorrelationId=174a5b62-db42-4e97-9566-bf99a0a55285, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:12.824Z, DateTo=0, DateFrom=0, UnixValue=1.754081532824e+18
+writer-1    | 2025/08/01 20:52:12 Stored item with ID: debc3831-a353-4385-9332-8d282fc01d91
+writer-1    | 2025/08/01 20:52:12 Stored Data: CorrelationId=debc3831-a353-4385-9332-8d282fc01d91, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:12.880Z, DateTo=0, DateFrom=0, UnixValue=1.75408153288e+18
+writer-1    | 2025/08/01 20:52:12 Stored item with ID: 0c8b3358-53fd-4f1a-a5a3-3658b8bc699b
+writer-1    | 2025/08/01 20:52:12 Stored Data: CorrelationId=0c8b3358-53fd-4f1a-a5a3-3658b8bc699b, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:12.898Z, DateTo=0, DateFrom=0, UnixValue=1.754081532898e+18
+writer-1    | 2025/08/01 20:52:12 Stored item with ID: 05362ec4-a1e4-4231-b6c0-ae46cbb26196
+writer-1    | 2025/08/01 20:52:12 Stored Data: CorrelationId=05362ec4-a1e4-4231-b6c0-ae46cbb26196, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:12.917Z, DateTo=0, DateFrom=0, UnixValue=1.754081532917e+18
+writer-1    | 2025/08/01 20:52:12 Stored item with ID: 148f8528-2400-4ce4-8499-864c51a5dd3b
+writer-1    | 2025/08/01 20:52:12 Stored Data: CorrelationId=148f8528-2400-4ce4-8499-864c51a5dd3b, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:12.934Z, DateTo=0, DateFrom=0, UnixValue=1.754081532934e+18
+writer-1    | 2025/08/01 20:52:12 Stored item with ID: 84e137bf-1a21-49f8-be8a-2314586e7a05
+writer-1    | 2025/08/01 20:52:12 Stored Data: CorrelationId=84e137bf-1a21-49f8-be8a-2314586e7a05, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:12.989Z, DateTo=0, DateFrom=0, UnixValue=1.754081532989e+18
+writer-1    | 2025/08/01 20:52:13 Stored item with ID: 9c03c7fa-901c-444a-bc6a-bd596a007acd
+writer-1    | 2025/08/01 20:52:13 Stored Data: CorrelationId=9c03c7fa-901c-444a-bc6a-bd596a007acd, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:13.007Z, DateTo=0, DateFrom=0, UnixValue=1.754081533007e+18
+writer-1    | 2025/08/01 20:52:13 Stored item with ID: d29acbc0-12dd-4f70-9352-31bf6f285b06
+writer-1    | 2025/08/01 20:52:13 Stored Data: CorrelationId=d29acbc0-12dd-4f70-9352-31bf6f285b06, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:13.026Z, DateTo=0, DateFrom=0, UnixValue=1.754081533026e+18
+writer-1    | 2025/08/01 20:52:13 Stored item with ID: c804a0e6-6e02-4bdf-b661-5a4c93e9313c
+writer-1    | 2025/08/01 20:52:13 Stored Data: CorrelationId=c804a0e6-6e02-4bdf-b661-5a4c93e9313c, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:13.043Z, DateTo=0, DateFrom=0, UnixValue=1.754081533043e+18
+writer-1    | 2025/08/01 20:52:13 Stored item with ID: 0898ed4d-05df-46f1-bc97-a804c59f85df
+writer-1    | 2025/08/01 20:52:13 Stored Data: CorrelationId=0898ed4d-05df-46f1-bc97-a804c59f85df, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:13.099Z, DateTo=0, DateFrom=0, UnixValue=1.754081533099e+18
+writer-1    | 2025/08/01 20:52:13 Stored item with ID: 0b31c18e-ae66-48f5-b9a0-a4aae630e9e6
+writer-1    | 2025/08/01 20:52:13 Stored Data: CorrelationId=0b31c18e-ae66-48f5-b9a0-a4aae630e9e6, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:13.116Z, DateTo=0, DateFrom=0, UnixValue=1.754081533116e+18
+writer-1    | 2025/08/01 20:52:13 Stored item with ID: d6933df7-fe32-4054-8120-86a342fd872a
+writer-1    | 2025/08/01 20:52:13 Stored Data: CorrelationId=d6933df7-fe32-4054-8120-86a342fd872a, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:13.148Z, DateTo=0, DateFrom=0, UnixValue=1.754081533148e+18
+writer-1    | 2025/08/01 20:52:13 Stored item with ID: 408e2625-6253-4d4f-b4b2-4f7681bf1584
+writer-1    | 2025/08/01 20:52:13 Stored Data: CorrelationId=408e2625-6253-4d4f-b4b2-4f7681bf1584, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:13.151Z, DateTo=0, DateFrom=0, UnixValue=1.754081533151e+18
+writer-1    | 2025/08/01 20:52:13 Stored item with ID: 6112786d-4e77-4c88-84d3-8744b9723eb6
+writer-1    | 2025/08/01 20:52:13 Stored Data: CorrelationId=6112786d-4e77-4c88-84d3-8744b9723eb6, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:13.175Z, DateTo=0, DateFrom=0, UnixValue=1.754081533175e+18
+writer-1    | 2025/08/01 20:52:13 Stored item with ID: 3fe067ef-080a-428a-a940-958f82826127
+writer-1    | 2025/08/01 20:52:13 Stored Data: CorrelationId=3fe067ef-080a-428a-a940-958f82826127, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:13.208Z, DateTo=0, DateFrom=0, UnixValue=1.754081533208e+18
+writer-1    | 2025/08/01 20:52:13 Stored item with ID: d415df97-2ff9-4d94-a7b5-d10a1f6cd136
+writer-1    | 2025/08/01 20:52:13 Stored Data: CorrelationId=d415df97-2ff9-4d94-a7b5-d10a1f6cd136, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:13.226Z, DateTo=0, DateFrom=0, UnixValue=1.754081533226e+18
+writer-1    | 2025/08/01 20:52:13 Stored item with ID: 039f4a0f-0cf4-408f-a511-a30943b4ddf1
+writer-1    | 2025/08/01 20:52:13 Stored Data: CorrelationId=039f4a0f-0cf4-408f-a511-a30943b4ddf1, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:13.243Z, DateTo=0, DateFrom=0, UnixValue=1.754081533243e+18
+writer-1    | 2025/08/01 20:52:13 Stored item with ID: 9df99cb0-f7ca-455c-bf4e-1fd90a43c0ef
+writer-1    | 2025/08/01 20:52:13 Stored Data: CorrelationId=9df99cb0-f7ca-455c-bf4e-1fd90a43c0ef, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:13.261Z, DateTo=0, DateFrom=0, UnixValue=1.754081533261e+18
+writer-1    | 2025/08/01 20:52:13 Stored item with ID: bf322e48-592e-48a8-8570-f4115b995aa7
+writer-1    | 2025/08/01 20:52:13 Stored Data: CorrelationId=bf322e48-592e-48a8-8570-f4115b995aa7, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:13.279Z, DateTo=0, DateFrom=0, UnixValue=1.754081533279e+18
+writer-1    | 2025/08/01 20:52:13 Stored item with ID: 46ad2a9a-0b32-48c6-99d2-4dec9dbc06b0
+writer-1    | 2025/08/01 20:52:13 Stored Data: CorrelationId=46ad2a9a-0b32-48c6-99d2-4dec9dbc06b0, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:13.317Z, DateTo=0, DateFrom=0, UnixValue=1.754081533317e+18
+writer-1    | 2025/08/01 20:52:13 Stored item with ID: 10f923b9-0608-4c58-adf4-f7f11164ed52
+writer-1    | 2025/08/01 20:52:13 Stored Data: CorrelationId=10f923b9-0608-4c58-adf4-f7f11164ed52, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:13.335Z, DateTo=0, DateFrom=0, UnixValue=1.754081533335e+18
+writer-1    | 2025/08/01 20:52:13 Stored item with ID: 9b007682-90a7-49be-a7f5-912cf6cce124
+writer-1    | 2025/08/01 20:52:13 Stored Data: CorrelationId=9b007682-90a7-49be-a7f5-912cf6cce124, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:13.352Z, DateTo=0, DateFrom=0, UnixValue=1.754081533352e+18
+writer-1    | 2025/08/01 20:52:13 Stored item with ID: e80c1fa9-09ba-44ce-b931-54a1fd61cbe4
+writer-1    | 2025/08/01 20:52:13 Stored Data: CorrelationId=e80c1fa9-09ba-44ce-b931-54a1fd61cbe4, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:13.371Z, DateTo=0, DateFrom=0, UnixValue=1.754081533371e+18
+writer-1    | 2025/08/01 20:52:13 Stored item with ID: 8306623f-4be0-4a16-8928-9ad6d4caf61a
+writer-1    | 2025/08/01 20:52:13 Stored Data: CorrelationId=8306623f-4be0-4a16-8928-9ad6d4caf61a, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:13.390Z, DateTo=0, DateFrom=0, UnixValue=1.75408153339e+18
+writer-1    | 2025/08/01 20:52:13 Stored item with ID: f893f76f-f6ae-4753-8ba2-c2c491d7a993
+writer-1    | 2025/08/01 20:52:13 Stored Data: CorrelationId=f893f76f-f6ae-4753-8ba2-c2c491d7a993, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:13.442Z, DateTo=0, DateFrom=0, UnixValue=1.754081533442e+18
+writer-1    | 2025/08/01 20:52:13 Stored item with ID: 4a153b98-8c45-472f-8633-f880323fe3e8
+writer-1    | 2025/08/01 20:52:13 Stored Data: CorrelationId=4a153b98-8c45-472f-8633-f880323fe3e8, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:13.444Z, DateTo=0, DateFrom=0, UnixValue=1.754081533444e+18
+writer-1    | 2025/08/01 20:52:13 Stored item with ID: eb5124ad-0a4a-4fb5-b117-6b5878685ecc
+writer-1    | 2025/08/01 20:52:13 Stored Data: CorrelationId=eb5124ad-0a4a-4fb5-b117-6b5878685ecc, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:13.462Z, DateTo=0, DateFrom=0, UnixValue=1.754081533462e+18
+writer-1    | 2025/08/01 20:52:13 Stored item with ID: f04e3519-d8fa-4226-821a-1054dd3ee3b8
+writer-1    | 2025/08/01 20:52:13 Stored Data: CorrelationId=f04e3519-d8fa-4226-821a-1054dd3ee3b8, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:13.480Z, DateTo=0, DateFrom=0, UnixValue=1.75408153348e+18
+writer-1    | 2025/08/01 20:52:13 Stored item with ID: b7eef752-f125-49bc-af66-166ec065a341
+writer-1    | 2025/08/01 20:52:13 Stored Data: CorrelationId=b7eef752-f125-49bc-af66-166ec065a341, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:13.497Z, DateTo=0, DateFrom=0, UnixValue=1.754081533497e+18
+writer-1    | 2025/08/01 20:52:13 Stored item with ID: 187ab232-a8fc-44d4-a535-8316b70fc50f
+writer-1    | 2025/08/01 20:52:13 Stored Data: CorrelationId=187ab232-a8fc-44d4-a535-8316b70fc50f, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:13.536Z, DateTo=0, DateFrom=0, UnixValue=1.754081533536e+18
+writer-1    | 2025/08/01 20:52:13 Stored item with ID: c78847a0-5134-4b17-b6e2-29621155f303
+writer-1    | 2025/08/01 20:52:13 Stored Data: CorrelationId=c78847a0-5134-4b17-b6e2-29621155f303, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:13.554Z, DateTo=0, DateFrom=0, UnixValue=1.754081533554e+18
+writer-1    | 2025/08/01 20:52:13 Stored item with ID: 777a54eb-eeee-4060-b4ea-e3c3176a082b
+writer-1    | 2025/08/01 20:52:13 Stored Data: CorrelationId=777a54eb-eeee-4060-b4ea-e3c3176a082b, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:13.572Z, DateTo=0, DateFrom=0, UnixValue=1.754081533572e+18
+writer-1    | 2025/08/01 20:52:13 Stored item with ID: 93440fcf-081b-4a50-82ab-9468448a1b87
+writer-1    | 2025/08/01 20:52:13 Stored Data: CorrelationId=93440fcf-081b-4a50-82ab-9468448a1b87, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:13.590Z, DateTo=0, DateFrom=0, UnixValue=1.75408153359e+18
+writer-1    | 2025/08/01 20:52:13 Stored item with ID: b29bb82b-bc42-4b59-b472-a41ece5b7277
+writer-1    | 2025/08/01 20:52:13 Stored Data: CorrelationId=b29bb82b-bc42-4b59-b472-a41ece5b7277, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:13.608Z, DateTo=0, DateFrom=0, UnixValue=1.754081533608e+18
+writer-1    | 2025/08/01 20:52:13 Stored item with ID: 6c7bf8ad-c862-4a98-9376-8f9aaba61299
+writer-1    | 2025/08/01 20:52:13 Stored Data: CorrelationId=6c7bf8ad-c862-4a98-9376-8f9aaba61299, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:13.646Z, DateTo=0, DateFrom=0, UnixValue=1.754081533646e+18
+writer-1    | 2025/08/01 20:52:13 Stored item with ID: 0eca9b15-5332-4568-bac4-498aa61515d2
+writer-1    | 2025/08/01 20:52:13 Stored Data: CorrelationId=0eca9b15-5332-4568-bac4-498aa61515d2, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:13.663Z, DateTo=0, DateFrom=0, UnixValue=1.754081533663e+18
+writer-1    | 2025/08/01 20:52:13 Stored item with ID: 766eb3cb-3520-4321-a6b5-b682a89f21d8
+writer-1    | 2025/08/01 20:52:13 Stored Data: CorrelationId=766eb3cb-3520-4321-a6b5-b682a89f21d8, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:13.681Z, DateTo=0, DateFrom=0, UnixValue=1.754081533681e+18
+writer-1    | 2025/08/01 20:52:13 Stored item with ID: 80095dc8-8ff8-47c8-b6bb-2e4374d125e7
+writer-1    | 2025/08/01 20:52:13 Stored Data: CorrelationId=80095dc8-8ff8-47c8-b6bb-2e4374d125e7, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:13.701Z, DateTo=0, DateFrom=0, UnixValue=1.754081533701e+18
+writer-1    | 2025/08/01 20:52:13 Stored item with ID: fc0df74d-e79c-422c-9da0-26bf5bec70c1
+writer-1    | 2025/08/01 20:52:13 Stored Data: CorrelationId=fc0df74d-e79c-422c-9da0-26bf5bec70c1, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:13.717Z, DateTo=0, DateFrom=0, UnixValue=1.754081533717e+18
+writer-1    | 2025/08/01 20:52:13 Stored item with ID: ce285fc0-cc76-4ae5-b639-87c9fa9242a3
+writer-1    | 2025/08/01 20:52:13 Stored Data: CorrelationId=ce285fc0-cc76-4ae5-b639-87c9fa9242a3, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:13.754Z, DateTo=0, DateFrom=0, UnixValue=1.754081533754e+18
+writer-1    | 2025/08/01 20:52:13 Stored item with ID: 08f1c333-206e-4ae2-84ad-1d015d00b582
+writer-1    | 2025/08/01 20:52:13 Stored Data: CorrelationId=08f1c333-206e-4ae2-84ad-1d015d00b582, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:13.773Z, DateTo=0, DateFrom=0, UnixValue=1.754081533773e+18
+writer-1    | 2025/08/01 20:52:13 Stored item with ID: 9fee437e-faa4-4c44-8aa4-d81cf6f03efc
+writer-1    | 2025/08/01 20:52:13 Stored Data: CorrelationId=9fee437e-faa4-4c44-8aa4-d81cf6f03efc, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:13.791Z, DateTo=0, DateFrom=0, UnixValue=1.754081533791e+18
+writer-1    | 2025/08/01 20:52:13 Stored item with ID: 4f600be3-a1ce-4b92-b05d-d91757a9dcf7
+writer-1    | 2025/08/01 20:52:13 Stored Data: CorrelationId=4f600be3-a1ce-4b92-b05d-d91757a9dcf7, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:13.809Z, DateTo=0, DateFrom=0, UnixValue=1.754081533809e+18
+writer-1    | 2025/08/01 20:52:13 Stored item with ID: 758642c8-f374-4f31-bfeb-01ae9564f309
+writer-1    | 2025/08/01 20:52:13 Stored Data: CorrelationId=758642c8-f374-4f31-bfeb-01ae9564f309, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:13.826Z, DateTo=0, DateFrom=0, UnixValue=1.754081533826e+18
+writer-1    | 2025/08/01 20:52:13 Stored item with ID: 7f6426aa-3eca-4bda-bf92-f92a66f8c95c
+writer-1    | 2025/08/01 20:52:13 Stored Data: CorrelationId=7f6426aa-3eca-4bda-bf92-f92a66f8c95c, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:13.864Z, DateTo=0, DateFrom=0, UnixValue=1.754081533864e+18
+writer-1    | 2025/08/01 20:52:13 Stored item with ID: ab1b95bd-125d-4a11-a388-84d02b2e902a
+writer-1    | 2025/08/01 20:52:13 Stored Data: CorrelationId=ab1b95bd-125d-4a11-a388-84d02b2e902a, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:13.882Z, DateTo=0, DateFrom=0, UnixValue=1.754081533882e+18
+writer-1    | 2025/08/01 20:52:13 Stored item with ID: cfafb114-7ad1-43c1-b78d-ceb8c2e87a49
+writer-1    | 2025/08/01 20:52:13 Stored Data: CorrelationId=cfafb114-7ad1-43c1-b78d-ceb8c2e87a49, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:13.900Z, DateTo=0, DateFrom=0, UnixValue=1.7540815339e+18
+writer-1    | 2025/08/01 20:52:13 Stored item with ID: 5941b6ca-2fec-45f5-a22b-cc1672279f1c
+writer-1    | 2025/08/01 20:52:13 Stored Data: CorrelationId=5941b6ca-2fec-45f5-a22b-cc1672279f1c, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:13.918Z, DateTo=0, DateFrom=0, UnixValue=1.754081533918e+18
+writer-1    | 2025/08/01 20:52:13 Stored item with ID: 1308c2ce-9b02-48ce-8a98-657265e7f41b
+writer-1    | 2025/08/01 20:52:13 Stored Data: CorrelationId=1308c2ce-9b02-48ce-8a98-657265e7f41b, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:13.935Z, DateTo=0, DateFrom=0, UnixValue=1.754081533935e+18
+writer-1    | 2025/08/01 20:52:13 Stored item with ID: 06f94fb5-d9b1-49e0-b50a-1aa478c7b841
+writer-1    | 2025/08/01 20:52:13 Stored Data: CorrelationId=06f94fb5-d9b1-49e0-b50a-1aa478c7b841, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:13.973Z, DateTo=0, DateFrom=0, UnixValue=1.754081533973e+18
+writer-1    | 2025/08/01 20:52:13 Stored item with ID: 0c3c5806-6af4-4c11-b559-8c925fc98763
+writer-1    | 2025/08/01 20:52:13 Stored Data: CorrelationId=0c3c5806-6af4-4c11-b559-8c925fc98763, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:13.991Z, DateTo=0, DateFrom=0, UnixValue=1.754081533991e+18
+writer-1    | 2025/08/01 20:52:14 Stored item with ID: 3f9db281-da13-4201-a57b-e5ea1f3ee4f3
+writer-1    | 2025/08/01 20:52:14 Stored Data: CorrelationId=3f9db281-da13-4201-a57b-e5ea1f3ee4f3, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:14.009Z, DateTo=0, DateFrom=0, UnixValue=1.754081534009e+18
+writer-1    | 2025/08/01 20:52:14 Stored item with ID: f89c8851-5be8-4936-8823-c7cea334c7af
+writer-1    | 2025/08/01 20:52:14 Stored Data: CorrelationId=f89c8851-5be8-4936-8823-c7cea334c7af, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:14.027Z, DateTo=0, DateFrom=0, UnixValue=1.754081534027e+18
+writer-1    | 2025/08/01 20:52:14 Stored item with ID: baece2d2-7243-41bc-bb79-8884a362c747
+writer-1    | 2025/08/01 20:52:14 Stored Data: CorrelationId=baece2d2-7243-41bc-bb79-8884a362c747, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:14.044Z, DateTo=0, DateFrom=0, UnixValue=1.754081534044e+18
+writer-1    | 2025/08/01 20:52:14 Stored item with ID: 3567dcb1-42eb-4537-9e4d-7173790ca586
+writer-1    | 2025/08/01 20:52:14 Stored Data: CorrelationId=3567dcb1-42eb-4537-9e4d-7173790ca586, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:14.082Z, DateTo=0, DateFrom=0, UnixValue=1.754081534082e+18
+writer-1    | 2025/08/01 20:52:14 Stored item with ID: 8e7a56ff-077b-4e95-8cfc-27e50cf33c47
+writer-1    | 2025/08/01 20:52:14 Stored Data: CorrelationId=8e7a56ff-077b-4e95-8cfc-27e50cf33c47, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:14.100Z, DateTo=0, DateFrom=0, UnixValue=1.7540815341e+18
+writer-1    | 2025/08/01 20:52:14 Stored item with ID: d1e809bd-218f-4330-aa78-455dc1664dd9
+writer-1    | 2025/08/01 20:52:14 Stored Data: CorrelationId=d1e809bd-218f-4330-aa78-455dc1664dd9, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:14.119Z, DateTo=0, DateFrom=0, UnixValue=1.754081534119e+18
+writer-1    | 2025/08/01 20:52:14 Stored item with ID: 53a727bd-3e16-4c36-845a-95dce6f6f25e
+writer-1    | 2025/08/01 20:52:14 Stored Data: CorrelationId=53a727bd-3e16-4c36-845a-95dce6f6f25e, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:14.151Z, DateTo=0, DateFrom=0, UnixValue=1.754081534151e+18
+writer-1    | 2025/08/01 20:52:14 Stored item with ID: bf8c92d8-94c7-4d52-a91a-9ba9c5954fc2
+writer-1    | 2025/08/01 20:52:14 Stored Data: CorrelationId=bf8c92d8-94c7-4d52-a91a-9ba9c5954fc2, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:14.154Z, DateTo=0, DateFrom=0, UnixValue=1.754081534154e+18
+writer-1    | 2025/08/01 20:52:14 Stored item with ID: 978f1144-6efa-4848-9bbe-520c27311021
+writer-1    | 2025/08/01 20:52:14 Stored Data: CorrelationId=978f1144-6efa-4848-9bbe-520c27311021, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:14.176Z, DateTo=0, DateFrom=0, UnixValue=1.754081534176e+18
+writer-1    | 2025/08/01 20:52:14 Stored item with ID: 19a40ba2-8be4-4c8b-832d-df6eb738386d
+writer-1    | 2025/08/01 20:52:14 Stored Data: CorrelationId=19a40ba2-8be4-4c8b-832d-df6eb738386d, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:14.191Z, DateTo=0, DateFrom=0, UnixValue=1.754081534191e+18
+writer-1    | 2025/08/01 20:52:14 Stored item with ID: 094be87b-deef-4cdb-bb6e-e7040c389094
+writer-1    | 2025/08/01 20:52:14 Stored Data: CorrelationId=094be87b-deef-4cdb-bb6e-e7040c389094, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:14.209Z, DateTo=0, DateFrom=0, UnixValue=1.754081534209e+18
+writer-1    | 2025/08/01 20:52:14 Stored item with ID: bc9fa827-e848-4620-803b-84e4247ca663
+writer-1    | 2025/08/01 20:52:14 Stored Data: CorrelationId=bc9fa827-e848-4620-803b-84e4247ca663, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:14.228Z, DateTo=0, DateFrom=0, UnixValue=1.754081534228e+18
+writer-1    | 2025/08/01 20:52:14 Stored item with ID: 37c02a5f-7c75-426e-a12e-fbbce5f72103
+writer-1    | 2025/08/01 20:52:14 Stored Data: CorrelationId=37c02a5f-7c75-426e-a12e-fbbce5f72103, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:14.245Z, DateTo=0, DateFrom=0, UnixValue=1.754081534245e+18
+writer-1    | 2025/08/01 20:52:14 Stored item with ID: cbc54009-08ae-4884-b9f7-b10c73a5a69e
+writer-1    | 2025/08/01 20:52:14 Stored Data: CorrelationId=cbc54009-08ae-4884-b9f7-b10c73a5a69e, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:14.262Z, DateTo=0, DateFrom=0, UnixValue=1.754081534262e+18
+writer-1    | 2025/08/01 20:52:14 Stored item with ID: ac20ead7-7782-4852-aef7-b087d3e3fe1b
+writer-1    | 2025/08/01 20:52:14 Stored Data: CorrelationId=ac20ead7-7782-4852-aef7-b087d3e3fe1b, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:14.282Z, DateTo=0, DateFrom=0, UnixValue=1.754081534282e+18
+writer-1    | 2025/08/01 20:52:14 Stored item with ID: 73d39344-f0a1-4a0b-9fc2-bd4c6382c7c4
+writer-1    | 2025/08/01 20:52:14 Stored Data: CorrelationId=73d39344-f0a1-4a0b-9fc2-bd4c6382c7c4, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:14.314Z, DateTo=0, DateFrom=0, UnixValue=1.754081534314e+18
+writer-1    | 2025/08/01 20:52:14 Stored item with ID: bdfa6a15-91b0-4915-957c-011d697ae8cf
+writer-1    | 2025/08/01 20:52:14 Stored Data: CorrelationId=bdfa6a15-91b0-4915-957c-011d697ae8cf, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:14.319Z, DateTo=0, DateFrom=0, UnixValue=1.754081534319e+18
+writer-1    | 2025/08/01 20:52:14 Stored item with ID: 5acf6eec-b099-4cc4-8116-cc66bddb3f8a
+writer-1    | 2025/08/01 20:52:14 Stored Data: CorrelationId=5acf6eec-b099-4cc4-8116-cc66bddb3f8a, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:14.336Z, DateTo=0, DateFrom=0, UnixValue=1.754081534336e+18
+writer-1    | 2025/08/01 20:52:14 Stored item with ID: 9c1628e6-0a79-484f-ac03-116a6c506f6f
+writer-1    | 2025/08/01 20:52:14 Stored Data: CorrelationId=9c1628e6-0a79-484f-ac03-116a6c506f6f, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:14.354Z, DateTo=0, DateFrom=0, UnixValue=1.754081534354e+18
+writer-1    | 2025/08/01 20:52:14 Stored item with ID: 58614cc8-2f2d-4419-8658-55bc3c3be7b1
+writer-1    | 2025/08/01 20:52:14 Stored Data: CorrelationId=58614cc8-2f2d-4419-8658-55bc3c3be7b1, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:14.373Z, DateTo=0, DateFrom=0, UnixValue=1.754081534373e+18
+writer-1    | 2025/08/01 20:52:14 Stored item with ID: d31e57b6-9f8d-4abc-9d3a-e9c2b792ee74
+writer-1    | 2025/08/01 20:52:14 Stored Data: CorrelationId=d31e57b6-9f8d-4abc-9d3a-e9c2b792ee74, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:14.391Z, DateTo=0, DateFrom=0, UnixValue=1.754081534391e+18
+writer-1    | 2025/08/01 20:52:14 Stored item with ID: a2269805-bc41-4f11-b36c-c13f42aa826c
+writer-1    | 2025/08/01 20:52:14 Stored Data: CorrelationId=a2269805-bc41-4f11-b36c-c13f42aa826c, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:14.410Z, DateTo=0, DateFrom=0, UnixValue=1.75408153441e+18
+writer-1    | 2025/08/01 20:52:14 Stored item with ID: c6e5639f-b7c0-4a13-820f-ccfaa855e587
+writer-1    | 2025/08/01 20:52:14 Stored Data: CorrelationId=c6e5639f-b7c0-4a13-820f-ccfaa855e587, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:14.444Z, DateTo=0, DateFrom=0, UnixValue=1.754081534444e+18
+writer-1    | 2025/08/01 20:52:14 Stored item with ID: 6470065f-f9d0-4b2e-b562-a50d6f9ad3f4
+writer-1    | 2025/08/01 20:52:14 Stored Data: CorrelationId=6470065f-f9d0-4b2e-b562-a50d6f9ad3f4, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:14.445Z, DateTo=0, DateFrom=0, UnixValue=1.754081534445e+18
+writer-1    | 2025/08/01 20:52:14 Stored item with ID: 412c4d54-82e6-4afb-bbd3-4c8a38c76ef9
+writer-1    | 2025/08/01 20:52:14 Stored Data: CorrelationId=412c4d54-82e6-4afb-bbd3-4c8a38c76ef9, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:14.464Z, DateTo=0, DateFrom=0, UnixValue=1.754081534464e+18
+writer-1    | 2025/08/01 20:52:14 Stored item with ID: 89416109-291a-48d8-963e-485cef4264ad
+writer-1    | 2025/08/01 20:52:14 Stored Data: CorrelationId=89416109-291a-48d8-963e-485cef4264ad, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:14.482Z, DateTo=0, DateFrom=0, UnixValue=1.754081534482e+18
+writer-1    | 2025/08/01 20:52:14 Stored item with ID: 4a0d82e7-5465-40c7-94b4-27f47b04c67c
+writer-1    | 2025/08/01 20:52:14 Stored Data: CorrelationId=4a0d82e7-5465-40c7-94b4-27f47b04c67c, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:14.499Z, DateTo=0, DateFrom=0, UnixValue=1.754081534499e+18
+writer-1    | 2025/08/01 20:52:14 Stored item with ID: 6f0a4316-aeb1-44a2-b94f-e8ed58c0f481
+writer-1    | 2025/08/01 20:52:14 Stored Data: CorrelationId=6f0a4316-aeb1-44a2-b94f-e8ed58c0f481, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:14.519Z, DateTo=0, DateFrom=0, UnixValue=1.754081534519e+18
+writer-1    | 2025/08/01 20:52:14 Stored item with ID: 2478ff24-db63-4507-85eb-50466a25f19c
+writer-1    | 2025/08/01 20:52:14 Stored Data: CorrelationId=2478ff24-db63-4507-85eb-50466a25f19c, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:14.538Z, DateTo=0, DateFrom=0, UnixValue=1.754081534538e+18
+writer-1    | 2025/08/01 20:52:14 Stored item with ID: e8014546-3ab3-4264-906b-39b922e57c65
+writer-1    | 2025/08/01 20:52:14 Stored Data: CorrelationId=e8014546-3ab3-4264-906b-39b922e57c65, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:14.555Z, DateTo=0, DateFrom=0, UnixValue=1.754081534555e+18
+writer-1    | 2025/08/01 20:52:14 Stored item with ID: 72f5cee9-6137-4ec4-8a5e-87ca658676da
+writer-1    | 2025/08/01 20:52:14 Stored Data: CorrelationId=72f5cee9-6137-4ec4-8a5e-87ca658676da, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:14.574Z, DateTo=0, DateFrom=0, UnixValue=1.754081534574e+18
+writer-1    | 2025/08/01 20:52:14 Stored item with ID: bdd1fa3f-1a20-4caa-809e-e0f6808b5c82
+writer-1    | 2025/08/01 20:52:14 Stored Data: CorrelationId=bdd1fa3f-1a20-4caa-809e-e0f6808b5c82, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:14.592Z, DateTo=0, DateFrom=0, UnixValue=1.754081534592e+18
+writer-1    | 2025/08/01 20:52:14 Stored item with ID: 9047769e-a1e3-43c3-84fe-0a9594f1c975
+writer-1    | 2025/08/01 20:52:14 Stored Data: CorrelationId=9047769e-a1e3-43c3-84fe-0a9594f1c975, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:14.609Z, DateTo=0, DateFrom=0, UnixValue=1.754081534609e+18
+writer-1    | 2025/08/01 20:52:14 Stored item with ID: cf15efb3-754c-469d-b5b3-aafa3cb540f4
+writer-1    | 2025/08/01 20:52:14 Stored Data: CorrelationId=cf15efb3-754c-469d-b5b3-aafa3cb540f4, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:14.628Z, DateTo=0, DateFrom=0, UnixValue=1.754081534628e+18
+writer-1    | 2025/08/01 20:52:14 Stored item with ID: 923f233b-bfa1-4e4f-ac87-f2914809332d
+writer-1    | 2025/08/01 20:52:14 Stored Data: CorrelationId=923f233b-bfa1-4e4f-ac87-f2914809332d, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:14.648Z, DateTo=0, DateFrom=0, UnixValue=1.754081534648e+18
+writer-1    | 2025/08/01 20:52:14 Stored item with ID: 22ff4acf-77d3-4e0a-b964-df861a43badb
+writer-1    | 2025/08/01 20:52:14 Stored Data: CorrelationId=22ff4acf-77d3-4e0a-b964-df861a43badb, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:14.665Z, DateTo=0, DateFrom=0, UnixValue=1.754081534665e+18
+writer-1    | 2025/08/01 20:52:14 Stored item with ID: 54f08a38-23ae-457d-b7b7-d5107ab214f6
+writer-1    | 2025/08/01 20:52:14 Stored Data: CorrelationId=54f08a38-23ae-457d-b7b7-d5107ab214f6, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:14.683Z, DateTo=0, DateFrom=0, UnixValue=1.754081534683e+18
+writer-1    | 2025/08/01 20:52:14 Stored item with ID: 9cf37c96-7a24-4311-916a-00e88ec59ca3
+writer-1    | 2025/08/01 20:52:14 Stored Data: CorrelationId=9cf37c96-7a24-4311-916a-00e88ec59ca3, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:14.702Z, DateTo=0, DateFrom=0, UnixValue=1.754081534702e+18
+writer-1    | 2025/08/01 20:52:14 Stored item with ID: 4bc7a9fc-be73-4954-84d4-564789df117f
+writer-1    | 2025/08/01 20:52:14 Stored Data: CorrelationId=4bc7a9fc-be73-4954-84d4-564789df117f, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:14.718Z, DateTo=0, DateFrom=0, UnixValue=1.754081534718e+18
+writer-1    | 2025/08/01 20:52:14 Stored item with ID: 719fb0a7-dfc4-479e-bc1f-ddc8a474f3cd
+writer-1    | 2025/08/01 20:52:14 Stored Data: CorrelationId=719fb0a7-dfc4-479e-bc1f-ddc8a474f3cd, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:14.738Z, DateTo=0, DateFrom=0, UnixValue=1.754081534738e+18
+writer-1    | 2025/08/01 20:52:14 Stored item with ID: a00079fb-82c5-4d32-a3de-0ce5c8a9b373
+writer-1    | 2025/08/01 20:52:14 Stored Data: CorrelationId=a00079fb-82c5-4d32-a3de-0ce5c8a9b373, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:14.756Z, DateTo=0, DateFrom=0, UnixValue=1.754081534756e+18
+writer-1    | 2025/08/01 20:52:14 Stored item with ID: b49660fe-6f2b-4105-80f3-b91633409bbf
+writer-1    | 2025/08/01 20:52:14 Stored Data: CorrelationId=b49660fe-6f2b-4105-80f3-b91633409bbf, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:14.774Z, DateTo=0, DateFrom=0, UnixValue=1.754081534774e+18
+writer-1    | 2025/08/01 20:52:14 Stored item with ID: 77e75aca-7e41-4ddd-97ef-7d4f93c63d2a
+writer-1    | 2025/08/01 20:52:14 Stored Data: CorrelationId=77e75aca-7e41-4ddd-97ef-7d4f93c63d2a, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:14.793Z, DateTo=0, DateFrom=0, UnixValue=1.754081534793e+18
+writer-1    | 2025/08/01 20:52:14 Stored item with ID: 9ce300ef-5ed8-4342-b068-9358102da180
+writer-1    | 2025/08/01 20:52:14 Stored Data: CorrelationId=9ce300ef-5ed8-4342-b068-9358102da180, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:14.811Z, DateTo=0, DateFrom=0, UnixValue=1.754081534811e+18
+writer-1    | 2025/08/01 20:52:14 Stored item with ID: 58d07f53-d012-43a6-9636-932c85fd0ae6
+writer-1    | 2025/08/01 20:52:14 Stored Data: CorrelationId=58d07f53-d012-43a6-9636-932c85fd0ae6, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:14.827Z, DateTo=0, DateFrom=0, UnixValue=1.754081534827e+18
+writer-1    | 2025/08/01 20:52:14 Stored item with ID: d89f408e-25e8-45af-9547-cc849e176a63
+writer-1    | 2025/08/01 20:52:14 Stored Data: CorrelationId=d89f408e-25e8-45af-9547-cc849e176a63, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:14.847Z, DateTo=0, DateFrom=0, UnixValue=1.754081534847e+18
+writer-1    | 2025/08/01 20:52:14 Stored item with ID: ae376461-2a77-4b39-8550-75db45a149f8
+writer-1    | 2025/08/01 20:52:14 Stored Data: CorrelationId=ae376461-2a77-4b39-8550-75db45a149f8, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:14.865Z, DateTo=0, DateFrom=0, UnixValue=1.754081534865e+18
+writer-1    | 2025/08/01 20:52:14 Stored item with ID: dea2675b-29aa-4e89-980e-bed62aa99de9
+writer-1    | 2025/08/01 20:52:14 Stored Data: CorrelationId=dea2675b-29aa-4e89-980e-bed62aa99de9, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:14.883Z, DateTo=0, DateFrom=0, UnixValue=1.754081534883e+18
+writer-1    | 2025/08/01 20:52:14 Stored item with ID: cf2bb19c-b192-41e0-8760-855e813de6f5
+writer-1    | 2025/08/01 20:52:14 Stored Data: CorrelationId=cf2bb19c-b192-41e0-8760-855e813de6f5, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:14.902Z, DateTo=0, DateFrom=0, UnixValue=1.754081534902e+18
+writer-1    | 2025/08/01 20:52:14 Stored item with ID: 2e8df23a-5a56-44a1-8bc8-97c08aa86ff3
+writer-1    | 2025/08/01 20:52:14 Stored Data: CorrelationId=2e8df23a-5a56-44a1-8bc8-97c08aa86ff3, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:14.920Z, DateTo=0, DateFrom=0, UnixValue=1.75408153492e+18
+writer-1    | 2025/08/01 20:52:14 Stored item with ID: d6f3a2a1-ea98-4958-a473-0353dc2f08de
+writer-1    | 2025/08/01 20:52:14 Stored Data: CorrelationId=d6f3a2a1-ea98-4958-a473-0353dc2f08de, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:14.937Z, DateTo=0, DateFrom=0, UnixValue=1.754081534937e+18
+writer-1    | 2025/08/01 20:52:14 Stored item with ID: d6609522-5089-4eeb-b7b2-db469fa76ea9
+writer-1    | 2025/08/01 20:52:14 Stored Data: CorrelationId=d6609522-5089-4eeb-b7b2-db469fa76ea9, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:14.957Z, DateTo=0, DateFrom=0, UnixValue=1.754081534957e+18
+writer-1    | 2025/08/01 20:52:14 Stored item with ID: 9545a3b8-b44b-49a1-8af7-d8b7ee6d996f
+writer-1    | 2025/08/01 20:52:14 Stored Data: CorrelationId=9545a3b8-b44b-49a1-8af7-d8b7ee6d996f, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:14.975Z, DateTo=0, DateFrom=0, UnixValue=1.754081534975e+18
+writer-1    | 2025/08/01 20:52:14 Stored item with ID: d115c1f5-91db-42bb-8826-5fbb40f29543
+writer-1    | 2025/08/01 20:52:14 Stored Data: CorrelationId=d115c1f5-91db-42bb-8826-5fbb40f29543, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:14.993Z, DateTo=0, DateFrom=0, UnixValue=1.754081534993e+18
+writer-1    | 2025/08/01 20:52:15 Stored item with ID: 5ab1d681-f8fd-471c-aee1-600fba30e7f3
+writer-1    | 2025/08/01 20:52:15 Stored Data: CorrelationId=5ab1d681-f8fd-471c-aee1-600fba30e7f3, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:15.011Z, DateTo=0, DateFrom=0, UnixValue=1.754081535011e+18
+writer-1    | 2025/08/01 20:52:15 Stored item with ID: b72be719-ab2c-417d-86c6-76c62ce46956
+writer-1    | 2025/08/01 20:52:15 Stored Data: CorrelationId=b72be719-ab2c-417d-86c6-76c62ce46956, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:15.030Z, DateTo=0, DateFrom=0, UnixValue=1.75408153503e+18
+writer-1    | 2025/08/01 20:52:15 Stored item with ID: 6a012d21-7651-47cc-b2b0-bee4cbdbac7b
+writer-1    | 2025/08/01 20:52:15 Stored Data: CorrelationId=6a012d21-7651-47cc-b2b0-bee4cbdbac7b, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:15.045Z, DateTo=0, DateFrom=0, UnixValue=1.754081535045e+18
+writer-1    | 2025/08/01 20:52:15 Stored item with ID: 636b0a36-e198-47e6-82fe-5a51e0ec02c4
+writer-1    | 2025/08/01 20:52:15 Stored Data: CorrelationId=636b0a36-e198-47e6-82fe-5a51e0ec02c4, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:15.066Z, DateTo=0, DateFrom=0, UnixValue=1.754081535066e+18
+writer-1    | 2025/08/01 20:52:15 Stored item with ID: 0ad2e82d-508a-479b-95e9-41c04edd12dd
+writer-1    | 2025/08/01 20:52:15 Stored Data: CorrelationId=0ad2e82d-508a-479b-95e9-41c04edd12dd, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:15.084Z, DateTo=0, DateFrom=0, UnixValue=1.754081535084e+18
+writer-1    | 2025/08/01 20:52:15 Stored item with ID: 8ac787fe-a825-468b-b65a-c4b5e3eb4bbf
+writer-1    | 2025/08/01 20:52:15 Stored Data: CorrelationId=8ac787fe-a825-468b-b65a-c4b5e3eb4bbf, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:15.102Z, DateTo=0, DateFrom=0, UnixValue=1.754081535102e+18
+writer-1    | 2025/08/01 20:52:15 Stored item with ID: 0bfbd04c-8986-49da-9ac0-29097cc2ab33
+writer-1    | 2025/08/01 20:52:15 Stored Data: CorrelationId=0bfbd04c-8986-49da-9ac0-29097cc2ab33, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:15.121Z, DateTo=0, DateFrom=0, UnixValue=1.754081535121e+18
+writer-1    | 2025/08/01 20:52:15 Stored item with ID: 0de8180e-b565-4464-ace1-8a8d8bf486fb
+writer-1    | 2025/08/01 20:52:15 Stored Data: CorrelationId=0de8180e-b565-4464-ace1-8a8d8bf486fb, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:15.153Z, DateTo=0, DateFrom=0, UnixValue=1.754081535153e+18
+writer-1    | 2025/08/01 20:52:15 Stored item with ID: 342f346c-e302-4b89-be95-0f0b490c6f69
+writer-1    | 2025/08/01 20:52:15 Stored Data: CorrelationId=342f346c-e302-4b89-be95-0f0b490c6f69, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:15.155Z, DateTo=0, DateFrom=0, UnixValue=1.754081535155e+18
+writer-1    | 2025/08/01 20:52:15 Stored item with ID: 1c7f70a5-c8b0-4280-964a-91cf1d2f1585
+writer-1    | 2025/08/01 20:52:15 Stored Data: CorrelationId=1c7f70a5-c8b0-4280-964a-91cf1d2f1585, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:15.176Z, DateTo=0, DateFrom=0, UnixValue=1.754081535176e+18
+writer-1    | 2025/08/01 20:52:15 Stored item with ID: b18dd941-cd2c-41b5-9dfa-33ac7385d8a1
+writer-1    | 2025/08/01 20:52:15 Stored Data: CorrelationId=b18dd941-cd2c-41b5-9dfa-33ac7385d8a1, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:15.179Z, DateTo=0, DateFrom=0, UnixValue=1.754081535179e+18
+writer-1    | 2025/08/01 20:52:15 Stored item with ID: f9f68db9-7a77-422a-a9cb-e60568d99510
+writer-1    | 2025/08/01 20:52:15 Stored Data: CorrelationId=f9f68db9-7a77-422a-a9cb-e60568d99510, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:15.193Z, DateTo=0, DateFrom=0, UnixValue=1.754081535193e+18
+writer-1    | 2025/08/01 20:52:15 Stored item with ID: b4de34d2-37f3-48ec-80c1-7857474ec48f
+writer-1    | 2025/08/01 20:52:15 Stored Data: CorrelationId=b4de34d2-37f3-48ec-80c1-7857474ec48f, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:15.211Z, DateTo=0, DateFrom=0, UnixValue=1.754081535211e+18
+writer-1    | 2025/08/01 20:52:15 Stored item with ID: b7d06453-cf06-4083-b5f1-89b5e0c85117
+writer-1    | 2025/08/01 20:52:15 Stored Data: CorrelationId=b7d06453-cf06-4083-b5f1-89b5e0c85117, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:15.229Z, DateTo=0, DateFrom=0, UnixValue=1.754081535229e+18
+writer-1    | 2025/08/01 20:52:15 Stored item with ID: de6411b8-e279-40ec-a334-3e19fce0ed31
+writer-1    | 2025/08/01 20:52:15 Stored Data: CorrelationId=de6411b8-e279-40ec-a334-3e19fce0ed31, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:15.248Z, DateTo=0, DateFrom=0, UnixValue=1.754081535248e+18
+writer-1    | 2025/08/01 20:52:15 Stored item with ID: 27b42074-ce2a-4421-b8ab-b48b192f848b
+writer-1    | 2025/08/01 20:52:15 Stored Data: CorrelationId=27b42074-ce2a-4421-b8ab-b48b192f848b, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:15.264Z, DateTo=0, DateFrom=0, UnixValue=1.754081535264e+18
+writer-1    | 2025/08/01 20:52:15 Stored item with ID: 6fa4ebe9-28f3-45ad-9485-b9b0555b5f5e
+writer-1    | 2025/08/01 20:52:15 Stored Data: CorrelationId=6fa4ebe9-28f3-45ad-9485-b9b0555b5f5e, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:15.283Z, DateTo=0, DateFrom=0, UnixValue=1.754081535283e+18
+writer-1    | 2025/08/01 20:52:15 Stored item with ID: a27435f2-8f79-4857-86db-58d0bb126669
+writer-1    | 2025/08/01 20:52:15 Stored Data: CorrelationId=a27435f2-8f79-4857-86db-58d0bb126669, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:15.284Z, DateTo=0, DateFrom=0, UnixValue=1.754081535284e+18
+writer-1    | 2025/08/01 20:52:15 Stored item with ID: 7349290d-c6bb-4235-984e-b2e55aa4d82f
+writer-1    | 2025/08/01 20:52:15 Stored Data: CorrelationId=7349290d-c6bb-4235-984e-b2e55aa4d82f, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:15.316Z, DateTo=0, DateFrom=0, UnixValue=1.754081535316e+18
+writer-1    | 2025/08/01 20:52:15 Stored item with ID: 82c745ca-d6d0-4f3f-8a98-5f73b3d7eb43
+writer-1    | 2025/08/01 20:52:15 Stored Data: CorrelationId=82c745ca-d6d0-4f3f-8a98-5f73b3d7eb43, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:15.321Z, DateTo=0, DateFrom=0, UnixValue=1.754081535321e+18
+writer-1    | 2025/08/01 20:52:15 Stored item with ID: f5cb385a-0318-4be2-9b70-3e7c12895f7c
+writer-1    | 2025/08/01 20:52:15 Stored Data: CorrelationId=f5cb385a-0318-4be2-9b70-3e7c12895f7c, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:15.338Z, DateTo=0, DateFrom=0, UnixValue=1.754081535338e+18
+writer-1    | 2025/08/01 20:52:15 Stored item with ID: aaf03982-96d6-4e49-a260-d708e6f832f0
+writer-1    | 2025/08/01 20:52:15 Stored Data: CorrelationId=aaf03982-96d6-4e49-a260-d708e6f832f0, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:15.356Z, DateTo=0, DateFrom=0, UnixValue=1.754081535356e+18
+writer-1    | 2025/08/01 20:52:15 Stored item with ID: d6c52afd-b3dc-4fea-9662-faa5dc9c65a4
+writer-1    | 2025/08/01 20:52:15 Stored Data: CorrelationId=d6c52afd-b3dc-4fea-9662-faa5dc9c65a4, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:15.375Z, DateTo=0, DateFrom=0, UnixValue=1.754081535375e+18
+writer-1    | 2025/08/01 20:52:15 Stored item with ID: 53c62997-6586-4bb6-b594-dc0b6d942ee4
+writer-1    | 2025/08/01 20:52:15 Stored Data: CorrelationId=53c62997-6586-4bb6-b594-dc0b6d942ee4, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:15.393Z, DateTo=0, DateFrom=0, UnixValue=1.754081535393e+18
+writer-1    | 2025/08/01 20:52:15 Stored item with ID: 5db9e587-6345-4b10-aaeb-668f3a0c520e
+writer-1    | 2025/08/01 20:52:15 Stored Data: CorrelationId=5db9e587-6345-4b10-aaeb-668f3a0c520e, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:15.393Z, DateTo=0, DateFrom=0, UnixValue=1.754081535393e+18
+writer-1    | 2025/08/01 20:52:15 Stored item with ID: 8c2849dc-24a8-4729-808e-9eb902e66a6f
+writer-1    | 2025/08/01 20:52:15 Stored Data: CorrelationId=8c2849dc-24a8-4729-808e-9eb902e66a6f, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:15.412Z, DateTo=0, DateFrom=0, UnixValue=1.754081535412e+18
+writer-1    | 2025/08/01 20:52:15 Stored item with ID: 1491fe82-8e42-4635-8dac-d250cc87b39f
+writer-1    | 2025/08/01 20:52:15 Stored Data: CorrelationId=1491fe82-8e42-4635-8dac-d250cc87b39f, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:15.446Z, DateTo=0, DateFrom=0, UnixValue=1.754081535446e+18
+writer-1    | 2025/08/01 20:52:15 Stored item with ID: 9f961128-62cd-4dc0-a1bc-6c58e5b9c19e
+writer-1    | 2025/08/01 20:52:15 Stored Data: CorrelationId=9f961128-62cd-4dc0-a1bc-6c58e5b9c19e, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:15.446Z, DateTo=0, DateFrom=0, UnixValue=1.754081535446e+18
+writer-1    | 2025/08/01 20:52:15 Stored item with ID: 717c8d83-84a7-4084-a970-a1ec9ef6b8eb
+writer-1    | 2025/08/01 20:52:15 Stored Data: CorrelationId=717c8d83-84a7-4084-a970-a1ec9ef6b8eb, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:15.466Z, DateTo=0, DateFrom=0, UnixValue=1.754081535466e+18
+writer-1    | 2025/08/01 20:52:15 Stored item with ID: 9325e110-fcb9-4226-8c0a-09b7848aadfa
+writer-1    | 2025/08/01 20:52:15 Stored Data: CorrelationId=9325e110-fcb9-4226-8c0a-09b7848aadfa, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:15.483Z, DateTo=0, DateFrom=0, UnixValue=1.754081535483e+18
+writer-1    | 2025/08/01 20:52:15 Stored item with ID: b68deceb-1e40-4a8a-9a28-ea36c14db63a
+writer-1    | 2025/08/01 20:52:15 Stored Data: CorrelationId=b68deceb-1e40-4a8a-9a28-ea36c14db63a, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:15.500Z, DateTo=0, DateFrom=0, UnixValue=1.7540815355e+18
+writer-1    | 2025/08/01 20:52:15 Stored item with ID: e13bb4d0-2a97-4f03-aa54-3e642099aded
+writer-1    | 2025/08/01 20:52:15 Stored Data: CorrelationId=e13bb4d0-2a97-4f03-aa54-3e642099aded, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:15.503Z, DateTo=0, DateFrom=0, UnixValue=1.754081535503e+18
+writer-1    | 2025/08/01 20:52:15 Stored item with ID: 995031ae-09ea-4878-9936-e7020d30dce7
+writer-1    | 2025/08/01 20:52:15 Stored Data: CorrelationId=995031ae-09ea-4878-9936-e7020d30dce7, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:15.521Z, DateTo=0, DateFrom=0, UnixValue=1.754081535521e+18
+writer-1    | 2025/08/01 20:52:15 Stored item with ID: 1a9b14de-510d-40e4-81ce-c06209b3e8d2
+writer-1    | 2025/08/01 20:52:15 Stored Data: CorrelationId=1a9b14de-510d-40e4-81ce-c06209b3e8d2, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:15.539Z, DateTo=0, DateFrom=0, UnixValue=1.754081535539e+18
+writer-1    | 2025/08/01 20:52:15 Stored item with ID: 0bf2f2f3-57e8-4dd0-ad8b-91f3cb69f143
+writer-1    | 2025/08/01 20:52:15 Stored Data: CorrelationId=0bf2f2f3-57e8-4dd0-ad8b-91f3cb69f143, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:15.557Z, DateTo=0, DateFrom=0, UnixValue=1.754081535557e+18
+writer-1    | 2025/08/01 20:52:15 Stored item with ID: bd1cabf4-6f3f-49f6-956b-984b792e44ba
+writer-1    | 2025/08/01 20:52:15 Stored Data: CorrelationId=bd1cabf4-6f3f-49f6-956b-984b792e44ba, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:15.575Z, DateTo=0, DateFrom=0, UnixValue=1.754081535575e+18
+writer-1    | 2025/08/01 20:52:15 Stored item with ID: b30fd646-d97f-4900-a01a-274d86c34cd7
+writer-1    | 2025/08/01 20:52:15 Stored Data: CorrelationId=b30fd646-d97f-4900-a01a-274d86c34cd7, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:15.593Z, DateTo=0, DateFrom=0, UnixValue=1.754081535593e+18
+writer-1    | 2025/08/01 20:52:15 Stored item with ID: ebb3232a-ff0e-4808-bcd6-a03483a2a907
+writer-1    | 2025/08/01 20:52:15 Stored Data: CorrelationId=ebb3232a-ff0e-4808-bcd6-a03483a2a907, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:15.610Z, DateTo=0, DateFrom=0, UnixValue=1.75408153561e+18
+writer-1    | 2025/08/01 20:52:15 Stored item with ID: ca1573b7-de3b-4765-8719-3ea9ce9509b1
+writer-1    | 2025/08/01 20:52:15 Stored Data: CorrelationId=ca1573b7-de3b-4765-8719-3ea9ce9509b1, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:15.612Z, DateTo=0, DateFrom=0, UnixValue=1.754081535612e+18
+writer-1    | 2025/08/01 20:52:15 Stored item with ID: a7b66ab3-e9b2-4c72-92df-dd487701fbf7
+writer-1    | 2025/08/01 20:52:15 Stored Data: CorrelationId=a7b66ab3-e9b2-4c72-92df-dd487701fbf7, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:15.630Z, DateTo=0, DateFrom=0, UnixValue=1.75408153563e+18
+writer-1    | 2025/08/01 20:52:15 Stored item with ID: 4f43e513-9000-45e4-b6b2-25c2c42353de
+writer-1    | 2025/08/01 20:52:15 Stored Data: CorrelationId=4f43e513-9000-45e4-b6b2-25c2c42353de, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:15.650Z, DateTo=0, DateFrom=0, UnixValue=1.75408153565e+18
+writer-1    | 2025/08/01 20:52:15 Stored item with ID: a0a0a398-9161-436f-8b86-a4903b88fd40
+writer-1    | 2025/08/01 20:52:15 Stored Data: CorrelationId=a0a0a398-9161-436f-8b86-a4903b88fd40, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:15.666Z, DateTo=0, DateFrom=0, UnixValue=1.754081535666e+18
+writer-1    | 2025/08/01 20:52:15 Stored item with ID: 5279a41a-00b6-4593-8362-d08ebce9b641
+writer-1    | 2025/08/01 20:52:15 Stored Data: CorrelationId=5279a41a-00b6-4593-8362-d08ebce9b641, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:15.684Z, DateTo=0, DateFrom=0, UnixValue=1.754081535684e+18
+writer-1    | 2025/08/01 20:52:15 Stored item with ID: 89482adc-7235-4b23-8e64-a92fd018b9bd
+writer-1    | 2025/08/01 20:52:15 Stored Data: CorrelationId=89482adc-7235-4b23-8e64-a92fd018b9bd, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:15.704Z, DateTo=0, DateFrom=0, UnixValue=1.754081535704e+18
+writer-1    | 2025/08/01 20:52:15 Stored item with ID: 74875534-c526-491b-93fc-9ff6fb4b2178
+writer-1    | 2025/08/01 20:52:15 Stored Data: CorrelationId=74875534-c526-491b-93fc-9ff6fb4b2178, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:15.719Z, DateTo=0, DateFrom=0, UnixValue=1.754081535719e+18
+writer-1    | 2025/08/01 20:52:15 Stored item with ID: 276707bb-908a-4671-baf9-55d067428d29
+writer-1    | 2025/08/01 20:52:15 Stored Data: CorrelationId=276707bb-908a-4671-baf9-55d067428d29, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:15.722Z, DateTo=0, DateFrom=0, UnixValue=1.754081535722e+18
+writer-1    | 2025/08/01 20:52:15 Stored item with ID: 3ec23368-0abd-4f14-941d-c532ab4f885e
+writer-1    | 2025/08/01 20:52:15 Stored Data: CorrelationId=3ec23368-0abd-4f14-941d-c532ab4f885e, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:15.740Z, DateTo=0, DateFrom=0, UnixValue=1.75408153574e+18
+writer-1    | 2025/08/01 20:52:15 Stored item with ID: d356d19c-3f73-4e9f-9b52-f2a0dcdede77
+writer-1    | 2025/08/01 20:52:15 Stored Data: CorrelationId=d356d19c-3f73-4e9f-9b52-f2a0dcdede77, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:15.758Z, DateTo=0, DateFrom=0, UnixValue=1.754081535758e+18
+writer-1    | 2025/08/01 20:52:15 Stored item with ID: 882ff311-26e1-46fe-b46b-0d3b09d21700
+writer-1    | 2025/08/01 20:52:15 Stored Data: CorrelationId=882ff311-26e1-46fe-b46b-0d3b09d21700, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:15.776Z, DateTo=0, DateFrom=0, UnixValue=1.754081535776e+18
+writer-1    | 2025/08/01 20:52:15 Stored item with ID: 91932696-d976-4484-84c2-88719025f934
+writer-1    | 2025/08/01 20:52:15 Stored Data: CorrelationId=91932696-d976-4484-84c2-88719025f934, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:15.794Z, DateTo=0, DateFrom=0, UnixValue=1.754081535794e+18
+writer-1    | 2025/08/01 20:52:15 Stored item with ID: 52df5b5a-d3ff-40a5-86ba-2d36c7a1c954
+writer-1    | 2025/08/01 20:52:15 Stored Data: CorrelationId=52df5b5a-d3ff-40a5-86ba-2d36c7a1c954, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:15.813Z, DateTo=0, DateFrom=0, UnixValue=1.754081535813e+18
+writer-1    | 2025/08/01 20:52:15 Stored item with ID: 78bf5c8d-69da-4245-a261-0811a6618730
+writer-1    | 2025/08/01 20:52:15 Stored Data: CorrelationId=78bf5c8d-69da-4245-a261-0811a6618730, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:15.829Z, DateTo=0, DateFrom=0, UnixValue=1.754081535829e+18
+writer-1    | 2025/08/01 20:52:15 Stored item with ID: 66265272-57bd-4c0a-886f-e7a944769d2d
+writer-1    | 2025/08/01 20:52:15 Stored Data: CorrelationId=66265272-57bd-4c0a-886f-e7a944769d2d, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:15.831Z, DateTo=0, DateFrom=0, UnixValue=1.754081535831e+18
+writer-1    | 2025/08/01 20:52:15 Stored item with ID: 00313e9b-d01b-416c-b0a5-9f2892577ee8
+writer-1    | 2025/08/01 20:52:15 Stored Data: CorrelationId=00313e9b-d01b-416c-b0a5-9f2892577ee8, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:15.848Z, DateTo=0, DateFrom=0, UnixValue=1.754081535848e+18
+writer-1    | 2025/08/01 20:52:15 Stored item with ID: f251248f-4458-4abc-9fd0-fd9b5f2f7b26
+writer-1    | 2025/08/01 20:52:15 Stored Data: CorrelationId=f251248f-4458-4abc-9fd0-fd9b5f2f7b26, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:15.867Z, DateTo=0, DateFrom=0, UnixValue=1.754081535867e+18
+writer-1    | 2025/08/01 20:52:15 Stored item with ID: d3616e08-b6b2-4bde-a638-1e0427b235eb
+writer-1    | 2025/08/01 20:52:15 Stored Data: CorrelationId=d3616e08-b6b2-4bde-a638-1e0427b235eb, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:15.885Z, DateTo=0, DateFrom=0, UnixValue=1.754081535885e+18
+writer-1    | 2025/08/01 20:52:15 Stored item with ID: 1b8d7d90-27cf-4d3f-ae66-5f26c49ae22d
+writer-1    | 2025/08/01 20:52:15 Stored Data: CorrelationId=1b8d7d90-27cf-4d3f-ae66-5f26c49ae22d, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:15.903Z, DateTo=0, DateFrom=0, UnixValue=1.754081535903e+18
+writer-1    | 2025/08/01 20:52:15 Stored item with ID: 870aad81-90fd-4931-8341-f69a7b637331
+writer-1    | 2025/08/01 20:52:15 Stored Data: CorrelationId=870aad81-90fd-4931-8341-f69a7b637331, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:15.922Z, DateTo=0, DateFrom=0, UnixValue=1.754081535922e+18
+writer-1    | 2025/08/01 20:52:15 Stored item with ID: e8a41d91-1d85-4163-9270-eb50c8f2ab13
+writer-1    | 2025/08/01 20:52:15 Stored Data: CorrelationId=e8a41d91-1d85-4163-9270-eb50c8f2ab13, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:15.939Z, DateTo=0, DateFrom=0, UnixValue=1.754081535939e+18
+writer-1    | 2025/08/01 20:52:15 Stored item with ID: 54bee9e4-49c6-4ca2-932d-58f375dbeb51
+writer-1    | 2025/08/01 20:52:15 Stored Data: CorrelationId=54bee9e4-49c6-4ca2-932d-58f375dbeb51, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:15.940Z, DateTo=0, DateFrom=0, UnixValue=1.75408153594e+18
+writer-1    | 2025/08/01 20:52:15 Stored item with ID: f45a0b10-b95a-4dfb-a503-a2bc7c544682
+writer-1    | 2025/08/01 20:52:15 Stored Data: CorrelationId=f45a0b10-b95a-4dfb-a503-a2bc7c544682, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:15.958Z, DateTo=0, DateFrom=0, UnixValue=1.754081535958e+18
+writer-1    | 2025/08/01 20:52:15 Stored item with ID: d3208dc1-7468-4f64-a5b0-7636b62a9a9d
+writer-1    | 2025/08/01 20:52:15 Stored Data: CorrelationId=d3208dc1-7468-4f64-a5b0-7636b62a9a9d, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:15.976Z, DateTo=0, DateFrom=0, UnixValue=1.754081535976e+18
+writer-1    | 2025/08/01 20:52:15 Stored item with ID: 4898e0d6-ea58-4c07-94a7-12e86f6fbe77
+writer-1    | 2025/08/01 20:52:15 Stored Data: CorrelationId=4898e0d6-ea58-4c07-94a7-12e86f6fbe77, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:15.994Z, DateTo=0, DateFrom=0, UnixValue=1.754081535994e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: 03e02737-cd46-419f-8c82-b69a5ddf2514
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=03e02737-cd46-419f-8c82-b69a5ddf2514, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.013Z, DateTo=0, DateFrom=0, UnixValue=1.754081536013e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: dda2cbf5-d310-4362-916b-1a0832a31b5f
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=dda2cbf5-d310-4362-916b-1a0832a31b5f, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.031Z, DateTo=0, DateFrom=0, UnixValue=1.754081536031e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: 4d7340a7-d7f8-4f4b-b909-4e57a441e92c
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=4d7340a7-d7f8-4f4b-b909-4e57a441e92c, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.047Z, DateTo=0, DateFrom=0, UnixValue=1.754081536047e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: 1c4cf534-1229-4364-9968-d98810337e1c
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=1c4cf534-1229-4364-9968-d98810337e1c, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.050Z, DateTo=0, DateFrom=0, UnixValue=1.75408153605e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: 1647bc52-d501-4594-9a1f-19f11df04533
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=1647bc52-d501-4594-9a1f-19f11df04533, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.068Z, DateTo=0, DateFrom=0, UnixValue=1.754081536068e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: a62e1204-cf2d-4a37-b969-c5f0eda7b189
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=a62e1204-cf2d-4a37-b969-c5f0eda7b189, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.086Z, DateTo=0, DateFrom=0, UnixValue=1.754081536086e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: 310ef502-f889-4264-a335-9e844a764e4c
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=310ef502-f889-4264-a335-9e844a764e4c, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.104Z, DateTo=0, DateFrom=0, UnixValue=1.754081536104e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: 01fb6b3b-3e1f-474b-9b4e-e4662ef684ca
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=01fb6b3b-3e1f-474b-9b4e-e4662ef684ca, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.122Z, DateTo=0, DateFrom=0, UnixValue=1.754081536122e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: bb492118-28a5-4f2a-9055-da170bac8e1a
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=bb492118-28a5-4f2a-9055-da170bac8e1a, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.155Z, DateTo=0, DateFrom=0, UnixValue=1.754081536155e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: 95a12c64-5844-49c8-9326-e30cf0089bad
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=95a12c64-5844-49c8-9326-e30cf0089bad, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.156Z, DateTo=0, DateFrom=0, UnixValue=1.754081536156e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: 5f7ef67f-71d2-45dd-847c-3a9417f2851c
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=5f7ef67f-71d2-45dd-847c-3a9417f2851c, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.158Z, DateTo=0, DateFrom=0, UnixValue=1.754081536158e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: f71464e9-0d1d-43b1-80e8-ffdffeb0faa1
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=f71464e9-0d1d-43b1-80e8-ffdffeb0faa1, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.177Z, DateTo=0, DateFrom=0, UnixValue=1.754081536177e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: 7999557a-f351-467c-8547-04180ae8ed95
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=7999557a-f351-467c-8547-04180ae8ed95, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.181Z, DateTo=0, DateFrom=0, UnixValue=1.754081536181e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: 7709470a-904f-42e0-9804-ebec60a39d13
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=7709470a-904f-42e0-9804-ebec60a39d13, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.195Z, DateTo=0, DateFrom=0, UnixValue=1.754081536195e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: 02cc836d-5318-4b1d-9d29-04acee06754b
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=02cc836d-5318-4b1d-9d29-04acee06754b, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.213Z, DateTo=0, DateFrom=0, UnixValue=1.754081536213e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: d82a9afe-21f5-48a9-8245-8de842cc3243
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=d82a9afe-21f5-48a9-8245-8de842cc3243, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.230Z, DateTo=0, DateFrom=0, UnixValue=1.75408153623e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: 8b4857a4-a4a6-4fea-825c-66a03be3e072
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=8b4857a4-a4a6-4fea-825c-66a03be3e072, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.250Z, DateTo=0, DateFrom=0, UnixValue=1.75408153625e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: 13ecfb47-d69e-4dff-980a-cbef2ae75165
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=13ecfb47-d69e-4dff-980a-cbef2ae75165, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.265Z, DateTo=0, DateFrom=0, UnixValue=1.754081536265e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: d3a206e5-5dc1-4745-8b7b-a0c733302865
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=d3a206e5-5dc1-4745-8b7b-a0c733302865, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.268Z, DateTo=0, DateFrom=0, UnixValue=1.754081536268e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: 8cb97019-0db1-4eaa-87f2-fc0637e694e0
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=8cb97019-0db1-4eaa-87f2-fc0637e694e0, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.285Z, DateTo=0, DateFrom=0, UnixValue=1.754081536285e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: b9d2cf29-a7eb-4014-beaa-d2cae9bc34b7
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=b9d2cf29-a7eb-4014-beaa-d2cae9bc34b7, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.285Z, DateTo=0, DateFrom=0, UnixValue=1.754081536285e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: fb70c78f-7eff-488f-a5de-f48524480f0e
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=fb70c78f-7eff-488f-a5de-f48524480f0e, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.318Z, DateTo=0, DateFrom=0, UnixValue=1.754081536318e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: 48e477f9-f3ff-405e-afc8-b2ca6841b0d7
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=48e477f9-f3ff-405e-afc8-b2ca6841b0d7, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.323Z, DateTo=0, DateFrom=0, UnixValue=1.754081536323e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: bc308922-73f7-4d0c-977f-f7a04f8ce46d
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=bc308922-73f7-4d0c-977f-f7a04f8ce46d, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.340Z, DateTo=0, DateFrom=0, UnixValue=1.75408153634e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: b28b82cf-a2a8-4022-aae8-a063e6393c0d
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=b28b82cf-a2a8-4022-aae8-a063e6393c0d, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.358Z, DateTo=0, DateFrom=0, UnixValue=1.754081536358e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: 618e0fa7-7af1-4315-ae98-304d322df2f1
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=618e0fa7-7af1-4315-ae98-304d322df2f1, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.377Z, DateTo=0, DateFrom=0, UnixValue=1.754081536377e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: 1f6f2704-2093-4458-9b0b-56dc5a410d40
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=1f6f2704-2093-4458-9b0b-56dc5a410d40, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.376Z, DateTo=0, DateFrom=0, UnixValue=1.754081536376e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: b2315ab7-9cc1-41ac-80da-7c4a2d3432e1
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=b2315ab7-9cc1-41ac-80da-7c4a2d3432e1, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.394Z, DateTo=0, DateFrom=0, UnixValue=1.754081536394e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: e2425fde-8f5e-4a42-92b6-85ae9a82687f
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=e2425fde-8f5e-4a42-92b6-85ae9a82687f, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.394Z, DateTo=0, DateFrom=0, UnixValue=1.754081536394e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: 3277ca2e-99cb-4592-96c6-6214fed96a7a
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=3277ca2e-99cb-4592-96c6-6214fed96a7a, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.415Z, DateTo=0, DateFrom=0, UnixValue=1.754081536415e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: a5582c6c-0252-4626-83bb-1b5dcbfe71c3
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=a5582c6c-0252-4626-83bb-1b5dcbfe71c3, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.447Z, DateTo=0, DateFrom=0, UnixValue=1.754081536447e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: c9ba13af-03ba-4d39-aa28-efd5161259a2
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=c9ba13af-03ba-4d39-aa28-efd5161259a2, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.447Z, DateTo=0, DateFrom=0, UnixValue=1.754081536447e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: 40cd6444-aacb-416f-9e2a-ce729d9f7b8c
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=40cd6444-aacb-416f-9e2a-ce729d9f7b8c, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.468Z, DateTo=0, DateFrom=0, UnixValue=1.754081536468e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: 9bef7a58-bfab-4cf0-85d3-681586a41350
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=9bef7a58-bfab-4cf0-85d3-681586a41350, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.484Z, DateTo=0, DateFrom=0, UnixValue=1.754081536484e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: 2b5f0675-a01e-4a6f-ad34-abc1abc9c20a
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=2b5f0675-a01e-4a6f-ad34-abc1abc9c20a, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.487Z, DateTo=0, DateFrom=0, UnixValue=1.754081536487e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: c0781710-3247-464d-b665-f501635f22d1
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=c0781710-3247-464d-b665-f501635f22d1, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.502Z, DateTo=0, DateFrom=0, UnixValue=1.754081536502e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: bdbac6c4-35f6-48db-8ecb-4b4849127b1b
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=bdbac6c4-35f6-48db-8ecb-4b4849127b1b, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.505Z, DateTo=0, DateFrom=0, UnixValue=1.754081536505e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: aab7370b-a4f8-4035-b431-fe38d95ba6cf
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=aab7370b-a4f8-4035-b431-fe38d95ba6cf, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.522Z, DateTo=0, DateFrom=0, UnixValue=1.754081536522e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: 2a113e1b-113d-47e9-876a-73996278760a
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=2a113e1b-113d-47e9-876a-73996278760a, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.541Z, DateTo=0, DateFrom=0, UnixValue=1.754081536541e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: 136ea47f-e2e9-4dac-8568-05f0006bed24
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=136ea47f-e2e9-4dac-8568-05f0006bed24, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.558Z, DateTo=0, DateFrom=0, UnixValue=1.754081536558e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: 578a824c-eddf-4edd-b85f-5e82ecc97141
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=578a824c-eddf-4edd-b85f-5e82ecc97141, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.577Z, DateTo=0, DateFrom=0, UnixValue=1.754081536577e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: d5472c02-f488-4da7-8698-7532955383ba
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=d5472c02-f488-4da7-8698-7532955383ba, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.595Z, DateTo=0, DateFrom=0, UnixValue=1.754081536595e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: a42bd219-c78c-491a-a2b7-c0c682ea24f8
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=a42bd219-c78c-491a-a2b7-c0c682ea24f8, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.595Z, DateTo=0, DateFrom=0, UnixValue=1.754081536595e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: 9d99ad68-ab26-42af-ab79-6813037ae3e2
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=9d99ad68-ab26-42af-ab79-6813037ae3e2, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.612Z, DateTo=0, DateFrom=0, UnixValue=1.754081536612e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: 81a4171f-d87e-40bf-8afa-b7f4bd000fd6
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=81a4171f-d87e-40bf-8afa-b7f4bd000fd6, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.614Z, DateTo=0, DateFrom=0, UnixValue=1.754081536614e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: 3e67a5e8-496a-4c24-86e9-a761baee1238
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=3e67a5e8-496a-4c24-86e9-a761baee1238, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.632Z, DateTo=0, DateFrom=0, UnixValue=1.754081536632e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: 29fd7552-1ce7-4599-ab9f-6a0841bf0b69
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=29fd7552-1ce7-4599-ab9f-6a0841bf0b69, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.651Z, DateTo=0, DateFrom=0, UnixValue=1.754081536651e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: 87cf5b4b-5143-484d-a7e7-de1fd9d2c3fe
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=87cf5b4b-5143-484d-a7e7-de1fd9d2c3fe, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.668Z, DateTo=0, DateFrom=0, UnixValue=1.754081536668e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: 67086080-a4bf-4de0-8e12-cb257ffef6fc
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=67086080-a4bf-4de0-8e12-cb257ffef6fc, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.686Z, DateTo=0, DateFrom=0, UnixValue=1.754081536686e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: a95414a3-07ae-486f-b9c6-ed1463553543
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=a95414a3-07ae-486f-b9c6-ed1463553543, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.705Z, DateTo=0, DateFrom=0, UnixValue=1.754081536705e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: b285d27c-ba32-411c-aa4f-af2221725dce
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=b285d27c-ba32-411c-aa4f-af2221725dce, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.705Z, DateTo=0, DateFrom=0, UnixValue=1.754081536705e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: 645eb365-8f80-4196-bce1-d75ab3cbe6ff
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=645eb365-8f80-4196-bce1-d75ab3cbe6ff, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.721Z, DateTo=0, DateFrom=0, UnixValue=1.754081536721e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: 54f010c3-3462-4510-a6a3-64f6d29ad988
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=54f010c3-3462-4510-a6a3-64f6d29ad988, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.723Z, DateTo=0, DateFrom=0, UnixValue=1.754081536723e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: 11a60fd0-194e-4a04-bad8-395dc8b85449
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=11a60fd0-194e-4a04-bad8-395dc8b85449, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.741Z, DateTo=0, DateFrom=0, UnixValue=1.754081536741e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: 01254baa-e5cf-4cf4-b11a-38397c24a0b2
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=01254baa-e5cf-4cf4-b11a-38397c24a0b2, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.759Z, DateTo=0, DateFrom=0, UnixValue=1.754081536759e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: f77750fd-ee44-4a77-8aa7-66212250a825
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=f77750fd-ee44-4a77-8aa7-66212250a825, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.778Z, DateTo=0, DateFrom=0, UnixValue=1.754081536778e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: 890b0204-b960-4dd3-af3e-7ecb0ebfef89
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=890b0204-b960-4dd3-af3e-7ecb0ebfef89, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.796Z, DateTo=0, DateFrom=0, UnixValue=1.754081536796e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: 08b525d5-76da-4bbc-8f5d-ec5588db46f9
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=08b525d5-76da-4bbc-8f5d-ec5588db46f9, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.814Z, DateTo=0, DateFrom=0, UnixValue=1.754081536814e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: 98eab812-22ba-4606-a40f-ec4ba7ad78f8
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=98eab812-22ba-4606-a40f-ec4ba7ad78f8, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.814Z, DateTo=0, DateFrom=0, UnixValue=1.754081536814e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: dfaa1f26-0008-436d-9bc3-605cfa4b79f7
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=dfaa1f26-0008-436d-9bc3-605cfa4b79f7, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.830Z, DateTo=0, DateFrom=0, UnixValue=1.75408153683e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: 7b47b478-49e5-419b-9178-704fcc796ef2
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=7b47b478-49e5-419b-9178-704fcc796ef2, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.832Z, DateTo=0, DateFrom=0, UnixValue=1.754081536832e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: 3701353e-8b86-4b5e-98db-f43db1099769
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=3701353e-8b86-4b5e-98db-f43db1099769, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.851Z, DateTo=0, DateFrom=0, UnixValue=1.754081536851e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: e2c6a76c-658f-4e7c-8548-0be5a671cd1a
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=e2c6a76c-658f-4e7c-8548-0be5a671cd1a, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.868Z, DateTo=0, DateFrom=0, UnixValue=1.754081536868e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: 68530492-194b-4b16-a05f-cc94adf15503
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=68530492-194b-4b16-a05f-cc94adf15503, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.886Z, DateTo=0, DateFrom=0, UnixValue=1.754081536886e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: ae644f77-85fd-4239-ba68-98e2b46efb30
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=ae644f77-85fd-4239-ba68-98e2b46efb30, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.904Z, DateTo=0, DateFrom=0, UnixValue=1.754081536904e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: a27c93b6-1c70-43a4-a175-230337c369fe
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=a27c93b6-1c70-43a4-a175-230337c369fe, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.924Z, DateTo=0, DateFrom=0, UnixValue=1.754081536924e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: 9142617e-278e-42e7-ba94-27a99635434f
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=9142617e-278e-42e7-ba94-27a99635434f, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.924Z, DateTo=0, DateFrom=0, UnixValue=1.754081536924e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: 4dc9c812-708e-4be8-94ac-6d3873ec8d2a
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=4dc9c812-708e-4be8-94ac-6d3873ec8d2a, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.941Z, DateTo=0, DateFrom=0, UnixValue=1.754081536941e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: e93bff81-07d8-414e-bbc4-f03aabe68e7b
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=e93bff81-07d8-414e-bbc4-f03aabe68e7b, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.941Z, DateTo=0, DateFrom=0, UnixValue=1.754081536941e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: 961dd1dc-cbab-4d12-a869-fa3bafb8420b
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=961dd1dc-cbab-4d12-a869-fa3bafb8420b, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.959Z, DateTo=0, DateFrom=0, UnixValue=1.754081536959e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: 31dbd254-3ad5-42a7-8718-c82d833a9956
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=31dbd254-3ad5-42a7-8718-c82d833a9956, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.978Z, DateTo=0, DateFrom=0, UnixValue=1.754081536978e+18
+writer-1    | 2025/08/01 20:52:16 Stored item with ID: f7bd7566-57ad-4aea-a795-2719cbea20af
+writer-1    | 2025/08/01 20:52:16 Stored Data: CorrelationId=f7bd7566-57ad-4aea-a795-2719cbea20af, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:16.996Z, DateTo=0, DateFrom=0, UnixValue=1.754081536996e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: fcc4c0ab-2de4-4691-a185-c418211be1e8
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=fcc4c0ab-2de4-4691-a185-c418211be1e8, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.014Z, DateTo=0, DateFrom=0, UnixValue=1.754081537014e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: 04b5913f-99ac-4567-8ddf-ea1556649346
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=04b5913f-99ac-4567-8ddf-ea1556649346, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.032Z, DateTo=0, DateFrom=0, UnixValue=1.754081537032e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: bf24f92d-1726-4ed0-bf5b-26349be36292
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=bf24f92d-1726-4ed0-bf5b-26349be36292, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.033Z, DateTo=0, DateFrom=0, UnixValue=1.754081537033e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: 2ceead79-f951-4b3a-ab98-dd1b1fc96abf
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=2ceead79-f951-4b3a-ab98-dd1b1fc96abf, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.049Z, DateTo=0, DateFrom=0, UnixValue=1.754081537049e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: 60255b87-6f6b-4f46-ae4a-24dc821dc1eb
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=60255b87-6f6b-4f46-ae4a-24dc821dc1eb, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.051Z, DateTo=0, DateFrom=0, UnixValue=1.754081537051e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: d265e4da-c106-4d46-9822-058292f91f10
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=d265e4da-c106-4d46-9822-058292f91f10, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.069Z, DateTo=0, DateFrom=0, UnixValue=1.754081537069e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: f25a21ba-6042-4843-ba84-5142c41632f7
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=f25a21ba-6042-4843-ba84-5142c41632f7, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.087Z, DateTo=0, DateFrom=0, UnixValue=1.754081537087e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: fa96ca1a-3dac-42c5-b16f-e4a3088c7a53
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=fa96ca1a-3dac-42c5-b16f-e4a3088c7a53, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.106Z, DateTo=0, DateFrom=0, UnixValue=1.754081537106e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: 03b965ee-5c06-4775-bdac-ff020a7b7e1c
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=03b965ee-5c06-4775-bdac-ff020a7b7e1c, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.124Z, DateTo=0, DateFrom=0, UnixValue=1.754081537124e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: dde9f3db-f8aa-4574-aea6-cf0f83424094
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=dde9f3db-f8aa-4574-aea6-cf0f83424094, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.143Z, DateTo=0, DateFrom=0, UnixValue=1.754081537143e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: 76da15d2-7bf5-4869-9d11-7b291d61165b
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=76da15d2-7bf5-4869-9d11-7b291d61165b, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.156Z, DateTo=0, DateFrom=0, UnixValue=1.754081537156e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: 39e1baa5-45e2-44cd-833a-19d4bd8341eb
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=39e1baa5-45e2-44cd-833a-19d4bd8341eb, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.158Z, DateTo=0, DateFrom=0, UnixValue=1.754081537158e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: 0e651cb4-5876-47b1-b363-1ccadcd7bc95
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=0e651cb4-5876-47b1-b363-1ccadcd7bc95, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.160Z, DateTo=0, DateFrom=0, UnixValue=1.75408153716e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: 91f1d7aa-2598-4603-b46b-fa60d19c5f34
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=91f1d7aa-2598-4603-b46b-fa60d19c5f34, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.178Z, DateTo=0, DateFrom=0, UnixValue=1.754081537178e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: 9c137ae6-2b9f-4bcb-a9df-dc5efa94b3b8
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=9c137ae6-2b9f-4bcb-a9df-dc5efa94b3b8, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.182Z, DateTo=0, DateFrom=0, UnixValue=1.754081537182e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: ba9fa788-eed3-4e7a-9bbc-3969499ec4d1
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=ba9fa788-eed3-4e7a-9bbc-3969499ec4d1, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.196Z, DateTo=0, DateFrom=0, UnixValue=1.754081537196e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: 0669f18b-bfc1-4320-8899-81d1c653f9d4
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=0669f18b-bfc1-4320-8899-81d1c653f9d4, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.214Z, DateTo=0, DateFrom=0, UnixValue=1.754081537214e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: f8c0d6f3-b965-40e0-a429-c607e7d65d6f
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=f8c0d6f3-b965-40e0-a429-c607e7d65d6f, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.231Z, DateTo=0, DateFrom=0, UnixValue=1.754081537231e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: 177032fb-0e15-468a-8509-59bf720106fa
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=177032fb-0e15-468a-8509-59bf720106fa, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.251Z, DateTo=0, DateFrom=0, UnixValue=1.754081537251e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: 0490c8b2-b197-4c0b-9dbe-d898dd985a3c
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=0490c8b2-b197-4c0b-9dbe-d898dd985a3c, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.252Z, DateTo=0, DateFrom=0, UnixValue=1.754081537252e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: 03782d45-7b31-4074-be8b-9fd360669a62
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=03782d45-7b31-4074-be8b-9fd360669a62, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.267Z, DateTo=0, DateFrom=0, UnixValue=1.754081537267e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: e1e987e5-12b5-469d-82f1-be4e1c59718e
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=e1e987e5-12b5-469d-82f1-be4e1c59718e, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.269Z, DateTo=0, DateFrom=0, UnixValue=1.754081537269e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: fecc6f87-f170-4268-889f-66eea8c33703
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=fecc6f87-f170-4268-889f-66eea8c33703, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.287Z, DateTo=0, DateFrom=0, UnixValue=1.754081537287e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: dbe0b876-84dc-4055-b93a-92ec830bf574
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=dbe0b876-84dc-4055-b93a-92ec830bf574, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.287Z, DateTo=0, DateFrom=0, UnixValue=1.754081537287e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: 96b40298-3029-4c12-a690-b2655e2256fa
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=96b40298-3029-4c12-a690-b2655e2256fa, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.319Z, DateTo=0, DateFrom=0, UnixValue=1.754081537319e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: 2f03194f-00d8-44a1-a27d-707f2d9fbc1a
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=2f03194f-00d8-44a1-a27d-707f2d9fbc1a, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.324Z, DateTo=0, DateFrom=0, UnixValue=1.754081537324e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: 81456012-c445-470d-8221-ab5aaaee64d4
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=81456012-c445-470d-8221-ab5aaaee64d4, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.341Z, DateTo=0, DateFrom=0, UnixValue=1.754081537341e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: 03e3ef5d-e48f-469a-8fd7-8857cc45d32a
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=03e3ef5d-e48f-469a-8fd7-8857cc45d32a, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.359Z, DateTo=0, DateFrom=0, UnixValue=1.754081537359e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: 6558c6cc-f9d7-4152-a0cd-1bf964b6368e
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=6558c6cc-f9d7-4152-a0cd-1bf964b6368e, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.360Z, DateTo=0, DateFrom=0, UnixValue=1.75408153736e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: 514fdf8a-7fb2-4244-9635-bd8348e77b08
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=514fdf8a-7fb2-4244-9635-bd8348e77b08, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.378Z, DateTo=0, DateFrom=0, UnixValue=1.754081537378e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: 3cd02716-b03b-45d9-a8ef-723122c95719
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=3cd02716-b03b-45d9-a8ef-723122c95719, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.378Z, DateTo=0, DateFrom=0, UnixValue=1.754081537378e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: d60b6d9d-e891-4274-a5d4-59129a7bc9c2
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=d60b6d9d-e891-4274-a5d4-59129a7bc9c2, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.396Z, DateTo=0, DateFrom=0, UnixValue=1.754081537396e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: 4412a936-1e0f-4749-9d64-96e3f79c7be6
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=4412a936-1e0f-4749-9d64-96e3f79c7be6, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.395Z, DateTo=0, DateFrom=0, UnixValue=1.754081537395e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: f5c93b38-a4ab-4473-aa3a-62c8e5e236d6
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=f5c93b38-a4ab-4473-aa3a-62c8e5e236d6, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.416Z, DateTo=0, DateFrom=0, UnixValue=1.754081537416e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: 714bbecb-fd9c-4999-a49f-a953d18e5ee0
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=714bbecb-fd9c-4999-a49f-a953d18e5ee0, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.449Z, DateTo=0, DateFrom=0, UnixValue=1.754081537449e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: 6ce3fb14-c815-4b12-8c5a-16bc7dc4686d
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=6ce3fb14-c815-4b12-8c5a-16bc7dc4686d, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.449Z, DateTo=0, DateFrom=0, UnixValue=1.754081537449e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: 4d6c8b49-2999-41e3-8d83-119ab6918869
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=4d6c8b49-2999-41e3-8d83-119ab6918869, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.470Z, DateTo=0, DateFrom=0, UnixValue=1.75408153747e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: 0a96ffad-f066-4e07-a5c2-c26fb8a4c680
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=0a96ffad-f066-4e07-a5c2-c26fb8a4c680, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.469Z, DateTo=0, DateFrom=0, UnixValue=1.754081537469e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: 4cc8cb57-8a6f-4e5c-96eb-931a83739bb1
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=4cc8cb57-8a6f-4e5c-96eb-931a83739bb1, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.486Z, DateTo=0, DateFrom=0, UnixValue=1.754081537486e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: 14ac33df-bd43-4abf-b2c4-5cd2c136e84c
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=14ac33df-bd43-4abf-b2c4-5cd2c136e84c, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.489Z, DateTo=0, DateFrom=0, UnixValue=1.754081537489e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: 721de161-7236-47d0-86d6-d485f3c0a876
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=721de161-7236-47d0-86d6-d485f3c0a876, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.504Z, DateTo=0, DateFrom=0, UnixValue=1.754081537504e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: 0a84ec09-dc0e-4076-944a-06e7fef7ce4b
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=0a84ec09-dc0e-4076-944a-06e7fef7ce4b, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.505Z, DateTo=0, DateFrom=0, UnixValue=1.754081537505e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: 3afd2756-ecd2-40ee-b937-fcc352f4877d
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=3afd2756-ecd2-40ee-b937-fcc352f4877d, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.524Z, DateTo=0, DateFrom=0, UnixValue=1.754081537524e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: d35fd90c-8b7c-4a07-a7ab-99071c5e1563
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=d35fd90c-8b7c-4a07-a7ab-99071c5e1563, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.543Z, DateTo=0, DateFrom=0, UnixValue=1.754081537543e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: 4b46f00c-b60f-4c6f-b9e4-f38d1aedd14e
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=4b46f00c-b60f-4c6f-b9e4-f38d1aedd14e, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.560Z, DateTo=0, DateFrom=0, UnixValue=1.75408153756e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: 70d14a8e-9241-4f75-b408-929b07b863d4
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=70d14a8e-9241-4f75-b408-929b07b863d4, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.578Z, DateTo=0, DateFrom=0, UnixValue=1.754081537578e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: b92594e6-16f4-4af8-80b6-64843e99a058
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=b92594e6-16f4-4af8-80b6-64843e99a058, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.579Z, DateTo=0, DateFrom=0, UnixValue=1.754081537579e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: 0b7171ad-879c-4761-9b63-6e8c3097620a
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=0b7171ad-879c-4761-9b63-6e8c3097620a, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.597Z, DateTo=0, DateFrom=0, UnixValue=1.754081537597e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: 1b6912a7-654a-4e22-ad6d-f84f8168d484
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=1b6912a7-654a-4e22-ad6d-f84f8168d484, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.597Z, DateTo=0, DateFrom=0, UnixValue=1.754081537597e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: 5f9ed7ab-bf15-4140-8b36-4841191d3efe
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=5f9ed7ab-bf15-4140-8b36-4841191d3efe, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.614Z, DateTo=0, DateFrom=0, UnixValue=1.754081537614e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: 7d254c2a-e426-49a2-ae69-d4a3d08aee5d
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=7d254c2a-e426-49a2-ae69-d4a3d08aee5d, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.616Z, DateTo=0, DateFrom=0, UnixValue=1.754081537616e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: eeac0136-855a-4bb3-a3b3-1910e90786db
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=eeac0136-855a-4bb3-a3b3-1910e90786db, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.634Z, DateTo=0, DateFrom=0, UnixValue=1.754081537634e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: eb2d5b46-d759-4b30-a0b1-22763f8909c4
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=eb2d5b46-d759-4b30-a0b1-22763f8909c4, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.653Z, DateTo=0, DateFrom=0, UnixValue=1.754081537653e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: a80eab33-d53d-49ec-81ad-d5abfef1a4d3
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=a80eab33-d53d-49ec-81ad-d5abfef1a4d3, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.669Z, DateTo=0, DateFrom=0, UnixValue=1.754081537669e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: b036aacb-da26-4f7a-af89-c7a991142749
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=b036aacb-da26-4f7a-af89-c7a991142749, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.687Z, DateTo=0, DateFrom=0, UnixValue=1.754081537687e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: 789104c1-fea1-4079-a4a5-fa58416ca1e4
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=789104c1-fea1-4079-a4a5-fa58416ca1e4, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.688Z, DateTo=0, DateFrom=0, UnixValue=1.754081537688e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: 13788a79-36e7-496c-9aea-e2af0b22b883
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=13788a79-36e7-496c-9aea-e2af0b22b883, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.707Z, DateTo=0, DateFrom=0, UnixValue=1.754081537707e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: 3984de68-1672-47a5-827d-ba2c23769d1d
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=3984de68-1672-47a5-827d-ba2c23769d1d, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.707Z, DateTo=0, DateFrom=0, UnixValue=1.754081537707e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: bbfecd85-26d4-42c9-bcd0-03502105a1c3
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=bbfecd85-26d4-42c9-bcd0-03502105a1c3, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.723Z, DateTo=0, DateFrom=0, UnixValue=1.754081537723e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: a5ee86ab-29f2-493e-8545-bcb7ebf670ab
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=a5ee86ab-29f2-493e-8545-bcb7ebf670ab, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.725Z, DateTo=0, DateFrom=0, UnixValue=1.754081537725e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: 22328a55-30ef-48db-b2ee-5c0102139baf
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=22328a55-30ef-48db-b2ee-5c0102139baf, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.743Z, DateTo=0, DateFrom=0, UnixValue=1.754081537743e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: 2e48be74-2fc4-4be8-afe4-7f5d276a0d70
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=2e48be74-2fc4-4be8-afe4-7f5d276a0d70, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.761Z, DateTo=0, DateFrom=0, UnixValue=1.754081537761e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: 1b82dd68-9a23-4241-81f6-dfd1aacc527e
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=1b82dd68-9a23-4241-81f6-dfd1aacc527e, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.779Z, DateTo=0, DateFrom=0, UnixValue=1.754081537779e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: f69c885d-9212-451b-8266-6316df93c59d
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=f69c885d-9212-451b-8266-6316df93c59d, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.798Z, DateTo=0, DateFrom=0, UnixValue=1.754081537798e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: 88aab398-970a-49fc-b79f-2dc9056a65f6
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=88aab398-970a-49fc-b79f-2dc9056a65f6, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.798Z, DateTo=0, DateFrom=0, UnixValue=1.754081537798e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: 1e650afc-c13b-40bb-91d8-e43f8c4d5446
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=1e650afc-c13b-40bb-91d8-e43f8c4d5446, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.815Z, DateTo=0, DateFrom=0, UnixValue=1.754081537815e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: d5a279f0-0c1f-463f-8ae0-5074c0bff22e
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=d5a279f0-0c1f-463f-8ae0-5074c0bff22e, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.815Z, DateTo=0, DateFrom=0, UnixValue=1.754081537815e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: 71249246-76ad-4b4c-838c-861e9f0e6624
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=71249246-76ad-4b4c-838c-861e9f0e6624, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.832Z, DateTo=0, DateFrom=0, UnixValue=1.754081537832e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: d35ca00e-7234-49db-99d7-b249769acef3
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=d35ca00e-7234-49db-99d7-b249769acef3, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.834Z, DateTo=0, DateFrom=0, UnixValue=1.754081537834e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: 56190eb5-133e-4ec0-96e6-894d434d39ea
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=56190eb5-133e-4ec0-96e6-894d434d39ea, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.852Z, DateTo=0, DateFrom=0, UnixValue=1.754081537852e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: a809339f-946a-47ff-936a-6524a83aa491
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=a809339f-946a-47ff-936a-6524a83aa491, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.870Z, DateTo=0, DateFrom=0, UnixValue=1.75408153787e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: 5bf2759e-04d9-45ca-89a4-3c36e51b79c5
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=5bf2759e-04d9-45ca-89a4-3c36e51b79c5, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.888Z, DateTo=0, DateFrom=0, UnixValue=1.754081537888e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: 4364f888-9432-4dff-9810-071314a5d5bb
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=4364f888-9432-4dff-9810-071314a5d5bb, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.905Z, DateTo=0, DateFrom=0, UnixValue=1.754081537905e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: 741e26d1-4dbb-40cd-b4ee-61c5246b7ad4
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=741e26d1-4dbb-40cd-b4ee-61c5246b7ad4, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.907Z, DateTo=0, DateFrom=0, UnixValue=1.754081537907e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: a7ccaf23-a592-4e28-af8e-4e43c1d4d7c4
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=a7ccaf23-a592-4e28-af8e-4e43c1d4d7c4, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.925Z, DateTo=0, DateFrom=0, UnixValue=1.754081537925e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: ae1a1781-3033-4520-886b-5711ace35976
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=ae1a1781-3033-4520-886b-5711ace35976, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.925Z, DateTo=0, DateFrom=0, UnixValue=1.754081537925e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: 4ae95bce-c465-40e1-8009-431e7186da16
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=4ae95bce-c465-40e1-8009-431e7186da16, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.942Z, DateTo=0, DateFrom=0, UnixValue=1.754081537942e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: 725af67f-3f69-41f6-a146-aa79e2d0344f
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=725af67f-3f69-41f6-a146-aa79e2d0344f, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.942Z, DateTo=0, DateFrom=0, UnixValue=1.754081537942e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: ea382338-f2b5-4dcb-b499-761df5edb115
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=ea382338-f2b5-4dcb-b499-761df5edb115, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.961Z, DateTo=0, DateFrom=0, UnixValue=1.754081537961e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: 86546224-8ce3-40da-b032-a498ecec3ae7
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=86546224-8ce3-40da-b032-a498ecec3ae7, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.979Z, DateTo=0, DateFrom=0, UnixValue=1.754081537979e+18
+writer-1    | 2025/08/01 20:52:17 Stored item with ID: cf24e909-bd5f-4771-b7c0-a8c3052319a0
+writer-1    | 2025/08/01 20:52:17 Stored Data: CorrelationId=cf24e909-bd5f-4771-b7c0-a8c3052319a0, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:17.997Z, DateTo=0, DateFrom=0, UnixValue=1.754081537997e+18
+writer-1    | 2025/08/01 20:52:18 Stored item with ID: f7df5df5-2b95-4f77-801f-3d2c4b5b661f
+writer-1    | 2025/08/01 20:52:18 Stored Data: CorrelationId=f7df5df5-2b95-4f77-801f-3d2c4b5b661f, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:18.015Z, DateTo=0, DateFrom=0, UnixValue=1.754081538015e+18
+writer-1    | 2025/08/01 20:52:18 Stored item with ID: 0c706607-df0b-42cd-9a75-082474709914
+writer-1    | 2025/08/01 20:52:18 Stored Data: CorrelationId=0c706607-df0b-42cd-9a75-082474709914, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:18.016Z, DateTo=0, DateFrom=0, UnixValue=1.754081538016e+18
+writer-1    | 2025/08/01 20:52:18 Stored item with ID: 1718419d-22bf-44fc-8b6e-42d79594765c
+writer-1    | 2025/08/01 20:52:18 Stored Data: CorrelationId=1718419d-22bf-44fc-8b6e-42d79594765c, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:18.034Z, DateTo=0, DateFrom=0, UnixValue=1.754081538034e+18
+writer-1    | 2025/08/01 20:52:18 Stored item with ID: 3997e048-6bf0-4ce0-9cd4-93f08ae13b1d
+writer-1    | 2025/08/01 20:52:18 Stored Data: CorrelationId=3997e048-6bf0-4ce0-9cd4-93f08ae13b1d, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:18.034Z, DateTo=0, DateFrom=0, UnixValue=1.754081538034e+18
+writer-1    | 2025/08/01 20:52:18 Stored item with ID: 89e52722-701d-4ab8-b4f1-254407bf02f3
+writer-1    | 2025/08/01 20:52:18 Stored Data: CorrelationId=89e52722-701d-4ab8-b4f1-254407bf02f3, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:18.050Z, DateTo=0, DateFrom=0, UnixValue=1.75408153805e+18
+writer-1    | 2025/08/01 20:52:18 Stored item with ID: b88fe650-6e7e-48af-ab85-75a7090aa194
+writer-1    | 2025/08/01 20:52:18 Stored Data: CorrelationId=b88fe650-6e7e-48af-ab85-75a7090aa194, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:18.052Z, DateTo=0, DateFrom=0, UnixValue=1.754081538052e+18
+writer-1    | 2025/08/01 20:52:18 Stored item with ID: 97ff0ede-c2f7-4855-887d-a53391ebf876
+writer-1    | 2025/08/01 20:52:18 Stored Data: CorrelationId=97ff0ede-c2f7-4855-887d-a53391ebf876, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:18.070Z, DateTo=0, DateFrom=0, UnixValue=1.75408153807e+18
+writer-1    | 2025/08/01 20:52:18 Stored item with ID: 0bb43f9b-c9d0-4ebc-8fd4-4e2799e0cc5d
+writer-1    | 2025/08/01 20:52:18 Stored Data: CorrelationId=0bb43f9b-c9d0-4ebc-8fd4-4e2799e0cc5d, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:18.088Z, DateTo=0, DateFrom=0, UnixValue=1.754081538088e+18
+writer-1    | 2025/08/01 20:52:18 Stored item with ID: 6014c2b5-6f72-43d4-984c-0c98f8358e19
+writer-1    | 2025/08/01 20:52:18 Stored Data: CorrelationId=6014c2b5-6f72-43d4-984c-0c98f8358e19, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:18.107Z, DateTo=0, DateFrom=0, UnixValue=1.754081538107e+18
+writer-1    | 2025/08/01 20:52:18 Stored item with ID: 2bdc7c9c-34a2-4480-a6a8-b88516098732
+writer-1    | 2025/08/01 20:52:18 Stored Data: CorrelationId=2bdc7c9c-34a2-4480-a6a8-b88516098732, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:18.126Z, DateTo=0, DateFrom=0, UnixValue=1.754081538126e+18
+writer-1    | 2025/08/01 20:52:18 Stored item with ID: e9e6adc4-a366-46a6-a5b0-683a75945a93
+writer-1    | 2025/08/01 20:52:18 Stored Data: CorrelationId=e9e6adc4-a366-46a6-a5b0-683a75945a93, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:18.145Z, DateTo=0, DateFrom=0, UnixValue=1.754081538145e+18
+writer-1    | 2025/08/01 20:52:18 Stored item with ID: cafd3d00-0b1b-485f-b84e-21ec8ffaae64
+writer-1    | 2025/08/01 20:52:18 Stored Data: CorrelationId=cafd3d00-0b1b-485f-b84e-21ec8ffaae64, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:18.146Z, DateTo=0, DateFrom=0, UnixValue=1.754081538146e+18
+writer-1    | 2025/08/01 20:52:18 Stored item with ID: b29bcd58-e368-4eb8-8771-96ab3d4b48a2
+writer-1    | 2025/08/01 20:52:18 Stored Data: CorrelationId=b29bcd58-e368-4eb8-8771-96ab3d4b48a2, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:18.158Z, DateTo=0, DateFrom=0, UnixValue=1.754081538158e+18
+writer-1    | 2025/08/01 20:52:18 Stored item with ID: bcfd42a6-d763-4423-8c1b-585347c72fa9
+writer-1    | 2025/08/01 20:52:18 Stored Data: CorrelationId=bcfd42a6-d763-4423-8c1b-585347c72fa9, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:18.160Z, DateTo=0, DateFrom=0, UnixValue=1.75408153816e+18
+writer-1    | 2025/08/01 20:52:18 Stored item with ID: 2f0ae03e-383c-4e57-ad66-bb16d3a676ef
+writer-1    | 2025/08/01 20:52:18 Stored Data: CorrelationId=2f0ae03e-383c-4e57-ad66-bb16d3a676ef, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:18.161Z, DateTo=0, DateFrom=0, UnixValue=1.754081538161e+18
+writer-1    | 2025/08/01 20:52:18 Stored item with ID: 116a426d-6045-485f-966a-ec435ad039aa
+writer-1    | 2025/08/01 20:52:18 Stored Data: CorrelationId=116a426d-6045-485f-966a-ec435ad039aa, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:18.180Z, DateTo=0, DateFrom=0, UnixValue=1.75408153818e+18
+writer-1    | 2025/08/01 20:52:18 Stored item with ID: 4ef37ad4-dae3-47e9-8edb-23882ee02279
+writer-1    | 2025/08/01 20:52:18 Stored Data: CorrelationId=4ef37ad4-dae3-47e9-8edb-23882ee02279, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:18.184Z, DateTo=0, DateFrom=0, UnixValue=1.754081538184e+18
+writer-1    | 2025/08/01 20:52:18 Stored item with ID: 372bd2b0-a662-47e7-be20-5cf5d568b510
+writer-1    | 2025/08/01 20:52:18 Stored Data: CorrelationId=372bd2b0-a662-47e7-be20-5cf5d568b510, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:18.198Z, DateTo=0, DateFrom=0, UnixValue=1.754081538198e+18
+writer-1    | 2025/08/01 20:52:18 Stored item with ID: 3556eb7a-3bf0-4e73-9ba7-c57974e527e4
+writer-1    | 2025/08/01 20:52:18 Stored Data: CorrelationId=3556eb7a-3bf0-4e73-9ba7-c57974e527e4, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:18.216Z, DateTo=0, DateFrom=0, UnixValue=1.754081538216e+18
+writer-1    | 2025/08/01 20:52:18 Stored item with ID: b010ced9-b123-4552-aefb-98c275de6010
+writer-1    | 2025/08/01 20:52:18 Stored Data: CorrelationId=b010ced9-b123-4552-aefb-98c275de6010, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:18.233Z, DateTo=0, DateFrom=0, UnixValue=1.754081538233e+18
+writer-1    | 2025/08/01 20:52:18 Stored item with ID: a630ba1c-831a-4807-9842-fe53fd160f0a
+writer-1    | 2025/08/01 20:52:18 Stored Data: CorrelationId=a630ba1c-831a-4807-9842-fe53fd160f0a, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:18.235Z, DateTo=0, DateFrom=0, UnixValue=1.754081538235e+18
+writer-1    | 2025/08/01 20:52:18 Stored item with ID: 12fdf3c6-1146-45a5-b5cd-c4f3a8e1a5ad
+writer-1    | 2025/08/01 20:52:18 Stored Data: CorrelationId=12fdf3c6-1146-45a5-b5cd-c4f3a8e1a5ad, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:18.252Z, DateTo=0, DateFrom=0, UnixValue=1.754081538252e+18
+writer-1    | 2025/08/01 20:52:18 Stored item with ID: b646a005-bdb0-4e07-a10b-944e69ccdc98
+writer-1    | 2025/08/01 20:52:18 Stored Data: CorrelationId=b646a005-bdb0-4e07-a10b-944e69ccdc98, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:18.252Z, DateTo=0, DateFrom=0, UnixValue=1.754081538252e+18
+writer-1    | 2025/08/01 20:52:18 Stored item with ID: ef90949b-cffe-44fd-884a-17de8e3f83b7
+writer-1    | 2025/08/01 20:52:18 Stored Data: CorrelationId=ef90949b-cffe-44fd-884a-17de8e3f83b7, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:18.268Z, DateTo=0, DateFrom=0, UnixValue=1.754081538268e+18
+writer-1    | 2025/08/01 20:52:18 Stored item with ID: 4bfe9784-49ea-4096-bed0-65783c73060d
+writer-1    | 2025/08/01 20:52:18 Stored Data: CorrelationId=4bfe9784-49ea-4096-bed0-65783c73060d, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:18.271Z, DateTo=0, DateFrom=0, UnixValue=1.754081538271e+18
+writer-1    | 2025/08/01 20:52:18 Stored item with ID: 8c659ca5-74f5-409b-8c51-d1b45ec67fc2
+writer-1    | 2025/08/01 20:52:18 Stored Data: CorrelationId=8c659ca5-74f5-409b-8c51-d1b45ec67fc2, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:18.288Z, DateTo=0, DateFrom=0, UnixValue=1.754081538288e+18
+writer-1    | 2025/08/01 20:52:18 Stored item with ID: f6a04a82-17c9-4532-adbc-ab68dc711673
+writer-1    | 2025/08/01 20:52:18 Stored Data: CorrelationId=f6a04a82-17c9-4532-adbc-ab68dc711673, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:18.288Z, DateTo=0, DateFrom=0, UnixValue=1.754081538288e+18
+writer-1    | 2025/08/01 20:52:18 Stored item with ID: d05fd53f-5739-483a-b908-980f141685bc
+writer-1    | 2025/08/01 20:52:18 Stored Data: CorrelationId=d05fd53f-5739-483a-b908-980f141685bc, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:18.320Z, DateTo=0, DateFrom=0, UnixValue=1.75408153832e+18
+writer-1    | 2025/08/01 20:52:18 Stored item with ID: d8972cf0-521f-48a5-9574-e364abe9845b
+writer-1    | 2025/08/01 20:52:18 Stored Data: CorrelationId=d8972cf0-521f-48a5-9574-e364abe9845b, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:18.325Z, DateTo=0, DateFrom=0, UnixValue=1.754081538325e+18
+writer-1    | 2025/08/01 20:52:18 Stored item with ID: ca8439ff-3161-412d-9a2e-ce6c0e60359f
+writer-1    | 2025/08/01 20:52:18 Stored Data: CorrelationId=ca8439ff-3161-412d-9a2e-ce6c0e60359f, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:18.344Z, DateTo=0, DateFrom=0, UnixValue=1.754081538344e+18
+writer-1    | 2025/08/01 20:52:18 Stored item with ID: b18698f7-4be0-48f4-b5a3-4eec70b3bd4d
+writer-1    | 2025/08/01 20:52:18 Stored Data: CorrelationId=b18698f7-4be0-48f4-b5a3-4eec70b3bd4d, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:18.343Z, DateTo=0, DateFrom=0, UnixValue=1.754081538343e+18
+writer-1    | 2025/08/01 20:52:18 Stored item with ID: c4102a05-728e-4feb-91bb-fca2a40cb796
+writer-1    | 2025/08/01 20:52:18 Stored Data: CorrelationId=c4102a05-728e-4feb-91bb-fca2a40cb796, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:18.361Z, DateTo=0, DateFrom=0, UnixValue=1.754081538361e+18
+writer-1    | 2025/08/01 20:52:18 Stored item with ID: a6c7399a-6cca-4575-b247-b69c91d44491
+writer-1    | 2025/08/01 20:52:18 Stored Data: CorrelationId=a6c7399a-6cca-4575-b247-b69c91d44491, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:18.361Z, DateTo=0, DateFrom=0, UnixValue=1.754081538361e+18
+writer-1    | 2025/08/01 20:52:18 Stored item with ID: 50f67585-3659-4f3a-9f12-cbf721696295
+writer-1    | 2025/08/01 20:52:18 Stored Data: CorrelationId=50f67585-3659-4f3a-9f12-cbf721696295, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:18.380Z, DateTo=0, DateFrom=0, UnixValue=1.75408153838e+18
+writer-1    | 2025/08/01 20:52:18 Stored item with ID: 06353726-1062-4ae0-bea9-c7bac727f6de
+writer-1    | 2025/08/01 20:52:18 Stored Data: CorrelationId=06353726-1062-4ae0-bea9-c7bac727f6de, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:18.380Z, DateTo=0, DateFrom=0, UnixValue=1.75408153838e+18
+writer-1    | 2025/08/01 20:52:18 Stored item with ID: a27871f6-59c7-4b7c-8185-41567c4e22c1
+writer-1    | 2025/08/01 20:52:18 Stored Data: CorrelationId=a27871f6-59c7-4b7c-8185-41567c4e22c1, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:18.397Z, DateTo=0, DateFrom=0, UnixValue=1.754081538397e+18
+writer-1    | 2025/08/01 20:52:18 Stored item with ID: bb3c4a99-b211-4152-8e20-14c84f9f32cf
+writer-1    | 2025/08/01 20:52:18 Stored Data: CorrelationId=bb3c4a99-b211-4152-8e20-14c84f9f32cf, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:18.397Z, DateTo=0, DateFrom=0, UnixValue=1.754081538397e+18
+writer-1    | 2025/08/01 20:52:18 Stored item with ID: e1a2d9b9-9335-48ce-8e54-297ba9a17b92
+writer-1    | 2025/08/01 20:52:18 Stored Data: CorrelationId=e1a2d9b9-9335-48ce-8e54-297ba9a17b92, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:18.417Z, DateTo=0, DateFrom=0, UnixValue=1.754081538417e+18
+writer-1    | 2025/08/01 20:52:18 Stored item with ID: c273c5e7-28f9-409b-81db-280b2e2a84c0
+writer-1    | 2025/08/01 20:52:18 Stored Data: CorrelationId=c273c5e7-28f9-409b-81db-280b2e2a84c0, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:18.452Z, DateTo=0, DateFrom=0, UnixValue=1.754081538452e+18
+writer-1    | 2025/08/01 20:52:18 Stored item with ID: 0f78bc03-244b-446a-a81d-885d53e18f12
+writer-1    | 2025/08/01 20:52:18 Stored Data: CorrelationId=0f78bc03-244b-446a-a81d-885d53e18f12, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:18.451Z, DateTo=0, DateFrom=0, UnixValue=1.754081538451e+18
+writer-1    | 2025/08/01 20:52:18 Stored item with ID: d32af7d7-dc0c-42fc-934e-835b2bdd610a
+writer-1    | 2025/08/01 20:52:18 Stored Data: CorrelationId=d32af7d7-dc0c-42fc-934e-835b2bdd610a, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:18.454Z, DateTo=0, DateFrom=0, UnixValue=1.754081538454e+18
+writer-1    | 2025/08/01 20:52:18 Stored item with ID: 4816fa76-4f3f-4895-91ac-ff2d7a12a65f
+writer-1    | 2025/08/01 20:52:18 Stored Data: CorrelationId=4816fa76-4f3f-4895-91ac-ff2d7a12a65f, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:18.471Z, DateTo=0, DateFrom=0, UnixValue=1.754081538471e+18
+writer-1    | 2025/08/01 20:52:18 Stored item with ID: dc22c987-3fcf-4034-a3ed-29898ff588ed
+writer-1    | 2025/08/01 20:52:18 Stored Data: CorrelationId=dc22c987-3fcf-4034-a3ed-29898ff588ed, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:18.471Z, DateTo=0, DateFrom=0, UnixValue=1.754081538471e+18
+writer-1    | 2025/08/01 20:52:18 Stored item with ID: 732adb5f-927f-496f-9600-94167ce330af
+writer-1    | 2025/08/01 20:52:18 Stored Data: CorrelationId=732adb5f-927f-496f-9600-94167ce330af, UseFallback=false, Amount=19.9, RequestedAt=2025-08-01T20:52:18.487Z, DateTo=0, DateFrom=0, UnixValue=1.754081538487e+18
+writer-1    | 2025/08/01 20:52:18 Stored item with ID: 1f66326a-675d-4d92-b97d-d8eab387983a
+log truncated at line 1000

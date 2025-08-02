@@ -5,7 +5,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.2"
+          cpus: "0.5"
           memory: 50M
     image: nginx:stable-alpine
     volumes:
@@ -13,6 +13,20 @@ services:
       - socket-volume:/socket
     ports:
       - "9999:9999"
+    command: >
+      sh -c '
+        echo "Await app1 and app2...";
+        until curl -fs --unix-socket /socket/app1.sock http://localhost/healthcheck; do
+          echo "Await app-1...";
+          sleep 0.2;
+        done;
+        until curl -fs --unix-socket /socket/app2.sock http://localhost/healthcheck; do
+          echo "Await app-2...";
+          sleep 0.2;
+        done;
+        echo "All ready! init NGINX...";
+        nginx -g "daemon off;";
+      '
     depends_on:
       - app-1
       - app-2
@@ -24,17 +38,15 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.55"
+          cpus: "0.3"
           memory: 50M
     image: daviddeltasierra/rinha-2025-go
     volumes:
       - socket-volume:/socket
-    restart: always
     environment:
       - SOCKET_PATH=/socket/app1.sock
     depends_on:
-      postgres:
-        condition: service_healthy
+      - postgres
 
   app-2:
     <<: *app-base
@@ -47,14 +59,10 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.2"
+          cpus: "0.4"
           memory: 200M
     image: postgres:alpine
     user: postgres
-    healthcheck:
-      test: [ "CMD-SHELL", "pg_isready" ]
-      interval: 5s
-      retries: 6
     volumes:
       - ./scripts:/docker-entrypoint-initdb.d
     environment:

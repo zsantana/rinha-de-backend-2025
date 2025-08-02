@@ -1,0 +1,23 @@
+
+time="2025-08-02T19:13:18-03:00" level=warning msg="/home/rinha-user/rinha-de-backend-2025/participantes/lucas-lima-chaves/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+ Network lucas-lima-chaves_backend  Creating
+ Network lucas-lima-chaves_backend  Created
+ Container rinha-redis  Creating
+ Container rinha-redis  Created
+ Container lucas-lima-chaves-app2-1  Creating
+ Container lucas-lima-chaves-app-1  Creating
+ Container lucas-lima-chaves-app2-1  Created
+ Container lucas-lima-chaves-app-1  Created
+ Container lucas-lima-chaves-nginx-1  Creating
+ Container lucas-lima-chaves-nginx-1  Created
+Attaching to app-1, app2-1, nginx-1, rinha-redis
+rinha-redis  | 1:C 02 Aug 2025 22:13:19.826 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+rinha-redis  | 1:C 02 Aug 2025 22:13:19.826 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+rinha-redis  | 1:C 02 Aug 2025 22:13:19.826 * Redis version=7.2.10, bits=64, commit=00000000, modified=0, pid=1, just started
+rinha-redis  | 1:C 02 Aug 2025 22:13:19.826 * Configuration loaded
+rinha-redis  | 1:M 02 Aug 2025 22:13:19.826 * monotonic clock: POSIX clock_gettime
+rinha-redis  | 1:M 02 Aug 2025 22:13:19.827 * Running mode=standalone, port=6379.
+rinha-redis  | 1:M 02 Aug 2025 22:13:19.827 * Server initialized
+rinha-redis  | 1:M 02 Aug 2025 22:13:19.827 * Ready to accept connections tcp
+Error response from daemon: failed to set up container networking: driver failed programming external connectivity on endpoint lucas-lima-chaves-nginx-1 (857e448cc71b8e899404675ad7a72b0ce194e444d2bb13c849ddd6d6640d9699): Bind for 0.0.0.0:9999 failed: port is already allocated
+log truncated at line 1000

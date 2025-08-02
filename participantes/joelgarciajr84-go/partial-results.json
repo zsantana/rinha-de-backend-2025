@@ -1,12 +1,12 @@
 {
   "participante": "joelgarciajr84-go",
-  "total_liquido": 360617.253,
-  "total_bruto": 332170.8,
-  "total_taxas": 18590.58,
+  "total_liquido": 311646.935,
+  "total_bruto": 331553.9,
+  "total_taxas": 19906.965,
   "descricao": "'total_liquido' é sua pontuação final. Equivale ao seu lucro. Fórmula: total_liquido + (total_liquido * p99.bonus) - (total_liquido * multa.porcentagem)",
   "p99": {
-    "valor": "3.29ms",
-    "bonus": "15%",
+    "valor": "11.63ms",
+    "bonus": "0%",
     "max_requests": "550",
     "descricao": "Fórmula para o bônus: max((11 - p99.valor) * 0.02, 0)"
   },
@@ -23,26 +23,26 @@
     "descricao": "Se 'lag' for negativo, significa que seu backend registrou mais pagamentos do que solicitado, automaticamente desclassificando sua submissão!"
   },
   "lag": {
-    "num_pagamentos_total": 16692,
-    "num_pagamentos_solicitados": 16744,
-    "lag": 52,
+    "num_pagamentos_total": 16661,
+    "num_pagamentos_solicitados": 16741,
+    "lag": 80,
     "descricao": "Lag é a diferença entre a quantidade de solicitações de pagamentos e o que foi realmente computado pelo backend. Mostra a perda de pagamentos possivelmente por estarem enfileirados."
   },
   "pagamentos_solicitados": {
-    "qtd_sucesso": 16744,
+    "qtd_sucesso": 16741,
     "qtd_falha": 0,
     "descricao": "'qtd_sucesso' foram requests bem sucedidos para 'POST /payments' e 'qtd_falha' os requests com erro."
   },
   "pagamentos_realizados_default": {
-    "total_bruto": 312350.4,
-    "num_pagamentos": 15696,
-    "total_taxas": 15617.52,
+    "total_bruto": 298261.2,
+    "num_pagamentos": 14988,
+    "total_taxas": 14913.06,
     "descricao": "Informações do backend sobre solicitações de pagamento para o Payment Processor Default."
   },
   "pagamentos_realizados_fallback": {
-    "total_bruto": 19820.4,
-    "num_pagamentos": 996,
-    "total_taxas": 2973.06,
+    "total_bruto": 33292.7,
+    "num_pagamentos": 1673,
+    "total_taxas": 4993.905,
     "descricao": "Informações do backend sobre solicitações de pagamento para o Payment Processor Fallback."
   }
 }

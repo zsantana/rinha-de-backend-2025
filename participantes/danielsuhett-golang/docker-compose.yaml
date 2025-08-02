@@ -1,9 +1,9 @@
 services:
-  nginx:
-    image: nginx:1.25-alpine
-    container_name: go-rinha-nginx
+  haproxy:
+    image: haproxy:2.8-alpine
+    container_name: go-rinha-haproxy-2
     volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
     depends_on:
       - api1
       - api2
@@ -15,7 +15,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.20"
+          cpus: "0.10"
           memory: "40MB"
   api1:
     image: danielsuhett1999/rinha-backend-go:1.0.3
@@ -32,7 +32,7 @@ services:
       - HEALTH_INTERVAL=3000
       - LATENCY_DIFF_TO_USE_FALLBACK=5000
       - BATCH_SIZE=25
-      - WORKER_POOL_SIZE=2
+      - WORKER_POOL_SIZE=12
       - REQUEUE_POOL_SIZE=2
       - WORKER_CHAN_BUFFER=400
       - REQUEUE_CHAN_BUFFER=6000
@@ -63,7 +63,7 @@ services:
       - HEALTH_INTERVAL=3000
       - LATENCY_DIFF_TO_USE_FALLBACK=5000
       - BATCH_SIZE=25
-      - WORKER_POOL_SIZE=2
+      - WORKER_POOL_SIZE=12
       - REQUEUE_POOL_SIZE=2
       - WORKER_CHAN_BUFFER=400
       - REQUEUE_CHAN_BUFFER=6000
@@ -77,7 +77,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.50"
+          cpus: "0.60"
           memory: "130MB"
   redis:
     image: redis:7.2-alpine

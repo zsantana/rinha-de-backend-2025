@@ -1,16 +1,16 @@
 services:
   payment-service-1:
-    image: tiagodolphine/payment-service-quarkus:0.0.2
+    image: tiagodolphine/payment-service-quarkus:0.0.3
     environment:
       - PAYMENT_PROCESSOR_DEFAULT=payment-processor-default
       - PAYMENT_PROCESSOR_DEFAULT_PORT=8080
       - PAYMENT_PROCESSOR_FALLBACK=payment-processor-fallback
       - PAYMENT_PROCESSOR_FALLBACK_PORT=8080
-      - CHUNK_SIZE=2
-      - POLL_INTERVAL=5
-      - PROCESSOR_RETRY_MAX=500
+      - CHUNK_SIZE=100
+      - POLL_INTERVAL=400
+      - PROCESSOR_RETRY_MAX=300
       - REDIS_HOST=redis
-      - REDIS_MAX_POOL_SIZE=405
+      - REDIS_MAX_POOL_SIZE=200
       - QUARKUS_VERTX_EVENT_LOOPS_POOL_SIZE=2
       - QUARKUS_HTTP_IO_THREADS=1
       - QUARKUS_VERTX_INTERNAL_BLOCKING_POOL_SIZE=1
@@ -21,24 +21,24 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '0.4'
-          memory: "120MB"
+          cpus: '0.45'
+          memory: "130MB"
     depends_on:
       redis:
         condition: service_healthy
 
   payment-service-2:
-    image: tiagodolphine/payment-service-quarkus:0.0.2
+    image: tiagodolphine/payment-service-quarkus:0.0.3
     environment:
       - PAYMENT_PROCESSOR_DEFAULT=payment-processor-default
       - PAYMENT_PROCESSOR_DEFAULT_PORT=8080
       - PAYMENT_PROCESSOR_FALLBACK=payment-processor-fallback
       - PAYMENT_PROCESSOR_FALLBACK_PORT=8080
-      - CHUNK_SIZE=2
-      - POLL_INTERVAL=5
+      - CHUNK_SIZE=100
+      - POLL_INTERVAL=288
       - PROCESSOR_RETRY_MAX=500
       - REDIS_HOST=redis
-      - REDIS_MAX_POOL_SIZE=405
+      - REDIS_MAX_POOL_SIZE=200
       - QUARKUS_VERTX_EVENT_LOOPS_POOL_SIZE=2
       - QUARKUS_HTTP_IO_THREADS=1
       - QUARKUS_VERTX_INTERNAL_BLOCKING_POOL_SIZE=1
@@ -49,8 +49,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '0.4'
-          memory: "120MB"
+          cpus: '0.45'
+          memory: "130MB"
     depends_on:
       redis:
         condition: service_healthy
@@ -67,8 +67,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '0.5'
-          memory: "70MB"
+          cpus: '0.4'
+          memory: "50MB"
     healthcheck:
       test: ["CMD", "redis-cli", "ping"]
       interval: 5s

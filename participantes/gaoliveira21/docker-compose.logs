@@ -1,31 +1,36 @@
 
- app02 Pulling 
+ nginx Pulling 
  app01 Pulling 
+ app02 Pulling 
  f105c369fc82 Pulling fs layer 
- d0f3d6620709 Pulling fs layer 
+ 9f67b9a6ee66 Pulling fs layer 
+ nginx Pulled 
  f105c369fc82 Pulling fs layer 
- d0f3d6620709 Pulling fs layer 
+ 9f67b9a6ee66 Pulling fs layer 
  f105c369fc82 Downloading [==================================================>]     109B/109B
+ f105c369fc82 Verifying Checksum 
+ f105c369fc82 Download complete 
  f105c369fc82 Download complete 
  f105c369fc82 Extracting [==================================================>]     109B/109B
- f105c369fc82 Download complete 
  f105c369fc82 Extracting [==================================================>]     109B/109B
  f105c369fc82 Extracting [==================================================>]     109B/109B
  f105c369fc82 Extracting [==================================================>]     109B/109B
+ 9f67b9a6ee66 Downloading [>                                                  ]   77.7kB/7.7MB
+ 9f67b9a6ee66 Downloading [>                                                  ]   77.7kB/7.7MB
  f105c369fc82 Pull complete 
  f105c369fc82 Pull complete 
- d0f3d6620709 Downloading [>                                                  ]  78.22kB/7.726MB
- d0f3d6620709 Downloading [>                                                  ]  78.22kB/7.726MB
- d0f3d6620709 Downloading [=================================================> ]  7.619MB/7.726MB
- d0f3d6620709 Downloading [=================================================> ]  7.619MB/7.726MB
- d0f3d6620709 Download complete 
- d0f3d6620709 Download complete 
- d0f3d6620709 Extracting [>                                                  ]   98.3kB/7.726MB
- d0f3d6620709 Extracting [>                                                  ]   98.3kB/7.726MB
- d0f3d6620709 Extracting [==================================================>]  7.726MB/7.726MB
- d0f3d6620709 Extracting [==================================================>]  7.726MB/7.726MB
- d0f3d6620709 Pull complete 
- d0f3d6620709 Pull complete 
+ 9f67b9a6ee66 Verifying Checksum 
+ 9f67b9a6ee66 Download complete 
+ 9f67b9a6ee66 Verifying Checksum 
+ 9f67b9a6ee66 Download complete 
+ 9f67b9a6ee66 Extracting [>                                                  ]   98.3kB/7.7MB
+ 9f67b9a6ee66 Extracting [>                                                  ]   98.3kB/7.7MB
+ 9f67b9a6ee66 Extracting [=================================================> ]  7.569MB/7.7MB
+ 9f67b9a6ee66 Extracting [=================================================> ]  7.569MB/7.7MB
+ 9f67b9a6ee66 Extracting [==================================================>]    7.7MB/7.7MB
+ 9f67b9a6ee66 Extracting [==================================================>]    7.7MB/7.7MB
+ 9f67b9a6ee66 Pull complete 
+ 9f67b9a6ee66 Pull complete 
  app01 Pulled 
  app02 Pulled 
  Network gaoliveira21_backend  Creating
@@ -34,8 +39,8 @@
  Container gaoliveira21-db-1  Created
  Container rinha2025-app-02  Creating
  Container rinha2025-app-01  Creating
- Container rinha2025-app-01  Created
  Container rinha2025-app-02  Created
+ Container rinha2025-app-01  Created
  Container rinha-nginx  Creating
  Container rinha-nginx  Created
 Attaching to db-1, rinha-nginx, rinha2025-app-01, rinha2025-app-02
@@ -57,7 +62,7 @@ db-1              | selecting default time zone ... UTC
 db-1              | creating configuration files ... ok
 db-1              | running bootstrap script ... ok
 db-1              | sh: locale: not found
-db-1              | 2025-07-30 00:30:26.945 UTC [35] WARNING:  no usable system locales were found
+db-1              | 2025-08-02 16:57:50.348 UTC [35] WARNING:  no usable system locales were found
 db-1              | performing post-bootstrap initialization ... ok
 db-1              | syncing data to disk ... ok
 db-1              | 
@@ -68,10 +73,10 @@ db-1              |     pg_ctl -D /var/lib/postgresql/data -l logfile start
 db-1              | 
 db-1              | initdb: warning: enabling "trust" authentication for local connections
 db-1              | initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
-db-1              | waiting for server to start....2025-07-30 00:30:28.008 UTC [41] LOG:  starting PostgreSQL 17.5 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
-db-1              | 2025-07-30 00:30:28.015 UTC [41] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
-db-1              | 2025-07-30 00:30:28.038 UTC [44] LOG:  database system was shut down at 2025-07-30 00:30:27 UTC
-db-1              | 2025-07-30 00:30:28.047 UTC [41] LOG:  database system is ready to accept connections
+db-1              | waiting for server to start....2025-08-02 16:57:51.655 UTC [41] LOG:  starting PostgreSQL 17.5 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
+db-1              | 2025-08-02 16:57:51.661 UTC [41] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db-1              | 2025-08-02 16:57:51.701 UTC [44] LOG:  database system was shut down at 2025-08-02 16:57:51 UTC
+db-1              | 2025-08-02 16:57:51.709 UTC [41] LOG:  database system is ready to accept connections
 db-1              |  done
 db-1              | server started
 db-1              | CREATE DATABASE
@@ -85,26 +90,26 @@ db-1              | CREATE INDEX
 db-1              | CREATE TABLE
 db-1              | 
 db-1              | 
-db-1              | waiting for server to shut down....2025-07-30 00:30:28.246 UTC [41] LOG:  received fast shutdown request
-db-1              | 2025-07-30 00:30:28.252 UTC [41] LOG:  aborting any active transactions
-db-1              | 2025-07-30 00:30:28.255 UTC [41] LOG:  background worker "logical replication launcher" (PID 47) exited with exit code 1
-db-1              | 2025-07-30 00:30:28.257 UTC [42] LOG:  shutting down
-db-1              | 2025-07-30 00:30:28.264 UTC [42] LOG:  checkpoint starting: shutdown immediate
-db-1              | 2025-07-30 00:30:28.548 UTC [42] LOG:  checkpoint complete: wrote 928 buffers (5.7%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.073 s, sync=0.191 s, total=0.292 s; sync files=329, longest=0.027 s, average=0.001 s; distance=4305 kB, estimate=4305 kB; lsn=0/19218A8, redo lsn=0/19218A8
-db-1              | 2025-07-30 00:30:28.555 UTC [41] LOG:  database system is shut down
+db-1              | waiting for server to shut down....2025-08-02 16:57:51.894 UTC [41] LOG:  received fast shutdown request
+db-1              | 2025-08-02 16:57:51.899 UTC [41] LOG:  aborting any active transactions
+db-1              | 2025-08-02 16:57:51.903 UTC [41] LOG:  background worker "logical replication launcher" (PID 47) exited with exit code 1
+db-1              | 2025-08-02 16:57:51.903 UTC [42] LOG:  shutting down
+db-1              | 2025-08-02 16:57:51.908 UTC [42] LOG:  checkpoint starting: shutdown immediate
+db-1              | 2025-08-02 16:57:52.103 UTC [42] LOG:  checkpoint complete: wrote 928 buffers (5.7%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.024 s, sync=0.150 s, total=0.201 s; sync files=329, longest=0.034 s, average=0.001 s; distance=4305 kB, estimate=4305 kB; lsn=0/19218A8, redo lsn=0/19218A8
+db-1              | 2025-08-02 16:57:52.111 UTC [41] LOG:  database system is shut down
 db-1              |  done
 db-1              | server stopped
 db-1              | 
 db-1              | PostgreSQL init process complete; ready for start up.
 db-1              | 
-db-1              | 2025-07-30 00:30:28.683 UTC [1] LOG:  starting PostgreSQL 17.5 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
-db-1              | 2025-07-30 00:30:28.683 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
-db-1              | 2025-07-30 00:30:28.683 UTC [1] LOG:  listening on IPv6 address "::", port 5432
-db-1              | 2025-07-30 00:30:28.696 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
-db-1              | 2025-07-30 00:30:28.710 UTC [59] LOG:  database system was shut down at 2025-07-30 00:30:28 UTC
-db-1              | 2025-07-30 00:30:28.723 UTC [1] LOG:  database system is ready to accept connections
-rinha2025-app-01  | 2025/07/30 00:30:31 Starting server on port 8080
-rinha2025-app-02  | 2025/07/30 00:30:31 Starting server on port 8080
+db-1              | 2025-08-02 16:57:52.228 UTC [1] LOG:  starting PostgreSQL 17.5 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
+db-1              | 2025-08-02 16:57:52.228 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+db-1              | 2025-08-02 16:57:52.228 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+db-1              | 2025-08-02 16:57:52.238 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db-1              | 2025-08-02 16:57:52.252 UTC [59] LOG:  database system was shut down at 2025-08-02 16:57:52 UTC
+db-1              | 2025-08-02 16:57:52.261 UTC [1] LOG:  database system is ready to accept connections
+rinha2025-app-01  | 2025/08/02 16:57:55 Starting server on port 8080
+rinha2025-app-02  | 2025/08/02 16:57:55 Starting server on port 8080
 rinha-nginx       | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
 rinha-nginx       | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
 rinha-nginx       | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
@@ -114,888 +119,19 @@ rinha-nginx       | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-loca
 rinha-nginx       | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
 rinha-nginx       | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
 rinha-nginx       | /docker-entrypoint.sh: Configuration complete; ready for start up
-db-1              | 2025-07-30 00:31:01.790 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:01.790 UTC [86] DETAIL:  Failing row contains (754ba82e-0ca3-4d8b-839b-4ee977edeb56, 19.9, null).
-rinha2025-app-02  | 2025/07/30 00:31:01 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:01.790 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-db-1              | 2025-07-30 00:31:01.790 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:01.790 UTC [86] DETAIL:  Failing row contains (d98c3ff4-ebf2-4f90-8f29-3d8f25d5db03, 19.9, null).
-db-1              | 2025-07-30 00:31:01.790 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:01 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-rinha2025-app-01  | 2025/07/30 00:31:01 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-rinha2025-app-01  | 2025/07/30 00:31:01 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:01.803 UTC [96] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:01.803 UTC [96] DETAIL:  Failing row contains (4252f073-8c08-429c-96d0-16cf05980762, 19.9, null).
-db-1              | 2025-07-30 00:31:01.803 UTC [96] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-db-1              | 2025-07-30 00:31:01.803 UTC [111] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:01.803 UTC [111] DETAIL:  Failing row contains (f3563f30-f23d-47e7-98f1-cefee2fc4f59, 19.9, null).
-db-1              | 2025-07-30 00:31:01.803 UTC [111] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-db-1              | 2025-07-30 00:31:01.832 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:01.832 UTC [86] DETAIL:  Failing row contains (e3111cf6-3c14-48c8-91e1-b08d4a0af908, 19.9, null).
-db-1              | 2025-07-30 00:31:01.832 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:01 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:01.837 UTC [96] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:01.837 UTC [96] DETAIL:  Failing row contains (8f1220c6-42ea-4950-96a5-72ebd16f3cfd, 19.9, null).
-db-1              | 2025-07-30 00:31:01.837 UTC [96] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-01  | 2025/07/30 00:31:01 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:01.872 UTC [96] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:01.872 UTC [96] DETAIL:  Failing row contains (87bed9fa-9ea9-435f-b9aa-7749aaa6265e, 19.9, null).
-db-1              | 2025-07-30 00:31:01.872 UTC [96] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-db-1              | 2025-07-30 00:31:01.872 UTC [96] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:01.872 UTC [96] DETAIL:  Failing row contains (e2321632-94e3-4eac-947d-bfcbd199f5b3, 19.9, null).
-rinha2025-app-01  | 2025/07/30 00:31:01 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:01.872 UTC [96] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-01  | 2025/07/30 00:31:01 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-rinha2025-app-02  | 2025/07/30 00:31:01 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:01.885 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:01.885 UTC [86] DETAIL:  Failing row contains (59304156-d9f3-41cd-a59d-176caeb677d9, 19.9, null).
-db-1              | 2025-07-30 00:31:01.885 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-db-1              | 2025-07-30 00:31:01.886 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:01.886 UTC [86] DETAIL:  Failing row contains (134569b5-ec8b-4943-a843-4db8c11135fa, 19.9, null).
-db-1              | 2025-07-30 00:31:01.886 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:01 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-rinha2025-app-01  | 2025/07/30 00:31:01 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:01.888 UTC [96] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:01.888 UTC [96] DETAIL:  Failing row contains (5d232970-cbc4-445a-bf41-b54be245cd6d, 19.9, null).
-db-1              | 2025-07-30 00:31:01.888 UTC [96] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-db-1              | 2025-07-30 00:31:01.889 UTC [96] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:01.889 UTC [96] DETAIL:  Failing row contains (d92b2f2d-6809-4ff9-9e5e-4e9bbbaa9d8b, 19.9, null).
-db-1              | 2025-07-30 00:31:01.889 UTC [96] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-01  | 2025/07/30 00:31:01 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-rinha2025-app-01  | 2025/07/30 00:31:01 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:01.890 UTC [96] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:01.890 UTC [96] DETAIL:  Failing row contains (f6e891f8-7270-41fc-a143-0f3061d86e88, 19.9, null).
-db-1              | 2025-07-30 00:31:01.890 UTC [96] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-db-1              | 2025-07-30 00:31:01.894 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:01.894 UTC [86] DETAIL:  Failing row contains (95ea89b6-0fcf-4fb5-9b59-fe50afbbc017, 19.9, null).
-db-1              | 2025-07-30 00:31:01.894 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:01 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-rinha2025-app-01  | 2025/07/30 00:31:01 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:01.920 UTC [96] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:01.920 UTC [96] DETAIL:  Failing row contains (b6b7ebf1-8d07-41cd-96f9-7a20e0abb85e, 19.9, null).
-db-1              | 2025-07-30 00:31:01.920 UTC [96] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-db-1              | 2025-07-30 00:31:01.920 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:01.920 UTC [86] DETAIL:  Failing row contains (f641831b-2a9c-4773-bb2f-f08eec8e2109, 19.9, null).
-db-1              | 2025-07-30 00:31:01.920 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:01 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-rinha2025-app-01  | 2025/07/30 00:31:01 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:01.931 UTC [96] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:01.931 UTC [96] DETAIL:  Failing row contains (57d29367-0118-4ba7-9ffa-a0a75f743719, 19.9, null).
-db-1              | 2025-07-30 00:31:01.931 UTC [96] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-db-1              | 2025-07-30 00:31:01.933 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:01.933 UTC [86] DETAIL:  Failing row contains (9d7217ad-08fb-4cc0-843e-87615763abcf, 19.9, null).
-db-1              | 2025-07-30 00:31:01.933 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:01 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-rinha2025-app-02  | 2025/07/30 00:31:01 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:01.942 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:01.942 UTC [86] DETAIL:  Failing row contains (e76a8934-0294-4edc-96c0-c878932f1a3e, 19.9, null).
-db-1              | 2025-07-30 00:31:01.942 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-db-1              | 2025-07-30 00:31:01.959 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:01.959 UTC [86] DETAIL:  Failing row contains (b337bc07-c0f4-4252-a9da-fa62d08369d4, 19.9, null).
-db-1              | 2025-07-30 00:31:01.959 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:01 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:01.961 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:01.961 UTC [86] DETAIL:  Failing row contains (dbdfb326-ea42-43c2-b05b-f3462b1f20f4, 19.9, null).
-db-1              | 2025-07-30 00:31:01.961 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-db-1              | 2025-07-30 00:31:01.961 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:01.961 UTC [86] DETAIL:  Failing row contains (05caa6a5-bd76-4bb9-82b5-72e9d00664fb, 19.9, null).
-db-1              | 2025-07-30 00:31:01.961 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:01 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-rinha2025-app-02  | 2025/07/30 00:31:01 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:01.968 UTC [96] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:01.968 UTC [96] DETAIL:  Failing row contains (6742484e-7368-45c2-949d-3f0e8d4f3ec6, 19.9, null).
-db-1              | 2025-07-30 00:31:01.968 UTC [96] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-01  | 2025/07/30 00:31:01 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-rinha2025-app-01  | 2025/07/30 00:31:01 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:01.970 UTC [96] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:01.970 UTC [96] DETAIL:  Failing row contains (98f14903-c686-4282-af9f-4cd7b089bb0e, 19.9, null).
-db-1              | 2025-07-30 00:31:01.970 UTC [96] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-db-1              | 2025-07-30 00:31:01.990 UTC [96] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:01.990 UTC [96] DETAIL:  Failing row contains (f867b340-dfbd-4f7c-b8db-27aa9eb4ed48, 19.9, null).
-db-1              | 2025-07-30 00:31:01.990 UTC [96] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-01  | 2025/07/30 00:31:01 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:01.994 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:01.994 UTC [86] DETAIL:  Failing row contains (8db530c1-1675-47a4-92e7-e7b936f85b6b, 19.9, null).
-db-1              | 2025-07-30 00:31:01.994 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:01 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:01.995 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:01.995 UTC [86] DETAIL:  Failing row contains (ea0967a2-fba9-436a-b132-af54f1c05513, 19.9, null).
-db-1              | 2025-07-30 00:31:01.995 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:01 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:02.007 UTC [96] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:02.007 UTC [96] DETAIL:  Failing row contains (99b566d8-4260-4640-9e85-cbe013929add, 19.9, null).
-db-1              | 2025-07-30 00:31:02.007 UTC [96] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-01  | 2025/07/30 00:31:02 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:02.022 UTC [96] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:02.022 UTC [96] DETAIL:  Failing row contains (3b81196f-63d3-42c8-86a4-edf89a0bbe92, 19.9, null).
-rinha2025-app-01  | 2025/07/30 00:31:02 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:02.022 UTC [96] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-db-1              | 2025-07-30 00:31:02.022 UTC [96] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:02.022 UTC [96] DETAIL:  Failing row contains (3a4cc644-1b0d-4177-9d71-da5ed6e18ce9, 19.9, null).
-db-1              | 2025-07-30 00:31:02.022 UTC [96] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-01  | 2025/07/30 00:31:02 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:02.037 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:02.037 UTC [86] DETAIL:  Failing row contains (c2c373a5-e2dd-4927-b559-9eb953e564f6, 19.9, null).
-db-1              | 2025-07-30 00:31:02.037 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:02 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-rinha2025-app-01  | 2025/07/30 00:31:02 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:02.046 UTC [96] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:02.046 UTC [96] DETAIL:  Failing row contains (e698d847-4f20-486d-bde6-ffe2fb0c7f59, 19.9, null).
-db-1              | 2025-07-30 00:31:02.046 UTC [96] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-db-1              | 2025-07-30 00:31:02.077 UTC [111] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:02.077 UTC [111] DETAIL:  Failing row contains (22c950df-3f00-4f54-b41f-c4c081650e54, 19.9, null).
-db-1              | 2025-07-30 00:31:02.077 UTC [111] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-db-1              | 2025-07-30 00:31:02.077 UTC [96] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:02.077 UTC [96] DETAIL:  Failing row contains (6aef1e54-3d19-42f4-9a7b-5161130998a6, 19.9, null).
-db-1              | 2025-07-30 00:31:02.077 UTC [96] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-01  | 2025/07/30 00:31:02 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-rinha2025-app-01  | 2025/07/30 00:31:02 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:02.078 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:02.078 UTC [86] DETAIL:  Failing row contains (27ee41a7-4f90-4b41-9bc5-bde62be77612, 19.9, null).
-db-1              | 2025-07-30 00:31:02.078 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:02 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:02.087 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:02.087 UTC [86] DETAIL:  Failing row contains (de2abc1c-a8fb-4219-b0df-ade6241ebe8a, 19.9, null).
-db-1              | 2025-07-30 00:31:02.087 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:02 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:02.095 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:02.095 UTC [86] DETAIL:  Failing row contains (60634ab3-64cd-4e3a-a46f-02af86624b09, 19.9, null).
-db-1              | 2025-07-30 00:31:02.095 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:02 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:02.103 UTC [96] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:02.103 UTC [96] DETAIL:  Failing row contains (63ab80d7-3615-4a3b-b94d-95882758281e, 19.9, null).
-db-1              | 2025-07-30 00:31:02.103 UTC [96] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-01  | 2025/07/30 00:31:02 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-rinha2025-app-01  | 2025/07/30 00:31:02 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:02.115 UTC [96] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:02.115 UTC [96] DETAIL:  Failing row contains (a0db96d1-29f3-4bdd-95fe-4b7f3f1720c5, 19.9, null).
-db-1              | 2025-07-30 00:31:02.115 UTC [96] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-db-1              | 2025-07-30 00:31:02.115 UTC [111] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:02.115 UTC [111] DETAIL:  Failing row contains (bd622731-7071-453e-a0f1-299a890918a5, 19.9, null).
-db-1              | 2025-07-30 00:31:02.115 UTC [111] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-db-1              | 2025-07-30 00:31:02.117 UTC [111] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:02.117 UTC [111] DETAIL:  Failing row contains (8bb99b31-f14a-4103-8d17-a0304620414d, 19.9, null).
-db-1              | 2025-07-30 00:31:02.117 UTC [111] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-01  | 2025/07/30 00:31:02 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-rinha2025-app-01  | 2025/07/30 00:31:02 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:02.124 UTC [72] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:02.124 UTC [72] DETAIL:  Failing row contains (1e309fa4-d93e-40f0-8834-ab5a9a6807b1, 19.9, null).
-db-1              | 2025-07-30 00:31:02.124 UTC [72] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-01  | 2025/07/30 00:31:02 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:02.132 UTC [72] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:02.132 UTC [72] DETAIL:  Failing row contains (f4bcc845-bd47-468f-8d41-2e83f585a734, 19.9, null).
-db-1              | 2025-07-30 00:31:02.132 UTC [72] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-01  | 2025/07/30 00:31:02 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-rinha2025-app-01  | 2025/07/30 00:31:02 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:02.148 UTC [72] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:02.148 UTC [72] DETAIL:  Failing row contains (8c3fbe4a-dc59-47ef-99d8-db145cf575d2, 19.9, null).
-db-1              | 2025-07-30 00:31:02.148 UTC [72] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:02 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:02.151 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:02.151 UTC [86] DETAIL:  Failing row contains (7efe68b5-84cc-4b52-8f3c-5d5c85fcef0c, 19.9, null).
-db-1              | 2025-07-30 00:31:02.151 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:02 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:02.164 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:02.164 UTC [86] DETAIL:  Failing row contains (382a2408-3769-4410-a6e2-1732553ec52d, 19.9, null).
-db-1              | 2025-07-30 00:31:02.164 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-db-1              | 2025-07-30 00:31:02.164 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:02.164 UTC [86] DETAIL:  Failing row contains (01d0d1fd-4eb8-4968-a3b9-4b534e401474, 19.9, null).
-db-1              | 2025-07-30 00:31:02.164 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:02 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:02.178 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:02.178 UTC [86] DETAIL:  Failing row contains (8a73919a-1aea-462c-b6ec-4ccc917fdc4d, 19.9, null).
-db-1              | 2025-07-30 00:31:02.178 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:02 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:02.194 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:02.194 UTC [86] DETAIL:  Failing row contains (ca273f69-067a-4312-831e-e406afd40d97, 19.9, null).
-db-1              | 2025-07-30 00:31:02.194 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:02 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-rinha2025-app-01  | 2025/07/30 00:31:02 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:02.203 UTC [111] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:02.203 UTC [111] DETAIL:  Failing row contains (2fb6ee09-ea71-437f-9912-42723e67762e, 19.9, null).
-db-1              | 2025-07-30 00:31:02.203 UTC [111] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-db-1              | 2025-07-30 00:31:02.221 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:02.221 UTC [86] DETAIL:  Failing row contains (6a446af9-27f6-499e-8798-e1b0033f7e6e, 19.9, null).
-db-1              | 2025-07-30 00:31:02.221 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-db-1              | 2025-07-30 00:31:02.221 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:02.221 UTC [86] DETAIL:  Failing row contains (f98d6c22-fa56-4411-9ce5-0ef003148497, 19.9, null).
-db-1              | 2025-07-30 00:31:02.221 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:02 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-rinha2025-app-02  | 2025/07/30 00:31:02 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:02.246 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:02.246 UTC [86] DETAIL:  Failing row contains (2e55ccb8-f1e3-4ffb-b78d-1cff554af488, 19.9, null).
-db-1              | 2025-07-30 00:31:02.246 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:02 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:02.295 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:02.295 UTC [86] DETAIL:  Failing row contains (cdc2de64-18c7-4e4c-bc33-191b4c8a85df, 19.9, null).
-db-1              | 2025-07-30 00:31:02.295 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:02 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-rinha2025-app-02  | 2025/07/30 00:31:02 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:02.296 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:02.296 UTC [86] DETAIL:  Failing row contains (68c0e819-845b-49a8-b28b-4acdc2aa5e84, 19.9, null).
-db-1              | 2025-07-30 00:31:02.296 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-db-1              | 2025-07-30 00:31:02.297 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:02.297 UTC [112] DETAIL:  Failing row contains (4ca40258-c7e2-4686-a021-0fcf7d343b98, 19.9, null).
-db-1              | 2025-07-30 00:31:02.297 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:02 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:02.298 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:02.298 UTC [112] DETAIL:  Failing row contains (0d24a1dd-b204-49f4-97a4-e964147d2ec1, 19.9, null).
-db-1              | 2025-07-30 00:31:02.298 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:02 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:02.312 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:02.312 UTC [112] DETAIL:  Failing row contains (57327aad-ace6-4ad8-b86f-da41b43f82cb, 19.9, null).
-db-1              | 2025-07-30 00:31:02.312 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:02 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:02.381 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:02.381 UTC [112] DETAIL:  Failing row contains (398241ad-20b7-4ae6-9701-9ca1bdf393a2, 19.9, null).
-rinha2025-app-02  | 2025/07/30 00:31:02 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:02.381 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-db-1              | 2025-07-30 00:31:02.400 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:02.400 UTC [112] DETAIL:  Failing row contains (e8c1dfcb-72e9-4030-ba2f-6a1cef1b9dc0, 19.9, null).
-db-1              | 2025-07-30 00:31:02.400 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-db-1              | 2025-07-30 00:31:02.400 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:02.400 UTC [86] DETAIL:  Failing row contains (789e9f16-75ea-4cc6-ba52-cb0cf221a690, 19.9, null).
-db-1              | 2025-07-30 00:31:02.400 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-db-1              | 2025-07-30 00:31:02.402 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:02.402 UTC [112] DETAIL:  Failing row contains (8fbc024c-eb92-4aeb-a6d4-7132639d9b05, 19.9, null).
-db-1              | 2025-07-30 00:31:02.402 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:02 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-rinha2025-app-02  | 2025/07/30 00:31:02 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-rinha2025-app-02  | 2025/07/30 00:31:02 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:02.430 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:02.430 UTC [112] DETAIL:  Failing row contains (97e33fb7-6978-4979-bf39-333343000613, 19.9, null).
-db-1              | 2025-07-30 00:31:02.430 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:02 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:02.457 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:02.457 UTC [112] DETAIL:  Failing row contains (bc518371-3633-46a2-91c7-99d6a5ddf287, 19.9, null).
-db-1              | 2025-07-30 00:31:02.457 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:02 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-rinha2025-app-02  | 2025/07/30 00:31:02 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:02.469 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:02.469 UTC [112] DETAIL:  Failing row contains (19711b2f-2c90-49f4-be3b-97b51dd1d32b, 19.9, null).
-db-1              | 2025-07-30 00:31:02.469 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:02 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:02.480 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:02.480 UTC [112] DETAIL:  Failing row contains (d303aa84-f587-41e3-a4ca-9d40ddbaf7f6, 19.9, null).
-db-1              | 2025-07-30 00:31:02.480 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-db-1              | 2025-07-30 00:31:02.503 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:02.503 UTC [112] DETAIL:  Failing row contains (87cedf9c-9cc8-4e24-9d46-deeb136f41f9, 19.9, null).
-db-1              | 2025-07-30 00:31:02.503 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-db-1              | 2025-07-30 00:31:02.503 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:02.503 UTC [86] DETAIL:  Failing row contains (cc20f46c-3abd-47bb-a2b2-18b30ea22b54, 19.9, null).
-db-1              | 2025-07-30 00:31:02.503 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:02 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-rinha2025-app-02  | 2025/07/30 00:31:02 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:02.572 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:02.572 UTC [112] DETAIL:  Failing row contains (067f7e9c-c84e-4eef-a142-2f580928f756, 19.9, null).
-db-1              | 2025-07-30 00:31:02.572 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-db-1              | 2025-07-30 00:31:02.572 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-rinha2025-app-02  | 2025/07/30 00:31:02 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:02.572 UTC [112] DETAIL:  Failing row contains (3c10f9a3-b5dc-4afe-9c08-c2ac567ba82c, 19.9, null).
-db-1              | 2025-07-30 00:31:02.572 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:02 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-rinha2025-app-02  | 2025/07/30 00:31:02 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:02.593 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:02.593 UTC [112] DETAIL:  Failing row contains (26ebf914-991f-415c-ab8a-c4164b0b9ace, 19.9, null).
-db-1              | 2025-07-30 00:31:02.593 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-db-1              | 2025-07-30 00:31:02.605 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:02.605 UTC [112] DETAIL:  Failing row contains (e64aa5a1-fb92-4446-9357-9a25b7575592, 19.9, null).
-db-1              | 2025-07-30 00:31:02.605 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:02 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:02.615 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:02.615 UTC [112] DETAIL:  Failing row contains (4688318a-c44a-4e75-9735-b2df0ec5c2e2, 19.9, null).
-db-1              | 2025-07-30 00:31:02.615 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-db-1              | 2025-07-30 00:31:02.615 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:02.615 UTC [86] DETAIL:  Failing row contains (3f86ba1c-a034-4cf3-9399-671d7c14da56, 19.9, null).
-db-1              | 2025-07-30 00:31:02.615 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:02 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-rinha2025-app-02  | 2025/07/30 00:31:02 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-rinha2025-app-02  | 2025/07/30 00:31:02 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-rinha2025-app-02  | 2025/07/30 00:31:02 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:02.638 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:02.638 UTC [86] DETAIL:  Failing row contains (126e378c-59f5-4d3e-a3ae-88155f2d61ee, 19.9, null).
-db-1              | 2025-07-30 00:31:02.638 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-db-1              | 2025-07-30 00:31:02.639 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:02.639 UTC [86] DETAIL:  Failing row contains (234ec175-c09f-4366-800e-a79aad0f2f6f, 19.9, null).
-db-1              | 2025-07-30 00:31:02.639 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-db-1              | 2025-07-30 00:31:02.642 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:02.642 UTC [86] DETAIL:  Failing row contains (fa367909-1871-4f1b-aaab-cab695371554, 19.9, null).
-db-1              | 2025-07-30 00:31:02.642 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:02 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:02.716 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:02.716 UTC [86] DETAIL:  Failing row contains (ff1591e0-33fe-40f8-a963-acdc370eac38, 19.9, null).
-db-1              | 2025-07-30 00:31:02.716 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:02 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:02.743 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:02.743 UTC [86] DETAIL:  Failing row contains (b75b116f-524f-46c0-9bdc-0c076e39c534, 19.9, null).
-rinha2025-app-02  | 2025/07/30 00:31:02 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:02.743 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-db-1              | 2025-07-30 00:31:02.760 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:02.760 UTC [86] DETAIL:  Failing row contains (cce519ae-ddbf-4f82-9024-f867c1aaa505, 19.9, null).
-db-1              | 2025-07-30 00:31:02.760 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:02 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:02.775 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:02.775 UTC [86] DETAIL:  Failing row contains (4a009d60-72de-452b-bd7b-0f5b9cbf5e0d, 19.9, null).
-db-1              | 2025-07-30 00:31:02.775 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:02 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-rinha2025-app-02  | 2025/07/30 00:31:02 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:02.776 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:02.776 UTC [86] DETAIL:  Failing row contains (f7561cdf-a884-4061-a659-0cf9ade421c0, 19.9, null).
-db-1              | 2025-07-30 00:31:02.776 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-db-1              | 2025-07-30 00:31:02.784 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:02.784 UTC [86] DETAIL:  Failing row contains (a206b143-d9b8-493c-a451-a1ed1f2e4654, 19.9, null).
-db-1              | 2025-07-30 00:31:02.784 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:02 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:02.806 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:02.806 UTC [86] DETAIL:  Failing row contains (d88a28c0-6b6e-4535-b436-67ec4c0f36b1, 19.9, null).
-rinha2025-app-02  | 2025/07/30 00:31:02 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-rinha2025-app-02  | 2025/07/30 00:31:02 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:02.806 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-db-1              | 2025-07-30 00:31:02.807 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:02.807 UTC [112] DETAIL:  Failing row contains (54983df9-6eb1-4933-ad5a-80a9af035aad, 19.9, null).
-db-1              | 2025-07-30 00:31:02.807 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-db-1              | 2025-07-30 00:31:02.876 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:02.876 UTC [112] DETAIL:  Failing row contains (930e974e-c9e9-4155-8d10-24910b279d98, 19.9, null).
-rinha2025-app-02  | 2025/07/30 00:31:02 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:02.876 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-db-1              | 2025-07-30 00:31:02.908 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:02.908 UTC [112] DETAIL:  Failing row contains (074f0251-a7be-4ee9-af9d-18c39d3e4121, 19.9, null).
-db-1              | 2025-07-30 00:31:02.908 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:02 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:02.910 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:02.910 UTC [112] DETAIL:  Failing row contains (4d55a9b0-b760-442e-a737-6fae5437afa0, 19.9, null).
-db-1              | 2025-07-30 00:31:02.910 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:02 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-rinha2025-app-02  | 2025/07/30 00:31:02 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:02.910 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:02.910 UTC [112] DETAIL:  Failing row contains (1ae0a5ec-79e8-4d1c-88e2-9c516d98aed2, 19.9, null).
-db-1              | 2025-07-30 00:31:02.910 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-db-1              | 2025-07-30 00:31:02.941 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:02.941 UTC [112] DETAIL:  Failing row contains (ebc82cd0-8733-4b5c-97a5-75a4602c3bd2, 19.9, null).
-db-1              | 2025-07-30 00:31:02.941 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:02 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:02.950 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:02.950 UTC [112] DETAIL:  Failing row contains (599ac955-f2dc-4126-bd40-605379181f2a, 19.9, null).
-db-1              | 2025-07-30 00:31:02.950 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:02 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:02.952 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:02.952 UTC [112] DETAIL:  Failing row contains (bac85e75-73d9-45b4-89a1-efbbfbd70cbd, 19.9, null).
-db-1              | 2025-07-30 00:31:02.952 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:02 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:02.952 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:02.952 UTC [112] DETAIL:  Failing row contains (5b26c04c-e13d-4efa-855b-330fe244ba51, 19.9, null).
-db-1              | 2025-07-30 00:31:02.952 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:02 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:03.010 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:03.010 UTC [112] DETAIL:  Failing row contains (6ca5d149-d7fb-471d-a489-f2c5adec3f46, 19.9, null).
-db-1              | 2025-07-30 00:31:03.010 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:03 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:03.012 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:03.012 UTC [112] DETAIL:  Failing row contains (258db925-0edd-483e-9cc6-2917aefc6d73, 19.9, null).
-db-1              | 2025-07-30 00:31:03.012 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:03 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:03.031 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-rinha2025-app-02  | 2025/07/30 00:31:03 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:03.031 UTC [112] DETAIL:  Failing row contains (626e98fa-57b7-4726-99a8-1d4d29b07494, 19.9, null).
-db-1              | 2025-07-30 00:31:03.031 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-db-1              | 2025-07-30 00:31:03.063 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:03.063 UTC [112] DETAIL:  Failing row contains (e0a52c47-ba65-4951-901d-be8a31ecf8ff, 19.9, null).
-db-1              | 2025-07-30 00:31:03.063 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:03 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:03.074 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:03.074 UTC [112] DETAIL:  Failing row contains (b301d67c-54d1-436b-becb-e6aece604e8b, 19.9, null).
-db-1              | 2025-07-30 00:31:03.074 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:03 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:03.079 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:03.079 UTC [112] DETAIL:  Failing row contains (fcbe445b-ef56-423d-8d7a-2dba9487be64, 19.9, null).
-db-1              | 2025-07-30 00:31:03.079 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:03 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:03.119 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:03.119 UTC [112] DETAIL:  Failing row contains (9cb493dd-3489-4dc3-b0e0-1e5be8002523, 19.9, null).
-db-1              | 2025-07-30 00:31:03.119 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:03 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:03.152 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:03.152 UTC [112] DETAIL:  Failing row contains (5b4e59a0-0d70-42cb-b1c6-3c589f426d3a, 19.9, null).
-rinha2025-app-02  | 2025/07/30 00:31:03 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:03.152 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-db-1              | 2025-07-30 00:31:03.199 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:03.199 UTC [112] DETAIL:  Failing row contains (68888eed-a953-4993-881e-8d3042db26b1, 19.9, null).
-rinha2025-app-02  | 2025/07/30 00:31:03 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:03.199 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-db-1              | 2025-07-30 00:31:03.214 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:03.214 UTC [112] DETAIL:  Failing row contains (b783ddc1-b270-4850-a05c-bcf58c8a5935, 19.9, null).
-db-1              | 2025-07-30 00:31:03.214 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:03 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:03.214 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:03.214 UTC [112] DETAIL:  Failing row contains (cf6f4853-e03d-4fb0-b2c2-28fdf2141e33, 19.9, null).
-db-1              | 2025-07-30 00:31:03.214 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:03 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:03.216 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:03.216 UTC [112] DETAIL:  Failing row contains (2826efb2-48cb-45ed-abdf-1dc10d1dcb09, 19.9, null).
-db-1              | 2025-07-30 00:31:03.216 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:03 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-rinha2025-app-02  | 2025/07/30 00:31:03 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:03.254 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:03.254 UTC [112] DETAIL:  Failing row contains (cd4f1f73-3ada-46a0-93e2-1e8f3c0db5c0, 19.9, null).
-db-1              | 2025-07-30 00:31:03.254 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-db-1              | 2025-07-30 00:31:03.300 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:03.300 UTC [112] DETAIL:  Failing row contains (640f794d-de07-4a4a-a8b0-91f92dcc2cf9, 19.9, null).
-db-1              | 2025-07-30 00:31:03.300 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:03 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:03.322 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:03.322 UTC [86] DETAIL:  Failing row contains (c7b1a315-9383-41be-9a84-b675b9bc8564, 19.9, null).
-db-1              | 2025-07-30 00:31:03.322 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-db-1              | 2025-07-30 00:31:03.322 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-rinha2025-app-02  | 2025/07/30 00:31:03 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:03.322 UTC [112] DETAIL:  Failing row contains (1f23ad70-481a-473f-903a-69ad90ff9c45, 19.9, null).
-db-1              | 2025-07-30 00:31:03.322 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:03 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:03.332 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:03.332 UTC [112] DETAIL:  Failing row contains (827da778-c636-4c76-b9e1-e2afa07fffbd, 19.9, null).
-db-1              | 2025-07-30 00:31:03.332 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:03 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:03.358 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:03.358 UTC [112] DETAIL:  Failing row contains (bc7f4bb5-bf8a-45de-8750-208db12e3acc, 19.9, null).
-db-1              | 2025-07-30 00:31:03.358 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:03 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-rinha2025-app-02  | 2025/07/30 00:31:03 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:03.382 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:03.382 UTC [112] DETAIL:  Failing row contains (0b24e707-b7e3-4338-903d-84785bde65c5, 19.9, null).
-db-1              | 2025-07-30 00:31:03.382 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-db-1              | 2025-07-30 00:31:03.411 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:03.411 UTC [112] DETAIL:  Failing row contains (9fc33e2e-d9c8-4ed7-b981-b883f2a527b6, 19.9, null).
-rinha2025-app-02  | 2025/07/30 00:31:03 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:03.411 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-db-1              | 2025-07-30 00:31:03.446 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:03.446 UTC [112] DETAIL:  Failing row contains (31391625-90da-45a6-9b9d-4a668a19589f, 19.9, null).
-db-1              | 2025-07-30 00:31:03.446 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:03 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:03.449 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:03.449 UTC [112] DETAIL:  Failing row contains (0352f5f2-c358-47cb-b228-13b873168de3, 19.9, null).
-db-1              | 2025-07-30 00:31:03.449 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:03 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:03.492 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:03.492 UTC [112] DETAIL:  Failing row contains (74c99663-5f68-47c7-81cb-e6f99af3babe, 19.9, null).
-db-1              | 2025-07-30 00:31:03.492 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:03 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:03.492 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:03.492 UTC [112] DETAIL:  Failing row contains (4dc81026-c936-4394-9ced-56be71b08615, 19.9, null).
-db-1              | 2025-07-30 00:31:03.492 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:03 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:03.492 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:03.492 UTC [112] DETAIL:  Failing row contains (68ca5e67-22f8-4ef8-893e-de859e820448, 19.9, null).
-db-1              | 2025-07-30 00:31:03.492 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:03 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:03.518 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:03.518 UTC [112] DETAIL:  Failing row contains (97df6538-f040-4b21-b761-2332acea2813, 19.9, null).
-db-1              | 2025-07-30 00:31:03.518 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:03 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:03.550 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:03.550 UTC [112] DETAIL:  Failing row contains (f8aee67d-915c-4143-be8b-b26a46c28139, 19.9, null).
-db-1              | 2025-07-30 00:31:03.550 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:03 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:03.550 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:03.550 UTC [112] DETAIL:  Failing row contains (f43ff81b-ad65-42e1-aca0-244c84bf843a, 19.9, null).
-db-1              | 2025-07-30 00:31:03.550 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:03 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:03.592 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:03.592 UTC [112] DETAIL:  Failing row contains (2fe8f345-70a3-4eff-a6af-9e80bd728bb8, 19.9, null).
-db-1              | 2025-07-30 00:31:03.592 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:03 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:03.593 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:03.593 UTC [112] DETAIL:  Failing row contains (6b99de4e-2fe5-424a-90a0-a2f2c913e90f, 19.9, null).
-db-1              | 2025-07-30 00:31:03.593 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:03 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:03.603 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:03.603 UTC [112] DETAIL:  Failing row contains (d032afe8-7c59-4232-8949-d90a9495ae18, 19.9, null).
-db-1              | 2025-07-30 00:31:03.603 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:03 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:03.614 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:03.614 UTC [112] DETAIL:  Failing row contains (7f69df7e-5ef4-4836-b1fb-ab6f027cbecf, 19.9, null).
-db-1              | 2025-07-30 00:31:03.614 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:03 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:03.615 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:03.615 UTC [112] DETAIL:  Failing row contains (f92cd552-5b3e-4cf6-956e-aa2b03077a44, 19.9, null).
-db-1              | 2025-07-30 00:31:03.615 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:03 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:03.645 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:03.645 UTC [112] DETAIL:  Failing row contains (cfa3e58d-6614-4893-a810-e85b678ade57, 19.9, null).
-db-1              | 2025-07-30 00:31:03.645 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:03 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:03.646 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:03.646 UTC [112] DETAIL:  Failing row contains (a5237911-7716-4192-bbad-3708abc461b5, 19.9, null).
-db-1              | 2025-07-30 00:31:03.646 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:03 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:03.695 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:03.695 UTC [112] DETAIL:  Failing row contains (b2a983ce-add9-45bb-afd4-16da495d7988, 19.9, null).
-db-1              | 2025-07-30 00:31:03.695 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:03 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:03.721 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:03.721 UTC [112] DETAIL:  Failing row contains (f801e92d-9fe6-425f-bcc6-2dc0d2091c3f, 19.9, null).
-db-1              | 2025-07-30 00:31:03.721 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:03 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:03.753 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:03.753 UTC [112] DETAIL:  Failing row contains (8e80a9b2-a1a8-4e0a-9c14-cbabbaf31217, 19.9, null).
-db-1              | 2025-07-30 00:31:03.753 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:03 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:03.761 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:03.761 UTC [112] DETAIL:  Failing row contains (ecea1317-2498-44b5-a0cf-f95816451aa8, 19.9, null).
-db-1              | 2025-07-30 00:31:03.761 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:03 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:03.780 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:03.780 UTC [112] DETAIL:  Failing row contains (5449f5e1-617c-4e83-a4f2-3659a84ce3ec, 19.9, null).
-db-1              | 2025-07-30 00:31:03.780 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:03 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-rinha2025-app-02  | 2025/07/30 00:31:03 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:03.805 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:03.805 UTC [112] DETAIL:  Failing row contains (37305a28-99ad-4ced-8e61-857c0f24a4b5, 19.9, null).
-db-1              | 2025-07-30 00:31:03.805 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-db-1              | 2025-07-30 00:31:03.814 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:03.814 UTC [112] DETAIL:  Failing row contains (4995795b-728d-4f45-a22f-d530acfd1f11, 19.9, null).
-rinha2025-app-02  | 2025/07/30 00:31:03 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:03.814 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-db-1              | 2025-07-30 00:31:03.822 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:03.822 UTC [112] DETAIL:  Failing row contains (5e13318c-b0f2-46c8-a2aa-cbe1bd60e6ca, 19.9, null).
-db-1              | 2025-07-30 00:31:03.822 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:03 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:03.823 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:03.823 UTC [112] DETAIL:  Failing row contains (e748ac9c-c96b-4dc8-8e1b-2fcb5bedd9b7, 19.9, null).
-db-1              | 2025-07-30 00:31:03.823 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:03 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:03.885 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:03.885 UTC [112] DETAIL:  Failing row contains (3f6f4c6c-3002-4ac8-964d-e2beb68cb48f, 19.9, null).
-db-1              | 2025-07-30 00:31:03.885 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:03 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-rinha2025-app-02  | 2025/07/30 00:31:03 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:03.896 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:03.896 UTC [112] DETAIL:  Failing row contains (2ca0df51-cd95-422d-8e21-08589314f1ff, 19.9, null).
-db-1              | 2025-07-30 00:31:03.896 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-db-1              | 2025-07-30 00:31:03.916 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:03.916 UTC [112] DETAIL:  Failing row contains (692ecaba-64cc-4678-980b-77200ebebabf, 19.9, null).
-db-1              | 2025-07-30 00:31:03.916 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:03 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-rinha2025-app-02  | 2025/07/30 00:31:03 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:03.918 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:03.918 UTC [112] DETAIL:  Failing row contains (e6441278-7a58-4bea-8180-28f2750f3000, 19.9, null).
-db-1              | 2025-07-30 00:31:03.918 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-db-1              | 2025-07-30 00:31:03.918 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:03.918 UTC [112] DETAIL:  Failing row contains (9a2da0b5-d632-4670-9cc4-cf60e465cbd3, 19.9, null).
-db-1              | 2025-07-30 00:31:03.918 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:03 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:03.960 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:03.960 UTC [112] DETAIL:  Failing row contains (f97588c8-203c-4d69-9222-02dd47c3da3e, 19.9, null).
-db-1              | 2025-07-30 00:31:03.960 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:03 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:03.966 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:03.966 UTC [112] DETAIL:  Failing row contains (0ae31bd7-1630-4583-8ff0-5fc9d38da4a0, 19.9, null).
-db-1              | 2025-07-30 00:31:03.966 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:03 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:04.016 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:04.016 UTC [112] DETAIL:  Failing row contains (eba334f0-5bb5-437b-ae0e-fc5dedbdc585, 19.9, null).
-db-1              | 2025-07-30 00:31:04.016 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:04 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:04.019 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:04.019 UTC [112] DETAIL:  Failing row contains (f266fcf9-92c7-4ae0-a832-da5ce9e04bef, 19.9, null).
-db-1              | 2025-07-30 00:31:04.019 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:04 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:04.090 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:04.090 UTC [112] DETAIL:  Failing row contains (5ed0e79d-3f4f-4be7-9c6d-e36e1fae62ac, 19.9, null).
-db-1              | 2025-07-30 00:31:04.090 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:04 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:04.107 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-rinha2025-app-02  | 2025/07/30 00:31:04 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:04.107 UTC [112] DETAIL:  Failing row contains (1bcfee6c-ee3c-4747-8e0a-0bb30574e7df, 19.9, null).
-db-1              | 2025-07-30 00:31:04.107 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:04 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:04.107 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:04.107 UTC [112] DETAIL:  Failing row contains (9a9d592c-850a-4afa-bdb4-7771d0c483f1, 19.9, null).
-db-1              | 2025-07-30 00:31:04.107 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:04 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:04.107 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:04.107 UTC [112] DETAIL:  Failing row contains (9f3bf568-1222-43f6-bf77-b6bc051da0c5, 19.9, null).
-db-1              | 2025-07-30 00:31:04.107 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:04 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:04.125 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:04.125 UTC [112] DETAIL:  Failing row contains (7a27e765-fdc7-45cd-9899-da6e86098a55, 19.9, null).
-db-1              | 2025-07-30 00:31:04.125 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-db-1              | 2025-07-30 00:31:04.125 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:04.125 UTC [112] DETAIL:  Failing row contains (6a38b99c-daf4-48f1-b6ef-29629fc371da, 19.9, null).
-db-1              | 2025-07-30 00:31:04.125 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:04 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:04.152 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:04.152 UTC [112] DETAIL:  Failing row contains (c0f60d78-42f9-459a-8590-33726751573f, 19.9, null).
-db-1              | 2025-07-30 00:31:04.152 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:04 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:04.191 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:04.191 UTC [112] DETAIL:  Failing row contains (909d1d2e-7ede-4f01-952b-68c0eba037c9, 19.9, null).
-db-1              | 2025-07-30 00:31:04.191 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:04 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:04.206 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:04.206 UTC [112] DETAIL:  Failing row contains (aa234d7c-d5fe-41c8-9915-307edd25a619, 19.9, null).
-db-1              | 2025-07-30 00:31:04.206 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:04 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-rinha2025-app-02  | 2025/07/30 00:31:04 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:04.207 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:04.207 UTC [112] DETAIL:  Failing row contains (9a73fa32-77ce-4478-aec4-565d3c9b7dcd, 19.9, null).
-db-1              | 2025-07-30 00:31:04.207 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-db-1              | 2025-07-30 00:31:04.226 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:04.226 UTC [112] DETAIL:  Failing row contains (3e2e3219-c79f-4068-8a8a-2cee2b632803, 19.9, null).
-rinha2025-app-02  | 2025/07/30 00:31:04 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:04.226 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-db-1              | 2025-07-30 00:31:04.257 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:04.257 UTC [112] DETAIL:  Failing row contains (7fecbf15-2a20-40eb-82c1-85d07ed9ace2, 19.9, null).
-db-1              | 2025-07-30 00:31:04.257 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:04 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:04.299 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:04.299 UTC [112] DETAIL:  Failing row contains (25f3b8fe-f0d1-4961-8429-2b54641742f9, 19.9, null).
-db-1              | 2025-07-30 00:31:04.299 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:04 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:04.322 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:04.322 UTC [112] DETAIL:  Failing row contains (30a17726-a88c-4d94-afcc-e804cbf03a42, 19.9, null).
-db-1              | 2025-07-30 00:31:04.322 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:04 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:04.323 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:04.323 UTC [112] DETAIL:  Failing row contains (9c0e57ef-a796-42d7-9def-527cfd02a9b3, 19.9, null).
-db-1              | 2025-07-30 00:31:04.323 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:04 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:04.358 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:04.358 UTC [112] DETAIL:  Failing row contains (510894fb-0936-457d-95c3-aa5db1efa64d, 19.9, null).
-db-1              | 2025-07-30 00:31:04.358 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:04 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:04.362 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:04.362 UTC [112] DETAIL:  Failing row contains (8b9acf7a-e725-47bf-8f4e-f77fd852d1ea, 19.9, null).
-db-1              | 2025-07-30 00:31:04.362 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:04 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:04.370 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:04.370 UTC [112] DETAIL:  Failing row contains (55afe1d9-dc0a-4af3-9693-a8527a78df43, 19.9, null).
-db-1              | 2025-07-30 00:31:04.370 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-db-1              | 2025-07-30 00:31:04.370 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:04.370 UTC [112] DETAIL:  Failing row contains (01cd7168-da47-4928-8467-2c9891f2ce64, 19.9, null).
-rinha2025-app-02  | 2025/07/30 00:31:04 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:04.370 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:04 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:04.409 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:04.409 UTC [112] DETAIL:  Failing row contains (7e709dfc-3c8a-4a38-a022-a75c091990c0, 19.9, null).
-db-1              | 2025-07-30 00:31:04.409 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:04 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:04.429 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:04.429 UTC [112] DETAIL:  Failing row contains (a771d6c6-5243-4433-a21c-92a9176b8d1b, 19.9, null).
-db-1              | 2025-07-30 00:31:04.429 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:04 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:04.429 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:04.429 UTC [112] DETAIL:  Failing row contains (665c8c6d-4fbe-4b3f-98ed-a64d73e0163e, 19.9, null).
-db-1              | 2025-07-30 00:31:04.429 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:04 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:04.493 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:04.493 UTC [112] DETAIL:  Failing row contains (698f9518-3b1c-4519-a982-0e42cb2c3170, 19.9, null).
-db-1              | 2025-07-30 00:31:04.493 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:04 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:04.501 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:04.501 UTC [112] DETAIL:  Failing row contains (e4c8ccfd-2473-4a55-98ce-a70bae5daee8, 19.9, null).
-rinha2025-app-02  | 2025/07/30 00:31:04 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:04.501 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-db-1              | 2025-07-30 00:31:04.511 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:04.511 UTC [112] DETAIL:  Failing row contains (2c08e521-77b5-4b57-a0fc-f965631769f0, 19.9, null).
-db-1              | 2025-07-30 00:31:04.511 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:04 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:04.554 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:04.554 UTC [112] DETAIL:  Failing row contains (60b85627-bc9f-4942-b8ca-91335d309db3, 19.9, null).
-db-1              | 2025-07-30 00:31:04.554 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:04 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:04.572 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:04.572 UTC [112] DETAIL:  Failing row contains (27512c9b-9788-412e-9844-fccfad22cd0a, 19.9, null).
-db-1              | 2025-07-30 00:31:04.572 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:04 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:04.584 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:04.584 UTC [112] DETAIL:  Failing row contains (b450eda1-991c-4b09-8b51-38bcdc101abb, 19.9, null).
-db-1              | 2025-07-30 00:31:04.584 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:04 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:04.611 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-rinha2025-app-02  | 2025/07/30 00:31:04 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:04.611 UTC [112] DETAIL:  Failing row contains (13c01e8e-2ec2-49c8-a86e-31ff387fb144, 19.9, null).
-db-1              | 2025-07-30 00:31:04.611 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-db-1              | 2025-07-30 00:31:04.621 UTC [112] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:04.621 UTC [112] DETAIL:  Failing row contains (0c47b7b5-f768-436d-9873-0316da654ac3, 19.9, null).
-rinha2025-app-02  | 2025/07/30 00:31:04 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:04.621 UTC [112] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-db-1              | 2025-07-30 00:31:04.621 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:04.621 UTC [86] DETAIL:  Failing row contains (0f2c47f8-bd7e-4a08-8378-331d5a0a50f6, 19.9, null).
-db-1              | 2025-07-30 00:31:04.621 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:04 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:04.628 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:04.628 UTC [86] DETAIL:  Failing row contains (98e770ba-1a19-4c6b-88d4-113266808713, 19.9, null).
-db-1              | 2025-07-30 00:31:04.628 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:04 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:04.673 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:04.673 UTC [86] DETAIL:  Failing row contains (43e27239-6e71-4885-8d55-4a108f1843bf, 19.9, null).
-db-1              | 2025-07-30 00:31:04.673 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:04 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:04.701 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:04.701 UTC [86] DETAIL:  Failing row contains (f7e5e1b7-7969-4629-960b-fdff3650fa19, 19.9, null).
-db-1              | 2025-07-30 00:31:04.701 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:04 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:04.723 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:04.723 UTC [86] DETAIL:  Failing row contains (19e9f52e-ab95-49ba-bde6-8b40dcc2770a, 19.9, null).
-db-1              | 2025-07-30 00:31:04.723 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:04 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:04.724 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:04.724 UTC [86] DETAIL:  Failing row contains (5992c969-ff32-47c6-93f0-bdd51d90f6e8, 19.9, null).
-db-1              | 2025-07-30 00:31:04.724 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:04 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:04.772 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:04.772 UTC [86] DETAIL:  Failing row contains (1593eecf-2fb9-4237-b4f2-17a302aee97f, 19.9, null).
-db-1              | 2025-07-30 00:31:04.772 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:04 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:04.787 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:04.787 UTC [86] DETAIL:  Failing row contains (c09ed2b4-21c6-4d23-9a6c-a3ee2b273cec, 19.9, null).
-db-1              | 2025-07-30 00:31:04.787 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:04 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:04.787 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:04.787 UTC [86] DETAIL:  Failing row contains (6a11a389-dce2-45f8-9f8a-35b993ce0553, 19.9, null).
-db-1              | 2025-07-30 00:31:04.787 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:04 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:04.802 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-rinha2025-app-02  | 2025/07/30 00:31:04 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:04.802 UTC [86] DETAIL:  Failing row contains (3594b812-40bb-491b-8c10-1b3bd59540b2, 19.9, null).
-db-1              | 2025-07-30 00:31:04.802 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-db-1              | 2025-07-30 00:31:04.823 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:04.823 UTC [86] DETAIL:  Failing row contains (54104963-abaf-4b0a-bb9a-48997f0ca6d9, 19.9, null).
-db-1              | 2025-07-30 00:31:04.823 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:04 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:04.902 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:04.902 UTC [86] DETAIL:  Failing row contains (0ed02b72-e062-4857-8cff-670773728d0c, 19.9, null).
-rinha2025-app-02  | 2025/07/30 00:31:04 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:04.902 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-db-1              | 2025-07-30 00:31:04.912 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:04.912 UTC [86] DETAIL:  Failing row contains (3b7a5cb5-b2ba-4747-b697-c9e107d757c9, 19.9, null).
-db-1              | 2025-07-30 00:31:04.912 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:04 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:04.929 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:04.929 UTC [86] DETAIL:  Failing row contains (bb3655ad-a2ed-43ea-9855-7026438fafa1, 19.9, null).
-db-1              | 2025-07-30 00:31:04.929 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:04 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:04.935 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:04.935 UTC [86] DETAIL:  Failing row contains (cd700db0-a964-458e-9f14-d1de59300552, 19.9, null).
-db-1              | 2025-07-30 00:31:04.935 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:04 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:04.944 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:04.944 UTC [86] DETAIL:  Failing row contains (8c5efb54-5d2a-4297-9fce-afccc5819a55, 19.9, null).
-db-1              | 2025-07-30 00:31:04.944 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:04 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:04.973 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:04.973 UTC [86] DETAIL:  Failing row contains (ac1a0855-303f-4179-99fb-dac05a82fbb1, 19.9, null).
-db-1              | 2025-07-30 00:31:04.973 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:04 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:04.990 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:04.990 UTC [86] DETAIL:  Failing row contains (abbc0e6a-fa85-41da-845c-edd1dde00512, 19.9, null).
-db-1              | 2025-07-30 00:31:04.990 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:04 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-rinha2025-app-02  | 2025/07/30 00:31:05 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:05.026 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:05.026 UTC [86] DETAIL:  Failing row contains (6590549c-f945-4b24-b900-28eb91110eb8, 19.9, null).
-db-1              | 2025-07-30 00:31:05.026 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-db-1              | 2025-07-30 00:31:05.044 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-rinha2025-app-02  | 2025/07/30 00:31:05 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:05.044 UTC [86] DETAIL:  Failing row contains (23c393d1-dd16-41f9-af72-8ab0bd2e53a7, 19.9, null).
-db-1              | 2025-07-30 00:31:05.044 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-db-1              | 2025-07-30 00:31:05.062 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:05.062 UTC [86] DETAIL:  Failing row contains (e2e780f6-0c77-40d7-8c01-702f3db259f4, 19.9, null).
-db-1              | 2025-07-30 00:31:05.062 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:05 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:05.113 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:05.113 UTC [86] DETAIL:  Failing row contains (8b696e3c-b7a5-49c7-be1c-e84f7f5a76a1, 19.9, null).
-db-1              | 2025-07-30 00:31:05.113 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:05 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:05.118 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:05.118 UTC [86] DETAIL:  Failing row contains (0023cf2b-d0d5-41da-8e99-7208976b4a1c, 19.9, null).
-db-1              | 2025-07-30 00:31:05.118 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:05 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:05.126 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:05.126 UTC [86] DETAIL:  Failing row contains (67b27259-46c7-40bd-bd96-58fd40d9a39f, 19.9, null).
-db-1              | 2025-07-30 00:31:05.126 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-db-1              | 2025-07-30 00:31:05.127 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:05.127 UTC [86] DETAIL:  Failing row contains (eb2b1ef4-73cf-443b-90b2-ffbd6d191c97, 19.9, null).
-db-1              | 2025-07-30 00:31:05.127 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:05 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-rinha2025-app-02  | 2025/07/30 00:31:05 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:05.163 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:05.163 UTC [86] DETAIL:  Failing row contains (dd695874-ff52-4db3-9025-33848e09fc5f, 19.9, null).
-db-1              | 2025-07-30 00:31:05.163 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:05 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:05.203 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:05.203 UTC [86] DETAIL:  Failing row contains (ce2a541e-0116-4bba-a558-d4509c8feda7, 19.9, null).
-db-1              | 2025-07-30 00:31:05.203 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:05 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:05.204 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:05.204 UTC [86] DETAIL:  Failing row contains (bf1c2d51-188d-4809-8ae7-124f98b09542, 19.9, null).
-db-1              | 2025-07-30 00:31:05.204 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:05 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:05.214 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:05.214 UTC [86] DETAIL:  Failing row contains (b40ea688-e7ab-466a-adbe-c0cead5851cf, 19.9, null).
-db-1              | 2025-07-30 00:31:05.214 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:05 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:05.267 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:05.267 UTC [86] DETAIL:  Failing row contains (4be7820e-b780-44b1-b234-2c334687155f, 19.9, null).
-db-1              | 2025-07-30 00:31:05.267 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:05 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-rinha2025-app-02  | 2025/07/30 00:31:05 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:05.304 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:05.304 UTC [86] DETAIL:  Failing row contains (84350233-f0e6-4426-beb2-e27a7ae76094, 19.9, null).
-db-1              | 2025-07-30 00:31:05.304 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-db-1              | 2025-07-30 00:31:05.325 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:05.325 UTC [86] DETAIL:  Failing row contains (7e58de32-4662-4c51-acb2-10161e875c7e, 19.9, null).
-db-1              | 2025-07-30 00:31:05.325 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-db-1              | 2025-07-30 00:31:05.326 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:05.326 UTC [86] DETAIL:  Failing row contains (b544932e-a096-41b5-832f-f75c4fc95e95, 19.9, null).
-db-1              | 2025-07-30 00:31:05.326 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:05 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-rinha2025-app-02  | 2025/07/30 00:31:05 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:05.347 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:05.347 UTC [86] DETAIL:  Failing row contains (3d037d0b-540c-42b5-87d3-acfefc5ed5dd, 19.9, null).
-db-1              | 2025-07-30 00:31:05.347 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-db-1              | 2025-07-30 00:31:05.347 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:05.347 UTC [86] DETAIL:  Failing row contains (ebd5aea3-7c80-47c8-bd4a-96a669860471, 19.9, null).
-rinha2025-app-02  | 2025/07/30 00:31:05 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:05.347 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:05 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-rinha2025-app-02  | 2025/07/30 00:31:05 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:05.364 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:05.364 UTC [86] DETAIL:  Failing row contains (40e70f2d-06d3-48b3-aaf7-c51da28a093d, 19.9, null).
-db-1              | 2025-07-30 00:31:05.364 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-db-1              | 2025-07-30 00:31:05.397 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:05.397 UTC [86] DETAIL:  Failing row contains (294bdb2c-c88f-49c4-aa1e-1a5a77ccc36c, 19.9, null).
-db-1              | 2025-07-30 00:31:05.397 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:05 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:05.429 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:05.429 UTC [86] DETAIL:  Failing row contains (8fe63d87-4b65-49bd-9ec4-e1b51e70dceb, 19.9, null).
-db-1              | 2025-07-30 00:31:05.429 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:05 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:05.433 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:05.433 UTC [86] DETAIL:  Failing row contains (4ec99596-df5d-4775-85e6-1c3fadc7638a, 19.9, null).
-db-1              | 2025-07-30 00:31:05.433 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:05 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:05.465 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:05.465 UTC [86] DETAIL:  Failing row contains (72783ef2-5781-4e5e-b52f-8024e70ac3df, 19.9, null).
-db-1              | 2025-07-30 00:31:05.465 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:05 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:05.494 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:05.494 UTC [86] DETAIL:  Failing row contains (16e12384-30e3-4e6a-bbff-15ecbfecf390, 19.9, null).
-db-1              | 2025-07-30 00:31:05.494 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:05 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:05.526 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:05.526 UTC [86] DETAIL:  Failing row contains (31343a07-2d66-4323-a8bb-279bcb914f43, 19.9, null).
-db-1              | 2025-07-30 00:31:05.526 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:05 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:05.528 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:05.528 UTC [86] DETAIL:  Failing row contains (bb58a953-22b9-4a28-a56c-5ee099c44441, 19.9, null).
-db-1              | 2025-07-30 00:31:05.528 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:05 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:05.530 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:05.530 UTC [86] DETAIL:  Failing row contains (a36c5ac6-9c5a-4f3f-bb0a-e928004b83ae, 19.9, null).
-db-1              | 2025-07-30 00:31:05.530 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:05 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
-db-1              | 2025-07-30 00:31:05.534 UTC [86] ERROR:  null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint
-db-1              | 2025-07-30 00:31:05.534 UTC [86] DETAIL:  Failing row contains (b11a9d2e-6eb4-423d-8423-a6bdc9beeceb, 19.9, null).
-db-1              | 2025-07-30 00:31:05.534 UTC [86] STATEMENT:  INSERT INTO failed_payments_queue (correlation_id, amount) VALUES ($1, $2)
-rinha2025-app-02  | 2025/07/30 00:31:05 Failed to insert payment into db queue: ERROR: null value in column "requested_at" of relation "failed_payments_queue" violates not-null constraint (SQLSTATE 23502)
+[Krinha-nginx exited with code 0
+rinha2025-app-02  | 2025/08/02 16:59:07 Stopped serving on port 8080
+rinha2025-app-02  | 2025/08/02 16:59:07 Server gracefully stopped
+rinha2025-app-01  | 2025/08/02 16:59:07 Stopped serving on port 8080
+rinha2025-app-01  | 2025/08/02 16:59:07 Server gracefully stopped
+[Krinha2025-app-01 exited with code 0
+[Krinha2025-app-02 exited with code 0
+db-1              | 2025-08-02 16:59:08.465 UTC [1] LOG:  received fast shutdown request
+db-1              | 2025-08-02 16:59:08.473 UTC [1] LOG:  aborting any active transactions
+db-1              | 2025-08-02 16:59:08.476 UTC [1] LOG:  background worker "logical replication launcher" (PID 62) exited with exit code 1
+db-1              | 2025-08-02 16:59:08.481 UTC [57] LOG:  shutting down
+db-1              | 2025-08-02 16:59:08.490 UTC [57] LOG:  checkpoint starting: shutdown immediate
+db-1              | 2025-08-02 16:59:08.627 UTC [57] LOG:  checkpoint complete: wrote 339 buffers (2.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.019 s, sync=0.059 s, total=0.146 s; sync files=41, longest=0.048 s, average=0.002 s; distance=932 kB, estimate=932 kB; lsn=0/1A0AB58, redo lsn=0/1A0AB58
+db-1              | 2025-08-02 16:59:08.634 UTC [1] LOG:  database system is shut down
+[Kdb-1 exited with code 0
 log truncated at line 1000
