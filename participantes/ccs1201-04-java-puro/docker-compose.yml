@@ -1,9 +1,6 @@
 x-backend-templates:
   app: &app
-    #    build:
-    #      context: .
-    #      dockerfile: Dockerfile
-    image: csouzadocker/java-http-server-postgres:0.0.4
+    image: csouzadocker/java-http-server-postgres:0.0.5
     depends_on:
       backend-db:
         condition: service_healthy
@@ -19,7 +16,7 @@ x-backend-templates:
       resources:
         limits:
           cpus: "0.6"
-          memory: "117.50MB"
+          memory: "100MB"
 
   app-env: &app-env
     DATASOURCE_CLASS_NAME: "org.postgresql.Driver"
@@ -31,9 +28,9 @@ x-backend-templates:
     DATASOURCE_USERNAME: "rinha"
     PAYMENT_PROCESSOR_DEFAULT_URL: "http://payment-processor-default:8080"
     PAYMENT_PROCESSOR_FALLBACK_URL: "http://payment-processor-fallback:8080"
-    PAYMENT_PROCESSOR_WORKERS: "2"
+    PAYMENT_PROCESSOR_WORKERS: "10"
     PAYMENT_PROCESSOR_REQUEST_TIMEOUT: "6000"
-    PAYMENT_QUEUE: "1000"
+    PAYMENT_QUEUE: "3000"
     SERVER_PORT: "8080"
     THREAD_POOL_SIZE: "8"
     THREAD_QUEUE_SIZE: "500"
@@ -59,7 +56,7 @@ services:
       resources:
         limits:
           cpus: "0.1"
-          memory: "15MB"
+          memory: "50MB"
 
   app1:
     <<: *app
