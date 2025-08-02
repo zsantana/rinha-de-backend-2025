@@ -1,6 +1,6 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Sat Aug  2 07:22:36 PM -03 2025**
-214 submissões / 187 resultados / 27 submissões com erro
+Atualizado em **Sat Aug  2 07:30:13 PM -03 2025**
+215 submissões / 188 resultados / 27 submissões com erro
 
 
 | participante | p99 | bônus por desempenho (%) | multa ($) | lucro | submissão |
@@ -183,6 +183,7 @@ Atualizado em **Sat Aug  2 07:22:36 PM -03 2025**
 |	wallacemendes-node	|	170.4ms	|	0%	|	0	|	303940.6599999682	|	[wallacemendes-node](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/wallacemendes-node)
 |	wellington-pacheco-fine-tunning	|	3.7ms	|	15%	|	0	|	363904.68325	|	[wellington-pacheco-fine-tunning](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/wellington-pacheco-fine-tunning)
 |	wellington-pacheco	|	2.84ms	|	16%	|	0	|	367208.73000003176	|	[wellington-pacheco](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/wellington-pacheco)
+|	wesley-frias	|	2.51ms	|	17%	|	0	|	370446.4998	|	[wesley-frias](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/wesley-frias)
 |	wiliansimoes-dotnet	|	48.92ms	|	0%	|	0	|	307595.295	|	[wiliansimoes-dotnet](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/wiliansimoes-dotnet)
 |	willianmarquess-lua-luvit	|	25.1ms	|	0%	|	0	|	0	|	[willianmarquess-lua-luvit](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/willianmarquess-lua-luvit)
 |	willianmarquess-node	|	23.76ms	|	0%	|	0	|	313106.6	|	[willianmarquess-node](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/willianmarquess-node)
