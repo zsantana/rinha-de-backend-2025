@@ -16,12 +16,10 @@ services:
       retries: 3
 
   backend1:
-    image: lsfratel/rinha-2025-python:5
+    image: lsfratel/rinha-2025-python:6
     command: ["python", "-m", "backend"]
     environment:
       - KEYDB_URL=redis://keydb:6379
-      - DEFAULT_PAYMENT_URL=http://payment-processor-default:8080
-      - FALLBAK_PAYMENT_URL=http://payment-processor-fallback:8080
     deploy:
       resources:
         limits:
@@ -39,12 +37,10 @@ services:
       retries: 3
 
   backend2:
-    image: lsfratel/rinha-2025-python:5
+    image: lsfratel/rinha-2025-python:6
     command: ["python", "-m", "backend"]
     environment:
       - KEYDB_URL=redis://keydb:6379
-      - DEFAULT_PAYMENT_URL=http://payment-processor-default:8080
-      - FALLBAK_PAYMENT_URL=http://payment-processor-fallback:8080
     deploy:
       resources:
         limits:
@@ -62,13 +58,15 @@ services:
       retries: 3
 
   worker:
-    image: lsfratel/rinha-2025-python:5
+    image: lsfratel/rinha-2025-python:6
     command: ["python", "-m", "worker"]
     environment:
       - KEYDB_URL=redis://keydb:6379
       - DEFAULT_PAYMENT_URL=http://payment-processor-default:8080
       - FALLBAK_PAYMENT_URL=http://payment-processor-fallback:8080
-      - WORKER_POOL_SIZE=250
+      - NUM_WORKERS=15
+      - BACKOFF_FACTOR=0.3
+      - NUM_OF_RETRY=6
     deploy:
       resources:
         limits:
