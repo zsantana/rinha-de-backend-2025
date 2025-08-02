@@ -5,20 +5,21 @@
  Container redis  Created
  Container codevsk-go-1-api02-1  Creating
  Container codevsk-go-1-api01-1  Creating
- Container codevsk-go-1-api01-1  Created
  Container codevsk-go-1-api02-1  Created
+ Container codevsk-go-1-api01-1  Created
  Container nginx  Creating
  Container nginx  Created
 Attaching to api01-1, api02-1, nginx, redis
-redis    | 1:C 28 Jul 2025 18:01:34.875 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
-redis    | 1:C 28 Jul 2025 18:01:34.875 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
-redis    | 1:C 28 Jul 2025 18:01:34.875 * Redis version=7.2.10, bits=64, commit=00000000, modified=0, pid=1, just started
-redis    | 1:C 28 Jul 2025 18:01:34.875 * Configuration loaded
-redis    | 1:M 28 Jul 2025 18:01:34.875 * monotonic clock: POSIX clock_gettime
-redis    | 1:M 28 Jul 2025 18:01:34.877 * Running mode=standalone, port=6379.
-redis    | 1:M 28 Jul 2025 18:01:34.877 * Server initialized
-redis    | 1:M 28 Jul 2025 18:01:34.877 * Ready to accept connections tcp
-api01-1  | 2025/07/28 18:01:40 No .env file found, using system environment variables
+redis    | 1:C 31 Jul 2025 00:11:52.166 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+redis    | 1:C 31 Jul 2025 00:11:52.167 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+redis    | 1:C 31 Jul 2025 00:11:52.167 * Redis version=7.2.10, bits=64, commit=00000000, modified=0, pid=1, just started
+redis    | 1:C 31 Jul 2025 00:11:52.167 * Configuration loaded
+redis    | 1:M 31 Jul 2025 00:11:52.167 * monotonic clock: POSIX clock_gettime
+redis    | 1:M 31 Jul 2025 00:11:52.169 * Running mode=standalone, port=6379.
+redis    | 1:M 31 Jul 2025 00:11:52.170 * Server initialized
+redis    | 1:M 31 Jul 2025 00:11:52.170 * Ready to accept connections tcp
+api02-1  | 2025/07/31 00:11:58 No .env file found, using system environment variables
+api01-1  | 2025/07/31 00:11:58 No .env file found, using system environment variables
 api01-1  | 
 api01-1  |  ┌───────────────────────────────────────────────────┐ 
 api01-1  |  │                      CodeVSK                      │ 
@@ -30,7 +31,6 @@ api01-1  |  │ Handlers ............. 3  Processes ........... 1 │
 api01-1  |  │ Prefork ....... Disabled  PID ................. 1 │ 
 api01-1  |  └───────────────────────────────────────────────────┘ 
 api01-1  | 
-api02-1  | 2025/07/28 18:01:41 No .env file found, using system environment variables
 api02-1  | 
 api02-1  |  ┌───────────────────────────────────────────────────┐ 
 api02-1  |  │                      CodeVSK                      │ 
@@ -54,8 +54,8 @@ nginx    | /docker-entrypoint.sh: Configuration complete; ready for start up
 [Knginx exited with code 0
 [Kapi01-1 exited with code 2
 [Kapi02-1 exited with code 2
-redis    | 1:signal-handler (1753725770) Received SIGTERM scheduling shutdown...
-redis    | 1:M 28 Jul 2025 18:02:50.369 * User requested shutdown...
-redis    | 1:M 28 Jul 2025 18:02:50.369 # Redis is now ready to exit, bye bye...
+redis    | 1:signal-handler (1753920788) Received SIGTERM scheduling shutdown...
+redis    | 1:M 31 Jul 2025 00:13:08.379 * User requested shutdown...
+redis    | 1:M 31 Jul 2025 00:13:08.379 # Redis is now ready to exit, bye bye...
 [Kredis exited with code 0
 log truncated at line 1000

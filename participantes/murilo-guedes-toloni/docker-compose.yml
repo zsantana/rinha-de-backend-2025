@@ -1,24 +1,24 @@
 services:
-  nginx:
-    image: nginx:1.25-alpine
-    container_name: my-nginx
+  haproxy:
+    image: haproxy:2.9-alpine
+    container_name: my-haproxy
+    ports:
+      - "9999:9999"
     volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
     depends_on:
       - api1
       - api2
-    ports:
-      - "9999:9999"
     networks:
       - backend
       - payment-processor
     deploy:
       resources:
         limits:
-          cpus: "0.3"
-          memory: "50MB"
+          cpus: "0.6"
+          memory: "70MB"
   api1: &api
-    image: enermaxx/rinha-backend:1.5.0
+    image: enermaxx/rinha-backend:4.0.0
     container_name: springboot-api1
     hostname: api1
     ports:
@@ -37,8 +37,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.60"
-          memory: "150MB"
+          cpus: "0.45"
+          memory: "140MB"
 
   api2:
     <<: *api
@@ -57,8 +57,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.60"
-          memory: "150MB"
+          cpus: "0.45"
+          memory: "140MB"
 networks:
   backend:
     driver: bridge
