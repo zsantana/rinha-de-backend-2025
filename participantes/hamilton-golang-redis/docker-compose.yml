@@ -5,7 +5,7 @@ x-rinha-api-base: &rinha-api-base
   networks:
     - app-network
     - payment-processor
-  deploy:
+  deploy: &rinha-api-deploy
     resources:
       limits:
         cpus: "0.25"
@@ -57,6 +57,7 @@ services:
   rinha-api-4:
     <<: *rinha-api-base
     container_name: rinha-api-4
+    cpus: "0.2"
 
   redis:
     image: redis:7.2.4-alpine
