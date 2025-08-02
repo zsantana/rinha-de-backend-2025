@@ -8,7 +8,7 @@ services:
     ports:
       - "8081:8080"
     environment:
-      PROCESS_THREAD_POOL: 15
+      PROCESS_THREAD_POOL: 20
       QUARKUS_REST_CLIENT_DEFAULT_API_URL: http://payment-processor-default:8080
       QUARKUS_REST_CLIENT_FALLBACK_API_URL: http://payment-processor-fallback:8080
       QUARKUS_REST_CLIENT_STORAGE_API_URL: http://api2:8080
