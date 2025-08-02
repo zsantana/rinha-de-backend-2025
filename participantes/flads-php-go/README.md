@@ -1,10 +1,11 @@
-# Rinha de Backend 2025 - PHP
+# Rinha de Backend 2025 - PHP e Go
 
-[Aqui](https://github.com/flads/rinha25/tree/php) você pode acessar o código fonte do projeto.
+[Aqui](https://github.com/flads/rinha25/tree/php-go) você pode acessar o código fonte do projeto.
 
 ##### Tecnologias utilizadas:
 
 * [PHP](https://www.php.net/releases/8.4/en.php) - Linguagem de programação.
+* [Go](https://go.dev/) - Linguagem de programação.
 * [Redis](https://redis.io/) - Banco de dados em memória.
 * [Nginx](https://nginx.org/) - Servidor web HTTP e load balancer.
 
@@ -14,12 +15,12 @@ A tabela abaixo mostra como os recursos foram alocados:
 
 | Serviço      | CPU  | Memória   |
 |--------------|------|-----------|
-|  **api-1**   | 0.25 | 50MB      |
-|  **api-2**   | 0.25 | 50MB      |
-| **worker-1** | 0.30 | 102.5MB   |
-| **worker-2** | 0.30 | 102.5MB   |
-|  **nginx**   | 0.15 | 15MB      |
-|  **redis**   | 0.25 | 30MB      |
+|  **api-1**   | 0.15 | 50MB      |
+|  **api-2**   | 0.15 | 50MB      |
+| **worker-1** | 0.40 | 100MB     |
+| **worker-2** | 0.40 | 100MB     |
+|  **nginx**   | 0.20 | 20MB      |
+|  **redis**   | 0.20 | 30MB      |
 |  **Total**   | 1.50 | 350MB     |
 
 ##### Arquitetura dos Serviços
