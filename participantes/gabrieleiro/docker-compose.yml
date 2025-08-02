@@ -38,7 +38,7 @@ services:
       ADDRESS: ":7777"
 
   load-balancer:
-    image: gabrieleiro/rinha-de-backend-2025-load-balancer:1.0
+    image: gabrieleiro/rinha-de-backend-2025-load-balancer:2.0
     networks:
       - rinha-de-backend-2025
     deploy:
