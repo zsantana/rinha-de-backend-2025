@@ -9,9 +9,9 @@ Este projeto foi construído com foco em performance e resiliência.
 - **Java 17**
 - **Quarkus** (modo nativo via GraalVM)
 - **Maven** (gerenciador de dependências)
-- **PostgreSQL** (banco de dados relacional)
 - **Nginx** (load balancer)
 - **k6** (testes de carga)
 - **Makefile** (automatização de comandos de build, testes e infraestrutura)
 
-Conheça o projeto clicando [aqui](https://github.com/Maxel-Uds/payment-router)
+Conheça o router clicando [aqui](https://github.com/Maxel-Uds/payment-router)
+Conheça o storage clicando [aqui](https://github.com/Maxel-Uds/payment-storage)
