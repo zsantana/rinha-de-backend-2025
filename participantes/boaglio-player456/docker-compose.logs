@@ -1,0 +1,107 @@
+
+ Network rinha-de-backend-3_back-end  Creating
+ Network rinha-de-backend-3_back-end  Created
+ Container javinha-redis  Creating
+ Container javinha-redis  Created
+ Container javinha2  Creating
+ Container javinha1  Creating
+ Container javinha2  Created
+ Container javinha1  Created
+ Container javinha-nginx  Creating
+ Container javinha-nginx  Created
+Attaching to javinha-nginx, javinha-redis, javinha1, javinha2
+javinha-redis  | 1:C 03 Aug 2025 15:41:07.186 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+javinha-redis  | 1:C 03 Aug 2025 15:41:07.186 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+javinha-redis  | 1:C 03 Aug 2025 15:41:07.186 * Redis version=7.2.10, bits=64, commit=00000000, modified=0, pid=1, just started
+javinha-redis  | 1:C 03 Aug 2025 15:41:07.186 * Configuration loaded
+javinha-redis  | 1:M 03 Aug 2025 15:41:07.187 * monotonic clock: POSIX clock_gettime
+javinha-redis  | 1:M 03 Aug 2025 15:41:07.187 * Running mode=standalone, port=6379.
+javinha-redis  | 1:M 03 Aug 2025 15:41:07.187 * Server initialized
+javinha-redis  | 1:M 03 Aug 2025 15:41:07.187 * Ready to accept connections tcp
+javinha2       | ──────────────────
+javinha2       | ──▄▄─────▄───▄▄▄▄▄
+javinha2       | ▄▀──▀▄──█─█──█───█
+javinha2       | █────█─█───█─█───█
+javinha2       | ─▀▄▄▀─▐▄▄▄▄▄▌█▄▄▄█
+javinha2       | ──────────────────
+javinha2       | 2025-08-03T15:41:13.044Z  INFO 1 --- [player456] [           main] c.b.player456.Player456Application       : Starting AOT-processed Player456Application using Java 24.0.1 with PID 1 (/workspace/com.boaglio.player456.Player456Application started by cnb in /workspace)
+javinha2       | 2025-08-03T15:41:13.045Z  INFO 1 --- [player456] [           main] c.b.player456.Player456Application       : No active profile set, falling back to 1 default profile: "default"
+javinha2       | 2025-08-03T15:41:13.064Z  INFO 1 --- [player456] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+javinha1       | ──────────────────
+javinha1       | ──▄▄─────▄───▄▄▄▄▄
+javinha1       | ▄▀──▀▄──█─█──█───█
+javinha1       | █────█─█───█─█───█
+javinha1       | ─▀▄▄▀─▐▄▄▄▄▄▌█▄▄▄█
+javinha1       | ──────────────────
+javinha1       | 2025-08-03T15:41:13.093Z  INFO 1 --- [player456] [           main] c.b.player456.Player456Application       : Starting AOT-processed Player456Application using Java 24.0.1 with PID 1 (/workspace/com.boaglio.player456.Player456Application started by cnb in /workspace)
+javinha1       | 2025-08-03T15:41:13.093Z  INFO 1 --- [player456] [           main] c.b.player456.Player456Application       : No active profile set, falling back to 1 default profile: "default"
+javinha2       | 2025-08-03T15:41:13.103Z  INFO 1 --- [player456] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+javinha2       | 2025-08-03T15:41:13.103Z  INFO 1 --- [player456] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
+javinha1       | 2025-08-03T15:41:13.111Z  INFO 1 --- [player456] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+javinha1       | 2025-08-03T15:41:13.112Z  INFO 1 --- [player456] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+javinha1       | 2025-08-03T15:41:13.112Z  INFO 1 --- [player456] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
+javinha2       | 2025-08-03T15:41:13.113Z  INFO 1 --- [player456] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+javinha2       | 2025-08-03T15:41:13.113Z  INFO 1 --- [player456] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 68 ms
+javinha1       | 2025-08-03T15:41:13.121Z  INFO 1 --- [player456] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+javinha1       | 2025-08-03T15:41:13.121Z  INFO 1 --- [player456] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 28 ms
+javinha2       | WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+javinha2       | WARNING: sun.misc.Unsafe::allocateMemory has been called by io.netty.util.internal.PlatformDependent0$2 (file:/workspace/com.boaglio.player456.Player456Application)
+javinha2       | WARNING: Please consider reporting this to the maintainers of class io.netty.util.internal.PlatformDependent0$2
+javinha2       | WARNING: sun.misc.Unsafe::allocateMemory will be removed in a future release
+javinha2       | WARNING: A restricted method in java.lang.System has been called
+javinha2       | WARNING: java.lang.System::loadLibrary has been called by io.netty.util.internal.NativeLibraryUtil in an unnamed module (file:/workspace/com.boaglio.player456.Player456Application)
+javinha2       | WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+javinha2       | WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+javinha2       | 
+javinha1       | WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+javinha1       | WARNING: sun.misc.Unsafe::allocateMemory has been called by io.netty.util.internal.PlatformDependent0$2 (file:/workspace/com.boaglio.player456.Player456Application)
+javinha1       | WARNING: Please consider reporting this to the maintainers of class io.netty.util.internal.PlatformDependent0$2
+javinha1       | WARNING: sun.misc.Unsafe::allocateMemory will be removed in a future release
+javinha1       | WARNING: A restricted method in java.lang.System has been called
+javinha1       | WARNING: java.lang.System::loadLibrary has been called by io.netty.util.internal.NativeLibraryUtil in an unnamed module (file:/workspace/com.boaglio.player456.Player456Application)
+javinha1       | WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+javinha1       | WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+javinha1       | 
+javinha2       | 2025-08-03T15:41:13.247Z  INFO 1 --- [player456] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+javinha2       | 2025-08-03T15:41:13.247Z  INFO 1 --- [player456] [           main] c.b.player456.Player456Application       : Started Player456Application in 0.218 seconds (process running for 0.223)
+javinha1       | 2025-08-03T15:41:13.248Z  INFO 1 --- [player456] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+javinha1       | 2025-08-03T15:41:13.249Z  INFO 1 --- [player456] [           main] c.b.player456.Player456Application       : Started Player456Application in 0.174 seconds (process running for 0.178)
+javinha-nginx  | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+javinha-nginx  | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+javinha-nginx  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+javinha-nginx  | 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+javinha-nginx  | 10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
+javinha-nginx  | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+javinha-nginx  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+javinha-nginx  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+javinha-nginx  | /docker-entrypoint.sh: Configuration complete; ready for start up
+javinha1       | 2025-08-03T15:41:14.724Z  INFO 1 --- [player456] [nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+javinha1       | 2025-08-03T15:41:14.724Z  INFO 1 --- [player456] [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+javinha1       | 2025-08-03T15:41:14.724Z  INFO 1 --- [player456] [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+javinha1       | 2025-08-03T15:41:14.726Z  WARN 1 --- [player456] [nio-8081-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'from' for method parameter type LocalDateTime is not present]
+javinha2       | 2025-08-03T15:41:19.738Z  INFO 1 --- [player456] [nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+javinha2       | 2025-08-03T15:41:19.738Z  INFO 1 --- [player456] [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+javinha2       | 2025-08-03T15:41:19.738Z  INFO 1 --- [player456] [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+javinha2       | 2025-08-03T15:41:19.739Z  WARN 1 --- [player456] [nio-8082-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'from' for method parameter type LocalDateTime is not present]
+javinha1       | 2025-08-03T15:41:24.749Z  WARN 1 --- [player456] [nio-8081-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'from' for method parameter type LocalDateTime is not present]
+javinha2       | 2025-08-03T15:41:29.760Z  WARN 1 --- [player456] [nio-8082-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'from' for method parameter type LocalDateTime is not present]
+javinha1       | 2025-08-03T15:41:34.770Z  WARN 1 --- [player456] [nio-8081-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'from' for method parameter type LocalDateTime is not present]
+javinha2       | 2025-08-03T15:41:39.780Z  WARN 1 --- [player456] [nio-8082-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'from' for method parameter type LocalDateTime is not present]
+javinha1       | 2025-08-03T15:41:44.790Z  WARN 1 --- [player456] [nio-8081-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'from' for method parameter type LocalDateTime is not present]
+javinha2       | 2025-08-03T15:41:49.799Z  WARN 1 --- [player456] [nio-8082-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'from' for method parameter type LocalDateTime is not present]
+javinha1       | 2025-08-03T15:41:54.811Z  WARN 1 --- [player456] [nio-8081-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'from' for method parameter type LocalDateTime is not present]
+javinha2       | 2025-08-03T15:41:59.822Z  WARN 1 --- [player456] [nio-8082-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'from' for method parameter type LocalDateTime is not present]
+javinha1       | 2025-08-03T15:42:04.831Z  WARN 1 --- [player456] [nio-8081-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'from' for method parameter type LocalDateTime is not present]
+javinha2       | 2025-08-03T15:42:09.844Z  WARN 1 --- [player456] [nio-8082-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'from' for method parameter type LocalDateTime is not present]
+javinha1       | 2025-08-03T15:42:14.855Z  WARN 1 --- [player456] [nio-8081-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'from' for method parameter type LocalDateTime is not present]
+[Kjavinha-nginx exited with code 0
+javinha1       | 2025-08-03T15:42:20.414Z  INFO 1 --- [player456] [ionShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+javinha1       | 2025-08-03T15:42:20.415Z  INFO 1 --- [player456] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+javinha2       | 2025-08-03T15:42:20.419Z  INFO 1 --- [player456] [ionShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+javinha2       | 2025-08-03T15:42:20.420Z  INFO 1 --- [player456] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+[Kjavinha1 exited with code 143
+[Kjavinha2 exited with code 143
+javinha-redis  | 1:signal-handler (1754235741) Received SIGTERM scheduling shutdown...
+javinha-redis  | 1:M 03 Aug 2025 15:42:21.174 * User requested shutdown...
+javinha-redis  | 1:M 03 Aug 2025 15:42:21.174 # Redis is now ready to exit, bye bye...
+[Kjavinha-redis exited with code 0
