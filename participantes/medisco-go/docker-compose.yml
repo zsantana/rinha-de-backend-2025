@@ -13,8 +13,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '0.3'
-          memory: 50MB
+          cpus: '0.4'
+          memory: 30MB
 
   rinha-2:
     image: ismaelcmedeiros/rinha:latest
@@ -30,8 +30,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '0.3'
-          memory: 50MB
+          cpus: '0.4'
+          memory: 30MB
 
   rinha-3:
     image: ismaelcmedeiros/rinha:latest
@@ -47,8 +47,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '0.3'
-          memory: 50MB
+          cpus: '0.4'
+          memory: 30MB
 
   db:
     image: postgres:15
@@ -65,8 +65,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '0.5'
-          memory: 150MB
+          cpus: '0.2'
+          memory: 230MB
 
   nginx:
     image: nginx:latest
@@ -84,7 +84,7 @@ services:
       resources:
         limits:
           cpus: '0.1'
-          memory: 50MB
+          memory: 30MB
 
 networks:
   rinha-network:
