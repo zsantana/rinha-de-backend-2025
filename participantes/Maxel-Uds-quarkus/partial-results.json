@@ -1,12 +1,12 @@
 {
   "participante": "Maxel-Uds-quarkus",
-  "total_liquido": 366052.9977,
+  "total_liquido": 373603.3164,
   "total_bruto": 333364.8,
-  "total_taxas": 20498.99,
+  "total_taxas": 16751.82,
   "descricao": "'total_liquido' é sua pontuação final. Equivale ao seu lucro. Fórmula: total_liquido + (total_liquido * p99.bonus) - (total_liquido * multa.porcentagem)",
   "p99": {
-    "valor": "2.54ms",
-    "bonus": "17%",
+    "valor": "1.96ms",
+    "bonus": "18%",
     "max_requests": "550",
     "descricao": "Fórmula para o bônus: max((11 - p99.valor) * 0.02, 0)"
   },
@@ -34,15 +34,15 @@
     "descricao": "'qtd_sucesso' foram requests bem sucedidos para 'POST /payments' e 'qtd_falha' os requests com erro."
   },
   "pagamentos_realizados_default": {
-    "total_bruto": 295057.3,
-    "num_pagamentos": 14827,
-    "total_taxas": 14752.865,
+    "total_bruto": 332529,
+    "num_pagamentos": 16710,
+    "total_taxas": 16626.45,
     "descricao": "Informações do backend sobre solicitações de pagamento para o Payment Processor Default."
   },
   "pagamentos_realizados_fallback": {
-    "total_bruto": 38307.5,
-    "num_pagamentos": 1925,
-    "total_taxas": 5746.125,
+    "total_bruto": 835.8,
+    "num_pagamentos": 42,
+    "total_taxas": 125.37,
     "descricao": "Informações do backend sobre solicitações de pagamento para o Payment Processor Fallback."
   }
 }
