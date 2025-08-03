@@ -1,6 +1,6 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Sun Aug  3 05:51:04 PM -03 2025**
-222 submissões / 197 resultados / 25 submissões com erro
+Atualizado em **Sun Aug  3 06:00:40 PM -03 2025**
+223 submissões / 197 resultados / 26 submissões com erro
 
 
 | participante | p99 | bônus por desempenho (%) | multa ($) | lucro | submissão |
@@ -63,7 +63,7 @@ Atualizado em **Sun Aug  3 05:51:04 PM -03 2025**
 |	felipeamorim-rust	|	4.65ms	|	13%	|	0	|	357674.84895	|	[felipeamorim-rust](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/felipeamorim-rust)
 |	felipefrmelo-rust	|	11.76ms	|	0%	|	0	|	250302.2	|	[felipefrmelo-rust](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/felipefrmelo-rust)
 |	felipemcassiano	|	68.15ms	|	0%	|	0	|	0	|	[felipemcassiano](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/felipemcassiano)
-|	felipeschirmann	|	3.78ms	|	14%	|	72168.89225	|	162895.49965	|	[felipeschirmann](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/felipeschirmann)
+|	felipeschirmann	|	2.91ms	|	16%	|	71889.2475	|	166372.2585	|	[felipeschirmann](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/felipeschirmann)
 |	fhgm-dani-ed	|	57.78ms	|	0%	|	0	|	299613.405	|	[fhgm-dani-ed](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/fhgm-dani-ed)
 |	flads-php-go	|	5.53ms	|	11%	|	0	|	350554.6389	|	[flads-php-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/flads-php-go)
 |	flads-php	|	1003.81ms	|	0%	|	0	|	270098.72	|	[flads-php](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/flads-php)
@@ -219,6 +219,7 @@ Atualizado em **Sun Aug  3 05:51:04 PM -03 2025**
 | emilemoraes-java | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/emilemoraes-java) |
 | hoffmano | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/hoffmano) |
 | joaoprocopio | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/joaoprocopio) |
+| lipenvs | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/lipenvs) |
 | matheusf-lucas-and-luis-java1 | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/matheusf-lucas-and-luis-java1) |
 | mbenencase-python | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/mbenencase-python) |
 | medisco-go | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/medisco-go) |
