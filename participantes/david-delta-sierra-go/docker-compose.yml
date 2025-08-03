@@ -7,7 +7,7 @@ services:
         limits:
           cpus: "1.0"
           memory: 100M
-    image: daviddeltasierra/rinha-2025-go-2
+    image: daviddeltasierra/rinha-2025-go-2:1.0
     volumes:
       - socket-volume:/socket
     environment:
@@ -27,7 +27,7 @@ services:
         limits:
           cpus: "0.2"
           memory: 100M
-    image: daviddeltasierra/rinha-2025-go-2
+    image: daviddeltasierra/rinha-2025-go-2:1.0
     volumes:
       - socket-volume:/socket
     environment:
