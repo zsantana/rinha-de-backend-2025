@@ -58,7 +58,7 @@ services:
           memory: "100MB"
 
   app01:
-    image: ghcr.io/carlosqsilva/rinha-2025:latest
+    image: ghcr.io/carlosqsilva/rinha-2025:1.0.1
     container_name: app01
     environment:
       SOCKET: rinha.app01
@@ -81,7 +81,7 @@ services:
           memory: "85MB"
 
   app02:
-    image: ghcr.io/carlosqsilva/rinha-2025:latest
+    image: ghcr.io/carlosqsilva/rinha-2025:1.0.1
     container_name: app02
     environment:
       SOCKET: rinha.app02
