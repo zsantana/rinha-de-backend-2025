@@ -1,6 +1,6 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Sun Aug  3 06:42:45 PM -03 2025**
-222 submissões / 197 resultados / 25 submissões com erro
+Atualizado em **Sun Aug  3 06:50:54 PM -03 2025**
+223 submissões / 198 resultados / 25 submissões com erro
 
 
 | participante | p99 | bônus por desempenho (%) | multa ($) | lucro | submissão |
@@ -120,6 +120,7 @@ Atualizado em **Sun Aug  3 06:42:45 PM -03 2025**
 |	leeozaka-dotnet	|	2.29ms	|	17%	|	99209.80825	|	232434.4079	|	[leeozaka-dotnet](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/leeozaka-dotnet)
 |	leonardotomas-cs	|	58.76ms	|	0%	|	0	|	285306.3	|	[leonardotomas-cs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/leonardotomas-cs)
 |	leoralph	|	13.4ms	|	0%	|	0	|	316412.985	|	[leoralph](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/leoralph)
+|	lhuizf-bun	|	56.47ms	|	0%	|	0	|	309304.705	|	[lhuizf-bun](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/lhuizf-bun)
 |	lhuizf-dotnet	|	87.31ms	|	0%	|	0	|	200299.47	|	[lhuizf-dotnet](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/lhuizf-dotnet)
 |	libardi-dotnet-2	|	2.84ms	|	16%	|	110791.90675	|	256404.12705	|	[libardi-dotnet-2](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/libardi-dotnet-2)
 |	libardi-dotnet-3	|	8.76ms	|	4%	|	0	|	329102.618	|	[libardi-dotnet-3](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/libardi-dotnet-3)
