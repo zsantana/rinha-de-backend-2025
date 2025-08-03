@@ -1,35 +1,38 @@
+x-api_template: &api
+  image: ghcr.io/lothyriel/rinha_2025:v0.1.3
+  volumes:
+    - uds:/var/run
+  command: ["-m", "api"]
+  depends_on:
+    - worker
+  deploy:
+    resources:
+      limits:
+        cpus: "0.4"
+        memory: "60MB"
+
 services:
-  api_0: &api
-    image: ghcr.io/lothyriel/rinha_2025:v0.1.1
-    volumes:
-      - uds:/var/run
-    command: ["-m", "api"]
-    depends_on:
-      - worker
+  api_0:
+    <<: *api
     environment:
       NGINX_SOCKET: "/var/run/api_0.sock"
-      RUST_LOG: "warn"
-    deploy:
-      resources:
-        limits:
-          cpus: "0.3"
-          memory: "60MB"
+      RUST_LOG: "info"
 
   api_1:
     <<: *api
     environment:
       NGINX_SOCKET: "/var/run/api_1.sock"
-      RUST_LOG: "warn"
+      RUST_LOG: "info"
 
   worker:
-    image: ghcr.io/lothyriel/rinha_2025:v0.1.1
+    image: ghcr.io/lothyriel/rinha_2025:v0.1.3
     networks:
       - payment-processor
     volumes:
       - uds:/var/run
     command: ["-m", "worker"]
     environment:
-      RUST_LOG: "warn"
+      RUST_LOG: "info"
     ulimits:
       nofile:
         soft: 16384
@@ -37,7 +40,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.6"
+          cpus: "0.4"
           memory: "200MB"
 
   nginx:
