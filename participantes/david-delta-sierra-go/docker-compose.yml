@@ -38,7 +38,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.4"
+          cpus: "0.35"
           memory: 80M
     image: daviddeltasierra/rinha-2025-go
     volumes:
@@ -59,7 +59,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.2"
+          cpus: "0.3"
           memory: 100M
     image: postgres:alpine
     user: postgres
