@@ -1,3 +1,2 @@
 
-# Rinha de Backend 2025 - Implementação em Go
-# Redis e fé!
+# Rinha de Backend 2025 - Implementação em Go + Redis  =)
