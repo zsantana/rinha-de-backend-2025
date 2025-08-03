@@ -1,0 +1,102 @@
+
+ Network david-delta-sierra-go_backend  Creating
+ Network david-delta-sierra-go_backend  Created
+ Volume "david-delta-sierra-go_socket-volume"  Creating
+ Volume "david-delta-sierra-go_socket-volume"  Created
+ Container david-delta-sierra-go-postgres-1  Creating
+ Container david-delta-sierra-go-postgres-1  Created
+ Container david-delta-sierra-go-app-2-1  Creating
+ Container david-delta-sierra-go-app-2-1  Created
+ Container david-delta-sierra-go-app-1-1  Creating
+ Container david-delta-sierra-go-app-1-1  Created
+Attaching to app-1-1, app-2-1, postgres-1
+postgres-1  | The files belonging to this database system will be owned by user "postgres".
+postgres-1  | This user must also own the server process.
+postgres-1  | 
+postgres-1  | The database cluster will be initialized with locale "en_US.utf8".
+postgres-1  | The default database encoding has accordingly been set to "UTF8".
+postgres-1  | The default text search configuration will be set to "english".
+postgres-1  | 
+postgres-1  | Data page checksums are disabled.
+postgres-1  | 
+postgres-1  | fixing permissions on existing directory /var/lib/postgresql/data ... ok
+postgres-1  | creating subdirectories ... ok
+postgres-1  | selecting dynamic shared memory implementation ... posix
+postgres-1  | selecting default "max_connections" ... 100
+postgres-1  | selecting default "shared_buffers" ... 128MB
+app-2-1     | panic: chmod : no such file or directory
+app-2-1     | 
+app-2-1     | goroutine 1 [running]:
+app-2-1     | main.main()
+app-2-1     | 	C:/Users/David/projetos pessoais/rinha-2025/main.go:20 +0xce
+postgres-1  | selecting default time zone ... UTC
+postgres-1  | creating configuration files ... ok
+app-1-1     | panic: chmod : no such file or directory
+app-1-1     | 
+app-1-1     | goroutine 1 [running]:
+app-1-1     | main.main()
+app-1-1     | 	C:/Users/David/projetos pessoais/rinha-2025/main.go:20 +0xce
+postgres-1  | running bootstrap script ... ok
+[Kapp-2-1 exited with code 2
+[Kapp-1-1 exited with code 2
+postgres-1  | sh: locale: not found
+postgres-1  | 2025-08-03 16:14:28.314 UTC [23] WARNING:  no usable system locales were found
+postgres-1  | performing post-bootstrap initialization ... ok
+postgres-1  | syncing data to disk ... ok
+postgres-1  | 
+postgres-1  | 
+postgres-1  | Success. You can now start the database server using:
+postgres-1  | 
+postgres-1  |     pg_ctl -D /var/lib/postgresql/data -l logfile start
+postgres-1  | 
+postgres-1  | initdb: warning: enabling "trust" authentication for local connections
+postgres-1  | initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
+postgres-1  | waiting for server to start....2025-08-03 16:14:30.338 UTC [29] LOG:  starting PostgreSQL 17.5 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
+postgres-1  | 2025-08-03 16:14:30.343 UTC [29] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+postgres-1  | 2025-08-03 16:14:30.362 UTC [32] LOG:  database system was shut down at 2025-08-03 16:14:30 UTC
+postgres-1  | 2025-08-03 16:14:30.404 UTC [29] LOG:  database system is ready to accept connections
+postgres-1  |  done
+postgres-1  | server started
+postgres-1  | CREATE DATABASE
+postgres-1  | 
+postgres-1  | 
+postgres-1  | /usr/local/bin/docker-entrypoint.sh: running /docker-entrypoint-initdb.d/init.sql
+postgres-1  | ALTER DATABASE
+postgres-1  | ALTER SYSTEM
+postgres-1  | ALTER SYSTEM
+postgres-1  | ALTER SYSTEM
+postgres-1  | ALTER SYSTEM
+postgres-1  | ALTER SYSTEM
+postgres-1  | ALTER SYSTEM
+postgres-1  | CREATE TABLE
+postgres-1  | CREATE TABLE
+postgres-1  | INSERT 0 2
+postgres-1  | CREATE INDEX
+postgres-1  | 
+postgres-1  | 
+postgres-1  | waiting for server to shut down....2025-08-03 16:14:30.811 UTC [29] LOG:  received fast shutdown request
+postgres-1  | 2025-08-03 16:14:30.822 UTC [29] LOG:  aborting any active transactions
+postgres-1  | 2025-08-03 16:14:30.829 UTC [29] LOG:  background worker "logical replication launcher" (PID 35) exited with exit code 1
+postgres-1  | 2025-08-03 16:14:30.829 UTC [30] LOG:  shutting down
+postgres-1  | 2025-08-03 16:14:30.838 UTC [30] LOG:  checkpoint starting: shutdown immediate
+postgres-1  | 2025-08-03 16:14:31.040 UTC [30] LOG:  checkpoint complete: wrote 933 buffers (5.7%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.087 s, sync=0.089 s, total=0.212 s; sync files=321, longest=0.013 s, average=0.001 s; distance=4290 kB, estimate=4290 kB; lsn=0/191DC50, redo lsn=0/191DC50
+postgres-1  | 2025-08-03 16:14:31.047 UTC [29] LOG:  database system is shut down
+postgres-1  |  done
+postgres-1  | server stopped
+postgres-1  | 
+postgres-1  | PostgreSQL init process complete; ready for start up.
+postgres-1  | 
+postgres-1  | 2025-08-03 16:14:31.132 UTC [1] LOG:  starting PostgreSQL 17.5 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
+postgres-1  | 2025-08-03 16:14:31.132 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+postgres-1  | 2025-08-03 16:14:31.132 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+postgres-1  | 2025-08-03 16:14:31.132 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+postgres-1  | 2025-08-03 16:14:31.134 UTC [47] LOG:  database system was shut down at 2025-08-03 16:14:31 UTC
+postgres-1  | 2025-08-03 16:14:31.138 UTC [1] LOG:  database system is ready to accept connections
+postgres-1  | 2025-08-03 16:15:40.042 UTC [1] LOG:  received fast shutdown request
+postgres-1  | 2025-08-03 16:15:40.042 UTC [1] LOG:  aborting any active transactions
+postgres-1  | 2025-08-03 16:15:40.044 UTC [1] LOG:  background worker "logical replication launcher" (PID 50) exited with exit code 1
+postgres-1  | 2025-08-03 16:15:40.048 UTC [45] LOG:  shutting down
+postgres-1  | 2025-08-03 16:15:40.048 UTC [45] LOG:  checkpoint starting: shutdown immediate
+postgres-1  | 2025-08-03 16:15:40.049 UTC [45] LOG:  checkpoint complete: wrote 44 buffers (0.3%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=0, longest=0.000 s, average=0.000 s; distance=74 kB, estimate=74 kB; lsn=0/1930518, redo lsn=0/1930518
+postgres-1  | 2025-08-03 16:15:40.054 UTC [1] LOG:  database system is shut down
+[Kpostgres-1 exited with code 0
