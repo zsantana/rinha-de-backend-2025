@@ -15,7 +15,7 @@ services:
       resources:
         limits:
           cpus: "0.2"
-          memory: "60MB"
+          memory: "40MB"
 
   redis:
     image: redis:8.0.3
@@ -28,15 +28,16 @@ services:
       resources:
         limits:
           cpus: "0.3"
-          memory: "50MB"
+          memory: "40MB"
     healthcheck:
       test: ["CMD", "redis-cli", "ping"]
       interval: 10s
       timeout: 3s
       retries: 5
+    command: redis-server --maxmemory 35mb --maxmemory-policy allkeys-lru
 
   api-1: &api
-    image: kauska/rinha-backend-2025
+    image: kauska/rinha-backend-2025:1.1.0
     container_name: api-1
     depends_on:
       redis:
@@ -53,7 +54,7 @@ services:
       resources:
         limits:
           cpus: "0.5"
-          memory: "120MB"
+          memory: "128MB"
 
   api-2:
     <<: *api
