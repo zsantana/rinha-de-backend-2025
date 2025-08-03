@@ -1,0 +1,314 @@
+
+ app01 Pulling 
+ haproxy Pulling 
+ nats Pulling 
+ app02 Pulling 
+ haproxy Pulled 
+ da2918e7e243 Pulling fs layer 
+ da2918e7e243 Pulling fs layer 
+ 6c51dc8c9584 Pulling fs layer 
+ bbde2bcea4dd Pulling fs layer 
+ da2918e7e243 Downloading [>                                                  ]  131.1kB/12.44MB
+ da2918e7e243 Downloading [>                                                  ]  131.1kB/12.44MB
+ da2918e7e243 Downloading [===============================>                   ]  7.741MB/12.44MB
+ da2918e7e243 Downloading [===============================>                   ]  7.741MB/12.44MB
+ da2918e7e243 Verifying Checksum 
+ da2918e7e243 Download complete 
+ da2918e7e243 Download complete 
+ da2918e7e243 Extracting [>                                                  ]  131.1kB/12.44MB
+ da2918e7e243 Extracting [>                                                  ]  131.1kB/12.44MB
+ da2918e7e243 Extracting [=================================>                 ]  8.258MB/12.44MB
+ da2918e7e243 Extracting [=================================>                 ]  8.258MB/12.44MB
+ da2918e7e243 Extracting [==================================================>]  12.44MB/12.44MB
+ da2918e7e243 Extracting [==================================================>]  12.44MB/12.44MB
+ da2918e7e243 Pull complete 
+ da2918e7e243 Pull complete 
+ app02 Pulled 
+ app01 Pulled 
+ bbde2bcea4dd Downloading [==================================================>]     509B/509B
+ bbde2bcea4dd Verifying Checksum 
+ bbde2bcea4dd Download complete 
+ 6c51dc8c9584 Downloading [>                                                  ]  65.54kB/6.335MB
+ 6c51dc8c9584 Verifying Checksum 
+ 6c51dc8c9584 Download complete 
+ 6c51dc8c9584 Extracting [>                                                  ]  65.54kB/6.335MB
+ 6c51dc8c9584 Extracting [==================================================>]  6.335MB/6.335MB
+ 6c51dc8c9584 Pull complete 
+ bbde2bcea4dd Extracting [==================================================>]     509B/509B
+ bbde2bcea4dd Extracting [==================================================>]     509B/509B
+ bbde2bcea4dd Pull complete 
+ nats Pulled 
+ Network carlosqsilva-go_rinha  Creating
+ Network carlosqsilva-go_rinha  Created
+ Volume "carlosqsilva-go_data"  Creating
+ Volume "carlosqsilva-go_data"  Created
+ Volume "carlosqsilva-go_sockets"  Creating
+ Volume "carlosqsilva-go_sockets"  Created
+ Volume "carlosqsilva-go_nats"  Creating
+ Volume "carlosqsilva-go_nats"  Created
+ Container carlosqsilva-go-nats-1  Creating
+ Container carlosqsilva-go-nats-1  Created
+ Container app01  Creating
+ Container app01  Created
+ Container app02  Creating
+ Container app02  Created
+ Container proxy  Creating
+ Container proxy  Created
+Attaching to app01, app02, nats-1, proxy
+nats-1  | [1] 2025/08/03 16:48:50.919862 [INF] Starting nats-server
+nats-1  | [1] 2025/08/03 16:48:50.919922 [INF]   Version:  2.11.6
+nats-1  | [1] 2025/08/03 16:48:50.919926 [INF]   Git:      [bc813ee]
+nats-1  | [1] 2025/08/03 16:48:50.919930 [INF]   Name:     NDFXVCOGDBPE3QJVAVQV4PEALMBQTHNFJIW3LPLQDUY6FCVVL7D3MCFK
+nats-1  | [1] 2025/08/03 16:48:50.919935 [INF]   Node:     wnYvyXKe
+nats-1  | [1] 2025/08/03 16:48:50.919937 [INF]   ID:       NDFXVCOGDBPE3QJVAVQV4PEALMBQTHNFJIW3LPLQDUY6FCVVL7D3MCFK
+nats-1  | [1] 2025/08/03 16:48:50.920423 [INF] Starting JetStream
+nats-1  | [1] 2025/08/03 16:48:50.920668 [INF]     _ ___ _____ ___ _____ ___ ___   _   __  __
+nats-1  | [1] 2025/08/03 16:48:50.920679 [INF]  _ | | __|_   _/ __|_   _| _ \ __| /_\ |  \/  |
+nats-1  | [1] 2025/08/03 16:48:50.920682 [INF] | || | _|  | | \__ \ | | |   / _| / _ \| |\/| |
+nats-1  | [1] 2025/08/03 16:48:50.920684 [INF]  \__/|___| |_| |___/ |_| |_|_\___/_/ \_\_|  |_|
+nats-1  | [1] 2025/08/03 16:48:50.920686 [INF] 
+nats-1  | [1] 2025/08/03 16:48:50.920688 [INF]          https://docs.nats.io/jetstream
+nats-1  | [1] 2025/08/03 16:48:50.920690 [INF] 
+nats-1  | [1] 2025/08/03 16:48:50.920692 [INF] ---------------- JETSTREAM ----------------
+nats-1  | [1] 2025/08/03 16:48:50.920695 [INF]   Max Memory:      5.73 GB
+nats-1  | [1] 2025/08/03 16:48:50.920699 [INF]   Max Storage:     25.77 GB
+nats-1  | [1] 2025/08/03 16:48:50.920701 [INF]   Store Directory: "/data/jetstream"
+nats-1  | [1] 2025/08/03 16:48:50.920704 [INF]   API Level:       1
+nats-1  | [1] 2025/08/03 16:48:50.920707 [INF] -------------------------------------------
+nats-1  | [1] 2025/08/03 16:48:50.921165 [INF] Listening for client connections on 0.0.0.0:4222
+nats-1  | [1] 2025/08/03 16:48:50.921336 [INF] Server is ready
+app01   | [Fx] PROVIDE	fx.Lifecycle <= go.uber.org/fx.New.func1()
+app01   | [Fx] PROVIDE	fx.Shutdowner <= go.uber.org/fx.(*App).shutdowner-fm()
+app01   | [Fx] PROVIDE	fx.DotGraph <= go.uber.org/fx.(*App).dotGraph-fm()
+app01   | [Fx] PROVIDE	*config.Config <= github.com/carlosqsilva/rinha-2025/internal/config.New()
+app01   | [Fx] PROVIDE	*db.Queries <= github.com/carlosqsilva/rinha-2025/internal/db.Connect()
+app01   | [Fx] PROVIDE	*queue.Message <= github.com/carlosqsilva/rinha-2025/internal/queue.New()
+app01   | [Fx] PROVIDE	*handler.Handler <= github.com/carlosqsilva/rinha-2025/internal/handler.New()
+app01   | [Fx] PROVIDE	*healthcheck.HealthChecker <= github.com/carlosqsilva/rinha-2025/internal/health-check.New()
+app01   | [Fx] PROVIDE	*api.Api <= github.com/carlosqsilva/rinha-2025/internal/api.New()
+app01   | [Fx] INVOKE		main.main.func1()
+app01   | [Fx] BEFORE RUN	provide: go.uber.org/fx.New.func1()
+app01   | [Fx] RUN	provide: go.uber.org/fx.New.func1() in 7.67µs
+app01   | [Fx] BEFORE RUN	provide: github.com/carlosqsilva/rinha-2025/internal/config.New()
+app01   | [Fx] RUN	provide: github.com/carlosqsilva/rinha-2025/internal/config.New() in 6.869µs
+app01   | [Fx] BEFORE RUN	provide: github.com/carlosqsilva/rinha-2025/internal/queue.New()
+app01   | [Fx] RUN	provide: github.com/carlosqsilva/rinha-2025/internal/queue.New() in 3.280234ms
+app01   | [Fx] BEFORE RUN	provide: github.com/carlosqsilva/rinha-2025/internal/db.Connect()
+app01   | 2025/08/03 16:48:51 OK   001_intial.sql (813.8µs)
+app01   | 2025/08/03 16:48:51 goose: successfully migrated database to version: 1
+app01   | [Fx] RUN	provide: github.com/carlosqsilva/rinha-2025/internal/db.Connect() in 28.795243ms
+app01   | [Fx] BEFORE RUN	provide: github.com/carlosqsilva/rinha-2025/internal/handler.New()
+app01   | 
+app01   |  ┌───────────────────────────────────────────────────┐ 
+app01   |  │                   Fiber v2.52.8                   │ 
+app01   |  │           http://./sockets/rinha.app01:           │ 
+app01   |  │                                                   │ 
+app01   |  │ Handlers ............. 3  Processes ........... 1 │ 
+app01   |  │ Prefork ....... Disabled  PID ................. 1 │ 
+app01   |  └───────────────────────────────────────────────────┘ 
+app01   | 
+app01   | [Fx] RUN	provide: github.com/carlosqsilva/rinha-2025/internal/handler.New() in 156.031µs
+app01   | [Fx] BEFORE RUN	provide: github.com/carlosqsilva/rinha-2025/internal/api.New()
+app01   | [Fx] RUN	provide: github.com/carlosqsilva/rinha-2025/internal/api.New() in 140.431µs
+app01   | [Fx] BEFORE RUN	provide: github.com/carlosqsilva/rinha-2025/internal/health-check.New()
+app01   | [Fx] RUN	provide: github.com/carlosqsilva/rinha-2025/internal/health-check.New() in 4.265µs
+app01   | [Fx] HOOK OnStart		main.main.func1.1() executing (caller: main.main.func1)
+app01   | [Fx] HOOK OnStart		main.main.func1.1() called by main.main.func1 ran successfully in 6.098µs
+app01   | [Fx] RUNNING
+app02   | [Fx] PROVIDE	fx.Lifecycle <= go.uber.org/fx.New.func1()
+app02   | [Fx] PROVIDE	fx.Shutdowner <= go.uber.org/fx.(*App).shutdowner-fm()
+app02   | [Fx] PROVIDE	fx.DotGraph <= go.uber.org/fx.(*App).dotGraph-fm()
+app02   | [Fx] PROVIDE	*config.Config <= github.com/carlosqsilva/rinha-2025/internal/config.New()
+app02   | [Fx] PROVIDE	*db.Queries <= github.com/carlosqsilva/rinha-2025/internal/db.Connect()
+app02   | [Fx] PROVIDE	*queue.Message <= github.com/carlosqsilva/rinha-2025/internal/queue.New()
+app02   | [Fx] PROVIDE	*handler.Handler <= github.com/carlosqsilva/rinha-2025/internal/handler.New()
+app02   | [Fx] PROVIDE	*healthcheck.HealthChecker <= github.com/carlosqsilva/rinha-2025/internal/health-check.New()
+app02   | [Fx] PROVIDE	*api.Api <= github.com/carlosqsilva/rinha-2025/internal/api.New()
+app02   | [Fx] INVOKE		main.main.func1()
+app02   | [Fx] BEFORE RUN	provide: go.uber.org/fx.New.func1()
+app02   | [Fx] RUN	provide: go.uber.org/fx.New.func1() in 7.405µs
+app02   | [Fx] BEFORE RUN	provide: github.com/carlosqsilva/rinha-2025/internal/config.New()
+app02   | [Fx] RUN	provide: github.com/carlosqsilva/rinha-2025/internal/config.New() in 6.767µs
+app02   | [Fx] BEFORE RUN	provide: github.com/carlosqsilva/rinha-2025/internal/queue.New()
+app02   | [Fx] RUN	provide: github.com/carlosqsilva/rinha-2025/internal/queue.New() in 73.616399ms
+app02   | [Fx] BEFORE RUN	provide: github.com/carlosqsilva/rinha-2025/internal/db.Connect()
+app02   | 2025/08/03 16:48:51 goose: no migrations to run. current version: 1
+app02   | [Fx] RUN	provide: github.com/carlosqsilva/rinha-2025/internal/db.Connect() in 853.763µs
+app02   | [Fx] BEFORE RUN	provide: github.com/carlosqsilva/rinha-2025/internal/handler.New()
+app02   | [Fx] RUN	provide: github.com/carlosqsilva/rinha-2025/internal/handler.New() in 13.265µs
+app02   | [Fx] BEFORE RUN	provide: github.com/carlosqsilva/rinha-2025/internal/api.New()
+app02   | [Fx] RUN	provide: github.com/carlosqsilva/rinha-2025/internal/api.New() in 153.623µs
+app02   | [Fx] BEFORE RUN	provide: github.com/carlosqsilva/rinha-2025/internal/health-check.New()
+app02   | [Fx] RUN	provide: github.com/carlosqsilva/rinha-2025/internal/health-check.New() in 6.363µs
+app02   | [Fx] HOOK OnStart		main.main.func1.1() executing (caller: main.main.func1)
+app02   | [Fx] HOOK OnStart		main.main.func1.1() called by main.main.func1 ran successfully in 7.815µs
+app02   | [Fx] RUNNING
+app02   | 
+app02   |  ┌───────────────────────────────────────────────────┐ 
+app02   |  │                   Fiber v2.52.8                   │ 
+app02   |  │           http://./sockets/rinha.app02:           │ 
+app02   |  │                                                   │ 
+app02   |  │ Handlers ............. 3  Processes ........... 1 │ 
+app02   |  │ Prefork ....... Disabled  PID ................. 1 │ 
+app02   |  └───────────────────────────────────────────────────┘ 
+app02   | 
+proxy   | [NOTICE]   (1) : Initializing new worker (9)
+proxy   | [NOTICE]   (1) : Loading success.
+app02   | 2025/08/03 16:49:33 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app02   | 2025/08/03 16:49:33 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app02   | 2025/08/03 16:49:33 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app02   | 2025/08/03 16:49:33 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app02   | 2025/08/03 16:49:33 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app01   | 2025/08/03 16:49:33 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app01   | 2025/08/03 16:49:33 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app01   | 2025/08/03 16:49:33 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app02   | 2025/08/03 16:49:33 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app02   | 2025/08/03 16:49:33 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app02   | 2025/08/03 16:49:33 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app01   | 2025/08/03 16:49:33 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app01   | 2025/08/03 16:49:33 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app01   | 2025/08/03 16:49:33 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app01   | 2025/08/03 16:49:33 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app01   | 2025/08/03 16:49:33 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app02   | 2025/08/03 16:49:34 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app02   | 2025/08/03 16:49:34 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app02   | 2025/08/03 16:49:34 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app01   | 2025/08/03 16:49:34 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app02   | 2025/08/03 16:49:34 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app02   | 2025/08/03 16:49:34 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app02   | 2025/08/03 16:49:34 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app01   | 2025/08/03 16:49:34 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app01   | 2025/08/03 16:49:34 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app01   | 2025/08/03 16:49:34 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app01   | 2025/08/03 16:49:34 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app01   | 2025/08/03 16:49:34 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app02   | 2025/08/03 16:49:35 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app02   | 2025/08/03 16:49:35 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app02   | 2025/08/03 16:49:35 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app01   | 2025/08/03 16:49:35 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app02   | 2025/08/03 16:49:35 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app02   | 2025/08/03 16:49:35 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app02   | 2025/08/03 16:49:35 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app01   | 2025/08/03 16:49:35 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app01   | 2025/08/03 16:49:35 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app01   | 2025/08/03 16:49:35 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app01   | 2025/08/03 16:49:35 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app01   | 2025/08/03 16:49:35 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app02   | 2025/08/03 16:49:36 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app02   | 2025/08/03 16:49:36 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app01   | 2025/08/03 16:49:36 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app02   | 2025/08/03 16:49:36 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app02   | 2025/08/03 16:49:36 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app02   | 2025/08/03 16:49:36 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app01   | 2025/08/03 16:49:36 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app01   | 2025/08/03 16:49:36 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app02   | 2025/08/03 16:49:36 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app02   | 2025/08/03 16:49:36 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app02   | 2025/08/03 16:49:36 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app01   | 2025/08/03 16:49:36 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app01   | 2025/08/03 16:49:36 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app01   | 2025/08/03 16:49:36 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app01   | 2025/08/03 16:49:36 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app01   | 2025/08/03 16:49:36 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app02   | 2025/08/03 16:49:37 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app02   | 2025/08/03 16:49:37 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app01   | 2025/08/03 16:49:37 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app02   | 2025/08/03 16:49:37 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app02   | 2025/08/03 16:49:37 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app01   | 2025/08/03 16:49:37 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app01   | 2025/08/03 16:49:37 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app02   | 2025/08/03 16:49:37 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app02   | 2025/08/03 16:49:37 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app02   | 2025/08/03 16:49:37 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app02   | 2025/08/03 16:49:37 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app01   | 2025/08/03 16:49:37 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app01   | 2025/08/03 16:49:37 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app01   | 2025/08/03 16:49:37 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app01   | 2025/08/03 16:49:37 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app01   | 2025/08/03 16:49:37 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app02   | 2025/08/03 16:49:38 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app02   | 2025/08/03 16:49:38 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app01   | 2025/08/03 16:49:38 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app02   | 2025/08/03 16:49:38 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app02   | 2025/08/03 16:49:38 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app01   | 2025/08/03 16:49:38 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app02   | 2025/08/03 16:49:38 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app02   | 2025/08/03 16:49:38 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app01   | 2025/08/03 16:49:38 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app02   | 2025/08/03 16:49:38 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app02   | 2025/08/03 16:49:38 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app01   | 2025/08/03 16:49:38 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app01   | 2025/08/03 16:49:38 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app01   | 2025/08/03 16:49:38 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app01   | 2025/08/03 16:49:38 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app01   | 2025/08/03 16:49:38 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app02   | 2025/08/03 16:49:39 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app01   | 2025/08/03 16:49:39 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app02   | 2025/08/03 16:49:39 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app02   | 2025/08/03 16:49:39 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app02   | 2025/08/03 16:49:39 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app02   | 2025/08/03 16:49:39 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app01   | 2025/08/03 16:49:39 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app01   | 2025/08/03 16:49:39 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app02   | 2025/08/03 16:49:39 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app02   | 2025/08/03 16:49:39 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app02   | 2025/08/03 16:49:39 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app01   | 2025/08/03 16:49:39 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app01   | 2025/08/03 16:49:39 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app01   | 2025/08/03 16:49:39 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app01   | 2025/08/03 16:49:39 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app01   | 2025/08/03 16:49:39 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app02   | 2025/08/03 16:49:40 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app01   | 2025/08/03 16:49:40 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app02   | 2025/08/03 16:49:40 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app02   | 2025/08/03 16:49:40 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app02   | 2025/08/03 16:49:40 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app02   | 2025/08/03 16:49:40 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app02   | 2025/08/03 16:49:40 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app01   | 2025/08/03 16:49:40 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app01   | 2025/08/03 16:49:40 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app02   | 2025/08/03 16:49:40 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app02   | 2025/08/03 16:49:40 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app01   | 2025/08/03 16:49:40 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app01   | 2025/08/03 16:49:40 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app01   | 2025/08/03 16:49:40 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app01   | 2025/08/03 16:49:40 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app01   | 2025/08/03 16:49:40 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app01   | 2025/08/03 16:49:41 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app02   | 2025/08/03 16:49:41 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app02   | 2025/08/03 16:49:41 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app02   | 2025/08/03 16:49:41 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app02   | 2025/08/03 16:49:41 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app02   | 2025/08/03 16:49:41 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app02   | 2025/08/03 16:49:41 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app01   | 2025/08/03 16:49:41 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app01   | 2025/08/03 16:49:41 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app01   | 2025/08/03 16:49:41 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app01   | 2025/08/03 16:49:41 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+app01   | 2025/08/03 16:49:41 ERROR failed to process payment error="Invalid response status 500: failed to process payment"
+proxy   | [NOTICE]   (1) : haproxy version is 3.2.3-1844da7
+proxy   | [WARNING]  (1) : Exiting Master process...
+proxy   | [WARNING]  (9) : Proxy frontend stopped (cumulated conns: FE: 553, BE: 0).
+proxy   | [WARNING]  (9) : Proxy rinha stopped (cumulated conns: FE: 0, BE: 16723).
+proxy   | [WARNING]  (1) : Current worker (9) exited with code 0 (Exit)
+proxy   | [WARNING]  (1) : All workers exited. Exiting... (0)
+[Kproxy exited with code 0
+app02   | [Fx] HOOK OnStop		main.main.func1.2() executing (caller: main.main.func1)
+app02   | 2025/08/03 16:50:04 ERROR Server shutting down...
+app02   | 2025/08/03 16:50:04 ERROR Listener shutdown failed error="close unix ./sockets/rinha.app02: use of closed network connection"
+app02   | 2025/08/03 16:50:04 ERROR Failed to cleanup socket error="remove rinha.app02: no such file or directory"
+app02   | [Fx] HOOK OnStop		main.main.func1.2() called by main.main.func1 ran successfully in 1.27195ms
+[Kapp02 exited with code 0
+app01   | [Fx] HOOK OnStop		main.main.func1.2() executing (caller: main.main.func1)
+app01   | 2025/08/03 16:50:05 ERROR Server shutting down...
+app01   | 2025/08/03 16:50:05 ERROR Listener shutdown failed error="close unix ./sockets/rinha.app01: use of closed network connection"
+app01   | 2025/08/03 16:50:05 ERROR Failed to cleanup socket error="remove rinha.app01: no such file or directory"
+app01   | [Fx] HOOK OnStop		main.main.func1.2() called by main.main.func1 ran successfully in 1.485712ms
+[Kapp01 exited with code 0
+nats-1  | [1] 2025/08/03 16:50:05.982499 [INF] Trapped "terminated" signal
+nats-1  | [1] 2025/08/03 16:50:06.033501 [INF] Initiating Shutdown...
+nats-1  | [1] 2025/08/03 16:50:06.033528 [INF] Initiating JetStream Shutdown...
+nats-1  | [1] 2025/08/03 16:50:06.033785 [INF] JetStream Shutdown
+nats-1  | [1] 2025/08/03 16:50:06.033845 [INF] Server Exiting..
+[Knats-1 exited with code 0
+log truncated at line 1000
