@@ -1,6 +1,6 @@
 x-service-templates:
   go-backend: &go-backend
-    image: davidalecrim1/rinha-with-go-2025:v1.0.0-redis-extreme-api
+    image: davidalecrim1/rinha-with-go-2025:v1.1.0-redis-extreme-api
     networks:
       - app
       - payment-processor
@@ -12,8 +12,8 @@ services:
     <<: *go-backend
     container_name: go-backend-1
     environment:
-      - PAYMENT_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080
-      - PAYMENT_PROCESSOR_URL_FALLBACK=http://payment-processor-fallback:8080
+      - PAYMENT_PROCESSOR_URL_DEFAULT=payment-processor-default:8080
+      - PAYMENT_PROCESSOR_URL_FALLBACK=payment-processor-fallback:8080
       - PORT=80
       - REDIS_ADDR=redis-db:6379
       - ENABLE_PROFILING=false
@@ -29,8 +29,8 @@ services:
     <<: *go-backend
     container_name: go-backend-2
     environment:
-      - PAYMENT_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080
-      - PAYMENT_PROCESSOR_URL_FALLBACK=http://payment-processor-fallback:8080
+      - PAYMENT_PROCESSOR_URL_DEFAULT=payment-processor-default:8080
+      - PAYMENT_PROCESSOR_URL_FALLBACK=payment-processor-fallback:8080
       - PORT=80
       - REDIS_ADDR=redis-db:6379
       - ENABLE_PROFILING=false
@@ -44,7 +44,7 @@ services:
           memory: "50MB"
 
   go-worker-1:
-    image: davidalecrim1/rinha-with-go-2025:v1.0.0-redis-extreme-worker
+    image: davidalecrim1/rinha-with-go-2025:v1.1.0-redis-extreme-worker
     networks:
       - payment-processor
     depends_on:
@@ -52,12 +52,12 @@ services:
       - go-backend-1
       - go-backend-2
     environment:
-      - PAYMENT_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080
-      - PAYMENT_PROCESSOR_URL_FALLBACK=http://payment-processor-fallback:8080
+      - PAYMENT_PROCESSOR_URL_DEFAULT=payment-processor-default:8080
+      - PAYMENT_PROCESSOR_URL_FALLBACK=payment-processor-fallback:8080
       - REDIS_ADDR=redis-db:6379
       - MONITOR_HEALTH=true
       - ENABLE_PROFILING=false
-      - WORKERS=15
+      - WORKERS=50
     deploy:
       resources:
         limits:
@@ -83,7 +83,7 @@ services:
 
   load-balancer:
     container_name: load-balancer-extreme-proxy
-    image: davidalecrim1/extreme-proxy:v0.1.0
+    image: davidalecrim1/extreme-proxy:v0.4.0
     volumes:
       - ./config.yaml:/app/config.yaml:ro
     depends_on:

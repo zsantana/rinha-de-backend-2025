@@ -1,6 +1,6 @@
 x-service-templates:
   base: &base
-    image: josiney/rdb25_02-amd64:ae8517f3
+    image: josiney/rdb25_02-amd64:418ddd72
     volumes:
       - sockets:/sockets
     networks:
@@ -21,6 +21,9 @@ services:
     environment:
       - SOCKET_PATH=/sockets/api1.sock
       - WORKER_SOCKET_PATH=/sockets/worker_http.sock
+      - PAYMENTS_SOCKET_PATH=/sockets/payments.sock
+      - SUMMARY_SOCKET_PATH=/sockets/summary.sock
+      - PURGE_SOCKET_PATH=/sockets/purge.sock
       - PAYMENTS_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080/payments
       - PAYMENTS_PROCESSOR_URL_FALLBACK=http://payment-processor-fallback:8080/payments
       - HEALTH_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080/payments/service-health
@@ -41,6 +44,9 @@ services:
     environment:
       - SOCKET_PATH=/sockets/api2.sock
       - WORKER_SOCKET_PATH=/sockets/worker_http.sock
+      - PAYMENTS_SOCKET_PATH=/sockets/payments.sock
+      - SUMMARY_SOCKET_PATH=/sockets/summary.sock
+      - PURGE_SOCKET_PATH=/sockets/purge.sock
       - PAYMENTS_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080/payments
       - PAYMENTS_PROCESSOR_URL_FALLBACK=http://payment-processor-fallback:8080/payments
       - HEALTH_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080/payments/service-health
@@ -61,46 +67,9 @@ services:
     environment:
       - SOCKET_PATH=/sockets/api3.sock
       - WORKER_SOCKET_PATH=/sockets/worker_http.sock
-      - PAYMENTS_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080/payments
-      - PAYMENTS_PROCESSOR_URL_FALLBACK=http://payment-processor-fallback:8080/payments
-      - HEALTH_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080/payments/service-health
-      - HEALTH_PROCESSOR_URL_FALLBACK=http://payment-processor-fallback:8080/payments/service-health
-    command: sh -c "umask 0 && ./api"
-    depends_on:
-      - worker1
-
-  api4:
-    <<: *base
-    container_name: api4
-    hostname: api4
-    deploy:
-      resources:
-        limits:
-          cpus: "0.1"
-          memory: "30MB"
-    environment:
-      - SOCKET_PATH=/sockets/api4.sock
-      - WORKER_SOCKET_PATH=/sockets/worker_http.sock
-      - PAYMENTS_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080/payments
-      - PAYMENTS_PROCESSOR_URL_FALLBACK=http://payment-processor-fallback:8080/payments
-      - HEALTH_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080/payments/service-health
-      - HEALTH_PROCESSOR_URL_FALLBACK=http://payment-processor-fallback:8080/payments/service-health
-    command: sh -c "umask 0 && ./api"
-    depends_on:
-      - worker1
-  
-  api5:
-    <<: *base
-    container_name: api5
-    hostname: api5
-    deploy:
-      resources:
-        limits:
-          cpus: "0.1"
-          memory: "30MB"
-    environment:
-      - SOCKET_PATH=/sockets/api5.sock
-      - WORKER_SOCKET_PATH=/sockets/worker_http.sock
+      - PAYMENTS_SOCKET_PATH=/sockets/payments.sock
+      - SUMMARY_SOCKET_PATH=/sockets/summary.sock
+      - PURGE_SOCKET_PATH=/sockets/purge.sock
       - PAYMENTS_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080/payments
       - PAYMENTS_PROCESSOR_URL_FALLBACK=http://payment-processor-fallback:8080/payments
       - HEALTH_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080/payments/service-health
@@ -116,10 +85,13 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.8"
+          cpus: "1.0"
           memory: "150MB"
     environment:
       - SOCKET_PATH=/sockets/worker_http.sock
+      - PAYMENTS_SOCKET_PATH=/sockets/payments.sock
+      - SUMMARY_SOCKET_PATH=/sockets/summary.sock
+      - PURGE_SOCKET_PATH=/sockets/purge.sock
       - PAYMENTS_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080/payments
       - PAYMENTS_PROCESSOR_URL_FALLBACK=http://payment-processor-fallback:8080/payments
       - HEALTH_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080/payments/service-health
@@ -136,9 +108,6 @@ services:
       - api1
       - api2
       - api3
-      - api4
-      - api5
-      - worker1
     ports:
       - 9999:80
     networks:

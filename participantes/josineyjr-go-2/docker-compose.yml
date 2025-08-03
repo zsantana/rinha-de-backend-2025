@@ -68,7 +68,7 @@ services:
     command: sh -c "umask 0 && ./api"
     depends_on:
       - worker1
-
+  
   api4:
     <<: *base
     container_name: api4
@@ -80,26 +80,6 @@ services:
           memory: "30MB"
     environment:
       - SOCKET_PATH=/sockets/api4.sock
-      - WORKER_SOCKET_PATH=/sockets/worker_http.sock
-      - PAYMENTS_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080/payments
-      - PAYMENTS_PROCESSOR_URL_FALLBACK=http://payment-processor-fallback:8080/payments
-      - HEALTH_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080/payments/service-health
-      - HEALTH_PROCESSOR_URL_FALLBACK=http://payment-processor-fallback:8080/payments/service-health
-    command: sh -c "umask 0 && ./api"
-    depends_on:
-      - worker1
-  
-  api5:
-    <<: *base
-    container_name: api5
-    hostname: api5
-    deploy:
-      resources:
-        limits:
-          cpus: "0.1"
-          memory: "30MB"
-    environment:
-      - SOCKET_PATH=/sockets/api5.sock
       - WORKER_SOCKET_PATH=/sockets/worker_http.sock
       - PAYMENTS_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080/payments
       - PAYMENTS_PROCESSOR_URL_FALLBACK=http://payment-processor-fallback:8080/payments
@@ -137,8 +117,6 @@ services:
       - api2
       - api3
       - api4
-      - api5
-      - worker1
     ports:
       - 9999:80
     networks:
@@ -146,7 +124,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.2"
+          cpus: "0.3"
           memory: "30MB"
 
 volumes:

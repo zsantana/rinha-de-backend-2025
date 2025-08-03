@@ -15,10 +15,13 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.20"
+          cpus: "0.30"
           memory: "40MB"
   api1:
-    image: danielsuhett1999/rinha-backend-go:1.0.3
+    # build:
+    #  context: .
+    #  dockerfile: Dockerfile
+    image: danielsuhett1999/rinha-backend-go:1.0.2
     hostname: api1
     environment:
       - APP_PORT=8080
@@ -27,12 +30,12 @@ services:
       - REDIS_PORT=6379
       - PROCESSOR_DEFAULT_URL=http://payment-processor-default:8080
       - PROCESSOR_FALLBACK_URL=http://payment-processor-fallback:8080
-      - POOLING_INTERVAL=500
+      - POOLING_INTERVAL=200
       - HEALTH_TIMEOUT=1000
       - HEALTH_INTERVAL=3000
       - LATENCY_DIFF_TO_USE_FALLBACK=5000
-      - BATCH_SIZE=100
-      - WORKER_POOL_SIZE=2
+      - BATCH_SIZE=25
+      - WORKER_POOL_SIZE=12
       - REQUEUE_POOL_SIZE=2
       - WORKER_CHAN_BUFFER=400
       - REQUEUE_CHAN_BUFFER=6000
@@ -46,10 +49,13 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.60"
+          cpus: "0.50"
           memory: "130MB"
   api2:
-    image: danielsuhett1999/rinha-backend-go:1.0.3
+    # build:
+    #  context: .
+    #  dockerfile: Dockerfile
+    image: danielsuhett1999/rinha-backend-go:1.0.2
     hostname: api2
     environment:
       - APP_PORT=8081
@@ -58,12 +64,12 @@ services:
       - REDIS_PORT=6379
       - PROCESSOR_DEFAULT_URL=http://payment-processor-default:8080
       - PROCESSOR_FALLBACK_URL=http://payment-processor-fallback:8080
-      - POOLING_INTERVAL=500
+      - POOLING_INTERVAL=200
       - HEALTH_TIMEOUT=1000
       - HEALTH_INTERVAL=3000
       - LATENCY_DIFF_TO_USE_FALLBACK=5000
-      - BATCH_SIZE=100
-      - WORKER_POOL_SIZE=2
+      - BATCH_SIZE=25
+      - WORKER_POOL_SIZE=12
       - REQUEUE_POOL_SIZE=2
       - WORKER_CHAN_BUFFER=400
       - REQUEUE_CHAN_BUFFER=6000
