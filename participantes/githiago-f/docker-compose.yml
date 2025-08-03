@@ -1,6 +1,6 @@
 x-service-templates:
   backend: &backend
-    image: githiago/rinha2025:1.0.0
+    image: githiago/rinha2025:3.0.0
     networks:
       - backend
       - payment-processor
@@ -35,7 +35,6 @@ services:
     environment:
       PAYMENT_PROCESSOR_API_URL: http://payment-processor-default:8080
       PAYMENT_PROCESSOR_FALLBACK_URL: http://payment-processor-fallback:8080
-      PAYMENT_PROCESSOR_TOKEN: 123
       PAYMENT_PROCESSOR_IS_LEADER: true
       PAYMENT_PROCESSOR_CHECK_TIMING: 5s
       PAYMENT_PROCESSOR_WORKERS: 16
