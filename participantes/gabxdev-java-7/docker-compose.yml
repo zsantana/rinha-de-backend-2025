@@ -1,6 +1,6 @@
 services:
   backend-1:
-    image: gabxdevv/rinha-backend-2025-java-onfire-plus:2.0.3
+    image: gabxdevv/rinha-backend-2025-java-gabx:2.0.1
     restart: always
     environment:
       RETRY_API_DEFAULT: 15
@@ -33,7 +33,7 @@ services:
           memory: '125MB'
 
   backend-2:
-    image: gabxdevv/rinha-backend-2025-java-onfire-plus:2.0.3
+    image: gabxdevv/rinha-backend-2025-java-gabx:2.0.1
     restart: always
     environment:
       RETRY_API_DEFAULT: 15
