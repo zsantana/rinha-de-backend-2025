@@ -18,7 +18,7 @@ services:
           memory: "20MB"
 
   rinha-csharp-1: &rinha-csharp-service
-    image: leeozaka/rinha-csharp:latest
+    image: leeozaka/rinha-csharp:amd64
     environment:
       - ASPNETCORE_ENVIRONMENT=Production
       - ASPNETCORE_URLS=http://+:5000

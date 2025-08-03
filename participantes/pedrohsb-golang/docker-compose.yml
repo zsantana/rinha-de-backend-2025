@@ -1,0 +1,66 @@
+services:
+  redis:
+    image: redis:8-alpine
+    command: redis-server --save "" --appendonly no --maxmemory 60mb --maxmemory-policy allkeys-lru --io-threads 1 --io-threads-do-reads yes
+    deploy:
+      resources:
+        limits:
+          cpus: "0.2"
+          memory: "70M"
+    networks:
+      - backend
+  app1:
+    image: pedrohsbarbosa99/rinha-golang-2025:0.0.2
+    command: ["./main"]
+    networks:
+      - backend
+      - payment-processor
+    environment:
+      - REDIS_URL=redis:6379
+      - PROCESSOR_DEFAULT_URL=http://payment-processor-default:8080
+      - PROCESSOR_FALLBACK_URL=http://payment-processor-fallback:8080
+    deploy:
+      resources:
+        limits:
+          cpus: "0.6"
+          memory: 120M
+
+  app2:
+    image: pedrohsbarbosa99/rinha-golang-2025:0.0.2
+    command: ["./main"]
+    networks:
+      - backend
+      - payment-processor
+    environment:
+      - REDIS_URL=redis:6379
+      - PROCESSOR_DEFAULT_URL=http://payment-processor-default:8080
+      - PROCESSOR_FALLBACK_URL=http://payment-processor-fallback:8080
+    deploy:
+      resources:
+        limits:
+          cpus: "0.6"
+          memory: 120M
+
+  nginx:
+    image: nginx:latest
+    container_name: nginx-2
+    ports:
+      - "9999:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - app1
+      - app2
+    networks:
+      - backend
+    deploy:
+      resources:
+        limits:
+          cpus: "0.1"
+          memory: 40M
+
+networks:
+  backend:
+    driver: bridge
+  payment-processor:
+    external: true

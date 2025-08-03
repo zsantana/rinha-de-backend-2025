@@ -1,10 +1,6 @@
 x-api_template: &api_template
-  image: andersongomes001/rinha-api-2025:366d773
-  environment:
-    PAYMENT_PROCESSOR_DEFAULT_URL: "http://payment-processor-default:8080"
-    PAYMENT_PROCESSOR_FALLBACK_URL: "http://payment-processor-fallback:8080"
-    REDIS_URL: "redis://redis:6379/"
-    PORT: 80
+  #image: rinha-dev
+  image: andersongomes001/rinha-api-2025:b813caf
   networks:
     - backend
     - payment-processor
@@ -12,19 +8,33 @@ x-api_template: &api_template
     resources:
       limits:
         cpus: "0.5"
-        memory: "115MB"
+        memory: "100MB"
 
 services:
   api01:
     <<: *api_template
     hostname: api01
+    environment:
+      PAYMENT_PROCESSOR_DEFAULT_URL: "http://payment-processor-default:8080"
+      PAYMENT_PROCESSOR_FALLBACK_URL: "http://payment-processor-fallback:8080"
+      REDIS_URL: "redis://redis:6379/"
+      PORT: 80
+      INSTANCE_ROLE: "master"
     depends_on:
       - redis
   api02:
     <<: *api_template
     hostname: api02
+    environment:
+      PAYMENT_PROCESSOR_DEFAULT_URL: "http://payment-processor-default:8080"
+      PAYMENT_PROCESSOR_FALLBACK_URL: "http://payment-processor-fallback:8080"
+      REDIS_URL: "redis://redis:6379/"
+      PORT: 80
+      INSTANCE_ROLE: "slave"
+      WS_MASTER_URL: "ws://api01:9001"
     depends_on:
       - redis
+      - api01
   redis:
     image: redis:8.0.3-alpine
     hostname: redis
@@ -38,12 +48,13 @@ services:
         limits:
           cpus: "0.3"
           memory: "50MB"
-  nginx:
-    image: nginx
-    volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+  haproxy:
+    image: haproxy:2.8
+    container_name: haproxy
     ports:
       - "9999:80"
+    volumes:
+      - ./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
     depends_on:
       - api01
       - api02
@@ -53,7 +64,8 @@ services:
       resources:
         limits:
           cpus: "0.2"
-          memory: "70MB"
+          memory: "100MB"
+
 networks:
   backend:
   payment-processor:

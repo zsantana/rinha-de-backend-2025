@@ -51,7 +51,7 @@ while true; do
             max_attempts=15
             attempt=1
             while [ $success -ne 0 ] && [ $max_attempts -ge $attempt ]; do
-                curl -f -s http://localhost:9999/payments-summary
+                curl -f -s --max-time 3 localhost:9999/payments-summary
                 success=$?
                 echo "tried $attempt out of $max_attempts..."
                 sleep 5
@@ -83,13 +83,13 @@ while true; do
             echo "  Finished testing $participant!"
             echo "================================="
 
+            sleep 5
+
         else
             echo "================================="
             echo "  Skipping $participant"
             echo "================================="
         fi
-
-        sleep 15
     )
     done
 

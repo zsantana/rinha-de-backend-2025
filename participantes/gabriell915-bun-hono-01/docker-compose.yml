@@ -24,6 +24,9 @@ services:
       REDIS_URI: "redis://redis:6379"
       PAYMENT_PROCESSOR_DEFAULT_URL: "http://payment-processor-default:8080"
       PAYMENT_PROCESSOR_FALLBACK_URL: "http://payment-processor-fallback:8080"
+      BULLMQ_CONCURRENCY: "15"
+      DELAY: "100"
+      REQUEUE_DELAY: "1000"
     networks:
       - backend
       - payment-processor
@@ -33,7 +36,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.7"
+          cpus: "0.6"
           memory: "65MB"
   api02:
     image: ghcr.io/gabriell915/api-rinha-backend-hono-2025:latest
@@ -41,6 +44,9 @@ services:
       REDIS_URI: "redis://redis:6379"
       PAYMENT_PROCESSOR_DEFAULT_URL: "http://payment-processor-default:8080"
       PAYMENT_PROCESSOR_FALLBACK_URL: "http://payment-processor-fallback:8080"
+      BULLMQ_CONCURRENCY: "15"
+      DELAY: "100"
+      REQUEUE_DELAY: "1000"
     networks:
       - backend
       - payment-processor
@@ -50,18 +56,12 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.5"
+          cpus: "0.55"
           memory: "65MB"
   redis:
     image: redis:7.2-alpine
     container_name: rinha-redis
-    command: >-
-      redis-server
-      --save ""
-       --appendonly no
-      --maxclients 1024
-      --maxmemory 50mb
-      --timeout 30
+    command: redis-server --save "" --appendonly no --maxclients 1024 --maxmemory 110mb --maxmemory-policy allkeys-lru --timeout 30 --tcp-keepalive 60
     ports:
       - "6379:6379"
     networks:
@@ -75,7 +75,7 @@ services:
       resources:
         limits:
           cpus: "0.2"
-          memory: "70MB"
+          memory: "130MB"
 
 networks:
   backend:

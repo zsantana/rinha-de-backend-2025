@@ -1,61 +1,31 @@
 
- backend-2 Pulling 
- backend-1 Pulling 
- 44cf07d57ee4 Already exists 
- f885a9d5ef2e Pulling fs layer 
- bf41461aaebc Pulling fs layer 
- 44cf07d57ee4 Already exists 
- f885a9d5ef2e Pulling fs layer 
- bf41461aaebc Pulling fs layer 
- f885a9d5ef2e Downloading [==================================================>]      93B/93B
- f885a9d5ef2e Download complete 
- f885a9d5ef2e Downloading [==================================================>]      93B/93B
- f885a9d5ef2e Download complete 
- f885a9d5ef2e Extracting [==================================================>]      93B/93B
- f885a9d5ef2e Extracting [==================================================>]      93B/93B
- f885a9d5ef2e Extracting [==================================================>]      93B/93B
- f885a9d5ef2e Extracting [==================================================>]      93B/93B
- f885a9d5ef2e Pull complete 
- f885a9d5ef2e Pull complete 
- bf41461aaebc Downloading [>                                                  ]  63.13kB/6.086MB
- bf41461aaebc Downloading [>                                                  ]  63.13kB/6.086MB
- bf41461aaebc Verifying Checksum 
- bf41461aaebc Download complete 
- bf41461aaebc Verifying Checksum 
- bf41461aaebc Download complete 
- bf41461aaebc Extracting [>                                                  ]  65.54kB/6.086MB
- bf41461aaebc Extracting [>                                                  ]  65.54kB/6.086MB
- bf41461aaebc Extracting [==================================================>]  6.086MB/6.086MB
- bf41461aaebc Extracting [==================================================>]  6.086MB/6.086MB
- bf41461aaebc Pull complete 
- bf41461aaebc Pull complete 
- backend-1 Pulled 
- backend-2 Pulled 
  Network rodrigo-militao_backend  Creating
  Network rodrigo-militao_backend  Created
  Container redis  Creating
  Container redis  Created
- Container rodrigo-militao-backend-2-1  Creating
  Container rodrigo-militao-backend-1-1  Creating
+ Container rodrigo-militao-backend-2-1  Creating
+ Container rodrigo-militao-worker-1  Creating
+ Container rodrigo-militao-worker-1  Created
  Container rodrigo-militao-backend-1-1  Created
  Container rodrigo-militao-backend-2-1  Created
  Container nginx-lb  Creating
  Container nginx-lb  Created
-Attaching to nginx-lb, redis, backend-1-1, backend-2-1
-redis        | 1:C 30 Jul 2025 04:15:43.047 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
-redis        | 1:C 30 Jul 2025 04:15:43.047 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
-redis        | 1:C 30 Jul 2025 04:15:43.047 * Redis version=7.4.5, bits=64, commit=00000000, modified=0, pid=1, just started
-redis        | 1:C 30 Jul 2025 04:15:43.047 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf
-redis        | 1:M 30 Jul 2025 04:15:43.048 * monotonic clock: POSIX clock_gettime
-redis        | 1:M 30 Jul 2025 04:15:43.048 * Running mode=standalone, port=6379.
-redis        | 1:M 30 Jul 2025 04:15:43.049 * Server initialized
-redis        | 1:M 30 Jul 2025 04:15:43.049 * Ready to accept connections tcp
-backend-2-1  | 2025/07/30 04:15:44 Iniciando 2 workers...
-backend-2-1  | 2025/07/30 04:15:44 Aplicação iniciada. Pressione Ctrl+C para encerrar.
-backend-2-1  | 2025/07/30 04:15:44 Servidor HTTP escutando em :8080
-backend-1-1  | 2025/07/30 04:15:45 Iniciando 2 workers...
-backend-1-1  | 2025/07/30 04:15:45 Aplicação iniciada. Pressione Ctrl+C para encerrar.
-backend-1-1  | 2025/07/30 04:15:45 Servidor HTTP escutando em :8080
+Attaching to nginx-lb, redis, backend-1-1, backend-2-1, worker-1
+redis        | 1:C 03 Aug 2025 14:54:36.093 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+redis        | 1:C 03 Aug 2025 14:54:36.094 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+redis        | 1:C 03 Aug 2025 14:54:36.094 * Redis version=7.4.5, bits=64, commit=00000000, modified=0, pid=1, just started
+redis        | 1:C 03 Aug 2025 14:54:36.094 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf
+redis        | 1:M 03 Aug 2025 14:54:36.095 * monotonic clock: POSIX clock_gettime
+redis        | 1:M 03 Aug 2025 14:54:36.097 * Running mode=standalone, port=6379.
+redis        | 1:M 03 Aug 2025 14:54:36.097 * Server initialized
+redis        | 1:M 03 Aug 2025 14:54:36.097 * Ready to accept connections tcp
+backend-1-1  | 2025/08/03 14:54:38 API iniciada. Pressione Ctrl+C para encerrar.
+backend-1-1  | 2025/08/03 14:54:38 Servidor HTTP escutando em :8080
+worker-1     | 2025/08/03 14:54:38 Iniciando 5 workers...
+worker-1     | 2025/08/03 14:54:38 Workers rodando. Pressione Ctrl+C para encerrar.
+backend-2-1  | 2025/08/03 14:54:38 API iniciada. Pressione Ctrl+C para encerrar.
+backend-2-1  | 2025/08/03 14:54:38 Servidor HTTP escutando em :8080
 nginx-lb     | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
 nginx-lb     | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
 nginx-lb     | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
@@ -65,480 +35,23 @@ nginx-lb     | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-res
 nginx-lb     | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
 nginx-lb     | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
 nginx-lb     | /docker-entrypoint.sh: Configuration complete; ready for start up
-backend-1-1  | 2025/07/30 04:16:14 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:14 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:14 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:14 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:14 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:14 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:14 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:14 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:14 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:14 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:14 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:14 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:14 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:14 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:14 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:14 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:14 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:14 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:14 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:14 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:14 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:14 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:14 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:14 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:14 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:14 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:14 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:14 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:14 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:14 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:14 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:14 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:15 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:15 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:15 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:15 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:15 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:15 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:15 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:15 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:15 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:15 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:15 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:15 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:15 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:15 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:15 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:15 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:15 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:15 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:15 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:15 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:15 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:15 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:15 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:15 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:15 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:15 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:15 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:15 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:15 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:15 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:15 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:15 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:15 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:15 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:15 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:15 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:15 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:15 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:15 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:15 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:16 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:16 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:16 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:16 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:16 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:16 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:16 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:16 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:16 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:16 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:16 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:16 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:16 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:16 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:16 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:16 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:16 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:16 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:16 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:16 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:16 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:16 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:16 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:16 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:16 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:16 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:16 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:16 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:16 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:16 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:16 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:16 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:16 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:16 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:16 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:16 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:16 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:16 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:16 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:16 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:17 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:17 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:17 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:17 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:17 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:17 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:17 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:17 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:17 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:17 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:17 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:17 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:17 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:17 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:17 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:17 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:17 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:17 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:17 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:17 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:17 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:17 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:17 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:17 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:17 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:17 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:17 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:17 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:17 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:17 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:17 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:17 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:17 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:17 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:17 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:17 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:17 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:17 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:18 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:18 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:18 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:18 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:18 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:18 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:18 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:18 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:18 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:18 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:18 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:18 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:18 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:18 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:18 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:18 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:18 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:18 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:18 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:18 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:18 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:18 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:18 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:18 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:18 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:18 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:18 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:18 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:18 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:18 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:18 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:18 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:18 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:18 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:18 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:18 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:18 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:18 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:18 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:18 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:19 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:19 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:19 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:19 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:19 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:19 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:19 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:19 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:19 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:19 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:19 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:19 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:19 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:19 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:19 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:19 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:19 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:19 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:19 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:19 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:19 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:19 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:19 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:19 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:19 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:19 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:19 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:19 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:19 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:19 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:19 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:19 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:19 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:19 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:19 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:19 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:19 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:19 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:20 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:20 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:20 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:20 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:20 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:20 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:20 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:20 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:20 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:20 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:20 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:20 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:20 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:20 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:20 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:20 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:20 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:20 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:20 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:20 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:20 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:20 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:20 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:20 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:20 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:20 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:20 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:20 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:20 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:20 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:20 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:20 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:20 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:20 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:20 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:20 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:20 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:20 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:20 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:20 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:21 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:21 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:21 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:21 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:21 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:21 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:21 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:21 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:21 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:21 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:21 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:21 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:21 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:21 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:21 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:21 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:21 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:21 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:21 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:21 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:21 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:21 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:21 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:21 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:21 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:21 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:21 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:21 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:21 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:21 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:21 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:21 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:21 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:21 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:21 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:21 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:21 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:21 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:21 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:21 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:22 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:22 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:22 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:22 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:22 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:22 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:22 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:22 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:22 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:22 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:22 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:22 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:22 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:22 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:22 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:22 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:22 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:22 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:22 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:22 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:22 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:22 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:22 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:22 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:22 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:22 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:22 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:22 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:22 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:22 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:22 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:22 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:22 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:22 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:22 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:22 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:22 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:22 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:22 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:23 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:23 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:23 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:23 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:23 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:23 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:23 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:23 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:23 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:23 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:23 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:23 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:23 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:23 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:23 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:23 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:23 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:23 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:23 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:23 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:23 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:23 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:23 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:23 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:23 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:23 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:23 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:23 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:23 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:23 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:23 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:23 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:23 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:23 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:23 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:23 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:23 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:23 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:23 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:24 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:24 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:24 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:24 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:24 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:24 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:24 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:24 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:24 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:24 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:24 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:24 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:24 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:24 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:26 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:26 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:26 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:26 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:28 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:28 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:28 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:28 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:30 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:30 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:30 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:30 [Worker 0] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:32 [Worker 1] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:32 [Worker 0] Processor default returned status: 500
-backend-1-1  | 2025/07/30 04:16:32 [Worker 1] Processor default returned status: 500
-backend-2-1  | 2025/07/30 04:16:32 [Worker 0] Processor default returned status: 500
-redis        | 1:M 30 Jul 2025 04:16:44.061 * 10000 changes in 60 seconds. Saving...
-redis        | 1:M 30 Jul 2025 04:16:44.061 * Background saving started by pid 355
-redis        | 355:C 30 Jul 2025 04:16:44.145 * DB saved on disk
-redis        | 355:C 30 Jul 2025 04:16:44.146 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
-redis        | 1:M 30 Jul 2025 04:16:44.163 * Background saving terminated with success
+redis        | 1:M 03 Aug 2025 14:55:37.012 * 10000 changes in 60 seconds. Saving...
+redis        | 1:M 03 Aug 2025 14:55:37.012 * Background saving started by pid 365
+redis        | 365:C 03 Aug 2025 14:55:37.068 * DB saved on disk
+redis        | 365:C 03 Aug 2025 14:55:37.068 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+redis        | 1:M 03 Aug 2025 14:55:37.113 * Background saving terminated with success
+worker-1     | 2025/08/03 14:55:45 Encerrando workers...
 [Knginx-lb exited with code 0
-backend-1-1  | 2025/07/30 04:16:56 Sinal de desligamento recebido...
-backend-2-1  | 2025/07/30 04:16:56 Sinal de desligamento recebido...
-backend-2-1  | 2025/07/30 04:16:56 Servidor HTTP encerrado.
-backend-2-1  | 2025/07/30 04:16:56 Aguardando todos os processos em background finalizarem...
-backend-1-1  | 2025/07/30 04:16:56 Servidor HTTP encerrado.
-backend-1-1  | 2025/07/30 04:16:56 Aguardando todos os processos em background finalizarem...
-backend-1-1  | 2025/07/30 04:16:56 [Worker 0] Redis error: context canceled
-backend-2-1  | 2025/07/30 04:16:56 [Worker 1] Redis error: context canceled
-backend-1-1  | 2025/07/30 04:16:56 [Worker 1] Redis error: context canceled
-backend-2-1  | 2025/07/30 04:16:56 [Worker 0] Redis error: context canceled
-backend-1-1  | 2025/07/30 04:16:57 [Worker 0] Redis error: context canceled
-backend-2-1  | 2025/07/30 04:16:57 [Worker 1] Redis error: context canceled
-backend-2-1  | 2025/07/30 04:16:57 [Worker 0] Redis error: context canceled
-backend-1-1  | 2025/07/30 04:16:57 [Worker 1] Redis error: context canceled
-backend-1-1  | 2025/07/30 04:16:58 [Worker 0] Redis error: context canceled
-backend-2-1  | 2025/07/30 04:16:58 [Worker 1] Redis error: context canceled
-backend-2-1  | 2025/07/30 04:16:58 [Worker 0] Redis error: context canceled
-backend-1-1  | 2025/07/30 04:16:58 [Worker 1] Redis error: context canceled
-backend-1-1  | 2025/07/30 04:16:59 [Worker 0] Redis error: context canceled
-backend-2-1  | 2025/07/30 04:16:59 [Worker 1] Redis error: context canceled
-backend-2-1  | 2025/07/30 04:16:59 [Worker 0] Redis error: context canceled
-backend-1-1  | 2025/07/30 04:16:59 [Worker 1] Redis error: context canceled
-backend-1-1  | 2025/07/30 04:17:00 [Worker 0] Redis error: context canceled
-backend-2-1  | 2025/07/30 04:17:00 [Worker 1] Redis error: context canceled
-backend-2-1  | 2025/07/30 04:17:00 [Worker 0] Redis error: context canceled
-backend-1-1  | 2025/07/30 04:17:00 [Worker 1] Redis error: context canceled
-backend-2-1  | 2025/07/30 04:17:01 [Worker 1] Redis error: context canceled
-backend-1-1  | 2025/07/30 04:17:01 [Worker 0] Redis error: context canceled
-backend-2-1  | 2025/07/30 04:17:01 [Worker 0] Redis error: context canceled
-backend-1-1  | 2025/07/30 04:17:01 [Worker 1] Redis error: context canceled
-backend-1-1  | 2025/07/30 04:17:02 [Worker 0] Redis error: context canceled
-backend-2-1  | 2025/07/30 04:17:02 [Worker 1] Redis error: context canceled
-backend-2-1  | 2025/07/30 04:17:02 [Worker 0] Redis error: context canceled
-backend-1-1  | 2025/07/30 04:17:02 [Worker 1] Redis error: context canceled
-backend-2-1  | 2025/07/30 04:17:03 [Worker 1] Redis error: context canceled
-backend-1-1  | 2025/07/30 04:17:03 [Worker 0] Redis error: context canceled
-backend-2-1  | 2025/07/30 04:17:03 [Worker 0] Redis error: context canceled
-backend-1-1  | 2025/07/30 04:17:03 [Worker 1] Redis error: context canceled
-backend-2-1  | 2025/07/30 04:17:04 [Worker 1] Redis error: context canceled
-backend-1-1  | 2025/07/30 04:17:04 [Worker 0] Redis error: context canceled
-backend-2-1  | 2025/07/30 04:17:04 [Worker 0] Redis error: context canceled
-backend-1-1  | 2025/07/30 04:17:04 [Worker 1] Redis error: context canceled
-backend-1-1  | 2025/07/30 04:17:05 [Worker 0] Redis error: context canceled
-backend-2-1  | 2025/07/30 04:17:05 [Worker 1] Redis error: context canceled
-backend-2-1  | 2025/07/30 04:17:05 [Worker 0] Redis error: context canceled
-backend-1-1  | 2025/07/30 04:17:05 [Worker 1] Redis error: context canceled
-[Kbackend-2-1 exited with code 137
-[Kbackend-1-1 exited with code 137
-redis        | 1:signal-handler (1753849026) Received SIGTERM scheduling shutdown...
-redis        | 1:M 30 Jul 2025 04:17:06.802 * User requested shutdown...
-redis        | 1:M 30 Jul 2025 04:17:06.802 * Saving the final RDB snapshot before exiting.
-redis        | 1:M 30 Jul 2025 04:17:06.926 * DB saved on disk
-redis        | 1:M 30 Jul 2025 04:17:06.926 # Redis is now ready to exit, bye bye...
+backend-1-1  | 2025/08/03 14:55:46 Encerrando servidor HTTP...
+backend-1-1  | 2025/08/03 14:55:46 Servidor HTTP encerrado.
+backend-2-1  | 2025/08/03 14:55:46 Encerrando servidor HTTP...
+backend-2-1  | 2025/08/03 14:55:46 Servidor HTTP encerrado.
+[Kbackend-2-1 exited with code 0
+[Kworker-1 exited with code 137
+redis        | 1:signal-handler (1754232956) Received SIGTERM scheduling shutdown...
+redis        | 1:M 03 Aug 2025 14:55:56.154 * User requested shutdown...
+redis        | 1:M 03 Aug 2025 14:55:56.154 * Saving the final RDB snapshot before exiting.
+redis        | 1:M 03 Aug 2025 14:55:56.205 * DB saved on disk
+redis        | 1:M 03 Aug 2025 14:55:56.206 # Redis is now ready to exit, bye bye...
 [Kredis exited with code 0
 log truncated at line 1000

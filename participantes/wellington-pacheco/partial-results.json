@@ -1,12 +1,12 @@
 {
   "participante": "wellington-pacheco",
-  "total_liquido": 316583.13,
-  "total_bruto": 333245.4,
-  "total_taxas": 16662.27,
+  "total_liquido": 367208.73000003176,
+  "total_bruto": 333245.4000000288,
+  "total_taxas": 16686.15000000144,
   "descricao": "'total_liquido' é sua pontuação final. Equivale ao seu lucro. Fórmula: total_liquido + (total_liquido * p99.bonus) - (total_liquido * multa.porcentagem)",
   "p99": {
-    "valor": "15.21ms",
-    "bonus": "0%",
+    "valor": "2.84ms",
+    "bonus": "16%",
     "max_requests": "550",
     "descricao": "Fórmula para o bônus: max((11 - p99.valor) * 0.02, 0)"
   },
@@ -34,15 +34,15 @@
     "descricao": "'qtd_sucesso' foram requests bem sucedidos para 'POST /payments' e 'qtd_falha' os requests com erro."
   },
   "pagamentos_realizados_default": {
-    "total_bruto": 333245.4,
-    "num_pagamentos": 16746,
-    "total_taxas": 16662.27,
+    "total_bruto": 333006.6000000288,
+    "num_pagamentos": 16734,
+    "total_taxas": 16650.33000000144,
     "descricao": "Informações do backend sobre solicitações de pagamento para o Payment Processor Default."
   },
   "pagamentos_realizados_fallback": {
-    "total_bruto": 0,
-    "num_pagamentos": 0,
-    "total_taxas": 0,
+    "total_bruto": 238.80000000000004,
+    "num_pagamentos": 12,
+    "total_taxas": 35.82000000000001,
     "descricao": "Informações do backend sobre solicitações de pagamento para o Payment Processor Fallback."
   }
 }

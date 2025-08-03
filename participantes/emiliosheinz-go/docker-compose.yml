@@ -1,6 +1,6 @@
 services:
   api01: &api
-      image: ghcr.io/emiliosheinz/rinha-de-backend-2025-go:v1.6.0
+      image: ghcr.io/emiliosheinz/rinha-de-backend-2025-go:v1.10.0
       hostname: api01
       container_name: api01
       networks:
@@ -20,7 +20,7 @@ services:
         resources:
           limits:
             cpus: "0.5"
-            memory: "30MB"
+            memory: "25MB"
       ulimits:
             nofile:
               soft: 65535
@@ -98,9 +98,10 @@ services:
     container_name: redis 
     command: >
       redis-server --save "" --appendonly no --maxclients 1024
-                  --maxmemory 20mb --maxmemory-policy allkeys-lru 
+                  --maxmemory 35mb --maxmemory-policy allkeys-lru 
                   --stop-writes-on-bgsave-error no --rdbcompression no
                   --hz 100 --tcp-backlog 511 --timeout 0
+                  --loglevel warning
     networks:
       - rinha
     healthcheck:
@@ -112,7 +113,7 @@ services:
       resources:
         limits:
           cpus: '0.1'
-          memory: '25MB'
+          memory: '35MB'
 
 networks:
   payment-processor:

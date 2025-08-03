@@ -1,37 +1,22 @@
 services:
-  lb:
-    networks:
-      - backend
-    deploy:
-      resources:
-        limits:
-          cpus: "0.3"
-          memory: 50M
-    image: nginx:stable-alpine
-    volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf:ro
-    ports:
-      - "9999:9999"
-    depends_on:
-      - app-1
-      - app-2
-
   app-1:
     networks:
       - backend
-      - payment-processor
     deploy:
       resources:
         limits:
-          cpus: "0.45"
-          memory: 50M
-    image: daviddeltasierra/rinha-2025-go
-    restart: always
+          cpus: "0.8"
+          memory: 100M
+    image: daviddeltasierra/rinha-2025-go-2:1.1
+    volumes:
+      - socket-volume:/socket
     environment:
       - MASTER=true
     depends_on:
-      postgres:
-        condition: service_healthy
+      - postgres
+      - app-2
+    ports:
+      - "9999:8080"
 
   app-2:
     networks:
@@ -40,15 +25,15 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.45"
-          memory: 50M
-    image: daviddeltasierra/rinha-2025-go
-    restart: always
+          cpus: "0.4"
+          memory: 100M
+    image: daviddeltasierra/rinha-2025-go-2:1.1
+    volumes:
+      - socket-volume:/socket
     environment:
       - MASTER=false
     depends_on:
-      postgres:
-        condition: service_healthy
+      - postgres
 
   postgres:
     networks:
@@ -57,18 +42,17 @@ services:
       resources:
         limits:
           cpus: "0.3"
-          memory: 200M
+          memory: 150M
     image: postgres:alpine
     user: postgres
-    healthcheck:
-      test: [ "CMD-SHELL", "pg_isready" ]
-      interval: 5s
-      retries: 6
     volumes:
-      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./scripts:/docker-entrypoint-initdb.d
     environment:
       - POSTGRES_PASSWORD=root
       - POSTGRES_DB=rinha
+
+volumes:
+  socket-volume:
 
 networks:
   backend:
