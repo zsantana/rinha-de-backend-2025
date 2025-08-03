@@ -12,7 +12,7 @@ Esta é a minha submissão para a **Rinha de Backend 2025**, desenvolvida em **G
 ```mermaid
 flowchart LR
     subgraph Ingress
-        NGINX(NGINX Load Balancer)
+        PINGORA(PINGORA Load Balancer)
     end
 
     subgraph "API Server 1"
@@ -25,8 +25,8 @@ flowchart LR
         W2(Worker 1..N)
     end
 
-    NGINX --> A1
-    NGINX --> A2
+    PINGORA --> A1
+    PINGORA --> A2
     
     A1 --> W1
     A2 --> W2
@@ -40,7 +40,7 @@ flowchart LR
     W2 --> PG
 ```
 
-- **NGINX** atua como load balancer, distribuindo as requisições entre os servidores de API.
+- **PINGORA** atua como load balancer, distribuindo as requisições entre os servidores de API.
 - Cada **API Pagamentos** possui seu próprio **Worker** que recebe requisições através de uma fila em memória.
 - O **Worker** determina qual serviço de pagamento utilizar (default ou fallback) com base na disponibilidade e desempenho.
 - Após o processamento bem-sucedido, o **Worker** envia o resultado para o **Storage**, que insere os pagamentos no PostgreSQL em lotes.
