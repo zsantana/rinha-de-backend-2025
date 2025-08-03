@@ -1,6 +1,6 @@
 services:
   api01: &api
-      image: ghcr.io/emiliosheinz/rinha-de-backend-2025-go:v1.9.0
+      image: ghcr.io/emiliosheinz/rinha-de-backend-2025-go:v1.10.0
       hostname: api01
       container_name: api01
       networks:
@@ -20,14 +20,13 @@ services:
         resources:
           limits:
             cpus: "0.5"
-            memory: "30MB"
+            memory: "25MB"
       ulimits:
             nofile:
               soft: 65535
               hard: 65535
       environment:
         - APP_PORT=8080
-        - INSTANCE_ID=api01
         - PROCESSOR_DEFAULT_URL=${PROCESSOR_DEFAULT_URL}
         - PROCESSOR_FALLBACK_URL=${PROCESSOR_FALLBACK_URL}
         - POSTGRES_DATABASE_HOSTNAME=${DATABASE_HOSTNAME}
@@ -40,17 +39,6 @@ services:
       <<: *api
       hostname: api02
       container_name: api02
-      environment:
-        - APP_PORT=8080
-        - INSTANCE_ID=api02
-        - PROCESSOR_DEFAULT_URL=${PROCESSOR_DEFAULT_URL}
-        - PROCESSOR_FALLBACK_URL=${PROCESSOR_FALLBACK_URL}
-        - POSTGRES_DATABASE_HOSTNAME=${DATABASE_HOSTNAME}
-        - POSTGRES_DATABASE_PASSWORD=${DATABASE_PASSWORD}
-        - POSTGRES_DATABASE_USER=${DATABASE_USER}
-        - POSTGRES_DATABASE_NAME=${DATABASE_NAME}
-        - POSTGRES_DATABASE_PORT=${DATABASE_PORT}
-        - REDIS_URL=${REDIS_URL}
 
   nginx:
       image: nginx:1.25-alpine
@@ -110,7 +98,7 @@ services:
     container_name: redis 
     command: >
       redis-server --save "" --appendonly no --maxclients 1024
-                  --maxmemory 25mb --maxmemory-policy allkeys-lru 
+                  --maxmemory 35mb --maxmemory-policy allkeys-lru 
                   --stop-writes-on-bgsave-error no --rdbcompression no
                   --hz 100 --tcp-backlog 511 --timeout 0
                   --loglevel warning
@@ -125,7 +113,7 @@ services:
       resources:
         limits:
           cpus: '0.1'
-          memory: '25MB'
+          memory: '35MB'
 
 networks:
   payment-processor:

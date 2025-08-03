@@ -37,7 +37,7 @@ services:
     command: redis-server --maxmemory 35mb --maxmemory-policy allkeys-lru
 
   api-1: &api
-    image: kauska/rinha-backend-2025
+    image: kauska/rinha-backend-2025:1.1.0
     container_name: api-1
     depends_on:
       redis:
