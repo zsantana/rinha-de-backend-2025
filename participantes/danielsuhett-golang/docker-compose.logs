@@ -1,43 +1,0 @@
-
- Network danielsuhett-golang_backend  Creating
- Network danielsuhett-golang_backend  Created
- Container go-rinha-redis  Creating
- Container go-rinha-redis  Created
- Container danielsuhett-golang-api2-1  Creating
- Container danielsuhett-golang-api1-1  Creating
- Container danielsuhett-golang-api1-1  Created
- Container danielsuhett-golang-api2-1  Created
- Container go-rinha-haproxy-2  Creating
- Container go-rinha-haproxy-2  Created
-Attaching to api1-1, api2-1, go-rinha-haproxy-2, go-rinha-redis
-go-rinha-redis      | 1:C 02 Aug 2025 18:10:07.982 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
-go-rinha-redis      | 1:C 02 Aug 2025 18:10:07.982 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
-go-rinha-redis      | 1:C 02 Aug 2025 18:10:07.982 * Redis version=7.2.10, bits=64, commit=00000000, modified=0, pid=1, just started
-go-rinha-redis      | 1:C 02 Aug 2025 18:10:07.982 * Configuration loaded
-go-rinha-redis      | 1:M 02 Aug 2025 18:10:07.982 * monotonic clock: POSIX clock_gettime
-go-rinha-redis      | 1:M 02 Aug 2025 18:10:07.982 * Running mode=standalone, port=6379.
-go-rinha-redis      | 1:M 02 Aug 2025 18:10:07.983 * Server initialized
-go-rinha-redis      | 1:M 02 Aug 2025 18:10:07.983 * Ready to accept connections tcp
-go-rinha-haproxy-2  | [NOTICE]   (1) : New worker (8) forked
-go-rinha-haproxy-2  | [NOTICE]   (1) : Loading success.
-api2-1              | 2025/08/02 18:10:41 Signal failure for default
-api2-1              | 2025/08/02 18:10:41 Circuit breaker color changed from GREEN to RED
-api1-1              | 2025/08/02 18:10:41 Signal failure for default
-api1-1              | 2025/08/02 18:10:41 Circuit breaker color changed from GREEN to RED
-api2-1              | 2025/08/02 18:10:41 Received color change: RED
-api1-1              | 2025/08/02 18:11:05 Circuit breaker color changed from RED to GREEN
-api2-1              | 2025/08/02 18:11:05 Received color change: GREEN
-go-rinha-haproxy-2  | [NOTICE]   (1) : haproxy version is 2.8.15-a9aef56
-go-rinha-haproxy-2  | [WARNING]  (1) : Exiting Master process...
-go-rinha-haproxy-2  | [WARNING]  (8) : Proxy tcp_frontend stopped (cumulated conns: FE: 558, BE: 0).
-go-rinha-haproxy-2  | [WARNING]  (8) : Proxy api_backend stopped (cumulated conns: FE: 0, BE: 558).
-go-rinha-haproxy-2  | [WARNING]  (1) : Current worker (8) exited with code 0 (Exit)
-go-rinha-haproxy-2  | [WARNING]  (1) : All workers exited. Exiting... (0)
-[Kgo-rinha-haproxy-2 exited with code 0
-[Kapi2-1 exited with code 0
-[Kapi1-1 exited with code 0
-go-rinha-redis      | 1:signal-handler (1754158284) Received SIGTERM scheduling shutdown...
-go-rinha-redis      | 1:M 02 Aug 2025 18:11:24.124 * User requested shutdown...
-go-rinha-redis      | 1:M 02 Aug 2025 18:11:24.124 # Redis is now ready to exit, bye bye...
-[Kgo-rinha-redis exited with code 0
-log truncated at line 1000
