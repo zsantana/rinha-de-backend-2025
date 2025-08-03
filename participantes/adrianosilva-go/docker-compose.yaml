@@ -13,6 +13,8 @@ services:
     networks:
       - backend
       - payment-processor
+    command: ["redis-server", "--save", "", "--appendonly", "no"]
+    restart: unless-stopped
     deploy:
       resources:
         limits:
@@ -133,6 +135,7 @@ services:
       - backend
 networks:
   backend:
+    name: backend
     driver: bridge
   payment-processor:
     external: true
