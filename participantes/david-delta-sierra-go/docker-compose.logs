@@ -32,7 +32,7 @@ lb-1        | Await app1 and app2...
 lb-1        | All ready! init NGINX...
 postgres-1  | running bootstrap script ... ok
 postgres-1  | sh: locale: not found
-postgres-1  | 2025-08-03 14:06:23.415 UTC [22] WARNING:  no usable system locales were found
+postgres-1  | 2025-08-03 15:01:45.518 UTC [22] WARNING:  no usable system locales were found
 postgres-1  | performing post-bootstrap initialization ... ok
 postgres-1  | syncing data to disk ... ok
 postgres-1  | 
@@ -43,10 +43,10 @@ postgres-1  |     pg_ctl -D /var/lib/postgresql/data -l logfile start
 postgres-1  | 
 postgres-1  | initdb: warning: enabling "trust" authentication for local connections
 postgres-1  | initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
-postgres-1  | waiting for server to start....2025-08-03 14:06:26.438 UTC [28] LOG:  starting PostgreSQL 17.5 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
-postgres-1  | 2025-08-03 14:06:26.446 UTC [28] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
-postgres-1  | 2025-08-03 14:06:26.503 UTC [31] LOG:  database system was shut down at 2025-08-03 14:06:26 UTC
-postgres-1  | 2025-08-03 14:06:26.514 UTC [28] LOG:  database system is ready to accept connections
+postgres-1  | waiting for server to start....2025-08-03 15:01:47.526 UTC [28] LOG:  starting PostgreSQL 17.5 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
+postgres-1  | 2025-08-03 15:01:47.533 UTC [28] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+postgres-1  | 2025-08-03 15:01:47.550 UTC [31] LOG:  database system was shut down at 2025-08-03 15:01:47 UTC
+postgres-1  | 2025-08-03 15:01:47.563 UTC [28] LOG:  database system is ready to accept connections
 postgres-1  |  done
 postgres-1  | server started
 postgres-1  | CREATE DATABASE
@@ -66,66 +66,34 @@ postgres-1  | INSERT 0 2
 postgres-1  | CREATE INDEX
 postgres-1  | 
 postgres-1  | 
-postgres-1  | waiting for server to shut down....2025-08-03 14:06:27.113 UTC [28] LOG:  received fast shutdown request
-postgres-1  | 2025-08-03 14:06:27.122 UTC [28] LOG:  aborting any active transactions
-postgres-1  | 2025-08-03 14:06:27.126 UTC [28] LOG:  background worker "logical replication launcher" (PID 34) exited with exit code 1
-postgres-1  | 2025-08-03 14:06:27.202 UTC [29] LOG:  shutting down
-postgres-1  | 2025-08-03 14:06:27.207 UTC [29] LOG:  checkpoint starting: shutdown immediate
-postgres-1  | 2025-08-03 14:06:27.382 UTC [29] LOG:  checkpoint complete: wrote 933 buffers (5.7%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.026 s, sync=0.122 s, total=0.180 s; sync files=321, longest=0.028 s, average=0.001 s; distance=4290 kB, estimate=4290 kB; lsn=0/191DC50, redo lsn=0/191DC50
-postgres-1  | 2025-08-03 14:06:27.388 UTC [28] LOG:  database system is shut down
+postgres-1  | waiting for server to shut down....2025-08-03 15:01:48.322 UTC [28] LOG:  received fast shutdown request
+postgres-1  | 2025-08-03 15:01:48.327 UTC [28] LOG:  aborting any active transactions
+postgres-1  | 2025-08-03 15:01:48.330 UTC [28] LOG:  background worker "logical replication launcher" (PID 34) exited with exit code 1
+postgres-1  | 2025-08-03 15:01:48.332 UTC [29] LOG:  shutting down
+postgres-1  | 2025-08-03 15:01:48.337 UTC [29] LOG:  checkpoint starting: shutdown immediate
+postgres-1  | 2025-08-03 15:01:48.593 UTC [29] LOG:  checkpoint complete: wrote 933 buffers (5.7%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.096 s, sync=0.131 s, total=0.261 s; sync files=321, longest=0.046 s, average=0.001 s; distance=4290 kB, estimate=4290 kB; lsn=0/191DC50, redo lsn=0/191DC50
+postgres-1  | 2025-08-03 15:01:48.601 UTC [28] LOG:  database system is shut down
 postgres-1  |  done
 postgres-1  | server stopped
 postgres-1  | 
 postgres-1  | PostgreSQL init process complete; ready for start up.
 postgres-1  | 
-postgres-1  | 2025-08-03 14:06:27.434 UTC [1] LOG:  starting PostgreSQL 17.5 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
-postgres-1  | 2025-08-03 14:06:27.434 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
-postgres-1  | 2025-08-03 14:06:27.434 UTC [1] LOG:  listening on IPv6 address "::", port 5432
-postgres-1  | 2025-08-03 14:06:27.435 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
-postgres-1  | 2025-08-03 14:06:27.436 UTC [46] LOG:  database system was shut down at 2025-08-03 14:06:27 UTC
-postgres-1  | 2025-08-03 14:06:27.505 UTC [1] LOG:  database system is ready to accept connections
-postgres-1  | 2025-08-03 14:06:30.307 UTC [117] ERROR:  invalid input syntax for type timestamp: ""
-postgres-1  | 2025-08-03 14:06:30.307 UTC [117] CONTEXT:  unnamed portal parameter $1 = ''
-postgres-1  | 2025-08-03 14:06:30.307 UTC [117] STATEMENT:  
+postgres-1  | 2025-08-03 15:01:48.644 UTC [1] LOG:  starting PostgreSQL 17.5 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
+postgres-1  | 2025-08-03 15:01:48.644 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+postgres-1  | 2025-08-03 15:01:48.644 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+postgres-1  | 2025-08-03 15:01:48.645 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+postgres-1  | 2025-08-03 15:01:48.755 UTC [46] LOG:  database system was shut down at 2025-08-03 15:01:48 UTC
+postgres-1  | 2025-08-03 15:01:48.759 UTC [1] LOG:  database system is ready to accept connections
+postgres-1  | 2025-08-03 15:01:53.003 UTC [93] ERROR:  invalid input syntax for type timestamp: ""
+postgres-1  | 2025-08-03 15:01:53.003 UTC [93] CONTEXT:  unnamed portal parameter $1 = ''
+postgres-1  | 2025-08-03 15:01:53.003 UTC [93] STATEMENT:  
 postgres-1  | 			SELECT handler, COUNT(*) as total_requests, SUM(amount) as total_amount
 postgres-1  | 			FROM public.payments
 postgres-1  | 			WHERE created_at between $1 and $2
 postgres-1  | 			GROUP BY handler
 postgres-1  | 		
-postgres-1  | 2025-08-03 14:07:26.006 UTC [274] FATAL:  terminating connection due to unexpected postmaster exit
-postgres-1  | 2025-08-03 14:07:26.006 UTC [276] FATAL:  terminating connection due to unexpected postmaster exit
-postgres-1  | 2025-08-03 14:07:26.007 UTC [263] FATAL:  terminating connection due to unexpected postmaster exit
-postgres-1  | 2025-08-03 14:07:26.007 UTC [260] FATAL:  terminating connection due to unexpected postmaster exit
-postgres-1  | 2025-08-03 14:07:26.007 UTC [256] FATAL:  terminating connection due to unexpected postmaster exit
-postgres-1  | 2025-08-03 14:07:26.007 UTC [259] FATAL:  terminating connection due to unexpected postmaster exit
-postgres-1  | 2025-08-03 14:07:26.007 UTC [264] FATAL:  terminating connection due to unexpected postmaster exit
-postgres-1  | 2025-08-03 14:07:26.007 UTC [267] FATAL:  terminating connection due to unexpected postmaster exit
-postgres-1  | 2025-08-03 14:07:26.007 UTC [271] FATAL:  terminating connection due to unexpected postmaster exit
-postgres-1  | 2025-08-03 14:07:26.007 UTC [268] FATAL:  terminating connection due to unexpected postmaster exit
-postgres-1  | 2025-08-03 14:07:26.008 UTC [284] FATAL:  terminating connection due to unexpected postmaster exit
-postgres-1  | 2025-08-03 14:07:26.008 UTC [255] FATAL:  terminating connection due to unexpected postmaster exit
-postgres-1  | 2025-08-03 14:07:26.008 UTC [258] FATAL:  terminating connection due to unexpected postmaster exit
-postgres-1  | 2025-08-03 14:07:26.008 UTC [273] FATAL:  terminating connection due to unexpected postmaster exit
-postgres-1  | 2025-08-03 14:07:26.008 UTC [272] FATAL:  terminating connection due to unexpected postmaster exit
-postgres-1  | 2025-08-03 14:07:26.006 UTC [244] FATAL:  terminating connection due to unexpected postmaster exit
-postgres-1  | 2025-08-03 14:07:26.008 UTC [170] FATAL:  terminating connection due to unexpected postmaster exit
-postgres-1  | 2025-08-03 14:07:26.007 UTC [257] FATAL:  terminating connection due to unexpected postmaster exit
-postgres-1  | 2025-08-03 14:07:26.009 UTC [261] FATAL:  terminating connection due to unexpected postmaster exit
-postgres-1  | 2025-08-03 14:07:26.008 UTC [265] FATAL:  terminating connection due to unexpected postmaster exit
-postgres-1  | 2025-08-03 14:07:26.009 UTC [275] FATAL:  terminating connection due to unexpected postmaster exit
-postgres-1  | 2025-08-03 14:07:26.009 UTC [183] FATAL:  terminating connection due to unexpected postmaster exit
-postgres-1  | 2025-08-03 14:07:26.007 UTC [269] FATAL:  terminating connection due to unexpected postmaster exit
-postgres-1  | 2025-08-03 14:07:26.009 UTC [171] FATAL:  terminating connection due to unexpected postmaster exit
-postgres-1  | 2025-08-03 14:07:26.009 UTC [175] FATAL:  terminating connection due to unexpected postmaster exit
-postgres-1  | 2025-08-03 14:07:26.011 UTC [180] FATAL:  terminating connection due to unexpected postmaster exit
-postgres-1  | 2025-08-03 14:07:26.012 UTC [277] FATAL:  terminating connection due to unexpected postmaster exit
-postgres-1  | 2025-08-03 14:07:26.012 UTC [178] FATAL:  terminating connection due to unexpected postmaster exit
-postgres-1  | 2025-08-03 14:07:26.015 UTC [266] FATAL:  terminating connection due to unexpected postmaster exit
-postgres-1  | 2025-08-03 14:07:26.102 UTC [245] FATAL:  terminating connection due to unexpected postmaster exit
-postgres-1  | 2025-08-03 14:07:26.102 UTC [262] FATAL:  terminating connection due to unexpected postmaster exit
-postgres-1  | 2025-08-03 14:07:26.102 UTC [203] FATAL:  terminating connection due to unexpected postmaster exit
 [Kpostgres-1 exited with code 137
 [Klb-1 exited with code 137
-[Kapp-1-1 exited with code 2
 [Kapp-2-1 exited with code 2
+[Kapp-1-1 exited with code 2
 log truncated at line 1000
