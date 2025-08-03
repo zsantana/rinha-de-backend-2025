@@ -1,0 +1,117 @@
+
+ Network marcosmarcolin-php_backend  Creating
+ Network marcosmarcolin-php_backend  Created
+ Container marcosmarcolin-php-redis-1  Creating
+ Container marcosmarcolin-php-redis-1  Created
+ Container marcosmarcolin-php-api02-1  Creating
+ Container marcosmarcolin-php-worker-payments-1  Creating
+ Container marcosmarcolin-php-api01-1  Creating
+ Container marcosmarcolin-php-worker-health-1  Creating
+ Container marcosmarcolin-php-api01-1  Created
+ Container marcosmarcolin-php-worker-health-1  Created
+ Container marcosmarcolin-php-worker-payments-1  Created
+ Container marcosmarcolin-php-api02-1  Created
+ Container marcosmarcolin-php-haproxy-1  Creating
+ Container marcosmarcolin-php-haproxy-1  Created
+Attaching to api01-1, api02-1, haproxy-1, redis-1, worker-health-1, worker-payments-1
+redis-1            | Starting Redis Server
+api01-1            | Could not open input file: /opt/www/nano/public/index.php
+api02-1            | Could not open input file: /opt/www/nano/public/index.php
+worker-health-1    | Could not open input file: /opt/www/nano/workers/health.php
+worker-payments-1  | Could not open input file: /opt/www/nano/workers/payments.php
+[Kapi01-1 exited with code 1
+[Kapi02-1 exited with code 1
+[Kworker-payments-1 exited with code 1
+[Kworker-health-1 exited with code 1
+haproxy-1          | [NOTICE]   (1) : Initializing new worker (7)
+haproxy-1          | [NOTICE]   (7) : haproxy version is 3.2.3-1844da7
+haproxy-1          | [NOTICE]   (7) : path to executable is /usr/local/sbin/haproxy
+haproxy-1          | [ALERT]    (7) : [/usr/local/etc/haproxy/haproxy.cfg:20] : 'server backend/api01' : could not resolve address 'api01'.
+haproxy-1          | [ALERT]    (7) : [/usr/local/etc/haproxy/haproxy.cfg:21] : 'server backend/api02' : could not resolve address 'api02'.
+haproxy-1          | [ALERT]    (7) : Failed to initialize server(s) addr.
+haproxy-1          | [NOTICE]   (1) : haproxy version is 3.2.3-1844da7
+haproxy-1          | [NOTICE]   (1) : path to executable is /usr/local/sbin/haproxy
+haproxy-1          | [WARNING]  (1) : Failed to load worker!
+[Khaproxy-1 exited with code 0
+haproxy-1          | [NOTICE]   (8) : haproxy version is 3.2.3-1844da7
+haproxy-1          | [NOTICE]   (8) : path to executable is /usr/local/sbin/haproxy
+haproxy-1          | [ALERT]    (8) : [/usr/local/etc/haproxy/haproxy.cfg:20] : 'server backend/api01' : could not resolve address 'api01'.
+haproxy-1          | [ALERT]    (8) : [/usr/local/etc/haproxy/haproxy.cfg:21] : 'server backend/api02' : could not resolve address 'api02'.
+haproxy-1          | [ALERT]    (8) : Failed to initialize server(s) addr.
+haproxy-1          | [NOTICE]   (1) : haproxy version is 3.2.3-1844da7
+haproxy-1          | [NOTICE]   (1) : path to executable is /usr/local/sbin/haproxy
+haproxy-1          | [WARNING]  (1) : Failed to load worker!
+[Khaproxy-1 exited with code 0
+haproxy-1          | [NOTICE]   (8) : haproxy version is 3.2.3-1844da7
+haproxy-1          | [NOTICE]   (8) : path to executable is /usr/local/sbin/haproxy
+haproxy-1          | [ALERT]    (8) : [/usr/local/etc/haproxy/haproxy.cfg:20] : 'server backend/api01' : could not resolve address 'api01'.
+haproxy-1          | [ALERT]    (8) : [/usr/local/etc/haproxy/haproxy.cfg:21] : 'server backend/api02' : could not resolve address 'api02'.
+haproxy-1          | [ALERT]    (8) : Failed to initialize server(s) addr.
+haproxy-1          | [NOTICE]   (1) : haproxy version is 3.2.3-1844da7
+haproxy-1          | [NOTICE]   (1) : path to executable is /usr/local/sbin/haproxy
+haproxy-1          | [WARNING]  (1) : Failed to load worker!
+[Khaproxy-1 exited with code 1
+haproxy-1          | [NOTICE]   (8) : haproxy version is 3.2.3-1844da7
+haproxy-1          | [NOTICE]   (8) : path to executable is /usr/local/sbin/haproxy
+haproxy-1          | [ALERT]    (8) : [/usr/local/etc/haproxy/haproxy.cfg:20] : 'server backend/api01' : could not resolve address 'api01'.
+haproxy-1          | [ALERT]    (8) : [/usr/local/etc/haproxy/haproxy.cfg:21] : 'server backend/api02' : could not resolve address 'api02'.
+haproxy-1          | [ALERT]    (8) : Failed to initialize server(s) addr.
+haproxy-1          | [NOTICE]   (1) : haproxy version is 3.2.3-1844da7
+haproxy-1          | [NOTICE]   (1) : path to executable is /usr/local/sbin/haproxy
+haproxy-1          | [WARNING]  (1) : Failed to load worker!
+[Khaproxy-1 exited with code 1
+haproxy-1          | [NOTICE]   (8) : haproxy version is 3.2.3-1844da7
+haproxy-1          | [NOTICE]   (8) : path to executable is /usr/local/sbin/haproxy
+haproxy-1          | [ALERT]    (8) : [/usr/local/etc/haproxy/haproxy.cfg:20] : 'server backend/api01' : could not resolve address 'api01'.
+haproxy-1          | [ALERT]    (8) : [/usr/local/etc/haproxy/haproxy.cfg:21] : 'server backend/api02' : could not resolve address 'api02'.
+haproxy-1          | [ALERT]    (8) : Failed to initialize server(s) addr.
+haproxy-1          | [NOTICE]   (1) : haproxy version is 3.2.3-1844da7
+haproxy-1          | [NOTICE]   (1) : path to executable is /usr/local/sbin/haproxy
+haproxy-1          | [WARNING]  (1) : Failed to load worker!
+[Khaproxy-1 exited with code 1
+haproxy-1          | [NOTICE]   (8) : haproxy version is 3.2.3-1844da7
+haproxy-1          | [NOTICE]   (8) : path to executable is /usr/local/sbin/haproxy
+haproxy-1          | [ALERT]    (8) : [/usr/local/etc/haproxy/haproxy.cfg:20] : 'server backend/api01' : could not resolve address 'api01'.
+haproxy-1          | [ALERT]    (8) : [/usr/local/etc/haproxy/haproxy.cfg:21] : 'server backend/api02' : could not resolve address 'api02'.
+haproxy-1          | [ALERT]    (8) : Failed to initialize server(s) addr.
+haproxy-1          | [NOTICE]   (1) : haproxy version is 3.2.3-1844da7
+haproxy-1          | [NOTICE]   (1) : path to executable is /usr/local/sbin/haproxy
+haproxy-1          | [WARNING]  (1) : Failed to load worker!
+[Khaproxy-1 exited with code 1
+haproxy-1          | [NOTICE]   (8) : haproxy version is 3.2.3-1844da7
+haproxy-1          | [NOTICE]   (8) : path to executable is /usr/local/sbin/haproxy
+haproxy-1          | [ALERT]    (8) : [/usr/local/etc/haproxy/haproxy.cfg:20] : 'server backend/api01' : could not resolve address 'api01'.
+haproxy-1          | [ALERT]    (8) : [/usr/local/etc/haproxy/haproxy.cfg:21] : 'server backend/api02' : could not resolve address 'api02'.
+haproxy-1          | [ALERT]    (8) : Failed to initialize server(s) addr.
+haproxy-1          | [NOTICE]   (1) : haproxy version is 3.2.3-1844da7
+haproxy-1          | [NOTICE]   (1) : path to executable is /usr/local/sbin/haproxy
+haproxy-1          | [WARNING]  (1) : Failed to load worker!
+[Khaproxy-1 exited with code 1
+haproxy-1          | [NOTICE]   (8) : haproxy version is 3.2.3-1844da7
+haproxy-1          | [NOTICE]   (8) : path to executable is /usr/local/sbin/haproxy
+haproxy-1          | [ALERT]    (8) : [/usr/local/etc/haproxy/haproxy.cfg:20] : 'server backend/api01' : could not resolve address 'api01'.
+haproxy-1          | [ALERT]    (8) : [/usr/local/etc/haproxy/haproxy.cfg:21] : 'server backend/api02' : could not resolve address 'api02'.
+haproxy-1          | [ALERT]    (8) : Failed to initialize server(s) addr.
+haproxy-1          | [NOTICE]   (1) : haproxy version is 3.2.3-1844da7
+haproxy-1          | [NOTICE]   (1) : path to executable is /usr/local/sbin/haproxy
+haproxy-1          | [WARNING]  (1) : Failed to load worker!
+[Khaproxy-1 exited with code 1
+haproxy-1          | [NOTICE]   (8) : haproxy version is 3.2.3-1844da7
+haproxy-1          | [NOTICE]   (8) : path to executable is /usr/local/sbin/haproxy
+haproxy-1          | [ALERT]    (8) : [/usr/local/etc/haproxy/haproxy.cfg:20] : 'server backend/api01' : could not resolve address 'api01'.
+haproxy-1          | [ALERT]    (8) : [/usr/local/etc/haproxy/haproxy.cfg:21] : 'server backend/api02' : could not resolve address 'api02'.
+haproxy-1          | [ALERT]    (8) : Failed to initialize server(s) addr.
+haproxy-1          | [NOTICE]   (1) : haproxy version is 3.2.3-1844da7
+haproxy-1          | [NOTICE]   (1) : path to executable is /usr/local/sbin/haproxy
+haproxy-1          | [WARNING]  (1) : Failed to load worker!
+[Khaproxy-1 exited with code 1
+haproxy-1          | [NOTICE]   (8) : haproxy version is 3.2.3-1844da7
+haproxy-1          | [NOTICE]   (8) : path to executable is /usr/local/sbin/haproxy
+haproxy-1          | [ALERT]    (8) : [/usr/local/etc/haproxy/haproxy.cfg:20] : 'server backend/api01' : could not resolve address 'api01'.
+haproxy-1          | [ALERT]    (8) : [/usr/local/etc/haproxy/haproxy.cfg:21] : 'server backend/api02' : could not resolve address 'api02'.
+haproxy-1          | [ALERT]    (8) : Failed to initialize server(s) addr.
+haproxy-1          | [NOTICE]   (1) : haproxy version is 3.2.3-1844da7
+haproxy-1          | [NOTICE]   (1) : path to executable is /usr/local/sbin/haproxy
+haproxy-1          | [WARNING]  (1) : Failed to load worker!
+[Khaproxy-1 exited with code 1
+[Kredis-1 exited with code 0
