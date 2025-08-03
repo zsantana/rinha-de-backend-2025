@@ -22,9 +22,7 @@ services:
           memory: '40MB'
     
   api1: &api
-    build:
-      context: ./src
-      dockerfile: ./MandiocaCozidinha.Services.Api/Dockerfile
+    image: gedun/mandioca-cozidinha-api:latest
     hostname: api1
     depends_on:
       redis:
