@@ -5,8 +5,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.7"
-          memory: 50M
+          cpus: "0.5"
+          memory: 90M
     image: nginx:stable-alpine
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf:ro
@@ -38,8 +38,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.25"
-          memory: 50M
+          cpus: "0.4"
+          memory: 80M
     image: daviddeltasierra/rinha-2025-go
     volumes:
       - socket-volume:/socket
@@ -59,8 +59,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.3"
-          memory: 200M
+          cpus: "0.2"
+          memory: 100M
     image: postgres:alpine
     user: postgres
     volumes:
