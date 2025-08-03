@@ -83,8 +83,7 @@ services:
     environment:
       BACK_END_1_URL: backend-1
       BACK_END_2_URL: backend-2
-      WORKERS_THREAD_POOL_SIZE: 10
-      IO_THREAD_POOL_SIZE: 4
+      WORKERS_THREAD_POOL_SIZE: 13
       JAVA_OPTS: >-
         -server
         -XX:+UseG1GC
