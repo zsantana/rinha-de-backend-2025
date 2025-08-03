@@ -32,7 +32,7 @@ x-backend-templates:
     PAYMENT_PROCESSOR_FALLBACK_URL: "http://payment-processor-fallback:8080"
     PAYMENT_PROCESSOR_WORKERS: "10"
     PAYMENT_PROCESSOR_REQUEST_TIMEOUT: "6000"
-    PAYMENT_PROCESSOR_CONNECTION_TIMEOUT: "200"
+    PAYMENT_PROCESSOR_CONNECTION_TIMEOUT: "100"
     PAYMENT_QUEUE: "3000"
     SERVER_PORT: "8080"
     THREAD_POOL_SIZE: "8"
@@ -54,7 +54,7 @@ services:
       - app2
     networks:
       - backend
-    #      - payment-processor
+      - payment-processor
     deploy:
       resources:
         limits:
@@ -67,6 +67,7 @@ services:
     hostname: app1
     environment:
       <<: *app-env
+      warmup_instance: "app2"
 
   app2:
     <<: *app
@@ -74,6 +75,7 @@ services:
     hostname: app2
     environment:
       <<: *app-env
+      warmup_instance: "app1"
 
   backend-db:
     image: postgres:17-alpine
