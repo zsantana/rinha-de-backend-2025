@@ -5,9 +5,9 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "1.0"
+          cpus: "0.8"
           memory: 100M
-    image: daviddeltasierra/rinha-2025-go-2:1.0
+    image: daviddeltasierra/rinha-2025-go-2:1.1
     volumes:
       - socket-volume:/socket
     environment:
@@ -25,9 +25,9 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.2"
+          cpus: "0.4"
           memory: 100M
-    image: daviddeltasierra/rinha-2025-go-2:1.0
+    image: daviddeltasierra/rinha-2025-go-2:1.1
     volumes:
       - socket-volume:/socket
     environment:
