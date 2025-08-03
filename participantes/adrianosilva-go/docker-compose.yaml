@@ -54,7 +54,7 @@ services:
       container_name: api1
       environment:
         - CONN_STRING=postgres://rinha25:rinha25@db:5432/payments_db?sslmode=disable
-        - REDIS_URL=127.0.0.1:6379
+        - REDIS_URL=redis:6379
         - GATEWAY_DEFAULT_URL=http://payment-processor-default:8080
         - GATEWAY_FALLBACK_URL=http://payment-processor-fallback:8080
       networks:
@@ -75,7 +75,7 @@ services:
     container_name: api2
     environment:
       - CONN_STRING=postgres://rinha25:rinha25@db:5432/payments_db?sslmode=disable
-      - REDIS_URL=127.0.0.1:6379
+      - REDIS_URL=redis:6379
       - GATEWAY_DEFAULT_URL=http://payment-processor-default:8080
       - GATEWAY_FALLBACK_URL=http://payment-processor-fallback:8080
     networks:
@@ -97,7 +97,7 @@ services:
       container_name: worker
       environment:
         - CONN_STRING=postgres://rinha25:rinha25@db:5432/payments_db?sslmode=disable
-        - REDIS_URL=127.0.0.1:6379
+        - REDIS_URL=redis:6379
         - GATEWAY_DEFAULT_URL=http://payment-processor-default:8080
         - GATEWAY_FALLBACK_URL=http://payment-processor-fallback:8080
       networks:
