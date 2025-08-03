@@ -1,0 +1,1001 @@
+
+ app2 Pulling 
+ app1 Pulling 
+ 9824c27679d3 Already exists 
+ c10eb810d561 Pulling fs layer 
+ 3ca6e2d3532f Pulling fs layer 
+ ccf3a7b153f9 Pulling fs layer 
+ 9824c27679d3 Already exists 
+ c10eb810d561 Pulling fs layer 
+ 3ca6e2d3532f Pulling fs layer 
+ ccf3a7b153f9 Pulling fs layer 
+ 3ca6e2d3532f Downloading [==================================================>]      93B/93B
+ 3ca6e2d3532f Downloading [==================================================>]      93B/93B
+ 3ca6e2d3532f Verifying Checksum 
+ 3ca6e2d3532f Download complete 
+ 3ca6e2d3532f Verifying Checksum 
+ 3ca6e2d3532f Download complete 
+ c10eb810d561 Downloading [>                                                  ]  3.322kB/282.6kB
+ c10eb810d561 Downloading [>                                                  ]  3.322kB/282.6kB
+ c10eb810d561 Downloading [=>                                                 ]  7.442kB/282.6kB
+ c10eb810d561 Downloading [=>                                                 ]  7.442kB/282.6kB
+ ccf3a7b153f9 Downloading [>                                                  ]  63.73kB/5.965MB
+ ccf3a7b153f9 Downloading [>                                                  ]  63.73kB/5.965MB
+ c10eb810d561 Downloading [==============================>                    ]  174.1kB/282.6kB
+ c10eb810d561 Downloading [==============================>                    ]  174.1kB/282.6kB
+ c10eb810d561 Download complete 
+ c10eb810d561 Extracting [=====>                                             ]  32.77kB/282.6kB
+ c10eb810d561 Download complete 
+ c10eb810d561 Extracting [=====>                                             ]  32.77kB/282.6kB
+ ccf3a7b153f9 Downloading [=>                                                 ]  201.2kB/5.965MB
+ ccf3a7b153f9 Downloading [=>                                                 ]  201.2kB/5.965MB
+ c10eb810d561 Extracting [==================================================>]  282.6kB/282.6kB
+ c10eb810d561 Extracting [==================================================>]  282.6kB/282.6kB
+ c10eb810d561 Extracting [==================================================>]  282.6kB/282.6kB
+ c10eb810d561 Extracting [==================================================>]  282.6kB/282.6kB
+ ccf3a7b153f9 Downloading [=====>                                             ]  709.1kB/5.965MB
+ ccf3a7b153f9 Downloading [=====>                                             ]  709.1kB/5.965MB
+ c10eb810d561 Pull complete 
+ c10eb810d561 Pull complete 
+ 3ca6e2d3532f Extracting [==================================================>]      93B/93B
+ 3ca6e2d3532f Extracting [==================================================>]      93B/93B
+ 3ca6e2d3532f Extracting [==================================================>]      93B/93B
+ 3ca6e2d3532f Extracting [==================================================>]      93B/93B
+ 3ca6e2d3532f Pull complete 
+ 3ca6e2d3532f Pull complete 
+ ccf3a7b153f9 Downloading [=============>                                     ]  1.641MB/5.965MB
+ ccf3a7b153f9 Downloading [=============>                                     ]  1.641MB/5.965MB
+ ccf3a7b153f9 Downloading [==============================>                    ]  3.669MB/5.965MB
+ ccf3a7b153f9 Downloading [==============================>                    ]  3.669MB/5.965MB
+ ccf3a7b153f9 Download complete 
+ ccf3a7b153f9 Verifying Checksum 
+ ccf3a7b153f9 Download complete 
+ ccf3a7b153f9 Extracting [>                                                  ]  65.54kB/5.965MB
+ ccf3a7b153f9 Extracting [>                                                  ]  65.54kB/5.965MB
+ ccf3a7b153f9 Extracting [==================================================>]  5.965MB/5.965MB
+ ccf3a7b153f9 Extracting [==================================================>]  5.965MB/5.965MB
+ ccf3a7b153f9 Pull complete 
+ ccf3a7b153f9 Pull complete 
+ app1 Pulled 
+ app2 Pulled 
+ Network pedrohsb-golang_backend  Creating
+ Network pedrohsb-golang_backend  Created
+ Container pedrohsb-golang-redis-1  Creating
+ Container pedrohsb-golang-app1-1  Creating
+ Container pedrohsb-golang-app2-1  Creating
+ Container pedrohsb-golang-redis-1  Created
+ Container pedrohsb-golang-app1-1  Created
+ Container pedrohsb-golang-app2-1  Created
+ Container nginx-2  Creating
+ Container nginx-2  Created
+Attaching to nginx-2, app1-1, app2-1, redis-1
+redis-1  | Starting Redis Server
+redis-1  | 1:C 03 Aug 2025 01:38:08.521 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+redis-1  | 1:C 03 Aug 2025 01:38:08.521 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+redis-1  | 1:C 03 Aug 2025 01:38:08.521 * Redis version=8.0.3, bits=64, commit=00000000, modified=1, pid=1, just started
+redis-1  | 1:C 03 Aug 2025 01:38:08.521 * Configuration loaded
+redis-1  | 1:M 03 Aug 2025 01:38:08.521 * monotonic clock: POSIX clock_gettime
+redis-1  | 1:M 03 Aug 2025 01:38:08.522 * Running mode=standalone, port=6379.
+redis-1  | 1:M 03 Aug 2025 01:38:08.522 * <bf> RedisBloom version 8.0.1 (Git=unknown)
+redis-1  | 1:M 03 Aug 2025 01:38:08.522 * <bf> Registering configuration options: [
+redis-1  | 1:M 03 Aug 2025 01:38:08.522 * <bf> 	{ bf-error-rate       :      0.01 }
+redis-1  | 1:M 03 Aug 2025 01:38:08.522 * <bf> 	{ bf-initial-size     :       100 }
+redis-1  | 1:M 03 Aug 2025 01:38:08.523 * <bf> 	{ bf-expansion-factor :         2 }
+redis-1  | 1:M 03 Aug 2025 01:38:08.523 * <bf> 	{ cf-bucket-size      :         2 }
+redis-1  | 1:M 03 Aug 2025 01:38:08.523 * <bf> 	{ cf-initial-size     :      1024 }
+redis-1  | 1:M 03 Aug 2025 01:38:08.523 * <bf> 	{ cf-max-iterations   :        20 }
+redis-1  | 1:M 03 Aug 2025 01:38:08.523 * <bf> 	{ cf-expansion-factor :         1 }
+redis-1  | 1:M 03 Aug 2025 01:38:08.523 * <bf> 	{ cf-max-expansions   :        32 }
+redis-1  | 1:M 03 Aug 2025 01:38:08.523 * <bf> ]
+redis-1  | 1:M 03 Aug 2025 01:38:08.523 * Module 'bf' loaded from /usr/local/lib/redis/modules//redisbloom.so
+redis-1  | 1:M 03 Aug 2025 01:38:08.525 * <search> Redis version found by RedisSearch : 8.0.3 - oss
+redis-1  | 1:M 03 Aug 2025 01:38:08.525 * <search> RediSearch version 8.0.1 (Git=5688fcc)
+redis-1  | 1:M 03 Aug 2025 01:38:08.525 * <search> Low level api version 1 initialized successfully
+redis-1  | 1:M 03 Aug 2025 01:38:08.525 * <search> gc: ON, prefix min length: 2, min word length to stem: 4, prefix max expansions: 200, query timeout (ms): 500, timeout policy: return, cursor read size: 1000, cursor max idle (ms): 300000, max doctable size: 1000000, max number of search results:  1000000, 
+redis-1  | 1:M 03 Aug 2025 01:38:08.525 * <search> Initialized thread pools!
+redis-1  | 1:M 03 Aug 2025 01:38:08.525 * <search> Disabled workers threadpool of size 0
+redis-1  | 1:M 03 Aug 2025 01:38:08.525 * <search> Subscribe to config changes
+redis-1  | 1:M 03 Aug 2025 01:38:08.525 * <search> Enabled role change notification
+redis-1  | 1:M 03 Aug 2025 01:38:08.526 * <search> Cluster configuration: AUTO partitions, type: 0, coordinator timeout: 0ms
+redis-1  | 1:M 03 Aug 2025 01:38:08.526 * <search> Register write commands
+redis-1  | 1:M 03 Aug 2025 01:38:08.526 * Module 'search' loaded from /usr/local/lib/redis/modules//redisearch.so
+redis-1  | 1:M 03 Aug 2025 01:38:08.526 * <timeseries> RedisTimeSeries version 80001, git_sha=577bfa8b5909e7ee572f0b651399be8303dc6641
+redis-1  | 1:M 03 Aug 2025 01:38:08.526 * <timeseries> Redis version found by RedisTimeSeries : 8.0.3 - oss
+redis-1  | 1:M 03 Aug 2025 01:38:08.526 * <timeseries> Registering configuration options: [
+redis-1  | 1:M 03 Aug 2025 01:38:08.526 * <timeseries> 	{ ts-compaction-policy   :              }
+redis-1  | 1:M 03 Aug 2025 01:38:08.527 * <timeseries> 	{ ts-num-threads         :            3 }
+redis-1  | 1:M 03 Aug 2025 01:38:08.527 * <timeseries> 	{ ts-retention-policy    :            0 }
+redis-1  | 1:M 03 Aug 2025 01:38:08.527 * <timeseries> 	{ ts-duplicate-policy    :        block }
+redis-1  | 1:M 03 Aug 2025 01:38:08.527 * <timeseries> 	{ ts-chunk-size-bytes    :         4096 }
+redis-1  | 1:M 03 Aug 2025 01:38:08.527 * <timeseries> 	{ ts-encoding            :   compressed }
+redis-1  | 1:M 03 Aug 2025 01:38:08.527 * <timeseries> 	{ ts-ignore-max-time-diff:            0 }
+redis-1  | 1:M 03 Aug 2025 01:38:08.527 * <timeseries> 	{ ts-ignore-max-val-diff :     0.000000 }
+redis-1  | 1:M 03 Aug 2025 01:38:08.527 * <timeseries> ]
+redis-1  | 1:M 03 Aug 2025 01:38:08.527 * <timeseries> Detected redis oss
+redis-1  | 1:M 03 Aug 2025 01:38:08.527 * Module 'timeseries' loaded from /usr/local/lib/redis/modules//redistimeseries.so
+redis-1  | 1:M 03 Aug 2025 01:38:08.528 * <ReJSON> Created new data type 'ReJSON-RL'
+redis-1  | 1:M 03 Aug 2025 01:38:08.528 * <ReJSON> version: 80001 git sha: unknown branch: unknown
+redis-1  | 1:M 03 Aug 2025 01:38:08.528 * <ReJSON> Exported RedisJSON_V1 API
+redis-1  | 1:M 03 Aug 2025 01:38:08.528 * <ReJSON> Exported RedisJSON_V2 API
+redis-1  | 1:M 03 Aug 2025 01:38:08.528 * <ReJSON> Exported RedisJSON_V3 API
+redis-1  | 1:M 03 Aug 2025 01:38:08.528 * <ReJSON> Exported RedisJSON_V4 API
+redis-1  | 1:M 03 Aug 2025 01:38:08.528 * <ReJSON> Exported RedisJSON_V5 API
+redis-1  | 1:M 03 Aug 2025 01:38:08.528 * <ReJSON> Enabled diskless replication
+redis-1  | 1:M 03 Aug 2025 01:38:08.528 * <ReJSON> Initialized shared string cache, thread safe: false.
+redis-1  | 1:M 03 Aug 2025 01:38:08.528 * Module 'ReJSON' loaded from /usr/local/lib/redis/modules//rejson.so
+redis-1  | 1:M 03 Aug 2025 01:38:08.528 * <search> Acquired RedisJSON_V5 API
+redis-1  | 1:M 03 Aug 2025 01:38:08.529 * Server initialized
+redis-1  | 1:M 03 Aug 2025 01:38:08.529 * Ready to accept connections tcp
+nginx-2  | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+nginx-2  | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+nginx-2  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+nginx-2  | 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+nginx-2  | 10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
+nginx-2  | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+nginx-2  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+nginx-2  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+nginx-2  | /docker-entrypoint.sh: Configuration complete; ready for start up
+app2-1   | DEMOROU: 1.000 segundos
+app1-1   | DEMOROU: 1.000 segundos
+app2-1   | DEMOROU: 1.000 segundos
+app1-1   | DEMOROU: 1.000 segundos
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:10 +0000] "GET /payments-summary HTTP/1.1" 200 94 "-" "curl/7.88.1"
+app2-1   | DEMOROU: 1.000 segundos
+app1-1   | DEMOROU: 1.001 segundos
+app2-1   | DEMOROU: 1.000 segundos
+app1-1   | DEMOROU: 1.000 segundos
+app2-1   | DEMOROU: 1.000 segundos
+app1-1   | DEMOROU: 1.000 segundos
+app2-1   | DEMOROU: 1.000 segundos
+app1-1   | DEMOROU: 1.000 segundos
+app2-1   | DEMOROU: 1.000 segundos
+app1-1   | DEMOROU: 1.000 segundos
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:16 +0000] "POST /purge-payments HTTP/1.1" 404 9 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:16 +0000] "GET /payments-summary?from=2025-08-03T01:38:01.146Z&to=2025-08-03T01:38:14.646Z HTTP/1.1" 200 94 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:16 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:16 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:16 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:16 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+app2-1   | DEMOROU: 1.000 segundos
+app1-1   | DEMOROU: 1.001 segundos
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:16 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:16 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:16 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:16 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:17 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:17 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:17 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:17 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:17 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:17 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:17 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:17 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:17 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+app2-1   | DEMOROU: 1.001 segundos
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:17 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+app1-1   | DEMOROU: 1.001 segundos
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:17 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:17 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:17 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:17 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:17 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:17 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:17 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:18 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:18 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:18 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:18 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:18 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:18 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:18 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:18 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:18 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:18 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:18 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:18 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:18 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:18 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+app2-1   | DEMOROU: 1.000 segundos
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:18 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:18 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+app1-1   | DEMOROU: 1.001 segundos
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:18 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:18 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:18 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:18 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:18 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:18 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:18 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:18 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:18 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:18 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:18 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:19 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:19 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:19 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:19 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:19 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:19 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:19 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+app2-1   | ENVIANDO:  bfaa4eb2-6c66-45de-acc9-ac93a5fa07a8
+app2-1   | ENVIANDO:  411a78c7-4772-4508-b7fb-00fde3b73c26
+app2-1   | ENVIANDO:  96918437-348a-4ca1-92ba-99ba8e177f36
+app2-1   | ENVIANDO:  563fc012-60b8-4c8c-9c52-20c48e4e2a88
+app2-1   | ENVIANDO:  f0b83036-9907-447c-9c19-2dbe3fa5a46b
+app2-1   | ENVIANDO:  32ae960e-6455-45ee-9890-ce18d1712ac8
+app2-1   | ENVIANDO:  b32d1269-283f-4ec2-8311-46df7824a408
+app2-1   | ENVIANDO:  5d1ac167-0373-4e4d-bc9a-4fea74dfe0a3
+app2-1   | ENVIANDO:  1c5ab2c5-6988-4761-91b4-88866a66126d
+app2-1   | ENVIANDO:  0102513c-ff60-422f-80eb-f0afbbd586e1
+app2-1   | ENVIANDO:  ce11bba8-42fc-4a1a-ae67-67902002cd34
+app2-1   | ENVIANDO:  c305a945-8d31-4e86-b0d4-3e074814d791
+app2-1   | ENVIANDO:  b11ba9d2-cf19-413c-8b44-6d747e0d3be1
+app2-1   | ENVIANDO:  57c88e74-6dae-41d4-826c-f5b99b65b2a2
+app2-1   | ENVIANDO:  db300a89-9647-47fe-a4cb-47202cfed37a
+app2-1   | ENVIANDO:  51a8660b-02bf-4f96-9e97-8a767af87d54
+app2-1   | ENVIANDO:  86977ed1-1847-455b-9c88-dd31b6302306
+app2-1   | ENVIANDO:  c0aa91a0-dd8d-4735-b810-9fede1ab094b
+app2-1   | ENVIANDO:  43b3912a-4163-4638-ad54-05553d9a604e
+app2-1   | ENVIANDO:  d1190b45-46f1-4943-a6fc-a4f36e288074
+app2-1   | ENVIANDO:  411373b7-adc5-42c7-b7c4-d59083aa9e66
+app2-1   | ENVIANDO:  5d818062-b4d7-4a67-9fa9-35029425c3f4
+app2-1   | ENVIANDO:  cc2d13ec-0ad5-42e3-83d0-cc9575a7510e
+app2-1   | ENVIANDO:  d3f7b0b1-6771-44d9-ba91-88c48bb912a6
+app2-1   | ENVIANDO:  5e7d5f79-f0e2-4af8-a5dc-fdb367fd78ad
+app2-1   | ENVIANDO:  cdb995e2-5204-47d7-8356-9301482d1f5e
+app2-1   | ENVIANDO:  bf146d3a-6b23-4f64-8cf8-9aa29014c6bc
+app2-1   | ENVIANDO:  ef7a520b-d067-4e1b-ba64-0b25557446f4
+app2-1   | ENVIANDO:  2d5bc76b-b874-4d52-9821-17f1bf895034
+app2-1   | ENVIANDO:  b25a865b-ad21-4aea-bf25-fb8d03685c38
+app2-1   | STATUS:  200
+app2-1   | DEMOROU: 0.679 segundos
+app1-1   | ENVIANDO:  340f5390-2053-4805-8315-f693885c8cea
+app1-1   | ENVIANDO:  a073cfb0-9832-4f4b-a434-e39a9b2cdb54
+app1-1   | ENVIANDO:  9b360f95-ede9-4ddf-908e-0f5f0c15b521
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:19 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+app1-1   | ENVIANDO:  e38d723e-9825-48a5-b882-1edc95fe5548
+app1-1   | ENVIANDO:  2e88f4f5-aaf3-4d0e-961b-335667c30372
+app1-1   | ENVIANDO:  8eb3bae5-f425-4f2f-a76f-298e62d48630
+app1-1   | ENVIANDO:  af758479-9c2f-4667-8cf5-851fe5e847d9
+app1-1   | ENVIANDO:  f57a4c02-93d1-4d2f-8620-0450b8795794
+app1-1   | ENVIANDO:  69536110-7e56-4487-8461-f8b67871c30d
+app1-1   | ENVIANDO:  9e5c74e3-2a1f-41d0-b618-d6f14a41999e
+app1-1   | ENVIANDO:  b9f50fda-1aa0-43e0-bb70-2e8cc8090a52
+app1-1   | ENVIANDO:  8fa78b60-65fc-4db8-b953-e48adadedb64
+app1-1   | ENVIANDO:  7639a82b-030b-4490-9ed6-b5266b176a40
+app1-1   | ENVIANDO:  410ecf96-278e-4024-ba51-29b057f09b8c
+app1-1   | ENVIANDO:  484ea07d-4504-4e60-ae75-e676941f6c68
+app1-1   | ENVIANDO:  bed66e55-9355-49c7-b3ef-fe6dbc1c8275
+app1-1   | ENVIANDO:  cd7f46cc-3328-436f-875a-4d1466d4d96f
+app1-1   | ENVIANDO:  037fab53-a2de-4b33-99aa-38672f5ba7c2
+app1-1   | ENVIANDO:  185e44c5-f374-48d2-a2c6-e00d05bef917
+app1-1   | ENVIANDO:  be812afd-f1c3-4694-bd50-57b763889e24
+app1-1   | ENVIANDO:  2fcc1e50-869b-42d7-83d2-307dab65d135
+app1-1   | ENVIANDO:  03004bc4-a6c4-41eb-9255-31e96ab3d329
+app1-1   | ENVIANDO:  0c3a12b2-2b24-40fa-888c-ee3048226ec8
+app1-1   | ENVIANDO:  9e973538-ec21-466c-ac20-df9653daa125
+app1-1   | ENVIANDO:  32ba059f-7850-4ede-95de-e79eb57b8035
+app1-1   | ENVIANDO:  e614b366-5649-44f1-a997-7f896b7df352
+app1-1   | ENVIANDO:  e93df913-88c4-47f6-a912-69ae63b97746
+app1-1   | ENVIANDO:  3c74f331-f7b4-4e52-a890-bbf842e7c466
+app1-1   | ENVIANDO:  661ea316-3961-459d-995f-50b382cd8204
+app1-1   | ENVIANDO:  356fcd19-cdfd-43f2-8e6b-0b113b1bf5bb
+app2-1   | STATUS:  200
+app2-1   | DEMOROU: 0.011 segundos
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:19 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+app2-1   | STATUS:  200
+app2-1   | DEMOROU: 0.021 segundos
+app2-1   | STATUS:  200
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | STATUS:  200
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | STATUS:  200
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | STATUS:  200
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | STATUS:  200
+app2-1   | STATUS:  200
+app2-1   | STATUS:  200
+app2-1   | DEMOROU: 0.004 segundos
+app2-1   | STATUS:  200
+app2-1   | STATUS:  200
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | STATUS:  200
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | STATUS:  200
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | STATUS:  200
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | STATUS:  200
+app2-1   | DEMOROU: 0.000 segundos
+app1-1   | STATUS:  200
+app1-1   | DEMOROU: 0.681 segundos
+app2-1   | STATUS:  200
+app2-1   | DEMOROU: 0.003 segundos
+app2-1   | STATUS:  200
+app2-1   | STATUS:  200
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | STATUS:  200
+app2-1   | STATUS:  200
+app2-1   | STATUS:  200
+app1-1   | STATUS:  200
+app1-1   | DEMOROU: 0.001 segundos
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:19 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+app1-1   | STATUS:  200
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | STATUS:  200
+app1-1   | DEMOROU: 0.001 segundos
+app1-1   | STATUS:  200
+app1-1   | DEMOROU: 0.000 segundos
+app2-1   | DEMOROU: 0.003 segundos
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | DEMOROU: 0.000 segundos
+app1-1   | STATUS:  200
+app1-1   | DEMOROU: 0.001 segundos
+app1-1   | STATUS:  200
+app1-1   | STATUS:  200
+app1-1   | STATUS:  200
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | STATUS:  200
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | STATUS:  200
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | STATUS:  200
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | STATUS:  200
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | STATUS:  200
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | STATUS:  200
+app1-1   | STATUS:  200
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | DEMOROU: 0.000 segundos
+app2-1   | STATUS:  200
+app2-1   | DEMOROU: 0.003 segundos
+app1-1   | STATUS:  200
+app1-1   | STATUS:  200
+app1-1   | DEMOROU: 0.001 segundos
+app1-1   | STATUS:  200
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | STATUS:  200
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | STATUS:  200
+app1-1   | STATUS:  200
+app1-1   | STATUS:  200
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | STATUS:  200
+app1-1   | STATUS:  200
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | STATUS:  200
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | STATUS:  200
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | STATUS:  200
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | STATUS:  200
+app1-1   | DEMOROU: 0.000 segundos
+app2-1   | STATUS:  200
+app2-1   | DEMOROU: 0.009 segundos
+app2-1   | STATUS:  200
+app2-1   | DEMOROU: 0.000 segundos
+app1-1   | STATUS:  200
+app1-1   | DEMOROU: 0.008 segundos
+app2-1   | STATUS:  200
+app2-1   | DEMOROU: 0.002 segundos
+app2-1   | STATUS:  200
+app2-1   | DEMOROU: 0.002 segundos
+app2-1   | STATUS:  200
+app2-1   | DEMOROU: 0.003 segundos
+app2-1   | STATUS:  200
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | STATUS:  200
+app2-1   | DEMOROU: 0.002 segundos
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:19 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:19 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:19 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:19 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:19 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:19 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:19 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:19 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:19 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:19 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:19 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:19 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:19 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:19 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:19 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:19 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:19 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:19 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:19 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:19 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:19 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:19 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:19 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:19 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:19 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:19 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:20 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:20 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:20 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:20 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:20 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:20 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:20 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:20 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:20 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:20 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:20 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+app2-1   | DEMOROU: 0.979 segundos
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:20 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+app1-1   | DEMOROU: 0.992 segundos
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:20 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:20 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:20 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:20 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:20 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:20 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:20 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:20 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:20 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:20 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:20 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:20 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:20 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:20 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:20 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:20 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:20 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:20 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+app2-1   | ENVIANDO:  9b89cad5-df6d-43c1-948a-ec7dee619899
+app2-1   | ENVIANDO:  ccca834c-f1c7-49c0-8dba-93425cb6fb6d
+app2-1   | ENVIANDO:  5e46df13-553f-4556-83c6-38bbaa265352
+app2-1   | ENVIANDO:  3b78803d-244c-4e1b-9feb-8868d06f470a
+app2-1   | ENVIANDO:  4e009239-d627-4c3d-bfee-09cdcdec626c
+app2-1   | ENVIANDO:  6728372f-2d72-495a-ba95-fbcc57068a12
+app2-1   | ENVIANDO:  755c5309-e291-412a-b889-5c8c6234413d
+app2-1   | ENVIANDO:  5fd11d96-feca-4058-a7d9-c066496823fc
+app2-1   | ENVIANDO:  6ae6117a-d5ec-4f6d-b16e-9d19536b81ca
+app2-1   | ENVIANDO:  51a0a370-8e9e-4e3a-91d0-4638ad5cb657
+app2-1   | ENVIANDO:  f0296d55-b09e-4c7c-8435-20547609ca55
+app2-1   | ENVIANDO:  6fc1f17d-d07a-4464-ab09-d82dcb33083c
+app2-1   | ENVIANDO:  51646ba5-cfea-4072-84f0-c3c21ed697f4
+app2-1   | ENVIANDO:  27062648-77d6-4574-a507-3f9f7e0996ae
+app2-1   | ENVIANDO:  68b5ae67-6806-4256-a287-d8b2a0a1f66f
+app2-1   | ENVIANDO:  63468c0f-a614-42ee-ac92-5cc27316bf15
+app2-1   | ENVIANDO:  25fb4f3f-eff5-4749-ad3f-2d755c8102e7
+app2-1   | ENVIANDO:  5d8b8b4e-a751-4dce-85b6-94d428bdb56a
+app2-1   | ENVIANDO:  3175651d-1cfe-4c82-833a-1e037a581625
+app2-1   | ENVIANDO:  063093a5-ea36-4b51-9840-e127b1605717
+app2-1   | ENVIANDO:  e31fa632-2099-4c67-b1ef-5d6674d33b1a
+app2-1   | ENVIANDO:  8c854829-ecf0-479f-933e-3f14015d6aa3
+app2-1   | ENVIANDO:  a8e871ec-5de5-4bf4-9b78-97f0cd749f42
+app2-1   | ENVIANDO:  7141a6ab-f0d1-43a1-8efe-28101f4813c1
+app2-1   | ENVIANDO:  fbf74433-be19-465f-abfb-129ec08791c2
+app2-1   | ENVIANDO:  a69827fe-07e2-46ed-aa03-760034c16a84
+app2-1   | ENVIANDO:  9570092a-2d16-4d77-9c7a-3c3bb614a56f
+app2-1   | ENVIANDO:  c1454b55-ae7a-44fc-af39-98d4d864a2c7
+app2-1   | ENVIANDO:  ab3e8f88-c319-439f-b81b-4d4e184be8bd
+app2-1   | ENVIANDO:  90c98776-1d2e-435d-b207-465002ea673d
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:20 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+app2-1   | STATUS:  200
+app2-1   | DEMOROU: 0.422 segundos
+app2-1   | STATUS:  200
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | STATUS:  200
+app2-1   | STATUS:  200
+app2-1   | STATUS:  200
+app2-1   | DEMOROU: 0.002 segundos
+app2-1   | STATUS:  200
+app2-1   | STATUS:  200
+app2-1   | STATUS:  200
+app2-1   | STATUS:  200
+app2-1   | STATUS:  200
+app2-1   | STATUS:  200
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | STATUS:  200
+app2-1   | STATUS:  200
+app2-1   | STATUS:  200
+app2-1   | STATUS:  200
+app2-1   | STATUS:  200
+app2-1   | STATUS:  200
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | STATUS:  200
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | STATUS:  200
+app2-1   | STATUS:  200
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | STATUS:  200
+app2-1   | STATUS:  200
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | STATUS:  200
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | STATUS:  200
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | STATUS:  200
+app2-1   | STATUS:  200
+app2-1   | STATUS:  200
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | STATUS:  200
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | STATUS:  200
+app2-1   | STATUS:  200
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | DEMOROU: 0.000 segundos
+app1-1   | ENVIANDO:  f955b7e4-32cd-42ac-b346-ec777e32a1da
+app1-1   | ENVIANDO:  4265c388-1f4d-4c20-bc5b-f572a19725ce
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:20 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+app1-1   | ENVIANDO:  394db309-67c1-4b7b-85fa-4ea472066adc
+app1-1   | ENVIANDO:  2826c31d-f92e-49f5-ad88-7a7f1fa8e3c8
+app1-1   | ENVIANDO:  b83220ca-85fa-4fbd-8e2a-4efce3e9625f
+app1-1   | ENVIANDO:  bd2029c6-6b23-4872-a2bb-19003e6aff2f
+app1-1   | ENVIANDO:  1d5dbb8e-2653-4a83-8c7d-ce1d18a8eee1
+app1-1   | ENVIANDO:  fae5a2c8-11cf-4003-99c9-ae88d67901d1
+app1-1   | ENVIANDO:  7e22bc13-0afd-409f-b566-816360eccf7c
+app1-1   | ENVIANDO:  a9dae292-53c5-4705-be54-490fdc1706b1
+app1-1   | ENVIANDO:  9330515b-fbbc-412f-910f-9b167f366fc5
+app1-1   | ENVIANDO:  c668d67b-c608-4196-8974-c3db4d6a9dbf
+app1-1   | ENVIANDO:  0cba8f7c-3ee8-4f08-aba3-22b8e0a69101
+app1-1   | ENVIANDO:  da0db1c4-b3d8-4dfc-8624-94aed6c4d30a
+app1-1   | ENVIANDO:  aa53d5ac-356a-4d84-8e12-73a0bb2d8b2b
+app1-1   | ENVIANDO:  400aaa80-2a7f-4da8-bbe8-6d110881130c
+app1-1   | ENVIANDO:  f0d4157d-a34f-48fd-9bdc-4cce850a9e4b
+app1-1   | ENVIANDO:  0f402a5d-cdd1-46b1-ad6d-0bea464de685
+app1-1   | ENVIANDO:  7ef0e9ca-7d1f-4a96-86e8-c46b92042623
+app1-1   | ENVIANDO:  2e6e1ca4-26ad-4b31-a790-df74a3322e91
+app1-1   | ENVIANDO:  dcda3e87-1f77-447d-a583-a9c2c0a55410
+app1-1   | ENVIANDO:  77054a2a-5322-4901-ae3f-c294f24b5bb5
+app1-1   | ENVIANDO:  1995aafb-a668-469b-9f7b-ca525b5e7f42
+app1-1   | ENVIANDO:  9fd0ffd8-5d77-4056-b4e5-4abe396a38d6
+app1-1   | ENVIANDO:  aa39d99d-db41-402e-833d-c29e66dd131b
+app1-1   | ENVIANDO:  cfc980ff-cf49-428e-8c18-503c8e62e4d8
+app1-1   | ENVIANDO:  87a94b51-66d0-469c-aedb-f589ee7d341b
+app1-1   | ENVIANDO:  e88734e6-0f5b-4e1c-88a1-1f3af39496f7
+app1-1   | ENVIANDO:  ab7678cd-65de-4ff6-ade6-353d45023824
+app1-1   | ENVIANDO:  1e1b581f-04ca-4776-9ea3-7fd931b3ce7c
+app1-1   | STATUS:  200
+app1-1   | STATUS:  200
+app1-1   | DEMOROU: 0.437 segundos
+app1-1   | STATUS:  200
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | STATUS:  200
+app1-1   | DEMOROU: 0.001 segundos
+app1-1   | STATUS:  200
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | STATUS:  200
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | STATUS:  200
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | STATUS:  200
+app1-1   | STATUS:  200
+app1-1   | DEMOROU: 0.001 segundos
+app1-1   | STATUS:  200
+app1-1   | STATUS:  200
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | STATUS:  200
+app1-1   | STATUS:  200
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | STATUS:  200
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | STATUS:  200
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | STATUS:  200
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | STATUS:  200
+app1-1   | DEMOROU: 0.001 segundos
+app1-1   | STATUS:  200
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | STATUS:  200
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | STATUS:  200
+app1-1   | STATUS:  200
+app1-1   | STATUS:  200
+app1-1   | STATUS:  200
+app1-1   | STATUS:  200
+app1-1   | STATUS:  200
+app1-1   | STATUS:  200
+app1-1   | STATUS:  200
+app1-1   | STATUS:  200
+app1-1   | DEMOROU: 0.001 segundos
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | STATUS:  200
+app1-1   | STATUS:  200
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | DEMOROU: 0.000 segundos
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:20 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:20 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:20 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:20 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:20 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:20 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:20 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:20 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:20 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:20 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:20 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:20 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:20 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:21 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:21 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:21 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:21 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:21 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:21 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:21 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:21 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:21 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:21 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:21 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:21 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:21 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:21 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:21 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:21 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:21 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:21 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:21 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:21 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:21 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:21 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:21 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:21 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:21 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:21 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:21 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:21 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:21 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:21 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:21 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:21 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:21 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:21 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:21 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:21 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:21 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+app2-1   | DEMOROU: 1.000 segundos
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:21 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+app1-1   | DEMOROU: 1.001 segundos
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:21 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:21 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:21 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:21 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:21 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:21 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:21 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+app2-1   | ENVIANDO:  8681e326-9251-4c4b-90a7-4189e28dc310
+app2-1   | ENVIANDO:  05f012ad-9915-4c78-b7c0-8e1091877618
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:21 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+app2-1   | ENVIANDO:  0a3f695c-194d-47e3-b9d6-7918ac8de41d
+app2-1   | ENVIANDO:  c3fa4c2b-8325-40ce-b553-ab96145880e6
+app2-1   | ENVIANDO:  0dc40a06-d51c-4015-8c9b-7f40a786f564
+app2-1   | ENVIANDO:  feecb862-37d1-4271-86e5-e420cbc4f88e
+app2-1   | ENVIANDO:  98e6ff7f-6a4b-4731-abe5-8a3ee77c57fd
+app2-1   | ENVIANDO:  9fce8dd1-b308-451c-a77f-20bc735f802d
+app2-1   | ENVIANDO:  86bcf7ea-a62d-4c52-ab9a-eef4ea7acaf8
+app2-1   | ENVIANDO:  b9dbf979-05d3-4ba5-863c-5e44ba2acfa7
+app2-1   | ENVIANDO:  8c2774e2-adfd-4107-b091-949675cc13a5
+app2-1   | ENVIANDO:  163285ed-9d09-432e-b994-3bdc60368f65
+app2-1   | ENVIANDO:  b5e9c023-4bb3-41fe-9030-8d77165aef88
+app2-1   | ENVIANDO:  b6bfe7c4-fd4a-470b-95d4-199640962182
+app2-1   | ENVIANDO:  4ac0eb81-f427-40ea-bec0-e47521465df1
+app2-1   | ENVIANDO:  4ce64856-58cf-4487-87bc-da45ad00b106
+app2-1   | ENVIANDO:  c21adb92-a6ef-43eb-b2cf-3e03827cd95c
+app2-1   | ENVIANDO:  8a5e96db-c5db-4a21-b2ed-69d2bb749ab3
+app2-1   | ENVIANDO:  ffaddb38-8929-4bf6-9666-79f7fe9f1595
+app2-1   | ENVIANDO:  c22f5d0f-600c-495a-9d96-218727b05bf6
+app2-1   | ENVIANDO:  854d4925-b678-4c8f-92e2-a007a4ca80ac
+app2-1   | ENVIANDO:  ba876da1-6e97-4d7d-8d98-85b659220672
+app2-1   | ENVIANDO:  7cb6d778-ae73-4fc7-8503-b8c6abf3e994
+app2-1   | ENVIANDO:  512f60fc-d6fb-43ec-8d38-be1086a71423
+app2-1   | ENVIANDO:  de05ebeb-5f6b-484f-9a24-e2da156822ff
+app2-1   | ENVIANDO:  aa5bbc64-05b0-431f-9812-77c18800da91
+app2-1   | ENVIANDO:  68518646-19dd-4d91-9ac7-63aa9ba0f89d
+app2-1   | ENVIANDO:  d17c10a2-a637-4522-b4e7-3ea8a43e26cf
+app2-1   | ENVIANDO:  a6190819-b89a-47c8-8a99-706853b6b855
+app2-1   | ENVIANDO:  5e8efb62-c462-4fc8-95d2-e1dcaf76e2bf
+app2-1   | STATUS:  200
+app2-1   | DEMOROU: 0.164 segundos
+app2-1   | STATUS:  200
+app2-1   | DEMOROU: 0.001 segundos
+app2-1   | STATUS:  200
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | STATUS:  200
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | STATUS:  200
+app2-1   | STATUS:  200
+app2-1   | DEMOROU: 0.001 segundos
+app2-1   | STATUS:  200
+app2-1   | STATUS:  200
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | STATUS:  200
+app2-1   | STATUS:  200
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | STATUS:  200
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | STATUS:  200
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | STATUS:  200
+app2-1   | STATUS:  200
+app2-1   | DEMOROU: 0.002 segundos
+app2-1   | STATUS:  200
+app2-1   | STATUS:  200
+app2-1   | STATUS:  200
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | STATUS:  200
+app2-1   | STATUS:  200
+app2-1   | STATUS:  200
+app2-1   | STATUS:  200
+app2-1   | STATUS:  200
+app2-1   | STATUS:  200
+app2-1   | STATUS:  200
+app2-1   | STATUS:  200
+app2-1   | STATUS:  200
+app2-1   | STATUS:  200
+app2-1   | STATUS:  200
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | STATUS:  200
+app2-1   | STATUS:  200
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | DEMOROU: 0.000 segundos
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:21 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+app1-1   | ENVIANDO:  234da3a7-3308-48ed-8f5b-94af4dd4f834
+app1-1   | ENVIANDO:  e4ad0304-89ab-4991-9d00-932858fccf76
+app1-1   | ENVIANDO:  7f4ab457-a491-4b6b-9276-3df56ec8a596
+app1-1   | ENVIANDO:  a91ac2c4-ac04-4033-bbc7-3ee11b86994c
+app1-1   | ENVIANDO:  ed92e004-84a7-407b-bfa4-293b93bc3366
+app1-1   | ENVIANDO:  23eb3ae7-d473-4b82-adac-11362228e116
+app1-1   | ENVIANDO:  f5c95fc3-e32f-4426-af61-c04e0bcb59a2
+app1-1   | ENVIANDO:  46d8621e-c6ec-475d-8814-cf31f737089e
+app1-1   | ENVIANDO:  58e57ff7-9f23-41ad-8196-e77496a2e2f5
+app1-1   | ENVIANDO:  2865834e-5a51-41b3-9317-ebe0cb57fbe4
+app1-1   | ENVIANDO:  d76019f8-1fac-453b-888a-bdc22d2ad27f
+app1-1   | ENVIANDO:  39438683-d760-4e32-9c56-959b7d87bbf4
+app1-1   | ENVIANDO:  4568dfea-ed81-4f11-b077-6e7ea0b983a5
+app1-1   | ENVIANDO:  a81cac6d-ccf7-4f34-9203-f140c5a8836e
+app1-1   | ENVIANDO:  c59c1bfc-eed6-433f-bbe9-b1856f0e9c76
+app1-1   | ENVIANDO:  f0a72aa6-1483-4815-932d-61e8f27c0fd0
+app1-1   | ENVIANDO:  d3ed957a-6428-4ae6-b296-0e8687cb1eb8
+app1-1   | ENVIANDO:  6ed699ea-cafd-4360-b216-4b28f1111fe8
+app1-1   | ENVIANDO:  7a5135b7-0785-4d42-8ac5-c25262c16553
+app1-1   | ENVIANDO:  eba4af95-2bef-495b-b1a3-99d62904bfb1
+app1-1   | ENVIANDO:  3d2a7afb-5893-472a-8de3-57829d7b6e2e
+app1-1   | ENVIANDO:  c1ce8c0a-5666-4963-aa6f-480e6cd850ed
+app1-1   | ENVIANDO:  cb6c7197-c6d4-4f35-a1fd-dfdd88315e07
+app1-1   | ENVIANDO:  ec807da9-dd7c-4ee1-a18f-19dcf9d9e04c
+app1-1   | ENVIANDO:  23ce0eae-6f1f-4478-a809-a9868a2ba91f
+app1-1   | ENVIANDO:  2dd6ca7d-ac93-40e8-980c-727b5d44a63a
+app1-1   | ENVIANDO:  f178670a-e93a-4d6e-a91c-80b6f6e219fe
+app1-1   | ENVIANDO:  a474d48f-2107-4d39-b497-de6e1273c7e0
+app1-1   | ENVIANDO:  810665a5-c536-471e-91ca-7023b531bc1f
+app1-1   | ENVIANDO:  6997a779-746e-4897-bac5-5796046cce67
+app1-1   | STATUS:  200
+app1-1   | DEMOROU: 0.161 segundos
+app1-1   | STATUS:  200
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | STATUS:  200
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | STATUS:  200
+app1-1   | STATUS:  200
+app1-1   | STATUS:  200
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | STATUS:  200
+app1-1   | STATUS:  200
+app1-1   | STATUS:  200
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | STATUS:  200
+app1-1   | STATUS:  200
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | STATUS:  200
+app1-1   | STATUS:  200
+app1-1   | STATUS:  200
+app1-1   | STATUS:  200
+app1-1   | DEMOROU: 0.001 segundos
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | STATUS:  200
+app1-1   | STATUS:  200
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | STATUS:  200
+app1-1   | STATUS:  200
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | STATUS:  200
+app1-1   | STATUS:  200
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | STATUS:  200
+app1-1   | STATUS:  200
+app1-1   | STATUS:  200
+app1-1   | STATUS:  200
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | STATUS:  200
+app1-1   | STATUS:  200
+app1-1   | STATUS:  200
+app1-1   | STATUS:  200
+app1-1   | STATUS:  200
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | DEMOROU: 0.000 segundos
+app1-1   | DEMOROU: 0.000 segundos
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:21 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:21 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:21 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:21 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:21 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:21 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:21 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:22 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:22 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:22 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:22 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:22 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:22 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:22 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:22 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:22 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:22 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:22 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:22 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:22 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:22 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:22 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:22 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:22 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:22 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:22 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:22 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:22 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:22 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:22 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:22 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:22 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:22 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:22 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:22 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:22 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:22 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:22 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:22 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:22 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:22 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:22 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:22 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:22 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:22 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:22 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:22 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:22 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:22 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:22 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:22 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:22 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:22 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:22 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:22 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:22 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:22 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:22 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-2  | 172.20.0.1 - - [03/Aug/2025:01:38:22 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+app2-1   | ENVIANDO:  bfd305ba-1e53-4f45-9ba8-16271591d3c5
+app2-1   | ENVIANDO:  9e4ac2e6-0054-4085-96fa-a2f795b13978
+app2-1   | ENVIANDO:  612d1230-087e-406f-af3e-63dda8cfe71f
+app2-1   | ENVIANDO:  125b269d-06b4-499f-8659-7e2a99dd38f1
+app2-1   | ENVIANDO:  cfdd173e-a021-4666-a2ff-ed11b2f4b377
+app2-1   | ENVIANDO:  077efdb8-5109-423e-84aa-3fb46ad44559
+app2-1   | ENVIANDO:  279aae65-f014-4570-a31b-e38b1378b2a8
+app2-1   | ENVIANDO:  4a394314-25a1-48bd-8ff1-df867e1d899d
+app2-1   | ENVIANDO:  c3a0aa75-01c8-4b60-a874-9cba9bc109d8
+app2-1   | ENVIANDO:  077e9c4a-5cb2-4ace-a9af-9b7bbb5f7b48
+app2-1   | ENVIANDO:  d4a0d0ff-b675-4775-a867-b54d9a5a1024
+app2-1   | ENVIANDO:  f48e3afd-76be-48e2-8576-f3ff49dba179
+app2-1   | ENVIANDO:  0548824a-73b8-4d0b-8b8d-122c89713089
+app2-1   | ENVIANDO:  583317fd-3793-43ba-bd55-eba9b37ffe77
+app2-1   | ENVIANDO:  3b2619b2-6643-4c82-accd-c1811ac0474a
+app2-1   | ENVIANDO:  df8666bc-4404-4bda-b74e-4a96d45261f9
+app2-1   | ENVIANDO:  a512a930-9c57-41d9-91a4-a4981f82eae8
+app2-1   | ENVIANDO:  b80bca8c-0147-4a1b-ab6d-878b66b12a5a
+app2-1   | ENVIANDO:  f38d6b73-f321-434f-b5ff-f86ac4c02b44
+app2-1   | ENVIANDO:  920ef91d-f144-41b8-a753-b7f3ee86f712
+app2-1   | ENVIANDO:  697c9cff-172d-49f5-a7a1-8fb23eae0b59
+app2-1   | ENVIANDO:  4dc2f4f9-86d2-4387-9ace-1a44b001b33b
+app2-1   | ENVIANDO:  b0366687-ebfe-4516-b23c-fe51825cee12
+app2-1   | ENVIANDO:  5cdb777c-9fef-416e-af3f-26caf731c434
+app2-1   | ENVIANDO:  45347556-99dc-4d56-a1f7-d1cc4466d563
+app2-1   | ENVIANDO:  6db3c415-e711-4b51-a4df-cd878ba81b68
+app2-1   | ENVIANDO:  190623c2-f97f-4452-8ffb-5ce75e94f3d4
+app2-1   | ENVIANDO:  556cd2fb-5493-4247-a54c-06d6b7d7908f
+app2-1   | ENVIANDO:  8e40614a-4d87-4931-a9b6-2739585304da
+app2-1   | ENVIANDO:  d4cfce4a-bdf5-405e-97c8-34c0d4aadf12
+app2-1   | STATUS:  200
+app2-1   | DEMOROU: 0.958 segundos
+app2-1   | STATUS:  200
+app2-1   | STATUS:  200
+app2-1   | STATUS:  200
+app2-1   | STATUS:  200
+app2-1   | STATUS:  200
+app2-1   | STATUS:  200
+app2-1   | STATUS:  200
+app2-1   | STATUS:  200
+app2-1   | DEMOROU: 0.004 segundos
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | STATUS:  200
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | STATUS:  200
+app2-1   | STATUS:  200
+app2-1   | STATUS:  200
+app2-1   | STATUS:  200
+app2-1   | DEMOROU: 0.000 segundos
+app2-1   | STATUS:  200
+app2-1   | STATUS:  200
+app2-1   | STATUS:  200
+app2-1   | STATUS:  200
+app2-1   | STATUS:  200
+app2-1   | STATUS:  200
+app2-1   | STATUS:  200
+app2-1   | DEMOROU: 0.000 segundos
+log truncated at line 1000
