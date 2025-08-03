@@ -8,14 +8,14 @@ services:
     ports:
       - "8081:8080"
     environment:
-      PROCESS_THREAD_POOL: 20
+      PROCESS_THREAD_POOL: 30
       QUARKUS_REST_CLIENT_DEFAULT_API_URL: http://payment-processor-default:8080
       QUARKUS_REST_CLIENT_FALLBACK_API_URL: http://payment-processor-fallback:8080
       QUARKUS_REST_CLIENT_STORAGE_API_URL: http://api2:8080
     deploy:
       resources:
         limits:
-          cpus: "0.40"
+          cpus: "0.60"
           memory: "125MB"
     networks:
       - payment-router
@@ -48,7 +48,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.70"
+          cpus: "0.50"
           memory: "100MB"
     networks:
       - payment-router
