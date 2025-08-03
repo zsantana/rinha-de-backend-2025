@@ -1,22 +1,52 @@
 
+ api1 Pulling 
+ api2 Pulling 
+ 2d2cd4a52b7f Already exists 
+ a817ea72bb5f Pulling fs layer 
+ 2d2cd4a52b7f Already exists 
+ a817ea72bb5f Pulling fs layer 
+ a817ea72bb5f Downloading [>                                                  ]  188.7kB/18.53MB
+ a817ea72bb5f Downloading [>                                                  ]  188.7kB/18.53MB
+ a817ea72bb5f Downloading [===========================>                       ]  10.12MB/18.53MB
+ a817ea72bb5f Downloading [===========================>                       ]  10.12MB/18.53MB
+ a817ea72bb5f Downloading [===========================================>       ]  16.19MB/18.53MB
+ a817ea72bb5f Downloading [===========================================>       ]  16.19MB/18.53MB
+ a817ea72bb5f Downloading [=================================================> ]  18.32MB/18.53MB
+ a817ea72bb5f Downloading [=================================================> ]  18.32MB/18.53MB
+ a817ea72bb5f Verifying Checksum 
+ a817ea72bb5f Verifying Checksum 
+ a817ea72bb5f Download complete 
+ a817ea72bb5f Download complete 
+ a817ea72bb5f Extracting [>                                                  ]  196.6kB/18.53MB
+ a817ea72bb5f Extracting [>                                                  ]  196.6kB/18.53MB
+ a817ea72bb5f Extracting [==================>                                ]  6.685MB/18.53MB
+ a817ea72bb5f Extracting [==================>                                ]  6.685MB/18.53MB
+ a817ea72bb5f Extracting [===================================>               ]  12.98MB/18.53MB
+ a817ea72bb5f Extracting [===================================>               ]  12.98MB/18.53MB
+ a817ea72bb5f Extracting [==================================================>]  18.53MB/18.53MB
+ a817ea72bb5f Extracting [==================================================>]  18.53MB/18.53MB
+ a817ea72bb5f Pull complete 
+ a817ea72bb5f Pull complete 
+ api1 Pulled 
+ api2 Pulled 
  Network murilo-guedes-toloni_backend  Creating
  Network murilo-guedes-toloni_backend  Created
- Container springboot-api2  Creating
  Container springboot-api1  Creating
- Container springboot-api1  Created
+ Container springboot-api2  Creating
  Container springboot-api2  Created
+ Container springboot-api1  Created
  Container my-haproxy  Creating
  Container my-haproxy  Created
 Attaching to my-haproxy, springboot-api1, springboot-api2
-my-haproxy       | [NOTICE]   (1) : New worker (8) forked
+my-haproxy       | [NOTICE]   (1) : New worker (9) forked
 my-haproxy       | [NOTICE]   (1) : Loading success.
 my-haproxy       | [NOTICE]   (1) : haproxy version is 2.9.15-e872a3f
 my-haproxy       | [WARNING]  (1) : Exiting Master process...
-my-haproxy       | [WARNING]  (8) : Proxy http_front stopped (cumulated conns: FE: 554, BE: 0).
-my-haproxy       | [WARNING]  (8) : Proxy http_back stopped (cumulated conns: FE: 0, BE: 16758).
-my-haproxy       | [WARNING]  (1) : Current worker (8) exited with code 0 (Exit)
+my-haproxy       | [WARNING]  (9) : Proxy http_front stopped (cumulated conns: FE: 555, BE: 0).
+my-haproxy       | [WARNING]  (9) : Proxy http_back stopped (cumulated conns: FE: 0, BE: 16752).
+my-haproxy       | [WARNING]  (1) : Current worker (9) exited with code 0 (Exit)
 my-haproxy       | [WARNING]  (1) : All workers exited. Exiting... (0)
 [Kmy-haproxy exited with code 0
-[Kspringboot-api1 exited with code 137
 [Kspringboot-api2 exited with code 137
+[Kspringboot-api1 exited with code 137
 log truncated at line 1000
