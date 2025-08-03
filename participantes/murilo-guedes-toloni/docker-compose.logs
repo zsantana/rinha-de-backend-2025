@@ -1,0 +1,66 @@
+
+ api2 Pulling 
+ api1 Pulling 
+ 2d2cd4a52b7f Already exists 
+ c1636d64d21a Pulling fs layer 
+ 2d2cd4a52b7f Already exists 
+ c1636d64d21a Pulling fs layer 
+ c1636d64d21a Downloading [>                                                  ]  187.4kB/18.53MB
+ c1636d64d21a Downloading [>                                                  ]  187.4kB/18.53MB
+ c1636d64d21a Downloading [==>                                                ]  752.6kB/18.53MB
+ c1636d64d21a Downloading [==>                                                ]  752.6kB/18.53MB
+ c1636d64d21a Downloading [====>                                              ]  1.504MB/18.53MB
+ c1636d64d21a Downloading [====>                                              ]  1.504MB/18.53MB
+ c1636d64d21a Downloading [========>                                          ]  3.016MB/18.53MB
+ c1636d64d21a Downloading [========>                                          ]  3.016MB/18.53MB
+ c1636d64d21a Downloading [============>                                      ]  4.717MB/18.53MB
+ c1636d64d21a Downloading [============>                                      ]  4.717MB/18.53MB
+ c1636d64d21a Downloading [==================>                                ]  6.981MB/18.53MB
+ c1636d64d21a Downloading [==================>                                ]  6.981MB/18.53MB
+ c1636d64d21a Downloading [=======================>                           ]  8.677MB/18.53MB
+ c1636d64d21a Downloading [=======================>                           ]  8.677MB/18.53MB
+ c1636d64d21a Downloading [==============================>                    ]  11.14MB/18.53MB
+ c1636d64d21a Downloading [==============================>                    ]  11.14MB/18.53MB
+ c1636d64d21a Downloading [==================================>                ]  12.85MB/18.53MB
+ c1636d64d21a Downloading [==================================>                ]  12.85MB/18.53MB
+ c1636d64d21a Downloading [=======================================>           ]  14.73MB/18.53MB
+ c1636d64d21a Downloading [=======================================>           ]  14.73MB/18.53MB
+ c1636d64d21a Downloading [==============================================>    ]   17.2MB/18.53MB
+ c1636d64d21a Downloading [==============================================>    ]   17.2MB/18.53MB
+ c1636d64d21a Verifying Checksum 
+ c1636d64d21a Download complete 
+ c1636d64d21a Download complete 
+ c1636d64d21a Extracting [>                                                  ]  196.6kB/18.53MB
+ c1636d64d21a Extracting [>                                                  ]  196.6kB/18.53MB
+ c1636d64d21a Extracting [===============>                                   ]  5.898MB/18.53MB
+ c1636d64d21a Extracting [===============>                                   ]  5.898MB/18.53MB
+ c1636d64d21a Extracting [=================================>                 ]  12.39MB/18.53MB
+ c1636d64d21a Extracting [=================================>                 ]  12.39MB/18.53MB
+ c1636d64d21a Extracting [=================================================> ]  18.48MB/18.53MB
+ c1636d64d21a Extracting [=================================================> ]  18.48MB/18.53MB
+ c1636d64d21a Extracting [==================================================>]  18.53MB/18.53MB
+ c1636d64d21a Extracting [==================================================>]  18.53MB/18.53MB
+ c1636d64d21a Pull complete 
+ c1636d64d21a Pull complete 
+ api1 Pulled 
+ api2 Pulled 
+ Network murilo-guedes-toloni_backend  Creating
+ Network murilo-guedes-toloni_backend  Created
+ Container springboot-api1  Creating
+ Container springboot-api2  Creating
+ Container springboot-api1  Created
+ Container springboot-api2  Created
+ Container my-haproxy  Creating
+ Container my-haproxy  Created
+Attaching to my-haproxy, springboot-api1, springboot-api2
+my-haproxy       | [NOTICE]   (1) : New worker (8) forked
+my-haproxy       | [NOTICE]   (1) : Loading success.
+my-haproxy       | [NOTICE]   (1) : haproxy version is 2.9.15-e872a3f
+my-haproxy       | [WARNING]  (1) : Exiting Master process...
+my-haproxy       | [WARNING]  (8) : Proxy http_front stopped (cumulated conns: FE: 557, BE: 0).
+my-haproxy       | [WARNING]  (8) : Proxy http_back stopped (cumulated conns: FE: 0, BE: 16751).
+my-haproxy       | [WARNING]  (1) : Current worker (8) exited with code 0 (Exit)
+my-haproxy       | [WARNING]  (1) : All workers exited. Exiting... (0)
+[Kmy-haproxy exited with code 0
+[Kspringboot-api1 exited with code 137
+log truncated at line 1000
