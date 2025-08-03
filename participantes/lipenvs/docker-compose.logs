@@ -1,0 +1,147 @@
+
+ api-2 Pulling 
+ redis Pulling 
+ api-1 Pulling 
+ redis Pulled 
+ 59e22667830b Already exists 
+ 332e204f49c9 Pulling fs layer 
+ a64b3e71ccdd Pulling fs layer 
+ 59e22667830b Already exists 
+ 332e204f49c9 Pulling fs layer 
+ a64b3e71ccdd Pulling fs layer 
+ a64b3e71ccdd Downloading [>                                                  ]  23.27kB/2.259MB
+ a64b3e71ccdd Downloading [>                                                  ]  23.27kB/2.259MB
+ a64b3e71ccdd Verifying Checksum 
+ a64b3e71ccdd Verifying Checksum 
+ a64b3e71ccdd Download complete 
+ a64b3e71ccdd Download complete 
+ 332e204f49c9 Downloading [>                                                  ]  35.51kB/3.51MB
+ 332e204f49c9 Downloading [>                                                  ]  35.51kB/3.51MB
+ 332e204f49c9 Verifying Checksum 
+ 332e204f49c9 Download complete 
+ 332e204f49c9 Downloading [==================================================>]   3.51MB/3.51MB
+ 332e204f49c9 Verifying Checksum 
+ 332e204f49c9 Download complete 
+ 332e204f49c9 Extracting [>                                                  ]  65.54kB/3.51MB
+ 332e204f49c9 Extracting [>                                                  ]  65.54kB/3.51MB
+ 332e204f49c9 Extracting [============================================>      ]  3.146MB/3.51MB
+ 332e204f49c9 Extracting [============================================>      ]  3.146MB/3.51MB
+ 332e204f49c9 Extracting [==================================================>]   3.51MB/3.51MB
+ 332e204f49c9 Extracting [==================================================>]   3.51MB/3.51MB
+ 332e204f49c9 Extracting [==================================================>]   3.51MB/3.51MB
+ 332e204f49c9 Extracting [==================================================>]   3.51MB/3.51MB
+ 332e204f49c9 Pull complete 
+ 332e204f49c9 Pull complete 
+ a64b3e71ccdd Extracting [>                                                  ]  32.77kB/2.259MB
+ a64b3e71ccdd Extracting [>                                                  ]  32.77kB/2.259MB
+ a64b3e71ccdd Extracting [==================================================>]  2.259MB/2.259MB
+ a64b3e71ccdd Extracting [==================================================>]  2.259MB/2.259MB
+ a64b3e71ccdd Extracting [==================================================>]  2.259MB/2.259MB
+ a64b3e71ccdd Extracting [==================================================>]  2.259MB/2.259MB
+ a64b3e71ccdd Pull complete 
+ a64b3e71ccdd Pull complete 
+ api-1 Pulled 
+ api-2 Pulled 
+ Network rinha-net  Creating
+ Network rinha-net  Created
+ Volume "lipenvs_redis-data"  Creating
+ Volume "lipenvs_redis-data"  Created
+ Container redis  Creating
+ Container redis  Created
+ Container api-2  Creating
+ Container api-1  Creating
+ Container api-2  Created
+ Container api-1  Created
+ Container nginx-lb  Creating
+ Container nginx-lb  Created
+Attaching to api-1, api-2, nginx-lb, redis
+redis     | Starting Redis Server
+redis     | 1:C 03 Aug 2025 20:58:42.733 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+redis     | 1:C 03 Aug 2025 20:58:42.733 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+redis     | 1:C 03 Aug 2025 20:58:42.733 * Redis version=8.0.3, bits=64, commit=00000000, modified=1, pid=1, just started
+redis     | 1:C 03 Aug 2025 20:58:42.733 * Configuration loaded
+redis     | 1:M 03 Aug 2025 20:58:42.734 * monotonic clock: POSIX clock_gettime
+redis     | 1:M 03 Aug 2025 20:58:42.735 * Running mode=standalone, port=6379.
+redis     | 1:M 03 Aug 2025 20:58:42.736 * <bf> RedisBloom version 8.0.1 (Git=unknown)
+redis     | 1:M 03 Aug 2025 20:58:42.736 * <bf> Registering configuration options: [
+redis     | 1:M 03 Aug 2025 20:58:42.736 * <bf> 	{ bf-error-rate       :      0.01 }
+redis     | 1:M 03 Aug 2025 20:58:42.736 * <bf> 	{ bf-initial-size     :       100 }
+redis     | 1:M 03 Aug 2025 20:58:42.736 * <bf> 	{ bf-expansion-factor :         2 }
+redis     | 1:M 03 Aug 2025 20:58:42.736 * <bf> 	{ cf-bucket-size      :         2 }
+redis     | 1:M 03 Aug 2025 20:58:42.736 * <bf> 	{ cf-initial-size     :      1024 }
+redis     | 1:M 03 Aug 2025 20:58:42.736 * <bf> 	{ cf-max-iterations   :        20 }
+redis     | 1:M 03 Aug 2025 20:58:42.736 * <bf> 	{ cf-expansion-factor :         1 }
+redis     | 1:M 03 Aug 2025 20:58:42.736 * <bf> 	{ cf-max-expansions   :        32 }
+redis     | 1:M 03 Aug 2025 20:58:42.736 * <bf> ]
+redis     | 1:M 03 Aug 2025 20:58:42.737 * Module 'bf' loaded from /usr/local/lib/redis/modules//redisbloom.so
+redis     | 1:M 03 Aug 2025 20:58:42.745 * <search> Redis version found by RedisSearch : 8.0.3 - oss
+redis     | 1:M 03 Aug 2025 20:58:42.745 * <search> RediSearch version 8.0.1 (Git=5688fcc)
+redis     | 1:M 03 Aug 2025 20:58:42.745 * <search> Low level api version 1 initialized successfully
+redis     | 1:M 03 Aug 2025 20:58:42.745 * <search> gc: ON, prefix min length: 2, min word length to stem: 4, prefix max expansions: 200, query timeout (ms): 500, timeout policy: return, cursor read size: 1000, cursor max idle (ms): 300000, max doctable size: 1000000, max number of search results:  1000000, 
+redis     | 1:M 03 Aug 2025 20:58:42.745 * <search> Initialized thread pools!
+redis     | 1:M 03 Aug 2025 20:58:42.745 * <search> Disabled workers threadpool of size 0
+redis     | 1:M 03 Aug 2025 20:58:42.746 * <search> Subscribe to config changes
+redis     | 1:M 03 Aug 2025 20:58:42.746 * <search> Enabled role change notification
+redis     | 1:M 03 Aug 2025 20:58:42.746 * <search> Cluster configuration: AUTO partitions, type: 0, coordinator timeout: 0ms
+redis     | 1:M 03 Aug 2025 20:58:42.747 * <search> Register write commands
+redis     | 1:M 03 Aug 2025 20:58:42.747 * Module 'search' loaded from /usr/local/lib/redis/modules//redisearch.so
+redis     | 1:M 03 Aug 2025 20:58:42.749 * <timeseries> RedisTimeSeries version 80001, git_sha=577bfa8b5909e7ee572f0b651399be8303dc6641
+redis     | 1:M 03 Aug 2025 20:58:42.749 * <timeseries> Redis version found by RedisTimeSeries : 8.0.3 - oss
+redis     | 1:M 03 Aug 2025 20:58:42.749 * <timeseries> Registering configuration options: [
+redis     | 1:M 03 Aug 2025 20:58:42.749 * <timeseries> 	{ ts-compaction-policy   :              }
+redis     | 1:M 03 Aug 2025 20:58:42.749 * <timeseries> 	{ ts-num-threads         :            3 }
+redis     | 1:M 03 Aug 2025 20:58:42.749 * <timeseries> 	{ ts-retention-policy    :            0 }
+redis     | 1:M 03 Aug 2025 20:58:42.749 * <timeseries> 	{ ts-duplicate-policy    :        block }
+redis     | 1:M 03 Aug 2025 20:58:42.749 * <timeseries> 	{ ts-chunk-size-bytes    :         4096 }
+redis     | 1:M 03 Aug 2025 20:58:42.749 * <timeseries> 	{ ts-encoding            :   compressed }
+redis     | 1:M 03 Aug 2025 20:58:42.749 * <timeseries> 	{ ts-ignore-max-time-diff:            0 }
+redis     | 1:M 03 Aug 2025 20:58:42.749 * <timeseries> 	{ ts-ignore-max-val-diff :     0.000000 }
+redis     | 1:M 03 Aug 2025 20:58:42.749 * <timeseries> ]
+redis     | 1:M 03 Aug 2025 20:58:42.749 * <timeseries> Detected redis oss
+redis     | 1:M 03 Aug 2025 20:58:42.749 * Module 'timeseries' loaded from /usr/local/lib/redis/modules//redistimeseries.so
+redis     | 1:M 03 Aug 2025 20:58:42.753 * <ReJSON> Created new data type 'ReJSON-RL'
+redis     | 1:M 03 Aug 2025 20:58:42.754 * <ReJSON> version: 80001 git sha: unknown branch: unknown
+redis     | 1:M 03 Aug 2025 20:58:42.754 * <ReJSON> Exported RedisJSON_V1 API
+redis     | 1:M 03 Aug 2025 20:58:42.754 * <ReJSON> Exported RedisJSON_V2 API
+redis     | 1:M 03 Aug 2025 20:58:42.754 * <ReJSON> Exported RedisJSON_V3 API
+redis     | 1:M 03 Aug 2025 20:58:42.754 * <ReJSON> Exported RedisJSON_V4 API
+redis     | 1:M 03 Aug 2025 20:58:42.754 * <ReJSON> Exported RedisJSON_V5 API
+redis     | 1:M 03 Aug 2025 20:58:42.754 * <ReJSON> Enabled diskless replication
+redis     | 1:M 03 Aug 2025 20:58:42.754 * <ReJSON> Initialized shared string cache, thread safe: false.
+redis     | 1:M 03 Aug 2025 20:58:42.754 * Module 'ReJSON' loaded from /usr/local/lib/redis/modules//rejson.so
+redis     | 1:M 03 Aug 2025 20:58:42.754 * <search> Acquired RedisJSON_V5 API
+redis     | 1:M 03 Aug 2025 20:58:42.754 * Server initialized
+redis     | 1:M 03 Aug 2025 20:58:42.755 * Ready to accept connections tcp
+api-1     | API iniciada na porta 3000
+api-1     | Iniciando worker de processamento de pagamentos...
+api-2     | API iniciada na porta 3000
+api-2     | Iniciando worker de processamento de pagamentos...
+nginx-lb  | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+nginx-lb  | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+nginx-lb  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+nginx-lb  | 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+nginx-lb  | 10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
+nginx-lb  | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+nginx-lb  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+nginx-lb  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+nginx-lb  | /docker-entrypoint.sh: Configuration complete; ready for start up
+nginx-lb  | 172.20.0.1 - - [03/Aug/2025:20:58:56 +0000] "GET /payments-summary HTTP/1.1" 400 56 "-" "curl/7.88.1"
+nginx-lb  | 172.20.0.1 - - [03/Aug/2025:20:59:01 +0000] "GET /payments-summary HTTP/1.1" 400 56 "-" "curl/7.88.1"
+nginx-lb  | 172.20.0.1 - - [03/Aug/2025:20:59:06 +0000] "GET /payments-summary HTTP/1.1" 400 56 "-" "curl/7.88.1"
+nginx-lb  | 172.20.0.1 - - [03/Aug/2025:20:59:11 +0000] "GET /payments-summary HTTP/1.1" 400 56 "-" "curl/7.88.1"
+nginx-lb  | 172.20.0.1 - - [03/Aug/2025:20:59:16 +0000] "GET /payments-summary HTTP/1.1" 400 56 "-" "curl/7.88.1"
+nginx-lb  | 172.20.0.1 - - [03/Aug/2025:20:59:21 +0000] "GET /payments-summary HTTP/1.1" 400 56 "-" "curl/7.88.1"
+nginx-lb  | 172.20.0.1 - - [03/Aug/2025:20:59:26 +0000] "GET /payments-summary HTTP/1.1" 400 56 "-" "curl/7.88.1"
+nginx-lb  | 172.20.0.1 - - [03/Aug/2025:20:59:31 +0000] "GET /payments-summary HTTP/1.1" 400 56 "-" "curl/7.88.1"
+nginx-lb  | 172.20.0.1 - - [03/Aug/2025:20:59:36 +0000] "GET /payments-summary HTTP/1.1" 400 56 "-" "curl/7.88.1"
+nginx-lb  | 172.20.0.1 - - [03/Aug/2025:20:59:41 +0000] "GET /payments-summary HTTP/1.1" 400 56 "-" "curl/7.88.1"
+nginx-lb  | 172.20.0.1 - - [03/Aug/2025:20:59:46 +0000] "GET /payments-summary HTTP/1.1" 400 56 "-" "curl/7.88.1"
+[Knginx-lb exited with code 0
+[Kapi-2 exited with code 137
+[Kapi-1 exited with code 137
+redis     | 1:signal-handler (1754254803) Received SIGTERM scheduling shutdown...
+redis     | 1:M 03 Aug 2025 21:00:03.049 * User requested shutdown...
+redis     | 1:M 03 Aug 2025 21:00:03.049 * Saving the final RDB snapshot before exiting.
+redis     | 1:M 03 Aug 2025 21:00:03.082 * DB saved on disk
+redis     | 1:M 03 Aug 2025 21:00:03.082 # Redis is now ready to exit, bye bye...
+[Kredis exited with code 0
