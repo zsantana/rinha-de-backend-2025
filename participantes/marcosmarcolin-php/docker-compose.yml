@@ -44,6 +44,7 @@ services:
 
   haproxy:
     image: haproxy:latest
+    restart: always
     ports:
       - "9999:9999"
     volumes:
