@@ -6,7 +6,7 @@ Implementação da Rinha de Backend 2025 utilizando:
 - [SQLite](https://sqlite.org/index.html) Banco de dados relacional in-process
 - [Axum](https://github.com/tokio-rs/axum) framework HTTP
 - [Nginx](https://nginx.org/) load balancer
-- [tarpc](https://github.com/google/tarpc) easy-to-use RPC framework feito em rust
+- [UDS](https://en.wikipedia.org/wiki/Unix_domain_socket) unix domain sockets para comunicação IPC (evitando a network stack, especialmente na rede bridge do docker)
 
 ---
 
@@ -34,7 +34,7 @@ Este projeto define um único binário que pode rodar em dois modos:
 Responsável por armazenar os pagamentos localmente com SQLite.
 
 ```bash
-cargo run --release -- -m worker -p 8080 --ansi
+cargo run --release -- -m worker
 ```
 
 ### Modo API
@@ -42,5 +42,5 @@ cargo run --release -- -m worker -p 8080 --ansi
 Responsável por receber as requisições encaminhadas pelo Nginx.
 
 ```bash
-cargo run --release -- -m api -p 8081 -w localhost:8080 --ansi
+cargo run --release -- -m api
 ```
