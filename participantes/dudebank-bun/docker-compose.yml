@@ -1,6 +1,6 @@
 services:
   api1: &api-service
-    image: eber404/dudebank:0.0.4
+    image: eber404/dudebank:0.0.5
     env_file:
       - .env
     environment:
@@ -24,7 +24,7 @@ services:
       - SERVER_SOCKET_PATH=/tmp/api2.sock
 
   memorydb:
-    image: eber404/dudebank-db:0.0.4
+    image: eber404/dudebank-db:0.0.5
     volumes:
       - socket_data:/tmp
     networks:
