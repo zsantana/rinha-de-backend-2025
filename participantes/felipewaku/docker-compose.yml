@@ -69,7 +69,7 @@ services:
       - REDIS_URL=redis://redis:6379/0
       - PAYMENT_PROCESSOR_DEFAULT_BASE_URL=http://payment-processor-default:8080
       - PAYMENT_PROCESSOR_FALLBACK_BASE_URL=http://payment-processor-fallback:8080
-      - ENABLE_SYNC=false
+      - ENABLE_SYNC=true
       - ENABLE_HEALTH=true
     deploy:
       resources:
