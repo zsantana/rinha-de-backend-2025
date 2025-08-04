@@ -8,9 +8,6 @@ services:
     networks:
       - backend
       - payment-processor
-    build:
-      context: .
-      dockerfile: ./rinha2025/Dockerfile
     healthcheck:
       test: curl --silent --fail http://localhost:8080/payments-summary || exit 1
       interval: 10s
@@ -39,9 +36,6 @@ services:
     networks:
       - backend
       - payment-processor
-    build:
-      context: .
-      dockerfile: ./rinha2025.worker/Dockerfile
     environment:
       - ASPNETCORE_URLS:http://+:8080
       - ConnectionStrings__Postgres=Host=db:5432;Database=rinha;User ID=postgres;Password=secret;No Reset On Close=true;Max Auto Prepare=10;Auto Prepare Min Usages=1;Pooling=true;Maximum Pool Size=100
