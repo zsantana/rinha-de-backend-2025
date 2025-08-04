@@ -1,6 +1,6 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Mon Aug  4 04:12:09 PM -03 2025**
-232 submissões / 207 resultados / 25 submissões com erro
+Atualizado em **Mon Aug  4 04:23:36 PM -03 2025**
+235 submissões / 209 resultados / 26 submissões com erro
 
 
 | participante | p99 | bônus por desempenho (%) | multa ($) | lucro | submissão |
@@ -81,6 +81,8 @@ Atualizado em **Mon Aug  4 04:12:09 PM -03 2025**
 |	gabxdev-java-5	|	1.71ms	|	19%	|	0	|	376436.72815	|	[gabxdev-java-5](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/gabxdev-java-5)
 |	gabxdev-java-6	|	3.38ms	|	15%	|	0	|	363674.689	|	[gabxdev-java-6](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/gabxdev-java-6)
 |	gabxdev-java-7	|	3.47ms	|	15%	|	0	|	363631.2075	|	[gabxdev-java-7](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/gabxdev-java-7)
+|	gabxdev-java-8	|	2.83ms	|	16%	|	0	|	366924.7968	|	[gabxdev-java-8](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/gabxdev-java-8)
+|	gabxdev-java-9	|	2.01ms	|	18%	|	0	|	373161.8548	|	[gabxdev-java-9](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/gabxdev-java-9)
 |	gaoliveira21	|	9.36ms	|	3%	|	0	|	326022.20745	|	[gaoliveira21](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/gaoliveira21)
 |	gdx64-rs-sqlite	|	3.18ms	|	16%	|	0	|	358875.406	|	[gdx64-rs-sqlite](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/gdx64-rs-sqlite)
 |	geazi-anc	|	4.62ms	|	13%	|	82937.13049998994	|	184831.3193999776	|	[geazi-anc](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/geazi-anc)
@@ -235,6 +237,7 @@ Atualizado em **Mon Aug  4 04:12:09 PM -03 2025**
 | pedrohsb-golang | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/pedrohsb-golang) |
 | phaalonso-java-1 | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/phaalonso-java-1) |
 | rodrixl | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/rodrixl) |
+| vhogemann | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/vhogemann) |
 | ViniciusAlexsander-python | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/ViniciusAlexsander-python) |
 | vitorvezani-golang | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/vitorvezani-golang) |
 | wanderdotnet | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/wanderdotnet) |
