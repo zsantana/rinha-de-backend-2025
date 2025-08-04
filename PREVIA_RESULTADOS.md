@@ -1,6 +1,6 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Mon Aug  4 01:07:51 PM -03 2025**
-230 submissões / 203 resultados / 27 submissões com erro
+Atualizado em **Mon Aug  4 01:19:31 PM -03 2025**
+231 submissões / 204 resultados / 27 submissões com erro
 
 
 | participante | p99 | bônus por desempenho (%) | multa ($) | lucro | submissão |
@@ -77,6 +77,7 @@ Atualizado em **Mon Aug  4 01:07:51 PM -03 2025**
 |	gabriell915-bun-hono-01	|	102.02ms	|	0%	|	0	|	295475.19999995147	|	[gabriell915-bun-hono-01](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/gabriell915-bun-hono-01)
 |	gabxdev-java-4	|	1.54ms	|	19%	|	0	|	376436.72815	|	[gabxdev-java-4](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/gabxdev-java-4)
 |	gabxdev-java-5	|	1.71ms	|	19%	|	0	|	376436.72815	|	[gabxdev-java-5](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/gabxdev-java-5)
+|	gabxdev-java-6	|	2.46ms	|	17%	|	0	|	369955.2285	|	[gabxdev-java-6](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/gabxdev-java-6)
 |	gaoliveira21	|	9.36ms	|	3%	|	0	|	326022.20745	|	[gaoliveira21](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/gaoliveira21)
 |	gdx64-rs-sqlite	|	3.18ms	|	16%	|	0	|	358875.406	|	[gdx64-rs-sqlite](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/gdx64-rs-sqlite)
 |	geazi-anc	|	4.62ms	|	13%	|	82937.13049998994	|	184831.3193999776	|	[geazi-anc](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/geazi-anc)
@@ -153,8 +154,8 @@ Atualizado em **Mon Aug  4 01:07:51 PM -03 2025**
 |	micheloliveira-com-dotnet-csharp-redis	|	2.75ms	|	17%	|	0	|	370446.4998	|	[micheloliveira-com-dotnet-csharp-redis](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/micheloliveira-com-dotnet-csharp-redis)
 |	micheloliveira-com-dotnet-csharp-redis-worker	|	2.53ms	|	17%	|	0	|	370424.38095	|	[micheloliveira-com-dotnet-csharp-redis-worker](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/micheloliveira-com-dotnet-csharp-redis-worker)
 |	mpedroni-go	|	5.3ms	|	11%	|	0	|	351428.25885	|	[mpedroni-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/mpedroni-go)
-|	murilo-guedes-toloni	|	2.62ms	|	17%	|	110823.94575	|	259644.6729	|	[murilo-guedes-toloni](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/murilo-guedes-toloni)
-|	murilo-guedes-toloni-undertow	|	4.83ms	|	12%	|	0	|	354276.6752	|	[murilo-guedes-toloni-undertow](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/murilo-guedes-toloni-undertow)
+|	murilo-guedes-toloni	|	2.35ms	|	17%	|	109904.2175	|	257489.881	|	[murilo-guedes-toloni](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/murilo-guedes-toloni)
+|	murilo-guedes-toloni-undertow	|	4.19ms	|	14%	|	0	|	360042.7002	|	[murilo-guedes-toloni-undertow](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/murilo-guedes-toloni-undertow)
 |	mxlange-cpp	|	7.93ms	|	6%	|	0	|	324957.2888	|	[mxlange-cpp](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/mxlange-cpp)
 |	mxlange-fasthttp	|	5.64ms	|	11%	|	38904.05225000079	|	84477.37060000171	|	[mxlange-fasthttp](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/mxlange-fasthttp)
 |	mxlange-only-go	|	7.4ms	|	7%	|	110606.986	|	227534.3712	|	[mxlange-only-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/mxlange-only-go)
