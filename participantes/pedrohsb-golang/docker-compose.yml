@@ -10,7 +10,7 @@ services:
     networks:
       - backend
   app1:
-    image: pedrohsbarbosa99/rinha-golang-2025:0.0.4
+    image: pedrohsbarbosa99/rinha-golang-2025:0.0.5
     command: ["./main"]
     networks:
       - backend
@@ -26,7 +26,7 @@ services:
           memory: 120M
 
   app2:
-    image: pedrohsbarbosa99/rinha-golang-2025:0.0.4
+    image: pedrohsbarbosa99/rinha-golang-2025:0.0.5
     command: ["./main"]
     networks:
       - backend
