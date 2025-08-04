@@ -1,13 +1,13 @@
 x-service-templates:
   api: &api
-    image: flads/rinha25-php-go-api:0.1.1
+    image: flads/rinha25-php-go-api:0.1.2
     networks:
       - main-network
       - payment-processor
     deploy:
       resources:
         limits:
-          cpus: "0.15"
+          cpus: "0.20"
           memory: "50MB"
   worker: &worker
     image: flads/rinha25-php-go-worker:0.0.1
@@ -21,7 +21,7 @@ x-service-templates:
     deploy:
       resources:
         limits:
-          cpus: "0.40"
+          cpus: "0.35"
           memory: "100MB"
 
 services:
