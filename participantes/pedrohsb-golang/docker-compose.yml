@@ -11,7 +11,7 @@ services:
       - backend
 
   app1:
-    image: pedrohsbarbosa99/rinha-golang-2025:0.0.7
+    image: pedrohsbarbosa99/rinha-golang-2025:0.0.8
     networks:
       - backend
       - payment-processor
@@ -26,7 +26,7 @@ services:
           memory: 140M
 
   app2:
-    image: pedrohsbarbosa99/rinha-golang-2025:0.0.7
+    image: pedrohsbarbosa99/rinha-golang-2025:0.0.8
     command: ["./main"]
     networks:
       - backend
