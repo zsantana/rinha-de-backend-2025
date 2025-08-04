@@ -37,14 +37,13 @@ services:
       resources:
         limits:
           cpus: "0.10"
-          memory: "16MB"
+          memory: "40MB"
 
   # ---
   # API
   # ---
   api1: &api
     image: luzin7/rinha-2025-app:latest
-    pull_policy: always
     hostname: api1
     command: node dist/app.js
     environment:
@@ -71,11 +70,10 @@ services:
   # ------------------
   # WORKER + WATCHER
   # ------------------
-  worker1: &worker
+  worker1:
     image: luzin7/rinha-2025-app:latest
-    pull_policy: always
     hostname: worker1
-    command: sh -c "node dist/worker.js & node dist/watcher.js"
+    command: node dist/bootstrap.js
     environment:
       - APP_PORT=9999
       - PAYMENT_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080
@@ -90,12 +88,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.50"
-          memory: "102MB"
-
-  worker2:
-    <<: *worker
-    hostname: worker2
+          cpus: "1"
+          memory: "180MB"
 
 networks:
   backend:
