@@ -67,9 +67,9 @@ services:
     <<: *api
     hostname: api2
 
-  # ------------------
-  # WORKER + WATCHER
-  # ------------------
+  # ------
+  # WORKER
+  # ------
   worker1:
     image: luzin7/rinha-2025-app:latest
     hostname: worker1
