@@ -1,6 +1,6 @@
 services:
   lbproxy:
-    image: enermaxx/lb-novo-undertow:2.0.5
+    image: enermaxx/lb-novo-undertow:2.0.6
     container_name: lb-proxy
     environment:
       - API_1_HOST=api1
@@ -19,10 +19,10 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "1.1"
-          memory: "110MB"
+          cpus: "1.2"
+          memory: "150MB"
   api1: &api
-    image: enermaxx/rinha-backend:4.0.3
+    image: enermaxx/rinha-backend:4.0.4
     container_name: springboot-api1
     hostname: api1
     ports:
@@ -41,8 +41,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.20"
-          memory: "120MB"
+          cpus: "0.15"
+          memory: "100MB"
 
   api2:
     <<: *api
@@ -61,8 +61,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.20"
-          memory: "120MB"
+          cpus: "0.15"
+          memory: "100MB"
 networks:
   backend:
     driver: bridge
