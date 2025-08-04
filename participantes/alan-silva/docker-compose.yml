@@ -20,12 +20,12 @@ services:
           memory: "80MB"
 
   rinha-gateway-1:
-    image: ghcr.io/alan-venv/rinha-gateway:6.7
+    image: ghcr.io/alan-venv/rinha-gateway:6.8
     container_name: rinha-gateway-1
     environment:
       - SOCKET=/sockets/actix.sock.1
       - TRIGGER=${TRIGGER}
-      - WORKERS=${WORKERS}
+      - SLAVES=${SLAVES}
       - ANALYST=${ANALYST}
     volumes:
       - sockets:/sockets:rw
@@ -41,12 +41,12 @@ services:
           memory: "70MB"
 
   rinha-gateway-2:
-    image: ghcr.io/alan-venv/rinha-gateway:6.7
+    image: ghcr.io/alan-venv/rinha-gateway:6.8
     container_name: rinha-gateway-2
     environment:
       - SOCKET=/sockets/actix.sock.2
       - TRIGGER=${TRIGGER}
-      - WORKERS=${WORKERS}
+      - SLAVES=${SLAVES}
       - ANALYST=${ANALYST}
     volumes:
       - sockets:/sockets:rw
@@ -62,12 +62,12 @@ services:
           memory: "70MB"
 
   rinha-gateway-3:
-    image: ghcr.io/alan-venv/rinha-gateway:6.7
+    image: ghcr.io/alan-venv/rinha-gateway:6.8
     container_name: rinha-gateway-3
     environment:
       - SOCKET=/sockets/actix.sock.3
       - TRIGGER=${TRIGGER}
-      - WORKERS=${WORKERS}
+      - SLAVES=${SLAVES}
       - ANALYST=${ANALYST}
     volumes:
       - sockets:/sockets:rw
