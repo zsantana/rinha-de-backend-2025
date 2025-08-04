@@ -1,5 +1,5 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Mon Aug  4 05:38:52 PM -03 2025**
+Atualizado em **Mon Aug  4 05:49:58 PM -03 2025**
 233 submissões / 208 resultados / 25 submissões com erro
 
 
@@ -60,7 +60,7 @@ Atualizado em **Mon Aug  4 05:38:52 PM -03 2025**
 |	diogomassis-go	|	11.68ms	|	0%	|	84706.93699998943	|	157312.88299998036	|	[diogomassis-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/diogomassis-go)
 |	djbrunomonteiro	|	350.71ms	|	0%	|	15724.184	|	29202.056	|	[djbrunomonteiro](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/djbrunomonteiro)
 |	dolphs	|	9.5ms	|	3%	|	0	|	322562.31385	|	[dolphs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/dolphs)
-|	dudebank-bun	|	3.56ms	|	15%	|	0	|	363744.48825	|	[dudebank-bun](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/dudebank-bun)
+|	dudebank-bun	|	1.71ms	|	19%	|	0	|	376621.43995	|	[dudebank-bun](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/dudebank-bun)
 |	el_yawd-crab	|	2.03ms	|	18%	|	109076.07899999434	|	258666.13019998657	|	[el_yawd-crab](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/el_yawd-crab)
 |	emiliosheinz-go	|	5.73ms	|	11%	|	0	|	231692.62545	|	[emiliosheinz-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/emiliosheinz-go)
 |	fabianoflorentino	|	17.43ms	|	0%	|	26830.22475	|	49827.56025	|	[fabianoflorentino](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/fabianoflorentino)
@@ -97,7 +97,7 @@ Atualizado em **Mon Aug  4 05:38:52 PM -03 2025**
 |	hamilton-golang-mongo-default	|	8.26ms	|	5%	|	110757.77825000961	|	221515.55650001921	|	[hamilton-golang-mongo-default](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/hamilton-golang-mongo-default)
 |	hamilton-golang-mongo	|	4.19ms	|	14%	|	0	|	355395.47309997334	|	[hamilton-golang-mongo](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/hamilton-golang-mongo)
 |	hamilton-golang-redis	|	2.89ms	|	16%	|	0	|	367148.71160003194	|	[hamilton-golang-redis](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/hamilton-golang-redis)
-|	hamilton-golang-with-retries	|	175.04ms	|	0%	|	92336.74624998806	|	171482.52874997782	|	[hamilton-golang-socket](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/hamilton-golang-socket)
+|	hamilton-golang-socket	|	2.07ms	|	18%	|	110857.02950000972	|	262889.52710002306	|	[hamilton-golang-socket](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/hamilton-golang-socket)
 |	henriqueramos13-node	|	36.41ms	|	0%	|	60010.5625	|	111448.1875	|	[henriqueramos13-node](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/henriqueramos13-node)
 |	henriquevalcanaia-swift-vapor	|	159.61ms	|	0%	|	73381.86765	|	136280.61135	|	[henriquevalcanaia-swift-vapor](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/henriquevalcanaia-swift-vapor)
 |	igor-gregori-bun-v1	|	9.25ms	|	4%	|	0	|	322010.0988	|	[igor-gregori-bun-v1](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/igor-gregori-bun-v1)
@@ -109,7 +109,7 @@ Atualizado em **Mon Aug  4 05:38:52 PM -03 2025**
 |	joao-bittencourt-php	|	1457.16ms	|	0%	|	59021.41	|	109611.19	|	[joao-bittencourt-php](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/joao-bittencourt-php)
 |	joaocrulhas-nestjs-ts	|	181.84ms	|	0%	|	0	|	0	|	[joaocrulhas-nestjs-ts](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/joaocrulhas-nestjs-ts)
 |	joaoreisa-go	|	8.17ms	|	6%	|	0	|	255232.1265	|	[joaoreisa-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/joaoreisa-go)
-|	joao-xavier	|	1.66ms	|	19%	|	0	|	376868.9064	|	[joao-xavier](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/joao-xavier)
+|	joao-xavier	|	3.47ms	|	15%	|	0	|	364048.85875	|	[joao-xavier](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/joao-xavier)
 |	joelgarciajr84-go	|	3.37ms	|	15%	|	0	|	361531.50875	|	[joelgarciajr84-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/joelgarciajr84-go)
 |	jonhkr	|	2.92ms	|	16%	|	0	|	366440.0328	|	[jonhkr](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/jonhkr)
 |	josineyjr-go-1	|	17.03ms	|	0%	|	0	|	300967.6	|	[josineyjr-go-1](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/josineyjr-go-1)
