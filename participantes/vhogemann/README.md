@@ -7,7 +7,7 @@ Minha submissão para a [Rinha de Backend 2025](https://github.com/zanfranceschi
 
 ## Tecnologias Utilizadas
 - [FSharp](https://fsharp.org)
-- [SQLite](https://www.sqlite.org/index.html)
+- [PostgreSQL](https://www.postgresql.org)
 - [.NET 9.0](https://dotnet.microsoft.com/download/dotnet/9.0)
 
 ## Repositório
@@ -23,7 +23,7 @@ A API REST é feita com o [Falco Framework](https://www.falcoframework.com). Um 
 
 O Gateway tem referência pra duas instâncias do Client que efetua as requisições para os gatways de pagamento usando a biblioteca [FsHttp](https://github.com/fsprojects/FsHttp). Cada Client mantém uma fila interna que faz polling pro healthcheck dos gateways, e essa informação é usada pelo Gateway para decidir qual cliente usar. 
 
-Caso a requisição falhe, o Gateway enfileira ela novamente para ser tentada novamente. Em caso de sucesso o serivço de Persistence salva a transação em uma tabela no SQLite usando [Donald](https://github.com/pimbrouwers/Donald).
+Caso a requisição falhe, o Gateway enfileira ela novamente para ser tentada novamente. Em caso de sucesso o serivço de Persistence salva a transação em uma tabela do PostgreSQL usando [Donald](https://github.com/pimbrouwers/Donald).
 
 ![Arquitetura](./architecture.jpeg)
 
