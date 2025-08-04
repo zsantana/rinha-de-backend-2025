@@ -1,6 +1,6 @@
 x-service-templates:
   backend-service: &backend-service
-    image: ghcr.io/4emcos/rinha-backend-2025-golang:1.0.6
+    image: ghcr.io/4emcos/rinha-backend-2025-golang:1.0.7
     environment: &backend-env
       APP_PORT: 5000
       PAYMENT_PROCESSOR_FALLBACK: http://payment-processor-fallback:8080
@@ -22,7 +22,7 @@ x-service-templates:
       resources:
         limits:
           cpus: "0.45"
-          memory: "70MB"
+          memory: "170MB"
 
 services:
   backend-01:
@@ -37,7 +37,7 @@ services:
 
   writer:
     hostname: writer
-    image: ghcr.io/4emcos/writer:1.0.0
+    image: ghcr.io/4emcos/writer:1.0.1
     networks:
       - writer-network
     deploy:
