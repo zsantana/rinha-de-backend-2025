@@ -81,7 +81,6 @@ services:
           cpus: "0.30"
           memory: "100MB"
     environment:
-      WORKERS_THREAD_POOL_SIZE: 11
       BACK_END_1_URL: backend-1
       BACK_END_2_URL: backend-2
       JAVA_OPTS: >-

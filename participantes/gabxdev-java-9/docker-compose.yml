@@ -81,7 +81,7 @@ services:
           cpus: "0.30"
           memory: "100MB"
     environment:
-      IO_THREAD_POOL_SIZE: 6
+      IO_THREAD_POOL_SIZE: 10
       BACK_END_1_URL: backend-1
       BACK_END_2_URL: backend-2
       JAVA_OPTS: >-
