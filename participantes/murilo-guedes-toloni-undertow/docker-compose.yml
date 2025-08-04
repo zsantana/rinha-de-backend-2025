@@ -1,6 +1,6 @@
 services:
   lbproxy:
-    image: enermaxx/lb-novo-undertow:2.0.6
+    image: enermaxx/lb-novo-undertow:2.0.7
     container_name: lb-proxy
     environment:
       - API_1_HOST=api1
