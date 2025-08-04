@@ -1,6 +1,6 @@
 services:
   backend-1:
-    image: gabxdevv/rinha-backend-2025-java-onfire-plus:3.0.1
+    image: gabxdevv/rinha-backend-2025-java-gabxdev-oli:1.0.0
     restart: always
     environment:
       RETRY_API_DEFAULT: 15
@@ -33,7 +33,7 @@ services:
           memory: '125MB'
 
   backend-2:
-    image: gabxdevv/rinha-backend-2025-java-onfire-plus:3.0.1
+    image: gabxdevv/rinha-backend-2025-java-gabxdev-oli:1.0.0
     restart: always
     environment:
       RETRY_API_DEFAULT: 15
@@ -66,7 +66,7 @@ services:
           memory: '125MB'
 
   load-balancer:
-    image: gabxdevv/loud-balance-diferenciado-java-gabxv:2.0.1
+    image: gabxdevv/loud-balance-java-gabxv-plus:2.0.0
     restart: always
     depends_on:
       - backend-1
@@ -81,6 +81,7 @@ services:
           cpus: "0.30"
           memory: "100MB"
     environment:
+      WORKERS_THREAD_POOL_SIZE: 11
       BACK_END_1_URL: backend-1
       BACK_END_2_URL: backend-2
       JAVA_OPTS: >-
