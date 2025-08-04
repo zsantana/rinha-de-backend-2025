@@ -2,7 +2,7 @@ name : payment-proxy
 
 x-service-templates:
   base: &apibase
-    image: acslook/payment-proxy:v3
+    image: acslook/payment-proxy:v4
 
 services:  
   redis:
@@ -13,8 +13,6 @@ services:
     networks:
       - backend
       - payment-processor
-    command: ["redis-server", "--save", "", "--appendonly", "no"]
-    restart: unless-stopped
     deploy:
       resources:
         limits:
@@ -111,7 +109,7 @@ services:
         resources:
           limits:
             cpus: '0.2'
-            memory: "50MB"
+            memory: "60MB"
       depends_on:
         - db
         - redis
@@ -130,12 +128,11 @@ services:
       resources:
         limits:
           cpus: '0.2'
-          memory: "60MB"
+          memory: "50MB"
     networks:
       - backend
 networks:
   backend:
-    name: backend
     driver: bridge
   payment-processor:
     external: true
