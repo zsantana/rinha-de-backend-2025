@@ -4,7 +4,7 @@ x-service-templates:
     deploy:
       resources:
         limits:
-          cpus: "0.4"
+          cpus: "0.35"
           memory: "30MB"
     networks:
       - backend
@@ -59,7 +59,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.3"
+          cpus: "0.2"
           memory: "100MB"
   nginx:
     image: nginx:alpine
@@ -80,7 +80,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.2"
+          cpus: "0.4"
           memory: "80MB"
   nats:
     image: nats:alpine
@@ -104,7 +104,7 @@ services:
     image: postgres:17-alpine
     networks:
       - payment-processor
-    command: 'postgres -c max_connections=400 -c synchronous_commit=off -c fsync=off -c full_page_writes=off'
+    command: 'postgres -c max_connections=100 -c synchronous_commit=off -c fsync=off -c full_page_writes=off'
     volumes:
       - postgres-socket:/var/run/postgresql
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
