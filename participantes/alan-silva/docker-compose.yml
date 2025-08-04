@@ -20,7 +20,7 @@ services:
           memory: "80MB"
 
   rinha-gateway-1:
-    image: ghcr.io/alan-venv/rinha-gateway:6.8
+    image: ghcr.io/alan-venv/rinha-gateway:6.8-skylake
     container_name: rinha-gateway-1
     environment:
       - SOCKET=/sockets/actix.sock.1
@@ -41,7 +41,7 @@ services:
           memory: "70MB"
 
   rinha-gateway-2:
-    image: ghcr.io/alan-venv/rinha-gateway:6.8
+    image: ghcr.io/alan-venv/rinha-gateway:6.8-skylake
     container_name: rinha-gateway-2
     environment:
       - SOCKET=/sockets/actix.sock.2
@@ -62,7 +62,7 @@ services:
           memory: "70MB"
 
   rinha-gateway-3:
-    image: ghcr.io/alan-venv/rinha-gateway:6.8
+    image: ghcr.io/alan-venv/rinha-gateway:6.8-skylake
     container_name: rinha-gateway-3
     environment:
       - SOCKET=/sockets/actix.sock.3
@@ -83,7 +83,7 @@ services:
           memory: "70MB"
 
   rinha-database:
-    image: ghcr.io/alan-venv/rinha-database:6.5
+    image: ghcr.io/alan-venv/rinha-database:6.5-skylake
     container_name: rinha-database
     volumes:
       - sockets:/sockets:rw
