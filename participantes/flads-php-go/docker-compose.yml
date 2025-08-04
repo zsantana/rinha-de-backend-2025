@@ -10,7 +10,7 @@ x-service-templates:
           cpus: "0.20"
           memory: "50MB"
   worker: &worker
-    image: flads/rinha25-php-go-worker:0.0.1
+    image: flads/rinha25-php-go-worker:0.0.2
     container_name: worker
     networks:
       - main-network
