@@ -10,14 +10,14 @@ services:
     ports:
       - "8081:8080"
     environment:
-      PROCESS_THREAD_POOL: 15
+      PROCESS_THREAD_POOL: 20
       QUARKUS_REST_CLIENT_DEFAULT_API_URL: http://payment-processor-default:8080
       QUARKUS_REST_CLIENT_FALLBACK_API_URL: http://payment-processor-fallback:8080
       QUARKUS_REST_CLIENT_STORAGE_API_URL: http://api03:8080
     deploy:
       resources:
         limits:
-          cpus: "0.40"
+          cpus: "0.30"
           memory: "100MB"
     networks:
       - payment-router
@@ -32,14 +32,14 @@ services:
     ports:
       - "8082:8080"
     environment:
-      PROCESS_THREAD_POOL: 15
+      PROCESS_THREAD_POOL: 20
       QUARKUS_REST_CLIENT_DEFAULT_API_URL: http://payment-processor-default:8080
       QUARKUS_REST_CLIENT_FALLBACK_API_URL: http://payment-processor-fallback:8080
       QUARKUS_REST_CLIENT_STORAGE_API_URL: http://api03:8080
     deploy:
       resources:
         limits:
-          cpus: "0.40"
+          cpus: "0.30"
           memory: "100MB"
     networks:
       - payment-router
@@ -72,7 +72,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.40"
+          cpus: "0.60"
           memory: "50MB"
     networks:
       - payment-router
