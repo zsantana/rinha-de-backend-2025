@@ -44,6 +44,7 @@ services:
   # ---
   api1: &api
     image: luzin7/rinha-2025-app:latest
+    pull_policy: always
     hostname: api1
     command: node dist/app.js
     environment:
@@ -72,6 +73,7 @@ services:
   # ------
   worker1:
     image: luzin7/rinha-2025-app:latest
+    pull_policy: always
     hostname: worker1
     command: node dist/bootstrap.js
     environment:
