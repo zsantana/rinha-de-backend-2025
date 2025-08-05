@@ -8,7 +8,7 @@ services:
         limits:
           cpus: "0.8"
           memory: 60M
-    image: daviddeltasierra/rinha-2025-go-2:1.6
+    image: daviddeltasierra/rinha-2025-go-2:1.7
     volumes:
       - /tmp:/tmp
     environment:
@@ -28,7 +28,7 @@ services:
         limits:
           cpus: "0.2"
           memory: 70M
-    image: daviddeltasierra/rinha-2025-go-2:1.6
+    image: daviddeltasierra/rinha-2025-go-2:1.7
     volumes:
       - /tmp/app1:/tmp/app1
     environment:
@@ -46,7 +46,7 @@ services:
         limits:
           cpus: "0.2"
           memory: 70M
-    image: daviddeltasierra/rinha-2025-go-2:1.6
+    image: daviddeltasierra/rinha-2025-go-2:1.7
     volumes:
       - /tmp/app2:/tmp/app2
     environment:
