@@ -4,7 +4,7 @@
 
 - **Linguagem:** Go
 - **Cache/Fila:** Go in-memory
-- **Balanceador:** Nginx
+- **Balanceador:** HAProxy
 - **Orquestração:** Docker Compose
 
 ## Como rodar
