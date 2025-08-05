@@ -1,6 +1,6 @@
 x-service-templates:
   base: &base
-    image: josiney/rdb25_02-amd64:50cd7ee
+    image: josiney/rdb25_02-amd64:8f32bc4
     volumes:
       - sockets:/sockets
     networks:
@@ -21,7 +21,7 @@ services:
     environment:
       - LB=1
       - PORT=:80
-      - POOL_MAX_SIZE_FACTOR=5
+      - POOL_MAX_SIZE_FACTOR=4
       - POOL_INIT_SIZE_FACTOR=2
       - SOCKET_PATH=/sockets/api1.sock
       - WORKER_SOCKET_PATH=/sockets/worker_http.sock
@@ -50,7 +50,7 @@ services:
           cpus: "0.25"
           memory: "30MB"
     environment:
-      - POOL_MAX_SIZE_FACTOR=5
+      - POOL_MAX_SIZE_FACTOR=4
       - POOL_INIT_SIZE_FACTOR=2
       - SOCKET_PATH=/sockets/api2.sock
       - WORKER_SOCKET_PATH=/sockets/worker_http.sock
@@ -76,7 +76,7 @@ services:
           cpus: "0.25"
           memory: "30MB"
     environment:
-      - POOL_MAX_SIZE_FACTOR=5
+      - POOL_MAX_SIZE_FACTOR=4
       - POOL_INIT_SIZE_FACTOR=2
       - SOCKET_PATH=/sockets/api3.sock
       - WORKER_SOCKET_PATH=/sockets/worker_http.sock
@@ -103,7 +103,7 @@ services:
           memory: "150MB"
     environment:
       - NUM_WORKERS=5
-      - NUM_PAYMENT_WORKERS=15
+      - NUM_PAYMENT_WORKERS=25
       - SOCKET_PATH=/sockets/worker_http.sock
       - PAYMENTS_SOCKET_PATH=/sockets/payments.sock
       - SUMMARY_SOCKET_PATH=/sockets/summary.sock
