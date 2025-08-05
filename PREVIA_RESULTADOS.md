@@ -1,5 +1,5 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Tue Aug  5 03:47:13 PM -03 2025**
+Atualizado em **Tue Aug  5 03:57:12 PM -03 2025**
 241 submissões / 214 resultados / 27 submissões com erro
 
 
@@ -53,7 +53,6 @@ Atualizado em **Tue Aug  5 03:47:13 PM -03 2025**
 |	davidalecrim1-go-1	|	18ms	|	0%	|	0	|	316545.32	|	[davidalecrim1-go-1](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/davidalecrim1-go-1)
 |	davidalecrim1-go-2	|	12.42ms	|	0%	|	105314.63075	|	195584.31425	|	[davidalecrim1-go-2](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/davidalecrim1-go-2)
 |	davidalecrim1-go-3	|	8.48ms	|	5%	|	0	|	332193.93375	|	[davidalecrim1-go-3](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/davidalecrim1-go-3)
-|	david-delta-sierra-go	|	5.19ms	|	12%	|	0	|	156578.772	|	[david-delta-sierra-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/david-delta-sierra-go)
 |	davigga-node-2	|	111.37ms	|	0%	|	0	|	263350.63	|	[davigga-node-2](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/davigga-node-2)
 |	davigga-node	|	96.8ms	|	0%	|	0	|	300462.14	|	[davigga-node](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/davigga-node)
 |	dbiagi	|	91.18ms	|	0%	|	107212.59325	|	199109.10175	|	[dbiagi](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/dbiagi)
@@ -141,7 +140,6 @@ Atualizado em **Tue Aug  5 03:47:13 PM -03 2025**
 |	lucas-laurentino-go	|	1.88ms	|	18%	|	0	|	365149.7964	|	[lucas-laurentino-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/lucas-laurentino-go)
 |	lucas-lima-chaves	|	2.2ms	|	18%	|	0	|	0	|	[lucas-lima-chaves](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/lucas-lima-chaves)
 |	lucaslimafernandes	|	4.12ms	|	14%	|	108808.97125	|	245597.39225	|	[lucaslimafernandes](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/lucaslimafernandes)
-|	lucas-santana	|	116.93ms	|	0%	|	0	|	221915.845	|	[lucas-santana](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/lucas-santana)
 |	lucasvsouza28-bun	|	176.15ms	|	0%	|	0	|	47120.215	|	[lucasvsouza28-bun](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/lucasvsouza28-bun)
 |	luizcordista-go	|	19.02ms	|	0%	|	0	|	309627.085	|	[luizcordista-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/luizcordista-go)
 |	luucaspole-crystal	|	3.38ms	|	15%	|	0	|	346505.21775	|	[luucaspole-crystal](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/luucaspole-crystal)
@@ -160,6 +158,8 @@ Atualizado em **Tue Aug  5 03:47:13 PM -03 2025**
 |	micheloliveira-com-dotnet-csharp-redis-worker	|	5.6ms	|	11%	|	0	|	351449.2434	|	[micheloliveira-com-dotnet-csharp-redis-worker](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/micheloliveira-com-dotnet-csharp-redis-worker)
 |	mourishitz-go	|	2.93ms	|	16%	|	49212.0377	|	113890.71582	|	[mourishitz-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/mourishitz-go)
 |	mpedroni-go	|	5.3ms	|	11%	|	0	|	351428.25885	|	[mpedroni-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/mpedroni-go)
+|	murilo-guedes-toloni	|	3.45ms	|	15%	|	110208.588	|	251905.344	|	[murilo-guedes-toloni](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/murilo-guedes-toloni)
+|	murilo-guedes-toloni-undertow	|	4.51ms	|	13%	|	0	|	357033.96945	|	[murilo-guedes-toloni-undertow](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/murilo-guedes-toloni-undertow)
 |	mxlange-cpp	|	7.93ms	|	6%	|	0	|	324957.2888	|	[mxlange-cpp](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/mxlange-cpp)
 |	mxlange-fasthttp	|	5.64ms	|	11%	|	38904.05225000079	|	84477.37060000171	|	[mxlange-fasthttp](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/mxlange-fasthttp)
 |	mxlange-only-go	|	7.4ms	|	7%	|	110606.986	|	227534.3712	|	[mxlange-only-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/mxlange-only-go)
