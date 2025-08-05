@@ -1,9 +1,9 @@
 services:
   nginx:
-    image: nginx:1.25-alpine
+    image: openresty/openresty:1.25.3.1-alpine
     container_name: go-rinha-nginx
     volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx.conf:/usr/local/openresty/nginx/conf/nginx.conf:ro
     depends_on:
       - api1
       - api2
@@ -15,13 +15,10 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.30"
-          memory: "40MB"
+          cpus: "0.40"
+          memory: "100MB"
   api1:
-    # build:
-    #  context: .
-    #  dockerfile: Dockerfile
-    image: danielsuhett1999/rinha-backend-go:1.0.2
+    image: danielsuhett1999/rinha-backend-go:1.0.5
     hostname: api1
     environment:
       - APP_PORT=8080
@@ -30,16 +27,11 @@ services:
       - REDIS_PORT=6379
       - PROCESSOR_DEFAULT_URL=http://payment-processor-default:8080
       - PROCESSOR_FALLBACK_URL=http://payment-processor-fallback:8080
-      - POOLING_INTERVAL=200
+      - POOLING_INTERVAL=1000
       - HEALTH_TIMEOUT=1000
       - HEALTH_INTERVAL=3000
       - LATENCY_DIFF_TO_USE_FALLBACK=5000
-      - BATCH_SIZE=25
-      - WORKER_POOL_SIZE=12
-      - REQUEUE_POOL_SIZE=2
-      - WORKER_CHAN_BUFFER=400
-      - REQUEUE_CHAN_BUFFER=6000
-      - GOGC=1000
+      - BATCH_SIZE=100
     networks:
       - backend
       - payment-processor
@@ -50,12 +42,9 @@ services:
       resources:
         limits:
           cpus: "0.50"
-          memory: "130MB"
+          memory: "100MB"
   api2:
-    # build:
-    #  context: .
-    #  dockerfile: Dockerfile
-    image: danielsuhett1999/rinha-backend-go:1.0.2
+    image: danielsuhett1999/rinha-backend-go:1.0.5
     hostname: api2
     environment:
       - APP_PORT=8081
@@ -64,16 +53,11 @@ services:
       - REDIS_PORT=6379
       - PROCESSOR_DEFAULT_URL=http://payment-processor-default:8080
       - PROCESSOR_FALLBACK_URL=http://payment-processor-fallback:8080
-      - POOLING_INTERVAL=200
+      - POOLING_INTERVAL=1000
       - HEALTH_TIMEOUT=1000
       - HEALTH_INTERVAL=3000
       - LATENCY_DIFF_TO_USE_FALLBACK=5000
-      - BATCH_SIZE=25
-      - WORKER_POOL_SIZE=12
-      - REQUEUE_POOL_SIZE=2
-      - WORKER_CHAN_BUFFER=400
-      - REQUEUE_CHAN_BUFFER=6000
-      - GOGC=1000
+      - BATCH_SIZE=100
     networks:
       - backend
       - payment-processor
@@ -84,7 +68,7 @@ services:
       resources:
         limits:
           cpus: "0.50"
-          memory: "130MB"
+          memory: "100MB"
   redis:
     image: redis:7.2-alpine
     container_name: go-rinha-redis
@@ -101,7 +85,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.20"
+          cpus: "0.10"
           memory: "50MB"
 
 networks:
