@@ -1,0 +1,598 @@
+
+ backend2 Pulling 
+ backend1 Pulling 
+ 1e654d6ada44 Already exists 
+ 695bf607cc79 Already exists 
+ 6ddd7d040268 Already exists 
+ 7b71eac1f9a3 Pulling fs layer 
+ 5e318de504cb Pulling fs layer 
+ a9a0f479afe4 Pulling fs layer 
+ a9a0f479afe4 Waiting 
+ 1e654d6ada44 Already exists 
+ 695bf607cc79 Already exists 
+ 6ddd7d040268 Already exists 
+ 7b71eac1f9a3 Pulling fs layer 
+ 5e318de504cb Pulling fs layer 
+ a9a0f479afe4 Pulling fs layer 
+ a9a0f479afe4 Waiting 
+ 5e318de504cb Downloading [===>                                               ]  1.008kB/14.1kB
+ 5e318de504cb Downloading [===>                                               ]  1.008kB/14.1kB
+ 5e318de504cb Downloading [==================================================>]   14.1kB/14.1kB
+ 5e318de504cb Download complete 
+ 5e318de504cb Downloading [==================================================>]   14.1kB/14.1kB
+ 5e318de504cb Verifying Checksum 
+ 5e318de504cb Download complete 
+ 7b71eac1f9a3 Downloading [==================================================>]     741B/741B
+ 7b71eac1f9a3 Verifying Checksum 
+ 7b71eac1f9a3 Download complete 
+ 7b71eac1f9a3 Downloading [==================================================>]     741B/741B
+ 7b71eac1f9a3 Verifying Checksum 
+ 7b71eac1f9a3 Download complete 
+ 7b71eac1f9a3 Extracting [==================================================>]     741B/741B
+ 7b71eac1f9a3 Extracting [==================================================>]     741B/741B
+ 7b71eac1f9a3 Extracting [==================================================>]     741B/741B
+ 7b71eac1f9a3 Extracting [==================================================>]     741B/741B
+ 7b71eac1f9a3 Pull complete 
+ 7b71eac1f9a3 Pull complete 
+ 5e318de504cb Extracting [==================================================>]   14.1kB/14.1kB
+ 5e318de504cb Extracting [==================================================>]   14.1kB/14.1kB
+ 5e318de504cb Extracting [==================================================>]   14.1kB/14.1kB
+ 5e318de504cb Extracting [==================================================>]   14.1kB/14.1kB
+ 5e318de504cb Pull complete 
+ 5e318de504cb Pull complete 
+ a9a0f479afe4 Downloading [>                                                  ]  6.105kB/497.7kB
+ a9a0f479afe4 Downloading [>                                                  ]  6.105kB/497.7kB
+ a9a0f479afe4 Downloading [===============>                                   ]  157.3kB/497.7kB
+ a9a0f479afe4 Downloading [===============>                                   ]  157.3kB/497.7kB
+ a9a0f479afe4 Verifying Checksum 
+ a9a0f479afe4 Download complete 
+ a9a0f479afe4 Verifying Checksum 
+ a9a0f479afe4 Download complete 
+ a9a0f479afe4 Extracting [===>                                               ]  32.77kB/497.7kB
+ a9a0f479afe4 Extracting [===>                                               ]  32.77kB/497.7kB
+ a9a0f479afe4 Extracting [==================================================>]  497.7kB/497.7kB
+ a9a0f479afe4 Extracting [==================================================>]  497.7kB/497.7kB
+ a9a0f479afe4 Extracting [==================================================>]  497.7kB/497.7kB
+ a9a0f479afe4 Extracting [==================================================>]  497.7kB/497.7kB
+ a9a0f479afe4 Pull complete 
+ a9a0f479afe4 Pull complete 
+ backend1 Pulled 
+ backend2 Pulled 
+ Network githiago-f_backend  Creating
+ Network githiago-f_backend  Created
+ Container githiago-f-backend1-1  Creating
+ Container githiago-f-backend2-1  Creating
+ Container githiago-f-backend2-1  Created
+ Container githiago-f-backend1-1  Created
+ Container githiago-f-nginx-1  Creating
+ Container githiago-f-nginx-1  Created
+Attaching to backend1-1, backend2-1, nginx-1
+backend1-1  | INFO exec -a "java" java -server -Xms64m -Xmx140m -XX:+UseG1GC -XX:MaxGCPauseMillis=100 -XX:+UseStringDeduplication -XX:+UseCompressedOops -XX:+UseCompressedClassPointers -XX:+TieredCompilation -XX:TieredStopAtLevel=1 -XX:+DisableExplicitGC -XX:MaxMetaspaceSize=64m -XX:CompressedClassSpaceSize=32m -XX:ReservedCodeCacheSize=32m -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfile.encoding=UTF-8 -Duser.timezone=UTC -cp "." -jar /deployments/quarkus-run.jar 
+backend1-1  | INFO running in /deployments
+backend2-1  | INFO exec -a "java" java -server -Xms64m -Xmx140m -XX:+UseG1GC -XX:MaxGCPauseMillis=100 -XX:+UseStringDeduplication -XX:+UseCompressedOops -XX:+UseCompressedClassPointers -XX:+TieredCompilation -XX:TieredStopAtLevel=1 -XX:+DisableExplicitGC -XX:MaxMetaspaceSize=64m -XX:CompressedClassSpaceSize=32m -XX:ReservedCodeCacheSize=32m -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -Dfile.encoding=UTF-8 -Duser.timezone=UTC -cp "." -jar /deployments/quarkus-run.jar 
+backend2-1  | INFO running in /deployments
+nginx-1     | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+nginx-1     | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+nginx-1     | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+nginx-1     | 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+nginx-1     | 10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
+nginx-1     | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+nginx-1     | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+nginx-1     | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+nginx-1     | /docker-entrypoint.sh: Configuration complete; ready for start up
+backend1-1  | __  ____  __  _____   ___  __ ____  ______ 
+backend1-1  |  --/ __ \/ / / / _ | / _ \/ //_/ / / / __/ 
+backend1-1  |  -/ /_/ / /_/ / __ |/ , _/ ,< / /_/ /\ \   
+backend1-1  | --\___\_\____/_/ |_/_/|_/_/|_|\____/___/   
+backend1-1  | 2025-08-04 00:42:49,153 INFO  [com.rin.inf.HealthChecker] (main) Is leader: true
+backend2-1  | __  ____  __  _____   ___  __ ____  ______ 
+backend2-1  |  --/ __ \/ / / / _ | / _ \/ //_/ / / / __/ 
+backend2-1  |  -/ /_/ / /_/ / __ |/ , _/ ,< / /_/ /\ \   
+backend2-1  | --\___\_\____/_/ |_/_/|_/_/|_|\____/___/   
+backend2-1  | 2025-08-04 00:42:49,230 INFO  [com.rin.inf.HealthChecker] (main) Is leader: false
+backend1-1  | 2025-08-04 00:42:49,333 INFO  [io.quarkus] (main) payment_processor 1.0.0 on JVM (powered by Quarkus 3.24.5) started in 1.840s. Listening on: http://0.0.0.0:9999
+backend1-1  | 2025-08-04 00:42:49,333 INFO  [io.quarkus] (main) Profile prod activated. 
+backend1-1  | 2025-08-04 00:42:49,334 INFO  [io.quarkus] (main) Installed features: [cdi, rest, rest-client, rest-client-jackson, rest-jackson, scheduler, smallrye-context-propagation, vertx]
+backend2-1  | 2025-08-04 00:42:49,354 INFO  [io.quarkus] (main) payment_processor 1.0.0 on JVM (powered by Quarkus 3.24.5) started in 1.807s. Listening on: http://0.0.0.0:9999
+backend2-1  | 2025-08-04 00:42:49,354 INFO  [io.quarkus] (main) Profile prod activated. 
+backend2-1  | 2025-08-04 00:42:49,354 INFO  [io.quarkus] (main) Installed features: [cdi, rest, rest-client, rest-client-jackson, rest-jackson, scheduler, smallrye-context-propagation, vertx]
+backend1-1  | 2025-08-04 00:42:56,464 ERROR [io.qua.ver.htt.run.QuarkusErrorHandler] (vert.x-eventloop-thread-1) HTTP Request to /payments-summary?from=2025-08-04T00:42:41.445Z&to=2025-08-04T00:42:54.945Z failed, error id: fd0b8543-a793-4ddc-bc27-53274afcbd80-1: io.smallrye.mutiny.CompositeException: Multiple exceptions caught:
+backend1-1  | 	[Exception 0] org.jboss.resteasy.reactive.ClientWebApplicationException: Received: 'Unauthorized, status code 401' when invoking REST Client method: 'com.rinha.infra.payment.PaymentService#getMetrics'
+backend1-1  | 	[Exception 1] org.jboss.resteasy.reactive.ClientWebApplicationException: Received: 'Unauthorized, status code 401' when invoking REST Client method: 'com.rinha.infra.payment.PaymentService#getMetrics'
+backend1-1  | 	at io.smallrye.mutiny.operators.uni.builders.UniJoinAll$UniJoinAllSubscription.forwardSignalWhenCompleteOrSubscribeNext(UniJoinAll.java:122)
+backend1-1  | 	at io.smallrye.mutiny.operators.uni.builders.UniJoinAll$UniJoinAllSubscription.onFailure(UniJoinAll.java:137)
+backend1-1  | 	at io.smallrye.context.impl.wrappers.SlowContextualConsumer.accept(SlowContextualConsumer.java:21)
+backend1-1  | 	at io.smallrye.mutiny.helpers.UniCallbackSubscriber.onFailure(UniCallbackSubscriber.java:62)
+backend1-1  | 	at io.smallrye.mutiny.operators.uni.UniOperatorProcessor.onFailure(UniOperatorProcessor.java:55)
+backend1-1  | 	at io.smallrye.mutiny.operators.uni.UniOnCancellation$UniOnCancellationProcessor.onFailure(UniOnCancellation.java:56)
+backend1-1  | 	at io.smallrye.mutiny.operators.uni.UniOnFailureTransform$UniOnFailureTransformProcessor.onFailure(UniOnFailureTransform.java:64)
+backend1-1  | 	at io.smallrye.mutiny.operators.uni.builders.UniCreateFromCompletionStage$CompletionStageUniSubscription.forwardResult(UniCreateFromCompletionStage.java:58)
+backend1-1  | 	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:863)
+backend1-1  | 	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:841)
+backend1-1  | 	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+backend1-1  | 	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2194)
+backend1-1  | 	at org.jboss.resteasy.reactive.client.impl.RestClientRequestContext.handleUnrecoverableError(RestClientRequestContext.java:378)
+backend1-1  | 	at org.jboss.resteasy.reactive.common.core.AbstractResteasyReactiveContext.handleException(AbstractResteasyReactiveContext.java:329)
+backend1-1  | 	at org.jboss.resteasy.reactive.common.core.AbstractResteasyReactiveContext.run(AbstractResteasyReactiveContext.java:175)
+backend1-1  | 	at io.smallrye.context.impl.wrappers.SlowContextualRunnable.run(SlowContextualRunnable.java:19)
+backend1-1  | 	at org.jboss.resteasy.reactive.client.handlers.ClientSwitchToRequestContextRestHandler$1$1.handle(ClientSwitchToRequestContextRestHandler.java:38)
+backend1-1  | 	at org.jboss.resteasy.reactive.client.handlers.ClientSwitchToRequestContextRestHandler$1$1.handle(ClientSwitchToRequestContextRestHandler.java:35)
+backend1-1  | 	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:270)
+backend1-1  | 	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:252)
+backend1-1  | 	at io.vertx.core.impl.ContextInternal.lambda$runOnContext$0(ContextInternal.java:50)
+backend1-1  | 	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173)
+backend1-1  | 	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166)
+backend1-1  | 	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+backend1-1  | 	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:566)
+backend1-1  | 	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+backend1-1  | 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+backend1-1  | 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+backend1-1  | 	at java.base/java.lang.Thread.run(Thread.java:1583)
+backend1-1  | 	Suppressed: org.jboss.resteasy.reactive.ClientWebApplicationException: Received: 'Unauthorized, status code 401' when invoking REST Client method: 'com.rinha.infra.payment.PaymentService#getMetrics'
+backend1-1  | 		at org.jboss.resteasy.reactive.client.impl.RestClientRequestContext.unwrapException(RestClientRequestContext.java:205)
+backend1-1  | 		... 16 more
+backend1-1  | 	Caused by: jakarta.ws.rs.WebApplicationException: Unauthorized, status code 401
+backend1-1  | 		at io.quarkus.rest.client.reactive.runtime.DefaultMicroprofileRestClientExceptionMapper.toThrowable(DefaultMicroprofileRestClientExceptionMapper.java:19)
+backend1-1  | 		at io.quarkus.rest.client.reactive.runtime.MicroProfileRestClientResponseFilter.filter(MicroProfileRestClientResponseFilter.java:54)
+backend1-1  | 		at org.jboss.resteasy.reactive.client.handlers.ClientResponseFilterRestHandler.handle(ClientResponseFilterRestHandler.java:21)
+backend1-1  | 		at org.jboss.resteasy.reactive.client.handlers.ClientResponseFilterRestHandler.handle(ClientResponseFilterRestHandler.java:10)
+backend1-1  | 		at org.jboss.resteasy.reactive.common.core.AbstractResteasyReactiveContext.invokeHandler(AbstractResteasyReactiveContext.java:231)
+backend1-1  | 		at org.jboss.resteasy.reactive.common.core.AbstractResteasyReactiveContext.run(AbstractResteasyReactiveContext.java:147)
+backend1-1  | 		... 14 more
+backend1-1  | Caused by: org.jboss.resteasy.reactive.ClientWebApplicationException: Received: 'Unauthorized, status code 401' when invoking REST Client method: 'com.rinha.infra.payment.PaymentService#getMetrics'
+backend1-1  | 	at org.jboss.resteasy.reactive.client.impl.RestClientRequestContext.unwrapException(RestClientRequestContext.java:205)
+backend1-1  | 	... 16 more
+backend1-1  | Caused by: jakarta.ws.rs.WebApplicationException: Unauthorized, status code 401
+backend1-1  | 	at io.quarkus.rest.client.reactive.runtime.DefaultMicroprofileRestClientExceptionMapper.toThrowable(DefaultMicroprofileRestClientExceptionMapper.java:19)
+backend1-1  | 	at io.quarkus.rest.client.reactive.runtime.MicroProfileRestClientResponseFilter.filter(MicroProfileRestClientResponseFilter.java:54)
+backend1-1  | 	at org.jboss.resteasy.reactive.client.handlers.ClientResponseFilterRestHandler.handle(ClientResponseFilterRestHandler.java:21)
+backend1-1  | 	at org.jboss.resteasy.reactive.client.handlers.ClientResponseFilterRestHandler.handle(ClientResponseFilterRestHandler.java:10)
+backend1-1  | 	at org.jboss.resteasy.reactive.common.core.AbstractResteasyReactiveContext.invokeHandler(AbstractResteasyReactiveContext.java:231)
+backend1-1  | 	at org.jboss.resteasy.reactive.common.core.AbstractResteasyReactiveContext.run(AbstractResteasyReactiveContext.java:147)
+backend1-1  | 	... 14 more
+backend1-1  | 
+backend2-1  | 2025-08-04 00:43:06,493 ERROR [io.qua.ver.htt.run.QuarkusErrorHandler] (vert.x-eventloop-thread-1) HTTP Request to /payments-summary?from=2025-08-04T00:42:51.467Z&to=2025-08-04T00:43:04.967Z failed, error id: bab32fa2-e772-48c1-92de-ad415239ddbf-1: io.smallrye.mutiny.CompositeException: Multiple exceptions caught:
+backend2-1  | 	[Exception 0] org.jboss.resteasy.reactive.ClientWebApplicationException: Received: 'Unauthorized, status code 401' when invoking REST Client method: 'com.rinha.infra.payment.PaymentService#getMetrics'
+backend2-1  | 	[Exception 1] org.jboss.resteasy.reactive.ClientWebApplicationException: Received: 'Unauthorized, status code 401' when invoking REST Client method: 'com.rinha.infra.payment.PaymentService#getMetrics'
+backend2-1  | 	at io.smallrye.mutiny.operators.uni.builders.UniJoinAll$UniJoinAllSubscription.forwardSignalWhenCompleteOrSubscribeNext(UniJoinAll.java:122)
+backend2-1  | 	at io.smallrye.mutiny.operators.uni.builders.UniJoinAll$UniJoinAllSubscription.onFailure(UniJoinAll.java:137)
+backend2-1  | 	at io.smallrye.context.impl.wrappers.SlowContextualConsumer.accept(SlowContextualConsumer.java:21)
+backend2-1  | 	at io.smallrye.mutiny.helpers.UniCallbackSubscriber.onFailure(UniCallbackSubscriber.java:62)
+backend2-1  | 	at io.smallrye.mutiny.operators.uni.UniOperatorProcessor.onFailure(UniOperatorProcessor.java:55)
+backend2-1  | 	at io.smallrye.mutiny.operators.uni.UniOnCancellation$UniOnCancellationProcessor.onFailure(UniOnCancellation.java:56)
+backend2-1  | 	at io.smallrye.mutiny.operators.uni.UniOnFailureTransform$UniOnFailureTransformProcessor.onFailure(UniOnFailureTransform.java:64)
+backend2-1  | 	at io.smallrye.mutiny.operators.uni.builders.UniCreateFromCompletionStage$CompletionStageUniSubscription.forwardResult(UniCreateFromCompletionStage.java:58)
+backend2-1  | 	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:863)
+backend2-1  | 	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:841)
+backend2-1  | 	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+backend2-1  | 	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2194)
+backend2-1  | 	at org.jboss.resteasy.reactive.client.impl.RestClientRequestContext.handleUnrecoverableError(RestClientRequestContext.java:378)
+backend2-1  | 	at org.jboss.resteasy.reactive.common.core.AbstractResteasyReactiveContext.handleException(AbstractResteasyReactiveContext.java:329)
+backend2-1  | 	at org.jboss.resteasy.reactive.common.core.AbstractResteasyReactiveContext.run(AbstractResteasyReactiveContext.java:175)
+backend2-1  | 	at io.smallrye.context.impl.wrappers.SlowContextualRunnable.run(SlowContextualRunnable.java:19)
+backend2-1  | 	at org.jboss.resteasy.reactive.client.handlers.ClientSwitchToRequestContextRestHandler$1$1.handle(ClientSwitchToRequestContextRestHandler.java:38)
+backend2-1  | 	at org.jboss.resteasy.reactive.client.handlers.ClientSwitchToRequestContextRestHandler$1$1.handle(ClientSwitchToRequestContextRestHandler.java:35)
+backend2-1  | 	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:270)
+backend2-1  | 	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:252)
+backend2-1  | 	at io.vertx.core.impl.ContextInternal.lambda$runOnContext$0(ContextInternal.java:50)
+backend2-1  | 	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173)
+backend2-1  | 	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166)
+backend2-1  | 	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+backend2-1  | 	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:566)
+backend2-1  | 	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+backend2-1  | 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+backend2-1  | 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+backend2-1  | 	at java.base/java.lang.Thread.run(Thread.java:1583)
+backend2-1  | 	Suppressed: org.jboss.resteasy.reactive.ClientWebApplicationException: Received: 'Unauthorized, status code 401' when invoking REST Client method: 'com.rinha.infra.payment.PaymentService#getMetrics'
+backend2-1  | 		at org.jboss.resteasy.reactive.client.impl.RestClientRequestContext.unwrapException(RestClientRequestContext.java:205)
+backend2-1  | 		... 16 more
+backend2-1  | 	Caused by: jakarta.ws.rs.WebApplicationException: Unauthorized, status code 401
+backend2-1  | 		at io.quarkus.rest.client.reactive.runtime.DefaultMicroprofileRestClientExceptionMapper.toThrowable(DefaultMicroprofileRestClientExceptionMapper.java:19)
+backend2-1  | 		at io.quarkus.rest.client.reactive.runtime.MicroProfileRestClientResponseFilter.filter(MicroProfileRestClientResponseFilter.java:54)
+backend2-1  | 		at org.jboss.resteasy.reactive.client.handlers.ClientResponseFilterRestHandler.handle(ClientResponseFilterRestHandler.java:21)
+backend2-1  | 		at org.jboss.resteasy.reactive.client.handlers.ClientResponseFilterRestHandler.handle(ClientResponseFilterRestHandler.java:10)
+backend2-1  | 		at org.jboss.resteasy.reactive.common.core.AbstractResteasyReactiveContext.invokeHandler(AbstractResteasyReactiveContext.java:231)
+backend2-1  | 		at org.jboss.resteasy.reactive.common.core.AbstractResteasyReactiveContext.run(AbstractResteasyReactiveContext.java:147)
+backend2-1  | 		... 14 more
+backend2-1  | Caused by: org.jboss.resteasy.reactive.ClientWebApplicationException: Received: 'Unauthorized, status code 401' when invoking REST Client method: 'com.rinha.infra.payment.PaymentService#getMetrics'
+backend2-1  | 	at org.jboss.resteasy.reactive.client.impl.RestClientRequestContext.unwrapException(RestClientRequestContext.java:205)
+backend2-1  | 	... 16 more
+backend2-1  | Caused by: jakarta.ws.rs.WebApplicationException: Unauthorized, status code 401
+backend2-1  | 	at io.quarkus.rest.client.reactive.runtime.DefaultMicroprofileRestClientExceptionMapper.toThrowable(DefaultMicroprofileRestClientExceptionMapper.java:19)
+backend2-1  | 	at io.quarkus.rest.client.reactive.runtime.MicroProfileRestClientResponseFilter.filter(MicroProfileRestClientResponseFilter.java:54)
+backend2-1  | 	at org.jboss.resteasy.reactive.client.handlers.ClientResponseFilterRestHandler.handle(ClientResponseFilterRestHandler.java:21)
+backend2-1  | 	at org.jboss.resteasy.reactive.client.handlers.ClientResponseFilterRestHandler.handle(ClientResponseFilterRestHandler.java:10)
+backend2-1  | 	at org.jboss.resteasy.reactive.common.core.AbstractResteasyReactiveContext.invokeHandler(AbstractResteasyReactiveContext.java:231)
+backend2-1  | 	at org.jboss.resteasy.reactive.common.core.AbstractResteasyReactiveContext.run(AbstractResteasyReactiveContext.java:147)
+backend2-1  | 	... 14 more
+backend2-1  | 
+backend1-1  | 2025-08-04 00:43:16,501 ERROR [io.qua.ver.htt.run.QuarkusErrorHandler] (vert.x-eventloop-thread-1) HTTP Request to /payments-summary?from=2025-08-04T00:43:01.498Z&to=2025-08-04T00:43:14.998Z failed, error id: fd0b8543-a793-4ddc-bc27-53274afcbd80-2: io.smallrye.mutiny.CompositeException: Multiple exceptions caught:
+backend1-1  | 	[Exception 0] org.jboss.resteasy.reactive.ClientWebApplicationException: Received: 'Unauthorized, status code 401' when invoking REST Client method: 'com.rinha.infra.payment.PaymentService#getMetrics'
+backend1-1  | 	[Exception 1] org.jboss.resteasy.reactive.ClientWebApplicationException: Received: 'Unauthorized, status code 401' when invoking REST Client method: 'com.rinha.infra.payment.PaymentService#getMetrics'
+backend1-1  | 	at io.smallrye.mutiny.operators.uni.builders.UniJoinAll$UniJoinAllSubscription.forwardSignalWhenCompleteOrSubscribeNext(UniJoinAll.java:122)
+backend1-1  | 	at io.smallrye.mutiny.operators.uni.builders.UniJoinAll$UniJoinAllSubscription.onFailure(UniJoinAll.java:137)
+backend1-1  | 	at io.smallrye.context.impl.wrappers.SlowContextualConsumer.accept(SlowContextualConsumer.java:21)
+backend1-1  | 	at io.smallrye.mutiny.helpers.UniCallbackSubscriber.onFailure(UniCallbackSubscriber.java:62)
+backend1-1  | 	at io.smallrye.mutiny.operators.uni.UniOperatorProcessor.onFailure(UniOperatorProcessor.java:55)
+backend1-1  | 	at io.smallrye.mutiny.operators.uni.UniOnCancellation$UniOnCancellationProcessor.onFailure(UniOnCancellation.java:56)
+backend1-1  | 	at io.smallrye.mutiny.operators.uni.UniOnFailureTransform$UniOnFailureTransformProcessor.onFailure(UniOnFailureTransform.java:64)
+backend1-1  | 	at io.smallrye.mutiny.operators.uni.builders.UniCreateFromCompletionStage$CompletionStageUniSubscription.forwardResult(UniCreateFromCompletionStage.java:58)
+backend1-1  | 	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:863)
+backend1-1  | 	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:841)
+backend1-1  | 	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+backend1-1  | 	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2194)
+backend1-1  | 	at org.jboss.resteasy.reactive.client.impl.RestClientRequestContext.handleUnrecoverableError(RestClientRequestContext.java:378)
+backend1-1  | 	at org.jboss.resteasy.reactive.common.core.AbstractResteasyReactiveContext.handleException(AbstractResteasyReactiveContext.java:329)
+backend1-1  | 	at org.jboss.resteasy.reactive.common.core.AbstractResteasyReactiveContext.run(AbstractResteasyReactiveContext.java:175)
+backend1-1  | 	at io.smallrye.context.impl.wrappers.SlowContextualRunnable.run(SlowContextualRunnable.java:19)
+backend1-1  | 	at org.jboss.resteasy.reactive.client.handlers.ClientSwitchToRequestContextRestHandler$1$1.handle(ClientSwitchToRequestContextRestHandler.java:38)
+backend1-1  | 	at org.jboss.resteasy.reactive.client.handlers.ClientSwitchToRequestContextRestHandler$1$1.handle(ClientSwitchToRequestContextRestHandler.java:35)
+backend1-1  | 	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:270)
+backend1-1  | 	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:252)
+backend1-1  | 	at io.vertx.core.impl.ContextInternal.lambda$runOnContext$0(ContextInternal.java:50)
+backend1-1  | 	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173)
+backend1-1  | 	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166)
+backend1-1  | 	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+backend1-1  | 	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:566)
+backend1-1  | 	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+backend1-1  | 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+backend1-1  | 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+backend1-1  | 	at java.base/java.lang.Thread.run(Thread.java:1583)
+backend1-1  | 	Suppressed: org.jboss.resteasy.reactive.ClientWebApplicationException: Received: 'Unauthorized, status code 401' when invoking REST Client method: 'com.rinha.infra.payment.PaymentService#getMetrics'
+backend1-1  | 		at org.jboss.resteasy.reactive.client.impl.RestClientRequestContext.unwrapException(RestClientRequestContext.java:205)
+backend1-1  | 		... 16 more
+backend1-1  | 	Caused by: jakarta.ws.rs.WebApplicationException: Unauthorized, status code 401
+backend1-1  | 		at io.quarkus.rest.client.reactive.runtime.DefaultMicroprofileRestClientExceptionMapper.toThrowable(DefaultMicroprofileRestClientExceptionMapper.java:19)
+backend1-1  | 		at io.quarkus.rest.client.reactive.runtime.MicroProfileRestClientResponseFilter.filter(MicroProfileRestClientResponseFilter.java:54)
+backend1-1  | 		at org.jboss.resteasy.reactive.client.handlers.ClientResponseFilterRestHandler.handle(ClientResponseFilterRestHandler.java:21)
+backend1-1  | 		at org.jboss.resteasy.reactive.client.handlers.ClientResponseFilterRestHandler.handle(ClientResponseFilterRestHandler.java:10)
+backend1-1  | 		at org.jboss.resteasy.reactive.common.core.AbstractResteasyReactiveContext.invokeHandler(AbstractResteasyReactiveContext.java:231)
+backend1-1  | 		at org.jboss.resteasy.reactive.common.core.AbstractResteasyReactiveContext.run(AbstractResteasyReactiveContext.java:147)
+backend1-1  | 		... 14 more
+backend1-1  | Caused by: org.jboss.resteasy.reactive.ClientWebApplicationException: Received: 'Unauthorized, status code 401' when invoking REST Client method: 'com.rinha.infra.payment.PaymentService#getMetrics'
+backend1-1  | 	at org.jboss.resteasy.reactive.client.impl.RestClientRequestContext.unwrapException(RestClientRequestContext.java:205)
+backend1-1  | 	... 16 more
+backend1-1  | Caused by: jakarta.ws.rs.WebApplicationException: Unauthorized, status code 401
+backend1-1  | 	at io.quarkus.rest.client.reactive.runtime.DefaultMicroprofileRestClientExceptionMapper.toThrowable(DefaultMicroprofileRestClientExceptionMapper.java:19)
+backend1-1  | 	at io.quarkus.rest.client.reactive.runtime.MicroProfileRestClientResponseFilter.filter(MicroProfileRestClientResponseFilter.java:54)
+backend1-1  | 	at org.jboss.resteasy.reactive.client.handlers.ClientResponseFilterRestHandler.handle(ClientResponseFilterRestHandler.java:21)
+backend1-1  | 	at org.jboss.resteasy.reactive.client.handlers.ClientResponseFilterRestHandler.handle(ClientResponseFilterRestHandler.java:10)
+backend1-1  | 	at org.jboss.resteasy.reactive.common.core.AbstractResteasyReactiveContext.invokeHandler(AbstractResteasyReactiveContext.java:231)
+backend1-1  | 	at org.jboss.resteasy.reactive.common.core.AbstractResteasyReactiveContext.run(AbstractResteasyReactiveContext.java:147)
+backend1-1  | 	... 14 more
+backend1-1  | 
+backend2-1  | 2025-08-04 00:43:26,508 ERROR [io.qua.ver.htt.run.QuarkusErrorHandler] (vert.x-eventloop-thread-0) HTTP Request to /payments-summary?from=2025-08-04T00:43:11.505Z&to=2025-08-04T00:43:25.005Z failed, error id: bab32fa2-e772-48c1-92de-ad415239ddbf-2: io.smallrye.mutiny.CompositeException: Multiple exceptions caught:
+backend2-1  | 	[Exception 0] org.jboss.resteasy.reactive.ClientWebApplicationException: Received: 'Unauthorized, status code 401' when invoking REST Client method: 'com.rinha.infra.payment.PaymentService#getMetrics'
+backend2-1  | 	[Exception 1] org.jboss.resteasy.reactive.ClientWebApplicationException: Received: 'Unauthorized, status code 401' when invoking REST Client method: 'com.rinha.infra.payment.PaymentService#getMetrics'
+backend2-1  | 	at io.smallrye.mutiny.operators.uni.builders.UniJoinAll$UniJoinAllSubscription.forwardSignalWhenCompleteOrSubscribeNext(UniJoinAll.java:122)
+backend2-1  | 	at io.smallrye.mutiny.operators.uni.builders.UniJoinAll$UniJoinAllSubscription.onFailure(UniJoinAll.java:137)
+backend2-1  | 	at io.smallrye.context.impl.wrappers.SlowContextualConsumer.accept(SlowContextualConsumer.java:21)
+backend2-1  | 	at io.smallrye.mutiny.helpers.UniCallbackSubscriber.onFailure(UniCallbackSubscriber.java:62)
+backend2-1  | 	at io.smallrye.mutiny.operators.uni.UniOperatorProcessor.onFailure(UniOperatorProcessor.java:55)
+backend2-1  | 	at io.smallrye.mutiny.operators.uni.UniOnCancellation$UniOnCancellationProcessor.onFailure(UniOnCancellation.java:56)
+backend2-1  | 	at io.smallrye.mutiny.operators.uni.UniOnFailureTransform$UniOnFailureTransformProcessor.onFailure(UniOnFailureTransform.java:64)
+backend2-1  | 	at io.smallrye.mutiny.operators.uni.builders.UniCreateFromCompletionStage$CompletionStageUniSubscription.forwardResult(UniCreateFromCompletionStage.java:58)
+backend2-1  | 	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:863)
+backend2-1  | 	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:841)
+backend2-1  | 	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+backend2-1  | 	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2194)
+backend2-1  | 	at org.jboss.resteasy.reactive.client.impl.RestClientRequestContext.handleUnrecoverableError(RestClientRequestContext.java:378)
+backend2-1  | 	at org.jboss.resteasy.reactive.common.core.AbstractResteasyReactiveContext.handleException(AbstractResteasyReactiveContext.java:329)
+backend2-1  | 	at org.jboss.resteasy.reactive.common.core.AbstractResteasyReactiveContext.run(AbstractResteasyReactiveContext.java:175)
+backend2-1  | 	at io.smallrye.context.impl.wrappers.SlowContextualRunnable.run(SlowContextualRunnable.java:19)
+backend2-1  | 	at org.jboss.resteasy.reactive.client.handlers.ClientSwitchToRequestContextRestHandler$1$1.handle(ClientSwitchToRequestContextRestHandler.java:38)
+backend2-1  | 	at org.jboss.resteasy.reactive.client.handlers.ClientSwitchToRequestContextRestHandler$1$1.handle(ClientSwitchToRequestContextRestHandler.java:35)
+backend2-1  | 	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:270)
+backend2-1  | 	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:252)
+backend2-1  | 	at io.vertx.core.impl.ContextInternal.lambda$runOnContext$0(ContextInternal.java:50)
+backend2-1  | 	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173)
+backend2-1  | 	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166)
+backend2-1  | 	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+backend2-1  | 	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
+backend2-1  | 	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+backend2-1  | 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+backend2-1  | 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+backend2-1  | 	at java.base/java.lang.Thread.run(Thread.java:1583)
+backend2-1  | 	Suppressed: org.jboss.resteasy.reactive.ClientWebApplicationException: Received: 'Unauthorized, status code 401' when invoking REST Client method: 'com.rinha.infra.payment.PaymentService#getMetrics'
+backend2-1  | 		at org.jboss.resteasy.reactive.client.impl.RestClientRequestContext.unwrapException(RestClientRequestContext.java:205)
+backend2-1  | 		... 16 more
+backend2-1  | 	Caused by: jakarta.ws.rs.WebApplicationException: Unauthorized, status code 401
+backend2-1  | 		at io.quarkus.rest.client.reactive.runtime.DefaultMicroprofileRestClientExceptionMapper.toThrowable(DefaultMicroprofileRestClientExceptionMapper.java:19)
+backend2-1  | 		at io.quarkus.rest.client.reactive.runtime.MicroProfileRestClientResponseFilter.filter(MicroProfileRestClientResponseFilter.java:54)
+backend2-1  | 		at org.jboss.resteasy.reactive.client.handlers.ClientResponseFilterRestHandler.handle(ClientResponseFilterRestHandler.java:21)
+backend2-1  | 		at org.jboss.resteasy.reactive.client.handlers.ClientResponseFilterRestHandler.handle(ClientResponseFilterRestHandler.java:10)
+backend2-1  | 		at org.jboss.resteasy.reactive.common.core.AbstractResteasyReactiveContext.invokeHandler(AbstractResteasyReactiveContext.java:231)
+backend2-1  | 		at org.jboss.resteasy.reactive.common.core.AbstractResteasyReactiveContext.run(AbstractResteasyReactiveContext.java:147)
+backend2-1  | 		... 14 more
+backend2-1  | Caused by: org.jboss.resteasy.reactive.ClientWebApplicationException: Received: 'Unauthorized, status code 401' when invoking REST Client method: 'com.rinha.infra.payment.PaymentService#getMetrics'
+backend2-1  | 	at org.jboss.resteasy.reactive.client.impl.RestClientRequestContext.unwrapException(RestClientRequestContext.java:205)
+backend2-1  | 	at org.jboss.resteasy.reactive.common.core.AbstractResteasyReactiveContext.handleException(AbstractResteasyReactiveContext.java:329)
+backend2-1  | 	at org.jboss.resteasy.reactive.common.core.AbstractResteasyReactiveContext.run(AbstractResteasyReactiveContext.java:175)
+backend2-1  | 	at io.smallrye.context.impl.wrappers.SlowContextualRunnable.run(SlowContextualRunnable.java:19)
+backend2-1  | 	at org.jboss.resteasy.reactive.client.handlers.ClientSwitchToRequestContextRestHandler$1$1.handle(ClientSwitchToRequestContextRestHandler.java:38)
+backend2-1  | 	at org.jboss.resteasy.reactive.client.handlers.ClientSwitchToRequestContextRestHandler$1$1.handle(ClientSwitchToRequestContextRestHandler.java:35)
+backend2-1  | 	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:270)
+backend2-1  | 	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:252)
+backend2-1  | 	at io.vertx.core.impl.ContextInternal.lambda$runOnContext$0(ContextInternal.java:50)
+backend2-1  | 	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173)
+backend2-1  | 	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166)
+backend2-1  | 	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+backend2-1  | 	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:566)
+backend2-1  | 	... 4 more
+backend2-1  | Caused by: jakarta.ws.rs.WebApplicationException: Unauthorized, status code 401
+backend2-1  | 	at io.quarkus.rest.client.reactive.runtime.DefaultMicroprofileRestClientExceptionMapper.toThrowable(DefaultMicroprofileRestClientExceptionMapper.java:19)
+backend2-1  | 	at io.quarkus.rest.client.reactive.runtime.MicroProfileRestClientResponseFilter.filter(MicroProfileRestClientResponseFilter.java:54)
+backend2-1  | 	at org.jboss.resteasy.reactive.client.handlers.ClientResponseFilterRestHandler.handle(ClientResponseFilterRestHandler.java:21)
+backend2-1  | 	at org.jboss.resteasy.reactive.client.handlers.ClientResponseFilterRestHandler.handle(ClientResponseFilterRestHandler.java:10)
+backend2-1  | 	at org.jboss.resteasy.reactive.common.core.AbstractResteasyReactiveContext.invokeHandler(AbstractResteasyReactiveContext.java:231)
+backend2-1  | 	at org.jboss.resteasy.reactive.common.core.AbstractResteasyReactiveContext.run(AbstractResteasyReactiveContext.java:147)
+backend2-1  | 	... 14 more
+backend2-1  | 
+backend1-1  | 2025-08-04 00:43:37,453 ERROR [io.qua.ver.htt.run.QuarkusErrorHandler] (vert.x-eventloop-thread-0) HTTP Request to /payments-summary?from=2025-08-04T00:43:21.510Z&to=2025-08-04T00:43:35.010Z failed, error id: fd0b8543-a793-4ddc-bc27-53274afcbd80-3: io.smallrye.mutiny.CompositeException: Multiple exceptions caught:
+backend1-1  | 	[Exception 0] org.jboss.resteasy.reactive.ClientWebApplicationException: Received: 'Unauthorized, status code 401' when invoking REST Client method: 'com.rinha.infra.payment.PaymentService#getMetrics'
+backend1-1  | 	[Exception 1] org.jboss.resteasy.reactive.ClientWebApplicationException: Received: 'Unauthorized, status code 401' when invoking REST Client method: 'com.rinha.infra.payment.PaymentService#getMetrics'
+backend1-1  | 	at io.smallrye.mutiny.operators.uni.builders.UniJoinAll$UniJoinAllSubscription.forwardSignalWhenCompleteOrSubscribeNext(UniJoinAll.java:122)
+backend1-1  | 	at io.smallrye.mutiny.operators.uni.builders.UniJoinAll$UniJoinAllSubscription.onFailure(UniJoinAll.java:137)
+backend1-1  | 	at io.smallrye.context.impl.wrappers.SlowContextualConsumer.accept(SlowContextualConsumer.java:21)
+backend1-1  | 	at io.smallrye.mutiny.helpers.UniCallbackSubscriber.onFailure(UniCallbackSubscriber.java:62)
+backend1-1  | 	at io.smallrye.mutiny.operators.uni.UniOperatorProcessor.onFailure(UniOperatorProcessor.java:55)
+backend1-1  | 	at io.smallrye.mutiny.operators.uni.UniOnCancellation$UniOnCancellationProcessor.onFailure(UniOnCancellation.java:56)
+backend1-1  | 	at io.smallrye.mutiny.operators.uni.UniOnFailureTransform$UniOnFailureTransformProcessor.onFailure(UniOnFailureTransform.java:64)
+backend1-1  | 	at io.smallrye.mutiny.operators.uni.builders.UniCreateFromCompletionStage$CompletionStageUniSubscription.forwardResult(UniCreateFromCompletionStage.java:58)
+backend1-1  | 	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:863)
+backend1-1  | 	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:841)
+backend1-1  | 	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+backend1-1  | 	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2194)
+backend1-1  | 	at org.jboss.resteasy.reactive.client.impl.RestClientRequestContext.handleUnrecoverableError(RestClientRequestContext.java:378)
+backend1-1  | 	at org.jboss.resteasy.reactive.common.core.AbstractResteasyReactiveContext.handleException(AbstractResteasyReactiveContext.java:329)
+backend1-1  | 	at org.jboss.resteasy.reactive.common.core.AbstractResteasyReactiveContext.run(AbstractResteasyReactiveContext.java:175)
+backend1-1  | 	at io.smallrye.context.impl.wrappers.SlowContextualRunnable.run(SlowContextualRunnable.java:19)
+backend1-1  | 	at org.jboss.resteasy.reactive.client.handlers.ClientSwitchToRequestContextRestHandler$1$1.handle(ClientSwitchToRequestContextRestHandler.java:38)
+backend1-1  | 	at org.jboss.resteasy.reactive.client.handlers.ClientSwitchToRequestContextRestHandler$1$1.handle(ClientSwitchToRequestContextRestHandler.java:35)
+backend1-1  | 	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:270)
+backend1-1  | 	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:252)
+backend1-1  | 	at io.vertx.core.impl.ContextInternal.lambda$runOnContext$0(ContextInternal.java:50)
+backend1-1  | 	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173)
+backend1-1  | 	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166)
+backend1-1  | 	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+backend1-1  | 	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
+backend1-1  | 	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+backend1-1  | 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+backend1-1  | 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+backend1-1  | 	at java.base/java.lang.Thread.run(Thread.java:1583)
+backend1-1  | 	Suppressed: org.jboss.resteasy.reactive.ClientWebApplicationException: Received: 'Unauthorized, status code 401' when invoking REST Client method: 'com.rinha.infra.payment.PaymentService#getMetrics'
+backend1-1  | 		at org.jboss.resteasy.reactive.client.impl.RestClientRequestContext.unwrapException(RestClientRequestContext.java:205)
+backend1-1  | 		... 16 more
+backend1-1  | 	Caused by: jakarta.ws.rs.WebApplicationException: Unauthorized, status code 401
+backend1-1  | 		at io.quarkus.rest.client.reactive.runtime.DefaultMicroprofileRestClientExceptionMapper.toThrowable(DefaultMicroprofileRestClientExceptionMapper.java:19)
+backend1-1  | 		at io.quarkus.rest.client.reactive.runtime.MicroProfileRestClientResponseFilter.filter(MicroProfileRestClientResponseFilter.java:54)
+backend1-1  | 		at org.jboss.resteasy.reactive.client.handlers.ClientResponseFilterRestHandler.handle(ClientResponseFilterRestHandler.java:21)
+backend1-1  | 		at org.jboss.resteasy.reactive.client.handlers.ClientResponseFilterRestHandler.handle(ClientResponseFilterRestHandler.java:10)
+backend1-1  | 		at org.jboss.resteasy.reactive.common.core.AbstractResteasyReactiveContext.invokeHandler(AbstractResteasyReactiveContext.java:231)
+backend1-1  | 		at org.jboss.resteasy.reactive.common.core.AbstractResteasyReactiveContext.run(AbstractResteasyReactiveContext.java:147)
+backend1-1  | 		... 14 more
+backend1-1  | Caused by: org.jboss.resteasy.reactive.ClientWebApplicationException: Received: 'Unauthorized, status code 401' when invoking REST Client method: 'com.rinha.infra.payment.PaymentService#getMetrics'
+backend1-1  | 	at org.jboss.resteasy.reactive.client.impl.RestClientRequestContext.unwrapException(RestClientRequestContext.java:205)
+backend1-1  | 	at org.jboss.resteasy.reactive.common.core.AbstractResteasyReactiveContext.handleException(AbstractResteasyReactiveContext.java:329)
+backend1-1  | 	at org.jboss.resteasy.reactive.common.core.AbstractResteasyReactiveContext.run(AbstractResteasyReactiveContext.java:175)
+backend1-1  | 	at io.smallrye.context.impl.wrappers.SlowContextualRunnable.run(SlowContextualRunnable.java:19)
+backend1-1  | 	at org.jboss.resteasy.reactive.client.handlers.ClientSwitchToRequestContextRestHandler$1$1.handle(ClientSwitchToRequestContextRestHandler.java:38)
+backend1-1  | 	at org.jboss.resteasy.reactive.client.handlers.ClientSwitchToRequestContextRestHandler$1$1.handle(ClientSwitchToRequestContextRestHandler.java:35)
+backend1-1  | 	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:270)
+backend1-1  | 	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:252)
+backend1-1  | 	at io.vertx.core.impl.ContextInternal.lambda$runOnContext$0(ContextInternal.java:50)
+backend1-1  | 	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173)
+backend1-1  | 	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166)
+backend1-1  | 	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+backend1-1  | 	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:566)
+backend1-1  | 	... 4 more
+backend1-1  | Caused by: jakarta.ws.rs.WebApplicationException: Unauthorized, status code 401
+backend1-1  | 	at io.quarkus.rest.client.reactive.runtime.DefaultMicroprofileRestClientExceptionMapper.toThrowable(DefaultMicroprofileRestClientExceptionMapper.java:19)
+backend1-1  | 	at io.quarkus.rest.client.reactive.runtime.MicroProfileRestClientResponseFilter.filter(MicroProfileRestClientResponseFilter.java:54)
+backend1-1  | 	at org.jboss.resteasy.reactive.client.handlers.ClientResponseFilterRestHandler.handle(ClientResponseFilterRestHandler.java:21)
+backend1-1  | 	at org.jboss.resteasy.reactive.client.handlers.ClientResponseFilterRestHandler.handle(ClientResponseFilterRestHandler.java:10)
+backend1-1  | 	at org.jboss.resteasy.reactive.common.core.AbstractResteasyReactiveContext.invokeHandler(AbstractResteasyReactiveContext.java:231)
+backend1-1  | 	at org.jboss.resteasy.reactive.common.core.AbstractResteasyReactiveContext.run(AbstractResteasyReactiveContext.java:147)
+backend1-1  | 	... 14 more
+backend1-1  | 
+backend1-1  | 2025-08-04 00:43:47,475 ERROR [io.qua.ver.htt.run.QuarkusErrorHandler] (vert.x-eventloop-thread-1) HTTP Request to /payments-summary?from=2025-08-04T00:43:32.466Z&to=2025-08-04T00:43:45.966Z failed, error id: fd0b8543-a793-4ddc-bc27-53274afcbd80-4: io.smallrye.mutiny.CompositeException: Multiple exceptions caught:
+backend1-1  | 	[Exception 0] org.jboss.resteasy.reactive.ClientWebApplicationException: Received: 'Unauthorized, status code 401' when invoking REST Client method: 'com.rinha.infra.payment.PaymentService#getMetrics'
+backend1-1  | 	[Exception 1] org.jboss.resteasy.reactive.ClientWebApplicationException: Received: 'Unauthorized, status code 401' when invoking REST Client method: 'com.rinha.infra.payment.PaymentService#getMetrics'
+backend1-1  | 	at io.smallrye.mutiny.operators.uni.builders.UniJoinAll$UniJoinAllSubscription.forwardSignalWhenCompleteOrSubscribeNext(UniJoinAll.java:122)
+backend1-1  | 	at io.smallrye.mutiny.operators.uni.builders.UniJoinAll$UniJoinAllSubscription.onFailure(UniJoinAll.java:137)
+backend1-1  | 	at io.smallrye.context.impl.wrappers.SlowContextualConsumer.accept(SlowContextualConsumer.java:21)
+backend1-1  | 	at io.smallrye.mutiny.helpers.UniCallbackSubscriber.onFailure(UniCallbackSubscriber.java:62)
+backend1-1  | 	at io.smallrye.mutiny.operators.uni.UniOperatorProcessor.onFailure(UniOperatorProcessor.java:55)
+backend1-1  | 	at io.smallrye.mutiny.operators.uni.UniOnCancellation$UniOnCancellationProcessor.onFailure(UniOnCancellation.java:56)
+backend1-1  | 	at io.smallrye.mutiny.operators.uni.UniOnFailureTransform$UniOnFailureTransformProcessor.onFailure(UniOnFailureTransform.java:64)
+backend1-1  | 	at io.smallrye.mutiny.operators.uni.builders.UniCreateFromCompletionStage$CompletionStageUniSubscription.forwardResult(UniCreateFromCompletionStage.java:58)
+backend1-1  | 	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:863)
+backend1-1  | 	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:841)
+backend1-1  | 	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+backend1-1  | 	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2194)
+backend1-1  | 	at org.jboss.resteasy.reactive.client.impl.RestClientRequestContext.handleUnrecoverableError(RestClientRequestContext.java:378)
+backend1-1  | 	at org.jboss.resteasy.reactive.common.core.AbstractResteasyReactiveContext.handleException(AbstractResteasyReactiveContext.java:329)
+backend1-1  | 	at org.jboss.resteasy.reactive.common.core.AbstractResteasyReactiveContext.run(AbstractResteasyReactiveContext.java:175)
+backend1-1  | 	at io.smallrye.context.impl.wrappers.SlowContextualRunnable.run(SlowContextualRunnable.java:19)
+backend1-1  | 	at org.jboss.resteasy.reactive.client.handlers.ClientSwitchToRequestContextRestHandler$1$1.handle(ClientSwitchToRequestContextRestHandler.java:38)
+backend1-1  | 	at org.jboss.resteasy.reactive.client.handlers.ClientSwitchToRequestContextRestHandler$1$1.handle(ClientSwitchToRequestContextRestHandler.java:35)
+backend1-1  | 	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:270)
+backend1-1  | 	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:252)
+backend1-1  | 	at io.vertx.core.impl.ContextInternal.lambda$runOnContext$0(ContextInternal.java:50)
+backend1-1  | 	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173)
+backend1-1  | 	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166)
+backend1-1  | 	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+backend1-1  | 	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
+backend1-1  | 	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+backend1-1  | 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+backend1-1  | 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+backend1-1  | 	at java.base/java.lang.Thread.run(Thread.java:1583)
+backend1-1  | 	Suppressed: org.jboss.resteasy.reactive.ClientWebApplicationException: Received: 'Unauthorized, status code 401' when invoking REST Client method: 'com.rinha.infra.payment.PaymentService#getMetrics'
+backend1-1  | 		at org.jboss.resteasy.reactive.client.impl.RestClientRequestContext.unwrapException(RestClientRequestContext.java:205)
+backend1-1  | 		... 16 more
+backend1-1  | 	Caused by: jakarta.ws.rs.WebApplicationException: Unauthorized, status code 401
+backend1-1  | 		at io.quarkus.rest.client.reactive.runtime.DefaultMicroprofileRestClientExceptionMapper.toThrowable(DefaultMicroprofileRestClientExceptionMapper.java:19)
+backend1-1  | 		at io.quarkus.rest.client.reactive.runtime.MicroProfileRestClientResponseFilter.filter(MicroProfileRestClientResponseFilter.java:54)
+backend1-1  | 		at org.jboss.resteasy.reactive.client.handlers.ClientResponseFilterRestHandler.handle(ClientResponseFilterRestHandler.java:21)
+backend1-1  | 		at org.jboss.resteasy.reactive.client.handlers.ClientResponseFilterRestHandler.handle(ClientResponseFilterRestHandler.java:10)
+backend1-1  | 		at org.jboss.resteasy.reactive.common.core.AbstractResteasyReactiveContext.invokeHandler(AbstractResteasyReactiveContext.java:231)
+backend1-1  | 		at org.jboss.resteasy.reactive.common.core.AbstractResteasyReactiveContext.run(AbstractResteasyReactiveContext.java:147)
+backend1-1  | 		... 14 more
+backend1-1  | Caused by: org.jboss.resteasy.reactive.ClientWebApplicationException: Received: 'Unauthorized, status code 401' when invoking REST Client method: 'com.rinha.infra.payment.PaymentService#getMetrics'
+backend1-1  | 	at org.jboss.resteasy.reactive.client.impl.RestClientRequestContext.unwrapException(RestClientRequestContext.java:205)
+backend1-1  | 	at org.jboss.resteasy.reactive.common.core.AbstractResteasyReactiveContext.handleException(AbstractResteasyReactiveContext.java:329)
+backend1-1  | 	at org.jboss.resteasy.reactive.common.core.AbstractResteasyReactiveContext.run(AbstractResteasyReactiveContext.java:175)
+backend1-1  | 	at io.smallrye.context.impl.wrappers.SlowContextualRunnable.run(SlowContextualRunnable.java:19)
+backend1-1  | 	at org.jboss.resteasy.reactive.client.handlers.ClientSwitchToRequestContextRestHandler$1$1.handle(ClientSwitchToRequestContextRestHandler.java:38)
+backend1-1  | 	at org.jboss.resteasy.reactive.client.handlers.ClientSwitchToRequestContextRestHandler$1$1.handle(ClientSwitchToRequestContextRestHandler.java:35)
+backend1-1  | 	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:270)
+backend1-1  | 	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:252)
+backend1-1  | 	at io.vertx.core.impl.ContextInternal.lambda$runOnContext$0(ContextInternal.java:50)
+backend1-1  | 	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173)
+backend1-1  | 	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166)
+backend1-1  | 	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+backend1-1  | 	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:566)
+backend1-1  | 	... 4 more
+backend1-1  | Caused by: jakarta.ws.rs.WebApplicationException: Unauthorized, status code 401
+backend1-1  | 	at io.quarkus.rest.client.reactive.runtime.DefaultMicroprofileRestClientExceptionMapper.toThrowable(DefaultMicroprofileRestClientExceptionMapper.java:19)
+backend1-1  | 	at io.quarkus.rest.client.reactive.runtime.MicroProfileRestClientResponseFilter.filter(MicroProfileRestClientResponseFilter.java:54)
+backend1-1  | 	at org.jboss.resteasy.reactive.client.handlers.ClientResponseFilterRestHandler.handle(ClientResponseFilterRestHandler.java:21)
+backend1-1  | 	at org.jboss.resteasy.reactive.client.handlers.ClientResponseFilterRestHandler.handle(ClientResponseFilterRestHandler.java:10)
+backend1-1  | 	at org.jboss.resteasy.reactive.common.core.AbstractResteasyReactiveContext.invokeHandler(AbstractResteasyReactiveContext.java:231)
+backend1-1  | 	at org.jboss.resteasy.reactive.common.core.AbstractResteasyReactiveContext.run(AbstractResteasyReactiveContext.java:147)
+backend1-1  | 	... 14 more
+backend1-1  | 
+backend2-1  | 2025-08-04 00:43:57,492 ERROR [io.qua.ver.htt.run.QuarkusErrorHandler] (vert.x-eventloop-thread-0) HTTP Request to /payments-summary?from=2025-08-04T00:42:47.479Z&to=2025-08-04T00:43:57.479Z failed, error id: bab32fa2-e772-48c1-92de-ad415239ddbf-3: io.smallrye.mutiny.CompositeException: Multiple exceptions caught:
+backend2-1  | 	[Exception 0] org.jboss.resteasy.reactive.ClientWebApplicationException: Received: 'Unauthorized, status code 401' when invoking REST Client method: 'com.rinha.infra.payment.PaymentService#getMetrics'
+backend2-1  | 	[Exception 1] org.jboss.resteasy.reactive.ClientWebApplicationException: Received: 'Unauthorized, status code 401' when invoking REST Client method: 'com.rinha.infra.payment.PaymentService#getMetrics'
+backend2-1  | 	at io.smallrye.mutiny.operators.uni.builders.UniJoinAll$UniJoinAllSubscription.forwardSignalWhenCompleteOrSubscribeNext(UniJoinAll.java:122)
+backend2-1  | 	at io.smallrye.mutiny.operators.uni.builders.UniJoinAll$UniJoinAllSubscription.onFailure(UniJoinAll.java:137)
+backend2-1  | 	at io.smallrye.context.impl.wrappers.SlowContextualConsumer.accept(SlowContextualConsumer.java:21)
+backend2-1  | 	at io.smallrye.mutiny.helpers.UniCallbackSubscriber.onFailure(UniCallbackSubscriber.java:62)
+backend2-1  | 	at io.smallrye.mutiny.operators.uni.UniOperatorProcessor.onFailure(UniOperatorProcessor.java:55)
+backend2-1  | 	at io.smallrye.mutiny.operators.uni.UniOnCancellation$UniOnCancellationProcessor.onFailure(UniOnCancellation.java:56)
+backend2-1  | 	at io.smallrye.mutiny.operators.uni.UniOnFailureTransform$UniOnFailureTransformProcessor.onFailure(UniOnFailureTransform.java:64)
+backend2-1  | 	at io.smallrye.mutiny.operators.uni.builders.UniCreateFromCompletionStage$CompletionStageUniSubscription.forwardResult(UniCreateFromCompletionStage.java:58)
+backend2-1  | 	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:863)
+backend2-1  | 	at java.base/java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:841)
+backend2-1  | 	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+backend2-1  | 	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2194)
+backend2-1  | 	at org.jboss.resteasy.reactive.client.impl.RestClientRequestContext.handleUnrecoverableError(RestClientRequestContext.java:378)
+backend2-1  | 	at org.jboss.resteasy.reactive.common.core.AbstractResteasyReactiveContext.handleException(AbstractResteasyReactiveContext.java:329)
+backend2-1  | 	at org.jboss.resteasy.reactive.common.core.AbstractResteasyReactiveContext.run(AbstractResteasyReactiveContext.java:175)
+backend2-1  | 	at io.smallrye.context.impl.wrappers.SlowContextualRunnable.run(SlowContextualRunnable.java:19)
+backend2-1  | 	at org.jboss.resteasy.reactive.client.handlers.ClientSwitchToRequestContextRestHandler$1$1.handle(ClientSwitchToRequestContextRestHandler.java:38)
+backend2-1  | 	at org.jboss.resteasy.reactive.client.handlers.ClientSwitchToRequestContextRestHandler$1$1.handle(ClientSwitchToRequestContextRestHandler.java:35)
+backend2-1  | 	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:270)
+backend2-1  | 	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:252)
+backend2-1  | 	at io.vertx.core.impl.ContextInternal.lambda$runOnContext$0(ContextInternal.java:50)
+backend2-1  | 	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173)
+backend2-1  | 	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166)
+backend2-1  | 	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+backend2-1  | 	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:566)
+backend2-1  | 	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+backend2-1  | 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+backend2-1  | 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+backend2-1  | 	at java.base/java.lang.Thread.run(Thread.java:1583)
+backend2-1  | 	Suppressed: org.jboss.resteasy.reactive.ClientWebApplicationException: Received: 'Unauthorized, status code 401' when invoking REST Client method: 'com.rinha.infra.payment.PaymentService#getMetrics'
+backend2-1  | 		at org.jboss.resteasy.reactive.client.impl.RestClientRequestContext.unwrapException(RestClientRequestContext.java:205)
+backend2-1  | 		... 16 more
+backend2-1  | 	Caused by: jakarta.ws.rs.WebApplicationException: Unauthorized, status code 401
+backend2-1  | 		at io.quarkus.rest.client.reactive.runtime.DefaultMicroprofileRestClientExceptionMapper.toThrowable(DefaultMicroprofileRestClientExceptionMapper.java:19)
+backend2-1  | 		at io.quarkus.rest.client.reactive.runtime.MicroProfileRestClientResponseFilter.filter(MicroProfileRestClientResponseFilter.java:54)
+backend2-1  | 		at org.jboss.resteasy.reactive.client.handlers.ClientResponseFilterRestHandler.handle(ClientResponseFilterRestHandler.java:21)
+backend2-1  | 		at org.jboss.resteasy.reactive.client.handlers.ClientResponseFilterRestHandler.handle(ClientResponseFilterRestHandler.java:10)
+backend2-1  | 		at org.jboss.resteasy.reactive.common.core.AbstractResteasyReactiveContext.invokeHandler(AbstractResteasyReactiveContext.java:231)
+backend2-1  | 		at org.jboss.resteasy.reactive.common.core.AbstractResteasyReactiveContext.run(AbstractResteasyReactiveContext.java:147)
+backend2-1  | 		... 14 more
+backend2-1  | Caused by: org.jboss.resteasy.reactive.ClientWebApplicationException: Received: 'Unauthorized, status code 401' when invoking REST Client method: 'com.rinha.infra.payment.PaymentService#getMetrics'
+backend2-1  | 	at org.jboss.resteasy.reactive.client.impl.RestClientRequestContext.unwrapException(RestClientRequestContext.java:205)
+backend2-1  | 	... 16 more
+backend2-1  | Caused by: jakarta.ws.rs.WebApplicationException: Unauthorized, status code 401
+backend2-1  | 	at io.quarkus.rest.client.reactive.runtime.DefaultMicroprofileRestClientExceptionMapper.toThrowable(DefaultMicroprofileRestClientExceptionMapper.java:19)
+backend2-1  | 	at io.quarkus.rest.client.reactive.runtime.MicroProfileRestClientResponseFilter.filter(MicroProfileRestClientResponseFilter.java:54)
+backend2-1  | 	at org.jboss.resteasy.reactive.client.handlers.ClientResponseFilterRestHandler.handle(ClientResponseFilterRestHandler.java:21)
+backend2-1  | 	at org.jboss.resteasy.reactive.client.handlers.ClientResponseFilterRestHandler.handle(ClientResponseFilterRestHandler.java:10)
+backend2-1  | 	at org.jboss.resteasy.reactive.common.core.AbstractResteasyReactiveContext.invokeHandler(AbstractResteasyReactiveContext.java:231)
+backend2-1  | 	at org.jboss.resteasy.reactive.common.core.AbstractResteasyReactiveContext.run(AbstractResteasyReactiveContext.java:147)
+backend2-1  | 	... 14 more
+backend2-1  | 
+[Knginx-1 exited with code 0
+backend1-1  | 2025-08-04 00:43:58,446 INFO  [com.rin.inf.HealthChecker] (vert.x-eventloop-thread-1) Closed server
+backend1-1  | 2025-08-04 00:43:58,502 ERROR [io.qua.sch.com.run.StatusEmitterInvoker] (executor-thread-3) Error occurred while executing task for trigger IntervalTrigger [id=1_com.rinha.infra.HealthChecker#healthCheck, interval=5000] [Error Occurred After Shutdown]: java.util.concurrent.CompletionException: jakarta.ws.rs.ProcessingException: java.io.IOException: Connection was closed
+backend1-1  | 	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:332)
+backend1-1  | 	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:347)
+backend1-1  | 	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:874)
+backend1-1  | 	at java.base/java.util.concurrent.CompletableFuture.uniWhenCompleteStage(CompletableFuture.java:887)
+backend1-1  | 	at java.base/java.util.concurrent.CompletableFuture.whenComplete(CompletableFuture.java:2357)
+backend1-1  | 	at java.base/java.util.concurrent.CompletableFuture$MinimalStage.whenComplete(CompletableFuture.java:2948)
+backend1-1  | 	at io.quarkus.scheduler.common.runtime.DefaultInvoker.invoke(DefaultInvoker.java:25)
+backend1-1  | 	at io.quarkus.scheduler.common.runtime.DelegateInvoker.invokeDelegate(DelegateInvoker.java:29)
+backend1-1  | 	at io.quarkus.scheduler.common.runtime.StatusEmitterInvoker.invoke(StatusEmitterInvoker.java:35)
+backend1-1  | 	at io.quarkus.scheduler.common.runtime.DelegateInvoker.invokeDelegate(DelegateInvoker.java:29)
+backend1-1  | 	at io.quarkus.scheduler.common.runtime.DelegateInvoker.invokeComplete(DelegateInvoker.java:36)
+backend1-1  | 	at io.quarkus.scheduler.common.runtime.OffloadingInvoker$2.call(OffloadingInvoker.java:54)
+backend1-1  | 	at io.quarkus.scheduler.common.runtime.OffloadingInvoker$2.call(OffloadingInvoker.java:51)
+backend1-1  | 	at io.vertx.core.impl.ContextImpl.lambda$executeBlocking$4(ContextImpl.java:192)
+backend1-1  | 	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:270)
+backend1-1  | 	at io.vertx.core.impl.ContextImpl$1.execute(ContextImpl.java:221)
+backend1-1  | 	at io.vertx.core.impl.WorkerTask.run(WorkerTask.java:56)
+backend1-1  | 	at io.quarkus.vertx.core.runtime.VertxCoreRecorder$15.runWith(VertxCoreRecorder.java:642)
+backend1-1  | 	at org.jboss.threads.EnhancedQueueExecutor$Task.doRunWith(EnhancedQueueExecutor.java:2651)
+backend1-1  | 	at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2630)
+backend1-1  | 	at org.jboss.threads.EnhancedQueueExecutor.runThreadBody(EnhancedQueueExecutor.java:1622)
+backend1-1  | 	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1589)
+backend1-1  | 	at org.jboss.threads.DelegatingRunnable.run(DelegatingRunnable.java:11)
+backend1-1  | 	at org.jboss.threads.ThreadLocalResettingRunnable.run(ThreadLocalResettingRunnable.java:11)
+backend1-1  | 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+backend1-1  | 	at java.base/java.lang.Thread.run(Thread.java:1583)
+backend1-1  | Caused by: jakarta.ws.rs.ProcessingException: java.io.IOException: Connection was closed
+backend1-1  | 	at org.jboss.resteasy.reactive.client.handlers.ClientSendRequestHandler$4.handle(ClientSendRequestHandler.java:392)
+backend1-1  | 	at org.jboss.resteasy.reactive.client.handlers.ClientSendRequestHandler$4.handle(ClientSendRequestHandler.java:383)
+backend1-1  | 	at io.vertx.core.impl.future.FutureImpl$2.onFailure(FutureImpl.java:117)
+backend1-1  | 	at io.vertx.core.impl.future.FutureImpl$ListenerArray.onFailure(FutureImpl.java:316)
+backend1-1  | 	at io.vertx.core.impl.future.FutureBase.lambda$emitFailure$1(FutureBase.java:75)
+backend1-1  | 	at io.vertx.core.impl.ContextImpl.execute(ContextImpl.java:312)
+backend1-1  | 	at io.vertx.core.impl.DuplicatedContext.execute(DuplicatedContext.java:168)
+backend1-1  | 	at io.vertx.core.impl.future.FutureBase.emitFailure(FutureBase.java:72)
+backend1-1  | 	at io.vertx.core.impl.future.FutureImpl.tryFail(FutureImpl.java:278)
+backend1-1  | 	at io.vertx.core.http.impl.HttpClientRequestBase.fail(HttpClientRequestBase.java:182)
+backend1-1  | 	at io.vertx.core.http.impl.HttpClientRequestBase.handleException(HttpClientRequestBase.java:177)
+backend1-1  | 	at io.vertx.core.http.impl.HttpClientRequestImpl.handleException(HttpClientRequestImpl.java:90)
+backend1-1  | 	at io.vertx.core.http.impl.Http1xClientConnection$StreamImpl.handleException(Http1xClientConnection.java:739)
+backend1-1  | 	at io.vertx.core.http.impl.Http1xClientConnection$StreamImpl.handleClosed(Http1xClientConnection.java:746)
+backend1-1  | 	at io.vertx.core.impl.ContextImpl.execute(ContextImpl.java:327)
+backend1-1  | 	at io.vertx.core.impl.DuplicatedContext.execute(DuplicatedContext.java:158)
+backend1-1  | 	at io.vertx.core.http.impl.Http1xClientConnection.handleClosed(Http1xClientConnection.java:1246)
+backend1-1  | 	at io.vertx.core.net.impl.VertxHandler.channelInactive(VertxHandler.java:143)
+backend1-1  | 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:303)
+backend1-1  | 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:281)
+backend1-1  | 	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:274)
+backend1-1  | 	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelInactive(CombinedChannelDuplexHandler.java:418)
+backend1-1  | 	at io.netty.handler.codec.ByteToMessageDecoder.channelInputClosed(ByteToMessageDecoder.java:412)
+backend1-1  | 	at io.netty.handler.codec.ByteToMessageDecoder.channelInactive(ByteToMessageDecoder.java:377)
+backend1-1  | 	at io.netty.handler.codec.http.HttpClientCodec$Decoder.channelInactive(HttpClientCodec.java:410)
+backend1-1  | 	at io.netty.channel.CombinedChannelDuplexHandler.channelInactive(CombinedChannelDuplexHandler.java:221)
+backend1-1  | 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:303)
+backend1-1  | 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:281)
+backend1-1  | 	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:274)
+backend1-1  | 	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelInactive(DefaultChannelPipeline.java:1352)
+backend1-1  | 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:301)
+backend1-1  | 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:281)
+backend1-1  | 	at io.netty.channel.DefaultChannelPipeline.fireChannelInactive(DefaultChannelPipeline.java:850)
+backend1-1  | 	at io.netty.channel.AbstractChannel$AbstractUnsafe$7.run(AbstractChannel.java:811)
+backend1-1  | 	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173)
+backend1-1  | 	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166)
+backend1-1  | 	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+backend1-1  | 	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
+backend1-1  | 	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+backend1-1  | 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+backend1-1  | 	... 2 more
+backend1-1  | Caused by: java.io.IOException: Connection was closed
+backend1-1  | 	... 42 more
+backend1-1  | 
+backend2-1  | 2025-08-04 00:43:58,522 INFO  [io.quarkus] (main) payment_processor stopped in 0.108s
+backend1-1  | 2025-08-04 00:43:58,526 INFO  [io.quarkus] (Shutdown thread) payment_processor stopped in 0.109s
+[Kbackend2-1 exited with code 143
+[Kbackend1-1 exited with code 143
+log truncated at line 1000

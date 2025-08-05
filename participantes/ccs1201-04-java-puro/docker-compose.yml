@@ -1,9 +1,6 @@
 x-backend-templates:
   app: &app
-#    build:
-#      context: .
-#      dockerfile: Dockerfile
-    image: csouzadocker/java-http-server-postgres:0.0.2
+    image: csouzadocker/java-http-server-postgres:0.0.6
     depends_on:
       backend-db:
         condition: service_healthy
@@ -11,12 +8,19 @@ x-backend-templates:
       - backend
       - payment-processor
     deploy:
+      restart_policy:
+        condition: on-failure
+        delay: 2s
+        max_attempts: 10
+        window: 5s
       resources:
         limits:
           cpus: "0.6"
-          memory: "117.50MB"
+          memory: "100MB"
 
   app-env: &app-env
+    BATCH_SIZE: "150"
+    BATCH_LIMIT: "15"
     DATASOURCE_CLASS_NAME: "org.postgresql.Driver"
     DATASOURCE_MAXIMUM_POOL_SIZE: "3"
     DATASOURCE_MINIMUM_IDLE: "3"
@@ -26,12 +30,13 @@ x-backend-templates:
     DATASOURCE_USERNAME: "rinha"
     PAYMENT_PROCESSOR_DEFAULT_URL: "http://payment-processor-default:8080"
     PAYMENT_PROCESSOR_FALLBACK_URL: "http://payment-processor-fallback:8080"
-    PAYMENT_PROCESSOR_WORKERS: "2"
+    PAYMENT_PROCESSOR_WORKERS: "10"
     PAYMENT_PROCESSOR_REQUEST_TIMEOUT: "6000"
-    PAYMENT_QUEUE: "1000"
+    PAYMENT_PROCESSOR_CONNECTION_TIMEOUT: "200"
+    PAYMENT_QUEUE: "3000"
     SERVER_PORT: "8080"
     THREAD_POOL_SIZE: "8"
-    THREAD_QUEUE_SIZE: "100"
+    THREAD_QUEUE_SIZE: "500"
 
 #############################################################################################
 
@@ -49,12 +54,11 @@ services:
       - app2
     networks:
       - backend
-      - payment-processor
     deploy:
       resources:
         limits:
           cpus: "0.1"
-          memory: "15MB"
+          memory: "30MB"
 
   app1:
     <<: *app
@@ -62,7 +66,6 @@ services:
     hostname: app1
     environment:
       <<: *app-env
-      warmup_instance: "app2"
 
   app2:
     <<: *app
@@ -70,7 +73,6 @@ services:
     hostname: app2
     environment:
       <<: *app-env
-      warmup_instance: "app1"
 
   backend-db:
     image: postgres:17-alpine
@@ -82,6 +84,7 @@ services:
       POSTGRES_PASSWORD: rinha
     volumes:
       - ./init.sql/init-backend-db.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./init.sql/postgresql.conf:/docker-entrypoint-initdb.d/postgresql.conf
     ports:
       - "5432:5432"
     networks:
@@ -95,10 +98,11 @@ services:
       resources:
         limits:
           cpus: "0.2"
-          memory: "100MB"
+          memory: "120MB"
 
 networks:
   backend:
     driver: bridge
   payment-processor:
     external: true
+

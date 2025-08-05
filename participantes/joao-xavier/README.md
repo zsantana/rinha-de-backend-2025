@@ -1,12 +1,10 @@
-# Rinha de Backend 2025 — Rust + Axum + SQLite + rpc
+# Rinha de Backend 2025 — Rust
 
 Implementação da Rinha de Backend 2025 utilizando:
 
 - [Rust](https://www.rust-lang.org/) apenas a melhor linguagem de todas
-- [SQLite](https://sqlite.org/index.html) Banco de dados relacional in-process
-- [Axum](https://github.com/tokio-rs/axum) framework HTTP
 - [Nginx](https://nginx.org/) load balancer
-- [tarpc](https://github.com/google/tarpc) easy-to-use RPC framework feito em rust
+- [UDS](https://en.wikipedia.org/wiki/Unix_domain_socket) unix domain sockets para comunicação IPC (evitando a network stack, especialmente na rede bridge do docker)
 
 ---
 
@@ -18,11 +16,10 @@ config:
   layout: dagre
 ---
 flowchart TD
-    A[nginx] <-->|HTTP| B(api0)
-    A[nginx] <-->|HTTP| C(api1)
-    C <-->|RPC| D[Worker]
-    B <-->|RPC| D[Worker]
-    D <--> E[(SQLite)]
+    A[nginx] <-->|uds HTTP| B(api0)
+    A[nginx] <-->|uds HTTP| C(api1)
+    C <-->|uds bincode| D[Worker]
+    B <-->|uds bincode| D[Worker]
 ```
 
 ## Executando o binário
@@ -31,16 +28,16 @@ Este projeto define um único binário que pode rodar em dois modos:
 
 ### Modo Worker
 
-Responsável por armazenar os pagamentos localmente com SQLite.
+Responsável por armazenar os pagamentos localmente em memória Vec<T>.
 
 ```bash
-cargo run --release -- -m worker -p 8080 --ansi
+cargo run --release -- -m worker
 ```
 
 ### Modo API
 
-Responsável por receber as requisições encaminhadas pelo Nginx.
+Responsável por receber as requisições encaminhadas pelo Nginx e enviar para o worker processar e consultar o worker para obter o summary.
 
 ```bash
-cargo run --release -- -m api -p 8081 -w localhost:8080 --ansi
+cargo run --release -- -m api
 ```

@@ -1,49 +1,11 @@
 services:
   api1: &api
-    image: lhuizf/rinha-de-backend-2025-bun:0.3.1
+    image: lhuizf/rinha-de-backend-2025-bun:0.5.0
     hostname: api1
     container_name: api1
     environment:
       - PORT=3333
-      - DATABASE_PORT=5432
-      - DATABASE_HOST=db
-      - POSTGRES_USER=admin
-      - POSTGRES_PASSWORD=password
       - REDIS_URL=redis://redis:6379
-    networks:
-      - backend
-    depends_on:
-      redis:
-        condition: service_healthy
-      db:
-        condition: service_healthy
-    command: ["bun", "run", "src/index.ts"]
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:3333/health"]
-      interval: 5s
-      timeout: 5s
-      retries: 5
-    deploy:
-      resources:
-        limits:
-          cpus: "0.30"
-          memory: "50MB"
-
-  api2:
-    <<: *api
-    hostname: api2
-    container_name: api2
-
-  worker1: &worker
-    image: lhuizf/rinha-de-backend-2025-bun:0.3.1
-    hostname: worker1
-    container_name: worker1
-    environment:
-      - DATABASE_HOST=db
-      - POSTGRES_USER=admin
-      - POSTGRES_PASSWORD=password
-      - REDIS_URL=redis://redis:6379
-      - DATABASE_PORT=5432
       - PROCESSOR_DEFAULT_URL=http://payment-processor-default:8080
       - PROCESSOR_FALLBACK_URL=http://payment-processor-fallback:8080
       - QUEUE_CONCURRENCY=20
@@ -53,26 +15,16 @@ services:
     depends_on:
       redis:
         condition: service_healthy
-      api1:
-        condition: service_healthy
-      db:
-        condition: service_healthy
-    command: ["bun", "run", "src/worker.ts"]
     deploy:
       resources:
         limits:
-          cpus: "0.35"
-          memory: "85MB"
+          cpus: "0.60"
+          memory: "135MB"
 
-  worker2:
-    <<: *worker
-    hostname: worker2
-    container_name: worker2
-    depends_on:
-      redis:
-        condition: service_healthy
-      api2:
-        condition: service_healthy
+  api2:
+    <<: *api
+    hostname: api2
+    container_name: api2
 
   redis:
     image: redis:7.2-alpine
@@ -103,33 +55,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.05"
-          memory: "20MB"
-
-  db:
-    image: postgres:17-alpine
-    container_name: db
-    hostname: db
-    environment:
-      - POSTGRES_DB=rinha_db
-      - POSTGRES_USER=admin
-      - POSTGRES_PASSWORD=password
-    # ports:
-    #   - "5432:5432"
-    networks:
-      - backend
-    volumes:
-      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U admin -d rinha_db"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
-    deploy:
-      resources:
-        limits:
-          cpus: "0.10"
-          memory: "50MB"
+          cpus: "0.20"
+          memory: "65MB"
 
   load-balancer:
     image: nginx:1.25.2-alpine
@@ -146,8 +73,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.05"
-          memory: "10MB"
+          cpus: "0.10"
+          memory: "15MB"
 
 networks:
   backend:

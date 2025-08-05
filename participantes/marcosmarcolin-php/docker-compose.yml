@@ -1,7 +1,7 @@
 x-service-templates:
   api: &api
-    image: marcosmarcolin/rinhadebackend2025:2.0.0
-    entrypoint: [ "php", "/opt/www/nano/public/index.php" ]
+    image: marcosmarcolin/rinhadebackend2025:2.4.1
+    entrypoint: [ "php", "/opt/www/app/public/index.php" ]
     depends_on:
       redis:
         condition: service_healthy
@@ -15,7 +15,7 @@ x-service-templates:
           memory: "80M"
 
   worker-template: &worker
-    image: marcosmarcolin/rinhadebackend2025:2.0.0
+    image: marcosmarcolin/rinhadebackend2025:2.4.1
     depends_on:
       redis:
         condition: service_healthy
@@ -24,30 +24,40 @@ x-service-templates:
       - payment-processor
 
 services:
-  worker-payments:
+  worker-payments-default:
     <<: *worker
-    entrypoint: [ "php", "/opt/www/nano/workers/payments.php" ]
+    entrypoint: [ "php", "/opt/www/app/workers/payments.php" ]
     deploy:
       resources:
         limits:
-          cpus: "0.2"
-          memory: "60M"
+          cpus: "0.1"
+          memory: "45M"
+
+  worker-payments-fallback:
+    <<: *worker
+    entrypoint: [ "php", "/opt/www/app/workers/payments_fallback.php" ]
+    deploy:
+      resources:
+        limits:
+          cpus: "0.1"
+          memory: "45M"
 
   worker-health:
     <<: *worker
-    entrypoint: [ "php", "/opt/www/nano/workers/health.php" ]
+    entrypoint: [ "php", "/opt/www/app/workers/health.php" ]
     deploy:
       resources:
         limits:
           cpus: "0.15"
-          memory: "30M"
+          memory: "20M"
 
-  nginx:
-    image: nginx:latest
+  haproxy:
+    image: haproxy:latest
+    restart: always
     ports:
       - "9999:9999"
     volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
     depends_on:
       - api01
       - api02
@@ -57,7 +67,7 @@ services:
       resources:
         limits:
           cpus: "0.3"
-          memory: "70M"
+          memory: "50M"
 
   redis:
     image: redis:latest

@@ -1,58 +1,63 @@
+x-api_template: &api
+  image: ghcr.io/lothyriel/rinha_2025:v0.2.1
+  volumes:
+    - uds:/var/run
+  command: ["-m", "api"]
+  depends_on:
+    - worker
+  deploy:
+    resources:
+      limits:
+        cpus: "0.4"
+        memory: "80MB"
+
 services:
-  api_0: &api
-    image: ghcr.io/lothyriel/rinha_2025:v0.1.0
-    networks:
-      - backend
-    volumes:
-      - data:/data
-    command: ["-m", "api", "-w", "worker:80"]
-    depends_on:
-      - worker
-    deploy:
-      resources:
-        limits:
-          cpus: "0.35"
-          memory: "80MB"
+  api_0:
+    <<: *api
+    environment:
+      NGINX_SOCKET: "/var/run/api_0.sock"
+      RUST_LOG: "info"
 
   api_1:
     <<: *api
+    environment:
+      NGINX_SOCKET: "/var/run/api_1.sock"
+      RUST_LOG: "info"
 
   worker:
-    image: ghcr.io/lothyriel/rinha_2025:v0.1.0
+    image: ghcr.io/lothyriel/rinha_2025:v0.2.1
     networks:
-      - backend
       - payment-processor
     volumes:
-      - data:/data
+      - uds:/var/run
     command: ["-m", "worker"]
+    environment:
+      RUST_LOG: "info"
     deploy:
       resources:
         limits:
-          cpus: "0.5"
-          memory: "140MB"
+          cpus: "0.2"
+          memory: "110MB"
 
-  nginx:
-    image: nginx:latest
+  haproxy:
+    image: haproxy:latest
     ports:
-      - "9999:80"
-    networks:
-      - backend
+      - "9999:9999"
     volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - uds:/var/run
+      - ./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
     depends_on:
       - api_0
       - api_1
     deploy:
       resources:
         limits:
-          cpus: "0.3"
-          memory: "50MB"
+          cpus: "0.5"
+          memory: "80MB"
 
 volumes:
-  data:
+  uds:
 
 networks:
-  backend:
-    driver: bridge
   payment-processor:
     external: true
