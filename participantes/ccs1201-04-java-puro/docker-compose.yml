@@ -15,7 +15,7 @@ x-backend-templates:
         window: 5s
       resources:
         limits:
-          cpus: "0.6"
+          cpus: "0.55"
           memory: "100MB"
 
   app-env: &app-env
@@ -58,7 +58,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.1"
+          cpus: "0.2"
           memory: "50MB"
 
   app1:
