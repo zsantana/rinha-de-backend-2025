@@ -1,5 +1,5 @@
 x-api_template: &api
-  image: ghcr.io/lothyriel/rinha_2025:v0.1.7
+  image: ghcr.io/lothyriel/rinha_2025:v0.2.0
   volumes:
     - uds:/var/run
   command: ["-m", "api"]
@@ -9,7 +9,7 @@ x-api_template: &api
     resources:
       limits:
         cpus: "0.35"
-        memory: "60MB"
+        memory: "80MB"
 
 services:
   api_0:
@@ -25,7 +25,7 @@ services:
       RUST_LOG: "info"
 
   worker:
-    image: ghcr.io/lothyriel/rinha_2025:v0.1.7
+    image: ghcr.io/lothyriel/rinha_2025:v0.2.0
     networks:
       - payment-processor
     volumes:
@@ -33,15 +33,11 @@ services:
     command: ["-m", "worker"]
     environment:
       RUST_LOG: "info"
-    ulimits:
-      nofile:
-        soft: 16384
-        hard: 16384
     deploy:
       resources:
         limits:
-          cpus: "0.3"
-          memory: "150MB"
+          cpus: "0.4"
+          memory: "110MB"
 
   nginx:
     image: nginx:latest
@@ -56,7 +52,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.5"
+          cpus: "0.4"
           memory: "80MB"
 
 volumes:
