@@ -1,0 +1,109 @@
+
+ nginx Pulling 
+ api1 Pulling 
+ api2 Pulling 
+ 2e844b4e3851 Pulling fs layer 
+ 0b4d6a5e6c9b Pulling fs layer 
+ 2e844b4e3851 Pulling fs layer 
+ 0b4d6a5e6c9b Pulling fs layer 
+ ec99f8b99825 Pulling fs layer 
+ 6b5fd134f47d Pulling fs layer 
+ 4c401b64d7d7 Pulling fs layer 
+ 60ff3a1daf49 Pulling fs layer 
+ 6b5fd134f47d Waiting 
+ 4c401b64d7d7 Waiting 
+ 60ff3a1daf49 Waiting 
+ ec99f8b99825 Downloading [>                                                  ]   36.3kB/3.624MB
+ ec99f8b99825 Verifying Checksum 
+ ec99f8b99825 Download complete 
+ ec99f8b99825 Extracting [>                                                  ]  65.54kB/3.624MB
+ ec99f8b99825 Extracting [==================================================>]  3.624MB/3.624MB
+ ec99f8b99825 Pull complete 
+ 6b5fd134f47d Downloading [>                                                  ]  421.3kB/41.06MB
+ 6b5fd134f47d Downloading [=============>                                     ]  10.99MB/41.06MB
+ 6b5fd134f47d Downloading [============================>                      ]  23.23MB/41.06MB
+ 6b5fd134f47d Downloading [=========================================>         ]  34.15MB/41.06MB
+ 2e844b4e3851 Downloading [>                                                  ]  2.376kB/122.7kB
+ 2e844b4e3851 Downloading [>                                                  ]  2.376kB/122.7kB
+ 2e844b4e3851 Download complete 
+ 2e844b4e3851 Downloading [==================================================>]  122.7kB/122.7kB
+ 2e844b4e3851 Download complete 
+ 2e844b4e3851 Extracting [=============>                                     ]  32.77kB/122.7kB
+ 2e844b4e3851 Extracting [=============>                                     ]  32.77kB/122.7kB
+ 2e844b4e3851 Extracting [==================================================>]  122.7kB/122.7kB
+ 2e844b4e3851 Extracting [==================================================>]  122.7kB/122.7kB
+ 0b4d6a5e6c9b Downloading [>                                                  ]  33.68kB/3.305MB
+ 0b4d6a5e6c9b Downloading [>                                                  ]  33.68kB/3.305MB
+ 6b5fd134f47d Verifying Checksum 
+ 6b5fd134f47d Download complete 
+ 0b4d6a5e6c9b Verifying Checksum 
+ 0b4d6a5e6c9b Download complete 
+ 0b4d6a5e6c9b Verifying Checksum 
+ 0b4d6a5e6c9b Download complete 
+ 2e844b4e3851 Pull complete 
+ 2e844b4e3851 Pull complete 
+ 0b4d6a5e6c9b Extracting [>                                                  ]  65.54kB/3.305MB
+ 0b4d6a5e6c9b Extracting [>                                                  ]  65.54kB/3.305MB
+ 6b5fd134f47d Extracting [>                                                  ]    426kB/41.06MB
+ 0b4d6a5e6c9b Extracting [==================================================>]  3.305MB/3.305MB
+ 0b4d6a5e6c9b Extracting [==================================================>]  3.305MB/3.305MB
+ 0b4d6a5e6c9b Pull complete 
+ 0b4d6a5e6c9b Pull complete 
+ 6b5fd134f47d Extracting [========>                                          ]  7.242MB/41.06MB
+ api1 Pulled 
+ 6b5fd134f47d Extracting [=================>                                 ]  14.06MB/41.06MB
+ 4c401b64d7d7 Downloading [==================================>                ]     934B/1.36kB
+ 4c401b64d7d7 Downloading [==================================================>]   1.36kB/1.36kB
+ 4c401b64d7d7 Verifying Checksum 
+ 4c401b64d7d7 Download complete 
+ 6b5fd134f47d Extracting [=========================>                         ]  20.87MB/41.06MB
+ 60ff3a1daf49 Downloading [==================================================>]     833B/833B
+ 60ff3a1daf49 Verifying Checksum 
+ 60ff3a1daf49 Download complete 
+ 6b5fd134f47d Extracting [================================>                  ]  26.41MB/41.06MB
+ 6b5fd134f47d Extracting [==========================================>        ]  34.93MB/41.06MB
+ 6b5fd134f47d Extracting [=================================================> ]  40.47MB/41.06MB
+ 6b5fd134f47d Extracting [==================================================>]  41.06MB/41.06MB
+ 6b5fd134f47d Pull complete 
+ 4c401b64d7d7 Extracting [==================================================>]   1.36kB/1.36kB
+ 4c401b64d7d7 Extracting [==================================================>]   1.36kB/1.36kB
+ 4c401b64d7d7 Pull complete 
+ 60ff3a1daf49 Extracting [==================================================>]     833B/833B
+ 60ff3a1daf49 Extracting [==================================================>]     833B/833B
+ 60ff3a1daf49 Pull complete 
+ nginx Pulled 
+ api2 Pulled 
+ Network danielsuhett-golang_backend  Creating
+ Network danielsuhett-golang_backend  Created
+ Container go-rinha-redis  Creating
+ Container go-rinha-redis  Created
+ Container danielsuhett-golang-api2-1  Creating
+ Container danielsuhett-golang-api1-1  Creating
+ Container danielsuhett-golang-api2-1  Created
+ Container danielsuhett-golang-api1-1  Created
+ Container go-rinha-nginx  Creating
+ Container go-rinha-nginx  Created
+Attaching to api1-1, api2-1, go-rinha-nginx, go-rinha-redis
+go-rinha-redis  | 1:C 05 Aug 2025 01:31:49.011 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+go-rinha-redis  | 1:C 05 Aug 2025 01:31:49.011 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+go-rinha-redis  | 1:C 05 Aug 2025 01:31:49.011 * Redis version=7.2.10, bits=64, commit=00000000, modified=0, pid=1, just started
+go-rinha-redis  | 1:C 05 Aug 2025 01:31:49.011 * Configuration loaded
+go-rinha-redis  | 1:M 05 Aug 2025 01:31:49.011 * monotonic clock: POSIX clock_gettime
+go-rinha-redis  | 1:M 05 Aug 2025 01:31:49.011 * Running mode=standalone, port=6379.
+go-rinha-redis  | 1:M 05 Aug 2025 01:31:49.012 * Server initialized
+go-rinha-redis  | 1:M 05 Aug 2025 01:31:49.012 * Ready to accept connections tcp
+api2-1          | 2025/08/05 01:32:23 Signal failure for default
+api2-1          | 2025/08/05 01:32:23 Circuit breaker color changed from GREEN to RED
+api1-1          | 2025/08/05 01:32:23 Signal failure for default
+api1-1          | 2025/08/05 01:32:23 Circuit breaker color changed from GREEN to RED
+api2-1          | 2025/08/05 01:32:23 Received color change: RED
+api1-1          | 2025/08/05 01:32:47 Circuit breaker color changed from RED to GREEN
+api2-1          | 2025/08/05 01:32:47 Received color change: GREEN
+[Kgo-rinha-nginx exited with code 0
+[Kapi2-1 exited with code 0
+[Kapi1-1 exited with code 0
+go-rinha-redis  | 1:signal-handler (1754357586) Received SIGTERM scheduling shutdown...
+go-rinha-redis  | 1:M 05 Aug 2025 01:33:06.021 * User requested shutdown...
+go-rinha-redis  | 1:M 05 Aug 2025 01:33:06.021 # Redis is now ready to exit, bye bye...
+[Kgo-rinha-redis exited with code 0
+log truncated at line 1000
