@@ -1,5 +1,5 @@
 x-rinha-api-base: &rinha-api-base
-  image: jhamiltonjunior/rinha-go-socket:0.0.1
+  image: jhamiltonjunior/rinha-go-socket:0.0.3
   volumes:
     - api-socketsv2:/var/run
   depends_on:
@@ -11,7 +11,7 @@ x-rinha-api-base: &rinha-api-base
     resources:
       limits:
         cpus: "0.18750"
-        memory: "30MB"
+        memory: "50MB"
 
   environment: &common-environment
     APP_PORT: 3000
@@ -66,14 +66,6 @@ services:
       <<: *common-environment
       UNIX_SOCKET: /var/run/api_3.sock
     command: ./main -socket /var/run/api_3.sock
-
-  rinha-api-4:
-    <<: *rinha-api-base
-    container_name: rinha-api-4
-    environment:
-      <<: *common-environment
-      UNIX_SOCKET: /var/run/api_4.sock
-    command: ./main -socket /var/run/api_4.sock
 
   # rinha-api-4:
   #   <<: *rinha-api-base

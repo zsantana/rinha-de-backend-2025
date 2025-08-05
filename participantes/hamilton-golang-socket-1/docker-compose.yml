@@ -1,5 +1,5 @@
 x-rinha-api-base: &rinha-api-base
-  image: jhamiltonjunior/rinha-go-socket:0.0.2
+  image: jhamiltonjunior/rinha-go-socket:0.0.3
   volumes:
     - api-socketsv2:/var/run
   depends_on:
@@ -11,7 +11,7 @@ x-rinha-api-base: &rinha-api-base
     resources:
       limits:
         cpus: "0.18750"
-        memory: "30MB"
+        memory: "50MB"
 
   environment: &common-environment
     APP_PORT: 3000
