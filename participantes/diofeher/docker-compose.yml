@@ -1,3 +1,18 @@
+x-api_template: &api
+  image: ghcr.io/diofeher/rinha-de-backend-2025-diofeher:main-c82abf2
+  depends_on:
+    - redis
+  volumes:
+    - socket_data:/tmp
+  deploy:
+    resources:
+      limits:
+        cpus: "0.5"
+        memory: "100MB"
+  networks:
+    - backend
+    - payment-processor
+
 services:
   nginx:
     image: nginx:latest
@@ -7,7 +22,7 @@ services:
     networks:
       - backend
     depends_on:
-      - api
+      - api1
       - api2
     deploy:
       resources:
@@ -16,34 +31,35 @@ services:
           memory: "100MB"
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf
-  api: &api
-    image: ghcr.io/diofeher/rinha-de-backend-2025-diofeher:main-969c435
-    depends_on:
-      - redis
+      - socket_data:/tmp
+  api1:
+    <<: *api
     environment:
+      - SOCKET_PATH=/tmp/api1.sock
       - DEBUG=false
-      - PORT=8080
-      - REDIS_URL=redis:6379
+      - REDIS_URL=/tmp/redis.sock
       - REDIS_DB=rinha
       - PROCESSOR_DEFAULT_URL=http://payment-processor-default:8080
       - PROCESSOR_FALLBACK_URL=http://payment-processor-fallback:8080
       - QUEUE_BATCH_SIZE=1
-      - NUM_WORKERS=75
-    deploy:
-      resources:
-        limits:
-          cpus: "0.5"
-          memory: "100MB"
-    networks:
-      - backend
-      - payment-processor
+      - NUM_WORKERS=100
   api2:
     <<: *api
+    environment:
+      - SOCKET_PATH=/tmp/api2.sock
+      - DEBUG=false
+      - REDIS_URL=/tmp/redis.sock
+      - REDIS_DB=rinha
+      - PROCESSOR_DEFAULT_URL=http://payment-processor-default:8080
+      - PROCESSOR_FALLBACK_URL=http://payment-processor-fallback:8080
+      - QUEUE_BATCH_SIZE=1
+      - NUM_WORKERS=100
   redis:
     image: redis:latest
     container_name: redis
     volumes:
       - ./redis.conf:/usr/local/etc/redis.conf
+      - socket_data:/tmp
     ports:
       - "6379:6379"
     networks:
@@ -68,3 +84,6 @@ networks:
     driver: bridge
   payment-processor:
     external: true
+
+volumes:
+  socket_data:
