@@ -1,5 +1,5 @@
 x-api_template: &api
-  image: ghcr.io/lothyriel/rinha_2025:v0.1.6
+  image: ghcr.io/lothyriel/rinha_2025:v0.1.7
   volumes:
     - uds:/var/run
   command: ["-m", "api"]
@@ -25,7 +25,7 @@ services:
       RUST_LOG: "info"
 
   worker:
-    image: ghcr.io/lothyriel/rinha_2025:v0.1.6
+    image: ghcr.io/lothyriel/rinha_2025:v0.1.7
     networks:
       - payment-processor
     volumes:

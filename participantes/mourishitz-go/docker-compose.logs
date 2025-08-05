@@ -1,0 +1,128 @@
+
+ worker2 Pulling 
+ keydb Pulling 
+ api1 Pulling 
+ worker1 Pulling 
+ api2 Pulling 
+ worker3 Pulling 
+ 9824c27679d3 Already exists 
+ efc8393455bd Pulling fs layer 
+ 1c03acd337f9 Pulling fs layer 
+ efc8393455bd Downloading [==================================================>]      93B/93B
+ efc8393455bd Verifying Checksum 
+ efc8393455bd Download complete 
+ efc8393455bd Extracting [==================================================>]      93B/93B
+ efc8393455bd Extracting [==================================================>]      93B/93B
+ efc8393455bd Pull complete 
+ 1c03acd337f9 Downloading [>                                                  ]  54.72kB/5.382MB
+ 9824c27679d3 Already exists 
+ efc8393455bd Already exists 
+ 6e9fba40cc91 Pulling fs layer 
+ 1c03acd337f9 Verifying Checksum 
+ 1c03acd337f9 Download complete 
+ 1c03acd337f9 Extracting [>                                                  ]  65.54kB/5.382MB
+ 1c03acd337f9 Extracting [==================================================>]  5.382MB/5.382MB
+ 1c03acd337f9 Pull complete 
+ 6e9fba40cc91 Downloading [>                                                  ]  53.36kB/5.283MB
+ 6e9fba40cc91 Verifying Checksum 
+ 6e9fba40cc91 Download complete 
+ 6e9fba40cc91 Extracting [>                                                  ]  65.54kB/5.283MB
+ 6e9fba40cc91 Extracting [==================================================>]  5.283MB/5.283MB
+ 6e9fba40cc91 Pull complete 
+ worker1 Pulled 
+ api1 Pulled 
+ api2 Pulled 
+ worker3 Pulled 
+ worker2 Pulled 
+ 96526aa774ef Pulling fs layer 
+ bbb620b9844e Pulling fs layer 
+ e26cb4fb6d99 Pulling fs layer 
+ 09b2213b7fdd Pulling fs layer 
+ 6b803d14f681 Pulling fs layer 
+ 09b2213b7fdd Waiting 
+ 6b803d14f681 Waiting 
+ bbb620b9844e Downloading [=====================================>             ]     934B/1.245kB
+ bbb620b9844e Download complete 
+ e26cb4fb6d99 Downloading [==================================================>]     114B/114B
+ e26cb4fb6d99 Verifying Checksum 
+ e26cb4fb6d99 Download complete 
+ 96526aa774ef Downloading [>                                                  ]  35.02kB/3.402MB
+ 96526aa774ef Download complete 
+ 96526aa774ef Extracting [>                                                  ]  65.54kB/3.402MB
+ 96526aa774ef Extracting [==================================================>]  3.402MB/3.402MB
+ 96526aa774ef Extracting [==================================================>]  3.402MB/3.402MB
+ 96526aa774ef Pull complete 
+ bbb620b9844e Extracting [==================================================>]  1.245kB/1.245kB
+ bbb620b9844e Extracting [==================================================>]  1.245kB/1.245kB
+ bbb620b9844e Pull complete 
+ e26cb4fb6d99 Extracting [==================================================>]     114B/114B
+ e26cb4fb6d99 Extracting [==================================================>]     114B/114B
+ e26cb4fb6d99 Pull complete 
+ 6b803d14f681 Downloading [==================================================>]     475B/475B
+ 6b803d14f681 Verifying Checksum 
+ 6b803d14f681 Download complete 
+ 09b2213b7fdd Downloading [>                                                  ]  248.3kB/24.56MB
+ 09b2213b7fdd Downloading [===================>                               ]  9.706MB/24.56MB
+ 09b2213b7fdd Downloading [===============================================>   ]   23.1MB/24.56MB
+ 09b2213b7fdd Verifying Checksum 
+ 09b2213b7fdd Download complete 
+ 09b2213b7fdd Extracting [>                                                  ]  262.1kB/24.56MB
+ 09b2213b7fdd Extracting [===========>                                       ]  5.505MB/24.56MB
+ 09b2213b7fdd Extracting [=========================>                         ]  12.58MB/24.56MB
+ 09b2213b7fdd Extracting [========================================>          ]  19.92MB/24.56MB
+ 09b2213b7fdd Extracting [==================================================>]  24.56MB/24.56MB
+ 09b2213b7fdd Pull complete 
+ 6b803d14f681 Extracting [==================================================>]     475B/475B
+ 6b803d14f681 Extracting [==================================================>]     475B/475B
+ 6b803d14f681 Pull complete 
+ keydb Pulled 
+ Network rinha-backend  Creating
+ Network rinha-backend  Created
+ Container keydb  Creating
+ Container keydb  Created
+ Container api-2  Creating
+ Container worker-2  Creating
+ Container worker-3  Creating
+ Container api-1  Creating
+ Container worker-1  Creating
+ Container worker-1  Created
+ Container worker-3  Created
+ Container api-2  Created
+ Container api-1  Created
+ Container rinha-nginx  Creating
+ Container worker-2  Created
+ Container rinha-nginx  Created
+Attaching to api-1, api-2, keydb, rinha-nginx, worker-1, worker-2, worker-3
+keydb        | 7:7:C 04 Aug 2025 20:57:49.242 # oO0OoO0OoO0Oo KeyDB is starting oO0OoO0OoO0Oo
+keydb        | 7:7:C 04 Aug 2025 20:57:49.242 # KeyDB version=6.3.4, bits=64, commit=7e7e5e57, modified=1, pid=7, just started
+keydb        | 7:7:C 04 Aug 2025 20:57:49.242 # Configuration loaded
+keydb        | 7:7:C 04 Aug 2025 20:57:49.242 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+keydb        | 7:7:M 04 Aug 2025 20:57:49.243 * monotonic clock: POSIX clock_gettime
+keydb        |                                                                       
+keydb        |                   _                                                   
+keydb        |                _-(+)-_                                                
+keydb        |             _-- /   \ --_                                            
+keydb        |          _--   /     \   --_            KeyDB  6.3.4 (7e7e5e57/1) 64 bit     
+keydb        |      __--     /       \     --__                                     
+keydb        |     (+) _    /         \    _ (+)       Running in standalone mode
+keydb        |      |   -- /           \ --   |        Port: 6379
+keydb        |      |     /--_   _   _--\     |        PID: 7
+keydb        |      |    /     -(+)-     \    |                                     
+keydb        |      |   /        |        \   |        https://docs.keydb.dev       
+keydb        |      |  /         |         \  |                                     
+keydb        |      | /          |          \ |                                     
+keydb        |     (+)_ -- -- -- | -- -- -- _(+)                                     
+keydb        |         --_       |       _--                                         
+keydb        |             --_   |   _--                                             
+keydb        |                 -(+)-        KeyDB has now joined Snap! See the announcement at:  https://docs.keydb.dev/news
+keydb        | 
+keydb        |                                                                      
+keydb        | 7:7:M 04 Aug 2025 20:57:49.565 # Server initialized
+api-1        | 2025/08/04 20:57:49 Starting API Proxy on port 8080
+keydb        | 7:20:M 04 Aug 2025 20:57:49.566 * Thread 0 alive.
+keydb        | 7:21:M 04 Aug 2025 20:57:49.566 * Thread 1 alive.
+api-2        | 2025/08/04 20:57:49 Starting API Proxy on port 8080
+worker-3     | 2025/08/04 20:57:49 [*] Consuming from payments stream using consumer group:  payments_group
+worker-1     | 2025/08/04 20:57:49 [*] Consuming from payments stream using consumer group:  payments_group
+worker-2     | 2025/08/04 20:57:49 [*] Consuming from payments stream using consumer group:  payments_group
+Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: error during container init: error mounting "/home/rinha-user/rinha-de-backend-2025/participantes/mourishitz-go/docker/nginx/nginx.conf" to rootfs at "/etc/nginx/nginx.conf": create mountpoint for /etc/nginx/nginx.conf mount: cannot create subdirectories in "/var/lib/docker/overlay2/ae8ccc60af5d6fb6e287dfedc89fa3debc5998158a689131d5fd466d9e494792/merged/etc/nginx/nginx.conf": not a directory: unknown: Are you trying to mount a directory onto a file (or vice-versa)? Check if the specified host path exists and is the expected type
