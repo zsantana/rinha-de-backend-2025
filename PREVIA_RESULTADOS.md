@@ -1,6 +1,6 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Tue Aug  5 05:17:42 PM -03 2025**
-242 submissões / 217 resultados / 25 submissões com erro
+Atualizado em **Tue Aug  5 05:27:17 PM -03 2025**
+244 submissões / 219 resultados / 25 submissões com erro
 
 
 | participante | p99 | bônus por desempenho (%) | multa ($) | lucro | submissão |
@@ -58,6 +58,7 @@ Atualizado em **Tue Aug  5 05:17:42 PM -03 2025**
 |	davigga-node	|	96.8ms	|	0%	|	0	|	300462.14	|	[davigga-node](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/davigga-node)
 |	dbiagi	|	91.18ms	|	0%	|	107212.59325	|	199109.10175	|	[dbiagi](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/dbiagi)
 |	diegodario-go	|	7.26ms	|	7%	|	0	|	333742.2234	|	[diegodario-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/diegodario-go)
+|	diofeher	|	5.22ms	|	12%	|	110764.395	|	243681.669	|	[diofeher](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/diofeher)
 |	diogomassis-go	|	11.68ms	|	0%	|	84706.93699998943	|	157312.88299998036	|	[diogomassis-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/diogomassis-go)
 |	djbrunomonteiro	|	350.71ms	|	0%	|	15724.184	|	29202.056	|	[djbrunomonteiro](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/djbrunomonteiro)
 |	dolphs	|	9.5ms	|	3%	|	0	|	322562.31385	|	[dolphs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/dolphs)
@@ -124,6 +125,7 @@ Atualizado em **Tue Aug  5 05:17:42 PM -03 2025**
 |	jvsandrade-rust-mini	|	3.01ms	|	16%	|	0	|	367280.2904	|	[jvsandrade-rust-mini](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/jvsandrade-rust-mini)
 |	kauan-carvalho-elixir	|	40.82ms	|	0%	|	0	|	309587.285	|	[kauan-carvalho-elixir](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/kauan-carvalho-elixir)
 |	kauan-carvalho-go	|	4.1ms	|	14%	|	0	|	352445.1588	|	[kauan-carvalho-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/kauan-carvalho-go)
+|	krymancer	|	6.87ms	|	8%	|	0	|	0	|	[krymancer](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/krymancer)
 |	lbattochio-dotnet	|	54.05ms	|	0%	|	0	|	315108.54	|	[lbattochio-dotnet](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/lbattochio-dotnet)
 |	lczago-go	|	4.39ms	|	13%	|	108880.3624999919	|	242647.66499998193	|	[lczago-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/lczago-go)
 |	lecosas-java-spring-graalvm	|	16.66ms	|	0%	|	0	|	311415.1	|	[lecosas-java-spring-graalvm](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/lecosas-java-spring-graalvm)
