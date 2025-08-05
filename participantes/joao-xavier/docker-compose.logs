@@ -12,14 +12,13 @@
  Container joao-xavier-nginx-1  Creating
  Container joao-xavier-nginx-1  Created
 Attaching to api_0-1, api_1-1, nginx-1, worker-1
-worker-1  | 2025-08-04T21:06:43.763567Z  INFO ThreadId(01) src/worker/mod.rs:24: starting worker
-worker-1  | 2025-08-04T21:06:43.763592Z  INFO ThreadId(01) src/worker/mod.rs:38: starting db_consumer
-worker-1  | 2025-08-04T21:06:43.763632Z  INFO ThreadId(01) src/worker/mod.rs:52: starting payment_req_consumer
-worker-1  | 2025-08-04T21:06:43.763748Z  INFO ThreadId(01) src/worker/mod.rs:90: listening on /var/run/rinha.sock
-api_0-1   | 2025-08-04T21:06:44.028302Z  INFO ThreadId(01) src/api/mod.rs:18: starting API
-api_0-1   | 2025-08-04T21:06:44.028391Z  INFO ThreadId(01) src/api/mod.rs:23: binded to unix socket on /var/run/api_0.sock
-api_1-1   | 2025-08-04T21:06:44.056079Z  INFO ThreadId(01) src/api/mod.rs:18: starting API
-api_1-1   | 2025-08-04T21:06:44.056168Z  INFO ThreadId(01) src/api/mod.rs:23: binded to unix socket on /var/run/api_1.sock
+worker-1  | 2025-08-05T19:44:47.311438Z  INFO ThreadId(01) src/worker/mod.rs:24: starting worker
+worker-1  | 2025-08-05T19:44:47.311621Z  INFO ThreadId(01) src/worker/mod.rs:36: starting payment_req_consumer
+worker-1  | 2025-08-05T19:44:47.312285Z  INFO ThreadId(01) src/worker/mod.rs:74: listening on /var/run/rinha.sock
+api_0-1   | 2025-08-05T19:44:47.595011Z  INFO ThreadId(01) src/api/mod.rs:18: starting API
+api_0-1   | 2025-08-05T19:44:47.595134Z  INFO ThreadId(01) src/api/mod.rs:31: binded to unix socket on /var/run/api_0.sock
+api_1-1   | 2025-08-05T19:44:47.625420Z  INFO ThreadId(01) src/api/mod.rs:18: starting API
+api_1-1   | 2025-08-05T19:44:47.625534Z  INFO ThreadId(01) src/api/mod.rs:31: binded to unix socket on /var/run/api_1.sock
 nginx-1   | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
 nginx-1   | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
 nginx-1   | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
@@ -29,24 +28,24 @@ nginx-1   | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolv
 nginx-1   | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
 nginx-1   | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
 nginx-1   | /docker-entrypoint.sh: Configuration complete; ready for start up
-worker-1  | 2025-08-04T21:06:53.027455Z  INFO ThreadId(02) src/worker/mod.rs:143: db purged
+worker-1  | 2025-08-05T19:44:56.246136Z  INFO ThreadId(02) src/worker/mod.rs:117: db purged
 worker-1  | =================================== Metrics ====================================
 worker-1  | 
-worker-1  | Key        Kind      Value                                                      Units 𝚫 Delta                                                          | Description                 | Labels
+worker-1  | Key        Kind      Value                                                          Units 𝚫 Delta                                                              | Description                 | Labels
 worker-1  | --------------------------------------------------------------------------------
-worker-1  | db.insert  Histogram [p50=546.044249777179, p99=704.9310642744136, max=2791]#7  ns    𝚫 [p50=+546.044249777179, p99=+704.9310642744136, max=+2791]#+7  | db insert time              | 
-worker-1  | db.select  Histogram [p50=1039.089385954313, p99=1039.089385954313, max=7319]#2 ns    𝚫 [p50=+1039.089385954313, p99=+1039.089385954313, max=+7319]#+2 | db query time               | 
-worker-1  | pp_http    Histogram [p50=775.0286660929596, p99=1268.892838877483, max=2747]#7 μs    𝚫 [p50=+775.0286660929596, p99=+1268.892838877483, max=+2747]#+7 | payment processor http time | 
-worker-1  | uds.handle Histogram [p50=9.000678850493848, p99=52.00292714104081, max=60]#10  μs    𝚫 [p50=+9.000678850493848, p99=+52.00292714104081, max=+60]#+10  | http handler time           | 
+worker-1  | db.insert  Histogram [p50=1301.0150141346685, p99=1788.0841528226968, max=10762]#11 ns    𝚫 [p50=+1301.0150141346685, p99=+1788.0841528226968, max=+10762]#+11 | db insert time              | 
+worker-1  | db.select  Histogram [p50=4285.960769750685, p99=4285.960769750685, max=22487]#2    ns    𝚫 [p50=+4285.960769750685, p99=+4285.960769750685, max=+22487]#+2    | db query time               | 
+worker-1  | pp_http    Histogram [p50=745.9809152106742, p99=895.0682905516536, max=4297]#11    μs    𝚫 [p50=+745.9809152106742, p99=+895.0682905516536, max=+4297]#+11    | payment processor http time | 
+worker-1  | uds.handle Histogram [p50=9.000678850493848, p99=53.995462124211485, max=178]#14    μs    𝚫 [p50=+9.000678850493848, p99=+53.995462124211485, max=+178]#+14    | http handler time           | 
 worker-1  | 
 worker-1  | ================================ After 10.000 s ================================
 worker-1  | 
 api_0-1   | =================================== Metrics ====================================
 api_0-1   | 
-api_0-1   | Key       Kind      Value                                                       Units 𝚫 Delta                                                           | Description       | Labels
+api_0-1   | Key       Kind      Value                                                      Units 𝚫 Delta                                                          | Description       | Labels
 api_0-1   | --------------------------------------------------------------------------------
-api_0-1   | http.get  Histogram [p50=468.01484499763865, p99=468.01484499763865, max=468]#1 μs    𝚫 [p50=+468.01484499763865, p99=+468.01484499763865, max=+468]#+1 | http handler time | 
-api_0-1   | http.post Histogram [p50=9.000678850493848, p99=11.999920242205052, max=22]#6   μs    𝚫 [p50=+9.000678850493848, p99=+11.999920242205052, max=+22]#+6   | http handler time | 
+api_0-1   | http.get  Histogram [p50=249.0117323912079, p99=249.0117323912079, max=325]#2  μs    𝚫 [p50=+249.0117323912079, p99=+249.0117323912079, max=+325]#+2  | http handler time | 
+api_0-1   | http.post Histogram [p50=11.999920242205052, p99=15.998580574995373, max=18]#8 μs    𝚫 [p50=+11.999920242205052, p99=+15.998580574995373, max=+18]#+8 | http handler time | 
 api_0-1   | 
 api_0-1   | ================================ After 10.000 s ================================
 api_0-1   | 
@@ -54,8 +53,7 @@ api_1-1   | =================================== Metrics ========================
 api_1-1   | 
 api_1-1   | Key       Kind      Value                                                     Units 𝚫 Delta                                                         | Description       | Labels
 api_1-1   | --------------------------------------------------------------------------------
-api_1-1   | http.get  Histogram [p50=375.9664891304509, p99=375.9664891304509, max=376]#1 μs    𝚫 [p50=+375.9664891304509, p99=+375.9664891304509, max=+376]#+1 | http handler time | 
-api_1-1   | http.post Histogram [p50=9.999149133010329, p99=11.000052032263987, max=11]#5 μs    𝚫 [p50=+9.999149133010329, p99=+11.000052032263987, max=+11]#+5 | http handler time | 
+api_1-1   | http.post Histogram [p50=12.999358414978186, p99=25.00060452884564, max=41]#9 μs    𝚫 [p50=+12.999358414978186, p99=+25.00060452884564, max=+41]#+9 | http handler time | 
 api_1-1   | 
 api_1-1   | ================================ After 10.000 s ================================
 api_1-1   | 
@@ -63,68 +61,66 @@ worker-1  | =================================== Metrics ========================
 worker-1  | 
 worker-1  | Key        Kind      Value                                                           Units 𝚫 Delta                                                              | Description                 | Labels
 worker-1  | --------------------------------------------------------------------------------
-worker-1  | db.insert  Histogram [p50=565.9467633694486, p99=1098.0597287269688, max=12878]#523  ns    𝚫 [p50=+19.902513592269656, p99=+393.1286644525552, max=+10087]#+516 | db insert time              | 
-worker-1  | db.select  Histogram [p50=4625.316236789134, p99=4625.316236789134, max=7319]#3      ns    𝚫 [p50=+3586.2268508348207, p99=+3586.2268508348207, max=+0]#+1      | db query time               | 
-worker-1  | pp_http    Histogram [p50=775.0286660929596, p99=101386.98749191692, max=101716]#523 μs    𝚫 [p50=+0, p99=+100118.09465303944, max=+98969]#+516                 | payment processor http time | 
-worker-1  | uds.handle Histogram [p50=9.000678850493848, p99=52.00292714104081, max=173]#586     μs    𝚫 [p50=+0, p99=+0, max=+113]#+576                                    | http handler time           | 
+worker-1  | db.insert  Histogram [p50=1358.994027068407, p99=2564.9647662754396, max=13986]#528  ns    𝚫 [p50=+57.97901293373843, p99=+776.8806134527429, max=+3224]#+517   | db insert time              | 
+worker-1  | db.select  Histogram [p50=4285.960769750685, p99=4285.960769750685, max=22487]#3     ns    𝚫 [p50=+0, p99=+0, max=+0]#+1                                        | db query time               | 
+worker-1  | pp_http    Histogram [p50=794.9665332767374, p99=101386.98749191692, max=101722]#528 μs    𝚫 [p50=+48.98561806606324, p99=+100491.91920136526, max=+97425]#+517 | payment processor http time | 
+worker-1  | uds.handle Histogram [p50=9.000678850493848, p99=54.99817530215484, max=234]#620     μs    𝚫 [p50=+0, p99=+1.002713177943356, max=+56]#+606                     | http handler time           | 
 worker-1  | 
 worker-1  | ================================ After 10.000 s ================================
 worker-1  | 
 api_0-1   | =================================== Metrics ====================================
 api_0-1   | 
-api_0-1   | Key       Kind      Value                                                        Units 𝚫 Delta                                                            | Description       | Labels
+api_0-1   | Key       Kind      Value                                                        Units 𝚫 Delta                                                             | Description       | Labels
 api_0-1   | --------------------------------------------------------------------------------
-api_0-1   | http.get  Histogram [p50=281.9980098958602, p99=281.9980098958602, max=468]#2    μs    𝚫 [p50=-186.01683510177844, p99=-186.01683510177844, max=+0]#+1    | http handler time | 
-api_0-1   | http.post Histogram [p50=11.000052032263987, p99=54.99817530215484, max=562]#305 μs    𝚫 [p50=+1.9993731817701388, p99=+42.99825505994979, max=+540]#+299 | http handler time | 
+api_0-1   | http.get  Histogram [p50=249.0117323912079, p99=249.0117323912079, max=325]#3    μs    𝚫 [p50=+0, p99=+0, max=+0]#+1                                       | http handler time | 
+api_0-1   | http.post Histogram [p50=11.000052032263987, p99=37.99672634216644, max=169]#323 μs    𝚫 [p50=-0.9998682099410647, p99=+21.998145767171067, max=+151]#+315 | http handler time | 
 api_0-1   | 
 api_0-1   | ================================ After 10.000 s ================================
 api_0-1   | 
 api_1-1   | =================================== Metrics ====================================
 api_1-1   | 
-api_1-1   | Key       Kind      Value                                                         Units 𝚫 Delta                                                              | Description       | Labels
+api_1-1   | Key       Kind      Value                                                       Units 𝚫 Delta                                                             | Description       | Labels
 api_1-1   | --------------------------------------------------------------------------------
-api_1-1   | http.get  Histogram [p50=375.9664891304509, p99=375.9664891304509, max=376]#1     μs    𝚫 [p50=+0, p99=+0, max=+0]#+0                                        | http handler time | 
-api_1-1   | http.post Histogram [p50=11.000052032263987, p99=35.99931847205125, max=1096]#306 μs    𝚫 [p50=+1.0009028992536582, p99=+24.999266439787263, max=+1085]#+301 | http handler time | 
+api_1-1   | http.post Histogram [p50=11.000052032263987, p99=40.9970456740797, max=371]#326 μs    𝚫 [p50=-1.9993063827141988, p99=+15.996441145234062, max=+330]#+317 | http handler time | 
 api_1-1   | 
 api_1-1   | ================================ After 10.000 s ================================
 api_1-1   | 
 worker-1  | =================================== Metrics ====================================
 worker-1  | 
-worker-1  | Key        Kind      Value                                                           Units 𝚫 Delta                                                            | Description                 | Labels
+worker-1  | Key        Kind      Value                                                           Units 𝚫 Delta                                                             | Description                 | Labels
 worker-1  | --------------------------------------------------------------------------------
-worker-1  | db.insert  Histogram [p50=566.9663849310199, p99=1267.1176318320195, max=12878]#705  ns    𝚫 [p50=+1.0196215615712845, p99=+169.05790310505063, max=+0]#+182  | db insert time              | 
-worker-1  | db.select  Histogram [p50=2567.01755910295, p99=4625.316236789134, max=7319]#4       ns    𝚫 [p50=-2058.2986776861835, p99=+0, max=+0]#+1                     | db query time               | 
-worker-1  | pp_http    Histogram [p50=852.9492224248113, p99=101569.64841552402, max=101770]#721 μs    𝚫 [p50=+77.92055633185169, p99=+182.66092360709445, max=+54]#+198  | payment processor http time | 
-worker-1  | uds.handle Histogram [p50=8.000467695685316, p99=31.998851340699826, max=191]#2075   μs    𝚫 [p50=-1.0002111548085324, p99=-20.00407580034098, max=+18]#+1489 | http handler time           | 
+worker-1  | db.insert  Histogram [p50=1324.1155670266949, p99=2534.8760544613388, max=14034]#704 ns    𝚫 [p50=-34.87846004171206, p99=-30.08871181410086, max=+48]#+176    | db insert time              | 
+worker-1  | db.select  Histogram [p50=3795.988090989269, p99=4285.960769750685, max=22487]#4     ns    𝚫 [p50=-489.9726787614163, p99=+0, max=+0]#+1                       | db query time               | 
+worker-1  | pp_http    Histogram [p50=897.0396084520303, p99=101752.63842488304, max=104294]#726 μs    𝚫 [p50=+102.07307517529284, p99=+365.6509329661203, max=+2572]#+198 | payment processor http time | 
+worker-1  | uds.handle Histogram [p50=8.000467695685316, p99=32.99975069216289, max=234]#2139    μs    𝚫 [p50=-1.0002111548085324, p99=-21.99842460999195, max=+0]#+1519   | http handler time           | 
 worker-1  | 
 worker-1  | ================================ After 10.000 s ================================
 worker-1  | 
 api_0-1   | =================================== Metrics ====================================
 api_0-1   | 
-api_0-1   | Key       Kind      Value                                                         Units 𝚫 Delta                                                           | Description       | Labels
+api_0-1   | Key       Kind      Value                                                        Units 𝚫 Delta                                                           | Description       | Labels
 api_0-1   | --------------------------------------------------------------------------------
-api_0-1   | http.get  Histogram [p50=281.9980098958602, p99=281.9980098958602, max=468]#2     μs    𝚫 [p50=+0, p99=+0, max=+0]#+0                                     | http handler time | 
-api_0-1   | http.post Histogram [p50=9.999149133010329, p99=31.998851340699826, max=562]#1062 μs    𝚫 [p50=-1.0009028992536582, p99=-22.999323961455016, max=+0]#+757 | http handler time | 
+api_0-1   | http.get  Histogram [p50=249.0117323912079, p99=325.0243212937207, max=1748]#4   μs    𝚫 [p50=+0, p99=+76.01258890251279, max=+1423]#+1                  | http handler time | 
+api_0-1   | http.post Histogram [p50=9.999149133010329, p99=34.99831812806673, max=169]#1096 μs    𝚫 [p50=-1.0009028992536582, p99=-2.9984082140997117, max=+0]#+773 | http handler time | 
 api_0-1   | 
 api_0-1   | ================================ After 10.000 s ================================
 api_0-1   | 
 api_1-1   | =================================== Metrics ====================================
 api_1-1   | 
-api_1-1   | Key       Kind      Value                                                          Units 𝚫 Delta                                                          | Description       | Labels
+api_1-1   | Key       Kind      Value                                                        Units 𝚫 Delta                                                            | Description       | Labels
 api_1-1   | --------------------------------------------------------------------------------
-api_1-1   | http.get  Histogram [p50=164.00550789726537, p99=164.00550789726537, max=376]#2    μs    𝚫 [p50=-211.96098123318552, p99=-211.96098123318552, max=+0]#+1  | http handler time | 
-api_1-1   | http.post Histogram [p50=9.000678850493848, p99=27.001704833335125, max=1096]#1063 μs    𝚫 [p50=-1.9993731817701388, p99=-8.997613638716125, max=+0]#+757 | http handler time | 
+api_1-1   | http.post Histogram [p50=9.999149133010329, p99=32.99975069216289, max=548]#1100 μs    𝚫 [p50=-1.0009028992536582, p99=-7.997294981916809, max=+177]#+774 | http handler time | 
 api_1-1   | 
 api_1-1   | ================================ After 10.000 s ================================
 api_1-1   | 
 worker-1  | =================================== Metrics ====================================
 worker-1  | 
-worker-1  | Key        Kind      Value                                                            Units 𝚫 Delta                                                              | Description                 | Labels
+worker-1  | Key        Kind      Value                                                            Units 𝚫 Delta                                                            | Description                 | Labels
 worker-1  | --------------------------------------------------------------------------------
-worker-1  | db.insert  Histogram [p50=566.9663849310199, p99=1267.1176318320195, max=12878]#705   ns    𝚫 [p50=+0, p99=+0, max=+0]#+0                                        | db insert time              | 
-worker-1  | db.select  Histogram [p50=2567.01755910295, p99=4625.316236789134, max=7319]#5        ns    𝚫 [p50=+0, p99=+0, max=+0]#+1                                        | db query time               | 
-worker-1  | pp_http    Histogram [p50=1147.9121143281022, p99=101549.33651703087, max=101770]#907 μs    𝚫 [p50=+294.96289190329094, p99=-20.311898493149783, max=+0]#+186    | payment processor http time | 
-worker-1  | uds.handle Histogram [p50=6.999928967377545, p99=29.00012111115082, max=1141]#4480    μs    𝚫 [p50=-1.0005387283077711, p99=-2.9987302295490075, max=+950]#+2405 | http handler time           | 
+worker-1  | db.insert  Histogram [p50=1324.1155670266949, p99=2534.8760544613388, max=14034]#704  ns    𝚫 [p50=+0, p99=+0, max=+0]#+0                                      | db insert time              | 
+worker-1  | db.select  Histogram [p50=3795.988090989269, p99=4285.960769750685, max=22487]#5      ns    𝚫 [p50=+0, p99=+0, max=+0]#+1                                      | db query time               | 
+worker-1  | pp_http    Histogram [p50=1198.1093104502856, p99=101711.94550850333, max=104294]#906 μs    𝚫 [p50=+301.06970199825537, p99=-40.692916379717644, max=+0]#+180  | payment processor http time | 
+worker-1  | uds.handle Histogram [p50=6.999928967377545, p99=31.998851340699826, max=234]#4572    μs    𝚫 [p50=-1.0005387283077711, p99=-1.0008993514630653, max=+0]#+2433 | http handler time           | 
 worker-1  | 
 worker-1  | ================================ After 10.000 s ================================
 worker-1  | 
@@ -132,17 +128,17 @@ api_0-1   | =================================== Metrics ========================
 api_0-1   | 
 api_0-1   | Key       Kind      Value                                                         Units 𝚫 Delta                                                            | Description       | Labels
 api_0-1   | --------------------------------------------------------------------------------
-api_0-1   | http.get  Histogram [p50=281.9980098958602, p99=281.9980098958602, max=468]#2     μs    𝚫 [p50=+0, p99=+0, max=+0]#+0                                      | http handler time | 
-api_0-1   | http.post Histogram [p50=9.000678850493848, p99=28.002674013785647, max=562]#2276 μs    𝚫 [p50=-0.9984702825164806, p99=-3.9961773269141787, max=+0]#+1214 | http handler time | 
+api_0-1   | http.get  Histogram [p50=249.0117323912079, p99=325.0243212937207, max=1748]#4    μs    𝚫 [p50=+0, p99=+0, max=+0]#+0                                      | http handler time | 
+api_0-1   | http.post Histogram [p50=9.000678850493848, p99=31.998851340699826, max=169]#2325 μs    𝚫 [p50=-0.9984702825164806, p99=-2.9994667873669023, max=+0]#+1229 | http handler time | 
 api_0-1   | 
 api_0-1   | ================================ After 10.000 s ================================
 api_0-1   | 
 api_1-1   | =================================== Metrics ====================================
 api_1-1   | 
-api_1-1   | Key       Kind      Value                                                          Units 𝚫 Delta                          | Description       | Labels
+api_1-1   | Key       Kind      Value                                                         Units 𝚫 Delta                                                           | Description       | Labels
 api_1-1   | --------------------------------------------------------------------------------
-api_1-1   | http.get  Histogram [p50=164.00550789726537, p99=164.00550789726537, max=376]#3    μs    𝚫 [p50=+0, p99=+0, max=+0]#+1    | http handler time | 
-api_1-1   | http.post Histogram [p50=9.000678850493848, p99=27.001704833335125, max=1096]#2277 μs    𝚫 [p50=+0, p99=+0, max=+0]#+1214 | http handler time | 
+api_1-1   | http.get  Histogram [p50=112.99007813673754, p99=112.99007813673754, max=113]#1   μs    𝚫 [p50=+112.99007813673754, p99=+112.99007813673754, max=+113]#+1 | http handler time | 
+api_1-1   | http.post Histogram [p50=9.000678850493848, p99=29.997078882470035, max=548]#2330 μs    𝚫 [p50=-0.9984702825164806, p99=-3.002671809692856, max=+0]#+1230 | http handler time | 
 api_1-1   | 
 api_1-1   | ================================ After 10.000 s ================================
 api_1-1   | 
@@ -150,10 +146,10 @@ worker-1  | =================================== Metrics ========================
 worker-1  | 
 worker-1  | Key        Kind      Value                                                             Units 𝚫 Delta                                                                | Description                 | Labels
 worker-1  | --------------------------------------------------------------------------------
-worker-1  | db.insert  Histogram [p50=565.9467633694486, p99=1267.1176318320195, max=12878]#769    ns    𝚫 [p50=-1.0196215615712845, p99=+0, max=+0]#+64                        | db insert time              | 
-worker-1  | db.select  Histogram [p50=2151.88616070183, p99=4625.316236789134, max=7319]#6         ns    𝚫 [p50=-415.13139840112035, p99=+0, max=+0]#+1                         | db query time               | 
-worker-1  | pp_http    Histogram [p50=2851.7839406211247, p99=101772.99098782439, max=2000993]#979 μs    𝚫 [p50=+1703.8718262930224, p99=+223.65447079352452, max=+1899223]#+72 | payment processor http time | 
-worker-1  | uds.handle Histogram [p50=6.999928967377545, p99=29.00012111115082, max=1141]#7798     μs    𝚫 [p50=+0, p99=+0, max=+0]#+3318                                       | http handler time           | 
+worker-1  | db.insert  Histogram [p50=1296.0805385060207, p99=2534.8760544613388, max=14034]#801   ns    𝚫 [p50=-28.035028520674132, p99=+0, max=+0]#+97                        | db insert time              | 
+worker-1  | db.select  Histogram [p50=3645.6867021046573, p99=4285.960769750685, max=22487]#6      ns    𝚫 [p50=-150.3013888846117, p99=+0, max=+0]#+1                          | db query time               | 
+worker-1  | pp_http    Histogram [p50=4297.118766899859, p99=102405.94365978465, max=2001394]#1011 μs    𝚫 [p50=+3099.0094564495735, p99=+693.9981512813247, max=+1897100]#+105 | payment processor http time | 
+worker-1  | uds.handle Histogram [p50=6.999928967377545, p99=30.997296978647597, max=234]#7922     μs    𝚫 [p50=+0, p99=-1.0015543620522287, max=+0]#+3350                      | http handler time           | 
 worker-1  | 
 worker-1  | ================================ After 10.000 s ================================
 worker-1  | 
@@ -161,79 +157,80 @@ api_0-1   | =================================== Metrics ========================
 api_0-1   | 
 api_0-1   | Key       Kind      Value                                                         Units 𝚫 Delta                                           | Description       | Labels
 api_0-1   | --------------------------------------------------------------------------------
-api_0-1   | http.get  Histogram [p50=281.9980098958602, p99=281.9980098958602, max=468]#2     μs    𝚫 [p50=+0, p99=+0, max=+0]#+0                     | http handler time | 
-api_0-1   | http.post Histogram [p50=8.000467695685316, p99=28.002674013785647, max=562]#3947 μs    𝚫 [p50=-1.0002111548085324, p99=+0, max=+0]#+1671 | http handler time | 
+api_0-1   | http.get  Histogram [p50=249.0117323912079, p99=325.0243212937207, max=1748]#4    μs    𝚫 [p50=+0, p99=+0, max=+0]#+0                     | http handler time | 
+api_0-1   | http.post Histogram [p50=9.000678850493848, p99=30.997296978647597, max=169]#4011 μs    𝚫 [p50=+0, p99=-1.0015543620522287, max=+0]#+1686 | http handler time | 
 api_0-1   | 
 api_0-1   | ================================ After 10.000 s ================================
 api_0-1   | 
 api_1-1   | =================================== Metrics ====================================
 api_1-1   | 
-api_1-1   | Key       Kind      Value                                                          Units 𝚫 Delta                                           | Description       | Labels
+api_1-1   | Key       Kind      Value                                                        Units 𝚫 Delta                                           | Description       | Labels
 api_1-1   | --------------------------------------------------------------------------------
-api_1-1   | http.get  Histogram [p50=164.00550789726537, p99=375.9664891304509, max=1405]#4    μs    𝚫 [p50=+0, p99=+211.96098123318552, max=+1029]#+1 | http handler time | 
-api_1-1   | http.post Histogram [p50=8.000467695685316, p99=27.001704833335125, max=1096]#3948 μs    𝚫 [p50=-1.0002111548085324, p99=+0, max=+0]#+1671 | http handler time | 
+api_1-1   | http.get  Histogram [p50=112.99007813673754, p99=112.99007813673754, max=139]#2  μs    𝚫 [p50=+0, p99=+0, max=+26]#+1                    | http handler time | 
+api_1-1   | http.post Histogram [p50=9.000678850493848, p99=29.00012111115082, max=548]#4017 μs    𝚫 [p50=+0, p99=-0.9969577713192166, max=+0]#+1687 | http handler time | 
 api_1-1   | 
 api_1-1   | ================================ After 10.000 s ================================
 api_1-1   | 
 worker-1  | =================================== Metrics ====================================
 worker-1  | 
-worker-1  | Key        Kind      Value                                                              Units 𝚫 Delta                                                                | Description                 | Labels
+worker-1  | Key        Kind      Value                                                              Units 𝚫 Delta                                                              | Description                 | Labels
 worker-1  | --------------------------------------------------------------------------------
-worker-1  | db.insert  Histogram [p50=555.1842363589801, p99=1223.0463317986087, max=389545]#4348   ns    𝚫 [p50=-10.762527010468489, p99=-44.07130003341081, max=+376667]#+3579 | db insert time              | 
-worker-1  | db.select  Histogram [p50=2567.01755910295, p99=4625.316236789134, max=7319]#7          ns    𝚫 [p50=+415.13139840112035, p99=+0, max=+0]#+1                         | db query time               | 
-worker-1  | pp_http    Histogram [p50=2851.7839406211247, p99=101366.71212195563, max=2000993]#4558 μs    𝚫 [p50=+0, p99=-406.2788658687641, max=+0]#+3579                       | payment processor http time | 
-worker-1  | uds.handle Histogram [p50=6.999928967377545, p99=50.00385027884824, max=1141]#12028     μs    𝚫 [p50=+0, p99=+21.003729167697422, max=+0]#+4230                      | http handler time           | 
+worker-1  | db.insert  Histogram [p50=548.0135516995556, p99=2102.1165992093433, max=52371]#5722    ns    𝚫 [p50=-748.0669868064651, p99=-432.7594552519954, max=+38337]#+4921 | db insert time              | 
+worker-1  | db.select  Histogram [p50=3645.6867021046573, p99=4285.960769750685, max=22487]#7       ns    𝚫 [p50=+0, p99=+0, max=+0]#+1                                        | db query time               | 
+worker-1  | pp_http    Histogram [p50=2852.3543544506315, p99=101447.83793792325, max=2001394]#5932 μs    𝚫 [p50=-1444.7644124492276, p99=-958.1057218614005, max=+0]#+4921    | payment processor http time | 
+worker-1  | uds.handle Histogram [p50=6.999928967377545, p99=43.99605661931581, max=542]#12181      μs    𝚫 [p50=+0, p99=+12.998759640668212, max=+308]#+4259                  | http handler time           | 
 worker-1  | 
 worker-1  | ================================ After 10.000 s ================================
 worker-1  | 
 api_0-1   | =================================== Metrics ====================================
 api_0-1   | 
-api_0-1   | Key       Kind      Value                                                         Units 𝚫 Delta                          | Description       | Labels
+api_0-1   | Key       Kind      Value                                                         Units 𝚫 Delta                                                            | Description       | Labels
 api_0-1   | --------------------------------------------------------------------------------
-api_0-1   | http.get  Histogram [p50=281.9980098958602, p99=281.9980098958602, max=468]#2     μs    𝚫 [p50=+0, p99=+0, max=+0]#+0    | http handler time | 
-api_0-1   | http.post Histogram [p50=8.000467695685316, p99=28.002674013785647, max=562]#6074 μs    𝚫 [p50=+0, p99=+0, max=+0]#+2127 | http handler time | 
+api_0-1   | http.get  Histogram [p50=249.0117323912079, p99=325.0243212937207, max=1748]#5    μs    𝚫 [p50=+0, p99=+0, max=+0]#+1                                      | http handler time | 
+api_0-1   | http.post Histogram [p50=8.000467695685316, p99=29.997078882470035, max=169]#6152 μs    𝚫 [p50=-1.0002111548085324, p99=-1.0002180961775622, max=+0]#+2141 | http handler time | 
 api_0-1   | 
 api_0-1   | ================================ After 10.000 s ================================
 api_0-1   | 
 api_1-1   | =================================== Metrics ====================================
 api_1-1   | 
-api_1-1   | Key       Kind      Value                                                          Units 𝚫 Delta                                        | Description       | Labels
+api_1-1   | Key       Kind      Value                                                        Units 𝚫 Delta                                           | Description       | Labels
 api_1-1   | --------------------------------------------------------------------------------
-api_1-1   | http.get  Histogram [p50=354.9936899659595, p99=375.9664891304509, max=1405]#5     μs    𝚫 [p50=+190.98818206869413, p99=+0, max=+0]#+1 | http handler time | 
-api_1-1   | http.post Histogram [p50=8.000467695685316, p99=27.001704833335125, max=1096]#6076 μs    𝚫 [p50=+0, p99=+0, max=+0]#+2128               | http handler time | 
+api_1-1   | http.get  Histogram [p50=112.99007813673754, p99=112.99007813673754, max=139]#2  μs    𝚫 [p50=+0, p99=+0, max=+0]#+0                     | http handler time | 
+api_1-1   | http.post Histogram [p50=8.000467695685316, p99=29.00012111115082, max=556]#6162 μs    𝚫 [p50=-1.0002111548085324, p99=+0, max=+8]#+2145 | http handler time | 
 api_1-1   | 
 api_1-1   | ================================ After 10.000 s ================================
 api_1-1   | 
 worker-1  | =================================== Metrics ====================================
 worker-1  | 
-worker-1  | Key        Kind      Value                                                              Units 𝚫 Delta                                             | Description                 | Labels
+worker-1  | Key        Kind      Value                                                               Units 𝚫 Delta                                                                | Description                 | Labels
 worker-1  | --------------------------------------------------------------------------------
-worker-1  | db.insert  Histogram [p50=555.1842363589801, p99=1094.9894618558267, max=389545]#16746  ns    𝚫 [p50=+0, p99=-128.056869942782, max=+0]#+12398    | db insert time              | 
-worker-1  | db.select  Histogram [p50=2567.01755910295, p99=4625.316236789134, max=7319]#7          ns    𝚫 [p50=+0, p99=+0, max=+0]#+0                       | db query time               | 
-worker-1  | pp_http    Histogram [p50=2851.7839406211247, p99=100901.4960619127, max=2000993]#16956 μs    𝚫 [p50=+0, p99=-465.21606004293426, max=+0]#+12398  | payment processor http time | 
-worker-1  | uds.handle Histogram [p50=6.999928967377545, p99=188.010913646273, max=1287]#16754      μs    𝚫 [p50=+0, p99=+138.00706336742476, max=+146]#+4726 | http handler time           | 
+worker-1  | db.insert  Histogram [p50=563.0114785448594, p99=1967.856228426673, max=125687]#16748    ns    𝚫 [p50=+14.997926845303823, p99=-134.2603707826704, max=+73316]#+11026 | db insert time              | 
+worker-1  | db.select  Histogram [p50=3645.6867021046573, p99=21875.006936224956, max=22487]#8       ns    𝚫 [p50=+0, p99=+17589.04616647427, max=+0]#+1                          | db query time               | 
+worker-1  | pp_http    Histogram [p50=2852.3543544506315, p99=100740.18275273668, max=2001394]#16958 μs    𝚫 [p50=+0, p99=-707.6551851865661, max=+0]#+11026                      | payment processor http time | 
+worker-1  | uds.handle Histogram [p50=6.999928967377545, p99=166.9843360750187, max=542]#16757       μs    𝚫 [p50=+0, p99=+122.98827945570288, max=+0]#+4576                      | http handler time           | 
 worker-1  | 
 worker-1  | ================================ After 10.000 s ================================
 worker-1  | 
 api_0-1   | =================================== Metrics ====================================
 api_0-1   | 
-api_0-1   | Key       Kind      Value                                                         Units 𝚫 Delta                          | Description       | Labels
+api_0-1   | Key       Kind      Value                                                         Units 𝚫 Delta                                       | Description       | Labels
 api_0-1   | --------------------------------------------------------------------------------
-api_0-1   | http.get  Histogram [p50=281.9980098958602, p99=281.9980098958602, max=468]#2     μs    𝚫 [p50=+0, p99=+0, max=+0]#+0    | http handler time | 
-api_0-1   | http.post Histogram [p50=8.000467695685316, p99=28.002674013785647, max=562]#8376 μs    𝚫 [p50=+0, p99=+0, max=+0]#+2302 | http handler time | 
+api_0-1   | http.get  Histogram [p50=174.98495734768213, p99=325.0243212937207, max=1748]#6   μs    𝚫 [p50=-74.02677504352576, p99=+0, max=+0]#+1 | http handler time | 
+api_0-1   | http.post Histogram [p50=8.000467695685316, p99=29.997078882470035, max=399]#8373 μs    𝚫 [p50=+0, p99=+0, max=+230]#+2221            | http handler time | 
 api_0-1   | 
 api_0-1   | ================================ After 10.000 s ================================
 api_0-1   | 
 api_1-1   | =================================== Metrics ====================================
 api_1-1   | 
-api_1-1   | Key       Kind      Value                                                          Units 𝚫 Delta                                           | Description       | Labels
+api_1-1   | Key       Kind      Value                                                        Units 𝚫 Delta                          | Description       | Labels
 api_1-1   | --------------------------------------------------------------------------------
-api_1-1   | http.get  Histogram [p50=176.99119972210946, p99=375.9664891304509, max=1405]#6    μs    𝚫 [p50=-178.00249024385005, p99=+0, max=+0]#+1    | http handler time | 
-api_1-1   | http.post Histogram [p50=8.000467695685316, p99=28.002674013785647, max=1096]#8370 μs    𝚫 [p50=+0, p99=+1.0009691804505216, max=+0]#+2294 | http handler time | 
+api_1-1   | http.get  Histogram [p50=112.99007813673754, p99=112.99007813673754, max=139]#2  μs    𝚫 [p50=+0, p99=+0, max=+0]#+0    | http handler time | 
+api_1-1   | http.post Histogram [p50=8.000467695685316, p99=29.00012111115082, max=556]#8375 μs    𝚫 [p50=+0, p99=+0, max=+0]#+2213 | http handler time | 
 api_1-1   | 
 api_1-1   | ================================ After 10.000 s ================================
 api_1-1   | 
 [Knginx-1 exited with code 0
 [Kapi_0-1 exited with code 143
+[Kapi_1-1 exited with code 143
 [Kworker-1 exited with code 143
 log truncated at line 1000

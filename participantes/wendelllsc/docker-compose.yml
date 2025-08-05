@@ -1,8 +1,6 @@
-version: "3.9"
-
 x-app-template:
   api: &api
-    image: wlsc/api-rinha-backend-2025:latest
+    image: wendelllsc/rinha_backend_2025_01:1.0.0
     networks:
       - backend
       - payment-processor
@@ -25,13 +23,23 @@ x-app-template:
     DB_URL: "jdbc:postgresql://postgres:5432/rinha"
     DB_USER: "rinha"
     DB_PASS: "rinha"
-    WORKER_POOL_SIZE: 25
+    WORKER_POOL_SIZE: 20
     CLIENT_MAX_CONNECTIONS: 200
+    QUEUE_SIZE: 12000
+    PROCESSOR_MAX_RETRIES: 10
+    JAVA_TOOL_OPTIONS: >
+      --enable-preview
+      -server
+      -XX:+UseZGC
+      -XX:+DisableExplicitGC
+      -XX:+AlwaysPreTouch
+      -XX:+TieredCompilation
+      -XX:TieredStopAtLevel=1
 
 services:
   postgres:
     image: postgres:17-alpine
-    container_name: postgres
+    container_name: postgres_api
     environment:
       POSTGRES_DB: rinha
       POSTGRES_USER: rinha
