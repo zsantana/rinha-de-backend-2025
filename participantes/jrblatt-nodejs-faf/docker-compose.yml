@@ -1,6 +1,6 @@
 services:
   api1:
-    image: jrblatt/rinha-de-backend-2025-nodejs
+    image: jrblatt/rinha-de-backend-2025-nodejs:latest
     container_name: api1
     hostname: api1
     environment:
@@ -8,18 +8,18 @@ services:
       - FOREIGN_STATE=api2
       - MODE=🔥
     volumes:
-      - rb2025:/tmp/
+      - nodejsfaf:/tmp/
     networks:
       - payment-processor
     restart: unless-stopped
     deploy:
       resources:
         limits:
-          cpus: "0.65"
+          cpus: "0.6"
           memory: 155MB
 
   api2:
-    image: jrblatt/rinha-de-backend-2025-nodejs
+    image: jrblatt/rinha-de-backend-2025-nodejs:latest
     container_name: api2
     hostname: api2
     environment:
@@ -27,14 +27,14 @@ services:
       - FOREIGN_STATE=api1
       - MODE=🔥
     volumes:
-      - rb2025:/tmp/
+      - nodejsfaf:/tmp/
     networks:
       - payment-processor
     restart: unless-stopped
     deploy:
       resources:
         limits:
-          cpus: "0.65"
+          cpus: "0.6"
           memory: 155MB
 
   nginx:
@@ -44,7 +44,7 @@ services:
       - "9999:9999"
     volumes:
       - ./nginx.conf:/usr/local/openresty/nginx/conf/nginx.conf:ro
-      - rb2025:/tmp/
+      - nodejsfaf:/tmp/
     depends_on:
       - api1
       - api2
@@ -54,11 +54,11 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.2"
+          cpus: "0.3"
           memory: 40MB
 
 volumes:
-  rb2025:
+  nodejsfaf:
     driver: local
 
 networks:

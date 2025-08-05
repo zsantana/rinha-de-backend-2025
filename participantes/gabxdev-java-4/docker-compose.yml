@@ -1,6 +1,6 @@
 services:
   backend-1:
-    image: gabxdevv/rinha-backend-2025-java-super-bolado-arq:3.0.0
+    image: gabxdevv/rinha-backend-2025-java-gabx:2.0.1
     restart: always
     environment:
       RETRY_API_DEFAULT: 15
@@ -13,7 +13,16 @@ services:
       EXTERNAL_UDP_HOST: backend-2
       EXTERNAL_UDP_PORT: 9004
       HANDLER_UDP_POOL_SIZE: 7
-
+      JAVA_OPTS: >-
+        -server
+        -XX:+UseG1GC
+        -XX:+UseFastAccessorMethods
+        -Xlog:disable
+        -XX:-PrintGC
+        -XX:+UseStringCache
+        -XX:-PrintGCDetails
+        -XX:-FlightRecorder
+        -XX:+DisableExplicitGC
     networks:
       - backend
       - payment-processor
@@ -24,7 +33,7 @@ services:
           memory: '125MB'
 
   backend-2:
-    image: gabxdevv/rinha-backend-2025-java-super-bolado-arq:3.0.0
+    image: gabxdevv/rinha-backend-2025-java-gabx:2.0.1
     restart: always
     environment:
       RETRY_API_DEFAULT: 15
@@ -37,7 +46,16 @@ services:
       EXTERNAL_UDP_HOST: backend-1
       EXTERNAL_UDP_PORT: 9003
       HANDLER_UDP_POOL_SIZE: 7
-
+      JAVA_OPTS: >-
+        -server
+        -XX:+UseG1GC
+        -XX:+UseFastAccessorMethods
+        -Xlog:disable
+        -XX:-PrintGC
+        -XX:+UseStringCache
+        -XX:-PrintGCDetails
+        -XX:-FlightRecorder
+        -XX:+DisableExplicitGC
     networks:
       - backend
       - payment-processor
@@ -48,7 +66,7 @@ services:
           memory: '125MB'
 
   load-balancer:
-    image: gabxdevv/loud-balance-diferenciado-native:3.0.0
+    image: gabxdevv/loud-balance-diferenciado-java-gabxv:2.0.1
     restart: always
     depends_on:
       - backend-1
@@ -65,6 +83,16 @@ services:
     environment:
       BACK_END_1_URL: backend-1
       BACK_END_2_URL: backend-2
+      JAVA_OPTS: >-
+        -server
+        -XX:+UseG1GC
+        -XX:+UseFastAccessorMethods
+        -Xlog:disable
+        -XX:-PrintGC
+        -XX:+UseStringCache
+        -XX:-PrintGCDetails
+        -XX:-FlightRecorder
+        -XX:+DisableExplicitGC
 
 networks:
   backend:

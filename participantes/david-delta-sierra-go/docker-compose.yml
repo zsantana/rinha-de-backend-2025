@@ -2,44 +2,58 @@ services:
   lb:
     networks:
       - backend
+      - payment-processor
     deploy:
       resources:
         limits:
-          cpus: "0.2"
-          memory: 50M
-    image: nginx:stable-alpine
+          cpus: "0.6"
+          memory: 60M
+    image: daviddeltasierra/rinha-2025-go-2:1.9
     volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf:ro
-      - socket-volume:/socket
-    ports:
-      - "9999:9999"
+      - /tmp:/tmp
+    environment:
+      - GATEWAY=true
     depends_on:
       - app-1
       - app-2
+    ports:
+      - "9999:8080"
 
-  app-1: &app-base
+  app-1:
     networks:
       - backend
       - payment-processor
     deploy:
       resources:
         limits:
-          cpus: "0.55"
-          memory: 50M
-    image: daviddeltasierra/rinha-2025-go
+          cpus: "0.3"
+          memory: 70M
+    image: daviddeltasierra/rinha-2025-go-2:1.9
     volumes:
-      - socket-volume:/socket
-    restart: always
+      - /tmp/app1:/tmp/app1
     environment:
-      - SOCKET_PATH=/socket/app1.sock
+      - GATEWAY=false
+      - SOCK=/tmp/app1/unix.sock
     depends_on:
-      postgres:
-        condition: service_healthy
+      - postgres
 
   app-2:
-    <<: *app-base
+    networks:
+      - backend
+      - payment-processor
+    deploy:
+      resources:
+        limits:
+          cpus: "0.3"
+          memory: 70M
+    image: daviddeltasierra/rinha-2025-go-2:1.9
+    volumes:
+      - /tmp/app2:/tmp/app2
     environment:
-      - SOCKET_PATH=/socket/app2.sock
+      - GATEWAY=false
+      - SOCK=/tmp/app2/unix.sock
+    depends_on:
+      - postgres
 
   postgres:
     networks:
@@ -47,22 +61,15 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.2"
-          memory: 200M
+          cpus: "0.3"
+          memory: 150M
     image: postgres:alpine
     user: postgres
-    healthcheck:
-      test: [ "CMD-SHELL", "pg_isready" ]
-      interval: 5s
-      retries: 6
     volumes:
       - ./scripts:/docker-entrypoint-initdb.d
     environment:
       - POSTGRES_PASSWORD=root
       - POSTGRES_DB=rinha
-
-volumes:
-  socket-volume:
 
 networks:
   backend:
