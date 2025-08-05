@@ -8,8 +8,8 @@ x-service-templates:
     deploy:
       resources:
         limits:
-          cpus: "0.20"
-          memory: "55MB"
+          cpus: "0.15"
+          memory: "45MB"
   worker: &worker
     image: flads/rinha25-php-go-worker:0.0.2
     container_name: worker
@@ -22,8 +22,8 @@ x-service-templates:
     deploy:
       resources:
         limits:
-          cpus: "0.30"
-          memory: "80MB"
+          cpus: "0.35"
+          memory: "90MB"
 
 services:
   api-1:
