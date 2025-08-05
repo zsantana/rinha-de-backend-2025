@@ -1,4 +1,4 @@
-# Rinha de Backend 2025 - CCS1201
+# Rinha de Backend 2025
 
 ## Tecnologias utilizadas
 
