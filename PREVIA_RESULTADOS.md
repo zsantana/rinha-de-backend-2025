@@ -1,5 +1,5 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Mon Aug  4 08:56:04 PM -03 2025**
+Atualizado em **Mon Aug  4 09:03:55 PM -03 2025**
 241 submissões / 214 resultados / 27 submissões com erro
 
 
@@ -71,7 +71,7 @@ Atualizado em **Mon Aug  4 08:56:04 PM -03 2025**
 |	felipemcassiano	|	68.15ms	|	0%	|	0	|	0	|	[felipemcassiano](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/felipemcassiano)
 |	felipeschirmann	|	2.91ms	|	16%	|	71889.2475	|	166372.2585	|	[felipeschirmann](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/felipeschirmann)
 |	felipewaku	|	169.11ms	|	0%	|	0	|	13986.715	|	[felipewaku](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/felipewaku)
-|	flads-go	|	4.03ms	|	14%	|	0	|	360240.0684	|	[flads-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/flads-go)
+|	flads-go	|	3.59ms	|	15%	|	0	|	363376.03975	|	[flads-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/flads-go)
 |	flads-php-go	|	4.02ms	|	14%	|	0	|	360775.458	|	[flads-php-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/flads-php-go)
 |	flads-php	|	1003.81ms	|	0%	|	0	|	270098.72	|	[flads-php](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/flads-php)
 |	francoggm-go	|	5.04ms	|	12%	|	0	|	343545.0032	|	[francoggm-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/francoggm-go)
