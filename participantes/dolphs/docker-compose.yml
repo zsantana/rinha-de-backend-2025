@@ -1,6 +1,6 @@
 services:
   payment-service-1:
-    image: tiagodolphine/payment-service-quarkus:0.0.3
+    image: tiagodolphine/payment-service-quarkus:0.0.1
     environment:
       - PAYMENT_PROCESSOR_DEFAULT=payment-processor-default
       - PAYMENT_PROCESSOR_DEFAULT_PORT=8080
@@ -28,7 +28,7 @@ services:
         condition: service_healthy
 
   payment-service-2:
-    image: tiagodolphine/payment-service-quarkus:0.0.3
+    image: tiagodolphine/payment-service-quarkus:0.0.1
     environment:
       - PAYMENT_PROCESSOR_DEFAULT=payment-processor-default
       - PAYMENT_PROCESSOR_DEFAULT_PORT=8080
