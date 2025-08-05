@@ -59,7 +59,7 @@ services:
       resources:
         limits:
           cpus: "0.2"
-          memory: "50MB"
+          memory: "30MB"
 
   app1:
     <<: *app
@@ -99,7 +99,7 @@ services:
       resources:
         limits:
           cpus: "0.2"
-          memory: "100MB"
+          memory: "120MB"
 
 networks:
   backend:
