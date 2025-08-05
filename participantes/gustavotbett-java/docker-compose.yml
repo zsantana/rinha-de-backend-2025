@@ -15,8 +15,8 @@ services:
     depends_on:
       - redis
     environment:
-      - PAYMENT_PROCESSOR_URL_DEFAULT=http://host.docker.internal:8001
-      - PAYMENT_PROCESSOR_URL_FALLBACK=http://host.docker.internal:8002
+      - PAYMENT_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080
+      - PAYMENT_PROCESSOR_URL_FALLBACK=http://payment-processor-fallback:8080
       - SPRING_REDIS_HOST=redis
       - SPRING_REDIS_PORT=6379
     deploy:
