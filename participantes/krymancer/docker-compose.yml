@@ -1,6 +1,6 @@
 services:
   api1:
-    image: krymancer/rinha-backend-2025-ocaml:latest
+    image: ghcr.io/krymancer/rinha-backend-2025-ocaml:main
     container_name: api1
     hostname: api1
     environment:
@@ -20,7 +20,7 @@ services:
           memory: 155MB
 
   api2:
-    image: krymancer/rinha-backend-2025-ocaml:latest
+    image: ghcr.io/krymancer/rinha-backend-2025-ocaml:main
     container_name: api2
     hostname: api2
     environment:
