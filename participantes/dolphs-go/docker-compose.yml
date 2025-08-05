@@ -1,6 +1,6 @@
 services:
   payment-service-1:
-    image: tiagodolphine/payment-service-go:0.0.3
+    image: tiagodolphine/payment-service-go:0.0.1
     environment:
       - PAYMENT_PROCESSOR_DEFAULT=http://payment-processor-default:8080
       - PAYMENT_PROCESSOR_FALLBACK=http://payment-processor-fallback:8080
@@ -23,7 +23,7 @@ services:
         condition: service_healthy
 
   payment-service-2:
-    image: tiagodolphine/payment-service-go:0.0.3
+    image: tiagodolphine/payment-service-go:0.0.1
     environment:
       - PAYMENT_PROCESSOR_DEFAULT=http://payment-processor-default:8080
       - PAYMENT_PROCESSOR_FALLBACK=http://payment-processor-fallback:8080
