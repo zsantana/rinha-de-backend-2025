@@ -59,21 +59,21 @@ services:
       UNIX_SOCKET: /var/run/api_2.sock
     command: ./main -socket /var/run/api_2.sock
 
-  rinha-api-3:
-    <<: *rinha-api-base
-    container_name: rinha-api-3
-    environment:
-      <<: *common-environment
-      UNIX_SOCKET: /var/run/api_3.sock
-    command: ./main -socket /var/run/api_3.sock
+  # rinha-api-3:
+  #   <<: *rinha-api-base
+  #   container_name: rinha-api-3
+  #   environment:
+  #     <<: *common-environment
+  #     UNIX_SOCKET: /var/run/api_3.sock
+  #   command: ./main -socket /var/run/api_3.sock
 
-  rinha-api-4:
-    <<: *rinha-api-base
-    container_name: rinha-api-4
-    environment:
-      <<: *common-environment
-      UNIX_SOCKET: /var/run/api_4.sock
-    command: ./main -socket /var/run/api_4.sock
+  # rinha-api-4:
+  #   <<: *rinha-api-base
+  #   container_name: rinha-api-4
+  #   environment:
+  #     <<: *common-environment
+  #     UNIX_SOCKET: /var/run/api_4.sock
+  #   command: ./main -socket /var/run/api_4.sock
 
   # rinha-api-4:
   #   <<: *rinha-api-base
