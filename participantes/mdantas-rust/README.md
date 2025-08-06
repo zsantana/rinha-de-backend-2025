@@ -1,1 +1,10 @@
 ### Testando servidor da rinha
+repositório https://github.com/lpj145/rinha-2025
+
+
+Tecnologiaaaa:
+RUST
+RUST
+RUST
+Mio
+Tudo é memória, mas não ta pronto.
