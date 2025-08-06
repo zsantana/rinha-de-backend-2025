@@ -1,9 +1,6 @@
 services:
   memdb:
-    image: pedrohsbarbosa99/rinha-golang-2025:0.1.6
-    args:
-      APP_ENTRY: ./cmd/database
-      OUTPUT_NAME: memdb
+    image: pedrohsbarbosa99/rinha-golang-2025:0.1.7
     command: ["./memdb"]
     volumes:
       - memsock:/tmp
@@ -18,20 +15,17 @@ services:
     restart: unless-stopped
 
   app1:
-    image: pedrohsbarbosa99/rinha-golang-2025:0.1.6
-    args:
-      APP_ENTRY: ./cmd/api
-      OUTPUT_NAME: main
+    image: pedrohsbarbosa99/rinha-golang-2025:0.1.7
     command: ["./main"]
+    environment:
+      - MEMDB_SOCKET=/tmp/kvstore.sock
+      - PROCESSOR_DEFAULT_URL=http://payment-processor-default:8080
+      - PROCESSOR_FALLBACK_URL=http://payment-processor-fallback:8080
     volumes:
       - memsock:/tmp
     networks:
       - backend
       - payment-processor
-    environment:
-      - MEMDB_SOCKET=/tmp/kvstore.sock
-      - PROCESSOR_DEFAULT_URL=http://payment-processor-default:8080
-      - PROCESSOR_FALLBACK_URL=http://payment-processor-fallback:8080
     depends_on:
       - memdb
     deploy:
@@ -42,20 +36,17 @@ services:
     restart: unless-stopped
 
   app2:
-    image: pedrohsbarbosa99/rinha-golang-2025:0.1.6
-    args:
-      APP_ENTRY: ./cmd/api
-      OUTPUT_NAME: main
+    image: pedrohsbarbosa99/rinha-golang-2025:0.1.7
     command: ["./main"]
+    environment:
+      - MEMDB_SOCKET=/tmp/kvstore.sock
+      - PROCESSOR_DEFAULT_URL=http://payment-processor-default:8080
+      - PROCESSOR_FALLBACK_URL=http://payment-processor-fallback:8080
     volumes:
       - memsock:/tmp
     networks:
       - backend
       - payment-processor
-    environment:
-      - MEMDB_SOCKET=/tmp/kvstore.sock
-      - PROCESSOR_DEFAULT_URL=http://payment-processor-default:8080
-      - PROCESSOR_FALLBACK_URL=http://payment-processor-fallback:8080
     depends_on:
       - memdb
     deploy:
@@ -81,7 +72,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.2"
+          cpus: "0.1"
           memory: 30M
     restart: unless-stopped
 
@@ -93,3 +84,4 @@ networks:
     driver: bridge
   payment-processor:
     external: true
+
