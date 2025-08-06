@@ -1,6 +1,6 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Wed Aug  6 07:12:16 PM -03 2025**
-257 submissões / 229 resultados / 28 submissões com erro
+Atualizado em **Wed Aug  6 07:18:48 PM -03 2025**
+256 submissões / 229 resultados / 27 submissões com erro
 
 
 | participante | p99 | bônus por desempenho (%) | multa ($) | lucro | submissão |
@@ -251,7 +251,6 @@ Atualizado em **Wed Aug  6 07:12:16 PM -03 2025**
 | gustavo-miranda | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/gustavo-miranda) |
 | hoffmano | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/hoffmano) |
 | jjeanjacques10 | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/jjeanjacques10) |
-| joao-xavier | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/joao-xavier) |
 | lauro-santana-go | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/lauro-santana-go) |
 | lecosas-java-spring-graalvm | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/lecosas-java-spring-graalvm) |
 | luanvictor-node | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/luanvictor-node) |
