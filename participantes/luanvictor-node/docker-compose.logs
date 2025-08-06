@@ -1,25 +1,31 @@
 
+ api1 Pulling 
+ api2 Pulling 
+ worker1 Pulling 
+ api1 Pulled 
+ worker1 Pulled 
+ api2 Pulled 
  Network luanvictor-node_backend  Creating
  Network luanvictor-node_backend  Created
  Container luanvictor-node-cache-1  Creating
  Container luanvictor-node-cache-1  Created
+ Container luanvictor-node-api2-1  Creating
  Container luanvictor-node-worker1-1  Creating
  Container luanvictor-node-api1-1  Creating
- Container luanvictor-node-api2-1  Creating
- Container luanvictor-node-api2-1  Created
- Container luanvictor-node-worker1-1  Created
  Container luanvictor-node-api1-1  Created
+ Container luanvictor-node-api2-1  Created
  Container luanvictor-node-nginx-1  Creating
+ Container luanvictor-node-worker1-1  Created
  Container luanvictor-node-nginx-1  Created
 Attaching to api1-1, api2-1, cache-1, nginx-1, worker1-1
-cache-1    | 1:C 04 Aug 2025 22:23:34.501 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
-cache-1    | 1:C 04 Aug 2025 22:23:34.501 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
-cache-1    | 1:C 04 Aug 2025 22:23:34.501 * Redis version=7.2.10, bits=64, commit=00000000, modified=0, pid=1, just started
-cache-1    | 1:C 04 Aug 2025 22:23:34.501 * Configuration loaded
-cache-1    | 1:M 04 Aug 2025 22:23:34.501 * monotonic clock: POSIX clock_gettime
-cache-1    | 1:M 04 Aug 2025 22:23:34.501 * Running mode=standalone, port=6379.
-cache-1    | 1:M 04 Aug 2025 22:23:34.502 * Server initialized
-cache-1    | 1:M 04 Aug 2025 22:23:34.502 * Ready to accept connections tcp
+cache-1    | 1:C 06 Aug 2025 03:29:07.917 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+cache-1    | 1:C 06 Aug 2025 03:29:07.917 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+cache-1    | 1:C 06 Aug 2025 03:29:07.917 * Redis version=7.2.10, bits=64, commit=00000000, modified=0, pid=1, just started
+cache-1    | 1:C 06 Aug 2025 03:29:07.917 * Configuration loaded
+cache-1    | 1:M 06 Aug 2025 03:29:07.917 * monotonic clock: POSIX clock_gettime
+cache-1    | 1:M 06 Aug 2025 03:29:08.002 * Running mode=standalone, port=6379.
+cache-1    | 1:M 06 Aug 2025 03:29:08.002 * Server initialized
+cache-1    | 1:M 06 Aug 2025 03:29:08.002 * Ready to accept connections tcp
 worker1-1  | [WORKER] Iniciando...
 worker1-1  | [REDIS] Conectado com sucesso!
 nginx-1    | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
@@ -34,10 +40,10 @@ nginx-1    | /docker-entrypoint.sh: Configuration complete; ready for start up
 api1-1     | [REDIS] Conectado com sucesso!
 api2-1     | [REDIS] Conectado com sucesso!
 [Knginx-1 exited with code 0
-[Kworker1-1 exited with code 137
-[Kapi2-1 exited with code 137
-[Kapi1-1 exited with code 137
-cache-1    | 1:signal-handler (1754346299) Received SIGTERM scheduling shutdown...
-cache-1    | 1:M 04 Aug 2025 22:24:59.531 * User requested shutdown...
-cache-1    | 1:M 04 Aug 2025 22:24:59.532 # Redis is now ready to exit, bye bye...
+[Kworker1-1 exited with code 143
+[Kapi2-1 exited with code 143
+[Kapi1-1 exited with code 143
+cache-1    | 1:signal-handler (1754451021) Received SIGTERM scheduling shutdown...
+cache-1    | 1:M 06 Aug 2025 03:30:21.824 * User requested shutdown...
+cache-1    | 1:M 06 Aug 2025 03:30:21.824 # Redis is now ready to exit, bye bye...
 [Kcache-1 exited with code 0

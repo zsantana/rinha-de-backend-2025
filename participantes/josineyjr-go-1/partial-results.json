@@ -1,12 +1,12 @@
 {
   "participante": "josineyjr-go-1",
-  "total_liquido": 375019.4203,
+  "total_liquido": 370579.2129,
   "total_bruto": 333404.6,
-  "total_taxas": 18262.23,
+  "total_taxas": 16670.23,
   "descricao": "'total_liquido' é sua pontuação final. Equivale ao seu lucro. Fórmula: total_liquido + (total_liquido * p99.bonus) - (total_liquido * multa.porcentagem)",
   "p99": {
-    "valor": "1.45ms",
-    "bonus": "19%",
+    "valor": "2.59ms",
+    "bonus": "17%",
     "max_requests": "550",
     "descricao": "Fórmula para o bônus: max((11 - p99.valor) * 0.02, 0)"
   },
@@ -34,15 +34,15 @@
     "descricao": "'qtd_sucesso' foram requests bem sucedidos para 'POST /payments' e 'qtd_falha' os requests com erro."
   },
   "pagamentos_realizados_default": {
-    "total_bruto": 317484.6,
-    "num_pagamentos": 15954,
-    "total_taxas": 15874.23,
+    "total_bruto": 333404.6,
+    "num_pagamentos": 16754,
+    "total_taxas": 16670.23,
     "descricao": "Informações do backend sobre solicitações de pagamento para o Payment Processor Default."
   },
   "pagamentos_realizados_fallback": {
-    "total_bruto": 15920,
-    "num_pagamentos": 800,
-    "total_taxas": 2388,
+    "total_bruto": 0,
+    "num_pagamentos": 0,
+    "total_taxas": 0,
     "descricao": "Informações do backend sobre solicitações de pagamento para o Payment Processor Fallback."
   }
 }
