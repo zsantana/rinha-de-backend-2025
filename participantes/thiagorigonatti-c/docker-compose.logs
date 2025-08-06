@@ -1,34 +1,0 @@
-
- api01 Pulling 
- api02 Pulling 
- f40b3c97b939 Pulling fs layer 
- f40b3c97b939 Downloading [>                                                  ]     935B/48.72kB
- f40b3c97b939 Verifying Checksum 
- f40b3c97b939 Download complete 
- f40b3c97b939 Extracting [=================================>                 ]  32.77kB/48.72kB
- f40b3c97b939 Extracting [==================================================>]  48.72kB/48.72kB
- f40b3c97b939 Pulling fs layer 
- f40b3c97b939 Extracting [==================================================>]  48.72kB/48.72kB
- f40b3c97b939 Pull complete 
- f40b3c97b939 Pull complete 
- api01 Pulled 
- api02 Pulled 
- Network thiagorigonatti-c_api  Creating
- Network thiagorigonatti-c_api  Created
- Container thiagorigonatti-c-api01-1  Creating
- Container thiagorigonatti-c-api02-1  Creating
- Container thiagorigonatti-c-api01-1  Created
- Container thiagorigonatti-c-api02-1  Created
- Container thiagorigonatti-c-haproxy-1  Creating
- Container thiagorigonatti-c-haproxy-1  Created
-Attaching to api01-1, api02-1, haproxy-1
-[Kapi02-1 exited with code 132
-[Kapi01-1 exited with code 132
-haproxy-1  | [NOTICE]   (1) : Initializing new worker (8)
-haproxy-1  | [NOTICE]   (8) : haproxy version is 3.3-dev5-cedb4f0
-haproxy-1  | [ALERT]    (8) : [/usr/local/etc/haproxy/haproxy.cfg:19] : 'server backend/api01' : could not resolve address 'api01'.
-haproxy-1  | [ALERT]    (8) : [/usr/local/etc/haproxy/haproxy.cfg:20] : 'server backend/api02' : could not resolve address 'api02'.
-haproxy-1  | [ALERT]    (8) : Failed to initialize server(s) addr.
-haproxy-1  | [NOTICE]   (1) : haproxy version is 3.3-dev5-cedb4f0
-haproxy-1  | [WARNING]  (1) : Failed to load worker!
-[Khaproxy-1 exited with code 1
