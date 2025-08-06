@@ -1,80 +1,91 @@
 
- api Pulling 
+ backend Pulling 
  59e22667830b Already exists 
- d64b03c5857c Pulling fs layer 
- 5e5acbba6200 Pulling fs layer 
- d64b03c5857c Downloading [==============>                                    ]  1.009kB/3.4kB
- d64b03c5857c Downloading [==================================================>]    3.4kB/3.4kB
- d64b03c5857c Download complete 
- d64b03c5857c Extracting [==================================================>]    3.4kB/3.4kB
- d64b03c5857c Extracting [==================================================>]    3.4kB/3.4kB
- d64b03c5857c Pull complete 
- 5e5acbba6200 Downloading [>                                                  ]    426kB/41.67MB
- 5e5acbba6200 Downloading [=>                                                 ]  1.262MB/41.67MB
- 5e5acbba6200 Downloading [===>                                               ]  2.519MB/41.67MB
- 5e5acbba6200 Downloading [======>                                            ]  5.034MB/41.67MB
- 5e5acbba6200 Downloading [===========>                                       ]  9.232MB/41.67MB
- 5e5acbba6200 Downloading [====================>                              ]  16.81MB/41.67MB
- 5e5acbba6200 Downloading [=============================>                     ]   24.8MB/41.67MB
- 5e5acbba6200 Downloading [======================================>            ]  32.36MB/41.67MB
- 5e5acbba6200 Downloading [==============================================>    ]  39.09MB/41.67MB
- 5e5acbba6200 Verifying Checksum 
- 5e5acbba6200 Download complete 
- 5e5acbba6200 Extracting [>                                                  ]    426kB/41.67MB
- 5e5acbba6200 Extracting [==========>                                        ]   8.52MB/41.67MB
- 5e5acbba6200 Extracting [===================>                               ]  16.19MB/41.67MB
- 5e5acbba6200 Extracting [============================>                      ]  23.86MB/41.67MB
- 5e5acbba6200 Extracting [======================================>            ]  31.95MB/41.67MB
- 5e5acbba6200 Extracting [==================================================>]  41.67MB/41.67MB
- 5e5acbba6200 Pull complete 
- api Pulled 
- Container felipeschirmann-rinha-v5  Creating
- Container felipeschirmann-rinha-v5  Created
-Attaching to felipeschirmann-rinha-v5
-felipeschirmann-rinha-v5  | 
-felipeschirmann-rinha-v5  |   .   ____          _            __ _ _
-felipeschirmann-rinha-v5  |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
-felipeschirmann-rinha-v5  | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
-felipeschirmann-rinha-v5  |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
-felipeschirmann-rinha-v5  |   '  |____| .__|_| |_|_| |_\__, | / / / /
-felipeschirmann-rinha-v5  |  =========|_|==============|___/=/_/_/_/
-felipeschirmann-rinha-v5  | 
-felipeschirmann-rinha-v5  |  :: Spring Boot ::                (v3.3.1)
-felipeschirmann-rinha-v5  | 
-felipeschirmann-rinha-v5  | 2025-07-26T20:08:27.297Z  INFO 1 --- [rinha] [           main] b.d.f.rinha.RinhaApplication             : Starting AOT-processed RinhaApplication using Java 21.0.7 with PID 1 (/app/rinha started by nonroot in /app)
-felipeschirmann-rinha-v5  | 2025-07-26T20:08:27.297Z  INFO 1 --- [rinha] [           main] b.d.f.rinha.RinhaApplication             : No active profile set, falling back to 1 default profile: "default"
-felipeschirmann-rinha-v5  | 2025-07-26T20:08:27.382Z  INFO 1 --- [rinha] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-felipeschirmann-rinha-v5  | 2025-07-26T20:08:27.383Z  INFO 1 --- [rinha] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-felipeschirmann-rinha-v5  | 2025-07-26T20:08:27.383Z  INFO 1 --- [rinha] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
-felipeschirmann-rinha-v5  | 2025-07-26T20:08:27.389Z  INFO 1 --- [rinha] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-felipeschirmann-rinha-v5  | 2025-07-26T20:08:27.389Z  INFO 1 --- [rinha] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 92 ms
-felipeschirmann-rinha-v5  | 2025-07-26T20:08:27.789Z  INFO 1 --- [rinha] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-felipeschirmann-rinha-v5  | 2025-07-26T20:08:27.790Z  INFO 1 --- [rinha] [           main] b.d.f.rinha.RinhaApplication             : Started RinhaApplication in 0.505 seconds (process running for 0.51)
-felipeschirmann-rinha-v5  | 2025-07-26T20:08:27.790Z  INFO 1 --- [rinha] [           main] b.d.f.r.service.QueueConsumerService     : Starting the payment queue consumer...
-felipeschirmann-rinha-v5  | 2025-07-26T20:08:30.689Z  INFO 1 --- [rinha] [omcat-handler-0] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-felipeschirmann-rinha-v5  | 2025-07-26T20:08:30.689Z  INFO 1 --- [rinha] [omcat-handler-0] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-felipeschirmann-rinha-v5  | 2025-07-26T20:08:30.689Z  INFO 1 --- [rinha] [omcat-handler-0] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-felipeschirmann-rinha-v5  | ### STATE COUNTERS HAVE BEEN RESET ###
-felipeschirmann-rinha-v5  | 2025-07-26T20:08:36.617Z  WARN 1 --- [rinha] [           main] b.d.f.r.service.QueueConsumerService     : Both processors are offline. Pausing queue consumption for 5 seconds.
-felipeschirmann-rinha-v5  | 2025-07-26T20:08:36.618Z  WARN 1 --- [rinha] [     virtual-72] b.d.f.rinha.service.PaymentWorker        : Health check indicates default is offline. Bypassing to fallback.
-felipeschirmann-rinha-v5  | 2025-07-26T20:08:41.617Z  WARN 1 --- [rinha] [           main] b.d.f.r.service.QueueConsumerService     : Both processors are offline. Pausing queue consumption for 5 seconds.
-felipeschirmann-rinha-v5  | 2025-07-26T20:08:46.618Z  WARN 1 --- [rinha] [           main] b.d.f.r.service.QueueConsumerService     : Both processors are offline. Pausing queue consumption for 5 seconds.
-felipeschirmann-rinha-v5  | 2025-07-26T20:08:47.708Z  WARN 1 --- [rinha] [cat-handler-521] b.d.f.r.controller.PaymentController     : Timeout occurred while waiting for the payment queue to drain.
-felipeschirmann-rinha-v5  | 2025-07-26T20:08:51.618Z  WARN 1 --- [rinha] [           main] b.d.f.r.service.QueueConsumerService     : Both processors are offline. Pausing queue consumption for 5 seconds.
-felipeschirmann-rinha-v5  | 2025-07-26T20:08:56.618Z  WARN 1 --- [rinha] [           main] b.d.f.r.service.QueueConsumerService     : Both processors are offline. Pausing queue consumption for 5 seconds.
-felipeschirmann-rinha-v5  | 2025-07-26T20:08:58.714Z  WARN 1 --- [rinha] [at-handler-2146] b.d.f.r.controller.PaymentController     : Timeout occurred while waiting for the payment queue to drain.
-felipeschirmann-rinha-v5  | 2025-07-26T20:09:01.618Z  WARN 1 --- [rinha] [           main] b.d.f.r.service.QueueConsumerService     : Both processors are offline. Pausing queue consumption for 5 seconds.
-felipeschirmann-rinha-v5  | 2025-07-26T20:09:06.618Z  WARN 1 --- [rinha] [           main] b.d.f.r.service.QueueConsumerService     : Both processors are offline. Pausing queue consumption for 5 seconds.
-felipeschirmann-rinha-v5  | 2025-07-26T20:09:09.722Z  WARN 1 --- [rinha] [at-handler-4876] b.d.f.r.controller.PaymentController     : Timeout occurred while waiting for the payment queue to drain.
-felipeschirmann-rinha-v5  | 2025-07-26T20:09:11.618Z  WARN 1 --- [rinha] [           main] b.d.f.r.service.QueueConsumerService     : Both processors are offline. Pausing queue consumption for 5 seconds.
-felipeschirmann-rinha-v5  | 2025-07-26T20:09:16.619Z  WARN 1 --- [rinha] [           main] b.d.f.r.service.QueueConsumerService     : Both processors are offline. Pausing queue consumption for 5 seconds.
-felipeschirmann-rinha-v5  | 2025-07-26T20:09:20.727Z  WARN 1 --- [rinha] [at-handler-8713] b.d.f.r.controller.PaymentController     : Timeout occurred while waiting for the payment queue to drain.
-felipeschirmann-rinha-v5  | 2025-07-26T20:09:21.619Z  WARN 1 --- [rinha] [           main] b.d.f.r.service.QueueConsumerService     : Both processors are offline. Pausing queue consumption for 5 seconds.
-felipeschirmann-rinha-v5  | 2025-07-26T20:09:26.619Z  WARN 1 --- [rinha] [           main] b.d.f.r.service.QueueConsumerService     : Both processors are offline. Pausing queue consumption for 5 seconds.
-felipeschirmann-rinha-v5  | 2025-07-26T20:09:31.619Z  WARN 1 --- [rinha] [           main] b.d.f.r.service.QueueConsumerService     : Both processors are offline. Pausing queue consumption for 5 seconds.
-felipeschirmann-rinha-v5  | 2025-07-26T20:09:31.735Z  WARN 1 --- [rinha] [t-handler-13661] b.d.f.r.controller.PaymentController     : Timeout occurred while waiting for the payment queue to drain.
-felipeschirmann-rinha-v5  | 2025-07-26T20:09:36.619Z  WARN 1 --- [rinha] [           main] b.d.f.r.service.QueueConsumerService     : Both processors are offline. Pausing queue consumption for 5 seconds.
-felipeschirmann-rinha-v5  | 2025-07-26T20:09:41.620Z  WARN 1 --- [rinha] [           main] b.d.f.r.service.QueueConsumerService     : Both processors are offline. Pausing queue consumption for 5 seconds.
-felipeschirmann-rinha-v5  | 2025-07-26T20:09:42.744Z  WARN 1 --- [rinha] [t-handler-16749] b.d.f.r.controller.PaymentController     : Timeout occurred while waiting for the payment queue to drain.
-[Kfelipeschirmann-rinha-v5 exited with code 143
+ 2bf92c19cd2b Pulling fs layer 
+ 2fb8b692fd44 Pulling fs layer 
+ 2bf92c19cd2b Downloading [==============>                                    ]  1.009kB/3.402kB
+ 2bf92c19cd2b Downloading [==================================================>]  3.402kB/3.402kB
+ 2bf92c19cd2b Download complete 
+ 2bf92c19cd2b Extracting [==================================================>]  3.402kB/3.402kB
+ 2bf92c19cd2b Extracting [==================================================>]  3.402kB/3.402kB
+ 2bf92c19cd2b Pull complete 
+ 2fb8b692fd44 Downloading [>                                                  ]  442.4kB/44.09MB
+ 2fb8b692fd44 Downloading [=>                                                 ]  1.327MB/44.09MB
+ 2fb8b692fd44 Downloading [===>                                               ]  2.654MB/44.09MB
+ 2fb8b692fd44 Downloading [=====>                                             ]  4.866MB/44.09MB
+ 2fb8b692fd44 Downloading [========>                                          ]  7.524MB/44.09MB
+ 2fb8b692fd44 Downloading [===============>                                   ]  13.34MB/44.09MB
+ 2fb8b692fd44 Downloading [===================>                               ]  17.38MB/44.09MB
+ 2fb8b692fd44 Downloading [======================>                            ]  20.06MB/44.09MB
+ 2fb8b692fd44 Downloading [==============================>                    ]  26.72MB/44.09MB
+ 2fb8b692fd44 Downloading [======================================>            ]  34.29MB/44.09MB
+ 2fb8b692fd44 Downloading [==============================================>    ]   41.4MB/44.09MB
+ 2fb8b692fd44 Verifying Checksum 
+ 2fb8b692fd44 Download complete 
+ 2fb8b692fd44 Extracting [>                                                  ]  458.8kB/44.09MB
+ 2fb8b692fd44 Extracting [=========>                                         ]  8.258MB/44.09MB
+ 2fb8b692fd44 Extracting [=================>                                 ]   15.6MB/44.09MB
+ 2fb8b692fd44 Extracting [==========================>                        ]   23.4MB/44.09MB
+ 2fb8b692fd44 Extracting [===================================>               ]   31.2MB/44.09MB
+ 2fb8b692fd44 Extracting [============================================>      ]  39.45MB/44.09MB
+ 2fb8b692fd44 Extracting [==================================================>]  44.09MB/44.09MB
+ 2fb8b692fd44 Pull complete 
+ backend Pulled 
+ Container felipeschirmann-rinha  Creating
+ Container felipeschirmann-rinha  Created
+Attaching to felipeschirmann-rinha
+felipeschirmann-rinha  |   .   ____          _            __ _ _
+felipeschirmann-rinha  |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+felipeschirmann-rinha  | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+felipeschirmann-rinha  |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+felipeschirmann-rinha  |   '  |____| .__|_| |_|_| |_\__, | / / / /
+felipeschirmann-rinha  |  =========|_|==============|___/=/_/_/_/
+felipeschirmann-rinha  | 
+felipeschirmann-rinha  |  :: Spring Boot ::                (v3.3.0)
+felipeschirmann-rinha  | 
+felipeschirmann-rinha  | 2025-08-05T19:43:00.353Z  INFO 1 --- [rinha-v2] [           main] b.d.f.rinha_v2.RinhaV2Application        : Starting AOT-processed RinhaV2Application using Java 21.0.7 with PID 1 (/app/rinha-v2 started by nonroot in /app)
+felipeschirmann-rinha  | 2025-08-05T19:43:00.353Z  INFO 1 --- [rinha-v2] [           main] b.d.f.rinha_v2.RinhaV2Application        : No active profile set, falling back to 1 default profile: "default"
+felipeschirmann-rinha  | ==================================================
+felipeschirmann-rinha  | =         PAYMENT PROCESSOR CONFIGURATION        =
+felipeschirmann-rinha  | = Default URL:  http://payment-processor-default:8080
+felipeschirmann-rinha  | = Fallback URL: http://payment-processor-fallback:8080
+felipeschirmann-rinha  | ==================================================
+felipeschirmann-rinha  | QUEUE INITIALIZED: Initial Logical Capacity: 10000
+felipeschirmann-rinha  | 2025-08-05T19:43:00.475Z  INFO 1 --- [rinha-v2] [           main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8080 (http)
+felipeschirmann-rinha  | 2025-08-05T19:43:00.478Z  INFO 1 --- [rinha-v2] [           main] b.d.f.rinha_v2.RinhaV2Application        : Started RinhaV2Application in 0.154 seconds (process running for 0.162)
+felipeschirmann-rinha  | SUMMARY WARNING: Both processors are failing. Clearing the pending payments queue.
+felipeschirmann-rinha  | HEALTH-CHECK [OK]: Processor 'default' is online. Status: HealthStatus[failing=false, minResponseTime=0]
+felipeschirmann-rinha  | HEALTH-CHECK [OK]: Processor 'fallback' is online. Status: HealthStatus[failing=false, minResponseTime=0]
+felipeschirmann-rinha  | HEALTH-CHECK [OK]: Processor 'default' is online. Status: HealthStatus[failing=false, minResponseTime=0]
+felipeschirmann-rinha  | HEALTH-CHECK [OK]: Processor 'fallback' is online. Status: HealthStatus[failing=false, minResponseTime=0]
+felipeschirmann-rinha  | HEALTH-CHECK [OK]: Processor 'default' is online. Status: HealthStatus[failing=false, minResponseTime=0]
+felipeschirmann-rinha  | HEALTH-CHECK [OK]: Processor 'fallback' is online. Status: HealthStatus[failing=false, minResponseTime=0]
+felipeschirmann-rinha  | HEALTH-CHECK [OK]: Processor 'default' is online. Status: HealthStatus[failing=false, minResponseTime=100]
+felipeschirmann-rinha  | HEALTH-CHECK [OK]: Processor 'fallback' is online. Status: HealthStatus[failing=false, minResponseTime=0]
+felipeschirmann-rinha  | QUEUE CAPACITY UPDATED: 10000 -> 5000
+felipeschirmann-rinha  | HEALTH-CHECK [OK]: Processor 'default' is online. Status: HealthStatus[failing=false, minResponseTime=100]
+felipeschirmann-rinha  | HEALTH-CHECK [OK]: Processor 'fallback' is online. Status: HealthStatus[failing=false, minResponseTime=0]
+felipeschirmann-rinha  | HEALTH-CHECK [OK]: Processor 'fallback' is online. Status: HealthStatus[failing=false, minResponseTime=0]
+felipeschirmann-rinha  | HEALTH-CHECK [FAIL]: Processor 'default' is offline or slow. Status: HealthStatus[failing=true, minResponseTime=100]
+felipeschirmann-rinha  | HEALTH-CHECK [OK]: Processor 'fallback' is online. Status: HealthStatus[failing=false, minResponseTime=0]
+felipeschirmann-rinha  | HEALTH-CHECK [FAIL]: Processor 'default' is offline or slow. Status: HealthStatus[failing=true, minResponseTime=100]
+felipeschirmann-rinha  | QUEUE CAPACITY UPDATED: 5000 -> 3750
+felipeschirmann-rinha  | HEALTH-CHECK [FAIL]: Processor 'default' is offline or slow. Status: HealthStatus[failing=true, minResponseTime=2000]
+felipeschirmann-rinha  | HEALTH-CHECK [FAIL]: Processor 'fallback' is offline or slow. Status: HealthStatus[failing=true, minResponseTime=1000]
+felipeschirmann-rinha  | HEALTH-CHECK [FAIL]: Processor 'default' is offline or slow. Status: HealthStatus[failing=true, minResponseTime=2000]
+felipeschirmann-rinha  | HEALTH-CHECK [FAIL]: Processor 'fallback' is offline or slow. Status: HealthStatus[failing=true, minResponseTime=1000]
+felipeschirmann-rinha  | SUMMARY WARNING: Both processors are failing. Clearing the pending payments queue.
+felipeschirmann-rinha  | HEALTH-CHECK [OK]: Processor 'default' is online. Status: HealthStatus[failing=false, minResponseTime=20]
+felipeschirmann-rinha  | HEALTH-CHECK [OK]: Processor 'fallback' is online. Status: HealthStatus[failing=false, minResponseTime=20]
+felipeschirmann-rinha  | QUEUE CAPACITY UPDATED: 3750 -> 10000
+felipeschirmann-rinha  | HEALTH-CHECK [OK]: Processor 'default' is online. Status: HealthStatus[failing=false, minResponseTime=20]
+felipeschirmann-rinha  | HEALTH-CHECK [OK]: Processor 'fallback' is online. Status: HealthStatus[failing=false, minResponseTime=20]
+felipeschirmann-rinha  | HEALTH-CHECK [OK]: Processor 'default' is online. Status: HealthStatus[failing=false, minResponseTime=0]
+felipeschirmann-rinha  | HEALTH-CHECK [OK]: Processor 'fallback' is online. Status: HealthStatus[failing=false, minResponseTime=5000]
+felipeschirmann-rinha  | QUEUE CAPACITY UPDATED: 10000 -> 100
+felipeschirmann-rinha  | HEALTH-CHECK [OK]: Processor 'default' is online. Status: HealthStatus[failing=false, minResponseTime=0]
+felipeschirmann-rinha  | HEALTH-CHECK [OK]: Processor 'fallback' is online. Status: HealthStatus[failing=false, minResponseTime=5000]
+felipeschirmann-rinha  | HEALTH-CHECK [OK]: Processor 'default' is online. Status: HealthStatus[failing=false, minResponseTime=0]
+felipeschirmann-rinha  | HEALTH-CHECK [OK]: Processor 'fallback' is online. Status: HealthStatus[failing=false, minResponseTime=5000]
+[Kfelipeschirmann-rinha exited with code 137
 log truncated at line 1000

@@ -1,0 +1,104 @@
+x-service-templates:
+  api: &api
+    image: gabrieleiro/rinha-de-backend-2025-api:5.0
+    networks:
+      - rinha-de-backend-2025
+      - payment-processor
+    deploy:
+      resources:
+        limits:
+          cpus: "0.25"
+          memory: "50MB"
+    depends_on:
+      - tracker
+
+services:
+  api-1: 
+    <<: *api
+    hostname: api-1
+    expose:
+      - "9901/udp"
+    ports:
+      - "9901:9901/udp"
+    environment:
+      DEFAULT_PROCESSOR_URL: "http://payment-processor-default:8080"
+      FALLBACK_PROCESSOR_URL: "http://payment-processor-fallback:8080"
+      TRACKER_URL: "tracker:1111"
+      ADDRESS: ":9901"
+
+  api-2:
+    <<: *api
+    hostname: api-2
+    ports:
+      - "9902:9902/udp"
+    environment:
+      DEFAULT_PROCESSOR_URL: "http://payment-processor-default:8080"
+      FALLBACK_PROCESSOR_URL: "http://payment-processor-fallback:8080"
+      TRACKER_URL: "tracker:1111"
+      ADDRESS: ":9902"
+
+  api-3:
+      <<: *api
+      hostname: api-3
+      ports:
+        - "9903:9903/udp"
+      environment:
+        DEFAULT_PROCESSOR_URL: "http://payment-processor-default:8080"
+        FALLBACK_PROCESSOR_URL: "http://payment-processor-fallback:8080"
+        TRACKER_URL: "tracker:1111"
+        ADDRESS: ":9903"
+
+  api-4:
+      <<: *api
+      hostname: api-4
+      ports:
+        - "9904:9904/udp"
+      environment:
+        DEFAULT_PROCESSOR_URL: "http://payment-processor-default:8080"
+        FALLBACK_PROCESSOR_URL: "http://payment-processor-fallback:8080"
+        TRACKER_URL: "tracker:1111"
+        ADDRESS: ":9904"
+
+  load-balancer:
+    image: gabrieleiro/rinha-de-backend-2025-load-balancer:5.0
+    networks:
+      - rinha-de-backend-2025
+    deploy:
+      resources:
+        limits:
+          cpus: "0.4"
+          memory: "50MB"
+    ports:
+      - "9999:9999"
+    environment:
+      ADDRESS: ":9999"
+      SERVERS: "api-1:9901,api-2:9902,api-3:9903,api-4:9904"
+    depends_on:
+      - api-1
+      - api-2
+      - api-3
+      - api-4
+
+  tracker:
+    hostname: tracker
+    image: gabrieleiro/rinha-de-backend-2025-tracker:4.0
+    networks:
+      - rinha-de-backend-2025
+    deploy:
+      resources:
+        limits:
+          cpus: "0.1"
+          memory: "50MB"
+    expose:
+      - "1111/udp"
+    ports:
+      - "1111:1111/udp"
+    environment:
+      ADDRESS: ":1111"
+
+networks:
+  rinha-de-backend-2025:
+    name: rinha-de-backend-2025
+    driver: bridge
+  payment-processor:
+    external: true

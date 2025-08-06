@@ -1,18 +1,12 @@
 services:
-  api:
-    image: felipeschirmann/rinha-backend-2025:5.0.0
-    container_name: felipeschirmann-rinha-v5
+  backend:
+    image: felipeschirmann/rinha-backend-2025:13.1.3
+#    image: rinha-backend:latest
+    container_name: felipeschirmann-rinha
     environment:
+     # --- Client and Health Check Settings ---
       PAYMENT_PROCESSOR_DEFAULT_URL: "http://payment-processor-default:8080"
       PAYMENT_PROCESSOR_FALLBACK_URL: "http://payment-processor-fallback:8080"
-      APP_QUEUE_CAPACITY: 350210
-      APP_DRAIN_TIMEOUT_MS: 1000
-      APP_CONTENTION_THRESHOLD: 95
-      APP_HIGH_VALUE_THRESHOLD: 200.00
-      APP_CONNECT_TIMEOUT_MS: 500
-      APP_RESPONSE_TIMEOUT_MS: 500
-      APP_POOL_MAX_TOTAL: 500
-      APP_POOL_MAX_PER_ROUTE: 250
     sysctls:
       net.core.somaxconn: 4096
     ports:
@@ -24,8 +18,8 @@ services:
         limits:
           cpus:  "1.5"
           memory: "350MB"
+
 networks:
-  backend:
-    driver: bridge
   payment-processor:
+    # This assumes the network is created externally by the payment-processor's docker-compose.
     external: true

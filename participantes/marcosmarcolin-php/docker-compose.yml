@@ -1,0 +1,96 @@
+x-service-templates:
+  api: &api
+    image: marcosmarcolin/rinhadebackend2025:2.5.0
+    entrypoint: [ "php", "/opt/www/app/public/index.php" ]
+    depends_on:
+      redis:
+        condition: service_healthy
+    networks:
+      - backend
+      - payment-processor
+    deploy:
+      resources:
+        limits:
+          cpus: "0.35"
+          memory: "90M"
+
+  worker-template: &worker
+    image: marcosmarcolin/rinhadebackend2025:2.5.0
+    depends_on:
+      redis:
+        condition: service_healthy
+    networks:
+      - backend
+      - payment-processor
+
+services:
+  worker-payments-default:
+    <<: *worker
+    entrypoint: [ "php", "/opt/www/app/workers/payments.php" ]
+    deploy:
+      resources:
+        limits:
+          cpus: "0.2"
+          memory: "70M"
+
+  worker-health:
+    <<: *worker
+    entrypoint: [ "php", "/opt/www/app/workers/health.php" ]
+    deploy:
+      resources:
+        limits:
+          cpus: "0.15"
+          memory: "20M"
+
+  haproxy:
+    image: haproxy:latest
+    restart: always
+    ports:
+      - "9999:9999"
+    volumes:
+      - ./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
+    depends_on:
+      - api01
+      - api02
+    networks:
+      - backend
+    deploy:
+      resources:
+        limits:
+          cpus: "0.3"
+          memory: "50M"
+
+  redis:
+    image: redis:latest
+    networks:
+      - backend
+    command:
+      [
+        "redis-server",
+        "--save", "",
+        "--appendonly", "no",
+        "--loglevel", "debug",
+        "--logfile", "/dev/null"
+      ]
+    healthcheck:
+      test: [ "CMD", "redis-cli", "ping" ]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+    deploy:
+      resources:
+        limits:
+          cpus: "0.15"
+          memory: "30M"
+
+  api01:
+    <<: *api
+
+  api02:
+    <<: *api
+
+networks:
+  backend:
+    driver: bridge
+  payment-processor:
+    external: true

@@ -1,111 +1,100 @@
 x-service-templates:
-  api: &api
-    image: lucasgoveia/rinha-2025-api
-    depends_on:
-      - postgres
-      - redis
+  server: &server
+    image: lucasgoveia/rinha-2025-api:2d6ea0a732eea8
+    user: "1000:1000"
     restart: always
-    networks:
-      - app
-    deploy:
-      resources:
-        limits:
-          cpus: '0.2'
-          memory: '30M'
-
-  worker: &worker
-    image: lucasgoveia/rinha-2025-worker
     depends_on:
       - postgres
-      - redis
+      - worker
     networks:
-      - app
+      - backend
       - payment-processor
-    restart: always
     deploy:
       resources:
         limits:
-          cpus: '0.5'
-          memory: '60M'
+          cpus: '0.3'
+          memory: '30M'
+    volumes:
+      - pg_socket:/var/run/postgresql
+      - backend:/tmp/
 
 services:
-  nginx:
-    image: nginx:alpine
+  pingora:
+    image: lucasgoveia/rinha-2025-proxy:2d6ea0a732eea8
+    user: "1000:1000"
     ports:
       - "9999:9999"
-    volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf:ro
     depends_on:
-      - api-1
-      - api-2
+      - server1
+      - server2
     networks:
-      - app
+      - backend
     restart: always
+    ulimits:
+      nofile:
+        soft: 16384
+        hard: 16384
     deploy:
       resources:
         limits:
-          cpus: '0.2'
-          memory: '20M'
+          cpus: '0.35'
+          memory: '50M'
+    volumes:
+      - backend:/tmp/
 
-  api-1:
-    <<: *api
-    container_name: rinhaapi-1
-    hostname: api1
+  server1:
+    <<: *server
+    container_name: server1
+    hostname: server1
     environment:
+      - SERVER_SOCKET=/tmp/server1.sock
       - SERVER_HOST=0.0.0.0
       - SERVER_PORT=7118
-      - POSTGRES_URL=postgres://postgres:password@postgres:5432/rinha2025?pool_max_conns=5
-      - TELEMETRY_ENABLED=false
+      - POSTGRES_URL=postgres://postgres:password@/rinha2025?host=/var/run/postgresql&pool_max_conns=3&pool_min_conns=2&pool_max_conn_idle_time=30s&pool_max_conn_lifetime=5m&pool_health_check_period=30s
       - SERVICE_DEFAULT_URL=http://payment-processor-default:8080/payments
       - SERVICE_FALLBACK_URL=http://payment-processor-fallback:8080/payments
-      - REDIS_URL=redis://redis:6379
-      - REDIS_STREAM_NAME=payments
-      - REDIS_STREAM_GROUP=payments-group
+      - SERVICE_DEFAULT_HEALTH_URL=http://nginx:9000/default/payments/service-health
+      - SERVICE_FALLBACK_HEALTH_URL=http://nginx:9000/fallback/payments/service-health
 
-  api-2:
-    <<: *api
-    container_name: rinhaapi-2
-    hostname: api2
+  server2:
+    <<: *server
+    container_name: server2
+    hostname: server2
     environment:
+      - SERVER_SOCKET=/tmp/server2.sock
       - SERVER_HOST=0.0.0.0
       - SERVER_PORT=7118
-      - POSTGRES_URL=postgres://postgres:password@postgres:5432/rinha2025?pool_max_conns=5
-      - TELEMETRY_ENABLED=false
+      - POSTGRES_URL=postgres://postgres:password@/rinha2025?host=/var/run/postgresql&pool_max_conns=3&pool_min_conns=2&pool_max_conn_idle_time=30s&pool_max_conn_lifetime=5m&pool_health_check_period=30s
       - SERVICE_DEFAULT_URL=http://payment-processor-default:8080/payments
       - SERVICE_FALLBACK_URL=http://payment-processor-fallback:8080/payments
-      - REDIS_URL=redis://redis:6379
-      - REDIS_STREAM_NAME=payments
-      - REDIS_STREAM_GROUP=payments-group
+      - SERVICE_DEFAULT_HEALTH_URL=http://nginx:9000/default/payments/service-health
+      - SERVICE_FALLBACK_HEALTH_URL=http://nginx:9000/fallback/payments/service-health
 
-  worker-1:
-    <<: *worker
-    container_name: worker-1
-    environment:
-      - SERVER_HOST=0.0.0.0
-      - SERVER_PORT=7118
-      - POSTGRES_URL=postgres://postgres:password@postgres:5432/rinha2025?pool_max_conns=3
-      - TELEMETRY_ENABLED=false
-      - SERVICE_DEFAULT_URL=http://payment-processor-default:8080/payments
-      - SERVICE_FALLBACK_URL=http://payment-processor-fallback:8080/payments
-      - REDIS_URL=redis://redis:6379
-      - REDIS_STREAM_NAME=payments
-      - REDIS_STREAM_GROUP=payments-group
-      - REDIS_CONSUMER_NAME=worker-1
-
-
-  redis:
-    image: redis:8-alpine
-    command: redis-server --save "" --appendonly no --maxclients 20000
-    ports:
-      - "63790:6379"
+  worker:
+    image: lucasgoveia/rinha-2025-worker:2d6ea0a732eea8
+    user: "1000:1000"
+    restart: always
+    depends_on:
+      - postgres
     networks:
-      - app
+      - backend
+      - payment-processor
     deploy:
       resources:
         limits:
-          cpus: '0.2'
-          memory: '100M'
-    restart: unless-stopped
+          cpus: '0.4'
+          memory: '60M'
+    volumes:
+      - pg_socket:/var/run/postgresql
+      - backend:/tmp/
+    container_name: worker
+    hostname: worker
+    environment:
+      - POSTGRES_URL=postgres://postgres:password@/rinha2025?host=/var/run/postgresql&pool_max_conns=3&pool_min_conns=2&pool_max_conn_idle_time=30s&pool_max_conn_lifetime=5m&pool_health_check_period=30s
+      - SERVICE_DEFAULT_URL=http://payment-processor-default:8080/payments
+      - SERVICE_FALLBACK_URL=http://payment-processor-fallback:8080/payments
+      - SERVICE_DEFAULT_HEALTH_URL=http://payment-processor-default:8080/payments/service-health
+      - SERVICE_FALLBACK_HEALTH_URL=http://payment-processor-fallback:8080/payments/service-health
 
   postgres:
     image: postgres:17-alpine
@@ -113,26 +102,26 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=password
       - POSTGRES_DB=rinha2025
-    ports:
-      - "54320:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+      - pg_socket:/var/run/postgresql
     networks:
-      - app
+      - backend
     restart: always
     deploy:
       resources:
         limits:
-          cpus: '0.2'
-          memory: '100M'
-
+          cpus: '0.15'
+          memory: '128M'
 
 volumes:
   postgres_data:
+  pg_socket:
+  backend:
 
 networks:
-  app:
+  backend:
     driver: bridge
   payment-processor:
     external: true
