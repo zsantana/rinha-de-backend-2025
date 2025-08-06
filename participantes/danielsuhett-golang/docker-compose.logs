@@ -1,68 +1,4 @@
 
- api2 Pulling 
- api1 Pulling 
- 9824c27679d3 Already exists 
- b2a86d9dadfb Pulling fs layer 
- 37dd80ecb604 Pulling fs layer 
- 38640102dfbe Pulling fs layer 
- 794672e9087d Pulling fs layer 
- 794672e9087d Waiting 
- 9824c27679d3 Already exists 
- b2a86d9dadfb Pulling fs layer 
- 37dd80ecb604 Pulling fs layer 
- 38640102dfbe Pulling fs layer 
- 794672e9087d Pulling fs layer 
- 794672e9087d Waiting 
- 37dd80ecb604 Downloading [==================================================>]     126B/126B
- 37dd80ecb604 Verifying Checksum 
- 37dd80ecb604 Download complete 
- 37dd80ecb604 Verifying Checksum 
- 37dd80ecb604 Download complete 
- b2a86d9dadfb Downloading [>                                                  ]  3.533kB/282.5kB
- b2a86d9dadfb Downloading [>                                                  ]  3.533kB/282.5kB
- b2a86d9dadfb Verifying Checksum 
- b2a86d9dadfb Download complete 
- b2a86d9dadfb Download complete 
- b2a86d9dadfb Extracting [=====>                                             ]  32.77kB/282.5kB
- b2a86d9dadfb Extracting [=====>                                             ]  32.77kB/282.5kB
- b2a86d9dadfb Extracting [==================================================>]  282.5kB/282.5kB
- b2a86d9dadfb Extracting [==================================================>]  282.5kB/282.5kB
- b2a86d9dadfb Extracting [==================================================>]  282.5kB/282.5kB
- b2a86d9dadfb Extracting [==================================================>]  282.5kB/282.5kB
- b2a86d9dadfb Pull complete 
- b2a86d9dadfb Pull complete 
- 37dd80ecb604 Extracting [==================================================>]     126B/126B
- 37dd80ecb604 Extracting [==================================================>]     126B/126B
- 37dd80ecb604 Extracting [==================================================>]     126B/126B
- 37dd80ecb604 Extracting [==================================================>]     126B/126B
- 37dd80ecb604 Pull complete 
- 37dd80ecb604 Pull complete 
- 38640102dfbe Downloading [>                                                  ]  31.12kB/3.026MB
- 38640102dfbe Downloading [>                                                  ]  31.12kB/3.026MB
- 38640102dfbe Download complete 
- 38640102dfbe Extracting [>                                                  ]  32.77kB/3.026MB
- 38640102dfbe Download complete 
- 38640102dfbe Extracting [>                                                  ]  32.77kB/3.026MB
- 38640102dfbe Extracting [==================================================>]  3.026MB/3.026MB
- 38640102dfbe Extracting [==================================================>]  3.026MB/3.026MB
- 38640102dfbe Pull complete 
- 38640102dfbe Pull complete 
- 794672e9087d Downloading [>                                                  ]  31.46kB/3.026MB
- 794672e9087d Downloading [>                                                  ]  31.46kB/3.026MB
- 794672e9087d Downloading [===================================>               ]   2.13MB/3.026MB
- 794672e9087d Downloading [===================================>               ]   2.13MB/3.026MB
- 794672e9087d Verifying Checksum 
- 794672e9087d Verifying Checksum 
- 794672e9087d Download complete 
- 794672e9087d Extracting [>                                                  ]  32.77kB/3.026MB
- 794672e9087d Download complete 
- 794672e9087d Extracting [>                                                  ]  32.77kB/3.026MB
- 794672e9087d Extracting [==================================================>]  3.026MB/3.026MB
- 794672e9087d Extracting [==================================================>]  3.026MB/3.026MB
- 794672e9087d Pull complete 
- 794672e9087d Pull complete 
- api1 Pulled 
- api2 Pulled 
  Network danielsuhett-golang_backend  Creating
  Network danielsuhett-golang_backend  Created
  Volume "danielsuhett-golang_sockets"  Creating
@@ -71,21 +7,19 @@
  Container go-rinha-redis  Created
  Container danielsuhett-golang-api2-1  Creating
  Container danielsuhett-golang-api1-1  Creating
- Container danielsuhett-golang-api1-1  Created
  Container danielsuhett-golang-api2-1  Created
+ Container danielsuhett-golang-api1-1  Created
  Container go-rinha-nginx  Creating
  Container go-rinha-nginx  Created
 Attaching to api1-1, api2-1, go-rinha-nginx, go-rinha-redis
-go-rinha-redis  | 1:C 05 Aug 2025 23:45:37.736 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
-go-rinha-redis  | 1:C 05 Aug 2025 23:45:37.736 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
-go-rinha-redis  | 1:C 05 Aug 2025 23:45:37.736 * Redis version=7.2.10, bits=64, commit=00000000, modified=0, pid=1, just started
-go-rinha-redis  | 1:C 05 Aug 2025 23:45:37.736 * Configuration loaded
-go-rinha-redis  | 1:M 05 Aug 2025 23:45:37.737 * monotonic clock: POSIX clock_gettime
-go-rinha-redis  | 1:M 05 Aug 2025 23:45:37.737 * Running mode=standalone, port=6379.
-go-rinha-redis  | 1:M 05 Aug 2025 23:45:37.802 * Server initialized
-go-rinha-redis  | 1:M 05 Aug 2025 23:45:37.802 * Ready to accept connections tcp
-api2-1          | 2025/08/05 23:45:43 Server listening on Unix socket: /var/run/sockets/app2.sock
-api1-1          | 2025/08/05 23:45:43 Server listening on Unix socket: /var/run/sockets/app1.sock
+go-rinha-redis  | 1:C 06 Aug 2025 00:14:44.505 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+go-rinha-redis  | 1:C 06 Aug 2025 00:14:44.505 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+go-rinha-redis  | 1:C 06 Aug 2025 00:14:44.505 * Redis version=7.2.10, bits=64, commit=00000000, modified=0, pid=1, just started
+go-rinha-redis  | 1:C 06 Aug 2025 00:14:44.505 * Configuration loaded
+go-rinha-redis  | 1:M 06 Aug 2025 00:14:44.505 * monotonic clock: POSIX clock_gettime
+go-rinha-redis  | 1:M 06 Aug 2025 00:14:44.506 * Running mode=standalone, port=6379.
+go-rinha-redis  | 1:M 06 Aug 2025 00:14:44.506 * Server initialized
+go-rinha-redis  | 1:M 06 Aug 2025 00:14:44.507 * Ready to accept connections tcp
 go-rinha-nginx  | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
 go-rinha-nginx  | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
 go-rinha-nginx  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
@@ -93,47 +27,29 @@ go-rinha-nginx  | 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of
 go-rinha-nginx  | 10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
 go-rinha-nginx  | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
 go-rinha-nginx  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+api1-1          | 2025/08/06 00:14:50 Server listening on Unix socket: /var/run/sockets/app1.sock
 go-rinha-nginx  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
 go-rinha-nginx  | /docker-entrypoint.sh: Configuration complete; ready for start up
-go-rinha-nginx  | 2025/08/05 23:45:44 [notice] 1#1: using the "epoll" event method
-go-rinha-nginx  | 2025/08/05 23:45:44 [notice] 1#1: nginx/1.25.5
-go-rinha-nginx  | 2025/08/05 23:45:44 [notice] 1#1: built by gcc 13.2.1 20231014 (Alpine 13.2.1_git20231014) 
-go-rinha-nginx  | 2025/08/05 23:45:44 [notice] 1#1: OS: Linux 6.1.0-37-amd64
-go-rinha-nginx  | 2025/08/05 23:45:44 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
-go-rinha-nginx  | 2025/08/05 23:45:44 [notice] 1#1: start worker processes
-go-rinha-nginx  | 2025/08/05 23:45:44 [notice] 1#1: start worker process 30
-go-rinha-nginx  | 2025/08/05 23:45:44 [notice] 1#1: start worker process 31
-go-rinha-nginx  | 2025/08/05 23:45:44 [notice] 1#1: start worker process 32
-go-rinha-nginx  | 2025/08/05 23:45:44 [notice] 1#1: start worker process 33
-go-rinha-nginx  | 2025/08/05 23:46:48 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
-go-rinha-nginx  | 2025/08/05 23:46:48 [notice] 30#30: gracefully shutting down
-go-rinha-nginx  | 2025/08/05 23:46:48 [notice] 32#32: gracefully shutting down
-go-rinha-nginx  | 2025/08/05 23:46:48 [notice] 31#31: gracefully shutting down
-go-rinha-nginx  | 2025/08/05 23:46:48 [notice] 33#33: gracefully shutting down
-go-rinha-nginx  | 2025/08/05 23:46:48 [notice] 32#32: exiting
-go-rinha-nginx  | 2025/08/05 23:46:48 [notice] 30#30: exiting
-go-rinha-nginx  | 2025/08/05 23:46:48 [notice] 33#33: exiting
-go-rinha-nginx  | 2025/08/05 23:46:48 [notice] 31#31: exiting
-go-rinha-nginx  | 2025/08/05 23:46:48 [notice] 32#32: exit
-go-rinha-nginx  | 2025/08/05 23:46:48 [notice] 30#30: exit
-go-rinha-nginx  | 2025/08/05 23:46:48 [notice] 33#33: exit
-go-rinha-nginx  | 2025/08/05 23:46:48 [notice] 31#31: exit
-go-rinha-nginx  | 2025/08/05 23:46:48 [notice] 1#1: signal 17 (SIGCHLD) received from 33
-go-rinha-nginx  | 2025/08/05 23:46:48 [notice] 1#1: worker process 31 exited with code 0
-go-rinha-nginx  | 2025/08/05 23:46:48 [notice] 1#1: worker process 33 exited with code 0
-go-rinha-nginx  | 2025/08/05 23:46:48 [notice] 1#1: signal 29 (SIGIO) received
-go-rinha-nginx  | 2025/08/05 23:46:48 [notice] 1#1: signal 17 (SIGCHLD) received from 32
-go-rinha-nginx  | 2025/08/05 23:46:48 [notice] 1#1: worker process 30 exited with code 0
-go-rinha-nginx  | 2025/08/05 23:46:48 [notice] 1#1: worker process 32 exited with code 0
-go-rinha-nginx  | 2025/08/05 23:46:48 [notice] 1#1: exit
+api2-1          | 2025/08/06 00:14:50 Server listening on Unix socket: /var/run/sockets/app2.sock
+api1-1          | 2025/08/06 00:15:18 Payment processor error 500: 
+api1-1          | 2025/08/06 00:15:18 Non-success status 500 from processor default
+api1-1          | 2025/08/06 00:15:18 Signal failure for default
+api1-1          | 2025/08/06 00:15:18 Circuit breaker color changed from GREEN to RED
+api2-1          | 2025/08/06 00:15:18 Payment processor error 500: 
+api2-1          | 2025/08/06 00:15:18 Non-success status 500 from processor default
+api2-1          | 2025/08/06 00:15:18 Signal failure for default
+api2-1          | 2025/08/06 00:15:18 Circuit breaker color changed from GREEN to RED
+api2-1          | 2025/08/06 00:15:18 Received color change: RED
+api1-1          | 2025/08/06 00:15:42 Circuit breaker color changed from RED to GREEN
+api2-1          | 2025/08/06 00:15:42 Received color change: GREEN
 [Kgo-rinha-nginx exited with code 0
-api2-1          | 2025/08/05 23:46:48 Shutting down gracefully...
-api2-1          | 2025/08/05 23:46:48 Server stopped
-api1-1          | 2025/08/05 23:46:48 Shutting down gracefully...
-api1-1          | 2025/08/05 23:46:48 Server stopped
+api1-1          | 2025/08/06 00:16:00 Shutting down gracefully...
+api1-1          | 2025/08/06 00:16:00 Server stopped
+api2-1          | 2025/08/06 00:16:00 Shutting down gracefully...
+api2-1          | 2025/08/06 00:16:00 Server stopped
 [Kapi2-1 exited with code 0
-[Kapi1-1 exited with code 0
-go-rinha-redis  | 1:signal-handler (1754437609) Received SIGTERM scheduling shutdown...
-go-rinha-redis  | 1:M 05 Aug 2025 23:46:49.326 * User requested shutdown...
-go-rinha-redis  | 1:M 05 Aug 2025 23:46:49.326 # Redis is now ready to exit, bye bye...
+go-rinha-redis  | 1:signal-handler (1754439361) Received SIGTERM scheduling shutdown...
+go-rinha-redis  | 1:M 06 Aug 2025 00:16:01.115 * User requested shutdown...
+go-rinha-redis  | 1:M 06 Aug 2025 00:16:01.115 # Redis is now ready to exit, bye bye...
 [Kgo-rinha-redis exited with code 0
+log truncated at line 1000
