@@ -5,6 +5,8 @@ x-api_template: &api
   command: ["-m", "api"]
   depends_on:
     - worker
+  environment:
+    RUST_LOG: "info"
   deploy:
     resources:
       limits:
@@ -19,6 +21,9 @@ services:
       - "9999:9999"
     volumes:
       - uds:/var/run
+    # we need this cause io_uring syscall is disabled by default in docker
+    security_opt:
+      - seccomp=unconfined
     depends_on:
       - api_0
       - api_1
