@@ -1,49 +1,0 @@
-
- worker1 Pulling 
- api1 Pulling 
- api2 Pulling 
- api1 Pulled 
- api2 Pulled 
- worker1 Pulled 
- Network luanvictor-node_backend  Creating
- Network luanvictor-node_backend  Created
- Container luanvictor-node-cache-1  Creating
- Container luanvictor-node-cache-1  Created
- Container luanvictor-node-api1-1  Creating
- Container luanvictor-node-api2-1  Creating
- Container luanvictor-node-worker1-1  Creating
- Container luanvictor-node-api2-1  Created
- Container luanvictor-node-api1-1  Created
- Container luanvictor-node-nginx-1  Creating
- Container luanvictor-node-worker1-1  Created
- Container luanvictor-node-nginx-1  Created
-Attaching to api1-1, api2-1, cache-1, nginx-1, worker1-1
-cache-1    | 1:C 06 Aug 2025 01:37:39.303 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
-cache-1    | 1:C 06 Aug 2025 01:37:39.303 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
-cache-1    | 1:C 06 Aug 2025 01:37:39.303 * Redis version=7.2.10, bits=64, commit=00000000, modified=0, pid=1, just started
-cache-1    | 1:C 06 Aug 2025 01:37:39.303 * Configuration loaded
-cache-1    | 1:M 06 Aug 2025 01:37:39.303 * monotonic clock: POSIX clock_gettime
-cache-1    | 1:M 06 Aug 2025 01:37:39.304 * Running mode=standalone, port=6379.
-cache-1    | 1:M 06 Aug 2025 01:37:39.304 * Server initialized
-cache-1    | 1:M 06 Aug 2025 01:37:39.304 * Ready to accept connections tcp
-worker1-1  | [WORKER] Iniciando...
-worker1-1  | [REDIS] Conectado com sucesso!
-nginx-1    | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
-nginx-1    | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
-nginx-1    | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
-nginx-1    | 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
-nginx-1    | 10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
-nginx-1    | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
-nginx-1    | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
-nginx-1    | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
-nginx-1    | /docker-entrypoint.sh: Configuration complete; ready for start up
-api1-1     | [REDIS] Conectado com sucesso!
-api2-1     | [REDIS] Conectado com sucesso!
-[Knginx-1 exited with code 0
-[Kworker1-1 exited with code 143
-[Kapi2-1 exited with code 143
-[Kapi1-1 exited with code 143
-cache-1    | 1:signal-handler (1754444333) Received SIGTERM scheduling shutdown...
-cache-1    | 1:M 06 Aug 2025 01:38:53.361 * User requested shutdown...
-cache-1    | 1:M 06 Aug 2025 01:38:53.361 # Redis is now ready to exit, bye bye...
-[Kcache-1 exited with code 0
