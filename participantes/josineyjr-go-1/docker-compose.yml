@@ -1,14 +1,42 @@
 x-service-templates:
   base: &base
-    image: josiney/rdb25_02-amd64:66b68b63
+    image: josiney/rdb25_02-amd64:a5ff5bf
+    volumes:
+      - sockets:/sockets
     networks:
       - backend
       - payment-processor
-    depends_on:
-      redis:
-        condition: service_healthy
+
 
 services:
+  lb:
+    <<: *base
+    container_name: lb
+    hostname: lb
+    deploy:
+      resources:
+        limits:
+          cpus: "0.25"
+          memory: "30MB"
+    environment:
+      - LB=1
+      - PORT=:80
+      - SOCKET_PATH=/sockets/api1.sock
+      - WORKER_SOCKET_PATH=/sockets/worker_http.sock
+      - PAYMENTS_SOCKET_PATH=/sockets/payments.sock
+      - SUMMARY_SOCKET_PATH=/sockets/summary.sock
+      - PURGE_SOCKET_PATH=/sockets/purge.sock
+      - PAYMENTS_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080/payments
+      - PAYMENTS_PROCESSOR_URL_FALLBACK=http://payment-processor-fallback:8080/payments
+      - HEALTH_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080/payments/service-health
+      - HEALTH_PROCESSOR_URL_FALLBACK=http://payment-processor-fallback:8080/payments/service-health
+    command: ./api
+    ports:
+      - 9999:80
+    depends_on:
+      - api1
+      - api2
+
   api1:
     <<: *base
     container_name: api1
@@ -16,11 +44,14 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.1"
+          cpus: "0.25"
           memory: "30MB"
     environment:
-      - PORT=9997
-      - REDIS_URL=redis://redis-db:6379/0
+      - SOCKET_PATH=/sockets/api2.sock
+      - WORKER_SOCKET_PATH=/sockets/worker_http.sock
+      - PAYMENTS_SOCKET_PATH=/sockets/payments.sock
+      - SUMMARY_SOCKET_PATH=/sockets/summary.sock
+      - PURGE_SOCKET_PATH=/sockets/purge.sock
       - PAYMENTS_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080/payments
       - PAYMENTS_PROCESSOR_URL_FALLBACK=http://payment-processor-fallback:8080/payments
       - HEALTH_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080/payments/service-health
@@ -36,31 +67,14 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.1"
+          cpus: "0.25"
           memory: "30MB"
     environment:
-      - PORT=9998
-      - REDIS_URL=redis://redis-db:6379/0
-      - PAYMENTS_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080/payments
-      - PAYMENTS_PROCESSOR_URL_FALLBACK=http://payment-processor-fallback:8080/payments
-      - HEALTH_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080/payments/service-health
-      - HEALTH_PROCESSOR_URL_FALLBACK=http://payment-processor-fallback:8080/payments/service-health
-    command: ./api
-    depends_on:
-      - worker1
-
-  api3:
-    <<: *base
-    container_name: api3
-    hostname: api3
-    deploy:
-      resources:
-        limits:
-          cpus: "0.1"
-          memory: "30MB"
-    environment:
-      - PORT=9994
-      - REDIS_URL=redis://redis-db:6379/0
+      - SOCKET_PATH=/sockets/api3.sock
+      - WORKER_SOCKET_PATH=/sockets/worker_http.sock
+      - PAYMENTS_SOCKET_PATH=/sockets/payments.sock
+      - SUMMARY_SOCKET_PATH=/sockets/summary.sock
+      - PURGE_SOCKET_PATH=/sockets/purge.sock
       - PAYMENTS_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080/payments
       - PAYMENTS_PROCESSOR_URL_FALLBACK=http://payment-processor-fallback:8080/payments
       - HEALTH_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080/payments/service-health
@@ -76,59 +90,21 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.4"
-          memory: "50MB"
+          cpus: "0.75"
+          memory: "150MB"
     environment:
-      - REDIS_URL=redis://redis-db:6379/0
+      - SOCKET_PATH=/sockets/worker_http.sock
+      - PAYMENTS_SOCKET_PATH=/sockets/payments.sock
+      - SUMMARY_SOCKET_PATH=/sockets/summary.sock
+      - PURGE_SOCKET_PATH=/sockets/purge.sock
       - PAYMENTS_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080/payments
       - PAYMENTS_PROCESSOR_URL_FALLBACK=http://payment-processor-fallback:8080/payments
       - HEALTH_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080/payments/service-health
       - HEALTH_PROCESSOR_URL_FALLBACK=http://payment-processor-fallback:8080/payments/service-health
     command: ./worker
 
-  redis:
-    image: redis/redis-stack:7.2.0-v18
-    container_name: redis-db
-    healthcheck:
-      test: ["CMD", "redis-cli", "ping"]
-      interval: 250ms
-      timeout: 2s
-      retries: 10
-    command:
-      - redis-server
-      - --loadmodule /opt/redis-stack/lib/redistimeseries.so
-      - --appendonly no
-      - --maxmemory 50mb
-      - --save ""
-      - --protected-mode no
-    networks:
-      - backend
-    ports:
-      - "6379:6379"
-    deploy:
-      resources:
-        limits:
-          cpus: "0.3"
-          memory: "50MB"
-
-  lb:
-    image: haproxy:latest
-    container_name: haproxy_lb
-    volumes:
-      - ./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
-    depends_on:
-      - api1
-      - api2
-      - api3
-    ports:
-      - "9999:9999"
-    networks:
-      - backend
-    deploy:
-      resources:
-        limits:
-          cpus: "0.3"
-          memory: "50MB"
+volumes:
+  sockets:
 
 networks:
   backend:

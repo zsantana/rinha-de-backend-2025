@@ -1,36 +1,39 @@
 services:
-  rinha-haproxy:
+  haproxy:
     image: haproxy:3.2.3-alpine
     container_name: rinha-haproxy
+    ports:
+      - 9999:80
     volumes:
-      - ./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
       - sockets:/sockets:rw
+      - ./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
+    networks:
+      - backend
+    depends_on:
+      - rinha-gateway-1
+      - rinha-gateway-2
+      - rinha-gateway-3
     deploy:
       resources:
         limits:
           cpus: "0.4"
           memory: "80MB"
-    networks:
-      - backend
-    ports:
-      - 9999:80
-    depends_on:
-      - rinha-gateway-1
-      - rinha-gateway-2
-      - rinha-gateway-3
 
   rinha-gateway-1:
-    image: ghcr.io/alan-venv/rinha-gateway:6.3
+    image: ghcr.io/alan-venv/rinha-gateway:6.8-skylake
     container_name: rinha-gateway-1
+    environment:
+      - SOCKET=/sockets/actix.sock.1
+      - TRIGGER=${TRIGGER}
+      - SLAVES=${SLAVES}
+      - ANALYST=${ANALYST}
     volumes:
       - sockets:/sockets:rw
-    environment:
-      - SOCKET_PATH=/sockets/actix.sock.1
     networks:
       - backend
       - payment-processor
     depends_on:
-      - rinha-db
+      - rinha-database
     deploy:
       resources:
         limits:
@@ -38,17 +41,20 @@ services:
           memory: "70MB"
 
   rinha-gateway-2:
-    image: ghcr.io/alan-venv/rinha-gateway:6.3
+    image: ghcr.io/alan-venv/rinha-gateway:6.8-skylake
     container_name: rinha-gateway-2
+    environment:
+      - SOCKET=/sockets/actix.sock.2
+      - TRIGGER=${TRIGGER}
+      - SLAVES=${SLAVES}
+      - ANALYST=${ANALYST}
     volumes:
       - sockets:/sockets:rw
-    environment:
-      - SOCKET_PATH=/sockets/actix.sock.2
     networks:
       - backend
       - payment-processor
     depends_on:
-      - rinha-db
+      - rinha-database
     deploy:
       resources:
         limits:
@@ -56,26 +62,29 @@ services:
           memory: "70MB"
 
   rinha-gateway-3:
-    image: ghcr.io/alan-venv/rinha-gateway:6.3
+    image: ghcr.io/alan-venv/rinha-gateway:6.8-skylake
     container_name: rinha-gateway-3
+    environment:
+      - SOCKET=/sockets/actix.sock.3
+      - TRIGGER=${TRIGGER}
+      - SLAVES=${SLAVES}
+      - ANALYST=${ANALYST}
     volumes:
       - sockets:/sockets:rw
-    environment:
-      - SOCKET_PATH=/sockets/actix.sock.3
     networks:
       - backend
       - payment-processor
     depends_on:
-      - rinha-db
+      - rinha-database
     deploy:
       resources:
         limits:
           cpus: "0.3"
           memory: "70MB"
 
-  rinha-db:
-    image: ghcr.io/alan-venv/rinha-database:6.3
-    container_name: rinha-db
+  rinha-database:
+    image: ghcr.io/alan-venv/rinha-database:6.5-skylake
+    container_name: rinha-database
     volumes:
       - sockets:/sockets:rw
     networks:

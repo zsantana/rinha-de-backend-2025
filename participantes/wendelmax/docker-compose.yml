@@ -14,7 +14,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.2"
+          cpus: "0.4"
           memory: "128MB"
     restart: unless-stopped
     healthcheck:
@@ -24,11 +24,12 @@ services:
       retries: 5
 
   rinha-backend:
-    image:  wendelmax/rinhabackend.net-backend:latest
+    image: ghcr.io/wendelmax/rinhabackend.net:latest
     expose:
-      - "8080"
+      - "5000"
     environment:
       - ASPNETCORE_ENVIRONMENT=Production
+      - ASPNETCORE_HTTP_PORTS=5000
       - ConnectionStrings__PostgresConnection=Host=postgres;Database=rinha_backend;Username=rinha_user;Password=rinha_password;Pooling=true;Maximum Pool Size=20;Multiplexing=false;Timeout=15;Command Timeout=15;Cancellation Timeout=-1;No Reset On Close=true;Max Auto Prepare=20;Auto Prepare Min Usages=1
       - PaymentProcessorDefault__BaseUrl=http://payment-processor-default:8080
       - PaymentProcessorFallback__BaseUrl=http://payment-processor-fallback:8080
@@ -41,7 +42,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "1.2"
+          cpus: "1.0"
           memory: "200MB"
     restart: unless-stopped
 
