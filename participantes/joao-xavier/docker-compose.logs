@@ -1,0 +1,187 @@
+
+ api_1 Pulling 
+ worker Pulling 
+ lb Pulling 
+ api_0 Pulling 
+ 356d26ade73a Already exists 
+ e62607bce784 Pulling fs layer 
+ 989316bedefd Pulling fs layer 
+ 989316bedefd Downloading [>                                                  ]  19.96kB/1.975MB
+ e62607bce784 Downloading [>                                                  ]  4.134kB/379.1kB
+ 356d26ade73a Already exists 
+ 356d26ade73a Already exists 
+ e62607bce784 Pulling fs layer 
+ 989316bedefd Pulling fs layer 
+ 989316bedefd Downloading [>                                                  ]  19.96kB/1.975MB
+ e62607bce784 Downloading [>                                                  ]  4.134kB/379.1kB
+ 937834b2f091 Pulling fs layer 
+ 7b91dee97411 Pulling fs layer 
+ 7b91dee97411 Waiting 
+ 989316bedefd Downloading [=================================================> ]  1.936MB/1.975MB
+ 989316bedefd Downloading [=================================================> ]  1.936MB/1.975MB
+ 989316bedefd Verifying Checksum 
+ 989316bedefd Verifying Checksum 
+ 989316bedefd Download complete 
+ 989316bedefd Download complete 
+ e62607bce784 Downloading [=========================>                         ]  195.4kB/379.1kB
+ e62607bce784 Downloading [=========================>                         ]  195.4kB/379.1kB
+ 356d26ade73a Already exists 
+ e62607bce784 Pulling fs layer 
+ 989316bedefd Pulling fs layer 
+ 989316bedefd Download complete 
+ e62607bce784 Downloading [=========================>                         ]  195.4kB/379.1kB
+ e62607bce784 Verifying Checksum 
+ e62607bce784 Download complete 
+ e62607bce784 Download complete 
+ e62607bce784 Extracting [====>                                              ]  32.77kB/379.1kB
+ e62607bce784 Extracting [====>                                              ]  32.77kB/379.1kB
+ e62607bce784 Download complete 
+ e62607bce784 Extracting [====>                                              ]  32.77kB/379.1kB
+ e62607bce784 Extracting [==================================================>]  379.1kB/379.1kB
+ e62607bce784 Extracting [==================================================>]  379.1kB/379.1kB
+ e62607bce784 Extracting [==================================================>]  379.1kB/379.1kB
+ e62607bce784 Extracting [==================================================>]  379.1kB/379.1kB
+ e62607bce784 Extracting [==================================================>]  379.1kB/379.1kB
+ e62607bce784 Extracting [==================================================>]  379.1kB/379.1kB
+ e62607bce784 Pull complete 
+ e62607bce784 Pull complete 
+ e62607bce784 Pull complete 
+ 989316bedefd Extracting [>                                                  ]  32.77kB/1.975MB
+ 989316bedefd Extracting [>                                                  ]  32.77kB/1.975MB
+ 989316bedefd Extracting [>                                                  ]  32.77kB/1.975MB
+ 989316bedefd Extracting [==================================================>]  1.975MB/1.975MB
+ 989316bedefd Extracting [==================================================>]  1.975MB/1.975MB
+ 989316bedefd Extracting [==================================================>]  1.975MB/1.975MB
+ 989316bedefd Pull complete 
+ 989316bedefd Pull complete 
+ 989316bedefd Pull complete 
+ 937834b2f091 Downloading [>                                                  ]  4.134kB/379.1kB
+ lb Pulled 
+ 937834b2f091 Downloading [==================================================>]  379.1kB/379.1kB
+ 937834b2f091 Verifying Checksum 
+ 937834b2f091 Download complete 
+ 937834b2f091 Extracting [====>                                              ]  32.77kB/379.1kB
+ api_1 Pulled 
+ api_0 Pulled 
+ 937834b2f091 Extracting [==================================================>]  379.1kB/379.1kB
+ 937834b2f091 Extracting [==================================================>]  379.1kB/379.1kB
+ 7b91dee97411 Downloading [>                                                  ]   31.7kB/1.975MB
+ 937834b2f091 Pull complete 
+ 7b91dee97411 Verifying Checksum 
+ 7b91dee97411 Download complete 
+ 7b91dee97411 Extracting [>                                                  ]  32.77kB/1.975MB
+ 7b91dee97411 Extracting [==================================================>]  1.975MB/1.975MB
+ 7b91dee97411 Pull complete 
+ worker Pulled 
+ Network joao-xavier_default  Creating
+ Network joao-xavier_default  Created
+ Volume "joao-xavier_uds"  Creating
+ Volume "joao-xavier_uds"  Created
+ Container joao-xavier-worker-1  Creating
+ Container joao-xavier-worker-1  Created
+ Container joao-xavier-api_1-1  Creating
+ Container joao-xavier-api_0-1  Creating
+ Container joao-xavier-api_0-1  Created
+ Container joao-xavier-api_1-1  Created
+ Container joao-xavier-lb-1  Creating
+ Container joao-xavier-lb-1  Created
+Attaching to api_0-1, api_1-1, lb-1, worker-1
+worker-1  | 2025-08-06T21:39:37.760374Z  INFO ThreadId(01) src/worker/mod.rs:25: starting worker
+worker-1  | 2025-08-06T21:39:37.760426Z  INFO ThreadId(01) src/worker/mod.rs:37: starting payment_req_consumer
+worker-1  | 2025-08-06T21:39:37.760577Z  INFO ThreadId(01) src/worker/mod.rs:72: listening on /var/run/worker.socket
+api_0-1   | 2025-08-06T21:39:37.991635Z  INFO ThreadId(01) src/api/mod.rs:20: starting API
+api_0-1   | 2025-08-06T21:39:37.991730Z  INFO ThreadId(01) src/api/mod.rs:27: binded to unix socket on /var/run/api0.sock
+api_1-1   | 2025-08-06T21:39:38.008426Z  INFO ThreadId(01) src/api/mod.rs:20: starting API
+api_1-1   | 2025-08-06T21:39:38.008560Z  INFO ThreadId(01) src/api/mod.rs:27: binded to unix socket on /var/run/api1.sock
+lb-1      | 
+lb-1      | thread 'main' panicked at /usr/local/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-uring-0.5.0/src/lib.rs:148:48:
+lb-1      | called `Result::unwrap()` on an `Err` value: Os { code: 1, kind: PermissionDenied, message: "Operation not permitted" }
+lb-1      | note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+[Klb-1 exited with code 101
+worker-1  | =================================== Metrics ====================================
+worker-1  | 
+worker-1  | Key Kind      Value Units 𝚫 Delta | Description | Labels
+worker-1  | --------------------------------------------------------------------------------
+worker-1  | 
+worker-1  | ================================ After 15.000 s ================================
+worker-1  | 
+api_0-1   | =================================== Metrics ====================================
+api_0-1   | 
+api_0-1   | Key Kind      Value Units 𝚫 Delta | Description | Labels
+api_0-1   | --------------------------------------------------------------------------------
+api_0-1   | 
+api_0-1   | ================================ After 15.000 s ================================
+api_0-1   | 
+api_1-1   | =================================== Metrics ====================================
+api_1-1   | 
+api_1-1   | Key Kind      Value Units 𝚫 Delta | Description | Labels
+api_1-1   | --------------------------------------------------------------------------------
+api_1-1   | 
+api_1-1   | ================================ After 15.000 s ================================
+api_1-1   | 
+worker-1  | =================================== Metrics ====================================
+worker-1  | 
+worker-1  | Key Kind      Value Units 𝚫 Delta | Description | Labels
+worker-1  | --------------------------------------------------------------------------------
+worker-1  | 
+worker-1  | ================================ After 15.000 s ================================
+worker-1  | 
+api_0-1   | =================================== Metrics ====================================
+api_0-1   | 
+api_0-1   | Key Kind      Value Units 𝚫 Delta | Description | Labels
+api_0-1   | --------------------------------------------------------------------------------
+api_0-1   | 
+api_0-1   | ================================ After 15.000 s ================================
+api_0-1   | 
+api_1-1   | =================================== Metrics ====================================
+api_1-1   | 
+api_1-1   | Key Kind      Value Units 𝚫 Delta | Description | Labels
+api_1-1   | --------------------------------------------------------------------------------
+api_1-1   | 
+api_1-1   | ================================ After 15.000 s ================================
+api_1-1   | 
+worker-1  | =================================== Metrics ====================================
+worker-1  | 
+worker-1  | Key Kind      Value Units 𝚫 Delta | Description | Labels
+worker-1  | --------------------------------------------------------------------------------
+worker-1  | 
+worker-1  | ================================ After 15.000 s ================================
+worker-1  | 
+api_0-1   | =================================== Metrics ====================================
+api_0-1   | 
+api_0-1   | Key Kind      Value Units 𝚫 Delta | Description | Labels
+api_0-1   | --------------------------------------------------------------------------------
+api_0-1   | 
+api_0-1   | ================================ After 15.000 s ================================
+api_0-1   | 
+api_1-1   | =================================== Metrics ====================================
+api_1-1   | 
+api_1-1   | Key Kind      Value Units 𝚫 Delta | Description | Labels
+api_1-1   | --------------------------------------------------------------------------------
+api_1-1   | 
+api_1-1   | ================================ After 15.000 s ================================
+api_1-1   | 
+worker-1  | =================================== Metrics ====================================
+worker-1  | 
+worker-1  | Key Kind      Value Units 𝚫 Delta | Description | Labels
+worker-1  | --------------------------------------------------------------------------------
+worker-1  | 
+worker-1  | ================================ After 15.000 s ================================
+worker-1  | 
+api_0-1   | =================================== Metrics ====================================
+api_0-1   | 
+api_0-1   | Key Kind      Value Units 𝚫 Delta | Description | Labels
+api_0-1   | --------------------------------------------------------------------------------
+api_0-1   | 
+api_0-1   | ================================ After 15.000 s ================================
+api_0-1   | 
+api_1-1   | =================================== Metrics ====================================
+api_1-1   | 
+api_1-1   | Key Kind      Value Units 𝚫 Delta | Description | Labels
+api_1-1   | --------------------------------------------------------------------------------
+api_1-1   | 
+api_1-1   | ================================ After 15.000 s ================================
+api_1-1   | 
+[Kapi_1-1 exited with code 143
+[Kapi_0-1 exited with code 143
+[Kworker-1 exited with code 143
