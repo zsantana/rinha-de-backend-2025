@@ -3,7 +3,7 @@ services:
     image: gabxdevv/rinha-backend-2025-java-gabxdev-unix:1.0.0
     restart: always
     volumes:
-      - /tmp:/tmp
+      - tmp-sockets:/tmp
     environment:
       RETRY_API_DEFAULT: 15
       WORKER_POOL_SIZE: 16
@@ -40,7 +40,7 @@ services:
     image: gabxdevv/rinha-backend-2025-java-gabxdev-unix:1.0.0
     restart: always
     volumes:
-      - /tmp:/tmp
+      - tmp-sockets:/tmp
     environment:
       RETRY_API_DEFAULT: 15
       WORKER_POOL_SIZE: 16
@@ -74,7 +74,7 @@ services:
     image: gabxdevv/loud-balance-java-gabxv-unix:1.0.0
     restart: always
     volumes:
-      - /tmp:/tmp
+      - tmp-sockets:/tmp
     depends_on:
       - backend-1
       - backend-2
@@ -107,9 +107,9 @@ networks:
   payment-processor:
     external: true
 
-#volumes:
-#  tmp-sockets:
-#    driver: local
-#    driver_opts:
-#      type: tmpfs
-#      device: tmpfs
+volumes:
+  tmp-sockets:
+    driver: local
+    driver_opts:
+      type: tmpfs
+      device: tmpfs
