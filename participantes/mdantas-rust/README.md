@@ -2,7 +2,7 @@
 repositório https://github.com/lpj145/rinha-2025
 
 
-Tecnologiaaaa:
+### Teknogolghiaaa
 RUST
 
 RUST
