@@ -1,16 +1,16 @@
 # Rinha de Backend 2025 💸
 
-Submissão para a [Rinha de Backend 2025](https://github.com/rinhahub/rinha-de-backend-2025) feita em Node.js, Typescript, Postgres e Redis.
+Submissão para a [Rinha de Backend 2025](https://github.com/rinhahub/rinha-de-backend-2025) feita em Node.js, Typescript e Redis.
 
 ## 🚀 Tecnologias Utilizadas
 
 - **Linguagens**: Node.js, Typescript
-- **Storage** - Postgres, Redis
+- **Storage** - Redis
 - **Load Balancer** - Nginx
 
 ## 🏗️ Arquitetura
 
-  <img width="965" height="532" alt="image" src="https://github.com/user-attachments/assets/26a468da-141c-46e4-aeaf-8f4d5c5abee2" />
+  <img width="965" height="532" alt="image" src="https://github.com/user-attachments/assets/e5e41933-b19f-440c-9492-50eb883ed177" />
 
 ## Código Fonte
 
