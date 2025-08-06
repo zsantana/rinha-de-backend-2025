@@ -1,0 +1,168 @@
+
+ Network lecosas-java-spring_backend  Creating
+ Network lecosas-java-spring_backend  Created
+ Container redis  Creating
+ Container redis  Created
+ Container backend-01  Creating
+ Container backend-02  Creating
+ Container backend-01  Created
+ Container backend-02  Created
+ Container openresty  Creating
+ Container openresty  Created
+Attaching to backend-01, backend-02, openresty, redis
+redis       | 1:C 06 Aug 2025 22:42:06.313 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+redis       | 1:C 06 Aug 2025 22:42:06.313 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+redis       | 1:C 06 Aug 2025 22:42:06.314 * Redis version=7.4.5, bits=64, commit=00000000, modified=0, pid=1, just started
+redis       | 1:C 06 Aug 2025 22:42:06.314 * Configuration loaded
+redis       | 1:M 06 Aug 2025 22:42:06.314 * monotonic clock: POSIX clock_gettime
+redis       | 1:M 06 Aug 2025 22:42:06.316 * Running mode=standalone, port=6379.
+redis       | 1:M 06 Aug 2025 22:42:06.316 * Server initialized
+redis       | 1:M 06 Aug 2025 22:42:06.316 * Ready to accept connections tcp
+openresty   | 2025/08/06 22:42:14 [error] 10#10: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.20.0.1, server: , request: "GET /payments-summary HTTP/1.1", upstream: "http://172.20.0.4:8080/payments-summary", host: "localhost:9999"
+openresty   | 2025/08/06 22:42:14 [error] 10#10: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.20.0.1, server: , request: "GET /payments-summary HTTP/1.1", upstream: "http://172.20.0.3:8080/payments-summary", host: "localhost:9999"
+openresty   | 2025/08/06 22:42:19 [error] 7#7: *4 connect() failed (111: Connection refused) while connecting to upstream, client: 172.20.0.1, server: , request: "GET /payments-summary HTTP/1.1", upstream: "http://172.20.0.4:8080/payments-summary", host: "localhost:9999"
+openresty   | 2025/08/06 22:42:19 [error] 7#7: *4 connect() failed (111: Connection refused) while connecting to upstream, client: 172.20.0.1, server: , request: "GET /payments-summary HTTP/1.1", upstream: "http://172.20.0.3:8080/payments-summary", host: "localhost:9999"
+backend-01  | WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+backend-01  | WARNING: sun.misc.Unsafe::allocateMemory has been called by io.netty.util.internal.PlatformDependent0$2 (jar:nested:/app/app.jar/!BOOT-INF/lib/netty-common-4.1.122.Final.jar!/)
+backend-01  | WARNING: Please consider reporting this to the maintainers of class io.netty.util.internal.PlatformDependent0$2
+backend-01  | WARNING: sun.misc.Unsafe::allocateMemory will be removed in a future release
+backend-02  | WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+backend-02  | WARNING: sun.misc.Unsafe::allocateMemory has been called by io.netty.util.internal.PlatformDependent0$2 (jar:nested:/app/app.jar/!BOOT-INF/lib/netty-common-4.1.122.Final.jar!/)
+backend-02  | WARNING: Please consider reporting this to the maintainers of class io.netty.util.internal.PlatformDependent0$2
+backend-02  | WARNING: sun.misc.Unsafe::allocateMemory will be removed in a future release
+backend-01  | WARNING: A restricted method in java.lang.System has been called
+backend-01  | WARNING: java.lang.System::loadLibrary has been called by io.netty.util.internal.NativeLibraryUtil in an unnamed module (jar:nested:/app/app.jar/!BOOT-INF/lib/netty-common-4.1.122.Final.jar!/)
+backend-01  | WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+backend-01  | WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+backend-01  | 
+backend-02  | WARNING: A restricted method in java.lang.System has been called
+backend-02  | WARNING: java.lang.System::loadLibrary has been called by io.netty.util.internal.NativeLibraryUtil in an unnamed module (jar:nested:/app/app.jar/!BOOT-INF/lib/netty-common-4.1.122.Final.jar!/)
+backend-02  | WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+backend-02  | WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+backend-02  | 
+openresty   | 2025/08/06 22:42:24 [error] 10#10: *7 no live upstreams while connecting to upstream, client: 172.20.0.1, server: , request: "GET /payments-summary HTTP/1.1", upstream: "http://app/payments-summary", host: "localhost:9999"
+openresty   | 2025/08/06 22:42:29 [error] 7#7: *8 no live upstreams while connecting to upstream, client: 172.20.0.1, server: , request: "GET /payments-summary HTTP/1.1", upstream: "http://app/payments-summary", host: "localhost:9999"
+backend-02  | 2025-08-06T22:42:40.313Z ERROR 1 --- [rinha-backend-2025-lecosas] [     virtual-39] i.b.r.application.service.PaymentWorker  : WORKER: PARADO POR GET SUMMARY ----------------------------------------------: 
+backend-02  | 2025-08-06T22:42:40.433Z ERROR 1 --- [rinha-backend-2025-lecosas] [     virtual-39] i.b.r.application.service.PaymentWorker  : WORKER: PARADO POR GET SUMMARY ----------------------------------------------: 
+backend-01  | 2025-08-06T22:42:50.554Z ERROR 1 --- [rinha-backend-2025-lecosas] [    virtual-569] i.b.r.application.service.PaymentWorker  : WORKER: PARADO POR GET SUMMARY ----------------------------------------------: 
+backend-02  | 2025-08-06T22:42:50.619Z ERROR 1 --- [rinha-backend-2025-lecosas] [     virtual-39] i.b.r.application.service.PaymentWorker  : WORKER: PARADO POR GET SUMMARY ----------------------------------------------: 
+backend-01  | 2025-08-06T22:43:00.008Z ERROR 1 --- [rinha-backend-2025-lecosas] [or-http-epoll-3] i.b.r.a.o.h.PaymentProcessorWebClient    : Error 500 INTERNAL_SERVER_ERROR to send DEFAULT payment.
+backend-01  | 2025-08-06T22:43:00.009Z ERROR 1 --- [rinha-backend-2025-lecosas] [or-http-epoll-4] i.b.r.a.o.h.PaymentProcessorWebClient    : Error 500 INTERNAL_SERVER_ERROR to send DEFAULT payment.
+backend-01  | 2025-08-06T22:43:00.011Z ERROR 1 --- [rinha-backend-2025-lecosas] [or-http-epoll-3] i.b.r.a.o.h.PaymentProcessorWebClient    : Error 500 INTERNAL_SERVER_ERROR to send DEFAULT payment.
+backend-01  | 2025-08-06T22:43:00.012Z ERROR 1 --- [rinha-backend-2025-lecosas] [or-http-epoll-3] i.b.r.a.o.h.PaymentProcessorWebClient    : Error 500 INTERNAL_SERVER_ERROR to send DEFAULT payment.
+backend-01  | 2025-08-06T22:43:00.016Z ERROR 1 --- [rinha-backend-2025-lecosas] [or-http-epoll-3] i.b.r.a.o.h.PaymentProcessorWebClient    : Error 500 INTERNAL_SERVER_ERROR to send DEFAULT payment.
+backend-02  | 2025-08-06T22:43:00.017Z ERROR 1 --- [rinha-backend-2025-lecosas] [or-http-epoll-4] i.b.r.a.o.h.PaymentProcessorWebClient    : Error 500 INTERNAL_SERVER_ERROR to send DEFAULT payment.
+backend-02  | 2025-08-06T22:43:00.017Z ERROR 1 --- [rinha-backend-2025-lecosas] [or-http-epoll-3] i.b.r.a.o.h.PaymentProcessorWebClient    : Error 500 INTERNAL_SERVER_ERROR to send DEFAULT payment.
+backend-01  | 2025-08-06T22:43:00.018Z ERROR 1 --- [rinha-backend-2025-lecosas] [or-http-epoll-4] i.b.r.a.o.h.PaymentProcessorWebClient    : Error 500 INTERNAL_SERVER_ERROR to send DEFAULT payment.
+backend-02  | 2025-08-06T22:43:00.018Z ERROR 1 --- [rinha-backend-2025-lecosas] [or-http-epoll-4] i.b.r.a.o.h.PaymentProcessorWebClient    : Error 500 INTERNAL_SERVER_ERROR to send DEFAULT payment.
+backend-02  | 2025-08-06T22:43:00.017Z ERROR 1 --- [rinha-backend-2025-lecosas] [or-http-epoll-2] i.b.r.a.o.h.PaymentProcessorWebClient    : Error 500 INTERNAL_SERVER_ERROR to send DEFAULT payment.
+backend-02  | 2025-08-06T22:43:00.022Z ERROR 1 --- [rinha-backend-2025-lecosas] [or-http-epoll-3] i.b.r.a.o.h.PaymentProcessorWebClient    : Error 500 INTERNAL_SERVER_ERROR to send DEFAULT payment.
+backend-02  | 2025-08-06T22:43:00.025Z ERROR 1 --- [rinha-backend-2025-lecosas] [or-http-epoll-4] i.b.r.a.o.h.PaymentProcessorWebClient    : Error 500 INTERNAL_SERVER_ERROR to send DEFAULT payment.
+backend-01  | 2025-08-06T22:43:00.027Z ERROR 1 --- [rinha-backend-2025-lecosas] [    virtual-569] i.b.r.application.service.PaymentWorker  : WORKER: PARADO POR STOPPED ----------------------------------------------: 
+backend-01  | 2025-08-06T22:43:00.029Z ERROR 1 --- [rinha-backend-2025-lecosas] [or-http-epoll-1] i.b.r.a.o.h.PaymentProcessorWebClient    : Error 500 INTERNAL_SERVER_ERROR to send DEFAULT payment.
+backend-02  | 2025-08-06T22:43:00.029Z ERROR 1 --- [rinha-backend-2025-lecosas] [or-http-epoll-1] i.b.r.a.o.h.PaymentProcessorWebClient    : Error 500 INTERNAL_SERVER_ERROR to send DEFAULT payment.
+backend-02  | 2025-08-06T22:43:00.032Z ERROR 1 --- [rinha-backend-2025-lecosas] [or-http-epoll-1] i.b.r.a.o.h.PaymentProcessorWebClient    : Error 500 INTERNAL_SERVER_ERROR to send DEFAULT payment.
+backend-02  | 2025-08-06T22:43:00.032Z ERROR 1 --- [rinha-backend-2025-lecosas] [     virtual-39] i.b.r.application.service.PaymentWorker  : WORKER: PARADO POR STOPPED ----------------------------------------------: 
+backend-02  | 2025-08-06T22:43:00.110Z ERROR 1 --- [rinha-backend-2025-lecosas] [or-http-epoll-3] i.b.r.a.o.h.PaymentProcessorWebClient    : Error 500 INTERNAL_SERVER_ERROR to send DEFAULT payment.
+backend-02  | 2025-08-06T22:43:00.112Z ERROR 1 --- [rinha-backend-2025-lecosas] [or-http-epoll-3] i.b.r.a.o.h.PaymentProcessorWebClient    : Error 500 INTERNAL_SERVER_ERROR to send DEFAULT payment.
+backend-01  | 2025-08-06T22:43:00.114Z ERROR 1 --- [rinha-backend-2025-lecosas] [or-http-epoll-2] i.b.r.a.o.h.PaymentProcessorWebClient    : Error 500 INTERNAL_SERVER_ERROR to send DEFAULT payment.
+backend-01  | 2025-08-06T22:43:00.114Z ERROR 1 --- [rinha-backend-2025-lecosas] [or-http-epoll-2] i.b.r.a.o.h.PaymentProcessorWebClient    : Error 500 INTERNAL_SERVER_ERROR to send DEFAULT payment.
+backend-01  | 2025-08-06T22:43:00.116Z ERROR 1 --- [rinha-backend-2025-lecosas] [or-http-epoll-4] i.b.r.a.o.h.PaymentProcessorWebClient    : Error 500 INTERNAL_SERVER_ERROR to send DEFAULT payment.
+backend-01  | 2025-08-06T22:43:00.115Z ERROR 1 --- [rinha-backend-2025-lecosas] [or-http-epoll-3] i.b.r.a.o.h.PaymentProcessorWebClient    : Error 500 INTERNAL_SERVER_ERROR to send DEFAULT payment.
+backend-01  | 2025-08-06T22:43:00.117Z ERROR 1 --- [rinha-backend-2025-lecosas] [or-http-epoll-2] i.b.r.a.o.h.PaymentProcessorWebClient    : Error 500 INTERNAL_SERVER_ERROR to send DEFAULT payment.
+backend-02  | 2025-08-06T22:43:00.120Z ERROR 1 --- [rinha-backend-2025-lecosas] [or-http-epoll-2] i.b.r.a.o.h.PaymentProcessorWebClient    : Error 500 INTERNAL_SERVER_ERROR to send DEFAULT payment.
+backend-01  | 2025-08-06T22:43:00.121Z ERROR 1 --- [rinha-backend-2025-lecosas] [or-http-epoll-2] i.b.r.a.o.h.PaymentProcessorWebClient    : Error 500 INTERNAL_SERVER_ERROR to send DEFAULT payment.
+backend-02  | 2025-08-06T22:43:00.127Z ERROR 1 --- [rinha-backend-2025-lecosas] [or-http-epoll-3] i.b.r.a.o.h.PaymentProcessorWebClient    : Error 500 INTERNAL_SERVER_ERROR to send DEFAULT payment.
+backend-01  | 2025-08-06T22:43:00.118Z ERROR 1 --- [rinha-backend-2025-lecosas] [or-http-epoll-3] i.b.r.a.o.h.PaymentProcessorWebClient    : Error 500 INTERNAL_SERVER_ERROR to send DEFAULT payment.
+backend-02  | 2025-08-06T22:43:00.128Z ERROR 1 --- [rinha-backend-2025-lecosas] [or-http-epoll-3] i.b.r.a.o.h.PaymentProcessorWebClient    : Error 500 INTERNAL_SERVER_ERROR to send DEFAULT payment.
+backend-01  | 2025-08-06T22:43:00.133Z ERROR 1 --- [rinha-backend-2025-lecosas] [or-http-epoll-3] i.b.r.a.o.h.PaymentProcessorWebClient    : Error 500 INTERNAL_SERVER_ERROR to send DEFAULT payment.
+backend-01  | 2025-08-06T22:43:00.133Z ERROR 1 --- [rinha-backend-2025-lecosas] [or-http-epoll-3] i.b.r.a.o.h.PaymentProcessorWebClient    : Error 500 INTERNAL_SERVER_ERROR to send DEFAULT payment.
+backend-01  | 2025-08-06T22:43:00.135Z ERROR 1 --- [rinha-backend-2025-lecosas] [or-http-epoll-3] i.b.r.a.o.h.PaymentProcessorWebClient    : Error 500 INTERNAL_SERVER_ERROR to send DEFAULT payment.
+backend-02  | 2025-08-06T22:43:00.204Z ERROR 1 --- [rinha-backend-2025-lecosas] [or-http-epoll-2] i.b.r.a.o.h.PaymentProcessorWebClient    : Error 500 INTERNAL_SERVER_ERROR to send DEFAULT payment.
+backend-02  | 2025-08-06T22:43:00.208Z ERROR 1 --- [rinha-backend-2025-lecosas] [or-http-epoll-1] i.b.r.a.o.h.PaymentProcessorWebClient    : Error 500 INTERNAL_SERVER_ERROR to send DEFAULT payment.
+backend-01  | 2025-08-06T22:43:00.529Z ERROR 1 --- [rinha-backend-2025-lecosas] [    virtual-569] i.b.r.application.service.PaymentWorker  : WORKER: PARADO POR STOPPED ----------------------------------------------: 
+backend-02  | 2025-08-06T22:43:00.533Z ERROR 1 --- [rinha-backend-2025-lecosas] [     virtual-39] i.b.r.application.service.PaymentWorker  : WORKER: PARADO POR STOPPED ----------------------------------------------: 
+backend-01  | 2025-08-06T22:43:10.783Z ERROR 1 --- [rinha-backend-2025-lecosas] [    virtual-569] i.b.r.application.service.PaymentWorker  : WORKER: PARADO POR STOPPED ----------------------------------------------: 
+backend-02  | 2025-08-06T22:43:10.804Z ERROR 1 --- [rinha-backend-2025-lecosas] [     virtual-39] i.b.r.application.service.PaymentWorker  : WORKER: PARADO POR STOPPED ----------------------------------------------: 
+backend-02  | 2025-08-06T22:43:10.988Z ERROR 1 --- [rinha-backend-2025-lecosas] [or-http-epoll-4] i.b.r.a.o.h.PaymentProcessorWebClient    : Error 500 INTERNAL_SERVER_ERROR to send FALLBACK payment.
+backend-01  | 2025-08-06T22:43:10.999Z ERROR 1 --- [rinha-backend-2025-lecosas] [or-http-epoll-4] i.b.r.a.o.h.PaymentProcessorWebClient    : Error 500 INTERNAL_SERVER_ERROR to send FALLBACK payment.
+backend-02  | 2025-08-06T22:43:11.060Z ERROR 1 --- [rinha-backend-2025-lecosas] [or-http-epoll-3] i.b.r.a.o.h.PaymentProcessorWebClient    : Error 500 INTERNAL_SERVER_ERROR to send FALLBACK payment.
+backend-01  | 2025-08-06T22:43:11.071Z ERROR 1 --- [rinha-backend-2025-lecosas] [or-http-epoll-2] i.b.r.a.o.h.PaymentProcessorWebClient    : Error 500 INTERNAL_SERVER_ERROR to send FALLBACK payment.
+backend-02  | 2025-08-06T22:43:11.132Z ERROR 1 --- [rinha-backend-2025-lecosas] [or-http-epoll-4] i.b.r.a.o.h.PaymentProcessorWebClient    : Error 500 INTERNAL_SERVER_ERROR to send FALLBACK payment.
+backend-01  | 2025-08-06T22:43:11.144Z ERROR 1 --- [rinha-backend-2025-lecosas] [or-http-epoll-3] i.b.r.a.o.h.PaymentProcessorWebClient    : Error 500 INTERNAL_SERVER_ERROR to send FALLBACK payment.
+backend-02  | 2025-08-06T22:43:11.202Z ERROR 1 --- [rinha-backend-2025-lecosas] [or-http-epoll-1] i.b.r.a.o.h.PaymentProcessorWebClient    : Error 500 INTERNAL_SERVER_ERROR to send FALLBACK payment.
+backend-01  | 2025-08-06T22:43:11.215Z ERROR 1 --- [rinha-backend-2025-lecosas] [or-http-epoll-4] i.b.r.a.o.h.PaymentProcessorWebClient    : Error 500 INTERNAL_SERVER_ERROR to send FALLBACK payment.
+backend-02  | 2025-08-06T22:43:11.274Z ERROR 1 --- [rinha-backend-2025-lecosas] [or-http-epoll-2] i.b.r.a.o.h.PaymentProcessorWebClient    : Error 500 INTERNAL_SERVER_ERROR to send FALLBACK payment.
+backend-01  | 2025-08-06T22:43:11.286Z ERROR 1 --- [rinha-backend-2025-lecosas] [or-http-epoll-1] i.b.r.a.o.h.PaymentProcessorWebClient    : Error 500 INTERNAL_SERVER_ERROR to send FALLBACK payment.
+backend-01  | 2025-08-06T22:43:11.287Z ERROR 1 --- [rinha-backend-2025-lecosas] [    virtual-569] i.b.r.application.service.PaymentWorker  : WORKER: PARADO POR STOPPED ----------------------------------------------: 
+backend-02  | 2025-08-06T22:43:11.305Z ERROR 1 --- [rinha-backend-2025-lecosas] [     virtual-39] i.b.r.application.service.PaymentWorker  : WORKER: PARADO POR STOPPED ----------------------------------------------: 
+backend-02  | 2025-08-06T22:43:11.345Z ERROR 1 --- [rinha-backend-2025-lecosas] [or-http-epoll-3] i.b.r.a.o.h.PaymentProcessorWebClient    : Error 500 INTERNAL_SERVER_ERROR to send FALLBACK payment.
+backend-01  | 2025-08-06T22:43:11.357Z ERROR 1 --- [rinha-backend-2025-lecosas] [or-http-epoll-2] i.b.r.a.o.h.PaymentProcessorWebClient    : Error 500 INTERNAL_SERVER_ERROR to send FALLBACK payment.
+backend-02  | 2025-08-06T22:43:11.417Z ERROR 1 --- [rinha-backend-2025-lecosas] [or-http-epoll-4] i.b.r.a.o.h.PaymentProcessorWebClient    : Error 500 INTERNAL_SERVER_ERROR to send FALLBACK payment.
+backend-01  | 2025-08-06T22:43:11.429Z ERROR 1 --- [rinha-backend-2025-lecosas] [or-http-epoll-3] i.b.r.a.o.h.PaymentProcessorWebClient    : Error 500 INTERNAL_SERVER_ERROR to send FALLBACK payment.
+backend-02  | 2025-08-06T22:43:11.487Z ERROR 1 --- [rinha-backend-2025-lecosas] [or-http-epoll-1] i.b.r.a.o.h.PaymentProcessorWebClient    : Error 500 INTERNAL_SERVER_ERROR to send FALLBACK payment.
+backend-01  | 2025-08-06T22:43:11.499Z ERROR 1 --- [rinha-backend-2025-lecosas] [or-http-epoll-4] i.b.r.a.o.h.PaymentProcessorWebClient    : Error 500 INTERNAL_SERVER_ERROR to send FALLBACK payment.
+backend-02  | 2025-08-06T22:43:11.560Z ERROR 1 --- [rinha-backend-2025-lecosas] [or-http-epoll-2] i.b.r.a.o.h.PaymentProcessorWebClient    : Error 500 INTERNAL_SERVER_ERROR to send FALLBACK payment.
+backend-01  | 2025-08-06T22:43:11.572Z ERROR 1 --- [rinha-backend-2025-lecosas] [or-http-epoll-1] i.b.r.a.o.h.PaymentProcessorWebClient    : Error 500 INTERNAL_SERVER_ERROR to send FALLBACK payment.
+backend-02  | 2025-08-06T22:43:11.632Z ERROR 1 --- [rinha-backend-2025-lecosas] [or-http-epoll-3] i.b.r.a.o.h.PaymentProcessorWebClient    : Error 500 INTERNAL_SERVER_ERROR to send FALLBACK payment.
+backend-01  | 2025-08-06T22:43:11.643Z ERROR 1 --- [rinha-backend-2025-lecosas] [or-http-epoll-2] i.b.r.a.o.h.PaymentProcessorWebClient    : Error 500 INTERNAL_SERVER_ERROR to send FALLBACK payment.
+backend-02  | 2025-08-06T22:43:11.705Z ERROR 1 --- [rinha-backend-2025-lecosas] [or-http-epoll-4] i.b.r.a.o.h.PaymentProcessorWebClient    : Error 500 INTERNAL_SERVER_ERROR to send FALLBACK payment.
+backend-01  | 2025-08-06T22:43:11.713Z ERROR 1 --- [rinha-backend-2025-lecosas] [or-http-epoll-4] i.b.r.a.o.h.PaymentProcessorWebClient    : Error 500 INTERNAL_SERVER_ERROR to send FALLBACK payment.
+backend-01  | 2025-08-06T22:43:11.783Z ERROR 1 --- [rinha-backend-2025-lecosas] [or-http-epoll-3] i.b.r.a.o.h.PaymentProcessorWebClient    : Error 500 INTERNAL_SERVER_ERROR to send FALLBACK payment.
+backend-01  | 2025-08-06T22:43:11.789Z ERROR 1 --- [rinha-backend-2025-lecosas] [    virtual-569] i.b.r.application.service.PaymentWorker  : WORKER: PARADO POR STOPPED ----------------------------------------------: 
+backend-02  | 2025-08-06T22:43:11.804Z ERROR 1 --- [rinha-backend-2025-lecosas] [or-http-epoll-1] i.b.r.a.o.h.PaymentProcessorWebClient    : Error 500 INTERNAL_SERVER_ERROR to send FALLBACK payment.
+backend-02  | 2025-08-06T22:43:11.807Z ERROR 1 --- [rinha-backend-2025-lecosas] [     virtual-39] i.b.r.application.service.PaymentWorker  : WORKER: PARADO POR STOPPED ----------------------------------------------: 
+backend-01  | 2025-08-06T22:43:12.290Z ERROR 1 --- [rinha-backend-2025-lecosas] [    virtual-569] i.b.r.application.service.PaymentWorker  : WORKER: PARADO POR STOPPED ----------------------------------------------: 
+backend-02  | 2025-08-06T22:43:12.308Z ERROR 1 --- [rinha-backend-2025-lecosas] [     virtual-39] i.b.r.application.service.PaymentWorker  : WORKER: PARADO POR STOPPED ----------------------------------------------: 
+backend-01  | 2025-08-06T22:43:12.791Z ERROR 1 --- [rinha-backend-2025-lecosas] [    virtual-569] i.b.r.application.service.PaymentWorker  : WORKER: PARADO POR STOPPED ----------------------------------------------: 
+backend-02  | 2025-08-06T22:43:12.809Z ERROR 1 --- [rinha-backend-2025-lecosas] [     virtual-39] i.b.r.application.service.PaymentWorker  : WORKER: PARADO POR STOPPED ----------------------------------------------: 
+backend-01  | 2025-08-06T22:43:13.291Z ERROR 1 --- [rinha-backend-2025-lecosas] [    virtual-569] i.b.r.application.service.PaymentWorker  : WORKER: PARADO POR STOPPED ----------------------------------------------: 
+backend-02  | 2025-08-06T22:43:13.310Z ERROR 1 --- [rinha-backend-2025-lecosas] [     virtual-39] i.b.r.application.service.PaymentWorker  : WORKER: PARADO POR STOPPED ----------------------------------------------: 
+backend-01  | 2025-08-06T22:43:13.792Z ERROR 1 --- [rinha-backend-2025-lecosas] [    virtual-569] i.b.r.application.service.PaymentWorker  : WORKER: PARADO POR STOPPED ----------------------------------------------: 
+backend-02  | 2025-08-06T22:43:13.811Z ERROR 1 --- [rinha-backend-2025-lecosas] [     virtual-39] i.b.r.application.service.PaymentWorker  : WORKER: PARADO POR STOPPED ----------------------------------------------: 
+backend-01  | 2025-08-06T22:43:14.305Z ERROR 1 --- [rinha-backend-2025-lecosas] [    virtual-569] i.b.r.application.service.PaymentWorker  : WORKER: PARADO POR STOPPED ----------------------------------------------: 
+backend-02  | 2025-08-06T22:43:14.312Z ERROR 1 --- [rinha-backend-2025-lecosas] [     virtual-39] i.b.r.application.service.PaymentWorker  : WORKER: PARADO POR STOPPED ----------------------------------------------: 
+backend-01  | 2025-08-06T22:43:14.806Z ERROR 1 --- [rinha-backend-2025-lecosas] [    virtual-569] i.b.r.application.service.PaymentWorker  : WORKER: PARADO POR STOPPED ----------------------------------------------: 
+backend-02  | 2025-08-06T22:43:14.813Z ERROR 1 --- [rinha-backend-2025-lecosas] [     virtual-39] i.b.r.application.service.PaymentWorker  : WORKER: PARADO POR STOPPED ----------------------------------------------: 
+backend-01  | 2025-08-06T22:43:15.306Z ERROR 1 --- [rinha-backend-2025-lecosas] [    virtual-569] i.b.r.application.service.PaymentWorker  : WORKER: PARADO POR STOPPED ----------------------------------------------: 
+backend-02  | 2025-08-06T22:43:15.314Z ERROR 1 --- [rinha-backend-2025-lecosas] [     virtual-39] i.b.r.application.service.PaymentWorker  : WORKER: PARADO POR STOPPED ----------------------------------------------: 
+backend-01  | 2025-08-06T22:43:15.807Z ERROR 1 --- [rinha-backend-2025-lecosas] [    virtual-569] i.b.r.application.service.PaymentWorker  : WORKER: PARADO POR STOPPED ----------------------------------------------: 
+backend-02  | 2025-08-06T22:43:15.815Z ERROR 1 --- [rinha-backend-2025-lecosas] [     virtual-39] i.b.r.application.service.PaymentWorker  : WORKER: PARADO POR STOPPED ----------------------------------------------: 
+backend-01  | 2025-08-06T22:43:16.308Z ERROR 1 --- [rinha-backend-2025-lecosas] [    virtual-569] i.b.r.application.service.PaymentWorker  : WORKER: PARADO POR STOPPED ----------------------------------------------: 
+backend-02  | 2025-08-06T22:43:16.316Z ERROR 1 --- [rinha-backend-2025-lecosas] [     virtual-39] i.b.r.application.service.PaymentWorker  : WORKER: PARADO POR STOPPED ----------------------------------------------: 
+backend-01  | 2025-08-06T22:43:16.809Z ERROR 1 --- [rinha-backend-2025-lecosas] [    virtual-569] i.b.r.application.service.PaymentWorker  : WORKER: PARADO POR STOPPED ----------------------------------------------: 
+backend-02  | 2025-08-06T22:43:16.818Z ERROR 1 --- [rinha-backend-2025-lecosas] [     virtual-39] i.b.r.application.service.PaymentWorker  : WORKER: PARADO POR STOPPED ----------------------------------------------: 
+backend-01  | 2025-08-06T22:43:17.309Z ERROR 1 --- [rinha-backend-2025-lecosas] [    virtual-569] i.b.r.application.service.PaymentWorker  : WORKER: PARADO POR STOPPED ----------------------------------------------: 
+backend-02  | 2025-08-06T22:43:17.319Z ERROR 1 --- [rinha-backend-2025-lecosas] [     virtual-39] i.b.r.application.service.PaymentWorker  : WORKER: PARADO POR STOPPED ----------------------------------------------: 
+backend-01  | 2025-08-06T22:43:17.810Z ERROR 1 --- [rinha-backend-2025-lecosas] [    virtual-569] i.b.r.application.service.PaymentWorker  : WORKER: PARADO POR STOPPED ----------------------------------------------: 
+backend-02  | 2025-08-06T22:43:17.820Z ERROR 1 --- [rinha-backend-2025-lecosas] [     virtual-39] i.b.r.application.service.PaymentWorker  : WORKER: PARADO POR STOPPED ----------------------------------------------: 
+backend-01  | 2025-08-06T22:43:18.311Z ERROR 1 --- [rinha-backend-2025-lecosas] [    virtual-569] i.b.r.application.service.PaymentWorker  : WORKER: PARADO POR STOPPED ----------------------------------------------: 
+backend-02  | 2025-08-06T22:43:18.321Z ERROR 1 --- [rinha-backend-2025-lecosas] [     virtual-39] i.b.r.application.service.PaymentWorker  : WORKER: PARADO POR STOPPED ----------------------------------------------: 
+backend-01  | 2025-08-06T22:43:18.812Z ERROR 1 --- [rinha-backend-2025-lecosas] [    virtual-569] i.b.r.application.service.PaymentWorker  : WORKER: PARADO POR STOPPED ----------------------------------------------: 
+backend-02  | 2025-08-06T22:43:18.821Z ERROR 1 --- [rinha-backend-2025-lecosas] [     virtual-39] i.b.r.application.service.PaymentWorker  : WORKER: PARADO POR STOPPED ----------------------------------------------: 
+backend-01  | 2025-08-06T22:43:19.313Z ERROR 1 --- [rinha-backend-2025-lecosas] [    virtual-569] i.b.r.application.service.PaymentWorker  : WORKER: PARADO POR STOPPED ----------------------------------------------: 
+backend-02  | 2025-08-06T22:43:19.322Z ERROR 1 --- [rinha-backend-2025-lecosas] [     virtual-39] i.b.r.application.service.PaymentWorker  : WORKER: PARADO POR STOPPED ----------------------------------------------: 
+backend-01  | 2025-08-06T22:43:19.814Z ERROR 1 --- [rinha-backend-2025-lecosas] [    virtual-569] i.b.r.application.service.PaymentWorker  : WORKER: PARADO POR STOPPED ----------------------------------------------: 
+backend-02  | 2025-08-06T22:43:19.823Z ERROR 1 --- [rinha-backend-2025-lecosas] [     virtual-39] i.b.r.application.service.PaymentWorker  : WORKER: PARADO POR STOPPED ----------------------------------------------: 
+backend-01  | 2025-08-06T22:43:20.314Z ERROR 1 --- [rinha-backend-2025-lecosas] [    virtual-569] i.b.r.application.service.PaymentWorker  : WORKER: PARADO POR STOPPED ----------------------------------------------: 
+backend-02  | 2025-08-06T22:43:20.324Z ERROR 1 --- [rinha-backend-2025-lecosas] [     virtual-39] i.b.r.application.service.PaymentWorker  : WORKER: PARADO POR STOPPED ----------------------------------------------: 
+backend-01  | 2025-08-06T22:43:21.112Z ERROR 1 --- [rinha-backend-2025-lecosas] [    virtual-569] i.b.r.application.service.PaymentWorker  : WORKER: PARADO POR GET SUMMARY ----------------------------------------------: 
+backend-02  | 2025-08-06T22:43:21.116Z ERROR 1 --- [rinha-backend-2025-lecosas] [     virtual-39] i.b.r.application.service.PaymentWorker  : WORKER: PARADO POR GET SUMMARY ----------------------------------------------: 
+openresty   | 2025/08/06 22:43:22 [error] 10#10: *8492 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+openresty   | 2025/08/06 22:43:22 [error] 8#8: *8509 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+openresty   | 2025/08/06 22:43:22 [error] 9#9: *8530 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+openresty   | 2025/08/06 22:43:22 [error] 10#10: *8537 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+openresty   | 2025/08/06 22:43:22 [error] 10#10: *8557 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+backend-01  | 2025-08-06T22:43:31.209Z ERROR 1 --- [rinha-backend-2025-lecosas] [    virtual-569] i.b.r.application.service.PaymentWorker  : WORKER: PARADO POR GET SUMMARY ----------------------------------------------: 
+backend-02  | 2025-08-06T22:43:31.217Z ERROR 1 --- [rinha-backend-2025-lecosas] [     virtual-39] i.b.r.application.service.PaymentWorker  : WORKER: PARADO POR GET SUMMARY ----------------------------------------------: 
+backend-01  | 2025-08-06T22:43:31.310Z ERROR 1 --- [rinha-backend-2025-lecosas] [    virtual-569] i.b.r.application.service.PaymentWorker  : WORKER: PARADO POR GET SUMMARY ----------------------------------------------: 
+backend-02  | 2025-08-06T22:43:41.416Z ERROR 1 --- [rinha-backend-2025-lecosas] [     virtual-39] i.b.r.application.service.PaymentWorker  : WORKER: PARADO POR GET SUMMARY ----------------------------------------------: 
+backend-01  | 2025-08-06T22:43:41.420Z ERROR 1 --- [rinha-backend-2025-lecosas] [    virtual-569] i.b.r.application.service.PaymentWorker  : WORKER: PARADO POR GET SUMMARY ----------------------------------------------: 
+[Kopenresty exited with code 0
+[Kbackend-02 exited with code 143
+[Kbackend-01 exited with code 143
+redis       | 1:signal-handler (1754520225) Received SIGTERM scheduling shutdown...
+redis       | 1:M 06 Aug 2025 22:43:45.740 * User requested shutdown...
+redis       | 1:M 06 Aug 2025 22:43:45.740 # Redis is now ready to exit, bye bye...
+[Kredis exited with code 0
+log truncated at line 1000
