@@ -1,8 +1,8 @@
 services:
   api01: &app
-    image: thiagorigonatti/rinha-2025:0.0.2
+    image: thiagorigonatti/rinha-2025:0.0.4
     environment:
-      - PTHREADS=8
+      - PTHREADS=2
     networks:
       - api
       - payment-processor
@@ -10,7 +10,7 @@ services:
       resources:
         limits:
           cpus: "0.50"
-          memory: "120MB"
+          memory: "100MB"
     volumes:
       - /dev/shm:/dev/shm
 
@@ -25,7 +25,7 @@ services:
       resources:
         limits:
           cpus: "0.50"
-          memory: "110MB"
+          memory: "150MB"
     networks:
       - api
     ports:
