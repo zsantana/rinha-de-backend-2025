@@ -1,6 +1,6 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Wed Aug  6 06:14:39 PM -03 2025**
-256 submissões / 229 resultados / 27 submissões com erro
+Atualizado em **Wed Aug  6 06:24:05 PM -03 2025**
+257 submissões / 230 resultados / 27 submissões com erro
 
 
 | participante | p99 | bônus por desempenho (%) | multa ($) | lucro | submissão |
@@ -53,6 +53,7 @@ Atualizado em **Wed Aug  6 06:14:39 PM -03 2025**
 |	davidalecrim1-go-1	|	18ms	|	0%	|	0	|	316545.32	|	[davidalecrim1-go-1](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/davidalecrim1-go-1)
 |	davidalecrim1-go-2	|	12.42ms	|	0%	|	105314.63075	|	195584.31425	|	[davidalecrim1-go-2](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/davidalecrim1-go-2)
 |	davidalecrim1-go-3	|	8.48ms	|	5%	|	0	|	332193.93375	|	[davidalecrim1-go-3](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/davidalecrim1-go-3)
+|	david-delta-sierra-go	|	2.1ms	|	18%	|	0	|	373724.2487	|	[david-delta-sierra-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/david-delta-sierra-go)
 |	davigga-node-2	|	111.37ms	|	0%	|	0	|	263350.63	|	[davigga-node-2](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/davigga-node-2)
 |	davigga-node	|	96.8ms	|	0%	|	0	|	300462.14	|	[davigga-node](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/davigga-node)
 |	dbiagi	|	91.18ms	|	0%	|	107212.59325	|	199109.10175	|	[dbiagi](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/dbiagi)
@@ -206,7 +207,7 @@ Atualizado em **Wed Aug  6 06:14:39 PM -03 2025**
 |	ryrden-clojure	|	123.05ms	|	0%	|	67151.30625	|	124709.56875	|	[ryrden-clojure](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/ryrden-clojure)
 |	samypng-go	|	2.4ms	|	17%	|	0	|	370446.4998	|	[samypng-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/samypng-go)
 |	santannaf	|	22.91ms	|	0%	|	0	|	315244.855	|	[santannaf](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/santannaf)
-|	shell-c#	|	31.26ms	|	0%	|	110396.29475	|	205021.69025	|	[shell-c#](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/shell-c#)
+|	shell-c#	|	32.57ms	|	0%	|	0	|	315313.51	|	[shell-c#](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/shell-c#)
 |	silvaangelo	|	4.1ms	|	14%	|	0	|	353612.3535	|	[silvaangelo](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/silvaangelo)
 |	suricat89-solucao1	|	2.26ms	|	17%	|	108737.58	|	254756.616	|	[suricat89-solucao1](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/suricat89-solucao1)
 |	svaan1-go	|	2.93ms	|	16%	|	0	|	361846.3168	|	[svaan1-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/svaan1-go)
