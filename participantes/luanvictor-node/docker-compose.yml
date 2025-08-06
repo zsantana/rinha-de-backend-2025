@@ -19,7 +19,7 @@ services:
       resources:
         limits:
           cpus: "0.1"
-          memory: "45MB"
+          memory: "40MB"
 
   # -------------
   # LOAD BALANCER
@@ -42,7 +42,7 @@ services:
       resources:
         limits:
           cpus: "0.1"
-          memory: "40MB"
+          memory: "35MB"
 
   # ---
   # API
@@ -102,7 +102,7 @@ services:
       resources:
         limits:
           cpus: "1"
-          memory: "150MB"
+          memory: "145MB"
 
 networks:
   backend:
