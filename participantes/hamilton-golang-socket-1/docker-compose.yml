@@ -10,8 +10,8 @@ x-rinha-api-base: &rinha-api-base
   deploy: &rinha-api-deploy
     resources:
       limits:
-        cpus: "0.18750"
-        memory: "50MB"
+        cpus: "0.25"
+        memory: "60MB"
 
   environment: &common-environment
     APP_PORT: 3000
@@ -39,8 +39,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.45"
-          memory: "30MB"
+          cpus: "0.5"
+          memory: "50MB"
 
   rinha-api-1:
     <<: *rinha-api-base
@@ -89,8 +89,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.3"
-          memory: "40MB"
+          cpus: "0.5"
+          memory: "60MB"
 
 networks:
   app-network:
