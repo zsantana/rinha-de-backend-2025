@@ -29,7 +29,7 @@ services:
       - backend
       - payment-processor
     environment:
-      - SPRING_PROFILES_ACTIVE=prod
+      #- SPRING_PROFILES_ACTIVE=prod
       - PAYMENT_BACKEND_MAIN_INSTANCE=true
       - PAYMENT_BACKEND_WORKER_FALLBACK_DELAY=70
       - PAYMENT_BACKEND_WORKER_THREAD_DELAY=0
@@ -58,7 +58,7 @@ services:
     container_name: backend-02
     hostname: backend-02
     environment:
-      - SPRING_PROFILES_ACTIVE=prod
+      #- SPRING_PROFILES_ACTIVE=prod
       - PAYMENT_BACKEND_MAIN_INSTANCE=false
       - PAYMENT_BACKEND_WORKER_FALLBACK_DELAY=70
       - PAYMENT_BACKEND_WORKER_THREAD_DELAY=0
