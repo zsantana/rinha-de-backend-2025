@@ -1,6 +1,6 @@
 services:
   load-balance:
-    image: lpj145/rinha-lb:1.04
+    image: lpj145/rinha-lb:1.06
     networks:
       - backend
       - payment-processor
@@ -20,7 +20,7 @@ services:
           memory: "20MB"
 
   api1: &api
-    image: lpj145/rinha-lb:1.04
+    image: lpj145/rinha-lb:1.06
     hostname: api1
     environment:
       - SOCKET_DIR=/var/run/sockets
