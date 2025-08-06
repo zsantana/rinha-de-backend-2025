@@ -34,7 +34,7 @@ services:
     environment:
       - GATEWAY=false
       - SOCK=/tmp/app1/unix.sock
-      - WORKERS=50
+      - WORKERS=14
     depends_on:
       - postgres
 
@@ -53,7 +53,7 @@ services:
     environment:
       - GATEWAY=false
       - SOCK=/tmp/app2/unix.sock
-      - WORKERS=50
+      - WORKERS=14
     depends_on:
       - postgres
 
