@@ -1,6 +1,6 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Wed Aug  6 07:06:40 AM -03 2025**
-250 submissões / 223 resultados / 27 submissões com erro
+Atualizado em **Wed Aug  6 07:17:22 AM -03 2025**
+248 submissões / 221 resultados / 27 submissões com erro
 
 
 | participante | p99 | bônus por desempenho (%) | multa ($) | lucro | submissão |
@@ -53,7 +53,6 @@ Atualizado em **Wed Aug  6 07:06:40 AM -03 2025**
 |	davidalecrim1-go-1	|	18ms	|	0%	|	0	|	316545.32	|	[davidalecrim1-go-1](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/davidalecrim1-go-1)
 |	davidalecrim1-go-2	|	12.42ms	|	0%	|	105314.63075	|	195584.31425	|	[davidalecrim1-go-2](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/davidalecrim1-go-2)
 |	davidalecrim1-go-3	|	8.48ms	|	5%	|	0	|	332193.93375	|	[davidalecrim1-go-3](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/davidalecrim1-go-3)
-|	david-delta-sierra-go	|	4.64ms	|	13%	|	110744.54475	|	246802.1283	|	[david-delta-sierra-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/david-delta-sierra-go)
 |	davigga-node-2	|	111.37ms	|	0%	|	0	|	263350.63	|	[davigga-node-2](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/davigga-node-2)
 |	davigga-node	|	96.8ms	|	0%	|	0	|	300462.14	|	[davigga-node](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/davigga-node)
 |	dbiagi	|	91.18ms	|	0%	|	107212.59325	|	199109.10175	|	[dbiagi](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/dbiagi)
@@ -99,9 +98,9 @@ Atualizado em **Wed Aug  6 07:06:40 AM -03 2025**
 |	hamilton-golang-mongo-default	|	8.26ms	|	5%	|	110757.77825000961	|	221515.55650001921	|	[hamilton-golang-mongo-default](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/hamilton-golang-mongo-default)
 |	hamilton-golang-mongo	|	4.19ms	|	14%	|	0	|	355395.47309997334	|	[hamilton-golang-mongo](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/hamilton-golang-mongo)
 |	hamilton-golang-redis	|	2.89ms	|	16%	|	0	|	367148.71160003194	|	[hamilton-golang-redis](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/hamilton-golang-redis)
-|	hamilton-golang-socket-1	|	3.33ms	|	15%	|	110837.1792500097	|	253342.1240000222	|	[hamilton-golang-socket-1](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/hamilton-golang-socket-1)
-|	hamilton-golang-socket-2	|	2.44ms	|	17%	|	110817.32900000967	|	259629.17080002266	|	[hamilton-golang-socket-2](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/hamilton-golang-socket-2)
-|	hamilton-golang-socket-3	|	2.94ms	|	16%	|	110810.71225000966	|	256447.64835002235	|	[hamilton-golang-socket-3](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/hamilton-golang-socket-3)
+|	hamilton-golang-socket-1	|	2.79ms	|	16%	|	110817.32900000967	|	256462.9614000224	|	[hamilton-golang-socket-1](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/hamilton-golang-socket-1)
+|	hamilton-golang-socket-2	|	3.83ms	|	14%	|	110817.32900000967	|	250130.54260002184	|	[hamilton-golang-socket-2](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/hamilton-golang-socket-2)
+|	hamilton-golang-socket-3	|	3.85ms	|	14%	|	110804.09550000966	|	250100.6727000218	|	[hamilton-golang-socket-3](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/hamilton-golang-socket-3)
 |	hamilton-golang-socket	|	2.66ms	|	17%	|	0	|	370557.09405003255	|	[hamilton-golang-socket](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/hamilton-golang-socket)
 |	henriqueramos13-node	|	36.41ms	|	0%	|	60010.5625	|	111448.1875	|	[henriqueramos13-node](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/henriqueramos13-node)
 |	henriquevalcanaia-swift-vapor	|	159.61ms	|	0%	|	73381.86765	|	136280.61135	|	[henriquevalcanaia-swift-vapor](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/henriquevalcanaia-swift-vapor)
@@ -126,7 +125,6 @@ Atualizado em **Wed Aug  6 07:06:40 AM -03 2025**
 |	jvsandrade-rust-mini	|	3.01ms	|	16%	|	0	|	367280.2904	|	[jvsandrade-rust-mini](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/jvsandrade-rust-mini)
 |	kauan-carvalho-elixir	|	40.82ms	|	0%	|	0	|	309587.285	|	[kauan-carvalho-elixir](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/kauan-carvalho-elixir)
 |	kauan-carvalho-go	|	4.1ms	|	14%	|	0	|	352445.1588	|	[kauan-carvalho-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/kauan-carvalho-go)
-|	krymancer	|	6.87ms	|	8%	|	0	|	0	|	[krymancer](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/krymancer)
 |	lbattochio-dotnet	|	54.05ms	|	0%	|	0	|	315108.54	|	[lbattochio-dotnet](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/lbattochio-dotnet)
 |	lczago-go	|	4.39ms	|	13%	|	108880.3624999919	|	242647.66499998193	|	[lczago-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/lczago-go)
 |	lecosas-java-spring-graalvm	|	16.66ms	|	0%	|	0	|	311415.1	|	[lecosas-java-spring-graalvm](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/lecosas-java-spring-graalvm)
