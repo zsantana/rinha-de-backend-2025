@@ -15,8 +15,8 @@ services:
       API_UDP_PORT: 9095
       API_MASTER: true
       LB_UDP_HOST: load-balancer
-      HANDLER_UDP_POOL_SIZE: 4
-      CLIENT_BACKOFF: 400
+      HANDLER_UDP_POOL_SIZE: 3
+      CLIENT_BACKOFF: 350
       SOCKET_PATH: /tmp/api1.sock
       JAVA_OPTS: >-
         -server
@@ -50,8 +50,8 @@ services:
       UDP_CHANNEL_INTERNAL_PORT: 9004
       EXTERNAL_UDP_HOST: backend-1
       EXTERNAL_UDP_PORT: 9003
-      HANDLER_UDP_POOL_SIZE: 4
-      CLIENT_BACKOFF: 400
+      HANDLER_UDP_POOL_SIZE: 3
+      CLIENT_BACKOFF: 350
       SOCKET_PATH: /tmp/api2.sock
       JAVA_OPTS: >-
         -server
