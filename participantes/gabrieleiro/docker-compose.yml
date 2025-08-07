@@ -1,6 +1,6 @@
 x-service-templates:
   api: &api
-    image: gabrieleiro/rinha-de-backend-2025-api:5.0
+    image: gabrieleiro/rinha-de-backend-2025-api:6.0
     networks:
       - rinha-de-backend-2025
       - payment-processor
@@ -9,6 +9,8 @@ x-service-templates:
         limits:
           cpus: "0.25"
           memory: "50MB"
+    volumes:
+      - /tmp:/tmp
     depends_on:
       - tracker
 
@@ -16,51 +18,45 @@ services:
   api-1: 
     <<: *api
     hostname: api-1
-    expose:
-      - "9901/udp"
-    ports:
-      - "9901:9901/udp"
     environment:
       DEFAULT_PROCESSOR_URL: "http://payment-processor-default:8080"
       FALLBACK_PROCESSOR_URL: "http://payment-processor-fallback:8080"
-      TRACKER_URL: "tracker:1111"
-      ADDRESS: ":9901"
+      TRACKER_URI: "/tmp/tracker.sock"
+      LOAD_BALANCER_URI: "/tmp/lb.sock"
+      ADDRESS: "/tmp/api_1.sock"
 
   api-2:
     <<: *api
     hostname: api-2
-    ports:
-      - "9902:9902/udp"
     environment:
       DEFAULT_PROCESSOR_URL: "http://payment-processor-default:8080"
       FALLBACK_PROCESSOR_URL: "http://payment-processor-fallback:8080"
-      TRACKER_URL: "tracker:1111"
-      ADDRESS: ":9902"
+      LOAD_BALANCER_URI: "/tmp/lb.sock"
+      TRACKER_URI: "/tmp/tracker.sock"
+      ADDRESS: "/tmp/api_2.sock"
 
   api-3:
       <<: *api
       hostname: api-3
-      ports:
-        - "9903:9903/udp"
       environment:
         DEFAULT_PROCESSOR_URL: "http://payment-processor-default:8080"
         FALLBACK_PROCESSOR_URL: "http://payment-processor-fallback:8080"
-        TRACKER_URL: "tracker:1111"
-        ADDRESS: ":9903"
+        LOAD_BALANCER_URI: "/tmp/lb.sock"
+        TRACKER_URI: "/tmp/tracker.sock"
+        ADDRESS: "/tmp/api_3.sock"
 
   api-4:
       <<: *api
       hostname: api-4
-      ports:
-        - "9904:9904/udp"
       environment:
         DEFAULT_PROCESSOR_URL: "http://payment-processor-default:8080"
         FALLBACK_PROCESSOR_URL: "http://payment-processor-fallback:8080"
-        TRACKER_URL: "tracker:1111"
-        ADDRESS: ":9904"
+        TRACKER_URI: "/tmp/tracker.sock"
+        LOAD_BALANCER_URI: "/tmp/lb.sock"
+        ADDRESS: "/tmp/api_4.sock"
 
   load-balancer:
-    image: gabrieleiro/rinha-de-backend-2025-load-balancer:5.0
+    image: gabrieleiro/rinha-de-backend-2025-load-balancer:6.0
     networks:
       - rinha-de-backend-2025
     deploy:
@@ -68,11 +64,14 @@ services:
         limits:
           cpus: "0.4"
           memory: "50MB"
+    volumes:
+      - /tmp:/tmp
     ports:
       - "9999:9999"
     environment:
-      ADDRESS: ":9999"
-      SERVERS: "api-1:9901,api-2:9902,api-3:9903,api-4:9904"
+      UNIX_SOCKET_ADDRESS: "/tmp/lb.sock"
+      TCP_ADDRESS: ":9999"
+      SERVERS: "/tmp/api_1.sock,/tmp/api_2.sock,/tmp/api_3.sock,/tmp/api_4.sock"
     depends_on:
       - api-1
       - api-2
@@ -81,7 +80,7 @@ services:
 
   tracker:
     hostname: tracker
-    image: gabrieleiro/rinha-de-backend-2025-tracker:4.0
+    image: gabrieleiro/rinha-de-backend-2025-tracker:6.0
     networks:
       - rinha-de-backend-2025
     deploy:
@@ -89,12 +88,10 @@ services:
         limits:
           cpus: "0.1"
           memory: "50MB"
-    expose:
-      - "1111/udp"
-    ports:
-      - "1111:1111/udp"
+    volumes:
+      - /tmp:/tmp
     environment:
-      ADDRESS: ":1111"
+      ADDRESS: "/tmp/tracker.sock"
 
 networks:
   rinha-de-backend-2025:
