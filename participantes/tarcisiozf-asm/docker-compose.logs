@@ -1,0 +1,96 @@
+
+ lb Pulling 
+ app-1 Pulling 
+ app-2 Pulling 
+ 9824c27679d3 Already exists 
+ c44d0347177a Pulling fs layer 
+ 12a8e23fc540 Pulling fs layer 
+ 6d243f0f1b17 Pulling fs layer 
+ 9824c27679d3 Already exists 
+ 6985484a280f Pulling fs layer 
+ 877e12b45a4b Pulling fs layer 
+ e09b018afc0a Pulling fs layer 
+ 6985484a280f Waiting 
+ 877e12b45a4b Waiting 
+ e09b018afc0a Waiting 
+ 9824c27679d3 Already exists 
+ 6985484a280f Pulling fs layer 
+ 877e12b45a4b Pulling fs layer 
+ e09b018afc0a Pulling fs layer 
+ e09b018afc0a Waiting 
+ 6985484a280f Waiting 
+ 877e12b45a4b Waiting 
+ c44d0347177a Downloading [>                                                  ]     935B/55.28kB
+ c44d0347177a Download complete 
+ c44d0347177a Extracting [=============================>                     ]  32.77kB/55.28kB
+ c44d0347177a Extracting [==================================================>]  55.28kB/55.28kB
+ 6d243f0f1b17 Downloading [=====>                                             ]     936B/8.606kB
+ 6d243f0f1b17 Download complete 
+ 12a8e23fc540 Downloading [==================================================>]      93B/93B
+ 12a8e23fc540 Verifying Checksum 
+ 12a8e23fc540 Download complete 
+ c44d0347177a Pull complete 
+ 12a8e23fc540 Extracting [==================================================>]      93B/93B
+ 12a8e23fc540 Extracting [==================================================>]      93B/93B
+ 12a8e23fc540 Pull complete 
+ 6d243f0f1b17 Extracting [==================================================>]  8.606kB/8.606kB
+ 6d243f0f1b17 Extracting [==================================================>]  8.606kB/8.606kB
+ 6d243f0f1b17 Pull complete 
+ lb Pulled 
+ 6985484a280f Downloading [>                                                  ]  1.008kB/55.29kB
+ 6985484a280f Downloading [>                                                  ]  1.008kB/55.29kB
+ 6985484a280f Downloading [==================================================>]  55.29kB/55.29kB
+ 6985484a280f Verifying Checksum 
+ 6985484a280f Download complete 
+ 6985484a280f Extracting [=============================>                     ]  32.77kB/55.29kB
+ 6985484a280f Verifying Checksum 
+ 6985484a280f Download complete 
+ 6985484a280f Extracting [=============================>                     ]  32.77kB/55.29kB
+ 6985484a280f Extracting [==================================================>]  55.29kB/55.29kB
+ 6985484a280f Extracting [==================================================>]  55.29kB/55.29kB
+ 6985484a280f Pull complete 
+ 6985484a280f Pull complete 
+ e09b018afc0a Downloading [=====>                                             ]  1.369kB/13.2kB
+ e09b018afc0a Downloading [=====>                                             ]  1.369kB/13.2kB
+ e09b018afc0a Download complete 
+ e09b018afc0a Downloading [==================================================>]   13.2kB/13.2kB
+ e09b018afc0a Download complete 
+ 877e12b45a4b Downloading [==================================================>]      93B/93B
+ 877e12b45a4b Verifying Checksum 
+ 877e12b45a4b Download complete 
+ 877e12b45a4b Extracting [==================================================>]      93B/93B
+ 877e12b45a4b Verifying Checksum 
+ 877e12b45a4b Download complete 
+ 877e12b45a4b Extracting [==================================================>]      93B/93B
+ 877e12b45a4b Extracting [==================================================>]      93B/93B
+ 877e12b45a4b Extracting [==================================================>]      93B/93B
+ 877e12b45a4b Pull complete 
+ 877e12b45a4b Pull complete 
+ e09b018afc0a Extracting [==================================================>]   13.2kB/13.2kB
+ e09b018afc0a Extracting [==================================================>]   13.2kB/13.2kB
+ e09b018afc0a Extracting [==================================================>]   13.2kB/13.2kB
+ e09b018afc0a Extracting [==================================================>]   13.2kB/13.2kB
+ e09b018afc0a Pull complete 
+ e09b018afc0a Pull complete 
+ app-2 Pulled 
+ app-1 Pulled 
+ Network tarcisiozf-asm_app  Creating
+ Network tarcisiozf-asm_app  Created
+ Volume "tarcisiozf-asm_sockets"  Creating
+ Volume "tarcisiozf-asm_sockets"  Created
+ Volume "tarcisiozf-asm_app-data"  Creating
+ Volume "tarcisiozf-asm_app-data"  Created
+ Container tarcisiozf-asm-lb-1  Creating
+ Container tarcisiozf-asm-app-1-1  Creating
+ Container tarcisiozf-asm-app-2-1  Creating
+ Container tarcisiozf-asm-lb-1  Created
+ Container tarcisiozf-asm-app-1-1  Created
+ Container tarcisiozf-asm-app-2-1  Created
+Attaching to app-1-1, app-2-1, lb-1
+lb-1     | zero-copy lb v2 (capped, small pipes)
+lb-1     | listening on port 9999
+lb-1     | Memory usage: 11408 KB
+app-2-1  | v3
+app-1-1  | v3
+[Kapp-1-1 exited with code 137
+log truncated at line 1000
