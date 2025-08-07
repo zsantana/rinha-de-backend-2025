@@ -1,6 +1,6 @@
 services:
   api01: &app
-    image: thiagorigonatti/rinha-2025:0.0.8
+    image: thiagorigonatti/rinha-2025:0.0.9
     environment:
       - PTHREADS=2
       - SOCK_PATH=/dev/shm/server1.sock
@@ -10,8 +10,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.35"
-          memory: "125MB"
+          cpus: "0.50"
+          memory: "30MB"
     volumes:
       - /dev/shm:/dev/shm
 
@@ -28,8 +28,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.80"
-          memory: "100MB"
+          cpus: "0.50"
+          memory: "200MB"
     networks:
       - api
     ports:
