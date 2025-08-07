@@ -31,7 +31,7 @@ services:
     ports:
       - "9999:80"
     volumes:
-      - ./config/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./config/nginx.conf:/usr/local/openresty/nginx/conf/nginx.conf
       - api-socketsv4:/var/run:rw
     depends_on:
       - rinha-api-1
