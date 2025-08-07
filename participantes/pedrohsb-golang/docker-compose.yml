@@ -1,6 +1,6 @@
 services:
   memdb:
-    image: pedrohsbarbosa99/rinha-golang-2025:0.1.7
+    image: pedrohsbarbosa99/rinha-golang-2025:0.1.8
     command: ["./memdb"]
     volumes:
       - memsock:/tmp
@@ -15,7 +15,7 @@ services:
     restart: unless-stopped
 
   app1:
-    image: pedrohsbarbosa99/rinha-golang-2025:0.1.7
+    image: pedrohsbarbosa99/rinha-golang-2025:0.1.8
     command: ["./main"]
     environment:
       - MEMDB_SOCKET=/tmp/kvstore.sock
