@@ -19,7 +19,7 @@ services:
           cpus: "0.20"
           memory: "100MB"
   api1:
-    image: danielsuhett1999/rinha-backend-go:1.0.8
+    image: danielsuhett1999/rinha-backend-go:1.0.9
     hostname: api1
     volumes:
       - sockets:/var/run/sockets
@@ -47,7 +47,7 @@ services:
           cpus: "0.60"
           memory: "100MB"
   api2:
-    image: danielsuhett1999/rinha-backend-go:1.0.8
+    image: danielsuhett1999/rinha-backend-go:1.0.9
     hostname: api2
     volumes:
       - sockets:/var/run/sockets
