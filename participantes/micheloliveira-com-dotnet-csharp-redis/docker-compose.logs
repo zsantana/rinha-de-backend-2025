@@ -1,65 +1,13 @@
 
- backend-2 Pulling 
- backend-1 Pulling 
- 0368fd46e3c6 Already exists 
- b2cfd92d46e1 Already exists 
- bed0ae60cca4 Already exists 
- 3f9de7eab912 Pulling fs layer 
- d21f13aee93c Pulling fs layer 
- 0368fd46e3c6 Already exists 
- b2cfd92d46e1 Already exists 
- bed0ae60cca4 Already exists 
- 3f9de7eab912 Pulling fs layer 
- d21f13aee93c Pulling fs layer 
- 3f9de7eab912 Downloading [==================================================>]      93B/93B
- 3f9de7eab912 Download complete 
- 3f9de7eab912 Downloading [==================================================>]      93B/93B
- 3f9de7eab912 Verifying Checksum 
- 3f9de7eab912 Download complete 
- 3f9de7eab912 Extracting [==================================================>]      93B/93B
- 3f9de7eab912 Extracting [==================================================>]      93B/93B
- 3f9de7eab912 Extracting [==================================================>]      93B/93B
- 3f9de7eab912 Extracting [==================================================>]      93B/93B
- 3f9de7eab912 Pull complete 
- 3f9de7eab912 Pull complete 
- d21f13aee93c Downloading [>                                                  ]  211.8kB/20.65MB
- d21f13aee93c Downloading [>                                                  ]  211.8kB/20.65MB
- d21f13aee93c Downloading [=>                                                 ]  637.8kB/20.65MB
- d21f13aee93c Downloading [=>                                                 ]  637.8kB/20.65MB
- d21f13aee93c Downloading [====>                                              ]  1.694MB/20.65MB
- d21f13aee93c Downloading [====>                                              ]  1.694MB/20.65MB
- d21f13aee93c Downloading [==========>                                        ]  4.241MB/20.65MB
- d21f13aee93c Downloading [==========>                                        ]  4.241MB/20.65MB
- d21f13aee93c Downloading [====================>                              ]  8.504MB/20.65MB
- d21f13aee93c Downloading [====================>                              ]  8.504MB/20.65MB
- d21f13aee93c Downloading [===============================>                   ]  13.19MB/20.65MB
- d21f13aee93c Downloading [===============================>                   ]  13.19MB/20.65MB
- d21f13aee93c Downloading [=================================================> ]  20.44MB/20.65MB
- d21f13aee93c Downloading [=================================================> ]  20.44MB/20.65MB
- d21f13aee93c Verifying Checksum 
- d21f13aee93c Download complete 
- d21f13aee93c Download complete 
- d21f13aee93c Extracting [>                                                  ]  229.4kB/20.65MB
- d21f13aee93c Extracting [>                                                  ]  229.4kB/20.65MB
- d21f13aee93c Extracting [=====================>                             ]  8.946MB/20.65MB
- d21f13aee93c Extracting [=====================>                             ]  8.946MB/20.65MB
- d21f13aee93c Extracting [============================================>      ]  18.58MB/20.65MB
- d21f13aee93c Extracting [============================================>      ]  18.58MB/20.65MB
- d21f13aee93c Extracting [==================================================>]  20.65MB/20.65MB
- d21f13aee93c Extracting [==================================================>]  20.65MB/20.65MB
- d21f13aee93c Pull complete 
- d21f13aee93c Pull complete 
- backend-1 Pulled 
- backend-2 Pulled 
  Network micheloliveira-com-dotnet-csharp-redis_backend  Creating
  Network micheloliveira-com-dotnet-csharp-redis_backend  Created
  Container micheloliveira-com-dotnet-csharp-redis-redis-1  Creating
  Container micheloliveira-com-dotnet-csharp-redis-backend-1-1  Creating
  Container micheloliveira-com-dotnet-csharp-redis-backend-2-1  Creating
- Container micheloliveira-com-dotnet-csharp-redis-redis-1  Created
  Container micheloliveira-com-dotnet-csharp-redis-backend-1-1  Created
  Container micheloliveira-com-dotnet-csharp-redis-backend-2-1  Created
  Container micheloliveira-com-dotnet-csharp-redis-load-balancer-1  Creating
+ Container micheloliveira-com-dotnet-csharp-redis-redis-1  Created
  Container micheloliveira-com-dotnet-csharp-redis-load-balancer-1  Created
 Attaching to backend-1-1, backend-2-1, load-balancer-1, redis-1
 backend-2-1      | WORKER_SIZE: 15
@@ -71,62 +19,62 @@ backend-1-1      | BATCH_SIZE: 100
 backend-1-1      | [Redis] Attempting connection...
 backend-1-1      | Retry 1: RedisConnectionException - It was not possible to connect to the redis server(s). Error connecting right now. To allow this multiplexer to continue retrying until it's able to connect, use abortConnect=false in your connection string or AbortOnConnectFail=false; in your code.
 redis-1          | Starting Redis Server
-redis-1          | 1:C 07 Aug 2025 18:33:28.719 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
-redis-1          | 1:C 07 Aug 2025 18:33:28.719 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
-redis-1          | 1:C 07 Aug 2025 18:33:28.719 * Redis version=8.0.3, bits=64, commit=00000000, modified=1, pid=1, just started
-redis-1          | 1:C 07 Aug 2025 18:33:28.719 * Configuration loaded
-redis-1          | 1:M 07 Aug 2025 18:33:28.720 * monotonic clock: POSIX clock_gettime
-redis-1          | 1:M 07 Aug 2025 18:33:28.721 * Running mode=standalone, port=6379.
-redis-1          | 1:M 07 Aug 2025 18:33:28.802 * <bf> RedisBloom version 8.0.1 (Git=unknown)
-redis-1          | 1:M 07 Aug 2025 18:33:28.802 * <bf> Registering configuration options: [
-redis-1          | 1:M 07 Aug 2025 18:33:28.802 * <bf> 	{ bf-error-rate       :      0.01 }
-redis-1          | 1:M 07 Aug 2025 18:33:28.802 * <bf> 	{ bf-initial-size     :       100 }
-redis-1          | 1:M 07 Aug 2025 18:33:28.802 * <bf> 	{ bf-expansion-factor :         2 }
-redis-1          | 1:M 07 Aug 2025 18:33:28.802 * <bf> 	{ cf-bucket-size      :         2 }
-redis-1          | 1:M 07 Aug 2025 18:33:28.802 * <bf> 	{ cf-initial-size     :      1024 }
-redis-1          | 1:M 07 Aug 2025 18:33:28.802 * <bf> 	{ cf-max-iterations   :        20 }
-redis-1          | 1:M 07 Aug 2025 18:33:28.802 * <bf> 	{ cf-expansion-factor :         1 }
-redis-1          | 1:M 07 Aug 2025 18:33:28.802 * <bf> 	{ cf-max-expansions   :        32 }
-redis-1          | 1:M 07 Aug 2025 18:33:28.802 * <bf> ]
-redis-1          | 1:M 07 Aug 2025 18:33:28.802 * Module 'bf' loaded from /usr/local/lib/redis/modules//redisbloom.so
-redis-1          | 1:M 07 Aug 2025 18:33:28.805 * <search> Redis version found by RedisSearch : 8.0.3 - oss
-redis-1          | 1:M 07 Aug 2025 18:33:28.805 * <search> RediSearch version 8.0.1 (Git=5688fcc)
-redis-1          | 1:M 07 Aug 2025 18:33:28.805 * <search> Low level api version 1 initialized successfully
-redis-1          | 1:M 07 Aug 2025 18:33:28.805 * <search> gc: ON, prefix min length: 2, min word length to stem: 4, prefix max expansions: 200, query timeout (ms): 500, timeout policy: return, cursor read size: 1000, cursor max idle (ms): 300000, max doctable size: 1000000, max number of search results:  1000000, 
-redis-1          | 1:M 07 Aug 2025 18:33:28.805 * <search> Initialized thread pools!
-redis-1          | 1:M 07 Aug 2025 18:33:28.805 * <search> Disabled workers threadpool of size 0
-redis-1          | 1:M 07 Aug 2025 18:33:28.805 * <search> Subscribe to config changes
-redis-1          | 1:M 07 Aug 2025 18:33:28.805 * <search> Enabled role change notification
-redis-1          | 1:M 07 Aug 2025 18:33:28.805 * <search> Cluster configuration: AUTO partitions, type: 0, coordinator timeout: 0ms
-redis-1          | 1:M 07 Aug 2025 18:33:28.805 * <search> Register write commands
-redis-1          | 1:M 07 Aug 2025 18:33:28.806 * Module 'search' loaded from /usr/local/lib/redis/modules//redisearch.so
-redis-1          | 1:M 07 Aug 2025 18:33:28.806 * <timeseries> RedisTimeSeries version 80001, git_sha=577bfa8b5909e7ee572f0b651399be8303dc6641
-redis-1          | 1:M 07 Aug 2025 18:33:28.806 * <timeseries> Redis version found by RedisTimeSeries : 8.0.3 - oss
-redis-1          | 1:M 07 Aug 2025 18:33:28.806 * <timeseries> Registering configuration options: [
-redis-1          | 1:M 07 Aug 2025 18:33:28.806 * <timeseries> 	{ ts-compaction-policy   :              }
-redis-1          | 1:M 07 Aug 2025 18:33:28.806 * <timeseries> 	{ ts-num-threads         :            3 }
-redis-1          | 1:M 07 Aug 2025 18:33:28.806 * <timeseries> 	{ ts-retention-policy    :            0 }
-redis-1          | 1:M 07 Aug 2025 18:33:28.806 * <timeseries> 	{ ts-duplicate-policy    :        block }
-redis-1          | 1:M 07 Aug 2025 18:33:28.806 * <timeseries> 	{ ts-chunk-size-bytes    :         4096 }
-redis-1          | 1:M 07 Aug 2025 18:33:28.806 * <timeseries> 	{ ts-encoding            :   compressed }
-redis-1          | 1:M 07 Aug 2025 18:33:28.806 * <timeseries> 	{ ts-ignore-max-time-diff:            0 }
-redis-1          | 1:M 07 Aug 2025 18:33:28.806 * <timeseries> 	{ ts-ignore-max-val-diff :     0.000000 }
-redis-1          | 1:M 07 Aug 2025 18:33:28.806 * <timeseries> ]
-redis-1          | 1:M 07 Aug 2025 18:33:28.807 * <timeseries> Detected redis oss
-redis-1          | 1:M 07 Aug 2025 18:33:28.807 * Module 'timeseries' loaded from /usr/local/lib/redis/modules//redistimeseries.so
-redis-1          | 1:M 07 Aug 2025 18:33:28.809 * <ReJSON> Created new data type 'ReJSON-RL'
-redis-1          | 1:M 07 Aug 2025 18:33:28.809 * <ReJSON> version: 80001 git sha: unknown branch: unknown
-redis-1          | 1:M 07 Aug 2025 18:33:28.809 * <ReJSON> Exported RedisJSON_V1 API
-redis-1          | 1:M 07 Aug 2025 18:33:28.809 * <ReJSON> Exported RedisJSON_V2 API
-redis-1          | 1:M 07 Aug 2025 18:33:28.809 * <ReJSON> Exported RedisJSON_V3 API
-redis-1          | 1:M 07 Aug 2025 18:33:28.809 * <ReJSON> Exported RedisJSON_V4 API
-redis-1          | 1:M 07 Aug 2025 18:33:28.809 * <ReJSON> Exported RedisJSON_V5 API
-redis-1          | 1:M 07 Aug 2025 18:33:28.809 * <ReJSON> Enabled diskless replication
-redis-1          | 1:M 07 Aug 2025 18:33:28.809 * <ReJSON> Initialized shared string cache, thread safe: false.
-redis-1          | 1:M 07 Aug 2025 18:33:28.809 * Module 'ReJSON' loaded from /usr/local/lib/redis/modules//rejson.so
-redis-1          | 1:M 07 Aug 2025 18:33:28.809 * <search> Acquired RedisJSON_V5 API
-redis-1          | 1:M 07 Aug 2025 18:33:28.809 * Server initialized
-redis-1          | 1:M 07 Aug 2025 18:33:28.810 * Ready to accept connections tcp
+redis-1          | 1:C 07 Aug 2025 18:53:10.202 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+redis-1          | 1:C 07 Aug 2025 18:53:10.202 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+redis-1          | 1:C 07 Aug 2025 18:53:10.202 * Redis version=8.0.3, bits=64, commit=00000000, modified=1, pid=1, just started
+redis-1          | 1:C 07 Aug 2025 18:53:10.202 * Configuration loaded
+redis-1          | 1:M 07 Aug 2025 18:53:10.203 * monotonic clock: POSIX clock_gettime
+redis-1          | 1:M 07 Aug 2025 18:53:10.203 * Running mode=standalone, port=6379.
+redis-1          | 1:M 07 Aug 2025 18:53:10.204 * <bf> RedisBloom version 8.0.1 (Git=unknown)
+redis-1          | 1:M 07 Aug 2025 18:53:10.204 * <bf> Registering configuration options: [
+redis-1          | 1:M 07 Aug 2025 18:53:10.204 * <bf> 	{ bf-error-rate       :      0.01 }
+redis-1          | 1:M 07 Aug 2025 18:53:10.204 * <bf> 	{ bf-initial-size     :       100 }
+redis-1          | 1:M 07 Aug 2025 18:53:10.204 * <bf> 	{ bf-expansion-factor :         2 }
+redis-1          | 1:M 07 Aug 2025 18:53:10.204 * <bf> 	{ cf-bucket-size      :         2 }
+redis-1          | 1:M 07 Aug 2025 18:53:10.204 * <bf> 	{ cf-initial-size     :      1024 }
+redis-1          | 1:M 07 Aug 2025 18:53:10.204 * <bf> 	{ cf-max-iterations   :        20 }
+redis-1          | 1:M 07 Aug 2025 18:53:10.204 * <bf> 	{ cf-expansion-factor :         1 }
+redis-1          | 1:M 07 Aug 2025 18:53:10.204 * <bf> 	{ cf-max-expansions   :        32 }
+redis-1          | 1:M 07 Aug 2025 18:53:10.204 * <bf> ]
+redis-1          | 1:M 07 Aug 2025 18:53:10.205 * Module 'bf' loaded from /usr/local/lib/redis/modules//redisbloom.so
+redis-1          | 1:M 07 Aug 2025 18:53:10.207 * <search> Redis version found by RedisSearch : 8.0.3 - oss
+redis-1          | 1:M 07 Aug 2025 18:53:10.207 * <search> RediSearch version 8.0.1 (Git=5688fcc)
+redis-1          | 1:M 07 Aug 2025 18:53:10.208 * <search> Low level api version 1 initialized successfully
+redis-1          | 1:M 07 Aug 2025 18:53:10.208 * <search> gc: ON, prefix min length: 2, min word length to stem: 4, prefix max expansions: 200, query timeout (ms): 500, timeout policy: return, cursor read size: 1000, cursor max idle (ms): 300000, max doctable size: 1000000, max number of search results:  1000000, 
+redis-1          | 1:M 07 Aug 2025 18:53:10.208 * <search> Initialized thread pools!
+redis-1          | 1:M 07 Aug 2025 18:53:10.208 * <search> Disabled workers threadpool of size 0
+redis-1          | 1:M 07 Aug 2025 18:53:10.208 * <search> Subscribe to config changes
+redis-1          | 1:M 07 Aug 2025 18:53:10.208 * <search> Enabled role change notification
+redis-1          | 1:M 07 Aug 2025 18:53:10.209 * <search> Cluster configuration: AUTO partitions, type: 0, coordinator timeout: 0ms
+redis-1          | 1:M 07 Aug 2025 18:53:10.209 * <search> Register write commands
+redis-1          | 1:M 07 Aug 2025 18:53:10.210 * Module 'search' loaded from /usr/local/lib/redis/modules//redisearch.so
+redis-1          | 1:M 07 Aug 2025 18:53:10.212 * <timeseries> RedisTimeSeries version 80001, git_sha=577bfa8b5909e7ee572f0b651399be8303dc6641
+redis-1          | 1:M 07 Aug 2025 18:53:10.212 * <timeseries> Redis version found by RedisTimeSeries : 8.0.3 - oss
+redis-1          | 1:M 07 Aug 2025 18:53:10.212 * <timeseries> Registering configuration options: [
+redis-1          | 1:M 07 Aug 2025 18:53:10.212 * <timeseries> 	{ ts-compaction-policy   :              }
+redis-1          | 1:M 07 Aug 2025 18:53:10.212 * <timeseries> 	{ ts-num-threads         :            3 }
+redis-1          | 1:M 07 Aug 2025 18:53:10.212 * <timeseries> 	{ ts-retention-policy    :            0 }
+redis-1          | 1:M 07 Aug 2025 18:53:10.212 * <timeseries> 	{ ts-duplicate-policy    :        block }
+redis-1          | 1:M 07 Aug 2025 18:53:10.212 * <timeseries> 	{ ts-chunk-size-bytes    :         4096 }
+redis-1          | 1:M 07 Aug 2025 18:53:10.212 * <timeseries> 	{ ts-encoding            :   compressed }
+redis-1          | 1:M 07 Aug 2025 18:53:10.212 * <timeseries> 	{ ts-ignore-max-time-diff:            0 }
+redis-1          | 1:M 07 Aug 2025 18:53:10.212 * <timeseries> 	{ ts-ignore-max-val-diff :     0.000000 }
+redis-1          | 1:M 07 Aug 2025 18:53:10.212 * <timeseries> ]
+redis-1          | 1:M 07 Aug 2025 18:53:10.212 * <timeseries> Detected redis oss
+redis-1          | 1:M 07 Aug 2025 18:53:10.212 * Module 'timeseries' loaded from /usr/local/lib/redis/modules//redistimeseries.so
+redis-1          | 1:M 07 Aug 2025 18:53:10.213 * <ReJSON> Created new data type 'ReJSON-RL'
+redis-1          | 1:M 07 Aug 2025 18:53:10.214 * <ReJSON> version: 80001 git sha: unknown branch: unknown
+redis-1          | 1:M 07 Aug 2025 18:53:10.214 * <ReJSON> Exported RedisJSON_V1 API
+redis-1          | 1:M 07 Aug 2025 18:53:10.214 * <ReJSON> Exported RedisJSON_V2 API
+redis-1          | 1:M 07 Aug 2025 18:53:10.214 * <ReJSON> Exported RedisJSON_V3 API
+redis-1          | 1:M 07 Aug 2025 18:53:10.214 * <ReJSON> Exported RedisJSON_V4 API
+redis-1          | 1:M 07 Aug 2025 18:53:10.214 * <ReJSON> Exported RedisJSON_V5 API
+redis-1          | 1:M 07 Aug 2025 18:53:10.214 * <ReJSON> Enabled diskless replication
+redis-1          | 1:M 07 Aug 2025 18:53:10.214 * <ReJSON> Initialized shared string cache, thread safe: false.
+redis-1          | 1:M 07 Aug 2025 18:53:10.214 * Module 'ReJSON' loaded from /usr/local/lib/redis/modules//rejson.so
+redis-1          | 1:M 07 Aug 2025 18:53:10.214 * <search> Acquired RedisJSON_V5 API
+redis-1          | 1:M 07 Aug 2025 18:53:10.302 * Server initialized
+redis-1          | 1:M 07 Aug 2025 18:53:10.302 * Ready to accept connections tcp
 backend-2-1      | [Redis] Attempting connection...
 backend-2-1      | [Redis] Connected successfully.
 backend-1-1      | [Redis] Attempting connection...
@@ -140,371 +88,41 @@ load-balancer-1  | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local
 load-balancer-1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
 load-balancer-1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
 load-balancer-1  | /docker-entrypoint.sh: Configuration complete; ready for start up
-redis-1          | 1:signal-handler (1754591685) Received SIGTERM scheduling shutdown...
-redis-1          | 1:M 07 Aug 2025 18:34:46.032 * User requested shutdown...
-redis-1          | 1:M 07 Aug 2025 18:34:46.032 # Redis is now ready to exit, bye bye...
-backend-1-1      | [Worker Error] StackExchange.Redis.RedisConnectionException: SocketFailure (ReadSocketError/ConnectionReset, last-recv: 75) on redis:6379/Interactive, Idle/Faulted, last: LPOP, origin: ReadFromPipe, outstanding: 15, last-read: 0s ago, last-write: 0s ago, unanswered-write: 0s ago, keep-alive: 60s, state: ConnectedEstablished, mgr: 8 of 10 available, in: 0, in-pipe: 0, out-pipe: 0, last-heartbeat: 0s ago, last-mbeat: 0s ago, global: 0s ago, v: 2.8.58.19568
-backend-1-1      |  ---> Pipelines.Sockets.Unofficial.ConnectionResetException: Connection reset by peer
-backend-1-1      |  ---> System.Net.Sockets.SocketException (104): Connection reset by peer
-backend-1-1      |    at Pipelines.Sockets.Unofficial.Internal.Throw.Socket(Int32) + 0x27
-backend-1-1      |    at Pipelines.Sockets.Unofficial.SocketAwaitableEventArgs.GetResult() + 0x32
-backend-1-1      |    at Pipelines.Sockets.Unofficial.SocketConnection.<DoReceiveAsync>d__73.MoveNext() + 0x1e7
-backend-1-1      |    --- End of inner exception stack trace ---
-backend-1-1      |    at System.IO.Pipelines.Pipe.GetReadResult(ReadResult&) + 0x16e
-backend-1-1      |    at System.IO.Pipelines.Pipe.GetReadAsyncResult() + 0x96
-backend-1-1      |    at StackExchange.Redis.PhysicalConnection.<ReadFromPipe>d__134.MoveNext() + 0x57c
-backend-1-1      |    --- End of inner exception stack trace ---
-backend-1-1      |    at RedisQueueWorker.<WorkerLoopAsync>d__11.MoveNext() + 0x12e
-backend-1-1      | [Worker Error] StackExchange.Redis.RedisConnectionException: SocketFailure (ReadSocketError/ConnectionReset, last-recv: 75) on redis:6379/Interactive, Idle/Faulted, last: LPOP, origin: ReadFromPipe, outstanding: 15, last-read: 0s ago, last-write: 0s ago, unanswered-write: 0s ago, keep-alive: 60s, state: ConnectedEstablished, mgr: 8 of 10 available, in: 0, in-pipe: 0, out-pipe: 0, last-heartbeat: 0s ago, last-mbeat: 0s ago, global: 0s ago, v: 2.8.58.19568
-backend-1-1      |  ---> Pipelines.Sockets.Unofficial.ConnectionResetException: Connection reset by peer
-backend-1-1      |  ---> System.Net.Sockets.SocketException (104): Connection reset by peer
-backend-1-1      |    at Pipelines.Sockets.Unofficial.Internal.Throw.Socket(Int32) + 0x27
-backend-1-1      |    at Pipelines.Sockets.Unofficial.SocketAwaitableEventArgs.GetResult() + 0x32
-backend-1-1      |    at Pipelines.Sockets.Unofficial.SocketConnection.<DoReceiveAsync>d__73.MoveNext() + 0x1e7
-backend-1-1      |    --- End of inner exception stack trace ---
-backend-1-1      |    at System.IO.Pipelines.Pipe.GetReadResult(ReadResult&) + 0x16e
-backend-1-1      |    at System.IO.Pipelines.Pipe.GetReadAsyncResult() + 0x96
-backend-1-1      |    at StackExchange.Redis.PhysicalConnection.<ReadFromPipe>d__134.MoveNext() + 0x57c
-backend-1-1      |    --- End of inner exception stack trace ---
-backend-1-1      |    at RedisQueueWorker.<WorkerLoopAsync>d__11.MoveNext() + 0x12e
-backend-1-1      | [Worker Error] StackExchange.Redis.RedisConnectionException: SocketFailure (ReadSocketError/ConnectionReset, last-recv: 75) on redis:6379/Interactive, Idle/Faulted, last: LPOP, origin: ReadFromPipe, outstanding: 15, last-read: 0s ago, last-write: 0s ago, unanswered-write: 0s ago, keep-alive: 60s, state: ConnectedEstablished, mgr: 8 of 10 available, in: 0, in-pipe: 0, out-pipe: 0, last-heartbeat: 0s ago, last-mbeat: 0s ago, global: 0s ago, v: 2.8.58.19568
-backend-1-1      |  ---> Pipelines.Sockets.Unofficial.ConnectionResetException: Connection reset by peer
-backend-1-1      |  ---> System.Net.Sockets.SocketException (104): Connection reset by peer
-backend-1-1      |    at Pipelines.Sockets.Unofficial.Internal.Throw.Socket(Int32) + 0x27
-backend-1-1      |    at Pipelines.Sockets.Unofficial.SocketAwaitableEventArgs.GetResult() + 0x32
-backend-1-1      |    at Pipelines.Sockets.Unofficial.SocketConnection.<DoReceiveAsync>d__73.MoveNext() + 0x1e7
-backend-1-1      |    --- End of inner exception stack trace ---
-backend-1-1      |    at System.IO.Pipelines.Pipe.GetReadResult(ReadResult&) + 0x16e
-backend-1-1      |    at System.IO.Pipelines.Pipe.GetReadAsyncResult() + 0x96
-backend-1-1      |    at StackExchange.Redis.PhysicalConnection.<ReadFromPipe>d__134.MoveNext() + 0x57c
-backend-1-1      |    --- End of inner exception stack trace ---
-backend-1-1      |    at RedisQueueWorker.<WorkerLoopAsync>d__11.MoveNext() + 0x12e
-backend-1-1      | [Worker Error] StackExchange.Redis.RedisConnectionException: SocketFailure (ReadSocketError/ConnectionReset, last-recv: 75) on redis:6379/Interactive, Idle/Faulted, last: LPOP, origin: ReadFromPipe, outstanding: 15, last-read: 0s ago, last-write: 0s ago, unanswered-write: 0s ago, keep-alive: 60s, state: ConnectedEstablished, mgr: 8 of 10 available, in: 0, in-pipe: 0, out-pipe: 0, last-heartbeat: 0s ago, last-mbeat: 0s ago, global: 0s ago, v: 2.8.58.19568
-backend-1-1      |  ---> Pipelines.Sockets.Unofficial.ConnectionResetException: Connection reset by peer
-backend-1-1      |  ---> System.Net.Sockets.SocketException (104): Connection reset by peer
-backend-1-1      |    at Pipelines.Sockets.Unofficial.Internal.Throw.Socket(Int32) + 0x27
-backend-1-1      |    at Pipelines.Sockets.Unofficial.SocketAwaitableEventArgs.GetResult() + 0x32
-backend-1-1      |    at Pipelines.Sockets.Unofficial.SocketConnection.<DoReceiveAsync>d__73.MoveNext() + 0x1e7
-backend-1-1      |    --- End of inner exception stack trace ---
-backend-1-1      |    at System.IO.Pipelines.Pipe.GetReadResult(ReadResult&) + 0x16e
-backend-1-1      |    at System.IO.Pipelines.Pipe.GetReadAsyncResult() + 0x96
-backend-1-1      |    at StackExchange.Redis.PhysicalConnection.<ReadFromPipe>d__134.MoveNext() + 0x57c
-backend-1-1      |    --- End of inner exception stack trace ---
-backend-1-1      |    at RedisQueueWorker.<WorkerLoopAsync>d__11.MoveNext() + 0x12e
-backend-1-1      | [Worker Error] StackExchange.Redis.RedisConnectionException: SocketFailure (ReadSocketError/ConnectionReset, last-recv: 75) on redis:6379/Interactive, Idle/Faulted, last: LPOP, origin: ReadFromPipe, outstanding: 15, last-read: 0s ago, last-write: 0s ago, unanswered-write: 0s ago, keep-alive: 60s, state: ConnectedEstablished, mgr: 8 of 10 available, in: 0, in-pipe: 0, out-pipe: 0, last-heartbeat: 0s ago, last-mbeat: 0s ago, global: 0s ago, v: 2.8.58.19568
-backend-1-1      |  ---> Pipelines.Sockets.Unofficial.ConnectionResetException: Connection reset by peer
-backend-1-1      |  ---> System.Net.Sockets.SocketException (104): Connection reset by peer
-backend-1-1      |    at Pipelines.Sockets.Unofficial.Internal.Throw.Socket(Int32) + 0x27
-backend-1-1      |    at Pipelines.Sockets.Unofficial.SocketAwaitableEventArgs.GetResult() + 0x32
-backend-1-1      |    at Pipelines.Sockets.Unofficial.SocketConnection.<DoReceiveAsync>d__73.MoveNext() + 0x1e7
-backend-1-1      |    --- End of inner exception stack trace ---
-backend-1-1      |    at System.IO.Pipelines.Pipe.GetReadResult(ReadResult&) + 0x16e
-backend-1-1      |    at System.IO.Pipelines.Pipe.GetReadAsyncResult() + 0x96
-backend-1-1      |    at StackExchange.Redis.PhysicalConnection.<ReadFromPipe>d__134.MoveNext() + 0x57c
-backend-1-1      |    --- End of inner exception stack trace ---
-backend-1-1      |    at RedisQueueWorker.<WorkerLoopAsync>d__11.MoveNext() + 0x12e
-backend-1-1      | [Worker Error] StackExchange.Redis.RedisConnectionException: SocketFailure (ReadSocketError/ConnectionReset, last-recv: 75) on redis:6379/Interactive, Idle/Faulted, last: LPOP, origin: ReadFromPipe, outstanding: 15, last-read: 0s ago, last-write: 0s ago, unanswered-write: 0s ago, keep-alive: 60s, state: ConnectedEstablished, mgr: 8 of 10 available, in: 0, in-pipe: 0, out-pipe: 0, last-heartbeat: 0s ago, last-mbeat: 0s ago, global: 0s ago, v: 2.8.58.19568
-backend-1-1      |  ---> Pipelines.Sockets.Unofficial.ConnectionResetException: Connection reset by peer
-backend-1-1      |  ---> System.Net.Sockets.SocketException (104): Connection reset by peer
-backend-1-1      |    at Pipelines.Sockets.Unofficial.Internal.Throw.Socket(Int32) + 0x27
-backend-1-1      |    at Pipelines.Sockets.Unofficial.SocketAwaitableEventArgs.GetResult() + 0x32
-backend-1-1      |    at Pipelines.Sockets.Unofficial.SocketConnection.<DoReceiveAsync>d__73.MoveNext() + 0x1e7
-backend-1-1      |    --- End of inner exception stack trace ---
-backend-1-1      |    at System.IO.Pipelines.Pipe.GetReadResult(ReadResult&) + 0x16e
-backend-1-1      |    at System.IO.Pipelines.Pipe.GetReadAsyncResult() + 0x96
-backend-1-1      |    at StackExchange.Redis.PhysicalConnection.<ReadFromPipe>d__134.MoveNext() + 0x57c
-backend-1-1      |    --- End of inner exception stack trace ---
-backend-1-1      |    at RedisQueueWorker.<WorkerLoopAsync>d__11.MoveNext() + 0x12e
-backend-1-1      | [Worker Error] StackExchange.Redis.RedisConnectionException: SocketFailure (ReadSocketError/ConnectionReset, last-recv: 75) on redis:6379/Interactive, Idle/Faulted, last: LPOP, origin: ReadFromPipe, outstanding: 15, last-read: 0s ago, last-write: 0s ago, unanswered-write: 0s ago, keep-alive: 60s, state: ConnectedEstablished, mgr: 8 of 10 available, in: 0, in-pipe: 0, out-pipe: 0, last-heartbeat: 0s ago, last-mbeat: 0s ago, global: 0s ago, v: 2.8.58.19568
-backend-1-1      |  ---> Pipelines.Sockets.Unofficial.ConnectionResetException: Connection reset by peer
-backend-1-1      |  ---> System.Net.Sockets.SocketException (104): Connection reset by peer
-backend-1-1      |    at Pipelines.Sockets.Unofficial.Internal.Throw.Socket(Int32) + 0x27
-backend-1-1      |    at Pipelines.Sockets.Unofficial.SocketAwaitableEventArgs.GetResult() + 0x32
-backend-1-1      |    at Pipelines.Sockets.Unofficial.SocketConnection.<DoReceiveAsync>d__73.MoveNext() + 0x1e7
-backend-1-1      |    --- End of inner exception stack trace ---
-backend-1-1      |    at System.IO.Pipelines.Pipe.GetReadResult(ReadResult&) + 0x16e
-backend-1-1      |    at System.IO.Pipelines.Pipe.GetReadAsyncResult() + 0x96
-backend-1-1      |    at StackExchange.Redis.PhysicalConnection.<ReadFromPipe>d__134.MoveNext() + 0x57c
-backend-1-1      |    --- End of inner exception stack trace ---
-backend-1-1      |    at RedisQueueWorker.<WorkerLoopAsync>d__11.MoveNext() + 0x12e
-backend-1-1      | [Worker Error] StackExchange.Redis.RedisConnectionException: SocketFailure (ReadSocketError/ConnectionReset, last-recv: 75) on redis:6379/Interactive, Idle/Faulted, last: LPOP, origin: ReadFromPipe, outstanding: 15, last-read: 0s ago, last-write: 0s ago, unanswered-write: 0s ago, keep-alive: 60s, state: ConnectedEstablished, mgr: 8 of 10 available, in: 0, in-pipe: 0, out-pipe: 0, last-heartbeat: 0s ago, last-mbeat: 0s ago, global: 0s ago, v: 2.8.58.19568
-backend-1-1      |  ---> Pipelines.Sockets.Unofficial.ConnectionResetException: Connection reset by peer
-backend-1-1      |  ---> System.Net.Sockets.SocketException (104): Connection reset by peer
-backend-1-1      |    at Pipelines.Sockets.Unofficial.Internal.Throw.Socket(Int32) + 0x27
-backend-1-1      |    at Pipelines.Sockets.Unofficial.SocketAwaitableEventArgs.GetResult() + 0x32
-backend-1-1      |    at Pipelines.Sockets.Unofficial.SocketConnection.<DoReceiveAsync>d__73.MoveNext() + 0x1e7
-backend-1-1      |    --- End of inner exception stack trace ---
-backend-1-1      |    at System.IO.Pipelines.Pipe.GetReadResult(ReadResult&) + 0x16e
-backend-1-1      |    at System.IO.Pipelines.Pipe.GetReadAsyncResult() + 0x96
-backend-1-1      |    at StackExchange.Redis.PhysicalConnection.<ReadFromPipe>d__134.MoveNext() + 0x57c
-backend-1-1      |    --- End of inner exception stack trace ---
-backend-1-1      |    at RedisQueueWorker.<WorkerLoopAsync>d__11.MoveNext() + 0x12e
-backend-1-1      | [Worker Error] StackExchange.Redis.RedisConnectionException: SocketFailure (ReadSocketError/ConnectionReset, last-recv: 75) on redis:6379/Interactive, Idle/Faulted, last: LPOP, origin: ReadFromPipe, outstanding: 15, last-read: 0s ago, last-write: 0s ago, unanswered-write: 0s ago, keep-alive: 60s, state: ConnectedEstablished, mgr: 8 of 10 available, in: 0, in-pipe: 0, out-pipe: 0, last-heartbeat: 0s ago, last-mbeat: 0s ago, global: 0s ago, v: 2.8.58.19568
-backend-1-1      |  ---> Pipelines.Sockets.Unofficial.ConnectionResetException: Connection reset by peer
-backend-1-1      |  ---> System.Net.Sockets.SocketException (104): Connection reset by peer
-backend-1-1      |    at Pipelines.Sockets.Unofficial.Internal.Throw.Socket(Int32) + 0x27
-backend-1-1      |    at Pipelines.Sockets.Unofficial.SocketAwaitableEventArgs.GetResult() + 0x32
-backend-1-1      |    at Pipelines.Sockets.Unofficial.SocketConnection.<DoReceiveAsync>d__73.MoveNext() + 0x1e7
-backend-1-1      |    --- End of inner exception stack trace ---
-backend-1-1      |    at System.IO.Pipelines.Pipe.GetReadResult(ReadResult&) + 0x16e
-backend-1-1      |    at System.IO.Pipelines.Pipe.GetReadAsyncResult() + 0x96
-backend-1-1      |    at StackExchange.Redis.PhysicalConnection.<ReadFromPipe>d__134.MoveNext() + 0x57c
-backend-1-1      |    --- End of inner exception stack trace ---
-backend-1-1      |    at RedisQueueWorker.<WorkerLoopAsync>d__11.MoveNext() + 0x12e
-backend-1-1      | [Worker Error] StackExchange.Redis.RedisConnectionException: SocketFailure (ReadSocketError/ConnectionReset, last-recv: 75) on redis:6379/Interactive, Idle/Faulted, last: LPOP, origin: ReadFromPipe, outstanding: 15, last-read: 0s ago, last-write: 0s ago, unanswered-write: 0s ago, keep-alive: 60s, state: ConnectedEstablished, mgr: 8 of 10 available, in: 0, in-pipe: 0, out-pipe: 0, last-heartbeat: 0s ago, last-mbeat: 0s ago, global: 0s ago, v: 2.8.58.19568
-backend-1-1      |  ---> Pipelines.Sockets.Unofficial.ConnectionResetException: Connection reset by peer
-backend-1-1      |  ---> System.Net.Sockets.SocketException (104): Connection reset by peer
-backend-1-1      |    at Pipelines.Sockets.Unofficial.Internal.Throw.Socket(Int32) + 0x27
-backend-1-1      |    at Pipelines.Sockets.Unofficial.SocketAwaitableEventArgs.GetResult() + 0x32
-backend-1-1      |    at Pipelines.Sockets.Unofficial.SocketConnection.<DoReceiveAsync>d__73.MoveNext() + 0x1e7
-backend-1-1      |    --- End of inner exception stack trace ---
-backend-1-1      |    at System.IO.Pipelines.Pipe.GetReadResult(ReadResult&) + 0x16e
-backend-1-1      |    at System.IO.Pipelines.Pipe.GetReadAsyncResult() + 0x96
-backend-1-1      |    at StackExchange.Redis.PhysicalConnection.<ReadFromPipe>d__134.MoveNext() + 0x57c
-backend-1-1      |    --- End of inner exception stack trace ---
-backend-1-1      |    at RedisQueueWorker.<WorkerLoopAsync>d__11.MoveNext() + 0x12e
-backend-1-1      | [Worker Error] StackExchange.Redis.RedisConnectionException: SocketFailure (ReadSocketError/ConnectionReset, last-recv: 75) on redis:6379/Interactive, Idle/Faulted, last: LPOP, origin: ReadFromPipe, outstanding: 15, last-read: 0s ago, last-write: 0s ago, unanswered-write: 0s ago, keep-alive: 60s, state: ConnectedEstablished, mgr: 8 of 10 available, in: 0, in-pipe: 0, out-pipe: 0, last-heartbeat: 0s ago, last-mbeat: 0s ago, global: 0s ago, v: 2.8.58.19568
-backend-1-1      |  ---> Pipelines.Sockets.Unofficial.ConnectionResetException: Connection reset by peer
-backend-1-1      |  ---> System.Net.Sockets.SocketException (104): Connection reset by peer
-backend-1-1      |    at Pipelines.Sockets.Unofficial.Internal.Throw.Socket(Int32) + 0x27
-backend-1-1      |    at Pipelines.Sockets.Unofficial.SocketAwaitableEventArgs.GetResult() + 0x32
-backend-1-1      |    at Pipelines.Sockets.Unofficial.SocketConnection.<DoReceiveAsync>d__73.MoveNext() + 0x1e7
-backend-1-1      |    --- End of inner exception stack trace ---
-backend-1-1      |    at System.IO.Pipelines.Pipe.GetReadResult(ReadResult&) + 0x16e
-backend-1-1      |    at System.IO.Pipelines.Pipe.GetReadAsyncResult() + 0x96
-backend-1-1      |    at StackExchange.Redis.PhysicalConnection.<ReadFromPipe>d__134.MoveNext() + 0x57c
-backend-1-1      |    --- End of inner exception stack trace ---
-backend-1-1      |    at RedisQueueWorker.<WorkerLoopAsync>d__11.MoveNext() + 0x12e
-backend-1-1      | [Worker Error] StackExchange.Redis.RedisConnectionException: SocketFailure (ReadSocketError/ConnectionReset, last-recv: 75) on redis:6379/Interactive, Idle/Faulted, last: LPOP, origin: ReadFromPipe, outstanding: 15, last-read: 0s ago, last-write: 0s ago, unanswered-write: 0s ago, keep-alive: 60s, state: ConnectedEstablished, mgr: 8 of 10 available, in: 0, in-pipe: 0, out-pipe: 0, last-heartbeat: 0s ago, last-mbeat: 0s ago, global: 0s ago, v: 2.8.58.19568
-backend-1-1      |  ---> Pipelines.Sockets.Unofficial.ConnectionResetException: Connection reset by peer
-backend-1-1      |  ---> System.Net.Sockets.SocketException (104): Connection reset by peer
-backend-1-1      |    at Pipelines.Sockets.Unofficial.Internal.Throw.Socket(Int32) + 0x27
-backend-1-1      |    at Pipelines.Sockets.Unofficial.SocketAwaitableEventArgs.GetResult() + 0x32
-backend-1-1      |    at Pipelines.Sockets.Unofficial.SocketConnection.<DoReceiveAsync>d__73.MoveNext() + 0x1e7
-backend-1-1      |    --- End of inner exception stack trace ---
-backend-1-1      |    at System.IO.Pipelines.Pipe.GetReadResult(ReadResult&) + 0x16e
-backend-1-1      |    at System.IO.Pipelines.Pipe.GetReadAsyncResult() + 0x96
-backend-1-1      |    at StackExchange.Redis.PhysicalConnection.<ReadFromPipe>d__134.MoveNext() + 0x57c
-backend-1-1      |    --- End of inner exception stack trace ---
-backend-1-1      |    at RedisQueueWorker.<WorkerLoopAsync>d__11.MoveNext() + 0x12e
-backend-1-1      | [Worker Error] StackExchange.Redis.RedisConnectionException: SocketFailure (ReadSocketError/ConnectionReset, last-recv: 75) on redis:6379/Interactive, Idle/Faulted, last: LPOP, origin: ReadFromPipe, outstanding: 15, last-read: 0s ago, last-write: 0s ago, unanswered-write: 0s ago, keep-alive: 60s, state: ConnectedEstablished, mgr: 8 of 10 available, in: 0, in-pipe: 0, out-pipe: 0, last-heartbeat: 0s ago, last-mbeat: 0s ago, global: 0s ago, v: 2.8.58.19568
-backend-1-1      |  ---> Pipelines.Sockets.Unofficial.ConnectionResetException: Connection reset by peer
-backend-1-1      |  ---> System.Net.Sockets.SocketException (104): Connection reset by peer
-backend-1-1      |    at Pipelines.Sockets.Unofficial.Internal.Throw.Socket(Int32) + 0x27
-backend-1-1      |    at Pipelines.Sockets.Unofficial.SocketAwaitableEventArgs.GetResult() + 0x32
-backend-1-1      |    at Pipelines.Sockets.Unofficial.SocketConnection.<DoReceiveAsync>d__73.MoveNext() + 0x1e7
-backend-1-1      |    --- End of inner exception stack trace ---
-backend-1-1      |    at System.IO.Pipelines.Pipe.GetReadResult(ReadResult&) + 0x16e
-backend-1-1      |    at System.IO.Pipelines.Pipe.GetReadAsyncResult() + 0x96
-backend-1-1      |    at StackExchange.Redis.PhysicalConnection.<ReadFromPipe>d__134.MoveNext() + 0x57c
-backend-1-1      |    --- End of inner exception stack trace ---
-backend-1-1      |    at RedisQueueWorker.<WorkerLoopAsync>d__11.MoveNext() + 0x12e
-backend-1-1      | [Worker Error] StackExchange.Redis.RedisConnectionException: SocketFailure (ReadSocketError/ConnectionReset, last-recv: 75) on redis:6379/Interactive, Idle/Faulted, last: LPOP, origin: ReadFromPipe, outstanding: 15, last-read: 0s ago, last-write: 0s ago, unanswered-write: 0s ago, keep-alive: 60s, state: ConnectedEstablished, mgr: 8 of 10 available, in: 0, in-pipe: 0, out-pipe: 0, last-heartbeat: 0s ago, last-mbeat: 0s ago, global: 0s ago, v: 2.8.58.19568
-backend-1-1      |  ---> Pipelines.Sockets.Unofficial.ConnectionResetException: Connection reset by peer
-backend-1-1      |  ---> System.Net.Sockets.SocketException (104): Connection reset by peer
-backend-1-1      |    at Pipelines.Sockets.Unofficial.Internal.Throw.Socket(Int32) + 0x27
-backend-1-1      |    at Pipelines.Sockets.Unofficial.SocketAwaitableEventArgs.GetResult() + 0x32
-backend-1-1      |    at Pipelines.Sockets.Unofficial.SocketConnection.<DoReceiveAsync>d__73.MoveNext() + 0x1e7
-backend-1-1      |    --- End of inner exception stack trace ---
-backend-1-1      |    at System.IO.Pipelines.Pipe.GetReadResult(ReadResult&) + 0x16e
-backend-1-1      |    at System.IO.Pipelines.Pipe.GetReadAsyncResult() + 0x96
-backend-1-1      |    at StackExchange.Redis.PhysicalConnection.<ReadFromPipe>d__134.MoveNext() + 0x57c
-backend-1-1      |    --- End of inner exception stack trace ---
-backend-1-1      |    at RedisQueueWorker.<WorkerLoopAsync>d__11.MoveNext() + 0x12e
-backend-1-1      | [Worker Error] StackExchange.Redis.RedisConnectionException: SocketFailure (ReadSocketError/ConnectionReset, last-recv: 75) on redis:6379/Interactive, Idle/Faulted, last: LPOP, origin: ReadFromPipe, outstanding: 15, last-read: 0s ago, last-write: 0s ago, unanswered-write: 0s ago, keep-alive: 60s, state: ConnectedEstablished, mgr: 8 of 10 available, in: 0, in-pipe: 0, out-pipe: 0, last-heartbeat: 0s ago, last-mbeat: 0s ago, global: 0s ago, v: 2.8.58.19568
-backend-1-1      |  ---> Pipelines.Sockets.Unofficial.ConnectionResetException: Connection reset by peer
-backend-1-1      |  ---> System.Net.Sockets.SocketException (104): Connection reset by peer
-backend-1-1      |    at Pipelines.Sockets.Unofficial.Internal.Throw.Socket(Int32) + 0x27
-backend-1-1      |    at Pipelines.Sockets.Unofficial.SocketAwaitableEventArgs.GetResult() + 0x32
-backend-1-1      |    at Pipelines.Sockets.Unofficial.SocketConnection.<DoReceiveAsync>d__73.MoveNext() + 0x1e7
-backend-1-1      |    --- End of inner exception stack trace ---
-backend-1-1      |    at System.IO.Pipelines.Pipe.GetReadResult(ReadResult&) + 0x16e
-backend-1-1      |    at System.IO.Pipelines.Pipe.GetReadAsyncResult() + 0x96
-backend-1-1      |    at StackExchange.Redis.PhysicalConnection.<ReadFromPipe>d__134.MoveNext() + 0x57c
-backend-1-1      |    --- End of inner exception stack trace ---
-backend-1-1      |    at RedisQueueWorker.<WorkerLoopAsync>d__11.MoveNext() + 0x12e
-backend-2-1      | [Worker Error] StackExchange.Redis.RedisConnectionException: SocketFailure (ReadSocketError/ConnectionReset, last-recv: 75) on redis:6379/Interactive, Idle/Faulted, last: PING, origin: ReadFromPipe, outstanding: 16, last-read: 0s ago, last-write: 0s ago, unanswered-write: 0s ago, keep-alive: 60s, state: ConnectedEstablished, mgr: 9 of 10 available, in: 0, in-pipe: 0, out-pipe: 14, last-heartbeat: 0s ago, last-mbeat: 0s ago, global: 0s ago, v: 2.8.58.19568
-backend-2-1      |  ---> Pipelines.Sockets.Unofficial.ConnectionResetException: Connection reset by peer
-backend-2-1      |  ---> System.Net.Sockets.SocketException (104): Connection reset by peer
-backend-2-1      |    at Pipelines.Sockets.Unofficial.Internal.Throw.Socket(Int32) + 0x27
-backend-2-1      |    at Pipelines.Sockets.Unofficial.SocketAwaitableEventArgs.GetResult() + 0x32
-backend-2-1      |    at Pipelines.Sockets.Unofficial.SocketConnection.<DoReceiveAsync>d__73.MoveNext() + 0x1e7
-backend-2-1      |    --- End of inner exception stack trace ---
-backend-2-1      |    at System.IO.Pipelines.Pipe.GetReadResult(ReadResult&) + 0x16e
-backend-2-1      |    at System.IO.Pipelines.Pipe.GetReadAsyncResult() + 0x96
-backend-2-1      |    at StackExchange.Redis.PhysicalConnection.<ReadFromPipe>d__134.MoveNext() + 0x57c
-backend-2-1      |    --- End of inner exception stack trace ---
+redis-1          | 1:signal-handler (1754592866) Received SIGTERM scheduling shutdown...
+redis-1          | 1:M 07 Aug 2025 18:54:26.061 * User requested shutdown...
+redis-1          | 1:M 07 Aug 2025 18:54:26.061 # Redis is now ready to exit, bye bye...
+backend-2-1      | [Worker Error] StackExchange.Redis.RedisConnectionException: SocketClosed (ReadEndOfStream, last-recv: 0) on redis:6379/Interactive, Idle/MarkProcessed, last: LPOP, origin: ReadFromPipe, outstanding: 15, last-read: 0s ago, last-write: 0s ago, unanswered-write: 0s ago, keep-alive: 60s, state: ConnectedEstablished, mgr: 8 of 10 available, in: 0, in-pipe: 0, out-pipe: 0, last-heartbeat: 0s ago, last-mbeat: 0s ago, global: 0s ago, v: 2.8.58.19568
 backend-2-1      |    at RedisQueueWorker.<WorkerLoopAsync>d__11.MoveNext() + 0x12e
-backend-2-1      | [Worker Error] StackExchange.Redis.RedisConnectionException: SocketFailure (ReadSocketError/ConnectionReset, last-recv: 75) on redis:6379/Interactive, Idle/Faulted, last: PING, origin: ReadFromPipe, outstanding: 16, last-read: 0s ago, last-write: 0s ago, unanswered-write: 0s ago, keep-alive: 60s, state: ConnectedEstablished, mgr: 9 of 10 available, in: 0, in-pipe: 0, out-pipe: 14, last-heartbeat: 0s ago, last-mbeat: 0s ago, global: 0s ago, v: 2.8.58.19568
-backend-2-1      |  ---> Pipelines.Sockets.Unofficial.ConnectionResetException: Connection reset by peer
-backend-2-1      |  ---> System.Net.Sockets.SocketException (104): Connection reset by peer
-backend-2-1      |    at Pipelines.Sockets.Unofficial.Internal.Throw.Socket(Int32) + 0x27
-backend-2-1      |    at Pipelines.Sockets.Unofficial.SocketAwaitableEventArgs.GetResult() + 0x32
-backend-2-1      |    at Pipelines.Sockets.Unofficial.SocketConnection.<DoReceiveAsync>d__73.MoveNext() + 0x1e7
-backend-2-1      |    --- End of inner exception stack trace ---
-backend-2-1      |    at System.IO.Pipelines.Pipe.GetReadResult(ReadResult&) + 0x16e
-backend-2-1      |    at System.IO.Pipelines.Pipe.GetReadAsyncResult() + 0x96
-backend-2-1      |    at StackExchange.Redis.PhysicalConnection.<ReadFromPipe>d__134.MoveNext() + 0x57c
-backend-2-1      |    --- End of inner exception stack trace ---
+backend-2-1      | [Worker Error] StackExchange.Redis.RedisConnectionException: SocketClosed (ReadEndOfStream, last-recv: 0) on redis:6379/Interactive, Idle/MarkProcessed, last: LPOP, origin: ReadFromPipe, outstanding: 15, last-read: 0s ago, last-write: 0s ago, unanswered-write: 0s ago, keep-alive: 60s, state: ConnectedEstablished, mgr: 8 of 10 available, in: 0, in-pipe: 0, out-pipe: 0, last-heartbeat: 0s ago, last-mbeat: 0s ago, global: 0s ago, v: 2.8.58.19568
 backend-2-1      |    at RedisQueueWorker.<WorkerLoopAsync>d__11.MoveNext() + 0x12e
-backend-2-1      | [Worker Error] StackExchange.Redis.RedisConnectionException: SocketFailure (ReadSocketError/ConnectionReset, last-recv: 75) on redis:6379/Interactive, Idle/Faulted, last: PING, origin: ReadFromPipe, outstanding: 16, last-read: 0s ago, last-write: 0s ago, unanswered-write: 0s ago, keep-alive: 60s, state: ConnectedEstablished, mgr: 9 of 10 available, in: 0, in-pipe: 0, out-pipe: 14, last-heartbeat: 0s ago, last-mbeat: 0s ago, global: 0s ago, v: 2.8.58.19568
-backend-2-1      |  ---> Pipelines.Sockets.Unofficial.ConnectionResetException: Connection reset by peer
-backend-2-1      |  ---> System.Net.Sockets.SocketException (104): Connection reset by peer
-backend-2-1      |    at Pipelines.Sockets.Unofficial.Internal.Throw.Socket(Int32) + 0x27
-backend-2-1      |    at Pipelines.Sockets.Unofficial.SocketAwaitableEventArgs.GetResult() + 0x32
-backend-2-1      |    at Pipelines.Sockets.Unofficial.SocketConnection.<DoReceiveAsync>d__73.MoveNext() + 0x1e7
-backend-2-1      |    --- End of inner exception stack trace ---
-backend-2-1      |    at System.IO.Pipelines.Pipe.GetReadResult(ReadResult&) + 0x16e
-backend-2-1      |    at System.IO.Pipelines.Pipe.GetReadAsyncResult() + 0x96
-backend-2-1      |    at StackExchange.Redis.PhysicalConnection.<ReadFromPipe>d__134.MoveNext() + 0x57c
-backend-2-1      |    --- End of inner exception stack trace ---
+backend-2-1      | [Worker Error] StackExchange.Redis.RedisConnectionException: SocketClosed (ReadEndOfStream, last-recv: 0) on redis:6379/Interactive, Idle/MarkProcessed, last: LPOP, origin: ReadFromPipe, outstanding: 15, last-read: 0s ago, last-write: 0s ago, unanswered-write: 0s ago, keep-alive: 60s, state: ConnectedEstablished, mgr: 8 of 10 available, in: 0, in-pipe: 0, out-pipe: 0, last-heartbeat: 0s ago, last-mbeat: 0s ago, global: 0s ago, v: 2.8.58.19568
 backend-2-1      |    at RedisQueueWorker.<WorkerLoopAsync>d__11.MoveNext() + 0x12e
-backend-2-1      | [Worker Error] StackExchange.Redis.RedisConnectionException: SocketFailure (ReadSocketError/ConnectionReset, last-recv: 75) on redis:6379/Interactive, Idle/Faulted, last: PING, origin: ReadFromPipe, outstanding: 16, last-read: 0s ago, last-write: 0s ago, unanswered-write: 0s ago, keep-alive: 60s, state: ConnectedEstablished, mgr: 9 of 10 available, in: 0, in-pipe: 0, out-pipe: 14, last-heartbeat: 0s ago, last-mbeat: 0s ago, global: 0s ago, v: 2.8.58.19568
-backend-2-1      |  ---> Pipelines.Sockets.Unofficial.ConnectionResetException: Connection reset by peer
-backend-2-1      |  ---> System.Net.Sockets.SocketException (104): Connection reset by peer
-backend-2-1      |    at Pipelines.Sockets.Unofficial.Internal.Throw.Socket(Int32) + 0x27
-backend-2-1      |    at Pipelines.Sockets.Unofficial.SocketAwaitableEventArgs.GetResult() + 0x32
-backend-2-1      |    at Pipelines.Sockets.Unofficial.SocketConnection.<DoReceiveAsync>d__73.MoveNext() + 0x1e7
-backend-2-1      |    --- End of inner exception stack trace ---
-backend-2-1      |    at System.IO.Pipelines.Pipe.GetReadResult(ReadResult&) + 0x16e
-backend-2-1      |    at System.IO.Pipelines.Pipe.GetReadAsyncResult() + 0x96
-backend-2-1      |    at StackExchange.Redis.PhysicalConnection.<ReadFromPipe>d__134.MoveNext() + 0x57c
-backend-2-1      |    --- End of inner exception stack trace ---
+backend-2-1      | [Worker Error] StackExchange.Redis.RedisConnectionException: SocketClosed (ReadEndOfStream, last-recv: 0) on redis:6379/Interactive, Idle/MarkProcessed, last: LPOP, origin: ReadFromPipe, outstanding: 15, last-read: 0s ago, last-write: 0s ago, unanswered-write: 0s ago, keep-alive: 60s, state: ConnectedEstablished, mgr: 8 of 10 available, in: 0, in-pipe: 0, out-pipe: 0, last-heartbeat: 0s ago, last-mbeat: 0s ago, global: 0s ago, v: 2.8.58.19568
 backend-2-1      |    at RedisQueueWorker.<WorkerLoopAsync>d__11.MoveNext() + 0x12e
-backend-2-1      | [Worker Error] StackExchange.Redis.RedisConnectionException: SocketFailure (ReadSocketError/ConnectionReset, last-recv: 75) on redis:6379/Interactive, Idle/Faulted, last: PING, origin: ReadFromPipe, outstanding: 16, last-read: 0s ago, last-write: 0s ago, unanswered-write: 0s ago, keep-alive: 60s, state: ConnectedEstablished, mgr: 9 of 10 available, in: 0, in-pipe: 0, out-pipe: 14, last-heartbeat: 0s ago, last-mbeat: 0s ago, global: 0s ago, v: 2.8.58.19568
-backend-2-1      |  ---> Pipelines.Sockets.Unofficial.ConnectionResetException: Connection reset by peer
-backend-2-1      |  ---> System.Net.Sockets.SocketException (104): Connection reset by peer
-backend-2-1      |    at Pipelines.Sockets.Unofficial.Internal.Throw.Socket(Int32) + 0x27
-backend-2-1      |    at Pipelines.Sockets.Unofficial.SocketAwaitableEventArgs.GetResult() + 0x32
-backend-2-1      |    at Pipelines.Sockets.Unofficial.SocketConnection.<DoReceiveAsync>d__73.MoveNext() + 0x1e7
-backend-2-1      |    --- End of inner exception stack trace ---
-backend-2-1      |    at System.IO.Pipelines.Pipe.GetReadResult(ReadResult&) + 0x16e
-backend-2-1      |    at System.IO.Pipelines.Pipe.GetReadAsyncResult() + 0x96
-backend-2-1      |    at StackExchange.Redis.PhysicalConnection.<ReadFromPipe>d__134.MoveNext() + 0x57c
-backend-2-1      |    --- End of inner exception stack trace ---
+backend-2-1      | [Worker Error] StackExchange.Redis.RedisConnectionException: SocketClosed (ReadEndOfStream, last-recv: 0) on redis:6379/Interactive, Idle/MarkProcessed, last: LPOP, origin: ReadFromPipe, outstanding: 15, last-read: 0s ago, last-write: 0s ago, unanswered-write: 0s ago, keep-alive: 60s, state: ConnectedEstablished, mgr: 8 of 10 available, in: 0, in-pipe: 0, out-pipe: 0, last-heartbeat: 0s ago, last-mbeat: 0s ago, global: 0s ago, v: 2.8.58.19568
 backend-2-1      |    at RedisQueueWorker.<WorkerLoopAsync>d__11.MoveNext() + 0x12e
-backend-2-1      | [Worker Error] StackExchange.Redis.RedisConnectionException: SocketFailure (ReadSocketError/ConnectionReset, last-recv: 75) on redis:6379/Interactive, Idle/Faulted, last: PING, origin: ReadFromPipe, outstanding: 16, last-read: 0s ago, last-write: 0s ago, unanswered-write: 0s ago, keep-alive: 60s, state: ConnectedEstablished, mgr: 9 of 10 available, in: 0, in-pipe: 0, out-pipe: 14, last-heartbeat: 0s ago, last-mbeat: 0s ago, global: 0s ago, v: 2.8.58.19568
-backend-2-1      |  ---> Pipelines.Sockets.Unofficial.ConnectionResetException: Connection reset by peer
-backend-2-1      |  ---> System.Net.Sockets.SocketException (104): Connection reset by peer
-backend-2-1      |    at Pipelines.Sockets.Unofficial.Internal.Throw.Socket(Int32) + 0x27
-backend-2-1      |    at Pipelines.Sockets.Unofficial.SocketAwaitableEventArgs.GetResult() + 0x32
-backend-2-1      |    at Pipelines.Sockets.Unofficial.SocketConnection.<DoReceiveAsync>d__73.MoveNext() + 0x1e7
-backend-2-1      |    --- End of inner exception stack trace ---
-backend-2-1      |    at System.IO.Pipelines.Pipe.GetReadResult(ReadResult&) + 0x16e
-backend-2-1      |    at System.IO.Pipelines.Pipe.GetReadAsyncResult() + 0x96
-backend-2-1      |    at StackExchange.Redis.PhysicalConnection.<ReadFromPipe>d__134.MoveNext() + 0x57c
-backend-2-1      |    --- End of inner exception stack trace ---
+backend-2-1      | [Worker Error] StackExchange.Redis.RedisConnectionException: SocketClosed (ReadEndOfStream, last-recv: 0) on redis:6379/Interactive, Idle/MarkProcessed, last: LPOP, origin: ReadFromPipe, outstanding: 15, last-read: 0s ago, last-write: 0s ago, unanswered-write: 0s ago, keep-alive: 60s, state: ConnectedEstablished, mgr: 8 of 10 available, in: 0, in-pipe: 0, out-pipe: 0, last-heartbeat: 0s ago, last-mbeat: 0s ago, global: 0s ago, v: 2.8.58.19568
 backend-2-1      |    at RedisQueueWorker.<WorkerLoopAsync>d__11.MoveNext() + 0x12e
-backend-2-1      | [Worker Error] StackExchange.Redis.RedisConnectionException: SocketFailure (ReadSocketError/ConnectionReset, last-recv: 75) on redis:6379/Interactive, Idle/Faulted, last: PING, origin: ReadFromPipe, outstanding: 16, last-read: 0s ago, last-write: 0s ago, unanswered-write: 0s ago, keep-alive: 60s, state: ConnectedEstablished, mgr: 9 of 10 available, in: 0, in-pipe: 0, out-pipe: 14, last-heartbeat: 0s ago, last-mbeat: 0s ago, global: 0s ago, v: 2.8.58.19568
-backend-2-1      |  ---> Pipelines.Sockets.Unofficial.ConnectionResetException: Connection reset by peer
-backend-2-1      |  ---> System.Net.Sockets.SocketException (104): Connection reset by peer
-backend-2-1      |    at Pipelines.Sockets.Unofficial.Internal.Throw.Socket(Int32) + 0x27
-backend-2-1      |    at Pipelines.Sockets.Unofficial.SocketAwaitableEventArgs.GetResult() + 0x32
-backend-2-1      |    at Pipelines.Sockets.Unofficial.SocketConnection.<DoReceiveAsync>d__73.MoveNext() + 0x1e7
-backend-2-1      |    --- End of inner exception stack trace ---
-backend-2-1      |    at System.IO.Pipelines.Pipe.GetReadResult(ReadResult&) + 0x16e
-backend-2-1      |    at System.IO.Pipelines.Pipe.GetReadAsyncResult() + 0x96
-backend-2-1      |    at StackExchange.Redis.PhysicalConnection.<ReadFromPipe>d__134.MoveNext() + 0x57c
-backend-2-1      |    --- End of inner exception stack trace ---
+backend-2-1      | [Worker Error] StackExchange.Redis.RedisConnectionException: SocketClosed (ReadEndOfStream, last-recv: 0) on redis:6379/Interactive, Idle/MarkProcessed, last: LPOP, origin: ReadFromPipe, outstanding: 15, last-read: 0s ago, last-write: 0s ago, unanswered-write: 0s ago, keep-alive: 60s, state: ConnectedEstablished, mgr: 8 of 10 available, in: 0, in-pipe: 0, out-pipe: 0, last-heartbeat: 0s ago, last-mbeat: 0s ago, global: 0s ago, v: 2.8.58.19568
 backend-2-1      |    at RedisQueueWorker.<WorkerLoopAsync>d__11.MoveNext() + 0x12e
-backend-2-1      | [Worker Error] StackExchange.Redis.RedisConnectionException: SocketFailure (ReadSocketError/ConnectionReset, last-recv: 75) on redis:6379/Interactive, Idle/Faulted, last: PING, origin: ReadFromPipe, outstanding: 16, last-read: 0s ago, last-write: 0s ago, unanswered-write: 0s ago, keep-alive: 60s, state: ConnectedEstablished, mgr: 9 of 10 available, in: 0, in-pipe: 0, out-pipe: 14, last-heartbeat: 0s ago, last-mbeat: 0s ago, global: 0s ago, v: 2.8.58.19568
-backend-2-1      |  ---> Pipelines.Sockets.Unofficial.ConnectionResetException: Connection reset by peer
-backend-2-1      |  ---> System.Net.Sockets.SocketException (104): Connection reset by peer
-backend-2-1      |    at Pipelines.Sockets.Unofficial.Internal.Throw.Socket(Int32) + 0x27
-backend-2-1      |    at Pipelines.Sockets.Unofficial.SocketAwaitableEventArgs.GetResult() + 0x32
-backend-2-1      |    at Pipelines.Sockets.Unofficial.SocketConnection.<DoReceiveAsync>d__73.MoveNext() + 0x1e7
-backend-2-1      |    --- End of inner exception stack trace ---
-backend-2-1      |    at System.IO.Pipelines.Pipe.GetReadResult(ReadResult&) + 0x16e
-backend-2-1      |    at System.IO.Pipelines.Pipe.GetReadAsyncResult() + 0x96
-backend-2-1      |    at StackExchange.Redis.PhysicalConnection.<ReadFromPipe>d__134.MoveNext() + 0x57c
-backend-2-1      |    --- End of inner exception stack trace ---
+backend-2-1      | [Worker Error] StackExchange.Redis.RedisConnectionException: SocketClosed (ReadEndOfStream, last-recv: 0) on redis:6379/Interactive, Idle/MarkProcessed, last: LPOP, origin: ReadFromPipe, outstanding: 15, last-read: 0s ago, last-write: 0s ago, unanswered-write: 0s ago, keep-alive: 60s, state: ConnectedEstablished, mgr: 8 of 10 available, in: 0, in-pipe: 0, out-pipe: 0, last-heartbeat: 0s ago, last-mbeat: 0s ago, global: 0s ago, v: 2.8.58.19568
 backend-2-1      |    at RedisQueueWorker.<WorkerLoopAsync>d__11.MoveNext() + 0x12e
-backend-2-1      | [Worker Error] StackExchange.Redis.RedisConnectionException: SocketFailure (ReadSocketError/ConnectionReset, last-recv: 75) on redis:6379/Interactive, Idle/Faulted, last: PING, origin: ReadFromPipe, outstanding: 16, last-read: 0s ago, last-write: 0s ago, unanswered-write: 0s ago, keep-alive: 60s, state: ConnectedEstablished, mgr: 9 of 10 available, in: 0, in-pipe: 0, out-pipe: 14, last-heartbeat: 0s ago, last-mbeat: 0s ago, global: 0s ago, v: 2.8.58.19568
-backend-2-1      |  ---> Pipelines.Sockets.Unofficial.ConnectionResetException: Connection reset by peer
-backend-2-1      |  ---> System.Net.Sockets.SocketException (104): Connection reset by peer
-backend-2-1      |    at Pipelines.Sockets.Unofficial.Internal.Throw.Socket(Int32) + 0x27
-backend-2-1      |    at Pipelines.Sockets.Unofficial.SocketAwaitableEventArgs.GetResult() + 0x32
-backend-2-1      |    at Pipelines.Sockets.Unofficial.SocketConnection.<DoReceiveAsync>d__73.MoveNext() + 0x1e7
-backend-2-1      |    --- End of inner exception stack trace ---
-backend-2-1      |    at System.IO.Pipelines.Pipe.GetReadResult(ReadResult&) + 0x16e
-backend-2-1      |    at System.IO.Pipelines.Pipe.GetReadAsyncResult() + 0x96
-backend-2-1      |    at StackExchange.Redis.PhysicalConnection.<ReadFromPipe>d__134.MoveNext() + 0x57c
-backend-2-1      |    --- End of inner exception stack trace ---
+backend-2-1      | [Worker Error] StackExchange.Redis.RedisConnectionException: SocketClosed (ReadEndOfStream, last-recv: 0) on redis:6379/Interactive, Idle/MarkProcessed, last: LPOP, origin: ReadFromPipe, outstanding: 15, last-read: 0s ago, last-write: 0s ago, unanswered-write: 0s ago, keep-alive: 60s, state: ConnectedEstablished, mgr: 8 of 10 available, in: 0, in-pipe: 0, out-pipe: 0, last-heartbeat: 0s ago, last-mbeat: 0s ago, global: 0s ago, v: 2.8.58.19568
 backend-2-1      |    at RedisQueueWorker.<WorkerLoopAsync>d__11.MoveNext() + 0x12e
-backend-2-1      | [Worker Error] StackExchange.Redis.RedisConnectionException: SocketFailure (ReadSocketError/ConnectionReset, last-recv: 75) on redis:6379/Interactive, Idle/Faulted, last: PING, origin: ReadFromPipe, outstanding: 16, last-read: 0s ago, last-write: 0s ago, unanswered-write: 0s ago, keep-alive: 60s, state: ConnectedEstablished, mgr: 9 of 10 available, in: 0, in-pipe: 0, out-pipe: 14, last-heartbeat: 0s ago, last-mbeat: 0s ago, global: 0s ago, v: 2.8.58.19568
-backend-2-1      |  ---> Pipelines.Sockets.Unofficial.ConnectionResetException: Connection reset by peer
-backend-2-1      |  ---> System.Net.Sockets.SocketException (104): Connection reset by peer
-backend-2-1      |    at Pipelines.Sockets.Unofficial.Internal.Throw.Socket(Int32) + 0x27
-backend-2-1      |    at Pipelines.Sockets.Unofficial.SocketAwaitableEventArgs.GetResult() + 0x32
-backend-2-1      |    at Pipelines.Sockets.Unofficial.SocketConnection.<DoReceiveAsync>d__73.MoveNext() + 0x1e7
-backend-2-1      |    --- End of inner exception stack trace ---
-backend-2-1      |    at System.IO.Pipelines.Pipe.GetReadResult(ReadResult&) + 0x16e
-backend-2-1      |    at System.IO.Pipelines.Pipe.GetReadAsyncResult() + 0x96
-backend-2-1      |    at StackExchange.Redis.PhysicalConnection.<ReadFromPipe>d__134.MoveNext() + 0x57c
-backend-2-1      |    --- End of inner exception stack trace ---
+backend-2-1      | [Worker Error] StackExchange.Redis.RedisConnectionException: SocketClosed (ReadEndOfStream, last-recv: 0) on redis:6379/Interactive, Idle/MarkProcessed, last: LPOP, origin: ReadFromPipe, outstanding: 15, last-read: 0s ago, last-write: 0s ago, unanswered-write: 0s ago, keep-alive: 60s, state: ConnectedEstablished, mgr: 8 of 10 available, in: 0, in-pipe: 0, out-pipe: 0, last-heartbeat: 0s ago, last-mbeat: 0s ago, global: 0s ago, v: 2.8.58.19568
 backend-2-1      |    at RedisQueueWorker.<WorkerLoopAsync>d__11.MoveNext() + 0x12e
-backend-2-1      | [Worker Error] StackExchange.Redis.RedisConnectionException: SocketFailure (ReadSocketError/ConnectionReset, last-recv: 75) on redis:6379/Interactive, Idle/Faulted, last: PING, origin: ReadFromPipe, outstanding: 16, last-read: 0s ago, last-write: 0s ago, unanswered-write: 0s ago, keep-alive: 60s, state: ConnectedEstablished, mgr: 9 of 10 available, in: 0, in-pipe: 0, out-pipe: 14, last-heartbeat: 0s ago, last-mbeat: 0s ago, global: 0s ago, v: 2.8.58.19568
-backend-2-1      |  ---> Pipelines.Sockets.Unofficial.ConnectionResetException: Connection reset by peer
-backend-2-1      |  ---> System.Net.Sockets.SocketException (104): Connection reset by peer
-backend-2-1      |    at Pipelines.Sockets.Unofficial.Internal.Throw.Socket(Int32) + 0x27
-backend-2-1      |    at Pipelines.Sockets.Unofficial.SocketAwaitableEventArgs.GetResult() + 0x32
-backend-2-1      |    at Pipelines.Sockets.Unofficial.SocketConnection.<DoReceiveAsync>d__73.MoveNext() + 0x1e7
-backend-2-1      |    --- End of inner exception stack trace ---
-backend-2-1      |    at System.IO.Pipelines.Pipe.GetReadResult(ReadResult&) + 0x16e
-backend-2-1      |    at System.IO.Pipelines.Pipe.GetReadAsyncResult() + 0x96
-backend-2-1      |    at StackExchange.Redis.PhysicalConnection.<ReadFromPipe>d__134.MoveNext() + 0x57c
-backend-2-1      |    --- End of inner exception stack trace ---
+backend-2-1      | [Worker Error] StackExchange.Redis.RedisConnectionException: SocketClosed (ReadEndOfStream, last-recv: 0) on redis:6379/Interactive, Idle/MarkProcessed, last: LPOP, origin: ReadFromPipe, outstanding: 15, last-read: 0s ago, last-write: 0s ago, unanswered-write: 0s ago, keep-alive: 60s, state: ConnectedEstablished, mgr: 8 of 10 available, in: 0, in-pipe: 0, out-pipe: 0, last-heartbeat: 0s ago, last-mbeat: 0s ago, global: 0s ago, v: 2.8.58.19568
 backend-2-1      |    at RedisQueueWorker.<WorkerLoopAsync>d__11.MoveNext() + 0x12e
-backend-2-1      | [Worker Error] StackExchange.Redis.RedisConnectionException: SocketFailure (ReadSocketError/ConnectionReset, last-recv: 75) on redis:6379/Interactive, Idle/Faulted, last: PING, origin: ReadFromPipe, outstanding: 16, last-read: 0s ago, last-write: 0s ago, unanswered-write: 0s ago, keep-alive: 60s, state: ConnectedEstablished, mgr: 9 of 10 available, in: 0, in-pipe: 0, out-pipe: 14, last-heartbeat: 0s ago, last-mbeat: 0s ago, global: 0s ago, v: 2.8.58.19568
-backend-2-1      |  ---> Pipelines.Sockets.Unofficial.ConnectionResetException: Connection reset by peer
-backend-2-1      |  ---> System.Net.Sockets.SocketException (104): Connection reset by peer
-backend-2-1      |    at Pipelines.Sockets.Unofficial.Internal.Throw.Socket(Int32) + 0x27
-backend-2-1      |    at Pipelines.Sockets.Unofficial.SocketAwaitableEventArgs.GetResult() + 0x32
-backend-2-1      |    at Pipelines.Sockets.Unofficial.SocketConnection.<DoReceiveAsync>d__73.MoveNext() + 0x1e7
-backend-2-1      |    --- End of inner exception stack trace ---
-backend-2-1      |    at System.IO.Pipelines.Pipe.GetReadResult(ReadResult&) + 0x16e
-backend-2-1      |    at System.IO.Pipelines.Pipe.GetReadAsyncResult() + 0x96
-backend-2-1      |    at StackExchange.Redis.PhysicalConnection.<ReadFromPipe>d__134.MoveNext() + 0x57c
-backend-2-1      |    --- End of inner exception stack trace ---
+backend-2-1      | [Worker Error] StackExchange.Redis.RedisConnectionException: SocketClosed (ReadEndOfStream, last-recv: 0) on redis:6379/Interactive, Idle/MarkProcessed, last: LPOP, origin: ReadFromPipe, outstanding: 15, last-read: 0s ago, last-write: 0s ago, unanswered-write: 0s ago, keep-alive: 60s, state: ConnectedEstablished, mgr: 8 of 10 available, in: 0, in-pipe: 0, out-pipe: 0, last-heartbeat: 0s ago, last-mbeat: 0s ago, global: 0s ago, v: 2.8.58.19568
 backend-2-1      |    at RedisQueueWorker.<WorkerLoopAsync>d__11.MoveNext() + 0x12e
-backend-2-1      | [Worker Error] StackExchange.Redis.RedisConnectionException: SocketFailure (ReadSocketError/ConnectionReset, last-recv: 75) on redis:6379/Interactive, Idle/Faulted, last: PING, origin: ReadFromPipe, outstanding: 16, last-read: 0s ago, last-write: 0s ago, unanswered-write: 0s ago, keep-alive: 60s, state: ConnectedEstablished, mgr: 9 of 10 available, in: 0, in-pipe: 0, out-pipe: 14, last-heartbeat: 0s ago, last-mbeat: 0s ago, global: 0s ago, v: 2.8.58.19568
-backend-2-1      |  ---> Pipelines.Sockets.Unofficial.ConnectionResetException: Connection reset by peer
-backend-2-1      |  ---> System.Net.Sockets.SocketException (104): Connection reset by peer
-backend-2-1      |    at Pipelines.Sockets.Unofficial.Internal.Throw.Socket(Int32) + 0x27
-backend-2-1      |    at Pipelines.Sockets.Unofficial.SocketAwaitableEventArgs.GetResult() + 0x32
-backend-2-1      |    at Pipelines.Sockets.Unofficial.SocketConnection.<DoReceiveAsync>d__73.MoveNext() + 0x1e7
-backend-2-1      |    --- End of inner exception stack trace ---
-backend-2-1      |    at System.IO.Pipelines.Pipe.GetReadResult(ReadResult&) + 0x16e
-backend-2-1      |    at System.IO.Pipelines.Pipe.GetReadAsyncResult() + 0x96
-backend-2-1      |    at StackExchange.Redis.PhysicalConnection.<ReadFromPipe>d__134.MoveNext() + 0x57c
-backend-2-1      |    --- End of inner exception stack trace ---
+backend-2-1      | [Worker Error] StackExchange.Redis.RedisConnectionException: SocketClosed (ReadEndOfStream, last-recv: 0) on redis:6379/Interactive, Idle/MarkProcessed, last: LPOP, origin: ReadFromPipe, outstanding: 15, last-read: 0s ago, last-write: 0s ago, unanswered-write: 0s ago, keep-alive: 60s, state: ConnectedEstablished, mgr: 8 of 10 available, in: 0, in-pipe: 0, out-pipe: 0, last-heartbeat: 0s ago, last-mbeat: 0s ago, global: 0s ago, v: 2.8.58.19568
 backend-2-1      |    at RedisQueueWorker.<WorkerLoopAsync>d__11.MoveNext() + 0x12e
-backend-2-1      | [Worker Error] StackExchange.Redis.RedisConnectionException: SocketFailure (ReadSocketError/ConnectionReset, last-recv: 75) on redis:6379/Interactive, Idle/Faulted, last: PING, origin: ReadFromPipe, outstanding: 16, last-read: 0s ago, last-write: 0s ago, unanswered-write: 0s ago, keep-alive: 60s, state: ConnectedEstablished, mgr: 9 of 10 available, in: 0, in-pipe: 0, out-pipe: 14, last-heartbeat: 0s ago, last-mbeat: 0s ago, global: 0s ago, v: 2.8.58.19568
-backend-2-1      |  ---> Pipelines.Sockets.Unofficial.ConnectionResetException: Connection reset by peer
-backend-2-1      |  ---> System.Net.Sockets.SocketException (104): Connection reset by peer
-backend-2-1      |    at Pipelines.Sockets.Unofficial.Internal.Throw.Socket(Int32) + 0x27
-backend-2-1      |    at Pipelines.Sockets.Unofficial.SocketAwaitableEventArgs.GetResult() + 0x32
-backend-2-1      |    at Pipelines.Sockets.Unofficial.SocketConnection.<DoReceiveAsync>d__73.MoveNext() + 0x1e7
-backend-2-1      |    --- End of inner exception stack trace ---
-backend-2-1      |    at System.IO.Pipelines.Pipe.GetReadResult(ReadResult&) + 0x16e
-backend-2-1      |    at System.IO.Pipelines.Pipe.GetReadAsyncResult() + 0x96
-backend-2-1      |    at StackExchange.Redis.PhysicalConnection.<ReadFromPipe>d__134.MoveNext() + 0x57c
-backend-2-1      |    --- End of inner exception stack trace ---
+backend-2-1      | [Worker Error] StackExchange.Redis.RedisConnectionException: SocketClosed (ReadEndOfStream, last-recv: 0) on redis:6379/Interactive, Idle/MarkProcessed, last: LPOP, origin: ReadFromPipe, outstanding: 15, last-read: 0s ago, last-write: 0s ago, unanswered-write: 0s ago, keep-alive: 60s, state: ConnectedEstablished, mgr: 8 of 10 available, in: 0, in-pipe: 0, out-pipe: 0, last-heartbeat: 0s ago, last-mbeat: 0s ago, global: 0s ago, v: 2.8.58.19568
 backend-2-1      |    at RedisQueueWorker.<WorkerLoopAsync>d__11.MoveNext() + 0x12e
-backend-2-1      | [Worker Error] StackExchange.Redis.RedisConnectionException: SocketFailure (ReadSocketError/ConnectionReset, last-recv: 75) on redis:6379/Interactive, Idle/Faulted, last: PING, origin: ReadFromPipe, outstanding: 16, last-read: 0s ago, last-write: 0s ago, unanswered-write: 0s ago, keep-alive: 60s, state: ConnectedEstablished, mgr: 9 of 10 available, in: 0, in-pipe: 0, out-pipe: 14, last-heartbeat: 0s ago, last-mbeat: 0s ago, global: 0s ago, v: 2.8.58.19568
-backend-2-1      |  ---> Pipelines.Sockets.Unofficial.ConnectionResetException: Connection reset by peer
-backend-2-1      |  ---> System.Net.Sockets.SocketException (104): Connection reset by peer
-backend-2-1      |    at Pipelines.Sockets.Unofficial.Internal.Throw.Socket(Int32) + 0x27
-backend-2-1      |    at Pipelines.Sockets.Unofficial.SocketAwaitableEventArgs.GetResult() + 0x32
-backend-2-1      |    at Pipelines.Sockets.Unofficial.SocketConnection.<DoReceiveAsync>d__73.MoveNext() + 0x1e7
-backend-2-1      |    --- End of inner exception stack trace ---
-backend-2-1      |    at System.IO.Pipelines.Pipe.GetReadResult(ReadResult&) + 0x16e
-backend-2-1      |    at System.IO.Pipelines.Pipe.GetReadAsyncResult() + 0x96
-backend-2-1      |    at StackExchange.Redis.PhysicalConnection.<ReadFromPipe>d__134.MoveNext() + 0x57c
-backend-2-1      |    --- End of inner exception stack trace ---
+backend-2-1      | [Worker Error] StackExchange.Redis.RedisConnectionException: SocketClosed (ReadEndOfStream, last-recv: 0) on redis:6379/Interactive, Idle/MarkProcessed, last: LPOP, origin: ReadFromPipe, outstanding: 15, last-read: 0s ago, last-write: 0s ago, unanswered-write: 0s ago, keep-alive: 60s, state: ConnectedEstablished, mgr: 8 of 10 available, in: 0, in-pipe: 0, out-pipe: 0, last-heartbeat: 0s ago, last-mbeat: 0s ago, global: 0s ago, v: 2.8.58.19568
 backend-2-1      |    at RedisQueueWorker.<WorkerLoopAsync>d__11.MoveNext() + 0x12e
-[Kload-balancer-1 exited with code 0
 [Kredis-1 exited with code 0
-[Kbackend-2-1 exited with code 0
+[Kload-balancer-1 exited with code 0
 [Kbackend-1-1 exited with code 0
+[Kbackend-2-1 exited with code 0
 log truncated at line 1000
