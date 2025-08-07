@@ -1,5 +1,5 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Thu Aug  7 10:22:38 AM -03 2025**
+Atualizado em **Thu Aug  7 10:43:51 AM -03 2025**
 260 submissões / 235 resultados / 25 submissões com erro
 
 
@@ -187,7 +187,7 @@ Atualizado em **Thu Aug  7 10:22:38 AM -03 2025**
 |	pancine-dotnet	|	45.57ms	|	0%	|	0	|	312919.54	|	[pancine-dotnet](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/pancine-dotnet)
 |	panissetrafael-go	|	2.99ms	|	16%	|	75360.32595	|	174405.32577	|	[panissetrafael-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/panissetrafael-go)
 |	patrignani-go	|	4.85ms	|	12%	|	92105.50825	|	202632.11815	|	[patrignani-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/patrignani-go)
-|	pedrohsb-golang	|	1.99ms	|	18%	|	0	|	373653.43513	|	[pedrohsb-golang](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/pedrohsb-golang)
+|	pedrohsb-golang	|	2.83ms	|	16%	|	0	|	366925.46844	|	[pedrohsb-golang](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/pedrohsb-golang)
 |	pedrohsb-python	|	97.95ms	|	0%	|	62759.5255	|	116553.4045	|	[pedrohsb-python](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/pedrohsb-python)
 |	pedropereiradev-bun	|	2.66ms	|	17%	|	0	|	362140.28955	|	[pedropereiradev-bun](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/pedropereiradev-bun)
 |	phaalonso-java-1	|	886.47ms	|	0%	|	0	|	298755.715	|	[phaalonso-java-1](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/phaalonso-java-1)
