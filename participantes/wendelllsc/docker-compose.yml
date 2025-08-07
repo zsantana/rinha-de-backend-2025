@@ -46,6 +46,7 @@ services:
       POSTGRES_PASSWORD: rinha
     ports:
       - "5432:5432"
+    restart: unless-stopped
     healthcheck:
       test: [ "CMD-SHELL", "pg_isready -U rinha -d rinha" ]
       interval: 3s
@@ -94,6 +95,7 @@ services:
     depends_on:
       - api1
       - api2
+    restart: unless-stopped
     deploy:
       resources:
         limits:
