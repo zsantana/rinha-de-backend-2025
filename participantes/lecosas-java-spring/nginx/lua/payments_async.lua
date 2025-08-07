@@ -27,8 +27,8 @@ local function async_post(premature, rawBody)
         keepalive_timeout = 60000,
         keepalive_pool = 1000,
     })
-
-    ngx.sleep(0.001)
+    
+    --ngx.sleep(0.001)
 end
 
 ngx.timer.at(0, async_post, body)
