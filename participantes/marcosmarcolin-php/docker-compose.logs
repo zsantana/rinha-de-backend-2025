@@ -1,0 +1,55 @@
+
+ Network marcosmarcolin-php_backend  Creating
+ Network marcosmarcolin-php_backend  Created
+ Container marcosmarcolin-php-redis-1  Creating
+ Container marcosmarcolin-php-redis-1  Created
+ Container marcosmarcolin-php-api01-1  Creating
+ Container marcosmarcolin-php-worker-payments-default-1  Creating
+ Container marcosmarcolin-php-api02-1  Creating
+ Container marcosmarcolin-php-worker-health-1  Creating
+ Container marcosmarcolin-php-worker-health-1  Created
+ Container marcosmarcolin-php-api02-1  Created
+ Container marcosmarcolin-php-worker-payments-default-1  Created
+ Container marcosmarcolin-php-api01-1  Created
+ Container marcosmarcolin-php-haproxy-1  Creating
+ Container marcosmarcolin-php-haproxy-1  Created
+Attaching to api01-1, api02-1, haproxy-1, redis-1, worker-health-1, worker-payments-default-1
+redis-1                    | Starting Redis Server
+api02-1                    | [Swoole] Servidor iniciado na porta 9501
+api01-1                    | [Swoole] Servidor iniciado na porta 9501
+worker-payments-default-1  | [Worker:default] Iniciando processamento com 14 Coroutines
+worker-payments-default-1  | [Worker:fallback] Iniciando processamento com 10 Coroutines
+worker-health-1            | [WorkerHealth] Iniciando monitoramento...
+worker-health-1            | [WorkerHealth] [2025-08-07 02:49:33] Processador atual: default
+worker-health-1            | [WorkerHealth] [2025-08-07 02:49:33] Default voltou!
+haproxy-1                  | [NOTICE]   (1) : Initializing new worker (9)
+haproxy-1                  | [NOTICE]   (1) : Loading success.
+worker-health-1            | [WorkerHealth] [2025-08-07 02:49:38] Processador atual: default
+worker-health-1            | [WorkerHealth] [2025-08-07 02:49:43] Processador atual: default
+worker-health-1            | [WorkerHealth] [2025-08-07 02:49:48] Processador atual: default
+worker-health-1            | [WorkerHealth] [2025-08-07 02:49:53] Processador atual: fallback
+worker-health-1            | [WorkerHealth] [2025-08-07 02:49:58] Processador atual: fallback
+worker-health-1            | [WorkerHealth] [2025-08-07 02:50:03] Processador atual: fallback
+worker-health-1            | [WorkerHealth] [2025-08-07 02:50:08] Processador atual: fallback
+worker-health-1            | [WorkerHealth] [2025-08-07 02:50:14] Processador atual: off
+worker-health-1            | [WorkerHealth] [2025-08-07 02:50:19] Processador atual: off
+worker-health-1            | [WorkerHealth] [2025-08-07 02:50:22] Default voltou!
+worker-health-1            | [WorkerHealth] [2025-08-07 02:50:24] Processador atual: default
+worker-health-1            | [WorkerHealth] [2025-08-07 02:50:29] Processador atual: default
+worker-health-1            | [WorkerHealth] [2025-08-07 02:50:34] Processador atual: default
+worker-health-1            | [WorkerHealth] [2025-08-07 02:50:39] Processador atual: default
+haproxy-1                  | [NOTICE]   (1) : haproxy version is 3.2.3-1844da7
+haproxy-1                  | [NOTICE]   (1) : path to executable is /usr/local/sbin/haproxy
+haproxy-1                  | [WARNING]  (1) : Exiting Master process...
+haproxy-1                  | [WARNING]  (9) : Proxy frontend stopped (cumulated conns: FE: 553, BE: 0).
+haproxy-1                  | [WARNING]  (9) : Proxy backend stopped (cumulated conns: FE: 0, BE: 16756).
+haproxy-1                  | [WARNING]  (1) : Current worker (9) exited with code 0 (Exit)
+haproxy-1                  | [WARNING]  (1) : All workers exited. Exiting... (0)
+[Khaproxy-1 exited with code 0
+[Kapi01-1 exited with code 0
+worker-health-1            | [WorkerHealth] [2025-08-07 02:50:44] Processador atual: default
+worker-health-1            | [WorkerHealth] [2025-08-07 02:50:49] Processador atual: default
+[Kworker-payments-default-1 exited with code 137
+[Kworker-health-1 exited with code 137
+[Kredis-1 exited with code 0
+log truncated at line 1000
