@@ -1,7 +1,7 @@
 services:
   rinha1: &api
     hostname: rinha1
-    image: sylviot/rinha:2025-api
+    image: sylviot/rinha:2025-api-v0
     depends_on:
       db:
         condition: service_healthy
@@ -42,7 +42,7 @@ services:
 
   rinhaw1: &worker
     hostname: rinhaw1
-    image: sylviot/rinha:2025-worker
+    image: sylviot/rinha:2025-worker-v0
     depends_on:
       db:
         condition: service_healthy
