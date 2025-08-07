@@ -1,58 +1,77 @@
+x-api_template: &api
+  image: ghcr.io/lothyriel/rinha_2025:v0.3.5
+  volumes:
+    - uds:/var/run
+  command: ["-m", "api"]
+  depends_on:
+    - worker
+  environment:
+    RUST_LOG: "info"
+  deploy:
+    resources:
+      limits:
+        cpus: "0.4"
+        memory: "80MB"
+
 services:
-  api_0: &api
-    image: ghcr.io/lothyriel/rinha_2025:v0.1.0
-    networks:
-      - backend
-    volumes:
-      - data:/data
-    command: ["-m", "api", "-w", "worker:80"]
-    depends_on:
-      - worker
-    deploy:
-      resources:
-        limits:
-          cpus: "0.35"
-          memory: "80MB"
-
-  api_1:
-    <<: *api
-
-  worker:
-    image: ghcr.io/lothyriel/rinha_2025:v0.1.0
-    networks:
-      - backend
-      - payment-processor
-    volumes:
-      - data:/data
-    command: ["-m", "worker"]
-    deploy:
-      resources:
-        limits:
-          cpus: "0.5"
-          memory: "140MB"
-
-  nginx:
-    image: nginx:latest
+  lb:
+    image: ghcr.io/lothyriel/rinha_2025:v0.3.5
+    command: ["-m", "lb"]
     ports:
-      - "9999:80"
-    networks:
-      - backend
+      - "9999:9999"
     volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - uds:/var/run
+    # we need this cause io_uring syscall is disabled by default in docker
+    security_opt:
+      - seccomp=unconfined
     depends_on:
       - api_0
       - api_1
+    environment:
+      API_N: "2"
+    ulimits:
+      nofile:
+        soft: 2048
+        hard: 2048
+    deploy:
+      resources:
+        limits:
+          cpus: "0.4"
+          memory: "80MB"
+
+  api_0:
+    <<: *api
+    environment:
+      API_N: "0"
+      RUST_LOG: "info"
+      WORKER_SOCKET: "/var/run/worker.socket"
+
+  api_1:
+    <<: *api
+    environment:
+      API_N: "1"
+      RUST_LOG: "info"
+      WORKER_SOCKET: "/var/run/worker.socket"
+
+  worker:
+    image: ghcr.io/lothyriel/rinha_2025:v0.3.5
+    command: ["-m", "worker"]
+    networks:
+      - payment-processor
+    volumes:
+      - uds:/var/run
+    environment:
+      WORKER_SOCKET: "/var/run/worker.socket"
+      RUST_LOG: "info"
     deploy:
       resources:
         limits:
           cpus: "0.3"
-          memory: "50MB"
+          memory: "110MB"
 
 volumes:
-  data:
+  uds:
 
 networks:
-  backend:
-    driver: bridge
   payment-processor:
     external: true

@@ -1,0 +1,84 @@
+x-service-templates:
+  api-template: &api-template
+    image: felipewaku/rinha-2025:1.0.0
+    networks:
+      - backend
+      - payment-processor
+    depends_on:
+      redis:
+        condition: service_healthy
+
+services:
+  redis:
+    image: redis:8.0.3-alpine
+    container_name: redis
+    healthcheck:
+      test: ['CMD', 'redis-cli', 'ping']
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    networks:
+      - backend
+    ports:
+      - 6379:6379
+    deploy:
+      resources:
+        limits:
+          cpus: '0.2'
+          memory: '30MB'
+
+  loadbalancer:
+    image: nginx:1.29.0-alpine
+    container_name: loadbalancer
+    ports:
+      - 9999:8080
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    networks:
+      - backend
+    depends_on:
+      - api1
+      - api2
+    deploy:
+      resources:
+        limits:
+          cpus: '0.1'
+          memory: '10MB'
+
+  api1:
+    <<: *api-template
+    container_name: api1
+    environment:
+      - PORT=8080
+      - REDIS_URL=redis://redis:6379/0
+      - PAYMENT_PROCESSOR_DEFAULT_BASE_URL=http://payment-processor-default:8080
+      - PAYMENT_PROCESSOR_FALLBACK_BASE_URL=http://payment-processor-fallback:8080
+      - ENABLE_SYNC=true
+      - ENABLE_HEALTH=false
+    deploy:
+      resources:
+        limits:
+          cpus: '0.6'
+          memory: '160MB'
+
+  api2:
+    <<: *api-template
+    container_name: api2
+    environment:
+      - PORT=8080
+      - REDIS_URL=redis://redis:6379/0
+      - PAYMENT_PROCESSOR_DEFAULT_BASE_URL=http://payment-processor-default:8080
+      - PAYMENT_PROCESSOR_FALLBACK_BASE_URL=http://payment-processor-fallback:8080
+      - ENABLE_SYNC=true
+      - ENABLE_HEALTH=true
+    deploy:
+      resources:
+        limits:
+          cpus: '0.6'
+          memory: '150MB'
+
+networks:
+  payment-processor:
+    external: true
+  backend:
+    driver: bridge

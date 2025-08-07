@@ -1,99 +1,135 @@
-# Rinha de Backend 2025 - Jean Jacques Barros 🐔💻
+# 🐔 Rinha de Backend 2025 – Jean Jacques Barros
 
-Projeto desenvolvido para a competição Rinha de Backend 2025, onde o objetivo é criar uma API RESTful para pagamentos.
+Este projeto foi desenvolvido para a **Rinha de Backend 2025**, uma competição onde o desafio é criar uma API RESTful de
+alta performance para processamento de pagamentos.
 
-Repositório com o projeto: [jjeanjacques10/rinha-de-backend-2025](https://github.com/jjeanjacques10/rinha-de-backend-2025)
+🔗
+Repositório da aplicação: [github.com/jjeanjacques10/rinha-de-backend-2025](https://github.com/jjeanjacques10/rinha-de-backend-2025)
 
-## Tecnologias Utilizadas 🚀
+Repositório do desafio: [zanfranceschi/rinha-de-backend-2025](https://github.com/zanfranceschi/rinha-de-backend-2025)
 
-- Java 21 ☕
-- Kotlin 🛠️
-- Spring Boot 3.2.5 🌱
-    - WebFlux 🌐
-- Spring Data JPA 🗄️
-- Redis 🗑️
-    - Redis Streams 📜
-- Docker 🐳
-- GraalVM 🧪
+---
 
-## Estrutura do Projeto 🗂️
+## ⚙️ Tecnologias Utilizadas
 
-Segue uma tabela resumindo a estrutura do projeto:
+* **Java 21** / **Kotlin**
+* **Spring Boot 3.2.5**
 
-| Caminho                                             | Descrição                                                       |
-|-----------------------------------------------------|-----------------------------------------------------------------|
-| `app/`                                              | Aplicação principal Spring Boot                                 |
-| ├─ `Dockerfile`                                     | Dockerfile para build da aplicação                              |
-| ├─ `src/main/kotlin/com/jjeanjacques/rinhabackend/` | Código-fonte Kotlin                                             |
-| ├─ `docker-compose.yml`                             | Configuração do Docker Compose para a aplicação                 |
-| ├─ `docker-compose-graalvm.yml`                     | Configuração do Docker Compose para a aplicação com GraalVM     |
-| `payment-processor/`                                | Infraestrutura de banco e orquestração oferecido para o desafio |
-| `rinha-test/`                                       | Scripts de teste de carga                                       |
-| ├─ `rinha.js`                                       | Script principal de teste                                       |
+    * WebFlux (reativo)
+    * Spring Data JPA
+* **Redis**
 
-## Comandos úteis 🛠️
+    * Redis Streams
+* **Docker**
+* **GraalVM (build nativo)**
 
-- Gerar imagem do docker 🐳
+---
 
-```
+## 📁 Estrutura do Projeto
+
+| Caminho                          | Descrição                                                     |
+|----------------------------------|---------------------------------------------------------------|
+| `app/`                           | Código-fonte principal (Spring Boot)                          |
+| ├── `Dockerfile`                 | Build da imagem da aplicação                                  |
+| ├── `src/main/kotlin/...`        | Código-fonte Kotlin                                           |
+| ├── `docker-compose.yml`         | Infra de execução local                                       |
+| ├── `docker-compose-graalvm.yml` | Versão otimizada com GraalVM                                  |
+| `payment-processor/`             | Infraestrutura de banco e orquestração (padrão da competição) |
+| `rinha-test/`                    | Scripts de teste de carga com K6                              |
+| └── `rinha.js`                   | Script principal de teste                                     |
+
+---
+
+## 🐳 Comandos Úteis
+
+### Build da imagem:
+
+```bash
 docker build -t jjeanjacques10/payment-processor .
 ```
 
-- Subir infraestrutura de banco e orquestração 🏗️
+### Subir infraestrutura da competição:
 
-```
+```bash
 docker-compose -f payment-processor/docker-compose.yml up -d
 ```
 
-## Executar os testes 🧪
+---
 
-### Testes de carga 📊
+## 🧪 Testes de Carga
 
-Para executar os testes de carga, utilize o script `rinha.js` localizado na pasta `rinha-test/`:
+### Usando o K6:
 
-```
+```bash
 k6 run ./rinha-test/rinha.js
 ```
 
-### Testes Java ☕
+---
 
-#### Testes Java padrão
+## ☕ Testes Automatizados
 
-O script `test_java.sh` realiza os seguintes passos:
+### 🔹 Testes Java (modo padrão)
 
-1. **Compilação do projeto**: Utiliza o Maven para limpar e compilar o projeto, gerando os artefatos necessários.
-2. **Construção da imagem Docker**: Cria uma imagem Docker para o projeto.
-3. **Gerenciamento de containers**: Configura e inicia os serviços necessários usando Docker Compose.
-4. **Configuração do K6**: Define variáveis de ambiente para o painel web do K6.
-5. **Execução dos testes de carga**: Executa os testes de carga definidos no script `rinha.js`.
+Script: `test_java.sh`
 
-Para executar:
+Etapas:
 
-```
+1. Compila e empacota o projeto (Maven)
+2. Constrói a imagem Docker
+3. Sobe infraestrutura com Docker Compose
+4. Executa o teste de carga com K6
+
+```bash
 ./test_java.sh
 ```
 
-#### Testes Java com suporte ao GraalVM (em desenvolvimento)
+---
 
-O script `test_java_native_graalvm.sh` realiza os seguintes passos:
+### 🔹 Testes com GraalVM (build nativo)
 
-1. **Geração de código nativo**: Utiliza o GraalVM para preparar o projeto como uma aplicação nativa.
-2. **Gerenciamento de containers**: Configura e inicia os serviços necessários usando um arquivo Docker Compose específico para GraalVM.
-3. **Configuração do K6**: Define variáveis de ambiente para o painel web do K6.
-4. **Execução dos testes de carga**: Executa os testes de carga definidos no script `rinha.js`.
+Script: `test_java_native_graalvm.sh`
 
-Para executar:
+Etapas:
 
-```
+1. Gera o executável nativo com GraalVM
+2. Sobe infra com Docker Compose específico
+3. Executa os testes com K6
+
+```bash
 ./test_java_native_graalvm.sh
 ```
 
-#### Publicação da imagem Docker com GraalVM
+---
 
-Nome da imagem local: `docker.io/jjeanjacques10/rinhabackend2025:graalvm`
-Nome da imagem remota: `jjeanjacques/rinhabackend2025:graalvm`
+### 📤 Publicação da imagem (GraalVM)
 
+```bash
+docker tag docker.io/jjeanjacques10/rinhabackend2025:graalvm jjeanjacques/rinhabackend2025:graalvm-v5.0
+docker push jjeanjacques/rinhabackend2025:graalvm-v5.0
 ```
-docker tag docker.io/jjeanjacques10/rinhabackend2025:graalvm jjeanjacques/rinhabackend2025:graalvm
-docker push jjeanjacques/rinhabackend2025:graalvm
+
+---
+
+## 📖 Endpoints da API
+
+```mermaid
+graph TD
+    A[POST /payments] -->|Processa pagamento| B[Retorna: success]
+    C[GET /payments-summary] -->|Resumo de pagamentos| D[Retorna: PaymentSummary]
 ```
+
+---
+
+## 🤝 Contribuições
+
+Contribuições são bem-vindas! Para colaborar:
+
+1. Faça um fork do repositório
+2. Crie uma nova branch: `git checkout -b minha-feature`
+3. Commit suas alterações: `git commit -m "Minha contribuição"`
+4. Envie para o fork: `git push origin minha-feature`
+5. Abra um Pull Request explicando sua mudança
+
+---
+
+Se quiser, posso gerar uma versão `.md` pronta para você subir direto no GitHub. Deseja isso também?

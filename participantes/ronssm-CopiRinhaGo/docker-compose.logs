@@ -1,0 +1,113 @@
+
+ backend1 Pulling 
+ backend2 Pulling 
+ haproxy Pulling 
+ 9824c27679d3 Already exists 
+ 92479e122580 Pulling fs layer 
+ b96cbd2e3317 Pulling fs layer 
+ 47e2d380b774 Pulling fs layer 
+ 9ab3a422b31b Pulling fs layer 
+ dcab7170bca7 Pulling fs layer 
+ 9ab3a422b31b Waiting 
+ dcab7170bca7 Waiting 
+ haproxy Pulled 
+ 9824c27679d3 Already exists 
+ 92479e122580 Pulling fs layer 
+ b96cbd2e3317 Pulling fs layer 
+ 47e2d380b774 Pulling fs layer 
+ 9ab3a422b31b Pulling fs layer 
+ dcab7170bca7 Pulling fs layer 
+ dcab7170bca7 Waiting 
+ 9ab3a422b31b Waiting 
+ b96cbd2e3317 Download complete 
+ b96cbd2e3317 Downloading [==================================================>]      93B/93B
+ b96cbd2e3317 Verifying Checksum 
+ b96cbd2e3317 Download complete 
+ 47e2d380b774 Downloading [>                                                  ]  32.05kB/3.199MB
+ 47e2d380b774 Downloading [>                                                  ]  32.05kB/3.199MB
+ 47e2d380b774 Downloading [===>                                               ]  205.3kB/3.199MB
+ 47e2d380b774 Downloading [===>                                               ]  205.3kB/3.199MB
+ 47e2d380b774 Downloading [========>                                          ]  528.9kB/3.199MB
+ 47e2d380b774 Downloading [========>                                          ]  528.9kB/3.199MB
+ 47e2d380b774 Downloading [==============>                                    ]  955.9kB/3.199MB
+ 47e2d380b774 Downloading [==============>                                    ]  955.9kB/3.199MB
+ 47e2d380b774 Downloading [==================================>                ]  2.205MB/3.199MB
+ 47e2d380b774 Downloading [==================================>                ]  2.205MB/3.199MB
+ 47e2d380b774 Download complete 
+ 47e2d380b774 Verifying Checksum 
+ 47e2d380b774 Download complete 
+ 9ab3a422b31b Downloading [==================================================>]     300B/300B
+ 9ab3a422b31b Verifying Checksum 
+ 9ab3a422b31b Download complete 
+ 9ab3a422b31b Downloading [==================================================>]     300B/300B
+ 9ab3a422b31b Verifying Checksum 
+ 9ab3a422b31b Download complete 
+ 92479e122580 Downloading [>                                                  ]  17.02kB/1.655MB
+ 92479e122580 Downloading [>                                                  ]  17.02kB/1.655MB
+ 92479e122580 Verifying Checksum 
+ 92479e122580 Download complete 
+ 92479e122580 Extracting [>                                                  ]  32.77kB/1.655MB
+ 92479e122580 Downloading [==================================================>]  1.655MB/1.655MB
+ 92479e122580 Verifying Checksum 
+ 92479e122580 Download complete 
+ 92479e122580 Extracting [>                                                  ]  32.77kB/1.655MB
+ 92479e122580 Extracting [==================================================>]  1.655MB/1.655MB
+ 92479e122580 Extracting [==================================================>]  1.655MB/1.655MB
+ 92479e122580 Pull complete 
+ 92479e122580 Pull complete 
+ b96cbd2e3317 Extracting [==================================================>]      93B/93B
+ b96cbd2e3317 Extracting [==================================================>]      93B/93B
+ b96cbd2e3317 Extracting [==================================================>]      93B/93B
+ b96cbd2e3317 Extracting [==================================================>]      93B/93B
+ b96cbd2e3317 Pull complete 
+ b96cbd2e3317 Pull complete 
+ 47e2d380b774 Extracting [>                                                  ]  32.77kB/3.199MB
+ 47e2d380b774 Extracting [>                                                  ]  32.77kB/3.199MB
+ 47e2d380b774 Extracting [==================================================>]  3.199MB/3.199MB
+ 47e2d380b774 Extracting [==================================================>]  3.199MB/3.199MB
+ 47e2d380b774 Pull complete 
+ 47e2d380b774 Pull complete 
+ 9ab3a422b31b Extracting [==================================================>]     300B/300B
+ 9ab3a422b31b Extracting [==================================================>]     300B/300B
+ 9ab3a422b31b Extracting [==================================================>]     300B/300B
+ 9ab3a422b31b Extracting [==================================================>]     300B/300B
+ 9ab3a422b31b Pull complete 
+ 9ab3a422b31b Pull complete 
+ dcab7170bca7 Verifying Checksum 
+ dcab7170bca7 Download complete 
+ dcab7170bca7 Downloading [==================================================>]     295B/295B
+ dcab7170bca7 Verifying Checksum 
+ dcab7170bca7 Download complete 
+ dcab7170bca7 Extracting [==================================================>]     295B/295B
+ dcab7170bca7 Extracting [==================================================>]     295B/295B
+ dcab7170bca7 Extracting [==================================================>]     295B/295B
+ dcab7170bca7 Extracting [==================================================>]     295B/295B
+ dcab7170bca7 Pull complete 
+ dcab7170bca7 Pull complete 
+ backend2 Pulled 
+ backend1 Pulled 
+ Network ronssm-copirinhago_backend  Creating
+ Network ronssm-copirinhago_backend  Created
+ Container ronssm-copirinhago-backend1-1  Creating
+ Container ronssm-copirinhago-backend2-1  Creating
+ Container ronssm-copirinhago-backend2-1  Created
+ Container ronssm-copirinhago-backend1-1  Created
+ Container ronssm-copirinhago-haproxy-1  Creating
+ Container ronssm-copirinhago-haproxy-1  Created
+Attaching to backend1-1, backend2-1, haproxy-1
+backend2-1  | [MAIN] 2025/08/01 16:11:16 Starting API server on port 9999
+backend1-1  | [MAIN] 2025/08/01 16:11:16 Starting API server on port 9999
+haproxy-1   | [NOTICE]   (1) : New worker (8) forked
+haproxy-1   | [NOTICE]   (1) : Loading success.
+haproxy-1   | [NOTICE]   (1) : haproxy version is 2.8.15-a9aef56
+haproxy-1   | [WARNING]  (1) : Exiting Master process...
+haproxy-1   | [WARNING]  (8) : Proxy frontend stopped (cumulated conns: FE: 1819, BE: 0).
+haproxy-1   | [WARNING]  (8) : Proxy api_servers stopped (cumulated conns: FE: 0, BE: 14341).
+haproxy-1   | [WARNING]  (1) : Current worker (8) exited with code 0 (Exit)
+haproxy-1   | [WARNING]  (1) : All workers exited. Exiting... (0)
+[Khaproxy-1 exited with code 0
+backend2-1  | [MAIN] 2025/08/01 16:12:26 Shutting down gracefully...
+backend1-1  | [MAIN] 2025/08/01 16:12:26 Shutting down gracefully...
+[Kbackend2-1 exited with code 0
+[Kbackend1-1 exited with code 0
+log truncated at line 1000

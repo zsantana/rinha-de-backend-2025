@@ -6,7 +6,7 @@ Essa é a minha participação na lendária [**Rinha de Backend 2025**](https://
 
 * **Rust** 🦀 - Performance e segurança de outro nível!
 * **Actix Web** 🕸️ - Para APIs ridiculamente rápidas.
-* **Nginx** 🚦 - O porteiro mais confiável da web.
+* **HaProxy** 🚦 - O porteiro mais rápido da web.
 
 ## 🚀 Como Rodar
 
@@ -20,3 +20,7 @@ docker compose up -d --build
 ## ✨ Repositório no GitHub
 
 Curtiu? Dê uma olhada no [código fonte](https://github.com/alan-venv/rinha-de-backend-2025) e deixe uma ⭐!
+
+<p align="center">
+  <img src="./Galo.png" alt="Galo Foda" width="400">
+</p>

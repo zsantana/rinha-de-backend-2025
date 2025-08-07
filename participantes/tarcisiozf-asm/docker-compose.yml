@@ -1,0 +1,68 @@
+x-service-templates:
+  base-app: &base-app
+    networks:
+      - payment-processor
+      - app
+    image: tarcisiozf/rinha-de-backend-2025-asm:v4
+    security_opt:
+      - seccomp:unconfined
+    volumes:
+      - app-data:/app/data
+      - sockets:/app/sockets:rw
+    deploy:
+      resources:
+        limits:
+          cpus: "0.55"
+          memory: 100M
+
+services:
+  app-1:
+    <<: *base-app
+    hostname: app-one
+    cpuset: "0"
+    environment:
+      APP_ID: "APP_1"
+      APP_PORT: "9001"
+      HOST_DEFAULT: "payment-processor-default"
+      PORT_DEFAULT: "8080"
+      HOST_FALLBACK: "payment-processor-fallback"
+      PORT_FALLBACK: "8080"
+  app-2:
+    <<: *base-app
+    hostname: app-two
+    cpuset: "1"
+    environment:
+      APP_ID: "APP_2"
+      APP_PORT: "9002"
+      HOST_DEFAULT: "payment-processor-default"
+      PORT_DEFAULT: "8080"
+      HOST_FALLBACK: "payment-processor-fallback"
+      PORT_FALLBACK: "8080"
+
+  lb:
+    networks:
+      - app
+    cpuset: "2"
+    image: tarcisiozf/rinha-de-backend-2025-asm-lb:v2
+    security_opt:
+      - seccomp:unconfined
+    volumes:
+      - sockets:/app/sockets:rw
+    ports:
+      - "9999:9999"
+    deploy:
+      resources:
+        limits:
+          cpus: "0.4"
+          memory: 150M
+
+volumes:
+  app-data:
+  sockets:
+
+networks:
+  payment-processor:
+    external: true
+  app:
+    driver: bridge
+

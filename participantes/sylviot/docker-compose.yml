@@ -1,0 +1,123 @@
+services:
+  rinha1: &api
+    hostname: rinha1
+    image: sylviot/rinha:2025-api-v0
+    depends_on:
+      db:
+        condition: service_healthy
+    healthcheck:
+      test: curl --unix-socket /tmp/sockets/rinha1.sock http://localhost/payments-summary || exit 1
+      interval: 10s
+      timeout: 50s
+      retries: 3
+      start_period: 5s
+    networks:
+      - backend
+      - payment-processor
+    volumes:
+      - /tmp/sockets:/tmp/sockets:rw
+    environment:
+      - ASPNETCORE_URLS:http://+:8080
+      - SOCK=rinha1.sock
+      - ConnectionStrings__Postgres=Host=db:5432;Database=rinha;User ID=postgres;Password=secret;No Reset On Close=true;Max Auto Prepare=10;Auto Prepare Min Usages=1;Pooling=true;Maximum Pool Size=100
+    deploy:
+      resources:
+        limits:
+          cpus: "0.2"
+          memory: "60MB"
+  
+  rinha2:
+    <<: *api
+    hostname: rinha2
+    healthcheck:
+      test: curl --unix-socket /tmp/sockets/rinha2.sock http://localhost/payments-summary || exit 1
+      interval: 10s
+      timeout: 50s
+      retries: 3
+      start_period: 5s
+    environment:
+      - ASPNETCORE_URLS:http://+:8080
+      - SOCK=rinha2.sock
+      - ConnectionStrings__Postgres=Host=db:5432;Database=rinha;User ID=postgres;Password=secret;No Reset On Close=true;Max Auto Prepare=10;Auto Prepare Min Usages=1;Pooling=true;Maximum Pool Size=100;
+
+  rinhaw1: &worker
+    hostname: rinhaw1
+    image: sylviot/rinha:2025-worker-v0
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - backend
+      - payment-processor
+    environment:
+      - ConnectionStrings__Postgres=Host=db:5432;Database=rinha;User ID=postgres;Password=secret;No Reset On Close=true;Max Auto Prepare=10;Auto Prepare Min Usages=1;Pooling=true;Maximum Pool Size=100
+      - ChannelName=payment_transaction_primary
+      - ExternalServices__Gateway__Url=http://payment-processor-default:8080
+    deploy:
+      resources:
+        limits:
+          cpus: "0.35"
+          memory: "70MB"
+  rinhaw2:
+    <<: *worker
+    hostname: rinhaw2
+    environment:
+      - ConnectionStrings__Postgres=Host=db:5432;Database=rinha;User ID=postgres;Password=secret;No Reset On Close=true;Max Auto Prepare=10;Auto Prepare Min Usages=1;Pooling=true;Maximum Pool Size=100
+      - ChannelName=payment_transaction_fallback
+      - ExternalServices__Gateway__Url=http://payment-processor-fallback:8080
+
+  db:
+    image: postgres:alpine
+    hostname: db
+    environment:
+      - POSTGRES_PASSWORD=secret
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=rinha
+    ports:
+      - "5432:5432"
+    networks:
+      - backend
+    volumes:
+      - ./postgres.sql:/docker-entrypoint-initdb.d/init.sql
+    command: postgres -c checkpoint_timeout=600 -c max_wal_size=4096 -c synchronous_commit=0 -c fsync=0 -c full_page_writes=0
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d rinha"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+    deploy:
+      resources:
+        limits:
+          cpus: "0.15"
+          memory: "70MB"
+
+  nginx:
+    image: nginx:latest
+    networks:
+      - backend
+      - payment-processor
+    ulimits:
+      nofile:
+        soft: 65536
+        hard: 65536
+    volumes:
+     - ./nginx.conf:/etc/nginx/nginx.conf:ro
+     - /tmp/sockets:/tmp/sockets
+    depends_on:
+      rinha1:
+        condition: service_healthy
+      rinha2:
+        condition: service_healthy
+    ports:
+      - "9999:9999" 
+    deploy:
+      resources:
+        limits:
+          cpus: "0.25"
+          memory: "20MB"
+
+networks:
+  backend:
+    driver: bridge
+  payment-processor:
+    external: true
