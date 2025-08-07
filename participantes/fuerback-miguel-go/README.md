@@ -2,6 +2,12 @@
 
 A high-performance payment processing system built with Go, featuring asynchronous payment processing, health monitoring, and load balancing capabilities.
 
+- [rinha-de-backend-2025](https://github.com/Fuerback/rinha-2025)
+
+- [LinkedIn Felipe Fuerback](https://www.linkedin.com/in/felipefuerback/)
+
+- [LinkedIn Miguel Fontes](https://www.linkedin.com/in/miguelmfontes/)
+
 ## Architecture
 
 The system follows a microservices architecture with the following components:
