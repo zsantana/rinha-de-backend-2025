@@ -1,6 +1,6 @@
 services:
   load-balance:
-    image: lpj145/rinha-lb:1.08
+    image: lpj145/rinha-lb:1.09
     # build:
     #   context: .
     #   dockerfile: Dockerfile
@@ -21,7 +21,10 @@ services:
     mem_limit: "45MB"
 
   api1: &api
-    image: lpj145/rinha-lb:1.08
+    image: lpj145/rinha-lb:1.09
+    # build:
+    #   context: .
+    #   dockerfile: Dockerfile
     hostname: api1
     environment:
       - SOCKET_DIR=/var/run/sockets
