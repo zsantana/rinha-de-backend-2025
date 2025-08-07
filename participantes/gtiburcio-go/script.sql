@@ -1,5 +1,5 @@
 set timezone TO 'UTC';
-set max_parallel_workers_per_gather = 8;
+set max_parallel_workers_per_gather = 5;
 
 create type payment_type as ENUM ('default', 'fallback');
 
