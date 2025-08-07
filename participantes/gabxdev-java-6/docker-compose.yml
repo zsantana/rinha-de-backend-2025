@@ -1,6 +1,6 @@
 services:
   backend-1:
-    image: gabxdevv/rinha-backend-2025-java-gabxdev-unix:1.0.2
+    image: gabxdevv/rinha-backend-2025-java-gabxdev-unix:1.0.3
     restart: always
     volumes:
       - /tmp:/tmp
@@ -38,7 +38,7 @@ services:
           memory: '125MB'
 
   backend-2:
-    image: gabxdevv/rinha-backend-2025-java-gabxdev-unix:1.0.2
+    image: gabxdevv/rinha-backend-2025-java-gabxdev-unix:1.0.3
     restart: always
     volumes:
       - /tmp:/tmp
