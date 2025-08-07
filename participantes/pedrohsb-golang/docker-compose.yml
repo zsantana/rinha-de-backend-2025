@@ -1,6 +1,6 @@
 services:
   memdb:
-    image: pedrohsbarbosa99/rinha-golang-2025:0.1.7
+    image: pedrohsbarbosa99/rinha-golang-2025:0.1.9
     command: ["./memdb"]
     volumes:
       - memsock:/tmp
@@ -15,7 +15,7 @@ services:
     restart: unless-stopped
 
   app1:
-    image: pedrohsbarbosa99/rinha-golang-2025:0.1.7
+    image: pedrohsbarbosa99/rinha-golang-2025:0.1.9
     command: ["./main"]
     environment:
       - MEMDB_SOCKET=/tmp/kvstore.sock
@@ -31,7 +31,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.55"
+          cpus: "0.6"
           memory: 70M
     restart: unless-stopped
 
@@ -52,7 +52,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.55"
+          cpus: "0.6"
           memory: 70M
     restart: unless-stopped
 
@@ -72,7 +72,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.3"
+          cpus: "0.2"
           memory: 50M
     restart: unless-stopped
 
