@@ -1,0 +1,71 @@
+
+ uxlb Pulling 
+ 9824c27679d3 Already exists 
+ f7516fc3f287 Pulling fs layer 
+ 277eb8845882 Pulling fs layer 
+ ebc4062bdf6e Pulling fs layer 
+ 277eb8845882 Downloading [>                                                  ]  3.672kB/323.9kB
+ ebc4062bdf6e Downloading [==================================================>]     935B/935B
+ ebc4062bdf6e Verifying Checksum 
+ ebc4062bdf6e Download complete 
+ 277eb8845882 Verifying Checksum 
+ 277eb8845882 Download complete 
+ f7516fc3f287 Downloading [>                                                  ]  3.672kB/282.5kB
+ f7516fc3f287 Download complete 
+ f7516fc3f287 Extracting [=====>                                             ]  32.77kB/282.5kB
+ f7516fc3f287 Extracting [==================================================>]  282.5kB/282.5kB
+ f7516fc3f287 Extracting [==================================================>]  282.5kB/282.5kB
+ f7516fc3f287 Pull complete 
+ 277eb8845882 Extracting [=====>                                             ]  32.77kB/323.9kB
+ 277eb8845882 Extracting [==================================================>]  323.9kB/323.9kB
+ 277eb8845882 Extracting [==================================================>]  323.9kB/323.9kB
+ 277eb8845882 Pull complete 
+ ebc4062bdf6e Extracting [==================================================>]     935B/935B
+ ebc4062bdf6e Extracting [==================================================>]     935B/935B
+ ebc4062bdf6e Pull complete 
+ uxlb Pulled 
+ Volume "jrblatt-nodejs-faf_rb2025"  Creating
+ Volume "jrblatt-nodejs-faf_rb2025"  Created
+ Container api2  Creating
+ Container api1  Creating
+ Container api2  Created
+ Container api1  Created
+ Container uxlb  Creating
+ Container uxlb  Created
+Attaching to api1, api2, uxlb
+uxlb  | UXLB listening on port 9999
+uxlb  | Backends: ["/tmp/api1.sock", "/tmp/api2.sock"]
+uxlb  | FAF routes: [FastRoute { method: "POST", path: "/payments", status: 200 }]
+uxlb  | Workers: 1
+api1  | Server is listening on /tmp/app.sock
+api2  | node:events:495
+api2  |       throw er; // Unhandled 'error' event
+api2  |       ^
+api2  | 
+api2  | Error: listen EADDRINUSE: address already in use /tmp/app.sock
+api2  |     at Server.setupListenHandle [as _listen2] (node:net:1800:21)
+api2  |     at listenInCluster (node:net:1865:12)
+api2  |     at Server.listen (node:net:1964:5)
+api2  |     at startServer (/app/dist/config/server.js:29:12)
+api2  |     at Object.<anonymous> (/app/dist/main.js:4:26)
+api2  |     at Module._compile (node:internal/modules/cjs/loader:1364:14)
+api2  |     at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+api2  |     at Module.load (node:internal/modules/cjs/loader:1203:32)
+api2  |     at Module._load (node:internal/modules/cjs/loader:1019:12)
+api2  |     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12)
+api2  | Emitted 'error' event on Server instance at:
+api2  |     at emitErrorNT (node:net:1844:8)
+api2  |     at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+api2  |   code: 'EADDRINUSE',
+api2  |   errno: -98,
+api2  |   syscall: 'listen',
+api2  |   address: '/tmp/app.sock',
+api2  |   port: -1
+api2  | }
+api2  | 
+api2  | Node.js v18.20.8
+[Kapi2 exited with code 0
+api2  | Server is listening on /tmp/app.sock
+[Kuxlb exited with code 137
+[Kapi1 exited with code 137
+[Kapi2 exited with code 137
