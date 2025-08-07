@@ -1,6 +1,6 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Wed Aug  6 11:33:26 PM -03 2025**
-257 submissões / 231 resultados / 26 submissões com erro
+Atualizado em **Wed Aug  6 11:41:51 PM -03 2025**
+258 submissões / 232 resultados / 26 submissões com erro
 
 
 | participante | p99 | bônus por desempenho (%) | multa ($) | lucro | submissão |
@@ -86,6 +86,7 @@ Atualizado em **Wed Aug  6 11:33:26 PM -03 2025**
 |	gabxdev-java-5	|	1.71ms	|	19%	|	0	|	376436.72815	|	[gabxdev-java-5](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/gabxdev-java-5)
 |	gabxdev-java-6	|	2.21ms	|	18%	|	0	|	373161.8548	|	[gabxdev-java-6](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/gabxdev-java-6)
 |	gabxdev-java-7	|	1.59ms	|	19%	|	0	|	376369.2373	|	[gabxdev-java-7](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/gabxdev-java-7)
+|	gabxdev-java-8	|	1.84ms	|	18%	|	0	|	373746.5566	|	[gabxdev-java-8](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/gabxdev-java-8)
 |	gaoliveira21	|	9.36ms	|	3%	|	0	|	326022.20745	|	[gaoliveira21](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/gaoliveira21)
 |	gdx64-rs-sqlite	|	1.89ms	|	18%	|	0	|	373612.7092	|	[gdx64-rs-sqlite](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/gdx64-rs-sqlite)
 |	geazi-anc	|	4.62ms	|	13%	|	82937.13049998994	|	184831.3193999776	|	[geazi-anc](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/geazi-anc)
