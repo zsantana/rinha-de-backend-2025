@@ -1,59 +1,65 @@
 services:
   api-1: &api
-    image: muaddib42/rinha-2025:latest
-    ports:
-      - ":9999"
+    image: muaddib42/rinha-2025-api:0.0.6
     networks:
-      - backend
       - payment-processor
+      - internal
+    depends_on:
+      - rinha-db
     environment:
       - PAYMENT_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080
       - PAYMENT_PROCESSOR_URL_FALLBACK=http://payment-processor-fallback:8080
-      - DATABASE_URL=data/app.db
-      - CACHE_SIZE=-4000
-      - MMAP_SIZE=5000000
-      - BUSY_TIMEOUT=10
+      - NUM_WORKERS=5
+      - API_PATH=/tmp/api-1.sock
     volumes:
-      - shared_db:/data
+      - ipc-socket:/tmp
     deploy:
       resources:
         limits:
-          cpus: "0.7"
-          memory: 150M
-
+          cpus: "0.4"
+          memory: 100M
   api-2:
     <<: *api
     environment:
       - PAYMENT_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080
       - PAYMENT_PROCESSOR_URL_FALLBACK=http://payment-processor-fallback:8080
-      - DATABASE_URL=data/app.db
-      - CACHE_SIZE=-4000
-      - MMAP_SIZE=5000000
-      - BUSY_TIMEOUT=10
+      - NUM_WORKERS=5
+      - API_PATH=/tmp/api-2.sock
+
+  rinha-db:
+    image: muaddib42/rinha-2025-db:0.0.6
+    networks:
+      - internal
+    ports:
+      - ":8888"
+    deploy:
+      resources:
+        limits:
+          cpus: "0.6"
+          memory: 130M
 
   load_balancer:
-    image: nginx:latest
+    image: muaddib42/rinha-2025-gateway:0.0.6
     ports:
-      - "9999:80"
+      - "9999:9999"
     depends_on:
       - api-1
       - api-2
+      - rinha-db
     networks:
-      - backend
+      - internal
     volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ipc-socket:/tmp
     deploy:
       resources:
         limits:
           cpus: "0.1"
-          memory: 150M
+          memory: 20M
 
 networks:
-  backend:
-    driver: bridge
+  internal:
   payment-processor:
     external: true
 
 volumes:
-  shared_db:
-    driver: local
+  ipc-socket:

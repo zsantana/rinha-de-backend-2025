@@ -1,0 +1,57 @@
+services:
+  nginx:
+    image: nginx:1.25-alpine
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - white-carijo
+      - black-carijo
+    ports:
+      - "9999:80"
+    networks:
+      - rinha-net
+    deploy:
+      resources:
+        limits:
+          cpus: "0.20"
+          memory: "100MB"
+  white-carijo:
+    image: diegodario/carijo:latest
+    hostname: white-carijo
+    stop_grace_period: 20s
+    environment:
+      - PROCESSOR_DEFAULT_URL=http://payment-processor-default:8080/payments
+      - PROCESSOR_FALLBACK_URL=http://payment-processor-fallback:8080/payments
+      - WORKER_CONCURRENCY=40
+    networks:
+      - rinha-net
+      - payment-processor-net
+    deploy:
+      resources:
+        limits:
+          cpus: "0.65"
+          memory: "125MB"
+    restart: unless-stopped
+  black-carijo:
+    image: diegodario/carijo:latest
+    hostname: black-carijo
+    stop_grace_period: 20s
+    environment:
+      - PROCESSOR_DEFAULT_URL=http://payment-processor-default:8080/payments
+      - PROCESSOR_FALLBACK_URL=http://payment-processor-fallback:8080/payments
+      - WORKER_CONCURRENCY=40
+    networks:
+      - rinha-net
+      - payment-processor-net
+    deploy:
+      resources:
+        limits:
+          cpus: "0.65"
+          memory: "125MB"
+    restart: unless-stopped
+networks:
+  rinha-net:
+    driver: bridge
+  payment-processor-net:
+    name: payment-processor
+    external: true

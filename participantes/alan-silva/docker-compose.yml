@@ -1,0 +1,84 @@
+services:
+  rinha-balancer:
+    image: ghcr.io/alan-venv/rinha-balancer:1.0-skylake
+    container_name: rinha-balancer
+    ports:
+      - 9999:9999
+    volumes:
+      - sockets:/sockets:rw
+    networks:
+      - backend
+    depends_on:
+      - rinha-gateway-1
+      - rinha-gateway-2
+    deploy:
+      resources:
+        limits:
+          cpus: "0.4"
+          memory: "50MB"
+
+  rinha-gateway-1:
+    image: ghcr.io/alan-venv/rinha-gateway:7.0-skylake
+    container_name: rinha-gateway-1
+    environment:
+      - SOCKET=/sockets/actix.sock.1
+      - TRIGGER=${TRIGGER}
+      - SLAVES=${SLAVES}
+      - ANALYST=${ANALYST}
+    volumes:
+      - sockets:/sockets:rw
+    networks:
+      - backend
+      - payment-processor
+    depends_on:
+      - rinha-database
+    deploy:
+      resources:
+        limits:
+          cpus: "0.4"
+          memory: "70MB"
+
+  rinha-gateway-2:
+    image: ghcr.io/alan-venv/rinha-gateway:7.0-skylake
+    container_name: rinha-gateway-2
+    environment:
+      - SOCKET=/sockets/actix.sock.2
+      - TRIGGER=${TRIGGER}
+      - SLAVES=${SLAVES}
+      - ANALYST=${ANALYST}
+    volumes:
+      - sockets:/sockets:rw
+    networks:
+      - backend
+      - payment-processor
+    depends_on:
+      - rinha-database
+    deploy:
+      resources:
+        limits:
+          cpus: "0.4"
+          memory: "70MB"
+
+  rinha-database:
+    image: ghcr.io/alan-venv/rinha-database:7.0-skylake
+    container_name: rinha-database
+    volumes:
+      - sockets:/sockets:rw
+    networks:
+      - backend
+      - payment-processor
+    deploy:
+      resources:
+        limits:
+          cpus: "0.2"
+          memory: "50MB"
+
+volumes:
+  sockets:
+
+networks:
+  backend:
+    name: rinha-net
+    driver: bridge
+  payment-processor:
+    external: true

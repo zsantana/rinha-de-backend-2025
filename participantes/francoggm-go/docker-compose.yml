@@ -1,0 +1,98 @@
+x-server-template: &server-template
+  image: francogm/rinhabackend-2025:2.3.0
+  environment:
+    - PAYMENT_WORKERS_COUNT=20
+    - PAYMENT_WORKERS_EVENTS_BUFFER_SIZE=20000
+    - SERVER_PORT=8080
+    - CACHE_HOST=cache
+    - CACHE_PORT=6379
+    - CACHE_PASSWORD=password
+    - PAYMENT_DEFAULT_URL=http://payment-processor-default:8080
+    - PAYMENT_FALLBACK_URL=http://payment-processor-fallback:8080
+  depends_on:
+    cache:
+      condition: service_healthy
+  restart: unless-stopped
+  networks:
+    - backend
+    - payment-processor
+  sysctls:
+    - net.core.somaxconn=65535
+    - net.ipv4.tcp_tw_reuse=1
+    - net.ipv4.ip_local_port_range=1024 65535
+
+services:
+  load-balancer:
+    image: nginx:alpine
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - "9999:80"
+    networks:
+      - backend
+    depends_on:
+      - server-cache-1
+      - server-cache-2
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: "0.2"
+          memory: "50MB"
+
+  server-cache-1:
+    <<: *server-template
+    container_name: server-cache-1
+    deploy:
+      resources:
+        limits:
+          cpus: "0.5"
+          memory: "100MB"
+  server-cache-2:
+    <<: *server-template
+    container_name: server-cache-2
+    deploy:
+      resources:
+        limits:
+          cpus: "0.5"
+          memory: "100MB"
+
+  cache:
+    image: redis:7-alpine
+    healthcheck:
+      test: ["CMD", "redis-cli", "-a", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+      start_period: 10s
+    container_name: server-cache
+    restart: unless-stopped
+    command: ["redis-server", "/usr/local/etc/redis/redis.conf"]
+    ports:
+      - "6379:6379"
+    volumes:
+      - ./redis.conf:/usr/local/etc/redis/redis.conf:ro
+      - cache-data:/data
+    networks:
+      - backend
+    sysctls:
+      - net.core.somaxconn=8192
+    ulimits:
+      nofile:
+        soft: 65535
+        hard: 65535
+    deploy:
+      resources:
+        limits:
+          cpus: "0.3"
+          memory: "100MB"
+
+volumes:
+  cache-data:
+
+networks:
+  backend:
+    driver: bridge
+  # payment-processor must be up before starting backend network
+  payment-processor:
+    external: true

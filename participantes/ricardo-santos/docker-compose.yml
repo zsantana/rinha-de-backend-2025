@@ -1,0 +1,92 @@
+services:
+  app1: &app
+    image: ricardo2010/payment:v2
+    container_name: app1
+    networks:
+      - backend
+      - payment-processor
+    environment:
+      - MIX_ENV=prod
+      - ERL_FLAGS=+S 1 +SDcpu 1 +sbwtdcpu none +sbwtdio none
+      - RELEASE_COOKIE=secret_cookie
+      - RELEASE_NODE=api1@app1
+      - PEER_NODES=api2@app2
+      - ERL_MAX_PORTS=10000
+      - PORT=9999
+      - SECRET_KEY_BASE=j/s16IqcuOkGYYwGZBPTZc9clvsn7ZDeg3w+/EGAHUzDZa+VxEma/TGKMXfLXIZ2
+      - PROCESSOR_DEFAULT_URL=http://payment-processor-default:8080
+      - PROCESSOR_FALLBACK_URL=http://payment-processor-fallback:8080
+    healthcheck:
+      test: curl -f http://app1:9999/health
+      interval: 15s
+      timeout: 15s
+      start_period: 30s
+      start_interval: 1s
+      retries: 3
+    deploy:
+      resources:
+        limits:
+          cpus: "0.60"
+          memory: "150M"
+
+  app2:
+    <<: *app
+    image: ricardo2010/payment:v1
+    container_name: app2
+    environment:
+      - MIX_ENV=prod
+      - ERL_FLAGS=+S 1 +SDcpu 1 +sbwtdcpu none +sbwtdio none
+      - RELEASE_COOKIE=secret_cookie
+      - RELEASE_NODE=api2@app2
+      - PEER_NODES=api1@app1
+      - ERL_MAX_PORTS=10000
+      - PORT=9999
+      - SECRET_KEY_BASE=j/s16IqcuOkGYYwGZBPTZc9clvsn7ZDeg3w+/EGAHUzDZa+VxEma/TGKMXfLXIZ2
+      - PROCESSOR_DEFAULT_URL=http://payment-processor-default:8080
+      - PROCESSOR_FALLBACK_URL=http://payment-processor-fallback:8080
+    healthcheck:
+      test: curl -f http://app2:9999/health
+      interval: 15s
+      timeout: 15s
+      start_period: 30s
+      start_interval: 1s
+      retries: 3
+    deploy:
+      resources:
+        limits:
+          cpus: "0.60"
+          memory: "145M"
+
+  haproxy:
+    image: haproxy:3.1.7
+    depends_on:
+      app1:
+        condition: service_healthy
+      app2:
+        condition: service_healthy
+    networks:
+      - backend
+    ports:
+      - "9999:9999"
+    healthcheck:
+      test: |
+        bash -c 'exec 3<>/dev/tcp/127.0.0.1/9797; echo -e "GET / HTTP/1.1\nConnection: close\n" >&3; cat <&3 | grep -q "200 OK"'
+      interval: 15s
+      timeout: 15s
+      start_period: 30s
+      start_interval: 1s
+      retries: 3
+    restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: "0.3"
+          memory: "55MB"
+    volumes:
+      - ./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg
+
+networks:
+  backend:
+    driver: bridge
+  payment-processor:
+    external: true

@@ -1,83 +1,116 @@
-services:
-  nginx:
-    image: nginx:1.25-alpine
-    container_name: rinha-nginx
+x-service-templates:
+  base: &base
+    image: josiney/rdb25_02-amd64:fd73764
     volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf:ro
-    ports:
-      - "9999:9999"
+      - sockets:/sockets
     networks:
       - backend
+      - payment-processor
+
+
+services:
+  lb:
+    <<: *base
+    container_name: lb
+    hostname: lb
+    cpuset: "1"
+    deploy:
+      resources:
+        limits:
+          cpus: "0.25"
+          memory: "30MB"
+    environment:
+      - LB=1
+      - PORT=:80
+      - SOCKET_PATH=/sockets/api1.sock
+      - WORKER_SOCKET_PATH=/sockets/worker_http.sock
+      - PAYMENTS_SOCKET_PATH=/sockets/payments.sock
+      - SUMMARY_SOCKET_PATH=/sockets/summary.sock
+      - PURGE_SOCKET_PATH=/sockets/purge.sock
+      - PAYMENTS_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080/payments
+      - PAYMENTS_PROCESSOR_URL_FALLBACK=http://payment-processor-fallback:8080/payments
+      - HEALTH_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080/payments/service-health
+      - HEALTH_PROCESSOR_URL_FALLBACK=http://payment-processor-fallback:8080/payments/service-health
+    command: ./api
+    ports:
+      - 9999:80
     depends_on:
       - api1
       - api2
-    sysctls:
-      net.core.somaxconn: 65535
-      net.ipv4.tcp_tw_reuse: "1"
-      net.ipv4.tcp_fin_timeout: "15"
+
+  api1:
+    <<: *base
+    container_name: api1
+    hostname: api1
+    cpuset: "2"
     deploy:
       resources:
         limits:
-          cpus: "0.15"
-          memory: "25MB"
-
-  api1: &api
-    image: josiney/rdb25_02-amd64:latest 
-    hostname: api1
-    networks:
-      - backend
-      - payment-processor 
-    depends_on:
-      redis:
-        condition: service_healthy
+          cpus: "0.25"
+          memory: "30MB"
     environment:
-      - REDIS_URL=redis://redis:6379/0
-      - PORT=9997
+      - SOCKET_PATH=/sockets/api2.sock
+      - WORKER_SOCKET_PATH=/sockets/worker_http.sock
+      - PAYMENTS_SOCKET_PATH=/sockets/payments.sock
+      - SUMMARY_SOCKET_PATH=/sockets/summary.sock
+      - PURGE_SOCKET_PATH=/sockets/purge.sock
       - PAYMENTS_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080/payments
       - PAYMENTS_PROCESSOR_URL_FALLBACK=http://payment-processor-fallback:8080/payments
       - HEALTH_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080/payments/service-health
       - HEALTH_PROCESSOR_URL_FALLBACK=http://payment-processor-fallback:8080/payments/service-health
-    deploy:
-      resources:
-        limits:
-          cpus: "0.6"
-          memory: "40MB"
+    command: ./api
+    depends_on:
+      - worker1
 
   api2:
-    <<: *api
+    <<: *base
+    container_name: api2
     hostname: api2
+    cpuset: "3"
+    deploy:
+      resources:
+        limits:
+          cpus: "0.25"
+          memory: "30MB"
     environment:
-      - REDIS_URL=redis://redis:6379/0
-      - PORT=9998
+      - SOCKET_PATH=/sockets/api3.sock
+      - WORKER_SOCKET_PATH=/sockets/worker_http.sock
+      - PAYMENTS_SOCKET_PATH=/sockets/payments.sock
+      - SUMMARY_SOCKET_PATH=/sockets/summary.sock
+      - PURGE_SOCKET_PATH=/sockets/purge.sock
       - PAYMENTS_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080/payments
       - PAYMENTS_PROCESSOR_URL_FALLBACK=http://payment-processor-fallback:8080/payments
       - HEALTH_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080/payments/service-health
       - HEALTH_PROCESSOR_URL_FALLBACK=http://payment-processor-fallback:8080/payments/service-health
+    command: ./api
+    depends_on:
+      - worker1
 
-  redis:
-    image: redis/redis-stack:7.2.0-v18
-    hostname: rinha-redis
-    environment:
-      - REDISTIMESERIES_ARGS=DUPLICATE_POLICY=SUM
-    networks:
-      - backend
-    ports:
-      - "6379:6379"
-    healthcheck:
-      test: ["CMD", "redis-cli", "ping"]
-      interval: 1s
-      timeout: 5s
-      retries: 20
-      start_period: 5s
+  worker1:
+    <<: *base
+    container_name: worker1
+    hostname: worker1
     deploy:
       resources:
         limits:
-          cpus: "0.15"
-          memory: "75MB" 
+          cpus: "0.75"
+          memory: "150MB"
+    environment:
+      - SOCKET_PATH=/sockets/worker_http.sock
+      - PAYMENTS_SOCKET_PATH=/sockets/payments.sock
+      - SUMMARY_SOCKET_PATH=/sockets/summary.sock
+      - PURGE_SOCKET_PATH=/sockets/purge.sock
+      - PAYMENTS_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080/payments
+      - PAYMENTS_PROCESSOR_URL_FALLBACK=http://payment-processor-fallback:8080/payments
+      - HEALTH_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080/payments/service-health
+      - HEALTH_PROCESSOR_URL_FALLBACK=http://payment-processor-fallback:8080/payments/service-health
+    command: ./worker
+
+volumes:
+  sockets:
 
 networks:
   backend:
-    name: rinha-backend
     driver: bridge
   payment-processor:
-    external: true 
+    external: true

@@ -1,102 +1,60 @@
-version: "3.8"
+x-template: &template
+  image: joelgarciajr84/rinha-backend-go:rinha-redis-galo4-de-briga
+  environment:
+    PAYMENT_PROCESSOR_DEFAULT_URL: "http://payment-processor-default:8080"
+    PAYMENT_PROCESSOR_FALLBACK_URL: "http://payment-processor-fallback:8080"
+    REDIS_URL: "redis:6379"
+    PORT: 80
+  networks:
+    - backend
+    - payment-processor
+  deploy:
+    resources:
+      limits:
+        cpus: "0.5"
+        memory: "115MB"
 
 services:
-  rinha_1:
-    image: joelgarciajr84/rinha-backend-go:latest
-    init: true
-    networks:
-      - backend
-      - payment-processor
-    environment:
-      - PAYMENT_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080
-      - PAYMENT_PROCESSOR_URL_FALLBACK=http://payment-processor-fallback:8080
-      - X_RINHA_TOKEN=123
-      - REDIS_ADDR=redis:6379
-    ports:
-      - "9991:9999"
+  galo01:
+    <<: *template
+    hostname: galo01
     depends_on:
       - redis
-    restart: unless-stopped
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:9999/payments-summary"]
-      interval: 5s
-      timeout: 3s
-      retries: 5
-      start_period: 5s
-    deploy:
-      resources:
-        limits:
-          cpus: "0.625"
-          memory: "130MB"
-
-  rinha_2:
-    image: joelgarciajr84/rinha-backend-go:latest
-    init: true
-    networks:
-      - backend
-      - payment-processor
-    environment:
-      - PAYMENT_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080
-      - PAYMENT_PROCESSOR_URL_FALLBACK=http://payment-processor-fallback:8080
-      - X_RINHA_TOKEN=123
-      - REDIS_ADDR=redis:6379
-    ports:
-      - "9992:9999"
+  galo02:
+    <<: *template
+    hostname: galo02
     depends_on:
       - redis
-    restart: unless-stopped
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:9999/payments-summary"]
-      interval: 5s
-      timeout: 3s
-      retries: 5
-      start_period: 5s
-    deploy:
-      resources:
-        limits:
-          cpus: "0.625"
-          memory: "130MB"
-
+  
   nginx:
-    image: nginx:alpine
-    init: true
+    image: nginx
     volumes:
-      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
     ports:
       - "9999:80"
+    depends_on:
+      - galo01
+      - galo02
     networks:
       - backend
-    depends_on:
-      - rinha_1
-      - rinha_2
-    restart: unless-stopped
     deploy:
       resources:
         limits:
-          cpus: "0.15"
-          memory: "50MB"
-
+          cpus: "0.2"
+          memory: "70MB"
   redis:
-    image: redis:7-alpine
+    image: redis:8.0.3-alpine
+    hostname: redis
+    networks:
+      - backend
     ports:
       - "6379:6379"
-    networks:
-      - backend
-    restart: unless-stopped
-    healthcheck:
-      test: ["CMD", "redis-cli", "ping"]
-      interval: 5s
-      timeout: 3s
-      retries: 5
-      start_period: 10s
+    command: ["redis-server", "--appendonly", "yes", "--appendfsync", "everysec"]
     deploy:
       resources:
         limits:
-          cpus: "0.1"
-          memory: "40MB"
-    tmpfs:
-      - /data
-
+          cpus: "0.3"
+          memory: "50MB"
 networks:
   backend:
     driver: bridge

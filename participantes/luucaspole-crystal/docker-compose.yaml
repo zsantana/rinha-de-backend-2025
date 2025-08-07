@@ -1,18 +1,21 @@
+x-enviromments: &x-enviromments
+  - AMQP_URL: "amqp://guest:guest@lavinmq:5672/?tcp_nodelay=true"
+  - PREFETCH_COUNT: "0"
+  - SHARD_COUNT: "1"
+  - PROCESSOR_URL: "http://payment-processor-default:8080"
+  - FALLBACK_URL: "http://payment-processor-fallback:8080"
+  - DISABLE_LOG: "true"
 version: '3.4'
 services:
   app1: &app
-    image: docker.io/lukas8219/rinha-de-backend-2025-app:latest
+    image: docker.io/lukas8219/rinha-de-backend-2025-app:main-5538a05e7-1753756591
+    user: "1001:1001"
     hostname: app1
     restart: unless-stopped
+    ipc: host
     environment:
-      PROCESSOR_URL: "http://payment-processor-default:8080"
-      FALLBACK_URL: "http://payment-processor-fallback:8080"
-      DISABLE_LOG: "true"
-      SQLITE_PATH: "/dev/shm/database.sqlite3?sync=off&journal_mode=WAL&busy_timeout=1000"
-      AMQP_URL: "amqp://guest:guest@lavinmq:5672/"
-      PREFETCH_COUNT: "0"
-      SHARD_COUNT: "5"
-      SKIP_DELAY: "true"
+      <<: *x-enviromments
+      SOCKET_PATH: "/dev/shm/app1.sock"
     networks:
       - backend
       - payment-processor
@@ -21,7 +24,8 @@ services:
     depends_on:
       lavinmq:
         condition: service_healthy
-    ipc: host
+      consumer:
+        condition: service_started
     ulimits:
       nproc: 1000000
       nofile:
@@ -31,45 +35,53 @@ services:
       resources:
         limits:
           cpus: '0.1'
-          memory: '30MB'
+          memory: '40MB'
   app2:
     <<: *app
+    user: "1001:1001"
+    ipc: host
+    environment:
+      <<: *x-enviromments
+      SOCKET_PATH: "/dev/shm/app2.sock"
     hostname: app2
-  app3:
-    <<: *app
-    hostname: app3
-
+    depends_on:
+      lavinmq:
+        condition: service_healthy
+      consumer:
+        condition: service_started
   consumer: &consumer
     <<: *app
-    image: docker.io/lukas8219/rinha-de-backend-2025-worker:latest
+    user: "1001:1001"
+    image: docker.io/lukas8219/rinha-de-backend-2025-worker:main-5538a05e7-1753756591
     hostname: "1"
+    ipc: host
+    cpuset: "0"
+    environment:
+      <<: *x-enviromments
+      SOCKET_PATH: "/dev/shm/1.sock"
+    cpu_shares: 3072
     deploy:
       resources:
         limits:
-          cpus: '0.25'
-          memory: '35MB'
-  consumer2:
-    <<: *consumer
-    hostname: "2"
-  consumer3:
-    <<: *consumer
-    hostname: "3"
-  consumer4:
-    <<: *consumer
-    hostname: "4"
-  consumer5:
-    <<: *consumer
-    hostname: "5"
-
+          cpus: '0.9'
+          memory: '150MB'
+        reservations:
+          cpus: '0.9'
+          memory: '150MB'
+    depends_on:
+      lavinmq:
+        condition: service_healthy
   lavinmq:
     image: cloudamqp/lavinmq:latest
     container_name: lavinmq
     healthcheck:
       test: ["CMD", "lavinmqctl", "status"]
-      interval: 5s
+      interval: 10s
       timeout: 10s
-      retries: 20
+      retries: 5
       start_period: 5s
+    volumes:
+      - ./lavinmq.ini:/etc/lavinmq/lavinmq.ini:ro
     ports:
       - "5672:5672"
       - "15672:15672"
@@ -78,16 +90,21 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '0.05'
+          cpus: '0.3'
           memory: '35MB'
-
-  nginx: # Load Balancer
+        reservations:
+          cpus: '0.3'
+          memory: '35MB'
+  nginx:
     image: nginx:latest
-    volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    container_name: nginx
+    user: "1001:1001"
+    ipc: host
     depends_on:
       - app1
       - app2
+      - lavinmq
+      - consumer
     ports:
       - "9999:9999"
     ulimits:
@@ -101,8 +118,34 @@ services:
       resources:
         limits:
           cpus: '0.1'
-          memory: '25MB'
-
+          memory: '55MB'
+        reservations:
+          cpus: '0.1'
+          memory: '55MB'
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - nginx_cache:/var/cache/nginx
+      - nginx_run:/var/run
+      - nginx_log:/var/log/nginx
+volumes:
+  nginx_cache:
+    driver: local
+    driver_opts:
+      type: tmpfs
+      device: tmpfs
+      o: "uid=1001,gid=1001,mode=0755"
+  nginx_run:
+    driver: local
+    driver_opts:
+      type: tmpfs
+      device: tmpfs
+      o: "uid=1001,gid=1001,mode=0755"
+  nginx_log:
+    driver: local
+    driver_opts:
+      type: tmpfs
+      device: tmpfs
+      o: "uid=1001,gid=1001,mode=0755"
 networks:
   backend:
     driver: bridge

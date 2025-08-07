@@ -15,11 +15,11 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '0.5'
-          memory: '50MB'
+          cpus: '0.25'
+          memory: '30MB'
 
   backend-go-1:
-    image: arthurschur/rinha-de-golo:v.1
+    image: arthurschur/rinha-de-golo:v.1.2.4
     container_name: backend-go-1
     hostname: backend-go-1
     expose:
@@ -37,11 +37,11 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '0.75'
-          memory: '115MB'
+          cpus: '0.5'
+          memory: '110MB'
 
   backend-go-2:
-    image: arthurschur/rinha-de-golo:v.1
+    image: arthurschur/rinha-de-golo:v.1.2.4
     container_name: backend-go-2
     hostname: backend-go-2
     expose:
@@ -59,8 +59,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '0.75'
-          memory: '115MB'
+          cpus: '0.5'
+          memory: '110MB'
 
   backend-go-redis:
     image: redis:7-alpine
@@ -72,7 +72,7 @@ services:
       resources:
         limits:
           cpus: '0.25'
-          memory: '70MB'
+          memory: '100MB'
 
 networks:
   backend:

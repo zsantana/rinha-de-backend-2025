@@ -4,7 +4,7 @@ A Rinha de Backend é um desafio em que é necessário desenvolver uma solução
 
 **Importante!**: A data limite para submeter seu backend é **2025-08-17 até as 23:59:59**! A previsão para a divulgação dos resultados é para o dia **2025-08-20**.
 
-**A Rinha já está rolando. Acompanhe a [prévia dos resultados](./PREVIA_RESULTADOS.md).**
+A Rinha já está rolando. Acompanhe a prévia dos resultados [aqui](./PREVIA_RESULTADOS.md) ou por este [fantástico site](https://rinhers.kauefraga.dev/) gentilmente desenvolvido pelo [Kauê Fraga](https://kauefraga.dev/), ou [este site](https://rinha2025.andersongomes.dev.br/) focado no ranking desenvolvido por [Anderson Gomes](https://andersongomes.dev.br/).
 
 ![galinha correndo](./misc/imgs/header.jpg)
 
@@ -12,10 +12,9 @@ Se quiser saber mais sobre o espírito da Rinha de Backend, confira os repositó
 
 #### Rinha nas redes sociais
 
-[@rinhadebackend](https://x.com/rinhadebackend)  no X
+[@rinhadebackend](https://x.com/rinhadebackend) no X
 [@rinhadebackend.bsky.social](https://bsky.app/profile/rinhadebackend.bsky.social) no Bluesky
 [zan](https://www.linkedin.com/in/francisco-zanfranceschi/) no LinkedIn (criador da rinha)
-
 
 ## O Desafio
 Nessa terceira edição da Rinha de Backend o desafio é intermediar solicitações de pagamentos para dois serviços de processamento de pagamentos com a menor taxa. O plot twist é que esses serviços irão sofrer instabilidades e você precisa desenvolver a melhor estratégia para que o máximo de pagamentos sejam processados!
@@ -25,7 +24,6 @@ Nessa terceira edição da Rinha de Backend o desafio é intermediar solicitaç�
 Você também pode assistir a [esse vídeo](https://www.youtube.com/watch?v=ldPkTtkJ86k) no YouTube sobre as instruções para participar da Rinha.
 
 [![youtube](./misc/imgs/youtube-thumb.png)](https://www.youtube.com/watch?v=ldPkTtkJ86k)
-
 
 ## Pontos em Aberto
 

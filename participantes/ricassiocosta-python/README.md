@@ -14,19 +14,70 @@ O sistema é responsável por processar pagamentos de forma resiliente, utilizan
 
 ## Arquitetura
 
-![architecture](./docs/architecture.png)
+```mermaid
+graph TD
+    %% Seções principais
+    subgraph CLIENT
+        A[Usuário/Cliente_HTTP]
+    end
+
+    subgraph LOAD_BALANCER
+        B[Nginx]
+    end
+
+    subgraph BACKEND
+        C1[BE1_API+Worker]
+        C2[BE2_API+Worker]
+        HC[HealthCheck_Worker]
+    end
+
+    subgraph REDIS
+        RQ[Redis_Queue]
+        RD[Redis_Database]
+    end
+
+    subgraph GATEWAYS
+        PG1[Gateway_1]
+        PG2[Gateway_2]
+    end
+
+    %% Fluxo de requisições
+    A --> B
+    B --> C1
+    B --> C2
+
+    %% API e Worker consumindo fila
+    C1 --> RQ
+    C2 --> RQ
+
+    %% API enviando pagamentos pros gateways
+    C1 --> PG1
+    C1 --> PG2
+    C2 --> PG1
+    C2 --> PG2
+
+    %% API salvando resultado no Redis
+    C1 --> RD
+    C2 --> RD
+
+    %% Health Check monitorando gateways
+    HC --> PG1
+    HC --> PG2
+
+    %% Health Check atualizando status nos BEs
+    HC --> C1
+    HC --> C2
+```
 
 ## Recursos Alocados (docker-compose)
 
 | Serviço       | CPUs | Memória |
 | ------------- | ---- | ------- |
-| nginx         | 0.1  | 16MB    |
-| backend-api-1 | 0.1  | 64MB    |
-| backend-api-2 | 0.1  | 64MB    |
-| worker-light  | 0.3  | 48MB    |
-| worker-heavy  | 0.7  | 80MB    |
-| health-worker | 0.1  | 14MB    |
-| redis         | 0.1  | 64MB    |
+| nginx         | 0.2  | 16MB    |
+| backend-api-1 | 0.6  | 64MB    |
+| backend-api-2 | 0.6  | 64MB    |
+| health-check  | 0.05 | 43MB    |
+| redis         | 0.05 | 43MB    |
 | **Total**     | 1.5  | 350MB   |
 
 ## Estrutura do Projeto
@@ -39,9 +90,8 @@ O sistema é responsável por processar pagamentos de forma resiliente, utilizan
 │   ├── main.py           # Ponto de entrada da API
 │   ├── models.py         # Modelos de dados
 │   ├── processor.py      # Processamento e envio de pagamentos
-│   ├── queue.py          # Gerenciamento de filas
-│   ├── storage.py        # Persistência de dados
-│   └── worker.py         # Worker assíncrono para processamento
+│   ├── queue_worker.py   # Gerenciamento de filas
+│   └── storage.py        # Persistência de dados
 ├── requirements.txt      # Dependências do projeto
 ├── Dockerfile            # Dockerização da aplicação
 ├── docker-compose.yml    # Orquestração de containers

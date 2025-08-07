@@ -1,0 +1,167 @@
+services:
+  # Redis for Queue
+  redis:
+    image: redis:8-alpine
+    ports:
+      - "6379:6379"
+    deploy:
+      resources:
+        limits:
+          cpus: '0.2'
+          memory: 40M
+    networks:
+      - backend
+    healthcheck:
+      test: ["CMD-SHELL", "redis-cli ping | grep PONG"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+      start_period: 10s
+
+  # PostgreSQL for persistent data
+  postgres:
+    image: postgres:17-alpine
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: payments
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/01-init.sql
+    deploy:
+      resources:
+        limits:
+          cpus: '0.2'
+          memory: 80M
+    networks:
+      - backend
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d payments"]
+      interval: 5s
+      timeout: 3s
+      retries: 3
+      start_period: 20s
+
+  # API instances
+  app1: &app
+    image: felipefrmelo/rust-api:latest
+    environment:
+      - DATABASE_URL=postgres://postgres:password@postgres:5432/payments
+      - REDIS_URL=redis://redis:6379
+      - PORT=3000
+    depends_on:
+      redis:
+        condition: service_healthy
+    deploy:
+      resources:
+        limits:
+          cpus: '0.2'
+          memory: 45M
+    networks:
+      - backend
+
+  app2:
+    <<: *app
+
+  # Load balancer (nginx)
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "9999:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - app1
+      - app2
+    deploy:
+      resources:
+        limits:
+          cpus: '0.25'
+          memory: 60M
+    networks:
+      - backend
+
+  # Payment Worker
+  payment-worker1: &worker
+    image: felipefrmelo/rust-payment-worker:latest
+    environment:
+      - DATABASE_URL=postgres://postgres:password@postgres:5432/payments
+      - REDIS_URL=redis://redis:6379
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - QUEUE_NAME=payment_queue
+      - WORKER_CONCURRENCY=3
+      - DATABASE_MAX_CONNECTIONS=25
+      - HTTP_CLIENT_TIMEOUT_SECS=60
+      - QUEUE_RECEIVE_TIMEOUT_SECS=60
+      - POLL_SLEEP_MILLIS=10
+      - ERROR_SLEEP_MILLIS=10
+      - PROCESS_SLEEP_MILLIS=1
+      # Health Checker Config (usado pelo payment-worker)
+      - HEALTH_CHECK_CYCLE_INTERVAL_SECS=1
+      - HTTP_TIMEOUT_SECS=10
+      - INTER_CHECK_DELAY_MILLIS=10
+      - HEALTH_STATUS_TTL_SECS=6
+      - RATE_LIMIT_TTL_SECS=5
+      - FAILED_RESPONSE_TIME_VALUE=9999
+      - PERFORMANCE_THRESHOLD_MULTIPLIER=1.5
+      - DEFAULT_PROCESSOR_URL=http://payment-processor-default:8080
+      - FALLBACK_PROCESSOR_URL=http://payment-processor-fallback:8080
+      - RUST_LOG=off
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    deploy:
+      resources:
+        limits:
+          cpus: '0.20'
+          memory: 35M
+    networks:
+      - payment-processor
+      - backend
+
+  payment-worker2:
+        <<: *worker
+
+  # Health Checker
+  health-checker:
+    image: felipefrmelo/rust-health-checker:latest
+    environment:
+      - REDIS_URL=redis://redis:6379
+      - DEFAULT_PROCESSOR_URL=http://payment-processor-default:8080
+      - FALLBACK_PROCESSOR_URL=http://payment-processor-fallback:8080
+      - HEALTH_CHECK_CYCLE_INTERVAL_SECS=1
+      - HTTP_TIMEOUT_SECS=10
+      - INTER_CHECK_DELAY_MILLIS=10
+      - HEALTH_STATUS_TTL_SECS=60
+      - RATE_LIMIT_TTL_SECS=5
+      - FAILED_RESPONSE_TIME_VALUE=9999
+      - PERFORMANCE_THRESHOLD_MULTIPLIER=1.5
+      - RUST_LOG=off
+    depends_on:
+      redis:
+        condition: service_healthy
+    deploy:
+      resources:
+        limits:
+          cpus: '0.05'
+          memory: 10M
+    networks:
+      - backend
+      - payment-processor
+    healthcheck:
+      test: ["CMD-SHELL", "pgrep -f health-checker || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s
+
+
+networks:
+  payment-processor:
+    external: true
+  backend:
+    driver: bridge
