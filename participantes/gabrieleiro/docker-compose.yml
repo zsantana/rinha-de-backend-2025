@@ -7,8 +7,8 @@ x-service-templates:
     deploy:
       resources:
         limits:
-          cpus: "0.25"
-          memory: "50MB"
+          cpus: "0.5"
+          memory: "100MB"
     volumes:
       - /tmp:/tmp
     depends_on:
@@ -35,26 +35,6 @@ services:
       TRACKER_URI: "/tmp/tracker.sock"
       ADDRESS: "/tmp/api_2.sock"
 
-  api-3:
-      <<: *api
-      hostname: api-3
-      environment:
-        DEFAULT_PROCESSOR_URL: "http://payment-processor-default:8080"
-        FALLBACK_PROCESSOR_URL: "http://payment-processor-fallback:8080"
-        LOAD_BALANCER_URI: "/tmp/lb.sock"
-        TRACKER_URI: "/tmp/tracker.sock"
-        ADDRESS: "/tmp/api_3.sock"
-
-  api-4:
-      <<: *api
-      hostname: api-4
-      environment:
-        DEFAULT_PROCESSOR_URL: "http://payment-processor-default:8080"
-        FALLBACK_PROCESSOR_URL: "http://payment-processor-fallback:8080"
-        TRACKER_URI: "/tmp/tracker.sock"
-        LOAD_BALANCER_URI: "/tmp/lb.sock"
-        ADDRESS: "/tmp/api_4.sock"
-
   load-balancer:
     image: gabrieleiro/rinha-de-backend-2025-load-balancer:6.0
     networks:
@@ -62,7 +42,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.4"
+          cpus: "0.3"
           memory: "50MB"
     volumes:
       - /tmp:/tmp
@@ -71,12 +51,10 @@ services:
     environment:
       UNIX_SOCKET_ADDRESS: "/tmp/lb.sock"
       TCP_ADDRESS: ":9999"
-      SERVERS: "/tmp/api_1.sock,/tmp/api_2.sock,/tmp/api_3.sock,/tmp/api_4.sock"
+      SERVERS: "/tmp/api_1.sock,/tmp/api_2.sock"
     depends_on:
       - api-1
       - api-2
-      - api-3
-      - api-4
 
   tracker:
     hostname: tracker
@@ -86,7 +64,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.1"
+          cpus: "0.2"
           memory: "50MB"
     volumes:
       - /tmp:/tmp
