@@ -10,8 +10,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.50"
-          memory: "75MB"
+          cpus: "0.40"
+          memory: "100MB"
     volumes:
       - /dev/shm:/dev/shm
 
@@ -28,8 +28,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.50"
-          memory: "200MB"
+          cpus: "0.70"
+          memory: "100MB"
     networks:
       - api
     ports:
