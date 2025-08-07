@@ -22,9 +22,6 @@ services:
 
   api1: &api
     image: lpj145/rinha-lb:1.08
-    build:
-      context: .
-      dockerfile: Dockerfile
     hostname: api1
     environment:
       - SOCKET_DIR=/var/run/sockets
