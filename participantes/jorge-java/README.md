@@ -1,8 +1,9 @@
-# Rinha de Backend
+# Rinha de Backend 2025
 
-Uma API da rinha de backend 2025 desenvolvida em Java com Spring Boot e empacotada como imagem nativa GraalVM 24.
+API da Rinha de Backend 2025 desenvolvida em **Java com Spring Boot**, empacotada como imagem nativa com **GraalVM 24**.
 
----
+🔗 [Acesse o código-fonte no GitHub](https://github.com/JorgeEduardoZanin/RinhaBackend-Java-2025)
+
 
 ## 🚀 Tecnologias
 
