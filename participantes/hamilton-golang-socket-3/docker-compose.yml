@@ -1,7 +1,7 @@
 x-rinha-api-base: &rinha-api-base
   image: jhamiltonjunior/rinha-go-socket:0.0.7
   volumes:
-    - api-socketsv3:/var/run
+    - api-socketsv4:/var/run
   depends_on:
     - redis
   networks:
@@ -103,4 +103,4 @@ networks:
 
 volumes:
   redis-data:
-  api-socketsv3:
+  api-socketsv4:
