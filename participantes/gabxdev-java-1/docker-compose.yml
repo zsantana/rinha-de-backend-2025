@@ -15,7 +15,7 @@ services:
       API_UDP_PORT: 9095
       API_MASTER: true
       LB_UDP_HOST: load-balancer
-      HANDLER_UDP_POOL_SIZE: 6
+      HANDLER_UDP_POOL_SIZE: 3
       SOCKET_PATH: /tmp/api1.sock
     networks:
       - backend
@@ -23,7 +23,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '0.6'
+          cpus: '0.55'
           memory: '125MB'
 
   backend-2:
@@ -39,7 +39,7 @@ services:
       UDP_CHANNEL_INTERNAL_PORT: 9004
       EXTERNAL_UDP_HOST: backend-1
       EXTERNAL_UDP_PORT: 9003
-      HANDLER_UDP_POOL_SIZE: 6
+      HANDLER_UDP_POOL_SIZE: 3
       SOCKET_PATH: /tmp/api2.sock
     networks:
       - backend
@@ -47,7 +47,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '0.6'
+          cpus: '0.55'
           memory: '125MB'
 
   load-balancer:
@@ -65,7 +65,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.30"
+          cpus: "0.4"
           memory: "100MB"
     environment:
       BACK_END_1_URL: backend-1
