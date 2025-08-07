@@ -32,7 +32,7 @@ services:
       resources:
         limits:
           cpus: "0.6"
-          memory: 140M
+          memory: 120M
     restart: unless-stopped
 
   app2:
@@ -53,7 +53,7 @@ services:
       resources:
         limits:
           cpus: "0.6"
-          memory: 140M
+          memory: 120M
     restart: unless-stopped
 
   nginx:
@@ -73,7 +73,7 @@ services:
       resources:
         limits:
           cpus: "0.2"
-          memory: 30M
+          memory: 50M
     restart: unless-stopped
 
 volumes:
