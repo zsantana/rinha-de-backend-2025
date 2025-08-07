@@ -6,7 +6,7 @@ Submissão para a [Rinha de Backend 2025](https://github.com/rinhahub/rinha-de-b
 
 - **Linguagens**: Node.js, Typescript
 - **Storage** - Redis
-- **Load Balancer** - Nginx
+- **Load Balancer** - Haproxy
 
 ## 🏗️ Arquitetura
 
