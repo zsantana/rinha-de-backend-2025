@@ -31,8 +31,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.6"
-          memory: 120M
+          cpus: "0.55"
+          memory: 70M
     restart: unless-stopped
 
   app2:
@@ -52,8 +52,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.6"
-          memory: 120M
+          cpus: "0.55"
+          memory: 70M
     restart: unless-stopped
 
   nginx:
@@ -72,7 +72,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.2"
+          cpus: "0.3"
           memory: 50M
     restart: unless-stopped
 
