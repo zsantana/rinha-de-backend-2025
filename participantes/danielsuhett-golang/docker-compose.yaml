@@ -19,7 +19,7 @@ services:
           cpus: "0.20"
           memory: "100MB"
   api1:
-    image: danielsuhett1999/rinha-backend-go:1.0.7
+    image: danielsuhett1999/rinha-backend-go:1.0.8
     hostname: api1
     volumes:
       - sockets:/var/run/sockets
@@ -35,7 +35,6 @@ services:
       - HEALTH_INTERVAL=3000
       - LATENCY_DIFF_TO_USE_FALLBACK=5000
       - BATCH_SIZE=100
-      - GOGC=200
     networks:
       - backend
       - payment-processor
@@ -48,7 +47,7 @@ services:
           cpus: "0.60"
           memory: "100MB"
   api2:
-    image: danielsuhett1999/rinha-backend-go:1.0.7
+    image: danielsuhett1999/rinha-backend-go:1.0.8
     hostname: api2
     volumes:
       - sockets:/var/run/sockets
@@ -64,7 +63,6 @@ services:
       - HEALTH_INTERVAL=3000
       - LATENCY_DIFF_TO_USE_FALLBACK=5000
       - BATCH_SIZE=100
-      - GOGC=200
     networks:
       - backend
       - payment-processor
