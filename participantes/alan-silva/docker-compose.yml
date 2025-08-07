@@ -1,11 +1,12 @@
 services:
-  rinha-balancer:
-    image: ghcr.io/alan-venv/rinha-balancer:1.0-skylake
-    container_name: rinha-balancer
+  haproxy:
+    image: haproxy:3.2.3-alpine
+    container_name: rinha-haproxy
     ports:
-      - 9999:9999
+      - 9999:80
     volumes:
       - sockets:/sockets:rw
+      - ./config/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
     networks:
       - backend
     depends_on:
@@ -14,17 +15,16 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.4"
-          memory: "50MB"
+          cpus: "0.3"
+          memory: "80MB"
 
   rinha-gateway-1:
     image: ghcr.io/alan-venv/rinha-gateway:7.0-skylake
     container_name: rinha-gateway-1
+    env_file:
+      - ./config/.env
     environment:
       - SOCKET=/sockets/actix.sock.1
-      - TRIGGER=${TRIGGER}
-      - SLAVES=${SLAVES}
-      - ANALYST=${ANALYST}
     volumes:
       - sockets:/sockets:rw
     networks:
@@ -35,17 +35,16 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.4"
+          cpus: "0.5"
           memory: "70MB"
 
   rinha-gateway-2:
     image: ghcr.io/alan-venv/rinha-gateway:7.0-skylake
     container_name: rinha-gateway-2
+    env_file:
+      - ./config/.env
     environment:
       - SOCKET=/sockets/actix.sock.2
-      - TRIGGER=${TRIGGER}
-      - SLAVES=${SLAVES}
-      - ANALYST=${ANALYST}
     volumes:
       - sockets:/sockets:rw
     networks:
@@ -56,7 +55,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.4"
+          cpus: "0.5"
           memory: "70MB"
 
   rinha-database:
@@ -71,7 +70,7 @@ services:
       resources:
         limits:
           cpus: "0.2"
-          memory: "50MB"
+          memory: "30MB"
 
 volumes:
   sockets:
