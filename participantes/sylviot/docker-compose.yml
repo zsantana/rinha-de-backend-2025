@@ -24,7 +24,7 @@ services:
       resources:
         limits:
           cpus: "0.2"
-          memory: "80MB"
+          memory: "60MB"
   
   rinha2:
     <<: *api
@@ -89,7 +89,7 @@ services:
       resources:
         limits:
           cpus: "0.15"
-          memory: "80MB"
+          memory: "70MB"
 
   nginx:
     image: nginx:latest
