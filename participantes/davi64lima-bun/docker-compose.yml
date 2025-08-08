@@ -1,8 +1,8 @@
 x-web-template: &web-template
-  image: davi64lima/rinha-backend
+  image: davi64lima/rinha-backend-bun:latest
   environment:
-    DEFAULT_PROCESSOR_URL: 'http://payment-processor-default:8080'
-    FALLBACK_PROCESSOR_URL: 'http://payment-processor-fallback:8080'
+    DEFAULT_PROCESSOR_URL: "http://payment-processor-default:8080"
+    FALLBACK_PROCESSOR_URL: "http://payment-processor-fallback:8080"
     REDIS_URL: redis://cache:6379
   depends_on:
     - cache
