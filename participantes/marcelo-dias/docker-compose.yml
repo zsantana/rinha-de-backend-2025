@@ -8,8 +8,8 @@ services:
       - PROCESSOR_URL=http://payment-processor-default:8080
       - FALLBACK_PROCESSOR_URL=http://payment-processor-fallback:8080
       - OTHER_INSTANCE_URL=http://app2:8080
-      - CONCURRENCY=3
-      - WORKER_COUNT=3
+      - CONCURRENCY=2
+      - WORKER_COUNT=2
     ports:
       - "8081:8080"
     networks:
@@ -18,8 +18,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.6"
-          memory: "140MB"
+          cpus: "0.7"
+          memory: "112MB"
 
   app2:
     <<: *app
@@ -35,8 +35,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.6"
-          memory: "140MB"
+          cpus: "0.7"
+          memory: "112MB"
 
   haproxy:
     image: haproxy:alpine
@@ -53,8 +53,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.3"
-          memory: "70MB"
+          cpus: "0.1"
+          memory: "124MB"
 
 networks:
   backend:
