@@ -46,7 +46,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.5"
+          cpus: "0.45"
           memory: 100M
 
 #  lb:
@@ -79,15 +79,24 @@ services:
     depends_on:
       - app-1
       - app-2
+    ulimits:
+      nofile:
+        soft: 200000
+        hard: 200000
     deploy:
       resources:
         limits:
-          cpus: "0.5"
+          cpus: "0.6"
           memory: "150MB"
 
 volumes:
   app-data:
   sockets:
+    driver: local
+    driver_opts:
+      type: tmpfs
+      device: tmpfs
+      o: "size=32m,mode=1777"
 
 networks:
   payment-processor:
