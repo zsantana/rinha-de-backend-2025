@@ -18,8 +18,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.70"
-          memory: "159MB"
+          cpus: "0.45"
+          memory: "140MB"
 
   app2:
     <<: *app
@@ -35,11 +35,12 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.70"
-          memory: "159MB"
+          cpus: "0.45"
+          memory: "140MB"
 
   haproxy:
     image: haproxy:alpine
+    command: ["-W", "-db", "-d", "-f", "/usr/local/etc/haproxy/haproxy.cfg"]
     restart: always
     ports:
       - "9999:9999"
@@ -53,8 +54,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.10"
-          memory: "32MB"
+          cpus: "0.6"
+          memory: "70MB"
 
 networks:
   backend:
