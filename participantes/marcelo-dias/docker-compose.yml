@@ -8,8 +8,8 @@ services:
       - PROCESSOR_URL=http://payment-processor-default:8080
       - FALLBACK_PROCESSOR_URL=http://payment-processor-fallback:8080
       - OTHER_INSTANCE_URL=http://app2:8080
-      - CONCURRENCY=2
-      - WORKER_COUNT=2
+      - CONCURRENCY=3
+      - WORKER_COUNT=3
     ports:
       - "8081:8080"
     networks:
@@ -28,8 +28,8 @@ services:
       - PROCESSOR_URL=http://payment-processor-default:8080
       - FALLBACK_PROCESSOR_URL=http://payment-processor-fallback:8080
       - OTHER_INSTANCE_URL=http://app1:8080
-      - CONCURRENCY=2
-      - WORKER_COUNT=2
+      - CONCURRENCY=3
+      - WORKER_COUNT=3
     ports:
       - "8082:8080"
     deploy:
