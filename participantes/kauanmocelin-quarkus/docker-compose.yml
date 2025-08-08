@@ -16,15 +16,15 @@ services:
       resources:
         limits:
           cpus: "0.2"
-          memory: "30MB"
+          memory: "10MB"
 
-  rinhaquark2025-a:
-    image: kauanmocelin/rinhaquark2025:1.0.2
+  rinhaquark2025-a: &rinhaquark2025
+    image: kauanmocelin/rinhaquark2025:1.0.6
     container_name: rinhaquark2025-a
     environment:
       - QUARKUS_MONGODB_CONNECTION_STRING=mongodb://mongo:27017
     depends_on:
-      mongo:
+      postgres:
         condition: service_healthy
     networks:
       - rinhaquark-rede
@@ -33,32 +33,24 @@ services:
       resources:
         limits:
           cpus: "0.5"
-          memory: "70MB"
+          memory: "80MB"
 
   rinhaquark2025-b:
-    image: kauanmocelin/rinhaquark2025:1.0.2
+    <<: *rinhaquark2025
     container_name: rinhaquark2025-b
-    environment:
-      - QUARKUS_MONGODB_CONNECTION_STRING=mongodb://mongo:27017
-    depends_on:
-      mongo:
-        condition: service_healthy
-    networks:
-      - rinhaquark-rede
-      - payment-processor
-    deploy:
-      resources:
-        limits:
-          cpus: "0.5"
-          memory: "70MB"
 
-  mongo:
-    image: mongo:6.0
-    container_name: mongo
+  postgres:
+    image: postgres:16-alpine
+    container_name: postgres
+    environment:
+      POSTGRES_DB: payments_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
     ports:
-      - "27017:27017"
+      - "5432:5432"
     volumes:
-      - mongo-data:/data/db
+      - postgres-data:/var/lib/postgresql/data
+      - ./initdb:/docker-entrypoint-initdb.d
     networks:
       - rinhaquark-rede
     deploy:
@@ -67,13 +59,14 @@ services:
           cpus: "0.3"
           memory: "180MB"
     healthcheck:
-      test: [ "CMD-SHELL", "echo 'db.runCommand(\"ping\").ok' | mongosh localhost:27017/test --quiet" ]
-      interval: 5s
-      timeout: 3s
-      retries: 3
+      test: [ "CMD-SHELL", "pg_isready -U postgres -d payments_db" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
 
 volumes:
-  mongo-data:
+  postgres-data:
 
 networks:
   rinhaquark-rede:

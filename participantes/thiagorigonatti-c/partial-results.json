@@ -1,20 +1,20 @@
 {
   "participante": "thiagorigonatti-c",
-  "total_liquido": 262811.07135,
+  "total_liquido": 367302.2202,
   "total_bruto": 333305.1,
   "total_taxas": 16665.255,
   "descricao": "'total_liquido' é sua pontuação final. Equivale ao seu lucro. Fórmula: total_liquido + (total_liquido * p99.bonus) - (total_liquido * multa.porcentagem)",
   "p99": {
-    "valor": "1.87ms",
-    "bonus": "18%",
+    "valor": "3.22ms",
+    "bonus": "16%",
     "max_requests": "550",
     "descricao": "Fórmula para o bônus: max((11 - p99.valor) * 0.02, 0)"
   },
   "multa": {
-    "porcentagem": 0.35,
-    "total": 110823.94575,
+    "porcentagem": 0,
+    "total": 0,
     "composicao": {
-      "num_inconsistencias": 3,
+      "num_inconsistencias": 0,
       "descricao": "Se 'num_inconsistencias' > 0, há multa de 35%."
     }
   },
@@ -24,12 +24,12 @@
   },
   "lag": {
     "num_pagamentos_total": 16749,
-    "num_pagamentos_solicitados": 16751,
-    "lag": 2,
+    "num_pagamentos_solicitados": 16750,
+    "lag": 1,
     "descricao": "Lag é a diferença entre a quantidade de solicitações de pagamentos e o que foi realmente computado pelo backend. Mostra a perda de pagamentos possivelmente por estarem enfileirados."
   },
   "pagamentos_solicitados": {
-    "qtd_sucesso": 16751,
+    "qtd_sucesso": 16750,
     "qtd_falha": 0,
     "descricao": "'qtd_sucesso' foram requests bem sucedidos para 'POST /payments' e 'qtd_falha' os requests com erro."
   },

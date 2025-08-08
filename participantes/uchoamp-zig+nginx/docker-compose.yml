@@ -14,16 +14,16 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.30"
-          memory: "338MB"
+          cpus: "0.40"
+          memory: "330MB"
   zig1: &zig
     container_name: zig-pay-1
-    image: uchoamp/zigpay
+    image: uchoamp/zigpay:1.01
     environment:
       - SERVER_ENV=PROD
       - DEFAULT_HOST=payment-processor-default
       - DEFAULT_PORT=8080
-      - DEFAULT_POOL=30
+      - DEFAULT_POOL=50
       - FALLBACK_HOST=payment-processor-fallback
       - FALLBACK_PORT=8080
       - FALLBACK_POOL=0
@@ -35,16 +35,16 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.60"
-          memory: "6MB"
-  zig2: 
+          cpus: "0.55"
+          memory: "10MB"
+  zig2:
     <<: *zig
     container_name: zig-pay-2
     environment:
       - SERVER_ENV=PROD
       - DEFAULT_HOST=payment-processor-default
       - DEFAULT_PORT=8080
-      - DEFAULT_POOL=30
+      - DEFAULT_POOL=50
       - FALLBACK_HOST=payment-processor-fallback
       - FALLBACK_PORT=8080
       - FALLBACK_POOL=0

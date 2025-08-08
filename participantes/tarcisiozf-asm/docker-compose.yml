@@ -3,17 +3,17 @@ x-service-templates:
     networks:
       - payment-processor
       - app
-    image: tarcisiozf/rinha-de-backend-2025-asm:v4
+    image: tarcisiozf/rinha-de-backend-2025-asm:v6
     security_opt:
       - seccomp:unconfined
     volumes:
       - app-data:/app/data
       - sockets:/app/sockets:rw
-    deploy:
-      resources:
-        limits:
-          cpus: "0.25"
-          memory: 100M
+#    deploy:
+#      resources:
+#        limits:
+#          cpus: "0.5"
+#          memory: 100M
 
 services:
   app-1:
@@ -27,6 +27,11 @@ services:
       PORT_DEFAULT: "8080"
       HOST_FALLBACK: "payment-processor-fallback"
       PORT_FALLBACK: "8080"
+    deploy:
+      resources:
+        limits:
+          cpus: "0.5"
+          memory: 100M
   app-2:
     <<: *base-app
     hostname: app-two
@@ -38,23 +43,47 @@ services:
       PORT_DEFAULT: "8080"
       HOST_FALLBACK: "payment-processor-fallback"
       PORT_FALLBACK: "8080"
-
-  lb:
-    networks:
-      - app
-#    cpuset: "2"
-    image: tarcisiozf/rinha-de-backend-2025-asm-lb:v3
-    security_opt:
-      - seccomp:unconfined
-    volumes:
-      - sockets:/app/sockets:rw
-    ports:
-      - "9999:9999"
     deploy:
       resources:
         limits:
-          cpus: "1.0"
-          memory: 150M
+          cpus: "0.5"
+          memory: 100M
+
+#  lb:
+#    networks:
+#      - app
+##    cpuset: "2"
+#    image: tarcisiozf/rinha-de-backend-2025-asm-lb:v4
+#    security_opt:
+#      - seccomp:unconfined
+#    volumes:
+#      - sockets:/app/sockets:rw
+#    ports:
+#      - "9999:9999"
+#    deploy:
+#      resources:
+#        limits:
+#          cpus: "0.5"
+#          memory: 150M
+
+  proxy:
+    image: haproxy:3.2.3-alpine
+#    cpuset: "2-3"
+    ports:
+      - 9999:80
+    volumes:
+      - sockets:/sockets:rw
+      - ./proxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
+    networks:
+      - app
+    depends_on:
+      - app-1
+      - app-2
+    deploy:
+      resources:
+        limits:
+          cpus: "0.5"
+          memory: "150MB"
 
 volumes:
   app-data:
