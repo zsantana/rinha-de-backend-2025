@@ -1,6 +1,6 @@
 x-service-templates:
   api: &api
-    image: gabrieleiro/rinha-de-backend-2025-api:6.0
+    image: gabrieleiro/rinha-de-backend-2025-api:7.0
     networks:
       - rinha-de-backend-2025
       - payment-processor
@@ -36,7 +36,7 @@ services:
       ADDRESS: "/tmp/api_2.sock"
 
   load-balancer:
-    image: gabrieleiro/rinha-de-backend-2025-load-balancer:6.0
+    image: gabrieleiro/rinha-de-backend-2025-load-balancer:7.0
     networks:
       - rinha-de-backend-2025
     deploy:
@@ -58,7 +58,7 @@ services:
 
   tracker:
     hostname: tracker
-    image: gabrieleiro/rinha-de-backend-2025-tracker:6.0
+    image: gabrieleiro/rinha-de-backend-2025-tracker:7.0
     networks:
       - rinha-de-backend-2025
     deploy:
