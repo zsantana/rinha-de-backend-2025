@@ -1,0 +1,92 @@
+services:
+  clojure-instance:
+    image: developerarthur/rinha-backend3-api-principal:latest
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+    restart: on-failure
+    networks:
+      - nginx_net
+      - payment-processor
+    deploy:
+      resources:
+        limits:
+          cpus: '0.45'
+          memory: '90MB'
+
+  clojure-instance-2:
+    image: developerarthur/rinha-backend3-api-principal:latest
+    ports:
+      - "8081:8080"
+    depends_on:
+      - postgres
+    restart: on-failure
+    networks:
+      - nginx_net
+      - payment-processor
+    deploy:
+      resources:
+        limits:
+          cpus: '0.45'
+          memory: '90MB'
+
+  service-worker:
+    image: developerarthur/rinha-backend3-service-worker:latest
+    ports:
+      - "8082:8080"
+    depends_on:
+      - postgres
+    restart: on-failure
+    networks:
+      - nginx_net
+      - payment-processor
+    deploy:
+      resources:
+        limits:
+          cpus: '0.15'
+          memory: '30MB'
+
+  postgres:
+    image: "postgres"
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=root
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
+      - ./init-mydb.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - nginx_net
+      - payment-processor
+    deploy:
+      resources:
+        limits:
+          cpus: '0.3'
+          memory: '100MB'
+
+  nginx:
+    image: nginx
+    ports:
+      - "9999:9999"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - clojure-instance
+      - clojure-instance-2
+    networks:
+      - nginx_net
+      - payment-processor
+    deploy:
+      resources:
+        limits:
+          cpus: '0.15'
+          memory: '40MB'
+
+networks:
+  nginx_net:
+    driver: bridge
+  payment-processor:
+    external: true
