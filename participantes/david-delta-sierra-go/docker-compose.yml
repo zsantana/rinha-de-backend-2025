@@ -5,7 +5,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.2"
+          cpus: "0.4"
           memory: 60M
     image: nginx:stable-alpine
     volumes:
@@ -38,9 +38,9 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.5"
+          cpus: "0.4"
           memory: 70M
-    image: daviddeltasierra/rinha-2025-go-2:1.22
+    image: daviddeltasierra/rinha-2025-go-2:1.23
     volumes:
       - /tmp:/tmp
     environment:
@@ -56,9 +56,9 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.5"
+          cpus: "0.4"
           memory: 70M
-    image: daviddeltasierra/rinha-2025-go-2:1.22
+    image: daviddeltasierra/rinha-2025-go-2:1.23
     volumes:
       - /tmp:/tmp
     environment:
