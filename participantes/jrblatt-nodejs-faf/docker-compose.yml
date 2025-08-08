@@ -1,50 +1,53 @@
 services:
   api1:
-    image: jrblatt/rinha-de-backend-2025-nodejs:latest
+    image: jrblatt/rinha-de-backend-2025-nodejs:1
     container_name: api1
     hostname: api1
     environment:
-      - SOCKET_PATH=/tmp/api1.sock
-      - FOREIGN_STATE=api2
       - MODE=🔥
+      - WORKERS=1
+      - EXTERNAL_SUMMARY_HOSTNAME=api2
     volumes:
-      - nodejsfaf:/tmp/
+      - rb2025:/tmp/
     networks:
       - payment-processor
     restart: unless-stopped
     deploy:
       resources:
         limits:
-          cpus: "0.6"
-          memory: 155MB
+          cpus: "0.5"
+          memory: 150MB
 
   api2:
-    image: jrblatt/rinha-de-backend-2025-nodejs:latest
+    image: jrblatt/rinha-de-backend-2025-nodejs:1
     container_name: api2
     hostname: api2
     environment:
-      - SOCKET_PATH=/tmp/api2.sock
-      - FOREIGN_STATE=api1
       - MODE=🔥
+      - WORKERS=1
+      - EXTERNAL_SUMMARY_HOSTNAME=api1
     volumes:
-      - nodejsfaf:/tmp/
+      - rb2025:/tmp/
     networks:
       - payment-processor
     restart: unless-stopped
     deploy:
       resources:
         limits:
-          cpus: "0.6"
-          memory: 155MB
+          cpus: "0.5"
+          memory: 150MB
 
-  nginx:
-    image: openresty/openresty:bullseye
-    container_name: nginx
+  uxlb:
+    image: jrblatt/uxlb
+    container_name: uxlb
     ports:
       - "9999:9999"
+    environment:
+      - LB_UPSTREAMS=/tmp/api1.sock,/tmp/api2.sock
+      - LB_FAF=POST:/payments:200
+      - LB_WORKERS=1
     volumes:
-      - ./nginx.conf:/usr/local/openresty/nginx/conf/nginx.conf:ro
-      - nodejsfaf:/tmp/
+      - rb2025:/tmp/
     depends_on:
       - api1
       - api2
@@ -54,11 +57,11 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.3"
-          memory: 40MB
+          cpus: "0.5"
+          memory: 50MB
 
 volumes:
-  nodejsfaf:
+  rb2025:
     driver: local
 
 networks:

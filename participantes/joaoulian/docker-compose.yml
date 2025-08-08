@@ -1,0 +1,94 @@
+services:
+  api1: &api
+    image: joaoulian/rinha-backend-2025-api:latest
+    command: node dist/index.js
+    hostname: api1
+    environment:
+      - PORT=3000
+      - REDIS_URL=redis://cache:6379
+      - NODE_ENV=production
+    networks:
+      - backend
+      - payment-processor
+    depends_on:
+      cache:
+        condition: service_started
+    deploy:
+      resources:
+        limits:
+          cpus: "0.3"
+          memory: "65MB"
+
+  api2:
+    <<: *api
+    hostname: api2
+
+  worker1:
+    image: joaoulian/rinha-backend-2025-api:latest
+    command: node dist/worker.js
+    hostname: worker1
+    environment:
+      - REDIS_URL=redis://cache:6379
+      - PROCESSOR_DEFAULT_URL=http://payment-processor-default:8080
+      - PROCESSOR_FALLBACK_URL=http://payment-processor-fallback:8080
+      - NODE_ENV=production
+    networks:
+      - backend
+      - payment-processor
+    depends_on:
+      cache:
+        condition: service_started
+    deploy:
+      resources:
+        limits:
+          cpus: "0.5"
+          memory: "100MB"
+
+  cache:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    command: redis-server --appendonly yes
+    networks:
+      - backend
+    deploy:
+      resources:
+        limits:
+          cpus: "0.3"
+          memory: "100MB"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  haproxy:
+    image: haproxy:2.9-alpine
+    volumes:
+      - ./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
+    ports:
+      - "9999:80"
+    networks:
+      - payment-processor
+      - backend
+    depends_on:
+      - api1
+      - api2
+      - worker1
+    deploy:
+      resources:
+        limits:
+          cpus: "0.3"
+          memory: "30MB"
+
+volumes:
+  redis_data:
+
+networks:
+  backend:
+    driver: bridge
+  payment-processor:
+    name: payment-processor
+    external: true

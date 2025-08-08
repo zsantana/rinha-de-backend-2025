@@ -3,16 +3,23 @@ x-service-templates:
     networks:
       - payment-processor
       - app
-    image: tarcisiozf/rinha-de-backend-2025-asm:latest
+    image: tarcisiozf/rinha-de-backend-2025-asm:v6
     security_opt:
       - seccomp:unconfined
     volumes:
       - app-data:/app/data
+      - sockets:/app/sockets:rw
+#    deploy:
+#      resources:
+#        limits:
+#          cpus: "0.5"
+#          memory: 100M
 
 services:
   app-1:
     <<: *base-app
     hostname: app-one
+#    cpuset: "0"
     environment:
       APP_ID: "APP_1"
       APP_PORT: "9001"
@@ -23,11 +30,12 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.8"
+          cpus: "0.5"
           memory: 100M
   app-2:
     <<: *base-app
     hostname: app-two
+#    cpuset: "1"
     environment:
       APP_ID: "APP_2"
       APP_PORT: "9002"
@@ -38,13 +46,33 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.40"
+          cpus: "0.5"
           memory: 100M
-  haproxy:
+
+#  lb:
+#    networks:
+#      - app
+##    cpuset: "2"
+#    image: tarcisiozf/rinha-de-backend-2025-asm-lb:v4
+#    security_opt:
+#      - seccomp:unconfined
+#    volumes:
+#      - sockets:/app/sockets:rw
+#    ports:
+#      - "9999:9999"
+#    deploy:
+#      resources:
+#        limits:
+#          cpus: "0.5"
+#          memory: 150M
+
+  proxy:
     image: haproxy:3.2.3-alpine
+#    cpuset: "2-3"
     ports:
       - 9999:80
     volumes:
+      - sockets:/sockets:rw
       - ./proxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
     networks:
       - app
@@ -54,12 +82,12 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.30"
+          cpus: "0.5"
           memory: "150MB"
 
 volumes:
   app-data:
-    driver: local
+  sockets:
 
 networks:
   payment-processor:

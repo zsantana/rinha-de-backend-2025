@@ -3,7 +3,6 @@
 Implementação da Rinha de Backend 2025 utilizando:
 
 - [Rust](https://www.rust-lang.org/) apenas a melhor linguagem de todas
-- [Nginx](https://nginx.org/) load balancer
 - [UDS](https://en.wikipedia.org/wiki/Unix_domain_socket) unix domain sockets para comunicação IPC (evitando a network stack, especialmente na rede bridge do docker)
 
 ---
@@ -16,28 +15,36 @@ config:
   layout: dagre
 ---
 flowchart TD
-    A[nginx] <-->|uds HTTP| B(api0)
-    A[nginx] <-->|uds HTTP| C(api1)
-    C <-->|uds bincode| D[Worker]
-    B <-->|uds bincode| D[Worker]
+    A[load balancer] <-->|uds HTTP| B(api0)
+    A[load balancer] <-->|uds HTTP| C(api1)
+    C <-->|uds bincode| D[worker]
+    B <-->|uds bincode| D[worker]
 ```
 
 ## Executando o binário
 
-Este projeto define um único binário que pode rodar em dois modos:
+Este projeto define um único binário que pode rodar em três modos:
 
-### Modo Worker
+### Modo Load balancer
 
-Responsável por armazenar os pagamentos localmente em memória Vec<T>.
+Responsável por fazer a conexão e balanceamento das chamadas HTTP para unix sockets entre o client e e as instâncias de API.
 
 ```bash
-cargo run --release -- -m worker
+cargo run --release -- -m lb
 ```
 
 ### Modo API
 
-Responsável por receber as requisições encaminhadas pelo Nginx e enviar para o worker processar e consultar o worker para obter o summary.
+Responsável por receber as requisições encaminhadas pelo load balancer e delegar ao worker.
 
 ```bash
 cargo run --release -- -m api
+```
+
+### Modo Worker
+
+Responsável por armazenar os pagamentos localmente em memória.
+
+```bash
+cargo run --release -- -m worker
 ```

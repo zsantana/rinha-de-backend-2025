@@ -1,20 +1,20 @@
 {
   "participante": "mxlange-fasthttp",
-  "total_liquido": 84477.37060000171,
-  "total_bruto": 121927.30000000258,
-  "total_taxas": 10772.86500000033,
+  "total_liquido": 138279.52799999708,
+  "total_bruto": 139697.99999999738,
+  "total_taxas": 11661.40000000007,
   "descricao": "'total_liquido' é sua pontuação final. Equivale ao seu lucro. Fórmula: total_liquido + (total_liquido * p99.bonus) - (total_liquido * multa.porcentagem)",
   "p99": {
-    "valor": "5.64ms",
-    "bonus": "11%",
+    "valor": "6.88ms",
+    "bonus": "8%",
     "max_requests": "550",
     "descricao": "Fórmula para o bônus: max((11 - p99.valor) * 0.02, 0)"
   },
   "multa": {
-    "porcentagem": 0.35,
-    "total": 38904.05225000079,
+    "porcentagem": 0,
+    "total": 0,
     "composicao": {
-      "num_inconsistencias": 2,
+      "num_inconsistencias": 0,
       "descricao": "Se 'num_inconsistencias' > 0, há multa de 35%."
     }
   },
@@ -23,20 +23,20 @@
     "descricao": "Se 'lag' for negativo, significa que seu backend registrou mais pagamentos do que solicitado, automaticamente desclassificando sua submissão!"
   },
   "lag": {
-    "num_pagamentos_total": 6127,
-    "num_pagamentos_solicitados": 16748,
-    "lag": 10621,
+    "num_pagamentos_total": 7020,
+    "num_pagamentos_solicitados": 16739,
+    "lag": 9719,
     "descricao": "Lag é a diferença entre a quantidade de solicitações de pagamentos e o que foi realmente computado pelo backend. Mostra a perda de pagamentos possivelmente por estarem enfileirados."
   },
   "pagamentos_solicitados": {
-    "qtd_sucesso": 16748,
+    "qtd_sucesso": 16739,
     "qtd_falha": 0,
     "descricao": "'qtd_sucesso' foram requests bem sucedidos para 'POST /payments' e 'qtd_falha' os requests com erro."
   },
   "pagamentos_realizados_default": {
-    "total_bruto": 75162.30000000057,
-    "num_pagamentos": 3777,
-    "total_taxas": 3758.1150000000284,
+    "total_bruto": 92932.99999999537,
+    "num_pagamentos": 4670,
+    "total_taxas": 4646.649999999769,
     "descricao": "Informações do backend sobre solicitações de pagamento para o Payment Processor Default."
   },
   "pagamentos_realizados_fallback": {

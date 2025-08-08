@@ -1,6 +1,6 @@
 x-service-templates:
   api: &api
-    image: gabrieleiro/rinha-de-backend-2025-api:4.0
+    image: gabrieleiro/rinha-de-backend-2025-api:7.0
     networks:
       - rinha-de-backend-2025
       - payment-processor
@@ -9,6 +9,8 @@ x-service-templates:
         limits:
           cpus: "0.5"
           memory: "100MB"
+    volumes:
+      - /tmp:/tmp
     depends_on:
       - tracker
 
@@ -16,61 +18,58 @@ services:
   api-1: 
     <<: *api
     hostname: api-1
-    ports:
-      - "8888:80"
     environment:
       DEFAULT_PROCESSOR_URL: "http://payment-processor-default:8080"
       FALLBACK_PROCESSOR_URL: "http://payment-processor-fallback:8080"
-      TRACKER_URL: "tracker:1111"
-      PORT: "80"
-      ADDRESS: ":8888"
+      TRACKER_URI: "/tmp/tracker.sock"
+      LOAD_BALANCER_URI: "/tmp/lb.sock"
+      ADDRESS: "/tmp/api_1.sock"
 
   api-2:
     <<: *api
     hostname: api-2
-    ports:
-      - "7777:80"
     environment:
       DEFAULT_PROCESSOR_URL: "http://payment-processor-default:8080"
       FALLBACK_PROCESSOR_URL: "http://payment-processor-fallback:8080"
-      TRACKER_URL: "tracker:1111"
-      PORT: "80"
-      ADDRESS: ":7777"
+      LOAD_BALANCER_URI: "/tmp/lb.sock"
+      TRACKER_URI: "/tmp/tracker.sock"
+      ADDRESS: "/tmp/api_2.sock"
 
   load-balancer:
-    image: gabrieleiro/rinha-de-backend-2025-load-balancer:4.0
+    image: gabrieleiro/rinha-de-backend-2025-load-balancer:7.0
     networks:
       - rinha-de-backend-2025
     deploy:
       resources:
         limits:
-          cpus: "0.4"
+          cpus: "0.3"
           memory: "50MB"
+    volumes:
+      - /tmp:/tmp
     ports:
       - "9999:9999"
     environment:
-      ADDRESS: ":9999"
-      SERVERS: "api-1:8888,api-2:7777"
+      UNIX_SOCKET_ADDRESS: "/tmp/lb.sock"
+      TCP_ADDRESS: ":9999"
+      SERVERS: "/tmp/api_1.sock,/tmp/api_2.sock"
     depends_on:
       - api-1
       - api-2
 
   tracker:
     hostname: tracker
-    image: gabrieleiro/rinha-de-backend-2025-tracker:4.0
+    image: gabrieleiro/rinha-de-backend-2025-tracker:7.0
     networks:
       - rinha-de-backend-2025
     deploy:
       resources:
         limits:
-          cpus: "0.1"
+          cpus: "0.2"
           memory: "50MB"
-    expose:
-      - "1111/udp"
-    ports:
-      - "1111:1111/udp"
+    volumes:
+      - /tmp:/tmp
     environment:
-      ADDRESS: ":1111"
+      ADDRESS: "/tmp/tracker.sock"
 
 networks:
   rinha-de-backend-2025:
