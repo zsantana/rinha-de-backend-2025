@@ -19,7 +19,7 @@ services:
           memory: "10MB"
 
   rinhaquark2025-a: &rinhaquark2025
-    image: kauanmocelin/rinhaquark2025:1.0.4
+    image: kauanmocelin/rinhaquark2025:1.0.5
     container_name: rinhaquark2025-a
     environment:
       - QUARKUS_MONGODB_CONNECTION_STRING=mongodb://mongo:27017
@@ -57,9 +57,10 @@ services:
           memory: "180MB"
     healthcheck:
       test: [ "CMD-SHELL", "echo 'db.runCommand(\"ping\").ok' | mongosh localhost:27017/test --quiet" ]
-      interval: 5s
-      timeout: 3s
-      retries: 3
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
 
 volumes:
   mongo-data:
