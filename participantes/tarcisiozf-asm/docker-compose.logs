@@ -1,0 +1,49 @@
+
+ lb Pulling 
+ 9824c27679d3 Already exists 
+ a0150c2b81c9 Pulling fs layer 
+ 2bff8213810b Pulling fs layer 
+ 189b3bc1438e Pulling fs layer 
+ 189b3bc1438e Downloading [=====>                                             ]  1.009kB/8.62kB
+ 189b3bc1438e Download complete 
+ 2bff8213810b Downloading [==================================================>]      93B/93B
+ 2bff8213810b Download complete 
+ a0150c2b81c9 Downloading [>                                                  ]  1.008kB/55.28kB
+ a0150c2b81c9 Downloading [==================================================>]  55.28kB/55.28kB
+ a0150c2b81c9 Verifying Checksum 
+ a0150c2b81c9 Download complete 
+ a0150c2b81c9 Extracting [=============================>                     ]  32.77kB/55.28kB
+ a0150c2b81c9 Extracting [==================================================>]  55.28kB/55.28kB
+ a0150c2b81c9 Pull complete 
+ 2bff8213810b Extracting [==================================================>]      93B/93B
+ 2bff8213810b Extracting [==================================================>]      93B/93B
+ 2bff8213810b Pull complete 
+ 189b3bc1438e Extracting [==================================================>]   8.62kB/8.62kB
+ 189b3bc1438e Extracting [==================================================>]   8.62kB/8.62kB
+ 189b3bc1438e Pull complete 
+ lb Pulled 
+ Network tarcisiozf-asm_app  Creating
+ Network tarcisiozf-asm_app  Created
+ Volume "tarcisiozf-asm_sockets"  Creating
+ Volume "tarcisiozf-asm_sockets"  Created
+ Volume "tarcisiozf-asm_app-data"  Creating
+ Volume "tarcisiozf-asm_app-data"  Created
+ Container tarcisiozf-asm-lb-1  Creating
+ Container tarcisiozf-asm-app-1-1  Creating
+ Container tarcisiozf-asm-app-2-1  Creating
+ Container tarcisiozf-asm-lb-1  Created
+ Container tarcisiozf-asm-app-1-1  Created
+ Container tarcisiozf-asm-app-2-1  Created
+Attaching to app-1-1, app-2-1, lb-1
+lb-1     | Zero-Copy Server listening on port 9999
+app-2-1  | v3
+app-1-1  | v3
+lb-1     | POST requests -> 200 OK with Content-Length: 0
+lb-1     | GET requests  -> 200 OK with JSON (94 bytes)
+lb-1     | Using ZERO-COPY for all responses
+lb-1     | 
+lb-1     | 
+lb-1     | Server stopped
+[Klb-1 exited with code 0
+[Kapp-1-1 exited with code 137
+log truncated at line 1000
