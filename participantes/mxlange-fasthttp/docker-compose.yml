@@ -1,7 +1,9 @@
 networks:
+    backend:
+        driver: bridge
     payment-processor:
         name: payment-processor
-        driver: bridge
+        external: true
 services:
     db:
         image: postgres:17-alpine
@@ -18,6 +20,7 @@ services:
             - ./sql:/docker-entrypoint-initdb.d
         networks:
             - payment-processor
+            - backend
         healthcheck:
             test: ["CMD-SHELL", "pg_isready -U postgres -d postgres"]
             interval: 5s
@@ -35,7 +38,7 @@ services:
         ports:
             - "8888:8080"
         networks:
-            - payment-processor
+            - backend
         deploy:
             resources:
                 limits:
@@ -55,6 +58,7 @@ services:
             - LOCKER_URL=locker:8080
         networks:
             - payment-processor
+            - backend
         depends_on:
             db:
                 condition: service_healthy
@@ -79,7 +83,7 @@ services:
         ports:
             - "9999:9999" # Só Nginx fica exposto
         networks:
-            - payment-processor
+            - backend
         deploy:
             resources:
                 limits:
