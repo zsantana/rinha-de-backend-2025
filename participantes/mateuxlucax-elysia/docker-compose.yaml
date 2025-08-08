@@ -1,0 +1,88 @@
+name : mateuxlucax-elysia
+
+x-service-templates:
+  api: &api
+    image: mateuxlucax/rinha-de-backend-2025:elysia-api
+    depends_on:
+      - valkey
+    networks:
+      - payment-processor
+      - backend
+    environment:
+      - VALKEY_URL=valkey://valkey:6379
+    deploy:
+      resources:
+        limits:
+          cpus: '0.3'
+          memory: 50M
+
+  worker: &worker
+    image: mateuxlucax/rinha-de-backend-2025:elysia-worker
+    depends_on:
+      - valkey
+    networks:
+      - backend
+      - payment-processor
+    environment:
+      - VALKEY_URL=valkey://valkey:6379
+      - PAYMENT_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080
+      - PAYMENT_PROCESSOR_URL_FALLBACK=http://payment-processor-fallback:8080
+    deploy:
+      resources:
+        limits:
+          cpus: '0.2'
+          memory: 50M
+
+services:
+  haproxy:
+    image: haproxy:2.9
+    container_name: haproxy
+    volumes:
+      - ./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
+    ports:
+      - "9999:80"
+    networks:
+      - backend
+    depends_on:
+      - api-1
+      - api-2
+    deploy:
+      resources:
+        limits:
+          cpus: '0.3'
+          memory: 50M
+
+  api-1:
+    <<: *api
+    container_name: api-1
+
+  api-2:
+    <<: *api
+    container_name: api-2
+
+  worker-1:
+    <<: *worker
+    container_name: worker-1
+
+  worker-2:
+    <<: *worker
+    container_name: worker-2
+
+  valkey:
+    image: valkey/valkey:latest
+    container_name: valkey
+    command: valkey-server --appendonly yes
+    hostname: valkey
+    networks:
+      - backend
+    deploy:
+      resources:
+        limits:
+          cpus: '0.2'
+          memory: 30M
+
+networks:
+  backend:
+    driver: bridge
+  payment-processor:
+    external: true
