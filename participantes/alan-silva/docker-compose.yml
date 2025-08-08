@@ -19,7 +19,7 @@ services:
           memory: "80MB"
 
   rinha-gateway-1:
-    image: ghcr.io/alan-venv/rinha-gateway:7.0-skylake
+    image: ghcr.io/alan-venv/rinha-gateway:7.1-skylake
     container_name: rinha-gateway-1
     env_file:
       - ./config/.env
@@ -39,7 +39,7 @@ services:
           memory: "70MB"
 
   rinha-gateway-2:
-    image: ghcr.io/alan-venv/rinha-gateway:7.0-skylake
+    image: ghcr.io/alan-venv/rinha-gateway:7.1-skylake
     container_name: rinha-gateway-2
     env_file:
       - ./config/.env
@@ -59,7 +59,7 @@ services:
           memory: "70MB"
 
   rinha-database:
-    image: ghcr.io/alan-venv/rinha-database:7.0-skylake
+    image: ghcr.io/alan-venv/rinha-database:7.1-skylake
     container_name: rinha-database
     volumes:
       - sockets:/sockets:rw
