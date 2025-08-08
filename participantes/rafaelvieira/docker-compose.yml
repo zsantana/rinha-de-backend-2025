@@ -15,11 +15,11 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.15"
-          memory: "47MB"
+          cpus: "0.19"
+          memory: "50MB"
   
   api1: &api
-    image: rafaelviefe/payments:1
+    image: rafaelviefe/pagamentos:1
     hostname: api1
     environment:
       - SPRING_DATA_REDIS_HOST=redis
@@ -32,15 +32,15 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.56"
-          memory: "121MB"
+          cpus: "0.53"
+          memory: "118MB"
   
   api2:
     <<: *api
     hostname: api2
   
   load-balancer:
-    image: rafaelviefe/lb:1
+    image: rafaelviefe/lb:2
     container_name: rinha-load-balancer
     ports:
       - "9999:9999"
@@ -52,8 +52,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.23"
-          memory: "61MB"
+          cpus: "0.25"
+          memory: "64MB"
 
 networks:
   backend:
