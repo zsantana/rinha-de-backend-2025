@@ -1,6 +1,7 @@
 services:
+
   api01: &app
-    image: thiagorigonatti/rinha-2025:0.0.9
+    image: thiagorigonatti/rinha-2025:0.0.10
     environment:
       - PTHREADS=6
       - SOCK_PATH=/dev/shm/server1.sock
@@ -11,7 +12,7 @@ services:
       resources:
         limits:
           cpus: "0.50"
-          memory: "20MB"
+          memory: "10MB"
     volumes:
       - /dev/shm:/dev/shm
 
@@ -20,6 +21,7 @@ services:
     environment:
       - PTHREADS=6
       - SOCK_PATH=/dev/shm/server2.sock
+
   haproxy:
     image: haproxy:3.3-dev5-alpine3.22
     volumes:
@@ -29,7 +31,7 @@ services:
       resources:
         limits:
           cpus: "0.50"
-          memory: "100MB"
+          memory: "15MB"
     networks:
       - api
     ports:
@@ -37,6 +39,7 @@ services:
     depends_on:
       - api01
       - api02
+
 
 networks:
   api:
