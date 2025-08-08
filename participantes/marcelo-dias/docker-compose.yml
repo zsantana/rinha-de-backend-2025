@@ -2,7 +2,7 @@ version: '3.9'
 
 services:
   app1: &app
-    image: maruero/rinha-de-backend-2025:v3
+    image: maruero/rinha-de-backend-2025:v2
     hostname: app1
     environment:
       - PROCESSOR_URL=http://payment-processor-default:8080
@@ -28,8 +28,8 @@ services:
       - PROCESSOR_URL=http://payment-processor-default:8080
       - FALLBACK_PROCESSOR_URL=http://payment-processor-fallback:8080
       - OTHER_INSTANCE_URL=http://app1:8080
-      - CONCURRENCY=3
-      - WORKER_COUNT=3
+      - CONCURRENCY=2
+      - WORKER_COUNT=2
     ports:
       - "8082:8080"
     deploy:
