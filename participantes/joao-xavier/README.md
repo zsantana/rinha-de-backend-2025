@@ -35,7 +35,7 @@ cargo run --release -- -m lb
 
 ### Modo API
 
-Responsável por receber as requisições encaminhadas pelo Nginx e enviar para o worker processar e consultar o worker para obter o summary.
+Responsável por receber as requisições encaminhadas pelo load balancer e delegar ao worker.
 
 ```bash
 cargo run --release -- -m api
@@ -43,7 +43,7 @@ cargo run --release -- -m api
 
 ### Modo Worker
 
-Responsável por armazenar os pagamentos localmente em memória Vec<T>.
+Responsável por armazenar os pagamentos localmente em memória.
 
 ```bash
 cargo run --release -- -m worker
