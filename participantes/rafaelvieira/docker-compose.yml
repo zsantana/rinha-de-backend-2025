@@ -15,8 +15,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.10"
-          memory: "35MB"
+          cpus: "0.15"
+          memory: "47MB"
   
   api1: &api
     image: rafaelviefe/payments:1
@@ -32,8 +32,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.63"
-          memory: "134MB"
+          cpus: "0.56"
+          memory: "121MB"
   
   api2:
     <<: *api
@@ -52,8 +52,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.14"
-          memory: "47MB"
+          cpus: "0.23"
+          memory: "61MB"
 
 networks:
   backend:
