@@ -9,11 +9,11 @@ x-service-templates:
     volumes:
       - app-data:/app/data
       - sockets:/app/sockets:rw
-    deploy:
-      resources:
-        limits:
-          cpus: "0.5"
-          memory: 100M
+#    deploy:
+#      resources:
+#        limits:
+#          cpus: "0.5"
+#          memory: 100M
 
 services:
   app-1:
@@ -27,6 +27,11 @@ services:
       PORT_DEFAULT: "8080"
       HOST_FALLBACK: "payment-processor-fallback"
       PORT_FALLBACK: "8080"
+    deploy:
+      resources:
+        limits:
+          cpus: "0.5"
+          memory: 100M
   app-2:
     <<: *base-app
     hostname: app-two
@@ -38,6 +43,11 @@ services:
       PORT_DEFAULT: "8080"
       HOST_FALLBACK: "payment-processor-fallback"
       PORT_FALLBACK: "8080"
+    deploy:
+      resources:
+        limits:
+          cpus: "0.5"
+          memory: 100M
 
 #  lb:
 #    networks:
