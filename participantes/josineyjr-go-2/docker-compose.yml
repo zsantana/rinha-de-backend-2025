@@ -1,9 +1,10 @@
 x-service-templates:
   base: &base
-    image: josiney/rdb25_02-amd64:581aa41
+    image: josiney/rdb25_02-amd64:dcf26e4
     volumes:
       - sockets:/sockets
     networks:
+      - backend
       - payment-processor
 
 
@@ -106,5 +107,7 @@ volumes:
   sockets:
 
 networks:
+  backend:
+    driver: bridge
   payment-processor:
     external: true
