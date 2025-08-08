@@ -1,14 +1,9 @@
 x-web-template: &web-template
-  build:
-    context: .
-  working_dir: /app
+  image: davi64lima/rinha-backend-bun:latest
   environment:
     DEFAULT_PROCESSOR_URL: "http://payment-processor-default:8080"
     FALLBACK_PROCESSOR_URL: "http://payment-processor-fallback:8080"
     REDIS_URL: redis://cache:6379
-  volumes:
-    - ./:/app
-  command: bun src/main.ts
   depends_on:
     - cache
   networks:
