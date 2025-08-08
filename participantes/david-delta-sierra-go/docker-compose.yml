@@ -46,7 +46,7 @@ services:
     environment:
       - SOCK=/tmp/unix-app1.sock
       - WORKERS=100
-      - GOMAXPROCS=6
+      - GOMAXPROCS=12
     depends_on:
       - postgres
 
@@ -65,7 +65,7 @@ services:
     environment:
       - SOCK=/tmp/unix-app2.sock
       - WORKERS=100
-      - GOMAXPROCS=6
+      - GOMAXPROCS=12
     depends_on:
       - postgres
 
