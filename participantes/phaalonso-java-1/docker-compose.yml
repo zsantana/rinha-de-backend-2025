@@ -3,7 +3,8 @@ x-service-templates:
     image: docker.io/phaalonso/rinha-backend-2025-java:0.0.4
     hostname: api01
     depends_on:
-      - db
+      db:
+        condition: service_healthy
     networks:
       - backend
       - payment-processor
