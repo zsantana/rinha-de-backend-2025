@@ -15,7 +15,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.4"
+          cpus: "0.5"
           memory: "50MB"
 
   rinha-gateway-1:
@@ -36,7 +36,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.3"
+          cpus: "0.4"
           memory: "50MB"
 
   rinha-gateway-2:
@@ -57,28 +57,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.3"
-          memory: "50MB"
-
-  rinha-gateway-3:
-    image: ghcr.io/alan-venv/rinha-gateway:latest
-    pull_policy: always
-    container_name: rinha-gateway-3
-    env_file:
-      - ./config/.env
-    environment:
-      - SOCKET=/sockets/gateway-3.sock
-    volumes:
-      - sockets:/sockets:rw
-    networks:
-      - backend
-      - payment-processor
-    depends_on:
-      - rinha-database
-    deploy:
-      resources:
-        limits:
-          cpus: "0.3"
+          cpus: "0.4"
           memory: "50MB"
 
   rinha-database:
@@ -94,7 +73,7 @@ services:
       resources:
         limits:
           cpus: "0.2"
-          memory: "30MB"
+          memory: "50MB"
 
 volumes:
   sockets:
