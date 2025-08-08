@@ -1,0 +1,115 @@
+
+ api1 Pulling 
+ api2 Pulling 
+ worker1 Pulling 
+ lb Pulling 
+ 9824c27679d3 Already exists 
+ 929d3807d95e Already exists 
+ a6d9284ae959 Already exists 
+ c739df4f9d50 Pulling fs layer 
+ 9824c27679d3 Already exists 
+ 929d3807d95e Already exists 
+ a6d9284ae959 Already exists 
+ c739df4f9d50 Pulling fs layer 
+ 9824c27679d3 Already exists 
+ 929d3807d95e Already exists 
+ a6d9284ae959 Already exists 
+ c739df4f9d50 Pulling fs layer 
+ 9824c27679d3 Already exists 
+ 929d3807d95e Already exists 
+ a6d9284ae959 Already exists 
+ c739df4f9d50 Pulling fs layer 
+ c739df4f9d50 Downloading [>                                                  ]  29.28kB/2.887MB
+ c739df4f9d50 Downloading [>                                                  ]  29.28kB/2.887MB
+ c739df4f9d50 Downloading [>                                                  ]  29.28kB/2.887MB
+ c739df4f9d50 Downloading [>                                                  ]  29.28kB/2.887MB
+ c739df4f9d50 Downloading [===>                                               ]  186.5kB/2.887MB
+ c739df4f9d50 Downloading [===>                                               ]  186.5kB/2.887MB
+ c739df4f9d50 Downloading [===>                                               ]  186.5kB/2.887MB
+ c739df4f9d50 Downloading [===>                                               ]  186.5kB/2.887MB
+ c739df4f9d50 Downloading [==========>                                        ]  591.8kB/2.887MB
+ c739df4f9d50 Downloading [==========>                                        ]  591.8kB/2.887MB
+ c739df4f9d50 Downloading [==========>                                        ]  591.8kB/2.887MB
+ c739df4f9d50 Downloading [==========>                                        ]  591.8kB/2.887MB
+ c739df4f9d50 Downloading [==========================>                        ]  1.557MB/2.887MB
+ c739df4f9d50 Downloading [==========================>                        ]  1.557MB/2.887MB
+ c739df4f9d50 Downloading [==========================>                        ]  1.557MB/2.887MB
+ c739df4f9d50 Downloading [==========================>                        ]  1.557MB/2.887MB
+ c739df4f9d50 Download complete 
+ c739df4f9d50 Extracting [>                                                  ]  32.77kB/2.887MB
+ c739df4f9d50 Verifying Checksum 
+ c739df4f9d50 Download complete 
+ c739df4f9d50 Verifying Checksum 
+ c739df4f9d50 Download complete 
+ c739df4f9d50 Extracting [>                                                  ]  32.77kB/2.887MB
+ c739df4f9d50 Extracting [>                                                  ]  32.77kB/2.887MB
+ c739df4f9d50 Verifying Checksum 
+ c739df4f9d50 Download complete 
+ c739df4f9d50 Extracting [>                                                  ]  32.77kB/2.887MB
+ c739df4f9d50 Extracting [==================================================>]  2.887MB/2.887MB
+ c739df4f9d50 Extracting [==================================================>]  2.887MB/2.887MB
+ c739df4f9d50 Extracting [==================================================>]  2.887MB/2.887MB
+ c739df4f9d50 Extracting [==================================================>]  2.887MB/2.887MB
+ c739df4f9d50 Pull complete 
+ c739df4f9d50 Pull complete 
+ c739df4f9d50 Pull complete 
+ c739df4f9d50 Pull complete 
+ api2 Pulled 
+ worker1 Pulled 
+ lb Pulled 
+ api1 Pulled 
+ Network josineyjr-go-4_backend  Creating
+ Network josineyjr-go-4_backend  Created
+ Volume "josineyjr-go-4_sockets"  Creating
+ Volume "josineyjr-go-4_sockets"  Created
+ Container worker1  Creating
+ Container worker1  Created
+ Container api1  Creating
+ Container api2  Creating
+ Container api1  Created
+ Container api2  Created
+ Container lb  Creating
+ Container lb  Created
+Attaching to api1, api2, lb, worker1
+worker1  | {"level":"info","time":"2025-08-08T11:40:04Z","message":"Worker started successfully, listening on sockets."}
+api1     | {"level":"info","time":"2025-08-08T11:40:05Z","message":"gnet server starting on unix:///sockets/api2.sock"}
+api1     | [gnet] 2025-08-08T11:40:05.091028704Z	INFO	logging/logger.go:256	Launching gnet with 6 event-loops, listening on: unix:///sockets/api2.sock
+api1     | {"level":"info","time":"2025-08-08T11:40:05Z","message":"gnet server started on port :80"}
+api2     | {"level":"info","time":"2025-08-08T11:40:05Z","message":"gnet server starting on unix:///sockets/api3.sock"}
+api2     | [gnet] 2025-08-08T11:40:05.131574778Z	INFO	logging/logger.go:256	Launching gnet with 6 event-loops, listening on: unix:///sockets/api3.sock
+api2     | {"level":"info","time":"2025-08-08T11:40:05Z","message":"gnet server started on port :80"}
+lb       | {"level":"info","time":"2025-08-08T11:40:05Z","message":"gnet server starting on tcp4://:80"}
+lb       | [gnet] 2025-08-08T11:40:05.526731145Z	INFO	logging/logger.go:256	Launching gnet with 6 event-loops, listening on: tcp4://:80
+lb       | {"level":"info","time":"2025-08-08T11:40:05Z","message":"gnet server started on port :80"}
+api1     | {"level":"info","duration":"3.617327ms","time":"2025-08-08T11:40:44Z","message":"payments"}
+lb       | {"level":"info","duration":"1.436195ms","time":"2025-08-08T11:40:58Z","message":"payments"}
+lb       | {"level":"info","duration":"1.196217ms","time":"2025-08-08T11:41:00Z","message":"payments"}
+lb       | {"level":"info","duration":"3.9513ms","time":"2025-08-08T11:41:00Z","message":"payments"}
+api1     | {"level":"info","duration":"2.915866ms","time":"2025-08-08T11:41:00Z","message":"payments"}
+api1     | {"level":"info","duration":"3.189173ms","time":"2025-08-08T11:41:00Z","message":"payments"}
+api1     | {"level":"info","duration":"3.200781ms","time":"2025-08-08T11:41:00Z","message":"payments"}
+lb       | {"level":"info","duration":"1.029114ms","time":"2025-08-08T11:41:00Z","message":"payments"}
+api1     | {"level":"info","duration":"1.479693ms","time":"2025-08-08T11:41:00Z","message":"payments"}
+lb       | {"level":"info","duration":"1.003076ms","time":"2025-08-08T11:41:00Z","message":"payments"}
+lb       | {"level":"info","duration":"1.01903ms","time":"2025-08-08T11:41:00Z","message":"payments"}
+lb       | {"level":"info","duration":"1.744884ms","time":"2025-08-08T11:41:01Z","message":"payments"}
+api1     | {"level":"info","duration":"1.094874ms","time":"2025-08-08T11:41:01Z","message":"payments"}
+lb       | {"level":"info","duration":"1.34506ms","time":"2025-08-08T11:41:01Z","message":"payments"}
+lb       | {"level":"info","duration":"1.028239ms","time":"2025-08-08T11:41:02Z","message":"payments"}
+lb       | {"level":"info","duration":"1.525517ms","time":"2025-08-08T11:41:02Z","message":"payments"}
+lb       | {"level":"info","duration":"1.55172ms","time":"2025-08-08T11:41:02Z","message":"payments"}
+lb       | {"level":"info","duration":"1.305287ms","time":"2025-08-08T11:41:02Z","message":"payments"}
+api2     | {"level":"info","duration":"1.989361ms","time":"2025-08-08T11:41:02Z","message":"payments"}
+lb       | {"level":"info","duration":"1.824051ms","time":"2025-08-08T11:41:03Z","message":"summary"}
+api1     | {"level":"info","duration":"1.247277ms","time":"2025-08-08T11:41:03Z","message":"payments"}
+lb       | {"level":"info","duration":"1.649489ms","time":"2025-08-08T11:41:03Z","message":"payments"}
+api1     | {"level":"info","duration":"2.483197ms","time":"2025-08-08T11:41:04Z","message":"payments"}
+lb       | {"level":"info","duration":"1.231098ms","time":"2025-08-08T11:41:04Z","message":"payments"}
+api2     | {"level":"info","duration":"1.146771ms","time":"2025-08-08T11:41:04Z","message":"payments"}
+lb       | {"level":"info","duration":"1.209155ms","time":"2025-08-08T11:41:04Z","message":"payments"}
+[Klb exited with code 137
+[Kapi1 exited with code 137
+[Kapi2 exited with code 137
+worker1  | {"level":"info","time":"2025-08-08T11:41:35Z","message":"Worker stopped gracefully."}
+[Kworker1 exited with code 0
+log truncated at line 1000

@@ -1,0 +1,98 @@
+services:
+  api01: &api
+    image: ghcr.io/jeffersondossantosaguiar/api:latest
+    container_name: api01
+    environment:
+      - INSTANCE_NAME=api01
+      - PAYMENT_PROCESSOR_DEFAULT_URL=http://payment-processor-default:8080
+      - PAYMENT_PROCESSOR_FALLBACK_URL=http://payment-processor-fallback:8080
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+    networks:
+      - rinha-net
+      - payment-processor
+    deploy:
+      resources:
+        limits:
+          cpus: "0.30"
+          memory: "85MB"
+
+  api02:
+    <<: *api
+    container_name: api02
+    environment:
+      - INSTANCE_NAME=api02
+      - PAYMENT_PROCESSOR_DEFAULT_URL=http://payment-processor-default:8080
+      - PAYMENT_PROCESSOR_FALLBACK_URL=http://payment-processor-fallback:8080
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+
+  worker1:
+    image: ghcr.io/jeffersondossantosaguiar/worker:latest
+    container_name: worker1
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - PAYMENT_PROCESSOR_DEFAULT_URL=http://payment-processor-default:8080
+      - PAYMENT_PROCESSOR_FALLBACK_URL=http://payment-processor-fallback:8080
+    networks:
+      - rinha-net
+      - payment-processor
+    depends_on:
+      - redis
+    deploy:
+      resources:
+        limits:
+          cpus: "0.55"
+          memory: "110MB"
+
+  redis:
+    image: redis:7-alpine
+    container_name: redis
+    ports:
+      - "6379:6379"
+    command:
+      [
+        "redis-server",
+        "--maxmemory",
+        "30mb",
+        "--maxmemory-policy",
+        "noeviction",
+        "--appendonly",
+        "no",
+        "--save",
+        "",
+        "--loglevel",
+        "warning"
+      ]
+    networks:
+      - rinha-net
+    deploy:
+      resources:
+        limits:
+          cpus: "0.20"
+          memory: "50MB"
+
+  nginx:
+    image: nginx:alpine-slim
+    container_name: load-balancer
+    ports:
+      - "9999:9999"
+    networks:
+      - rinha-net
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - api01
+      - api02
+    deploy:
+      resources:
+        limits:
+          cpus: "0.15"
+          memory: "20MB"
+
+networks:
+  payment-processor:
+    external: true
+  rinha-net:
+    driver: bridge
