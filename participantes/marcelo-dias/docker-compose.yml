@@ -40,6 +40,7 @@ services:
 
   haproxy:
     image: haproxy:alpine
+    command: ["-W", "-db", "-d", "-f", "/usr/local/etc/haproxy/haproxy.cfg"]
     restart: always
     ports:
       - "9999:9999"
