@@ -40,12 +40,13 @@ services:
         limits:
           cpus: "0.4"
           memory: 70M
-    image: daviddeltasierra/rinha-2025-go-2:1.23
+    image: daviddeltasierra/rinha-2025-go-2:1.24
     volumes:
       - /tmp:/tmp
     environment:
       - SOCK=/tmp/unix-app1.sock
-      - WORKERS=5
+      - WORKERS=2
+      - GOMAXPROCS=2
     depends_on:
       - postgres
 
@@ -58,12 +59,13 @@ services:
         limits:
           cpus: "0.4"
           memory: 70M
-    image: daviddeltasierra/rinha-2025-go-2:1.23
+    image: daviddeltasierra/rinha-2025-go-2:1.24
     volumes:
       - /tmp:/tmp
     environment:
       - SOCK=/tmp/unix-app2.sock
-      - WORKERS=5
+      - WORKERS=2
+      - GOMAXPROCS=2
     depends_on:
       - postgres
 
@@ -79,6 +81,7 @@ services:
     user: postgres
     volumes:
       - ./scripts:/docker-entrypoint-initdb.d
+      - /tmp:/var/run/postgresql
     environment:
       - POSTGRES_PASSWORD=root
       - POSTGRES_DB=rinha
