@@ -1,10 +1,12 @@
 services:
 
   api01: &app
-    image: thiagorigonatti/rinha-2025:0.0.10
+    image: thiagorigonatti/rinha-2025-scratch:0.0.1
     environment:
-      - PTHREADS=6
-      - SOCK_PATH=/dev/shm/server1.sock
+      - HTTP_CLIENT_THREADS=6
+      - SOCKET_SERVER_THREADS=6
+      - SHM_PATH=/shm_array
+      - SOCKET_PATH=/dev/shm/server1.sock
     networks:
       - api
       - payment-processor
@@ -16,11 +18,15 @@ services:
     volumes:
       - /dev/shm:/dev/shm
 
+
   api02:
     <<: *app
     environment:
-      - PTHREADS=6
-      - SOCK_PATH=/dev/shm/server2.sock
+      - HTTP_CLIENT_THREADS=6
+      - SOCKET_SERVER_THREADS=6
+      - SHM_PATH=/shm_array
+      - SOCKET_PATH=/dev/shm/server2.sock
+
 
   haproxy:
     image: haproxy:3.3-dev5-alpine3.22
