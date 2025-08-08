@@ -1,0 +1,107 @@
+
+ lb Pulling 
+ app-1 Pulling 
+ app-2 Pulling 
+ 9824c27679d3 Already exists 
+ 5008b6ed8f3d Pulling fs layer 
+ d257d03eb696 Pulling fs layer 
+ b4d87f3e7703 Pulling fs layer 
+ 9824c27679d3 Already exists 
+ 9824c27679d3 Already exists 
+ 5008b6ed8f3d Pulling fs layer 
+ d257d03eb696 Pulling fs layer 
+ b4d87f3e7703 Pulling fs layer 
+ 544e812ae491 Pulling fs layer 
+ b3dc0a130507 Pulling fs layer 
+ 3c483b34fb92 Pulling fs layer 
+ 544e812ae491 Waiting 
+ b3dc0a130507 Waiting 
+ 3c483b34fb92 Waiting 
+ 5008b6ed8f3d Downloading [>                                                  ]  1.008kB/55.28kB
+ 5008b6ed8f3d Downloading [>                                                  ]  1.008kB/55.28kB
+ 5008b6ed8f3d Download complete 
+ 5008b6ed8f3d Download complete 
+ 5008b6ed8f3d Extracting [=============================>                     ]  32.77kB/55.28kB
+ 5008b6ed8f3d Extracting [=============================>                     ]  32.77kB/55.28kB
+ 5008b6ed8f3d Extracting [==================================================>]  55.28kB/55.28kB
+ 5008b6ed8f3d Extracting [==================================================>]  55.28kB/55.28kB
+ 5008b6ed8f3d Pull complete 
+ 5008b6ed8f3d Pull complete 
+ d257d03eb696 Downloading [==================================================>]      93B/93B
+ d257d03eb696 Verifying Checksum 
+ d257d03eb696 Download complete 
+ d257d03eb696 Downloading [==================================================>]      93B/93B
+ d257d03eb696 Verifying Checksum 
+ d257d03eb696 Download complete 
+ d257d03eb696 Extracting [==================================================>]      93B/93B
+ d257d03eb696 Extracting [==================================================>]      93B/93B
+ d257d03eb696 Extracting [==================================================>]      93B/93B
+ d257d03eb696 Extracting [==================================================>]      93B/93B
+ d257d03eb696 Pull complete 
+ d257d03eb696 Pull complete 
+ b4d87f3e7703 Downloading [===>                                               ]  1.008kB/12.64kB
+ b4d87f3e7703 Downloading [===>                                               ]  1.008kB/12.64kB
+ b4d87f3e7703 Verifying Checksum 
+ b4d87f3e7703 Download complete 
+ b4d87f3e7703 Extracting [==================================================>]  12.64kB/12.64kB
+ b4d87f3e7703 Extracting [==================================================>]  12.64kB/12.64kB
+ b4d87f3e7703 Downloading [==================================================>]  12.64kB/12.64kB
+ b4d87f3e7703 Download complete 
+ b4d87f3e7703 Extracting [==================================================>]  12.64kB/12.64kB
+ b4d87f3e7703 Extracting [==================================================>]  12.64kB/12.64kB
+ b4d87f3e7703 Pull complete 
+ b4d87f3e7703 Pull complete 
+ 544e812ae491 Downloading [>                                                  ]     935B/55.28kB
+ 544e812ae491 Verifying Checksum 
+ 544e812ae491 Download complete 
+ 544e812ae491 Extracting [=============================>                     ]  32.77kB/55.28kB
+ 544e812ae491 Extracting [==================================================>]  55.28kB/55.28kB
+ app-2 Pulled 
+ b3dc0a130507 Downloading [==================================================>]      93B/93B
+ b3dc0a130507 Download complete 
+ app-1 Pulled 
+ 544e812ae491 Pull complete 
+ b3dc0a130507 Extracting [==================================================>]      93B/93B
+ b3dc0a130507 Extracting [==================================================>]      93B/93B
+ b3dc0a130507 Pull complete 
+ 3c483b34fb92 Downloading [======>                                            ]     936B/7.539kB
+ 3c483b34fb92 Downloading [==================================================>]  7.539kB/7.539kB
+ 3c483b34fb92 Verifying Checksum 
+ 3c483b34fb92 Download complete 
+ 3c483b34fb92 Extracting [==================================================>]  7.539kB/7.539kB
+ 3c483b34fb92 Extracting [==================================================>]  7.539kB/7.539kB
+ 3c483b34fb92 Pull complete 
+ lb Pulled 
+ Network tarcisiozf-asm_app  Creating
+ Network tarcisiozf-asm_app  Created
+ Volume "tarcisiozf-asm_sockets"  Creating
+ Volume "tarcisiozf-asm_sockets"  Created
+ Volume "tarcisiozf-asm_app-data"  Creating
+ Volume "tarcisiozf-asm_app-data"  Created
+ Container tarcisiozf-asm-lb-1  Creating
+ Container tarcisiozf-asm-app-1-1  Creating
+ Container tarcisiozf-asm-app-2-1  Creating
+ Container tarcisiozf-asm-lb-1  Created
+ Container tarcisiozf-asm-app-1-1  Created
+ Container tarcisiozf-asm-app-2-1  Created
+Attaching to app-1-1, app-2-1, lb-1
+lb-1     | Memory lock limit: 8192 KB
+app-1-1  | v3
+app-2-1  | v3
+lb-1     | Warning: Low memory lock limit. Consider increasing with:
+lb-1     |   docker run --ulimit memlock=67108864:67108864 ...
+lb-1     | 
+lb-1     | Load Balancer listening on port 9999
+lb-1     | Forwarding to Unix sockets:
+lb-1     |   - sockets/one.sock
+lb-1     |   - sockets/two.sock
+lb-1     | Container-optimized: queue=4096, connections=2048
+lb-1     | 
+lb-1     | 
+lb-1     | Load balancer stopped
+lb-1     | Backend 1 active connections: 0
+lb-1     | Backend 2 active connections: 0
+[Klb-1 exited with code 0
+[Kapp-2-1 exited with code 137
+[Kapp-1-1 exited with code 137
+log truncated at line 1000
