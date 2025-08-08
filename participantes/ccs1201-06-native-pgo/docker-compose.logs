@@ -1,0 +1,154 @@
+
+ app2 Pulling 
+ app1 Pulling 
+ 9824c27679d3 Already exists 
+ f5260396fdb6 Pulling fs layer 
+ 1af94bd388d4 Pulling fs layer 
+ 2999ac9bc5bb Pulling fs layer 
+ 9824c27679d3 Already exists 
+ f5260396fdb6 Pulling fs layer 
+ 1af94bd388d4 Pulling fs layer 
+ 2999ac9bc5bb Pulling fs layer 
+ 2999ac9bc5bb Downloading [>                                                  ]  185.3kB/18.47MB
+ 2999ac9bc5bb Downloading [>                                                  ]  185.3kB/18.47MB
+ f5260396fdb6 Download complete 
+ f5260396fdb6 Extracting [==================================================>]      92B/92B
+ f5260396fdb6 Download complete 
+ f5260396fdb6 Extracting [==================================================>]      92B/92B
+ f5260396fdb6 Extracting [==================================================>]      92B/92B
+ f5260396fdb6 Extracting [==================================================>]      92B/92B
+ 1af94bd388d4 Downloading [>                                                  ]  184.9kB/18.47MB
+ 1af94bd388d4 Downloading [>                                                  ]  184.9kB/18.47MB
+ f5260396fdb6 Pull complete 
+ f5260396fdb6 Pull complete 
+ 2999ac9bc5bb Downloading [========================>                          ]  8.936MB/18.47MB
+ 2999ac9bc5bb Downloading [========================>                          ]  8.936MB/18.47MB
+ 1af94bd388d4 Downloading [===========>                                       ]  4.098MB/18.47MB
+ 1af94bd388d4 Downloading [===========>                                       ]  4.098MB/18.47MB
+ 2999ac9bc5bb Downloading [===============================================>   ]  17.46MB/18.47MB
+ 2999ac9bc5bb Downloading [===============================================>   ]  17.46MB/18.47MB
+ 2999ac9bc5bb Verifying Checksum 
+ 2999ac9bc5bb Download complete 
+ 2999ac9bc5bb Download complete 
+ 1af94bd388d4 Downloading [===========================>                       ]  10.13MB/18.47MB
+ 1af94bd388d4 Downloading [===========================>                       ]  10.13MB/18.47MB
+ 1af94bd388d4 Download complete 
+ 1af94bd388d4 Verifying Checksum 
+ 1af94bd388d4 Download complete 
+ 1af94bd388d4 Extracting [>                                                  ]  196.6kB/18.47MB
+ 1af94bd388d4 Extracting [>                                                  ]  196.6kB/18.47MB
+ 1af94bd388d4 Extracting [=================>                                 ]  6.291MB/18.47MB
+ 1af94bd388d4 Extracting [=================>                                 ]  6.291MB/18.47MB
+ 1af94bd388d4 Extracting [====================================>              ]  13.57MB/18.47MB
+ 1af94bd388d4 Extracting [====================================>              ]  13.57MB/18.47MB
+ 1af94bd388d4 Extracting [==================================================>]  18.47MB/18.47MB
+ 1af94bd388d4 Extracting [==================================================>]  18.47MB/18.47MB
+ 1af94bd388d4 Extracting [==================================================>]  18.47MB/18.47MB
+ 1af94bd388d4 Extracting [==================================================>]  18.47MB/18.47MB
+ 1af94bd388d4 Pull complete 
+ 1af94bd388d4 Pull complete 
+ 2999ac9bc5bb Extracting [>                                                  ]  196.6kB/18.47MB
+ 2999ac9bc5bb Extracting [>                                                  ]  196.6kB/18.47MB
+ 2999ac9bc5bb Extracting [================>                                  ]  6.095MB/18.47MB
+ 2999ac9bc5bb Extracting [================>                                  ]  6.095MB/18.47MB
+ 2999ac9bc5bb Extracting [===================================>               ]  13.17MB/18.47MB
+ 2999ac9bc5bb Extracting [===================================>               ]  13.17MB/18.47MB
+ 2999ac9bc5bb Extracting [==================================================>]  18.47MB/18.47MB
+ 2999ac9bc5bb Extracting [==================================================>]  18.47MB/18.47MB
+ 2999ac9bc5bb Extracting [==================================================>]  18.47MB/18.47MB
+ 2999ac9bc5bb Extracting [==================================================>]  18.47MB/18.47MB
+ 2999ac9bc5bb Pull complete 
+ 2999ac9bc5bb Pull complete 
+ app1 Pulled 
+ app2 Pulled 
+ Network ccs1201-06-native-pgo_backend  Creating
+ Network ccs1201-06-native-pgo_backend  Created
+ Container backend-db  Creating
+ Container backend-db  Created
+ Container backend-api2  Creating
+ Container backend-api1  Creating
+ Container backend-api1  Created
+ Container backend-api2  Created
+ Container backend-nginx  Creating
+ Container backend-nginx  Created
+Attaching to backend-api1, backend-api2, backend-db, backend-nginx
+backend-db     | The files belonging to this database system will be owned by user "postgres".
+backend-db     | This user must also own the server process.
+backend-db     | 
+backend-db     | The database cluster will be initialized with locale "en_US.utf8".
+backend-db     | The default database encoding has accordingly been set to "UTF8".
+backend-db     | The default text search configuration will be set to "english".
+backend-db     | 
+backend-db     | Data page checksums are disabled.
+backend-db     | 
+backend-db     | fixing permissions on existing directory /var/lib/postgresql/data ... ok
+backend-db     | creating subdirectories ... ok
+backend-db     | selecting dynamic shared memory implementation ... posix
+backend-db     | selecting default "max_connections" ... 100
+backend-db     | selecting default "shared_buffers" ... 128MB
+backend-db     | selecting default time zone ... UTC
+backend-db     | creating configuration files ... ok
+backend-db     | running bootstrap script ... ok
+backend-db     | sh: locale: not found
+backend-db     | 2025-08-08 01:48:51.116 UTC [35] WARNING:  no usable system locales were found
+backend-db     | performing post-bootstrap initialization ... ok
+backend-db     | syncing data to disk ... ok
+backend-db     | 
+backend-db     | 
+backend-db     | Success. You can now start the database server using:
+backend-db     | 
+backend-db     |     pg_ctl -D /var/lib/postgresql/data -l logfile start
+backend-db     | 
+backend-db     | initdb: warning: enabling "trust" authentication for local connections
+backend-db     | initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
+backend-db     | waiting for server to start....2025-08-08 01:48:54.225 UTC [47] LOG:  starting PostgreSQL 17.5 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
+backend-db     | 2025-08-08 01:48:54.236 UTC [47] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+backend-db     | 2025-08-08 01:48:54.307 UTC [50] LOG:  database system was shut down at 2025-08-08 01:48:53 UTC
+backend-db     | 2025-08-08 01:48:54.318 UTC [47] LOG:  database system is ready to accept connections
+backend-db     |  done
+backend-db     | server started
+backend-db     | CREATE DATABASE
+backend-db     | 
+backend-db     | 
+backend-db     | /usr/local/bin/docker-entrypoint.sh: running /docker-entrypoint-initdb.d/init.sql
+backend-db     | CREATE TABLE
+backend-db     | CREATE INDEX
+backend-db     | INSERT 0 16757
+backend-db     | DELETE 16757
+backend-db     | 
+backend-db     | 
+backend-db     | /usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/postgresql.conf
+backend-db     | 
+backend-db     | waiting for server to shut down....2025-08-08 01:48:55.516 UTC [47] LOG:  received fast shutdown request
+backend-db     | 2025-08-08 01:48:55.526 UTC [47] LOG:  aborting any active transactions
+backend-db     | 2025-08-08 01:48:55.599 UTC [47] LOG:  background worker "logical replication launcher" (PID 53) exited with exit code 1
+backend-db     | 2025-08-08 01:48:55.603 UTC [48] LOG:  shutting down
+backend-db     | 2025-08-08 01:48:55.612 UTC [48] LOG:  checkpoint starting: shutdown immediate
+backend-db     | 2025-08-08 01:48:55.790 UTC [48] LOG:  checkpoint complete: wrote 1124 buffers (6.9%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.089 s, sync=0.065 s, total=0.188 s; sync files=306, longest=0.008 s, average=0.001 s; distance=4268 kB, estimate=4268 kB; lsn=0/1918270, redo lsn=0/1918270
+backend-db     | 2025-08-08 01:48:55.798 UTC [47] LOG:  database system is shut down
+backend-db     |  done
+backend-db     | server stopped
+backend-db     | 
+backend-db     | PostgreSQL init process complete; ready for start up.
+backend-db     | 
+backend-api1   | 
+backend-api1   |  ##########     (Si vis pacem, para bellum)     ##########
+backend-api1   | >>> ccs1201 follow on linkedisney -> https://www.linkedin.com/in/ccs1201/
+backend-api1   | >>> follow on github -> https://github.com/ccs1201
+backend-api1   | 
+backend-api1   | Aug 08, 2025 1:48:55 AM br.com.ccs.rinha.RinhaApp main
+backend-api1   | INFO: Starting server on port 8080
+backend-db     | 2025-08-08 01:48:55.903 UTC [1] LOG:  starting PostgreSQL 17.5 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
+backend-db     | 2025-08-08 01:48:55.904 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+backend-db     | 2025-08-08 01:48:55.904 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+backend-db     | 2025-08-08 01:48:55.920 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+backend-db     | 2025-08-08 01:48:55.939 UTC [72] LOG:  database system was shut down at 2025-08-08 01:48:55 UTC
+backend-api2   | 
+backend-api2   |  ##########     (Si vis pacem, para bellum)     ##########
+backend-api2   | >>> ccs1201 follow on linkedisney -> https://www.linkedin.com/in/ccs1201/
+backend-api2   | >>> follow on github -> https://github.com/ccs1201
+backend-api2   | 
+backend-api2   | Aug 08, 2025 1:48:55 AM br.com.ccs.rinha.RinhaApp main
+backend-api2   | INFO: Starting server on port 8080
+backend-db     | 2025-08-08 01:48:55.955 UTC [1] LOG:  database system is ready to accept connections
+Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: error during container init: error mounting "/home/rinha-user/rinha-de-backend-2025/participantes/ccs1201-06-native-pgo/nginx.conf" to rootfs at "/etc/nginx/nginx.conf": create mountpoint for /etc/nginx/nginx.conf mount: cannot create subdirectories in "/var/lib/docker/overlay2/f19d67a53e0c94d5c8e447797927699dd3c95d652b2121d21cce10f6d2d8c644/merged/etc/nginx/nginx.conf": not a directory: unknown: Are you trying to mount a directory onto a file (or vice-versa)? Check if the specified host path exists and is the expected type
