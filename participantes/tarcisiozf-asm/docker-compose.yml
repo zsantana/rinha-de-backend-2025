@@ -30,7 +30,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.9"
+          cpus: "0.5"
           memory: 100M
   app-2:
     <<: *base-app
@@ -46,7 +46,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.2"
+          cpus: "0.5"
           memory: 100M
 
 #  lb:
@@ -82,7 +82,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.4"
+          cpus: "0.5"
           memory: "150MB"
 
 volumes:

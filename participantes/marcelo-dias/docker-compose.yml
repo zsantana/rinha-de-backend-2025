@@ -2,14 +2,14 @@ version: '3.9'
 
 services:
   app1: &app
-    image: maruero/rinha-de-backend-2025:v2
+    image: maruero/rinha-de-backend-2025:v3
     hostname: app1
     environment:
       - PROCESSOR_URL=http://payment-processor-default:8080
       - FALLBACK_PROCESSOR_URL=http://payment-processor-fallback:8080
       - OTHER_INSTANCE_URL=http://app2:8080
-      - CONCURRENCY=2
-      - WORKER_COUNT=2
+      - CONCURRENCY=3
+      - WORKER_COUNT=3
     ports:
       - "8081:8080"
     networks:
@@ -18,8 +18,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.70"
-          memory: "159MB"
+          cpus: "0.6"
+          memory: "140MB"
 
   app2:
     <<: *app
@@ -28,15 +28,15 @@ services:
       - PROCESSOR_URL=http://payment-processor-default:8080
       - FALLBACK_PROCESSOR_URL=http://payment-processor-fallback:8080
       - OTHER_INSTANCE_URL=http://app1:8080
-      - CONCURRENCY=2
-      - WORKER_COUNT=2
+      - CONCURRENCY=3
+      - WORKER_COUNT=3
     ports:
       - "8082:8080"
     deploy:
       resources:
         limits:
-          cpus: "0.70"
-          memory: "159MB"
+          cpus: "0.6"
+          memory: "140MB"
 
   haproxy:
     image: haproxy:alpine
@@ -53,8 +53,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.10"
-          memory: "32MB"
+          cpus: "0.3"
+          memory: "70MB"
 
 networks:
   backend:

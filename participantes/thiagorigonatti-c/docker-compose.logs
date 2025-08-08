@@ -1,22 +1,22 @@
 
  Network thiagorigonatti-c_api  Creating
  Network thiagorigonatti-c_api  Created
+ Volume "thiagorigonatti-c_shm-vol"  Creating
+ Volume "thiagorigonatti-c_shm-vol"  Created
  Container thiagorigonatti-c-api02-1  Creating
  Container thiagorigonatti-c-api01-1  Creating
- Container thiagorigonatti-c-api02-1  Created
  Container thiagorigonatti-c-api01-1  Created
+ Container thiagorigonatti-c-api02-1  Created
  Container thiagorigonatti-c-haproxy-1  Creating
  Container thiagorigonatti-c-haproxy-1  Created
 Attaching to api01-1, api02-1, haproxy-1
-api01-1    | shm_open: Permission denied
 api01-1    | Servidor iniciado com sucesso
-api02-1    | shm_open: Permission denied
 api02-1    | Servidor iniciado com sucesso
 api01-1    | Servidor iniciado com sucesso
 api02-1    | Servidor iniciado com sucesso
+api01-1    | Servidor iniciado com sucesso
 haproxy-1  | [NOTICE]   (1) : Initializing new worker (8)
 haproxy-1  | [NOTICE]   (1) : Loading success.
-api01-1    | Servidor iniciado com sucesso
 api02-1    | Servidor iniciado com sucesso
 api01-1    | Servidor iniciado com sucesso
 api02-1    | Servidor iniciado com sucesso
@@ -69,7 +69,6 @@ api02-1    | -
 api02-1    | _
 api02-1    | : Operation in progress
 api01-1    | -
-api01-1    | -
 api01-1    | _
 api01-1    | : Operation in progress
 api02-1    | -
@@ -90,12 +89,12 @@ api02-1    | -
 api02-1    | _
 api02-1    | : Operation in progress
 api01-1    | -
+api01-1    | -
 api01-1    | _
 api01-1    | : Operation in progress
 api02-1    | -
 api02-1    | _
 api02-1    | : Operation in progress
-api01-1    | -
 api01-1    | -
 api01-1    | _
 api01-1    | : Operation in progress
@@ -131,10 +130,10 @@ api02-1    | -
 api02-1    | _
 api02-1    | : Operation in progress
 api01-1    | -
+api01-1    | -
+api02-1    | -
 api01-1    | _
 api01-1    | : Operation in progress
-api02-1    | -
-api02-1    | -
 api02-1    | _
 api02-1    | : Operation in progress
 api01-1    | -
@@ -181,10 +180,10 @@ api01-1    | -
 api01-1    | _
 api01-1    | : Operation in progress
 api02-1    | -
-api02-1    | -
+api01-1    | -
+api01-1    | -
 api02-1    | _
 api02-1    | : Operation in progress
-api01-1    | -
 api01-1    | _
 api01-1    | : Operation in progress
 api02-1    | -
@@ -201,6 +200,7 @@ api01-1    | -
 api01-1    | _
 api01-1    | : Operation in progress
 api02-1    | -
+api02-1    | -
 api02-1    | _
 api02-1    | : Operation in progress
 api01-1    | -
@@ -223,10 +223,10 @@ api02-1    | -
 api02-1    | -
 api02-1    | _
 api02-1    | : Operation in progress
+api02-1    | -
 api01-1    | -
 api01-1    | _
 api01-1    | : Operation in progress
-api02-1    | -
 api02-1    | _
 api02-1    | : Operation in progress
 api01-1    | -
@@ -288,10 +288,10 @@ api02-1    | -
 api02-1    | -
 api02-1    | _
 api02-1    | : Operation in progress
+api02-1    | -
 api01-1    | -
 api01-1    | _
 api01-1    | : Operation in progress
-api02-1    | -
 api02-1    | _
 api02-1    | : Operation in progress
 api01-1    | -
@@ -344,11 +344,11 @@ api01-1    | -
 api01-1    | _
 api01-1    | : Operation in progress
 api02-1    | -
-api02-1    | _
-api02-1    | : Operation in progress
 api01-1    | -
 api01-1    | _
+api02-1    | _
 api01-1    | : Operation in progress
+api02-1    | : Operation in progress
 api02-1    | -
 api02-1    | _
 api02-1    | : Operation in progress
@@ -378,23 +378,17 @@ api01-1    | : Operation in progress
 api02-1    | -
 api02-1    | _
 api02-1    | : Operation in progress
-api01-1    | -
-api01-1    | -
 api01-1    | -
-api01-1    | -
-api01-1    | -
-api01-1    | -
-api01-1    | -
 api01-1    | _
 api01-1    | : Operation in progress
 api02-1    | -
 api02-1    | _
 api02-1    | : Operation in progress
 api01-1    | -
-api01-1    | -
-api02-1    | -
 api01-1    | _
 api01-1    | : Operation in progress
+api02-1    | -
+api02-1    | -
 api02-1    | _
 api02-1    | : Operation in progress
 api01-1    | -
@@ -413,26 +407,31 @@ api02-1    | : Operation in progress
 api01-1    | -
 api01-1    | _
 api01-1    | : Operation in progress
+api01-1    | -
+api01-1    | -
 api02-1    | -
+api01-1    | -
+api01-1    | -
 api02-1    | _
 api02-1    | : Operation in progress
+api01-1    | -
 api01-1    | -
+api01-1    | -
 api01-1    | _
 api01-1    | : Operation in progress
 api02-1    | -
 api02-1    | _
 api02-1    | : Operation in progress
-api01-1    | -
 api01-1    | -
 api01-1    | _
 api01-1    | : Operation in progress
 api02-1    | -
 api02-1    | _
 api02-1    | : Operation in progress
+api02-1    | -
 api01-1    | -
 api01-1    | _
 api01-1    | : Operation in progress
-api02-1    | -
 api02-1    | _
 api02-1    | : Operation in progress
 api01-1    | -
@@ -486,7 +485,6 @@ api02-1    | -
 api02-1    | _
 api02-1    | : Operation in progress
 api01-1    | -
-api01-1    | -
 api01-1    | _
 api01-1    | : Operation in progress
 api02-1    | -
@@ -495,7 +493,10 @@ api02-1    | : Operation in progress
 api01-1    | -
 api01-1    | _
 api01-1    | : Operation in progress
+api01-1    | -
 api02-1    | -
+api01-1    | _
+api01-1    | : Operation in progress
 api02-1    | _
 api02-1    | : Operation in progress
 api02-1    | -
@@ -503,14 +504,9 @@ api02-1    | -
 api02-1    | -
 api02-1    | -
 api02-1    | -
-api02-1    | -
-api01-1    | -
-api01-1    | _
-api01-1    | : Operation in progress
 api02-1    | -
 api02-1    | _
 api02-1    | : Operation in progress
-api01-1    | -
 api01-1    | -
 api01-1    | _
 api01-1    | : Operation in progress
@@ -548,12 +544,13 @@ api02-1    | -
 api02-1    | _
 api02-1    | : Operation in progress
 api01-1    | -
+api01-1    | -
 api01-1    | _
 api01-1    | : Operation in progress
 api02-1    | -
-api01-1    | -
 api02-1    | _
 api02-1    | : Operation in progress
+api01-1    | -
 api01-1    | _
 api01-1    | : Operation in progress
 api02-1    | -
@@ -565,6 +562,7 @@ api01-1    | : Operation in progress
 api02-1    | -
 api02-1    | _
 api02-1    | : Operation in progress
+api01-1    | -
 api01-1    | -
 api01-1    | _
 api01-1    | : Operation in progress
@@ -593,12 +591,12 @@ api02-1    | : Operation in progress
 api01-1    | -
 api01-1    | _
 api01-1    | : Operation in progress
-api02-1    | -
-api02-1    | _
-api02-1    | : Operation in progress
 api01-1    | -
+api02-1    | -
 api01-1    | _
 api01-1    | : Operation in progress
+api02-1    | _
+api02-1    | : Operation in progress
 api02-1    | -
 api02-1    | _
 api02-1    | : Operation in progress
@@ -672,18 +670,19 @@ api01-1    | : Operation in progress
 api02-1    | -
 api02-1    | _
 api02-1    | : Operation in progress
-api01-1    | -
-api01-1    | _
-api01-1    | : Operation in progress
 api02-1    | -
 api01-1    | -
 api01-1    | _
 api01-1    | : Operation in progress
 api02-1    | _
 api02-1    | : Operation in progress
+api01-1    | -
+api01-1    | -
 api02-1    | -
 api02-1    | _
 api02-1    | : Operation in progress
+api01-1    | _
+api01-1    | : Operation in progress
 api01-1    | -
 api01-1    | _
 api01-1    | : Operation in progress
@@ -722,9 +721,9 @@ api02-1    | -
 api02-1    | _
 api02-1    | : Operation in progress
 api01-1    | -
-api01-1    | -
 api01-1    | _
 api01-1    | : Operation in progress
+api02-1    | -
 api02-1    | -
 api02-1    | _
 api02-1    | : Operation in progress
@@ -732,9 +731,9 @@ api01-1    | -
 api01-1    | _
 api01-1    | : Operation in progress
 api02-1    | -
-api01-1    | -
 api02-1    | _
 api02-1    | : Operation in progress
+api01-1    | -
 api01-1    | _
 api01-1    | : Operation in progress
 api02-1    | -
@@ -766,7 +765,6 @@ api02-1    | -
 api02-1    | _
 api02-1    | : Operation in progress
 api01-1    | -
-api01-1    | -
 api01-1    | _
 api01-1    | : Operation in progress
 api02-1    | -
@@ -782,11 +780,11 @@ api01-1    | -
 api01-1    | _
 api01-1    | : Operation in progress
 api02-1    | -
-api02-1    | _
-api02-1    | : Operation in progress
 api01-1    | -
 api01-1    | _
 api01-1    | : Operation in progress
+api02-1    | _
+api02-1    | : Operation in progress
 api02-1    | -
 api01-1    | -
 api01-1    | -
@@ -810,7 +808,6 @@ api02-1    | -
 api02-1    | _
 api02-1    | : Operation in progress
 api01-1    | -
-api02-1    | -
 api01-1    | _
 api01-1    | : Operation in progress
 api02-1    | -
@@ -834,16 +831,10 @@ api01-1    | : Operation in progress
 api02-1    | -
 api01-1    | -
 api01-1    | -
-api02-1    | _
-api02-1    | : Operation in progress
 api01-1    | _
-api01-1    | : Operation in progress
-api02-1    | -
 api02-1    | _
-api02-1    | : Operation in progress
-api01-1    | -
-api01-1    | _
 api01-1    | : Operation in progress
+api02-1    | : Operation in progress
 api02-1    | -
 api02-1    | _
 api02-1    | : Operation in progress
@@ -854,10 +845,9 @@ api02-1    | -
 api02-1    | _
 api02-1    | : Operation in progress
 api01-1    | -
-api02-1    | -
-api02-1    | -
 api01-1    | _
 api01-1    | : Operation in progress
+api02-1    | -
 api02-1    | _
 api02-1    | : Operation in progress
 api01-1    | -
@@ -873,19 +863,25 @@ api02-1    | -
 api02-1    | _
 api02-1    | : Operation in progress
 api01-1    | -
-api01-1    | -
-api02-1    | -
 api01-1    | _
 api01-1    | : Operation in progress
+api02-1    | -
 api02-1    | _
 api02-1    | : Operation in progress
 api02-1    | -
 api01-1    | -
 api02-1    | _
 api02-1    | : Operation in progress
+api01-1    | _
+api01-1    | : Operation in progress
+api01-1    | -
+api01-1    | -
 api01-1    | _
 api01-1    | : Operation in progress
 api01-1    | -
+api02-1    | -
+api02-1    | _
+api02-1    | : Operation in progress
 api01-1    | _
 api01-1    | : Operation in progress
 api02-1    | -
@@ -906,8 +902,8 @@ api01-1    | _
 api01-1    | : Operation in progress
 api02-1    | _
 api02-1    | : Operation in progress
-api01-1    | -
 api02-1    | -
+api01-1    | -
 api01-1    | _
 api01-1    | : Operation in progress
 api02-1    | _
@@ -925,9 +921,10 @@ api01-1    | -
 api01-1    | _
 api01-1    | : Operation in progress
 api02-1    | -
-api01-1    | -
 api02-1    | _
 api02-1    | : Operation in progress
+api01-1    | -
+api01-1    | -
 api01-1    | _
 api01-1    | : Operation in progress
 api02-1    | -
@@ -939,28 +936,28 @@ api01-1    | : Operation in progress
 api02-1    | -
 api02-1    | _
 api02-1    | : Operation in progress
-api02-1    | -
 api01-1    | -
 api01-1    | _
 api01-1    | : Operation in progress
+api02-1    | -
 api02-1    | _
 api02-1    | : Operation in progress
 api01-1    | -
 api01-1    | _
 api01-1    | : Operation in progress
 api02-1    | -
-api01-1    | -
 api02-1    | _
 api02-1    | : Operation in progress
+api01-1    | -
 api01-1    | -
 api01-1    | _
 api01-1    | : Operation in progress
 api02-1    | -
 api01-1    | -
-api02-1    | _
 api01-1    | _
-api02-1    | : Operation in progress
 api01-1    | : Operation in progress
+api02-1    | _
+api02-1    | : Operation in progress
 api02-1    | -
 api02-1    | _
 api02-1    | : Operation in progress
@@ -974,17 +971,17 @@ api01-1    | -
 api01-1    | _
 api01-1    | : Operation in progress
 api02-1    | -
-api01-1    | -
-api01-1    | -
 api02-1    | _
 api02-1    | : Operation in progress
+api01-1    | -
+api01-1    | -
 api01-1    | _
 api01-1    | : Operation in progress
 api02-1    | -
-api02-1    | _
-api02-1    | : Operation in progress
 api01-1    | -
+api02-1    | _
 api01-1    | _
+api02-1    | : Operation in progress
 api01-1    | : Operation in progress
 api02-1    | -
 api02-1    | _
@@ -996,6 +993,9 @@ api02-1    | -
 api02-1    | _
 api02-1    | : Operation in progress
 api01-1    | -
+api02-1    | -
+api02-1    | _
+api02-1    | : Operation in progress
 api01-1    | _
 api01-1    | : Operation in progress
 log truncated at line 1000
