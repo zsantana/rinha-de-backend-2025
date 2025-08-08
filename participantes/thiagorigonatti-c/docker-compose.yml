@@ -3,8 +3,8 @@ services:
   api01: &app
     image: thiagorigonatti/rinha-2025-scratch:0.0.3
     environment:
-      - HTTP_CLIENT_THREADS=6
-      - SOCKET_SERVER_THREADS=6
+      - HTTP_CLIENT_THREADS=3
+      - SOCKET_SERVER_THREADS=3
       - SHM_PATH=/shm_array
       - SOCKET_PATH=/dev/shm/server1.sock
     networks:
@@ -14,7 +14,7 @@ services:
       resources:
         limits:
           cpus: "0.50"
-          memory: "10MB"
+          memory: "50MB"
     volumes:
       - shm-vol:/dev/shm
 
@@ -22,8 +22,8 @@ services:
   api02:
     <<: *app
     environment:
-      - HTTP_CLIENT_THREADS=6
-      - SOCKET_SERVER_THREADS=6
+      - HTTP_CLIENT_THREADS=3
+      - SOCKET_SERVER_THREADS=3
       - SHM_PATH=/shm_array
       - SOCKET_PATH=/dev/shm/server2.sock
 
@@ -37,7 +37,7 @@ services:
       resources:
         limits:
           cpus: "0.50"
-          memory: "15MB"
+          memory: "50MB"
     networks:
       - api
     ports:
