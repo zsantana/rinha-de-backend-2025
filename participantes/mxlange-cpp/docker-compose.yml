@@ -2,6 +2,7 @@ networks:
     backend:
         driver: bridge
     payment-processor:
+        name: payment-processor
         external: true
 services:
     api1:

@@ -1,6 +1,6 @@
 x-service-templates:
   base: &base
-    image: josiney/rdb25_02-amd64:92dab29
+    image: josiney/rdb25_02-amd64:dcf26e4
     volumes:
       - sockets:/sockets
     networks:
@@ -13,7 +13,6 @@ services:
     <<: *base
     container_name: lb
     hostname: lb
-    cpuset: "1"
     deploy:
       resources:
         limits:
@@ -42,7 +41,6 @@ services:
     <<: *base
     container_name: api1
     hostname: api1
-    cpuset: "2"
     deploy:
       resources:
         limits:
@@ -66,7 +64,6 @@ services:
     <<: *base
     container_name: api2
     hostname: api2
-    cpuset: "3"
     deploy:
       resources:
         limits:
@@ -90,12 +87,11 @@ services:
     <<: *base
     container_name: worker1
     hostname: worker1
-    cpuset: "0"
     deploy:
       resources:
         limits:
           cpus: "0.75"
-          memory: "150MB"
+          memory: "100MB"
     environment:
       - SOCKET_PATH=/sockets/worker_http.sock
       - PAYMENTS_SOCKET_PATH=/sockets/payments.sock

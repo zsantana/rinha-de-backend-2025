@@ -1,7 +1,9 @@
 networks:
+    backend:
+        driver: bridge
     payment-processor:
         name: payment-processor
-        driver: bridge
+        external: true
 services:
     api1:
         image: mxlange/payment-api-only-go:v2.0.1
@@ -13,6 +15,7 @@ services:
             - WORKERS=10
         networks:
             - payment-processor
+            - backend
         deploy:
             resources:
                 limits:
@@ -28,6 +31,7 @@ services:
             - WORKERS=10
         networks:
             - payment-processor
+            - backend
         deploy:
             resources:
                 limits:
@@ -44,7 +48,7 @@ services:
         ports:
             - "9999:9999"
         networks:
-            - payment-processor
+            - backend
         deploy:
             resources:
                 limits:

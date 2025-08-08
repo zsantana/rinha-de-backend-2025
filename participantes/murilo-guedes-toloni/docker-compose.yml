@@ -6,6 +6,7 @@ services:
       - "9999:9999"
     volumes:
       - ./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
+      - sockets:/sockets
     depends_on:
       - api1
       - api2
@@ -16,9 +17,10 @@ services:
       resources:
         limits:
           cpus: "0.6"
-          memory: "100MB"
+          memory: "70MB"
+
   api1: &api
-    image: enermaxx/rinha-backend:2.2.12
+    image: enermaxx/rinha-standalone:1.0.0
     container_name: springboot-api1
     hostname: api1
     ports:
@@ -31,6 +33,10 @@ services:
       - FALLBACK_PROCESSOR_HOST=payment-processor-fallback
       - FALLBACK_PROCESSOR_PORT=8080
       - INSTANCE_ID=API-1
+      - SOCKET=/sockets/api1.sock
+      - PEER_SOCKET=/sockets/api2.sock
+    volumes:
+      - sockets:/sockets
     networks:
       - backend
       - payment-processor
@@ -38,7 +44,7 @@ services:
       resources:
         limits:
           cpus: "0.45"
-          memory: "125MB"
+          memory: "140MB"
 
   api2:
     <<: *api
@@ -54,13 +60,21 @@ services:
       - FALLBACK_PROCESSOR_HOST=payment-processor-fallback
       - FALLBACK_PROCESSOR_PORT=8080
       - INSTANCE_ID=API-2
+      - SOCKET=/sockets/api2.sock
+      - PEER_SOCKET=/sockets/api1.sock
+    volumes:
+      - sockets:/sockets
     deploy:
       resources:
         limits:
           cpus: "0.45"
-          memory: "125MB"
+          memory: "140MB"
+
 networks:
   backend:
     driver: bridge
   payment-processor:
     external: true
+
+volumes:
+  sockets:
