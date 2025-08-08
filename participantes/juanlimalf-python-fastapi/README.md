@@ -53,7 +53,7 @@ O sistema é composto por múltiplos containers que trabalham em conjunto:
 
 1. **Clone o repositório**
 ```bash
-git clone "https://github.com/Juanlimalf/payment_processor-rinha_backend_2025.git"
+git clone "https://github.com/Juanlimalf/payment_processor-rinha_backend_2025"
 cd payment-processor-rinha-backend
 ```
 
