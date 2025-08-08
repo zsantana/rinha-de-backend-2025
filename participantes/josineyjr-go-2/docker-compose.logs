@@ -1,0 +1,113 @@
+
+ lb Pulling 
+ api1 Pulling 
+ api2 Pulling 
+ worker1 Pulling 
+ 9824c27679d3 Already exists 
+ 929d3807d95e Already exists 
+ a6d9284ae959 Pulling fs layer 
+ 01b0670a8643 Pulling fs layer 
+ a6d9284ae959 Downloading [>                                                  ]  21.94kB/2.152MB
+ a6d9284ae959 Verifying Checksum 
+ a6d9284ae959 Download complete 
+ a6d9284ae959 Extracting [>                                                  ]  32.77kB/2.152MB
+ a6d9284ae959 Extracting [==================================================>]  2.152MB/2.152MB
+ a6d9284ae959 Extracting [==================================================>]  2.152MB/2.152MB
+ a6d9284ae959 Pull complete 
+ 9824c27679d3 Already exists 
+ 929d3807d95e Already exists 
+ a6d9284ae959 Already exists 
+ 01b0670a8643 Pulling fs layer 
+ 9824c27679d3 Already exists 
+ 929d3807d95e Already exists 
+ a6d9284ae959 Already exists 
+ 01b0670a8643 Pulling fs layer 
+ 9824c27679d3 Already exists 
+ 929d3807d95e Already exists 
+ a6d9284ae959 Already exists 
+ 01b0670a8643 Pulling fs layer 
+ 01b0670a8643 Downloading [>                                                  ]  30.09kB/2.887MB
+ 01b0670a8643 Downloading [>                                                  ]  30.09kB/2.887MB
+ 01b0670a8643 Downloading [>                                                  ]  30.09kB/2.887MB
+ 01b0670a8643 Downloading [>                                                  ]  30.09kB/2.887MB
+ 01b0670a8643 Downloading [==>                                                ]  152.2kB/2.887MB
+ 01b0670a8643 Downloading [==>                                                ]  152.2kB/2.887MB
+ 01b0670a8643 Downloading [==>                                                ]  152.2kB/2.887MB
+ 01b0670a8643 Downloading [==>                                                ]  152.2kB/2.887MB
+ 01b0670a8643 Downloading [=======>                                           ]    426kB/2.887MB
+ 01b0670a8643 Downloading [=======>                                           ]    426kB/2.887MB
+ 01b0670a8643 Downloading [=======>                                           ]    426kB/2.887MB
+ 01b0670a8643 Downloading [=======>                                           ]    426kB/2.887MB
+ 01b0670a8643 Downloading [==================>                                ]  1.065MB/2.887MB
+ 01b0670a8643 Downloading [==================>                                ]  1.065MB/2.887MB
+ 01b0670a8643 Downloading [==================>                                ]  1.065MB/2.887MB
+ 01b0670a8643 Downloading [==================>                                ]  1.065MB/2.887MB
+ 01b0670a8643 Downloading [==========================================>        ]  2.454MB/2.887MB
+ 01b0670a8643 Downloading [==========================================>        ]  2.454MB/2.887MB
+ 01b0670a8643 Downloading [==========================================>        ]  2.454MB/2.887MB
+ 01b0670a8643 Downloading [==========================================>        ]  2.454MB/2.887MB
+ 01b0670a8643 Verifying Checksum 
+ 01b0670a8643 Download complete 
+ 01b0670a8643 Download complete 
+ 01b0670a8643 Download complete 
+ 01b0670a8643 Extracting [>                                                  ]  32.77kB/2.887MB
+ 01b0670a8643 Download complete 
+ 01b0670a8643 Extracting [>                                                  ]  32.77kB/2.887MB
+ 01b0670a8643 Extracting [>                                                  ]  32.77kB/2.887MB
+ 01b0670a8643 Extracting [>                                                  ]  32.77kB/2.887MB
+ 01b0670a8643 Extracting [==================================================>]  2.887MB/2.887MB
+ 01b0670a8643 Extracting [==================================================>]  2.887MB/2.887MB
+ 01b0670a8643 Extracting [==================================================>]  2.887MB/2.887MB
+ 01b0670a8643 Extracting [==================================================>]  2.887MB/2.887MB
+ 01b0670a8643 Pull complete 
+ 01b0670a8643 Pull complete 
+ 01b0670a8643 Pull complete 
+ 01b0670a8643 Pull complete 
+ lb Pulled 
+ worker1 Pulled 
+ api1 Pulled 
+ api2 Pulled 
+ Volume "josineyjr-go-2_sockets"  Creating
+ Volume "josineyjr-go-2_sockets"  Created
+ Container worker1  Creating
+ Container worker1  Created
+ Container api2  Creating
+ Container api1  Creating
+ Container api2  Created
+ Container api1  Created
+ Container lb  Creating
+ Container lb  Created
+Attaching to api1, api2, lb, worker1
+worker1  | {"level":"info","time":"2025-08-08T11:29:53Z","message":"Worker started successfully, listening on sockets."}
+api1     | {"level":"info","time":"2025-08-08T11:29:53Z","message":"gnet server starting on unix:///sockets/api2.sock"}
+api1     | [gnet] 2025-08-08T11:29:53.395842461Z	INFO	logging/logger.go:256	Launching gnet with 6 event-loops, listening on: unix:///sockets/api2.sock
+api1     | {"level":"info","time":"2025-08-08T11:29:53Z","message":"gnet server started on port :80"}
+api2     | {"level":"info","time":"2025-08-08T11:29:53Z","message":"gnet server starting on unix:///sockets/api3.sock"}
+api2     | [gnet] 2025-08-08T11:29:53.434464575Z	INFO	logging/logger.go:256	Launching gnet with 6 event-loops, listening on: unix:///sockets/api3.sock
+api2     | {"level":"info","time":"2025-08-08T11:29:53Z","message":"gnet server started on port :80"}
+lb       | {"level":"info","time":"2025-08-08T11:29:53Z","message":"gnet server starting on tcp4://:80"}
+lb       | [gnet] 2025-08-08T11:29:53.715365556Z	INFO	logging/logger.go:256	Launching gnet with 6 event-loops, listening on: tcp4://:80
+lb       | {"level":"info","time":"2025-08-08T11:29:53Z","message":"gnet server started on port :80"}
+api2     | {"level":"info","duration":"1.734743ms","time":"2025-08-08T11:30:09Z","message":"payments"}
+api2     | {"level":"info","duration":"3.680341ms","time":"2025-08-08T11:30:28Z","message":"payments"}
+api1     | {"level":"info","duration":"2.150794ms","time":"2025-08-08T11:30:33Z","message":"payments"}
+lb       | {"level":"info","duration":"1.416718ms","time":"2025-08-08T11:30:44Z","message":"payments"}
+lb       | {"level":"info","duration":"1.048294ms","time":"2025-08-08T11:30:45Z","message":"payments"}
+lb       | {"level":"info","duration":"1.052488ms","time":"2025-08-08T11:30:55Z","message":"payments"}
+api2     | {"level":"info","duration":"1.130779ms","time":"2025-08-08T11:30:56Z","message":"payments"}
+api2     | {"level":"info","duration":"2.038727ms","time":"2025-08-08T11:30:56Z","message":"payments"}
+lb       | {"level":"info","duration":"1.071716ms","time":"2025-08-08T11:31:00Z","message":"payments"}
+lb       | {"level":"info","duration":"1.797203ms","time":"2025-08-08T11:31:00Z","message":"payments"}
+lb       | {"level":"info","duration":"2.396413ms","time":"2025-08-08T11:31:00Z","message":"payments"}
+api2     | {"level":"info","duration":"1.348337ms","time":"2025-08-08T11:31:00Z","message":"payments"}
+lb       | {"level":"info","duration":"1.898304ms","time":"2025-08-08T11:31:00Z","message":"payments"}
+lb       | {"level":"info","duration":"1.132565ms","time":"2025-08-08T11:31:00Z","message":"payments"}
+lb       | {"level":"info","duration":"1.029313ms","time":"2025-08-08T11:31:01Z","message":"payments"}
+api2     | {"level":"info","duration":"2.478215ms","time":"2025-08-08T11:31:01Z","message":"payments"}
+lb       | {"level":"info","duration":"1.470017ms","time":"2025-08-08T11:31:02Z","message":"payments"}
+[Klb exited with code 137
+[Kapi2 exited with code 137
+[Kapi1 exited with code 137
+worker1  | {"level":"info","time":"2025-08-08T11:31:25Z","message":"Worker stopped gracefully."}
+[Kworker1 exited with code 0
+log truncated at line 1000
