@@ -1,0 +1,27 @@
+
+ Network tarcisiozf-asm_app  Creating
+ Network tarcisiozf-asm_app  Created
+ Volume "tarcisiozf-asm_app-data"  Creating
+ Volume "tarcisiozf-asm_app-data"  Created
+ Volume "tarcisiozf-asm_sockets"  Creating
+ Volume "tarcisiozf-asm_sockets"  Created
+ Container tarcisiozf-asm-app-2-1  Creating
+ Container tarcisiozf-asm-lb-1  Creating
+ Container tarcisiozf-asm-app-1-1  Creating
+ Container tarcisiozf-asm-app-2-1  Created
+ Container tarcisiozf-asm-lb-1  Created
+ Container tarcisiozf-asm-app-1-1  Created
+Attaching to app-1-1, app-2-1, lb-1
+app-2-1  | v3
+app-1-1  | v3
+lb-1     | Zero-Copy Server listening on port 9999
+lb-1     | POST requests -> 200 OK with Content-Length: 0
+lb-1     | GET requests  -> 200 OK with JSON (94 bytes)
+lb-1     | Using ZERO-COPY for all responses
+lb-1     | 
+lb-1     | 
+lb-1     | Server stopped
+[Klb-1 exited with code 0
+[Kapp-2-1 exited with code 137
+[Kapp-1-1 exited with code 137
+log truncated at line 1000
