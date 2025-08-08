@@ -16,10 +16,10 @@ services:
       resources:
         limits:
           cpus: "0.2"
-          memory: "30MB"
+          memory: "10MB"
 
   rinhaquark2025-a: &rinhaquark2025
-    image: kauanmocelin/rinhaquark2025:1.0.3
+    image: kauanmocelin/rinhaquark2025:1.0.4
     container_name: rinhaquark2025-a
     environment:
       - QUARKUS_MONGODB_CONNECTION_STRING=mongodb://mongo:27017
@@ -33,7 +33,7 @@ services:
       resources:
         limits:
           cpus: "0.5"
-          memory: "70MB"
+          memory: "80MB"
 
   rinhaquark2025-b:
     <<: *rinhaquark2025
@@ -45,7 +45,9 @@ services:
     ports:
       - "27017:27017"
     volumes:
+      - ./mongod.conf:/etc/mongod.conf:ro
       - mongo-data:/data/db
+    command: [ "mongod", "--config", "/etc/mongod.conf" ]
     networks:
       - rinhaquark-rede
     deploy:
