@@ -14,10 +14,10 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.30"
-          memory: "10MB"
+          cpus: "0.40"
+          memory: "50MB"
     ipc: container:shared-memory
-    cpuset: "3"
+    cpuset: "0"
     depends_on:
       - shared-memory
 
@@ -30,18 +30,18 @@ services:
       - SHM_PATH=/shm_array
       - SOCKET_PATH=/dev/shm/server2.sock
     ipc: container:shared-memory
-    cpuset: "4"
+    cpuset: "1"
 
   shared-memory:
     image: alpine:latest
     command: tail -f /dev/null
     ipc: shareable
-    shm_size: 1mb
+    shm_size: 512kb
     container_name: shared-memory
     deploy:
       resources:
         limits:
-          cpus: "0.05"
+          cpus: "0.10"
           memory: "10MB"
 
   haproxy:
@@ -55,7 +55,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.85"
+          cpus: "0.60"
           memory: "100MB"
     depends_on:
       - backend01
