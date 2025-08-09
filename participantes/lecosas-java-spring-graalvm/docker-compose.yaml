@@ -22,7 +22,7 @@ services:
           memory: "60MB"
 
   backend-01: &backend
-    image: lecosas/rinha-backend-2025-java-spring-graalvm:latest
+    image: lecosas/rinha-backend-2025-java-spring-graalvm:0.1
     container_name: backend-01
     hostname: backend-01
     networks:
