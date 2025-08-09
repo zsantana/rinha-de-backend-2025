@@ -10,7 +10,6 @@ services:
       - OTHER_INSTANCE_URL=http://app2:8080
       - CONCURRENCY=2
       - WORKER_COUNT=2
-      - FEE_DIFFERENCE=3
     ports:
       - "8081:8080"
     networks:
@@ -19,7 +18,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.6"
+          cpus: "0.4"
           memory: "112MB"
 
   app2:
@@ -31,13 +30,12 @@ services:
       - OTHER_INSTANCE_URL=http://app1:8080
       - CONCURRENCY=2
       - WORKER_COUNT=2
-      - FEE_DIFFERENCE=3
     ports:
       - "8082:8080"
     deploy:
       resources:
         limits:
-          cpus: "0.6"
+          cpus: "0.4"
           memory: "112MB"
 
   haproxy:
@@ -55,7 +53,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.3"
+          cpus: "0.7"
           memory: "124MB"
 
 networks:
