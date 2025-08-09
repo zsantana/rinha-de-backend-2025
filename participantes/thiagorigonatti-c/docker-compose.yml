@@ -4,7 +4,7 @@ services:
     image: thiagorigonatti/rinha-2025-scratch:0.0.3
     environment:
       - HTTP_CLIENT_THREADS=6
-      - SOCKET_SERVER_THREADS=6
+      - SOCKET_SERVER_THREADS=1
       - SHM_PATH=/shm_array
       - SOCKET_PATH=/dev/shm/server1.sock
     networks:
@@ -14,7 +14,7 @@ services:
       resources:
         limits:
           cpus: "0.50"
-          memory: "125MB"
+          memory: "100MB"
     volumes:
       - shm-vol:/dev/shm
 
@@ -23,7 +23,7 @@ services:
     <<: *app
     environment:
       - HTTP_CLIENT_THREADS=6
-      - SOCKET_SERVER_THREADS=6
+      - SOCKET_SERVER_THREADS=1
       - SHM_PATH=/shm_array
       - SOCKET_PATH=/dev/shm/server2.sock
 
@@ -60,4 +60,4 @@ volumes:
     driver_opts:
       type: tmpfs
       device: tmpfs
-      o: size=1m
+      o: size=8m
