@@ -1,6 +1,6 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Fri Aug  8 09:48:02 PM -03 2025**
-289 submissões / 255 resultados / 34 submissões com erro
+Atualizado em **Fri Aug  8 09:57:12 PM -03 2025**
+290 submissões / 256 resultados / 34 submissões com erro
 
 
 | participante | p99 | bônus por desempenho (%) | multa ($) | lucro | submissão |
@@ -144,6 +144,7 @@ Atualizado em **Fri Aug  8 09:48:02 PM -03 2025**
 |	kauanmocelin-quarkus	|	16.59ms	|	0%	|	0	|	130944.985	|	[kauanmocelin-quarkus](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/kauanmocelin-quarkus)
 |	lbattochio-dotnet	|	54.05ms	|	0%	|	0	|	315108.54	|	[lbattochio-dotnet](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/lbattochio-dotnet)
 |	lczago-go	|	4.39ms	|	13%	|	108880.3624999919	|	242647.66499998193	|	[lczago-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/lczago-go)
+|	leandroalves-haskell	|	794.53ms	|	0%	|	0	|	0	|	[leandroalves-haskell](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/leandroalves-haskell)
 |	lecosas-java-spring-graalvm	|	3.7ms	|	15%	|	0	|	0	|	[lecosas-java-spring-graalvm](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/lecosas-java-spring-graalvm)
 |	lecosas-java-spring	|	5ms	|	12%	|	0	|	333109.7616	|	[lecosas-java-spring](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/lecosas-java-spring)
 |	leeozaka-dotnet	|	2.29ms	|	17%	|	99209.80825	|	232434.4079	|	[leeozaka-dotnet](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/leeozaka-dotnet)
