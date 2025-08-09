@@ -7,6 +7,7 @@ services:
       # --- Client and Health Check Settings ---
       PAYMENT_PROCESSOR_DEFAULT_URL: "http://payment-processor-default:8080"
       PAYMENT_PROCESSOR_FALLBACK_URL: "http://payment-processor-fallback:8080"
+      RINHA_PROCESSOR_FALLBACK_TOLERANCE_MS: 2000
     sysctls:
       net.core.somaxconn: 4096
     ports:
