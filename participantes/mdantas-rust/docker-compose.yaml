@@ -1,6 +1,6 @@
 services:
   load-balance:
-    image: lpj145/rinha-lb:1.12
+    image: lpj145/rinha-lb:1.13
     # build:
     #   context: .
     #   dockerfile: Dockerfile
@@ -16,7 +16,7 @@ services:
     depends_on:
       - api1
       - api2
-    cpus: "0.7"
+    cpus: "1"
     mem_limit: "45MB"
     # sysctls:
     #   net.core.somaxconn: "65535"
@@ -24,7 +24,7 @@ services:
     #   net.ipv4.tcp_max_syn_backlog: "16384"
 
   api1: &api
-    image: lpj145/rinha-lb:1.12
+    image: lpj145/rinha-lb:1.13
     # build:
     #   context: .
     #   dockerfile: Dockerfile
