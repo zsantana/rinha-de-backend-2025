@@ -20,10 +20,10 @@ services:
           cpus: "0.30"
           memory: "50MB"
   api1:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    #image: danielsuhett1999/rinha-backend-go:1.0.10
+    #build:
+    #  context: .
+    #  dockerfile: Dockerfile
+    image: danielsuhett1999/rinha-backend-go:1.1.5
     hostname: api1
     volumes:
       - sockets:/var/run/sockets
@@ -51,13 +51,13 @@ services:
       resources:
         limits:
           cpus: "0.30"
-          memory: "125MB"
+          memory: "83MB"
   api2:
     #build:
     #  context: .
     #  dockerfile: Dockerfile
     #image: danielsuhett1999/rinha-backend-go:1.0.10
-    image: danielsuhett1999/rinha-backend-go:1.1.4
+    image: danielsuhett1999/rinha-backend-go:1.1.5
     hostname: api2
     volumes:
       - sockets:/var/run/sockets
@@ -85,12 +85,12 @@ services:
       resources:
         limits:
           cpus: "0.30"
-          memory: "125MB"
+          memory: "83MB"
   api3:
     # build:
     #  context: .
     #  dockerfile: Dockerfile
-    image: danielsuhett1999/rinha-backend-go:1.1.4
+    image: danielsuhett1999/rinha-backend-go:1.1.5
     hostname: api3
     volumes:
       - sockets:/var/run/sockets
@@ -118,7 +118,7 @@ services:
       resources:
         limits:
           cpus: "0.30"
-          memory: "125MB"
+          memory: "83MB"
   redis:
     image: valkey/valkey:7.2-alpine
     container_name: go-rinha-redis
