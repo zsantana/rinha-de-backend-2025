@@ -4,8 +4,8 @@ services:
     image: thiagorigonatti/rinha-2025-scratch:0.0.4
     container_name: backend01
     environment:
-      - HTTP_CLIENT_THREADS=6
-      - SOCKET_SERVER_THREADS=6
+      - HTTP_CLIENT_THREADS=3
+      - SOCKET_SERVER_THREADS=3
       - SHM_PATH=/shm_array
       - SOCKET_PATH=/dev/shm/server1.sock
     networks:
@@ -15,7 +15,7 @@ services:
       resources:
         limits:
           cpus: "0.48"
-          memory: "50MB"
+          memory: "20MB"
     ipc: container:shared-memory
     depends_on:
       - shared-memory
@@ -24,8 +24,8 @@ services:
     <<: *backend
     container_name: backend02
     environment:
-      - HTTP_CLIENT_THREADS=6
-      - SOCKET_SERVER_THREADS=6
+      - HTTP_CLIENT_THREADS=3
+      - SOCKET_SERVER_THREADS=3
       - SHM_PATH=/shm_array
       - SOCKET_PATH=/dev/shm/server2.sock
     ipc: container:shared-memory
@@ -54,7 +54,7 @@ services:
       resources:
         limits:
           cpus: "0.50"
-          memory: "200MB"
+          memory: "50MB"
     depends_on:
       - backend01
       - backend02
