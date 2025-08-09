@@ -1,4 +1,52 @@
 
+ load-balance Pulling 
+ api2 Pulling 
+ api1 Pulling 
+ 0bdf2c4d1714 Already exists 
+ 8d787b843ebf Already exists 
+ 77028b693349 Pulling fs layer 
+ d6badc60d20d Pulling fs layer 
+ 5e8fa25dae7d Pulling fs layer 
+ 77028b693349 Downloading [>                                                  ]  3.671kB/246.2kB
+ 5e8fa25dae7d Downloading [===========================================>       ]     935B/1.08kB
+ 5e8fa25dae7d Downloading [==================================================>]   1.08kB/1.08kB
+ 5e8fa25dae7d Verifying Checksum 
+ 5e8fa25dae7d Download complete 
+ d6badc60d20d Downloading [===========================================>       ]     935B/1.068kB
+ d6badc60d20d Downloading [==================================================>]  1.068kB/1.068kB
+ d6badc60d20d Verifying Checksum 
+ d6badc60d20d Download complete 
+ 77028b693349 Downloading [==================================================>]  246.2kB/246.2kB
+ 77028b693349 Download complete 
+ 77028b693349 Extracting [======>                                            ]  32.77kB/246.2kB
+ 77028b693349 Extracting [==================================================>]  246.2kB/246.2kB
+ 77028b693349 Extracting [==================================================>]  246.2kB/246.2kB
+ 77028b693349 Pull complete 
+ d6badc60d20d Extracting [==================================================>]  1.068kB/1.068kB
+ d6badc60d20d Extracting [==================================================>]  1.068kB/1.068kB
+ 0bdf2c4d1714 Already exists 
+ 8d787b843ebf Already exists 
+ 77028b693349 Already exists 
+ d6badc60d20d Pulling fs layer 
+ 5e8fa25dae7d Pulling fs layer 
+ 5e8fa25dae7d Download complete 
+ d6badc60d20d Extracting [==================================================>]  1.068kB/1.068kB
+ d6badc60d20d Pull complete 
+ d6badc60d20d Pull complete 
+ 5e8fa25dae7d Extracting [==================================================>]   1.08kB/1.08kB
+ 5e8fa25dae7d Extracting [==================================================>]   1.08kB/1.08kB
+ 5e8fa25dae7d Extracting [==================================================>]   1.08kB/1.08kB
+ 5e8fa25dae7d Extracting [==================================================>]   1.08kB/1.08kB
+ 5e8fa25dae7d Pull complete 
+ 5e8fa25dae7d Pull complete 
+ 0bdf2c4d1714 Already exists 
+ 8d787b843ebf Already exists 
+ 77028b693349 Already exists 
+ d6badc60d20d Already exists 
+ 5e8fa25dae7d Already exists 
+ load-balance Pulled 
+ api1 Pulled 
+ api2 Pulled 
  Network mdantas-rust_backend  Creating
  Network mdantas-rust_backend  Created
  Container mdantas-rust-api2-1  Creating
@@ -14,13 +62,13 @@ api1-1          | /app/scripts/tune-sysctl.sh: 10: cannot create /proc/sys/net/c
 api1-1          | /app/scripts/tune-sysctl.sh: 10: cannot create /proc/sys/net/core/wmem_max: Directory nonexistent
 api1-1          | /app/scripts/tune-sysctl.sh: 10: cannot create /proc/sys/net/ipv4/tcp_tw_reuse: Read-only file system
 api1-1          | /app/scripts/tune-sysctl.sh: 10: cannot create /proc/sys/net/ipv4/tcp_max_syn_backlog: Read-only file system
-api1-1          | Starting worker on: /var/run/sockets/worker.sock
 api2-1          | /app/scripts/tune-sysctl.sh: 10: cannot create /proc/sys/net/core/somaxconn: Read-only file system
 api2-1          | /app/scripts/tune-sysctl.sh: 10: cannot create /proc/sys/net/ipv4/tcp_fastopen: Read-only file system
 api2-1          | /app/scripts/tune-sysctl.sh: 10: cannot create /proc/sys/net/core/rmem_max: Directory nonexistent
 api2-1          | /app/scripts/tune-sysctl.sh: 10: cannot create /proc/sys/net/core/wmem_max: Directory nonexistent
 api2-1          | /app/scripts/tune-sysctl.sh: 10: cannot create /proc/sys/net/ipv4/tcp_tw_reuse: Read-only file system
 api2-1          | /app/scripts/tune-sysctl.sh: 10: cannot create /proc/sys/net/ipv4/tcp_max_syn_backlog: Read-only file system
+api1-1          | Starting worker on: /var/run/sockets/worker.sock
 api2-1          | Starting worker on: /var/run/sockets/api2.sock
 load-balance-1  | /app/scripts/tune-sysctl.sh: 10: cannot create /proc/sys/net/core/somaxconn: Read-only file system
 load-balance-1  | /app/scripts/tune-sysctl.sh: 10: cannot create /proc/sys/net/ipv4/tcp_fastopen: Read-only file system
@@ -29,8 +77,7 @@ load-balance-1  | /app/scripts/tune-sysctl.sh: 10: cannot create /proc/sys/net/c
 load-balance-1  | /app/scripts/tune-sysctl.sh: 10: cannot create /proc/sys/net/ipv4/tcp_tw_reuse: Read-only file system
 load-balance-1  | /app/scripts/tune-sysctl.sh: 10: cannot create /proc/sys/net/ipv4/tcp_max_syn_backlog: Read-only file system
 load-balance-1  | Starting in Load Balance mode on port: 9999
-load-balance-1  | Starting load balancer with 8 threads (available: 1, env: Some(8), cgroup: Some(2))
+load-balance-1  | Starting server on port 9999 with 1 event loop thread(s)
 [Kload-balance-1 exited with code 137
-[Kapi2-1 exited with code 137
 [Kapi1-1 exited with code 137
 log truncated at line 1000
