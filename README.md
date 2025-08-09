@@ -29,7 +29,6 @@ Você também pode assistir a [esse vídeo](https://www.youtube.com/watch?v=ldPk
 ## Pontos em Aberto
 
 O seguinte são questões ainda não foram endereçados ou são pontos em aberto:
-- Automação decente da execução dos testes
 - Script final do teste
 
 *Por favor, contribua com esse evento revisando textos, reportando problemas, bugs e inconsistências, dando sugestões e divulgando. Faça parte dessa comunidade!*
