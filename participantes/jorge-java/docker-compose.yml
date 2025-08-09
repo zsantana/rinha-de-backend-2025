@@ -15,7 +15,7 @@ services:
       resources:
         limits:
           cpus: "0.6"
-          memory: "130MB"
+          memory: "140MB"
 
   api2:
     image: jorgedevsoftware/jorge-rinha:7.0
@@ -31,7 +31,7 @@ services:
       resources:
         limits:
           cpus: "0.6"
-          memory: "130MB"
+          memory: "140MB"
 
   haproxy:
     image: haproxy:latest
