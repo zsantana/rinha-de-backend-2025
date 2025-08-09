@@ -1,0 +1,94 @@
+
+ go-backend-1 Pulling 
+ go-worker-1 Pulling 
+ go-backend-2 Pulling 
+ redis Pulling 
+ 01d036902a3c Already exists 
+ 01d036902a3c Already exists 
+ afa2b6c5e925 Already exists 
+ ab9b8f97ec34 Pulling fs layer 
+ afa2b6c5e925 Already exists 
+ redis Pulled 
+ e1621b9e91c0 Pulling fs layer 
+ 01d036902a3c Already exists 
+ afa2b6c5e925 Already exists 
+ ab9b8f97ec34 Pulling fs layer 
+ ab9b8f97ec34 Downloading [>                                                  ]  43.74kB/4.269MB
+ ab9b8f97ec34 Downloading [>                                                  ]  43.74kB/4.269MB
+ ab9b8f97ec34 Download complete 
+ ab9b8f97ec34 Download complete 
+ ab9b8f97ec34 Extracting [>                                                  ]  65.54kB/4.269MB
+ ab9b8f97ec34 Extracting [>                                                  ]  65.54kB/4.269MB
+ ab9b8f97ec34 Extracting [==================================================>]  4.269MB/4.269MB
+ ab9b8f97ec34 Extracting [==================================================>]  4.269MB/4.269MB
+ ab9b8f97ec34 Pull complete 
+ ab9b8f97ec34 Pull complete 
+ go-backend-1 Pulled 
+ go-backend-2 Pulled 
+ e1621b9e91c0 Downloading [>                                                  ]  41.14kB/4.105MB
+ e1621b9e91c0 Downloading [==================================================>]  4.105MB/4.105MB
+ e1621b9e91c0 Download complete 
+ e1621b9e91c0 Extracting [>                                                  ]  65.54kB/4.105MB
+ e1621b9e91c0 Extracting [==================================================>]  4.105MB/4.105MB
+ e1621b9e91c0 Extracting [==================================================>]  4.105MB/4.105MB
+ e1621b9e91c0 Pull complete 
+ go-worker-1 Pulled 
+ Network davidalecrim1-go-4_app  Creating
+ Network davidalecrim1-go-4_app  Created
+ Volume "davidalecrim1-go-4_api-sockets"  Creating
+ Volume "davidalecrim1-go-4_api-sockets"  Created
+ Container redis-db  Creating
+ Container redis-db  Created
+ Container go-backend-2  Creating
+ Container go-backend-1  Creating
+ Container go-backend-2  Created
+ Container go-backend-1  Created
+ Container go-worker-1  Creating
+ Container load-balancer-nginx  Creating
+ Container go-worker-1  Created
+ Container load-balancer-nginx  Created
+Attaching to go-backend-1, go-backend-2, go-worker-1, load-balancer-nginx, redis-db
+redis-db             | 1:C 09 Aug 2025 14:28:29.626 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+redis-db             | 1:C 09 Aug 2025 14:28:29.626 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+redis-db             | 1:C 09 Aug 2025 14:28:29.626 * Redis version=8.0.3, bits=64, commit=00000000, modified=1, pid=1, just started
+redis-db             | 1:C 09 Aug 2025 14:28:29.626 * Configuration loaded
+redis-db             | 1:M 09 Aug 2025 14:28:29.626 * monotonic clock: POSIX clock_gettime
+redis-db             | 1:M 09 Aug 2025 14:28:29.627 * Running mode=standalone, port=6379.
+redis-db             | 1:M 09 Aug 2025 14:28:29.627 * Server initialized
+redis-db             | 1:M 09 Aug 2025 14:28:29.627 * Ready to accept connections tcp
+go-backend-1         | panic: failed to connect to redis: dial unix /var/run/redis.sock: connect: no such file or directory
+go-backend-1         | 
+go-backend-1         | goroutine 1 [running]:
+go-backend-1         | main.main()
+go-backend-1         | 	./main.go:63 +0x81b
+go-backend-2         | panic: failed to connect to redis: dial unix /var/run/redis.sock: connect: no such file or directory
+go-backend-2         | 
+go-backend-2         | goroutine 1 [running]:
+go-backend-2         | main.main()
+go-backend-2         | 	./main.go:63 +0x81b
+[Kgo-backend-1 exited with code 2
+[Kgo-backend-2 exited with code 2
+load-balancer-nginx  | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+load-balancer-nginx  | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+load-balancer-nginx  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+load-balancer-nginx  | 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+load-balancer-nginx  | 10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
+load-balancer-nginx  | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+load-balancer-nginx  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+load-balancer-nginx  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+load-balancer-nginx  | /docker-entrypoint.sh: Configuration complete; ready for start up
+go-worker-1          | panic: failed to connect to redis: dial unix /var/run/redis.sock: connect: no such file or directory
+go-worker-1          | 
+go-worker-1          | goroutine 1 [running]:
+go-worker-1          | main.main()
+go-worker-1          | 	./main.go:61 +0x4a5
+load-balancer-nginx  | 2025/08/09 14:28:31 [emerg] 1#1: host not found in upstream "go-backend-1:80" in /etc/nginx/nginx.conf:20
+load-balancer-nginx  | nginx: [emerg] host not found in upstream "go-backend-1:80" in /etc/nginx/nginx.conf:20
+[Kgo-worker-1 exited with code 2
+[Kload-balancer-nginx exited with code 1
+redis-db             | 1:signal-handler (1754749779) Received SIGTERM scheduling shutdown...
+redis-db             | 1:M 09 Aug 2025 14:29:40.022 * User requested shutdown...
+redis-db             | 1:M 09 Aug 2025 14:29:40.022 * Saving the final RDB snapshot before exiting.
+redis-db             | 1:M 09 Aug 2025 14:29:40.036 * DB saved on disk
+redis-db             | 1:M 09 Aug 2025 14:29:40.036 # Redis is now ready to exit, bye bye...
+[Kredis-db exited with code 0
