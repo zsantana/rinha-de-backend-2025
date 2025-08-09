@@ -1,0 +1,144 @@
+
+ Network lecosas-java-spring-graalvm_backend  Creating
+ Network lecosas-java-spring-graalvm_backend  Created
+ Container redis  Creating
+ Container redis  Created
+ Container backend-01  Creating
+ Container backend-02  Creating
+ Container backend-01  Created
+ Container backend-02  Created
+ Container openresty  Creating
+ Container openresty  Created
+Attaching to backend-01, backend-02, openresty, redis
+redis       | 1:C 09 Aug 2025 00:41:20.428 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+redis       | 1:C 09 Aug 2025 00:41:20.428 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+redis       | 1:C 09 Aug 2025 00:41:20.428 * Redis version=7.4.5, bits=64, commit=00000000, modified=0, pid=1, just started
+redis       | 1:C 09 Aug 2025 00:41:20.428 * Configuration loaded
+redis       | 1:M 09 Aug 2025 00:41:20.428 * monotonic clock: POSIX clock_gettime
+redis       | 1:M 09 Aug 2025 00:41:20.429 * Running mode=standalone, port=6379.
+redis       | 1:M 09 Aug 2025 00:41:20.499 * Server initialized
+redis       | 1:M 09 Aug 2025 00:41:20.499 * Ready to accept connections tcp
+backend-02  | 2025-08-09T00:41:26.309Z  INFO 1 --- [rinha-backend-2025-lecosas] [           main] i.b.r.RinhaBackend2025JavaApplication    : Starting AOT-processed RinhaBackend2025JavaApplication using Java 24.0.2 with PID 1 (/app/target/rinha-backend-2025-java started by root in /app)
+backend-02  | 2025-08-09T00:41:26.309Z  INFO 1 --- [rinha-backend-2025-lecosas] [           main] i.b.r.RinhaBackend2025JavaApplication    : No active profile set, falling back to 1 default profile: "default"
+backend-02  | WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+backend-02  | WARNING: sun.misc.Unsafe::allocateMemory has been called by io.netty.util.internal.PlatformDependent0$2 (file:/app/target/rinha-backend-2025-java)
+backend-02  | WARNING: Please consider reporting this to the maintainers of class io.netty.util.internal.PlatformDependent0$2
+backend-02  | WARNING: sun.misc.Unsafe::allocateMemory will be removed in a future release
+backend-01  | 2025-08-09T00:41:26.321Z  INFO 1 --- [rinha-backend-2025-lecosas] [           main] i.b.r.RinhaBackend2025JavaApplication    : Starting AOT-processed RinhaBackend2025JavaApplication using Java 24.0.2 with PID 1 (/app/target/rinha-backend-2025-java started by root in /app)
+backend-01  | 2025-08-09T00:41:26.321Z  INFO 1 --- [rinha-backend-2025-lecosas] [           main] i.b.r.RinhaBackend2025JavaApplication    : No active profile set, falling back to 1 default profile: "default"
+backend-02  | WARNING: A restricted method in java.lang.System has been called
+backend-02  | WARNING: java.lang.System::loadLibrary has been called by io.netty.util.internal.NativeLibraryUtil in an unnamed module (file:/app/target/rinha-backend-2025-java)
+backend-02  | WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+backend-02  | WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+backend-02  | 
+backend-01  | WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+backend-01  | WARNING: sun.misc.Unsafe::allocateMemory has been called by io.netty.util.internal.PlatformDependent0$2 (file:/app/target/rinha-backend-2025-java)
+backend-01  | WARNING: Please consider reporting this to the maintainers of class io.netty.util.internal.PlatformDependent0$2
+backend-01  | WARNING: sun.misc.Unsafe::allocateMemory will be removed in a future release
+backend-01  | WARNING: A restricted method in java.lang.System has been called
+backend-01  | WARNING: java.lang.System::loadLibrary has been called by io.netty.util.internal.NativeLibraryUtil in an unnamed module (file:/app/target/rinha-backend-2025-java)
+backend-01  | WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+backend-01  | WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+backend-01  | 
+backend-02  | 2025-08-09T00:41:26.436Z  INFO 1 --- [rinha-backend-2025-lecosas] [           main] i.b.r.a.out.config.WebClientConfig       : Configuring WebClient properties: connectionTimeout: 5000 | readTimeout: 10000 | socketTimeout: 10000 | maxTotalConnections: 1000 | maxPerRouteConnections: 1000.
+backend-01  | 2025-08-09T00:41:26.509Z  INFO 1 --- [rinha-backend-2025-lecosas] [           main] i.b.r.a.out.config.WebClientConfig       : Configuring WebClient properties: connectionTimeout: 5000 | readTimeout: 10000 | socketTimeout: 10000 | maxTotalConnections: 1000 | maxPerRouteConnections: 1000.
+backend-02  | 2025-08-09T00:41:26.730Z  INFO 1 --- [rinha-backend-2025-lecosas] [           main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8080 (http)
+backend-02  | 2025-08-09T00:41:26.731Z  INFO 1 --- [rinha-backend-2025-lecosas] [           main] i.b.r.RinhaBackend2025JavaApplication    : Started RinhaBackend2025JavaApplication in 0.442 seconds (process running for 0.452)
+backend-02  | 2025-08-09T00:41:26.731Z  INFO 1 --- [rinha-backend-2025-lecosas] [           main] i.b.r.application.service.WarmupService  : Starting PaymentProcessor warmup
+backend-01  | 2025-08-09T00:41:26.741Z  INFO 1 --- [rinha-backend-2025-lecosas] [           main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8080 (http)
+backend-01  | 2025-08-09T00:41:26.741Z  INFO 1 --- [rinha-backend-2025-lecosas] [           main] i.b.r.RinhaBackend2025JavaApplication    : Started RinhaBackend2025JavaApplication in 0.437 seconds (process running for 0.441)
+backend-01  | 2025-08-09T00:41:26.741Z  INFO 1 --- [rinha-backend-2025-lecosas] [           main] i.b.r.application.service.WarmupService  : Starting PaymentProcessor warmup
+backend-02  | 2025-08-09T00:41:26.744Z ERROR 1 --- [rinha-backend-2025-lecosas] [or-http-epoll-3] i.b.r.a.o.h.PaymentProcessorWebClient    : Error 400 BAD_REQUEST to send DEFAULT payment.
+backend-02  | 2025-08-09T00:41:26.751Z ERROR 1 --- [rinha-backend-2025-lecosas] [or-http-epoll-4] i.b.r.a.o.h.PaymentProcessorWebClient    : Error 400 BAD_REQUEST to send FALLBACK payment.
+backend-02  | 2025-08-09T00:41:26.752Z  INFO 1 --- [rinha-backend-2025-lecosas] [           main] i.b.r.application.service.WarmupService  : Finishing PaymentProcessor warmup
+backend-02  | 2025-08-09T00:41:26.752Z  INFO 1 --- [rinha-backend-2025-lecosas] [           main] i.b.r.a.service.PurgePaymentsService     : Start purging payments.
+backend-02  | 2025-08-09T00:41:26.752Z  INFO 1 --- [rinha-backend-2025-lecosas] [           main] i.b.r.a.service.PurgePaymentsService     : Payments purged successfully.
+backend-02  | 2025-08-09T00:41:26.752Z  INFO 1 --- [rinha-backend-2025-lecosas] [           main] i.b.r.application.service.WarmupService  : Setting PaymentWorker to working state.
+backend-02  | 2025-08-09T00:41:26.752Z  INFO 1 --- [rinha-backend-2025-lecosas] [           main] i.b.r.a.service.SemaphoreService         : Setting Payment Worker to working.
+backend-02  | 2025-08-09T00:41:26.752Z  INFO 1 --- [rinha-backend-2025-lecosas] [           main] i.b.r.a.service.SemaphoreService         : Payment Worker set to working.
+backend-02  | 2025-08-09T00:41:26.752Z  INFO 1 --- [rinha-backend-2025-lecosas] [           main] i.b.r.application.service.WarmupService  : PaymentWorker is set to working.
+backend-02  | 2025-08-09T00:41:26.752Z  INFO 1 --- [rinha-backend-2025-lecosas] [           main] i.b.r.application.service.WarmupService  : Resetting Local Saving Counter.
+backend-02  | 2025-08-09T00:41:26.753Z  INFO 1 --- [rinha-backend-2025-lecosas] [           main] i.b.r.application.service.WarmupService  : Local Saving Counter is reset.
+backend-01  | 2025-08-09T00:41:26.803Z ERROR 1 --- [rinha-backend-2025-lecosas] [or-http-epoll-3] i.b.r.a.o.h.PaymentProcessorWebClient    : Error 400 BAD_REQUEST to send DEFAULT payment.
+backend-01  | 2025-08-09T00:41:26.806Z ERROR 1 --- [rinha-backend-2025-lecosas] [or-http-epoll-4] i.b.r.a.o.h.PaymentProcessorWebClient    : Error 400 BAD_REQUEST to send FALLBACK payment.
+backend-01  | 2025-08-09T00:41:26.806Z  INFO 1 --- [rinha-backend-2025-lecosas] [           main] i.b.r.application.service.WarmupService  : Finishing PaymentProcessor warmup
+backend-01  | 2025-08-09T00:41:26.806Z  INFO 1 --- [rinha-backend-2025-lecosas] [           main] i.b.r.a.service.PurgePaymentsService     : Start purging payments.
+backend-01  | 2025-08-09T00:41:26.806Z  INFO 1 --- [rinha-backend-2025-lecosas] [           main] i.b.r.a.service.PurgePaymentsService     : Payments purged successfully.
+backend-01  | 2025-08-09T00:41:26.806Z  INFO 1 --- [rinha-backend-2025-lecosas] [           main] i.b.r.application.service.WarmupService  : Setting PaymentWorker to working state.
+backend-01  | 2025-08-09T00:41:26.806Z  INFO 1 --- [rinha-backend-2025-lecosas] [           main] i.b.r.a.service.SemaphoreService         : Setting Payment Worker to working.
+backend-01  | 2025-08-09T00:41:26.807Z  INFO 1 --- [rinha-backend-2025-lecosas] [           main] i.b.r.a.service.SemaphoreService         : Payment Worker set to working.
+backend-01  | 2025-08-09T00:41:26.807Z  INFO 1 --- [rinha-backend-2025-lecosas] [           main] i.b.r.application.service.WarmupService  : PaymentWorker is set to working.
+backend-01  | 2025-08-09T00:41:26.807Z  INFO 1 --- [rinha-backend-2025-lecosas] [           main] i.b.r.application.service.WarmupService  : Resetting Local Saving Counter.
+backend-01  | 2025-08-09T00:41:26.807Z  INFO 1 --- [rinha-backend-2025-lecosas] [           main] i.b.r.application.service.WarmupService  : Local Saving Counter is reset.
+backend-01  | 2025-08-09T00:41:27.560Z  INFO 1 --- [rinha-backend-2025-lecosas] [         task-2] i.b.r.a.in.rest.PaymentsController       : START: Controller getPaymentSummary. (from null to null)
+backend-01  | 2025-08-09T00:41:27.560Z  INFO 1 --- [rinha-backend-2025-lecosas] [         task-2] i.b.r.a.service.SemaphoreService         : Setting Payment Worker to paused.
+backend-01  | 2025-08-09T00:41:27.561Z  INFO 1 --- [rinha-backend-2025-lecosas] [         task-2] i.b.r.a.service.SemaphoreService         : Payment Worker set to paused.
+backend-01  | 2025-08-09T00:41:27.581Z  INFO 1 --- [rinha-backend-2025-lecosas] [         task-2] i.b.r.a.service.SemaphoreService         : Complete saving local data.
+backend-01  | 2025-08-09T00:41:27.612Z  INFO 1 --- [rinha-backend-2025-lecosas] [         task-2] i.b.r.a.service.SemaphoreService         : Setting Payment Worker to working.
+backend-01  | 2025-08-09T00:41:27.613Z  INFO 1 --- [rinha-backend-2025-lecosas] [         task-2] i.b.r.a.service.SemaphoreService         : Payment Worker set to working.
+backend-01  | 2025-08-09T00:41:27.613Z  INFO 1 --- [rinha-backend-2025-lecosas] [         task-2] i.b.r.a.in.rest.PaymentsController       : END: Controller getPaymentSummary. (response: PaymentSummary[defaultResponse=PaymentSummaryDetail[totalRequests=0, totalAmount=0], fallback=PaymentSummaryDetail[totalRequests=0, totalAmount=0]] in 52.570ms)
+backend-02  | 2025-08-09T00:41:33.258Z  INFO 1 --- [rinha-backend-2025-lecosas] [         task-2] i.b.r.a.in.rest.PaymentsController       : START: Controller postPurgePaymentsController.
+backend-02  | 2025-08-09T00:41:33.258Z  INFO 1 --- [rinha-backend-2025-lecosas] [         task-2] i.b.r.a.service.PurgePaymentsService     : Start purging payments.
+backend-02  | 2025-08-09T00:41:33.258Z  INFO 1 --- [rinha-backend-2025-lecosas] [         task-2] i.b.r.a.service.PurgePaymentsService     : Payments purged successfully.
+backend-02  | 2025-08-09T00:41:33.258Z  INFO 1 --- [rinha-backend-2025-lecosas] [         task-2] i.b.r.a.in.rest.PaymentsController       : END: Controller postPurgePaymentsController in 0.364ms
+backend-01  | 2025-08-09T00:41:33.261Z  INFO 1 --- [rinha-backend-2025-lecosas] [         task-4] i.b.r.a.in.rest.PaymentsController       : START: Controller getPaymentSummary. (from 2025-08-09T00:41:18.259Z to 2025-08-09T00:41:31.759Z)
+backend-01  | 2025-08-09T00:41:33.261Z  INFO 1 --- [rinha-backend-2025-lecosas] [         task-4] i.b.r.a.service.SemaphoreService         : Setting Payment Worker to paused.
+backend-01  | 2025-08-09T00:41:33.262Z  INFO 1 --- [rinha-backend-2025-lecosas] [         task-4] i.b.r.a.service.SemaphoreService         : Payment Worker set to paused.
+backend-01  | 2025-08-09T00:41:33.282Z  INFO 1 --- [rinha-backend-2025-lecosas] [         task-4] i.b.r.a.service.SemaphoreService         : Complete saving local data.
+backend-01  | 2025-08-09T00:41:33.313Z  INFO 1 --- [rinha-backend-2025-lecosas] [         task-4] i.b.r.a.service.SemaphoreService         : Setting Payment Worker to working.
+backend-01  | 2025-08-09T00:41:33.314Z  INFO 1 --- [rinha-backend-2025-lecosas] [         task-4] i.b.r.a.service.SemaphoreService         : Payment Worker set to working.
+backend-01  | 2025-08-09T00:41:33.314Z  INFO 1 --- [rinha-backend-2025-lecosas] [         task-4] i.b.r.a.in.rest.PaymentsController       : END: Controller getPaymentSummary. (response: PaymentSummary[defaultResponse=PaymentSummaryDetail[totalRequests=0, totalAmount=0], fallback=PaymentSummaryDetail[totalRequests=0, totalAmount=0]] in 52.238ms)
+backend-02  | 2025-08-09T00:41:43.316Z  INFO 1 --- [rinha-backend-2025-lecosas] [         task-4] i.b.r.a.in.rest.PaymentsController       : START: Controller getPaymentSummary. (from 2025-08-09T00:41:28.314Z to 2025-08-09T00:41:41.814Z)
+backend-02  | 2025-08-09T00:41:43.316Z  INFO 1 --- [rinha-backend-2025-lecosas] [         task-4] i.b.r.a.service.SemaphoreService         : Setting Payment Worker to paused.
+backend-02  | 2025-08-09T00:41:43.316Z  INFO 1 --- [rinha-backend-2025-lecosas] [         task-4] i.b.r.a.service.SemaphoreService         : Payment Worker set to paused.
+backend-02  | 2025-08-09T00:41:43.337Z  INFO 1 --- [rinha-backend-2025-lecosas] [         task-4] i.b.r.a.service.SemaphoreService         : Complete saving local data.
+backend-02  | 2025-08-09T00:41:43.368Z  INFO 1 --- [rinha-backend-2025-lecosas] [         task-4] i.b.r.a.service.SemaphoreService         : Setting Payment Worker to working.
+backend-02  | 2025-08-09T00:41:43.368Z  INFO 1 --- [rinha-backend-2025-lecosas] [         task-4] i.b.r.a.service.SemaphoreService         : Payment Worker set to working.
+backend-02  | 2025-08-09T00:41:43.368Z  INFO 1 --- [rinha-backend-2025-lecosas] [         task-4] i.b.r.a.in.rest.PaymentsController       : END: Controller getPaymentSummary. (response: PaymentSummary[defaultResponse=PaymentSummaryDetail[totalRequests=0, totalAmount=0], fallback=PaymentSummaryDetail[totalRequests=0, totalAmount=0]] in 52.177ms)
+backend-01  | 2025-08-09T00:41:53.372Z  INFO 1 --- [rinha-backend-2025-lecosas] [         task-6] i.b.r.a.in.rest.PaymentsController       : START: Controller getPaymentSummary. (from 2025-08-09T00:41:38.370Z to 2025-08-09T00:41:51.870Z)
+backend-01  | 2025-08-09T00:41:53.372Z  INFO 1 --- [rinha-backend-2025-lecosas] [         task-6] i.b.r.a.service.SemaphoreService         : Setting Payment Worker to paused.
+backend-01  | 2025-08-09T00:41:53.372Z  INFO 1 --- [rinha-backend-2025-lecosas] [         task-6] i.b.r.a.service.SemaphoreService         : Payment Worker set to paused.
+backend-01  | 2025-08-09T00:41:53.393Z  INFO 1 --- [rinha-backend-2025-lecosas] [         task-6] i.b.r.a.service.SemaphoreService         : Complete saving local data.
+backend-01  | 2025-08-09T00:41:53.423Z  INFO 1 --- [rinha-backend-2025-lecosas] [         task-6] i.b.r.a.service.SemaphoreService         : Setting Payment Worker to working.
+backend-01  | 2025-08-09T00:41:53.424Z  INFO 1 --- [rinha-backend-2025-lecosas] [         task-6] i.b.r.a.service.SemaphoreService         : Payment Worker set to working.
+backend-01  | 2025-08-09T00:41:53.424Z  INFO 1 --- [rinha-backend-2025-lecosas] [         task-6] i.b.r.a.in.rest.PaymentsController       : END: Controller getPaymentSummary. (response: PaymentSummary[defaultResponse=PaymentSummaryDetail[totalRequests=0, totalAmount=0], fallback=PaymentSummaryDetail[totalRequests=0, totalAmount=0]] in 52.228ms)
+backend-02  | 2025-08-09T00:42:03.427Z  INFO 1 --- [rinha-backend-2025-lecosas] [         task-6] i.b.r.a.in.rest.PaymentsController       : START: Controller getPaymentSummary. (from 2025-08-09T00:41:48.425Z to 2025-08-09T00:42:01.925Z)
+backend-02  | 2025-08-09T00:42:03.427Z  INFO 1 --- [rinha-backend-2025-lecosas] [         task-6] i.b.r.a.service.SemaphoreService         : Setting Payment Worker to paused.
+backend-02  | 2025-08-09T00:42:03.427Z  INFO 1 --- [rinha-backend-2025-lecosas] [         task-6] i.b.r.a.service.SemaphoreService         : Payment Worker set to paused.
+backend-02  | 2025-08-09T00:42:03.448Z  INFO 1 --- [rinha-backend-2025-lecosas] [         task-6] i.b.r.a.service.SemaphoreService         : Complete saving local data.
+backend-02  | 2025-08-09T00:42:03.479Z  INFO 1 --- [rinha-backend-2025-lecosas] [         task-6] i.b.r.a.service.SemaphoreService         : Setting Payment Worker to working.
+backend-02  | 2025-08-09T00:42:03.479Z  INFO 1 --- [rinha-backend-2025-lecosas] [         task-6] i.b.r.a.service.SemaphoreService         : Payment Worker set to working.
+backend-02  | 2025-08-09T00:42:03.479Z  INFO 1 --- [rinha-backend-2025-lecosas] [         task-6] i.b.r.a.in.rest.PaymentsController       : END: Controller getPaymentSummary. (response: PaymentSummary[defaultResponse=PaymentSummaryDetail[totalRequests=0, totalAmount=0], fallback=PaymentSummaryDetail[totalRequests=0, totalAmount=0]] in 52.445ms)
+backend-01  | 2025-08-09T00:42:13.481Z  INFO 1 --- [rinha-backend-2025-lecosas] [         task-8] i.b.r.a.in.rest.PaymentsController       : START: Controller getPaymentSummary. (from 2025-08-09T00:41:58.480Z to 2025-08-09T00:42:11.980Z)
+backend-01  | 2025-08-09T00:42:13.481Z  INFO 1 --- [rinha-backend-2025-lecosas] [         task-8] i.b.r.a.service.SemaphoreService         : Setting Payment Worker to paused.
+backend-01  | 2025-08-09T00:42:13.482Z  INFO 1 --- [rinha-backend-2025-lecosas] [         task-8] i.b.r.a.service.SemaphoreService         : Payment Worker set to paused.
+backend-01  | 2025-08-09T00:42:13.502Z  INFO 1 --- [rinha-backend-2025-lecosas] [         task-8] i.b.r.a.service.SemaphoreService         : Complete saving local data.
+backend-01  | 2025-08-09T00:42:13.533Z  INFO 1 --- [rinha-backend-2025-lecosas] [         task-8] i.b.r.a.service.SemaphoreService         : Setting Payment Worker to working.
+backend-01  | 2025-08-09T00:42:13.533Z  INFO 1 --- [rinha-backend-2025-lecosas] [         task-8] i.b.r.a.service.SemaphoreService         : Payment Worker set to working.
+backend-01  | 2025-08-09T00:42:13.533Z  INFO 1 --- [rinha-backend-2025-lecosas] [         task-8] i.b.r.a.in.rest.PaymentsController       : END: Controller getPaymentSummary. (response: PaymentSummary[defaultResponse=PaymentSummaryDetail[totalRequests=0, totalAmount=0], fallback=PaymentSummaryDetail[totalRequests=0, totalAmount=0]] in 51.866ms)
+backend-02  | 2025-08-09T00:42:23.535Z  INFO 1 --- [rinha-backend-2025-lecosas] [         task-8] i.b.r.a.in.rest.PaymentsController       : START: Controller getPaymentSummary. (from 2025-08-09T00:42:08.534Z to 2025-08-09T00:42:22.034Z)
+backend-02  | 2025-08-09T00:42:23.535Z  INFO 1 --- [rinha-backend-2025-lecosas] [         task-8] i.b.r.a.service.SemaphoreService         : Setting Payment Worker to paused.
+backend-02  | 2025-08-09T00:42:23.536Z  INFO 1 --- [rinha-backend-2025-lecosas] [         task-8] i.b.r.a.service.SemaphoreService         : Payment Worker set to paused.
+backend-02  | 2025-08-09T00:42:23.556Z  INFO 1 --- [rinha-backend-2025-lecosas] [         task-8] i.b.r.a.service.SemaphoreService         : Complete saving local data.
+backend-02  | 2025-08-09T00:42:23.587Z  INFO 1 --- [rinha-backend-2025-lecosas] [         task-8] i.b.r.a.service.SemaphoreService         : Setting Payment Worker to working.
+backend-02  | 2025-08-09T00:42:23.587Z  INFO 1 --- [rinha-backend-2025-lecosas] [         task-8] i.b.r.a.service.SemaphoreService         : Payment Worker set to working.
+backend-02  | 2025-08-09T00:42:23.587Z  INFO 1 --- [rinha-backend-2025-lecosas] [         task-8] i.b.r.a.in.rest.PaymentsController       : END: Controller getPaymentSummary. (response: PaymentSummary[defaultResponse=PaymentSummaryDetail[totalRequests=0, totalAmount=0], fallback=PaymentSummaryDetail[totalRequests=0, totalAmount=0]] in 52.250ms)
+backend-01  | 2025-08-09T00:42:34.264Z  INFO 1 --- [rinha-backend-2025-lecosas] [        task-10] i.b.r.a.in.rest.PaymentsController       : START: Controller getPaymentSummary. (from 2025-08-09T00:41:24.260Z to 2025-08-09T00:42:34.260Z)
+backend-01  | 2025-08-09T00:42:34.264Z  INFO 1 --- [rinha-backend-2025-lecosas] [        task-10] i.b.r.a.service.SemaphoreService         : Setting Payment Worker to paused.
+backend-01  | 2025-08-09T00:42:34.265Z  INFO 1 --- [rinha-backend-2025-lecosas] [        task-10] i.b.r.a.service.SemaphoreService         : Payment Worker set to paused.
+backend-01  | 2025-08-09T00:42:34.285Z  INFO 1 --- [rinha-backend-2025-lecosas] [        task-10] i.b.r.a.service.SemaphoreService         : Complete saving local data.
+backend-01  | 2025-08-09T00:42:34.316Z  INFO 1 --- [rinha-backend-2025-lecosas] [        task-10] i.b.r.a.service.SemaphoreService         : Setting Payment Worker to working.
+backend-01  | 2025-08-09T00:42:34.316Z  INFO 1 --- [rinha-backend-2025-lecosas] [        task-10] i.b.r.a.service.SemaphoreService         : Payment Worker set to working.
+backend-01  | 2025-08-09T00:42:34.316Z  INFO 1 --- [rinha-backend-2025-lecosas] [        task-10] i.b.r.a.in.rest.PaymentsController       : END: Controller getPaymentSummary. (response: PaymentSummary[defaultResponse=PaymentSummaryDetail[totalRequests=0, totalAmount=0], fallback=PaymentSummaryDetail[totalRequests=0, totalAmount=0]] in 52.290ms)
+[Kopenresty exited with code 0
+backend-01  | 2025-08-09T00:42:35.037Z  INFO 1 --- [rinha-backend-2025-lecosas] [ionShutdownHook] o.s.b.w.embedded.netty.GracefulShutdown  : Commencing graceful shutdown. Waiting for active requests to complete
+backend-02  | 2025-08-09T00:42:35.037Z  INFO 1 --- [rinha-backend-2025-lecosas] [ionShutdownHook] o.s.b.w.embedded.netty.GracefulShutdown  : Commencing graceful shutdown. Waiting for active requests to complete
+backend-02  | 2025-08-09T00:42:35.039Z  INFO 1 --- [rinha-backend-2025-lecosas] [ netty-shutdown] o.s.b.w.embedded.netty.GracefulShutdown  : Graceful shutdown complete
+backend-01  | 2025-08-09T00:42:35.039Z  INFO 1 --- [rinha-backend-2025-lecosas] [ netty-shutdown] o.s.b.w.embedded.netty.GracefulShutdown  : Graceful shutdown complete
+[Kbackend-02 exited with code 143
+[Kbackend-01 exited with code 143
+redis       | 1:signal-handler (1754700157) Received SIGTERM scheduling shutdown...
+redis       | 1:M 09 Aug 2025 00:42:37.755 * User requested shutdown...
+redis       | 1:M 09 Aug 2025 00:42:37.755 # Redis is now ready to exit, bye bye...
+[Kredis exited with code 0
+log truncated at line 1000
