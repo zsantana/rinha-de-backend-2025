@@ -1,0 +1,143 @@
+
+ Network joao-xavier_default  Creating
+ Network joao-xavier_default  Created
+ Volume "joao-xavier_uds"  Creating
+ Volume "joao-xavier_uds"  Created
+ Container joao-xavier-worker-1  Creating
+ Container joao-xavier-worker-1  Created
+ Container joao-xavier-api1-1  Creating
+ Container joao-xavier-api0-1  Creating
+ Container joao-xavier-api1-1  Created
+ Container joao-xavier-api0-1  Created
+ Container balancer  Creating
+ Container balancer  Created
+Attaching to balancer, api0-1, api1-1, worker-1
+worker-1  | 2025-08-09T04:30:00.139395Z  INFO ThreadId(01) src/worker/mod.rs:25: starting worker
+worker-1  | 2025-08-09T04:30:00.139444Z  INFO ThreadId(01) src/worker/mod.rs:37: starting payment_req_consumer
+worker-1  | 2025-08-09T04:30:00.139694Z  INFO ThreadId(01) src/worker/mod.rs:72: listening on /var/run/worker.socket
+api1-1    | 2025-08-09T04:30:00.577125Z  INFO ThreadId(01) src/api/mod.rs:20: starting API
+api1-1    | 2025-08-09T04:30:00.577303Z  INFO ThreadId(01) src/api/mod.rs:27: binded to unix socket on /var/run/api1.sock
+api0-1    | 2025-08-09T04:30:00.608800Z  INFO ThreadId(01) src/api/mod.rs:20: starting API
+api0-1    | 2025-08-09T04:30:00.608935Z  INFO ThreadId(01) src/api/mod.rs:27: binded to unix socket on /var/run/api0.sock
+worker-1  | 2025-08-09T04:30:08.955135Z  INFO ThreadId(03) src/worker/mod.rs:116: db purged
+worker-1  | =================================== Metrics ====================================
+worker-1  | 
+worker-1  | Key        Kind      Value                                                           Units 𝚫 Delta                                                               | Description                 | Labels
+worker-1  | --------------------------------------------------------------------------------
+worker-1  | db.insert  Histogram [p50=1164.0959061912795, p99=2138.1580659891893, max=13852]#125 ns    𝚫 [p50=+1164.0959061912795, p99=+2138.1580659891893, max=+13852]#+125 | db insert time              | 
+worker-1  | db.select  Histogram [p50=4858.572858687634, p99=4858.572858687634, max=12015]#2     ns    𝚫 [p50=+4858.572858687634, p99=+4858.572858687634, max=+12015]#+2     | db query time               | 
+worker-1  | pp_http    Histogram [p50=765.0185004531456, p99=2062.965975981615, max=14946]#125   μs    𝚫 [p50=+765.0185004531456, p99=+2062.965975981615, max=+14946]#+125   | payment processor http time | 
+worker-1  | uds.handle Histogram [p50=9.999149133010329, p99=58.00330597755383, max=3282]#128    μs    𝚫 [p50=+9.999149133010329, p99=+58.00330597755383, max=+3282]#+128    | http handler time           | 
+worker-1  | 
+worker-1  | ================================ After 15.000 s ================================
+worker-1  | 
+api1-1    | =================================== Metrics ====================================
+api1-1    | 
+api1-1    | Key       Kind      Value Units 𝚫 Delta              | Description | Labels
+api1-1    | --------------------------------------------------------------------------------
+api1-1    | http.conn Counter   75    N/A   𝚫 4.99996608922999/s | N/A         | 
+api1-1    | http.req  Counter   150   N/A   𝚫 9.99993217845998/s | N/A         | 
+api1-1    | 
+api1-1    | ================================ After 15.000 s ================================
+api1-1    | 
+api0-1    | =================================== Metrics ====================================
+api0-1    | 
+api0-1    | Key       Kind      Value Units 𝚫 Delta               | Description | Labels
+api0-1    | --------------------------------------------------------------------------------
+api0-1    | http.conn Counter   75    N/A   𝚫 4.999970988501667/s | N/A         | 
+api0-1    | http.req  Counter   150   N/A   𝚫 9.999941977003335/s | N/A         | 
+api0-1    | 
+api0-1    | ================================ After 15.000 s ================================
+api0-1    | 
+worker-1  | =================================== Metrics ====================================
+worker-1  | 
+worker-1  | Key        Kind      Value                                                           Units 𝚫 Delta                                                            | Description                 | Labels
+worker-1  | --------------------------------------------------------------------------------
+worker-1  | db.insert  Histogram [p50=1081.0629167297018, p99=2311.1488575610233, max=14236]#699 ns    𝚫 [p50=-83.0329894615777, p99=+172.99079157183405, max=+384]#+574  | db insert time              | 
+worker-1  | db.select  Histogram [p50=6632.254192965351, p99=6632.254192965351, max=12015]#3     ns    𝚫 [p50=+1773.6813342777168, p99=+1773.6813342777168, max=+0]#+1    | db query time               | 
+worker-1  | pp_http    Histogram [p50=798.9513196206286, p99=101569.64841552402, max=101663]#699 μs    𝚫 [p50=+33.93281916748299, p99=+99506.6824395424, max=+86717]#+574 | payment processor http time | 
+worker-1  | uds.handle Histogram [p50=8.000467695685316, p99=25.00060452884564, max=3282]#1877   μs    𝚫 [p50=-1.998681437325013, p99=-33.002701448708194, max=+0]#+1749  | http handler time           | 
+worker-1  | 
+worker-1  | ================================ After 15.000 s ================================
+worker-1  | 
+api1-1    | =================================== Metrics ====================================
+api1-1    | 
+api1-1    | Key       Kind      Value Units 𝚫 Delta                | Description | Labels
+api1-1    | --------------------------------------------------------------------------------
+api1-1    | http.conn Counter   979   N/A   𝚫 60.2664050461846/s   | N/A         | 
+api1-1    | http.req  Counter   1957  N/A   𝚫 120.46614371510573/s | N/A         | 
+api1-1    | 
+api1-1    | ================================ After 15.000 s ================================
+api1-1    | 
+api0-1    | =================================== Metrics ====================================
+api0-1    | 
+api0-1    | Key       Kind      Value Units 𝚫 Delta                | Description | Labels
+api0-1    | --------------------------------------------------------------------------------
+api0-1    | http.conn Counter   980   N/A   𝚫 60.33306543843397/s  | N/A         | 
+api0-1    | http.req  Counter   1961  N/A   𝚫 120.73279724751814/s | N/A         | 
+api0-1    | 
+api0-1    | ================================ After 15.000 s ================================
+api0-1    | 
+worker-1  | =================================== Metrics ====================================
+worker-1  | 
+worker-1  | Key        Kind      Value                                                             Units 𝚫 Delta                                                               | Description                 | Labels
+worker-1  | --------------------------------------------------------------------------------
+worker-1  | db.insert  Histogram [p50=1081.0629167297018, p99=2311.1488575610233, max=14236]#705   ns    𝚫 [p50=+0, p99=+0, max=+0]#+6                                         | db insert time              | 
+worker-1  | db.select  Histogram [p50=5166.237898971058, p99=6632.254192965351, max=12015]#5       ns    𝚫 [p50=-1466.016293994293, p99=+0, max=+0]#+2                         | db query time               | 
+worker-1  | pp_http    Histogram [p50=2851.7839406211247, p99=101630.60849097042, max=2000852]#911 μs    𝚫 [p50=+2052.832621000496, p99=+60.96007544640452, max=+1899189]#+212 | payment processor http time | 
+worker-1  | uds.handle Histogram [p50=6.999928967377545, p99=27.001704833335125, max=3370]#5682    μs    𝚫 [p50=-1.0005387283077711, p99=+2.001100304489487, max=+88]#+3805    | http handler time           | 
+worker-1  | 
+worker-1  | ================================ After 15.000 s ================================
+worker-1  | 
+api1-1    | =================================== Metrics ====================================
+api1-1    | 
+api1-1    | Key       Kind      Value Units 𝚫 Delta                | Description | Labels
+api1-1    | --------------------------------------------------------------------------------
+api1-1    | http.conn Counter   2909  N/A   𝚫 128.66582235296266/s | N/A         | 
+api1-1    | http.req  Counter   5818  N/A   𝚫 257.3983109351238/s  | N/A         | 
+api1-1    | 
+api1-1    | ================================ After 15.000 s ================================
+api1-1    | 
+api0-1    | =================================== Metrics ====================================
+api0-1    | 
+api0-1    | Key       Kind      Value Units 𝚫 Delta               | Description | Labels
+api0-1    | --------------------------------------------------------------------------------
+api0-1    | http.conn Counter   2915  N/A   𝚫 128.9994676105972/s | N/A         | 
+api0-1    | http.req  Counter   5831  N/A   𝚫 257.9989352211944/s | N/A         | 
+api0-1    | 
+api0-1    | ================================ After 15.000 s ================================
+api0-1    | 
+worker-1  | =================================== Metrics ====================================
+worker-1  | 
+worker-1  | Key        Kind      Value                                                              Units 𝚫 Delta                                                            | Description                 | Labels
+worker-1  | --------------------------------------------------------------------------------
+worker-1  | db.insert  Histogram [p50=1025.0534310917972, p99=2311.1488575610233, max=15967]#1623   ns    𝚫 [p50=-56.00948563790462, p99=+0, max=+1731]#+918                 | db insert time              | 
+worker-1  | db.select  Histogram [p50=4858.572858687634, p99=6632.254192965351, max=12015]#6        ns    𝚫 [p50=-307.6650402834239, p99=+0, max=+0]#+1                      | db query time               | 
+worker-1  | pp_http    Histogram [p50=20971.088460867162, p99=101589.96437680333, max=2001284]#1833 μs    𝚫 [p50=+18119.304520246038, p99=-40.64411416709481, max=+432]#+922 | payment processor http time | 
+worker-1  | uds.handle Histogram [p50=6.999928967377545, p99=31.998851340699826, max=3582]#11538    μs    𝚫 [p50=+0, p99=+4.9971465073647, max=+212]#+5856                   | http handler time           | 
+worker-1  | 
+worker-1  | ================================ After 15.002 s ================================
+worker-1  | 
+api1-1    | =================================== Metrics ====================================
+api1-1    | 
+api1-1    | Key       Kind      Value Units 𝚫 Delta                | Description | Labels
+api1-1    | --------------------------------------------------------------------------------
+api1-1    | http.conn Counter   5866  N/A   𝚫 197.12885658956787/s | N/A         | 
+api1-1    | http.req  Counter   11733 N/A   𝚫 394.3243783318546/s  | N/A         | 
+api1-1    | 
+api1-1    | ================================ After 15.000 s ================================
+api1-1    | 
+api0-1    | =================================== Metrics ====================================
+api0-1    | 
+api0-1    | Key       Kind      Value Units 𝚫 Delta                | Description | Labels
+api0-1    | --------------------------------------------------------------------------------
+api0-1    | http.conn Counter   5874  N/A   𝚫 197.2649886649181/s  | N/A         | 
+api0-1    | http.req  Counter   11750 N/A   𝚫 394.59664342941875/s | N/A         | 
+api0-1    | 
+api0-1    | ================================ After 15.000 s ================================
+api0-1    | 
+[Kbalancer exited with code 0
+[Kapi0-1 exited with code 143
+[Kapi1-1 exited with code 143
+[Kworker-1 exited with code 143
+log truncated at line 1000
