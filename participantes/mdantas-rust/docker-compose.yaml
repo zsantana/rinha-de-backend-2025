@@ -14,6 +14,7 @@ services:
     environment:
       - SOCKET_DIR=/var/run/sockets
       - APPLY_SYSCTL=0
+      - LB_THREADS=4
     depends_on:
       - api1
       - api2

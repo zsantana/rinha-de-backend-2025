@@ -2,9 +2,6 @@ x-service-templates:
   rinha-backend: &rinha-backend
     image: samsam1997/rinha-backend-2025:socket
     pull_policy: always
-    build:
-      context: .
-      dockerfile: Dockerfile
     depends_on:
       redis:
         condition: service_healthy
