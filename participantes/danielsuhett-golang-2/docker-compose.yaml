@@ -37,7 +37,7 @@ services:
       - HEALTH_TIMEOUT=1000
       - HEALTH_INTERVAL=6000
       - LATENCY_DIFF_TO_USE_FALLBACK=5000
-      - BATCH_SIZE=25
+      - BATCH_SIZE=10
       - GOGC=off
     networks:
       - backend
@@ -69,7 +69,7 @@ services:
       - HEALTH_TIMEOUT=1000
       - HEALTH_INTERVAL=3000
       - LATENCY_DIFF_TO_USE_FALLBACK=5000
-      - BATCH_SIZE=25
+      - BATCH_SIZE=10
       - GOGC=off
     networks:
       - backend
