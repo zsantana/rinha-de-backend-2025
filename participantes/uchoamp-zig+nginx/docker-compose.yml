@@ -14,7 +14,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.60"
+          cpus: "1.30"
           memory: "10MB"
   zig1: &zig
     container_name: zig-pay-1
@@ -35,7 +35,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.45"
+          cpus: "0.10"
           memory: "10MB"
   zig2: 
     <<: *zig
