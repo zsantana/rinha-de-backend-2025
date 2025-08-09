@@ -1,5 +1,5 @@
 x-api_template: &api
-  image: ghcr.io/lothyriel/rinha_2025:v0.4.0
+  image: ghcr.io/lothyriel/rinha_2025:v0.4.1
   volumes:
     - uds:/var/run
   command: ["-m", "api"]
@@ -46,7 +46,7 @@ services:
       WORKER_SOCKET: "/var/run/worker.socket"
 
   worker:
-    image: ghcr.io/lothyriel/rinha_2025:v0.4.0
+    image: ghcr.io/lothyriel/rinha_2025:v0.4.1
     command: ["-m", "worker"]
     networks:
       - payment-processor
