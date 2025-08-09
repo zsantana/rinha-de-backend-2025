@@ -1,0 +1,66 @@
+
+ backend Pulling 
+ 59e22667830b Already exists 
+ 8fa528f7c441 Pulling fs layer 
+ 47f0c441a4df Pulling fs layer 
+ 8fa528f7c441 Downloading [=============>                                     ]     936B/3.393kB
+ 8fa528f7c441 Downloading [==================================================>]  3.393kB/3.393kB
+ 8fa528f7c441 Verifying Checksum 
+ 8fa528f7c441 Download complete 
+ 8fa528f7c441 Extracting [==================================================>]  3.393kB/3.393kB
+ 8fa528f7c441 Extracting [==================================================>]  3.393kB/3.393kB
+ 8fa528f7c441 Pull complete 
+ 47f0c441a4df Downloading [>                                                  ]  532.5kB/58.04MB
+ 47f0c441a4df Downloading [=====>                                             ]  6.398MB/58.04MB
+ 47f0c441a4df Downloading [===========>                                       ]  13.37MB/58.04MB
+ 47f0c441a4df Downloading [================>                                  ]  19.23MB/58.04MB
+ 47f0c441a4df Downloading [======================>                            ]  26.68MB/58.04MB
+ 47f0c441a4df Downloading [==============================>                    ]  35.18MB/58.04MB
+ 47f0c441a4df Downloading [=====================================>             ]  43.18MB/58.04MB
+ 47f0c441a4df Downloading [===========================================>       ]  50.63MB/58.04MB
+ 47f0c441a4df Verifying Checksum 
+ 47f0c441a4df Download complete 
+ 47f0c441a4df Extracting [>                                                  ]  557.1kB/58.04MB
+ 47f0c441a4df Extracting [=======>                                           ]  8.356MB/58.04MB
+ 47f0c441a4df Extracting [=============>                                     ]  16.15MB/58.04MB
+ 47f0c441a4df Extracting [====================>                              ]   23.4MB/58.04MB
+ 47f0c441a4df Extracting [==========================>                        ]  30.64MB/58.04MB
+ 47f0c441a4df Extracting [=================================>                 ]  38.99MB/58.04MB
+ 47f0c441a4df Extracting [=========================================>         ]  48.46MB/58.04MB
+ 47f0c441a4df Extracting [===============================================>   ]  55.71MB/58.04MB
+ 47f0c441a4df Extracting [==================================================>]  58.04MB/58.04MB
+ 47f0c441a4df Pull complete 
+ backend Pulled 
+ Container felipeschirmann-rinha  Creating
+ Container felipeschirmann-rinha  Created
+Attaching to felipeschirmann-rinha
+felipeschirmann-rinha  |   .   ____          _            __ _ _
+felipeschirmann-rinha  |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+felipeschirmann-rinha  | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+felipeschirmann-rinha  |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+felipeschirmann-rinha  |   '  |____| .__|_| |_|_| |_\__, | / / / /
+felipeschirmann-rinha  |  =========|_|==============|___/=/_/_/_/
+felipeschirmann-rinha  | 
+felipeschirmann-rinha  |  :: Spring Boot ::                (v3.3.0)
+felipeschirmann-rinha  | 
+felipeschirmann-rinha  | 14:00:57.874 [main] INFO  b.d.f.rinha.Application - Starting AOT-processed Application using Java 21.0.7 with PID 1 (/app/rinha-reativa started by nonroot in /app)
+felipeschirmann-rinha  | 14:00:57.874 [main] INFO  b.d.f.rinha.Application - No active profile set, falling back to 1 default profile: "default"
+felipeschirmann-rinha  | 14:00:58.018 [main] INFO  b.d.f.r.service.MemoryMonitorService - Iniciando monitor de memória... Verificação a cada 5 segundos.
+felipeschirmann-rinha  | 14:00:58.023 [main] INFO  b.d.f.r.s.PaymentStorageService - Fila de pagamentos configurada com tamanho máximo de 50000
+felipeschirmann-rinha  | 14:00:58.093 [main] INFO  b.d.f.r.s.PaymentProcessorService - Iniciando processador de pagamentos com inteligência de fallback...
+felipeschirmann-rinha  | 14:00:58.098 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+felipeschirmann-rinha  | 14:00:58.108 [reactor-http-epoll-2] INFO  b.d.f.r.s.PaymentProcessorService - Health Check: Default voltou a ficar SAUDÁVEL. minResponseTime: 0ms
+felipeschirmann-rinha  | 14:00:58.305 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+felipeschirmann-rinha  | 14:00:58.593 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 9999 (http)
+felipeschirmann-rinha  | 14:00:58.593 [main] INFO  b.d.f.rinha.Application - Started Application in 0.74 seconds (process running for 0.746)
+felipeschirmann-rinha  | 14:00:59.100 [reactor-http-epoll-4] INFO  b.d.f.r.s.PaymentProcessorService - Health Check: Fallback voltou a ficar SAUDÁVEL. minResponseTime: 0ms
+felipeschirmann-rinha  | 14:01:03.018 [pool-6-thread-1] WARN  b.d.f.r.service.MemoryMonitorService - AVISO DE MEMÓRIA: Uso de Heap ultrapassou 100 MB. Uso atual: 117 MB
+felipeschirmann-rinha  | 14:01:28.558 [reactor-http-epoll-1] WARN  b.d.f.r.s.PaymentProcessorService - Health Check: Default agora está COM FALHAS.
+felipeschirmann-rinha  | 14:01:39.593 [reactor-http-epoll-4] WARN  b.d.f.r.s.PaymentProcessorService - Health Check: Fallback agora está COM FALHAS.
+felipeschirmann-rinha  | 14:01:48.658 [reactor-http-epoll-1] INFO  b.d.f.r.s.PaymentProcessorService - Health Check: Default voltou a ficar SAUDÁVEL. minResponseTime: 20ms
+felipeschirmann-rinha  | 14:01:49.792 [reactor-http-epoll-3] INFO  b.d.f.r.s.PaymentProcessorService - Health Check: Fallback voltou a ficar SAUDÁVEL. minResponseTime: 20ms
+felipeschirmann-rinha  | 14:02:11.032 [SpringApplicationShutdownHook] INFO  b.d.f.r.s.PaymentProcessorService - Iniciando desligamento gracioso...
+felipeschirmann-rinha  | 14:02:11.033 [SpringApplicationShutdownHook] INFO  b.d.f.r.s.PaymentProcessorService - Aguardando 1 tarefas em andamento finalizarem...
+felipeschirmann-rinha  | 14:02:11.133 [SpringApplicationShutdownHook] INFO  b.d.f.r.s.PaymentProcessorService - Todas as tarefas em andamento foram finalizadas. Desligamento completo.
+[Kfelipeschirmann-rinha exited with code 143
+log truncated at line 1000
