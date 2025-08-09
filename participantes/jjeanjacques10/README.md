@@ -107,8 +107,8 @@ Etapas:
 ### 📤 Publicação da imagem (GraalVM)
 
 ```bash
-docker tag docker.io/jjeanjacques10/rinhabackend2025:graalvm jjeanjacques/rinhabackend2025:graalvm-v6.0
-docker push jjeanjacques/rinhabackend2025:graalvm-v6.0
+docker tag docker.io/jjeanjacques10/rinhabackend2025:graalvm jjeanjacques/rinhabackend2025:graalvm-v7.0
+docker push jjeanjacques/rinhabackend2025:graalvm-v7.0
 ```
 
 ---
