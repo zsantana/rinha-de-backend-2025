@@ -1,6 +1,6 @@
 services:
   load-balance:
-    image: lpj145/rinha-lb:1.13
+    image: lpj145/rinha-lb:1.14
     # build:
     #   context: .
     #   dockerfile: Dockerfile
@@ -24,7 +24,7 @@ services:
     #   net.ipv4.tcp_max_syn_backlog: "16384"
 
   api1: &api
-    image: lpj145/rinha-lb:1.13
+    image: lpj145/rinha-lb:1.14
     # build:
     #   context: .
     #   dockerfile: Dockerfile
