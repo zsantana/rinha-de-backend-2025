@@ -5,7 +5,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.4"
+          cpus: "0.5"
           memory: 90M
     image: nginx:stable-alpine
     volumes:
@@ -46,7 +46,7 @@ services:
     environment:
       - SOCK=/tmp/unix-app1.sock
       - WORKERS=2
-      - GOMAXPROCS=6
+      - GOMAXPROCS=2
     depends_on:
       - postgres
 
@@ -65,7 +65,7 @@ services:
     environment:
       - SOCK=/tmp/unix-app2.sock
       - WORKERS=2
-      - GOMAXPROCS=6
+      - GOMAXPROCS=2
     depends_on:
       - postgres
 
@@ -75,7 +75,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.3"
+          cpus: "0.2"
           memory: 80M
     image: postgres:alpine
     user: postgres
