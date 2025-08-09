@@ -1,0 +1,67 @@
+services:
+  api1:
+    image: ghcr.io/krymancer/rinha-backend-2025-ocaml:sha256-0dc76a8ead2391fff375498fda0a1adaf34f9246b310dd3aef449cb0a65347d2
+    container_name: api1
+    hostname: api1
+    environment:
+      - SOCKET_PATH=/tmp/api1.sock
+      - FOREIGN_STATE=api2
+      - WORKERS=16
+    volumes:
+      - rb2025:/tmp/
+    networks:
+      - payment-processor
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: "0.65"
+          memory: 155MB
+
+  api2:
+    image: ghcr.io/krymancer/rinha-backend-2025-ocaml:main
+    container_name: api2
+    hostname: api2
+    environment:
+      - SOCKET_PATH=/tmp/api2.sock
+      - FOREIGN_STATE=api1
+      - WORKERS=16
+    volumes:
+      - rb2025:/tmp/
+    networks:
+      - payment-processor
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: "0.65"
+          memory: 155MB
+
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    ports:
+      - "9999:9999"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - rb2025:/tmp/
+    depends_on:
+      - api1
+      - api2
+    networks:
+      - payment-processor
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: "0.2"
+          memory: 40MB
+
+volumes:
+  rb2025:
+    driver: local
+
+networks:
+  payment-processor:
+    external: true
+    driver: bridge

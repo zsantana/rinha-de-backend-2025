@@ -1,0 +1,76 @@
+
+ api-2 Pulling 
+ api-1 Pulling 
+ 0368fd46e3c6 Already exists 
+ 0670596c9dd1 Already exists 
+ b2683b5bf4e2 Already exists 
+ 4a805e037314 Already exists 
+ 6f730f3f37cf Already exists 
+ f7ee2846e40e Already exists 
+ 0ce0199e4df2 Pulling fs layer 
+ 185293cf27a0 Pulling fs layer 
+ 0ce0199e4df2 Downloading [==================================================>]      91B/91B
+ 0ce0199e4df2 Verifying Checksum 
+ 0ce0199e4df2 Download complete 
+ 0ce0199e4df2 Extracting [==================================================>]      91B/91B
+ 0ce0199e4df2 Extracting [==================================================>]      91B/91B
+ 185293cf27a0 Downloading [>                                                  ]  228.2kB/21.77MB
+ 0ce0199e4df2 Pull complete 
+ 185293cf27a0 Downloading [=================>                                 ]  7.803MB/21.77MB
+ 0368fd46e3c6 Already exists 
+ 0670596c9dd1 Already exists 
+ b2683b5bf4e2 Already exists 
+ 4a805e037314 Already exists 
+ 6f730f3f37cf Already exists 
+ f7ee2846e40e Already exists 
+ 0ce0199e4df2 Already exists 
+ 185293cf27a0 Downloading [=============================>                     ]  12.84MB/21.77MB
+ 185293cf27a0 Pulling fs layer 
+ 185293cf27a0 Downloading [=============================>                     ]  12.84MB/21.77MB
+ 185293cf27a0 Downloading [===========================================>       ]  18.74MB/21.77MB
+ 185293cf27a0 Downloading [===========================================>       ]  18.74MB/21.77MB
+ 185293cf27a0 Verifying Checksum 
+ 185293cf27a0 Download complete 
+ 185293cf27a0 Verifying Checksum 
+ 185293cf27a0 Download complete 
+ 185293cf27a0 Extracting [>                                                  ]  229.4kB/21.77MB
+ 185293cf27a0 Extracting [>                                                  ]  229.4kB/21.77MB
+ 185293cf27a0 Extracting [===================>                               ]  8.487MB/21.77MB
+ 185293cf27a0 Extracting [===================>                               ]  8.487MB/21.77MB
+ 185293cf27a0 Extracting [==========================================>        ]  18.35MB/21.77MB
+ 185293cf27a0 Extracting [==========================================>        ]  18.35MB/21.77MB
+ 185293cf27a0 Extracting [================================================>  ]   21.1MB/21.77MB
+ 185293cf27a0 Extracting [================================================>  ]   21.1MB/21.77MB
+ 185293cf27a0 Extracting [==================================================>]  21.77MB/21.77MB
+ 185293cf27a0 Extracting [==================================================>]  21.77MB/21.77MB
+ 185293cf27a0 Pull complete 
+ 185293cf27a0 Pull complete 
+ api-2 Pulled 
+ api-1 Pulled 
+ Network backend  Creating
+ Network backend  Created
+ Container api-2  Creating
+ Container api-1  Creating
+ Container api-2  Created
+ Container api-1  Created
+ Container load-balancer  Creating
+ Container load-balancer  Created
+Attaching to api-1, api-2, load-balancer
+api-1          | info: Microsoft.Hosting.Lifetime[14]
+api-1          |       Now listening on: http://[::]:8080
+api-1          | info: Microsoft.Hosting.Lifetime[0]
+api-1          |       Application started. Press Ctrl+C to shut down.
+api-1          | info: Microsoft.Hosting.Lifetime[0]
+api-1          |       Hosting environment: Production
+api-1          | info: Microsoft.Hosting.Lifetime[0]
+api-1          |       Content root path: /app
+api-2          | info: Microsoft.Hosting.Lifetime[14]
+api-2          |       Now listening on: http://[::]:8080
+api-2          | info: Microsoft.Hosting.Lifetime[0]
+api-2          |       Application started. Press Ctrl+C to shut down.
+api-2          | info: Microsoft.Hosting.Lifetime[0]
+api-2          |       Hosting environment: Productio
+api-2          | info: Microsoft.Hosting.Lifetime[0]
+api-2          |       Content root path: /app
+Error response from daemon: failed to set up container networking: driver failed programming external connectivity on endpoint load-balancer (f5b801656d714c61d2e7b0a1f61145413ed8c2cb335e7cae434bdd76a112d1bc): Bind for 0.0.0.0:9999 failed: port is already allocated
+log truncated at line 1000

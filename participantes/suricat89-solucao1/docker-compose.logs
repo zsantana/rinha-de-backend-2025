@@ -1,0 +1,104 @@
+
+ publisher-consumer-2 Pulling 
+ publisher-consumer-1 Pulling 
+ 38a8310d387e Pulling fs layer 
+ cf0c30f9c927 Pulling fs layer 
+ d3d842b783f4 Pulling fs layer 
+ 38a8310d387e Pulling fs layer 
+ cf0c30f9c927 Pulling fs layer 
+ d3d842b783f4 Pulling fs layer 
+ 38a8310d387e Downloading [>                                                  ]  37.72kB/3.644MB
+ 38a8310d387e Downloading [>                                                  ]  37.72kB/3.644MB
+ 38a8310d387e Verifying Checksum 
+ 38a8310d387e Download complete 
+ 38a8310d387e Verifying Checksum 
+ 38a8310d387e Download complete 
+ 38a8310d387e Extracting [>                                                  ]  65.54kB/3.644MB
+ 38a8310d387e Extracting [>                                                  ]  65.54kB/3.644MB
+ 38a8310d387e Extracting [==================================================>]  3.644MB/3.644MB
+ 38a8310d387e Extracting [==================================================>]  3.644MB/3.644MB
+ 38a8310d387e Pull complete 
+ 38a8310d387e Pull complete 
+ cf0c30f9c927 Downloading [==================================================>]      93B/93B
+ cf0c30f9c927 Verifying Checksum 
+ cf0c30f9c927 Download complete 
+ cf0c30f9c927 Downloading [==================================================>]      93B/93B
+ cf0c30f9c927 Verifying Checksum 
+ cf0c30f9c927 Download complete 
+ cf0c30f9c927 Extracting [==================================================>]      93B/93B
+ cf0c30f9c927 Extracting [==================================================>]      93B/93B
+ cf0c30f9c927 Extracting [==================================================>]      93B/93B
+ cf0c30f9c927 Extracting [==================================================>]      93B/93B
+ cf0c30f9c927 Pull complete 
+ cf0c30f9c927 Pull complete 
+ d3d842b783f4 Downloading [>                                                  ]   51.9kB/5.08MB
+ d3d842b783f4 Downloading [>                                                  ]   51.9kB/5.08MB
+ d3d842b783f4 Downloading [==>                                                ]  270.3kB/5.08MB
+ d3d842b783f4 Downloading [==>                                                ]  270.3kB/5.08MB
+ d3d842b783f4 Downloading [=======>                                           ]    770kB/5.08MB
+ d3d842b783f4 Downloading [=======>                                           ]    770kB/5.08MB
+ d3d842b783f4 Downloading [================>                                  ]  1.655MB/5.08MB
+ d3d842b783f4 Downloading [================>                                  ]  1.655MB/5.08MB
+ d3d842b783f4 Downloading [===================================>               ]  3.584MB/5.08MB
+ d3d842b783f4 Downloading [===================================>               ]  3.584MB/5.08MB
+ d3d842b783f4 Verifying Checksum 
+ d3d842b783f4 Download complete 
+ d3d842b783f4 Download complete 
+ d3d842b783f4 Extracting [>                                                  ]  65.54kB/5.08MB
+ d3d842b783f4 Extracting [>                                                  ]  65.54kB/5.08MB
+ d3d842b783f4 Extracting [==================================================>]   5.08MB/5.08MB
+ d3d842b783f4 Extracting [==================================================>]   5.08MB/5.08MB
+ d3d842b783f4 Pull complete 
+ d3d842b783f4 Pull complete 
+ publisher-consumer-2 Pulled 
+ publisher-consumer-1 Pulled 
+ Network suricat89-solucao1_backend  Creating
+ Network suricat89-solucao1_backend  Created
+ Container rinha-redis  Creating
+ Container rinha-redis  Created
+ Container rinha-publisher-consumer-2  Creating
+ Container rinha-publisher-consumer-1  Creating
+ Container rinha-publisher-consumer-1  Created
+ Container rinha-publisher-consumer-2  Created
+ Container rinha-nginx  Creating
+ Container rinha-nginx  Created
+Attaching to rinha-nginx, rinha-publisher-consumer-1, rinha-publisher-consumer-2, rinha-redis
+rinha-redis                 | 1:C 30 Jul 2025 04:30:27.331 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+rinha-redis                 | 1:C 30 Jul 2025 04:30:27.331 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+rinha-redis                 | 1:C 30 Jul 2025 04:30:27.331 * Redis version=7.4.5, bits=64, commit=00000000, modified=0, pid=1, just started
+rinha-redis                 | 1:C 30 Jul 2025 04:30:27.331 * Configuration loaded
+rinha-redis                 | 1:M 30 Jul 2025 04:30:27.331 * monotonic clock: POSIX clock_gettime
+rinha-redis                 | 1:M 30 Jul 2025 04:30:27.332 # Failed to write PID file: Permission denied
+rinha-redis                 | 1:M 30 Jul 2025 04:30:27.332 * Running mode=standalone, port=6379.
+rinha-redis                 | 1:M 30 Jul 2025 04:30:27.332 * Server initialized
+rinha-redis                 | 1:M 30 Jul 2025 04:30:27.332 * Ready to accept connections tcp
+rinha-publisher-consumer-1  | 2025/07/30 04:30:33 Consumer started with 300 goroutines
+rinha-publisher-consumer-1  | 2025/07/30 04:30:33 Producer listening on port :8080...
+rinha-publisher-consumer-2  | 2025/07/30 04:30:33 Consumer started with 300 goroutines
+rinha-publisher-consumer-2  | 2025/07/30 04:30:33 Producer listening on port :8080...
+rinha-nginx                 | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+rinha-nginx                 | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+rinha-nginx                 | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+rinha-nginx                 | 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+rinha-nginx                 | 10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
+rinha-nginx                 | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+rinha-nginx                 | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+rinha-nginx                 | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+rinha-nginx                 | /docker-entrypoint.sh: Configuration complete; ready for start up
+rinha-publisher-consumer-1  | 2025/07/30 04:30:36 [http://backend_servers/payments-summary]: {"default":{"totalRequests":0,"totalAmount":0,"latestRequestedAt":"0001-01-01T00:00:00Z","latestResponseAt":"0001-01-01T00:00:00Z"},"fallback":{"totalRequests":0,"totalAmount":0,"latestRequestedAt":"0001-01-01T00:00:00Z","latestResponseAt":"0001-01-01T00:00:00Z"}}
+rinha-publisher-consumer-1  | 2025/07/30 04:30:42 [http://backend_servers/payments-summary?from=2025-07-30T04%3A30%3A32.066Z&to=2025-07-30T04%3A30%3A41.966Z]: {"default":{"totalRequests":0,"totalAmount":0,"latestRequestedAt":"0001-01-01T00:00:00Z","latestResponseAt":"0001-01-01T00:00:00Z"},"fallback":{"totalRequests":0,"totalAmount":0,"latestRequestedAt":"0001-01-01T00:00:00Z","latestResponseAt":"0001-01-01T00:00:00Z"}}
+rinha-publisher-consumer-2  | 2025/07/30 04:30:52 [http://backend_servers/payments-summary?from=2025-07-30T04%3A30%3A42.071Z&to=2025-07-30T04%3A30%3A51.971Z]: {"default":{"totalRequests":499,"totalAmount":9930.1,"latestRequestedAt":"2025-07-30T04:30:50.373110982Z","latestResponseAt":"2025-07-30T04:30:50.374109972Z"},"fallback":{"totalRequests":0,"totalAmount":0,"latestRequestedAt":"0001-01-01T00:00:00Z","latestResponseAt":"0001-01-01T00:00:00Z"}}
+rinha-publisher-consumer-1  | 2025/07/30 04:31:02 [http://backend_servers/payments-summary?from=2025-07-30T04%3A30%3A52.076Z&to=2025-07-30T04%3A31%3A01.976Z]: {"default":{"totalRequests":1402,"totalAmount":27899.8,"latestRequestedAt":"2025-07-30T04:30:56.78443049Z","latestResponseAt":"2025-07-30T04:30:56.884801434Z"},"fallback":{"totalRequests":0,"totalAmount":0,"latestRequestedAt":"0001-01-01T00:00:00Z","latestResponseAt":"0001-01-01T00:00:00Z"}}
+rinha-publisher-consumer-2  | 2025/07/30 04:31:12 [http://backend_servers/payments-summary?from=2025-07-30T04%3A31%3A02.093Z&to=2025-07-30T04%3A31%3A11.993Z]: {"default":{"totalRequests":0,"totalAmount":0,"latestRequestedAt":"0001-01-01T00:00:00Z","latestResponseAt":"0001-01-01T00:00:00Z"},"fallback":{"totalRequests":2323,"totalAmount":46227.7,"latestRequestedAt":"2025-07-30T04:31:03.17847327Z","latestResponseAt":"2025-07-30T04:31:03.179108974Z"}}
+rinha-publisher-consumer-1  | 2025/07/30 04:31:22 [http://backend_servers/payments-summary?from=2025-07-30T04%3A31%3A12.115Z&to=2025-07-30T04%3A31%3A22.015Z]: {"default":{"totalRequests":0,"totalAmount":0,"latestRequestedAt":"0001-01-01T00:00:00Z","latestResponseAt":"0001-01-01T00:00:00Z"},"fallback":{"totalRequests":36,"totalAmount":716.4,"latestRequestedAt":"2025-07-30T04:31:21.072281627Z","latestResponseAt":"2025-07-30T04:31:22.072809969Z"}}
+rinha-publisher-consumer-1  | 2025/07/30 04:31:32 [http://backend_servers/payments-summary?from=2025-07-30T04%3A31%3A22.156Z&to=2025-07-30T04%3A31%3A32.056Z]: {"default":{"totalRequests":6673,"totalAmount":132792.7,"latestRequestedAt":"2025-07-30T04:31:22.472470394Z","latestResponseAt":"2025-07-30T04:31:22.506489024Z"},"fallback":{"totalRequests":0,"totalAmount":0,"latestRequestedAt":"0001-01-01T00:00:00Z","latestResponseAt":"0001-01-01T00:00:00Z"}}
+rinha-publisher-consumer-1  | 2025/07/30 04:31:43 [http://backend_servers/payments-summary?from=2025-07-30T04%3A30%3A33.065Z&to=2025-07-30T04%3A31%3A43.065Z]: {"default":{"totalRequests":13762,"totalAmount":273863.8,"latestRequestedAt":"2025-07-30T04:31:41.624276029Z","latestResponseAt":"2025-07-30T04:31:41.624832142Z"},"fallback":{"totalRequests":2986,"totalAmount":59421.4,"latestRequestedAt":"2025-07-30T04:31:21.116964774Z","latestResponseAt":"2025-07-30T04:31:22.118792348Z"}}
+[Krinha-nginx exited with code 0
+[Krinha-publisher-consumer-1 exited with code 2
+[Krinha-publisher-consumer-2 exited with code 2
+rinha-redis                 | 1:signal-handler (1753849904) Received SIGTERM scheduling shutdown...
+rinha-redis                 | 1:M 30 Jul 2025 04:31:44.708 * User requested shutdown...
+rinha-redis                 | 1:M 30 Jul 2025 04:31:44.708 * Removing the pid file.
+rinha-redis                 | 1:M 30 Jul 2025 04:31:44.709 # Redis is now ready to exit, bye bye...
+[Krinha-redis exited with code 0
+log truncated at line 1000

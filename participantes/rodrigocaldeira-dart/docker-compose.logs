@@ -1,0 +1,1001 @@
+
+ api02 Pulling 
+ api01 Pulling 
+ 8a77a7ebc36b Pulling fs layer 
+ 0f7fae399a1b Pulling fs layer 
+ 8a77a7ebc36b Pulling fs layer 
+ 0f7fae399a1b Pulling fs layer 
+ 8a77a7ebc36b Downloading [>                                                  ]  18.59kB/1.787MB
+ 8a77a7ebc36b Downloading [>                                                  ]  18.59kB/1.787MB
+ 8a77a7ebc36b Verifying Checksum 
+ 8a77a7ebc36b Download complete 
+ 8a77a7ebc36b Extracting [>                                                  ]  32.77kB/1.787MB
+ 8a77a7ebc36b Verifying Checksum 
+ 8a77a7ebc36b Download complete 
+ 8a77a7ebc36b Extracting [>                                                  ]  32.77kB/1.787MB
+ 8a77a7ebc36b Extracting [==================================================>]  1.787MB/1.787MB
+ 8a77a7ebc36b Extracting [==================================================>]  1.787MB/1.787MB
+ 8a77a7ebc36b Extracting [==================================================>]  1.787MB/1.787MB
+ 8a77a7ebc36b Extracting [==================================================>]  1.787MB/1.787MB
+ 8a77a7ebc36b Pull complete 
+ 8a77a7ebc36b Pull complete 
+ 0f7fae399a1b Downloading [>                                                  ]  39.61kB/3.901MB
+ 0f7fae399a1b Downloading [>                                                  ]  39.61kB/3.901MB
+ 0f7fae399a1b Downloading [=====>                                             ]  421.9kB/3.901MB
+ 0f7fae399a1b Downloading [=====>                                             ]  421.9kB/3.901MB
+ 0f7fae399a1b Downloading [===============>                                   ]  1.221MB/3.901MB
+ 0f7fae399a1b Downloading [===============>                                   ]  1.221MB/3.901MB
+ 0f7fae399a1b Downloading [================================>                  ]  2.572MB/3.901MB
+ 0f7fae399a1b Downloading [================================>                  ]  2.572MB/3.901MB
+ 0f7fae399a1b Verifying Checksum 
+ 0f7fae399a1b Verifying Checksum 
+ 0f7fae399a1b Download complete 
+ 0f7fae399a1b Download complete 
+ 0f7fae399a1b Extracting [>                                                  ]  65.54kB/3.901MB
+ 0f7fae399a1b Extracting [>                                                  ]  65.54kB/3.901MB
+ 0f7fae399a1b Extracting [==================================================>]  3.901MB/3.901MB
+ 0f7fae399a1b Extracting [==================================================>]  3.901MB/3.901MB
+ 0f7fae399a1b Pull complete 
+ 0f7fae399a1b Pull complete 
+ api01 Pulled 
+ api02 Pulled 
+ Network rinha  Creating
+ Network rinha  Created
+ Container queue  Creating
+ Container db  Creating
+ Container queue  Created
+ Container db  Created
+ Container rodrigocaldeira-dart-api02-1  Creating
+ Container rodrigocaldeira-dart-api01-1  Creating
+ Container rodrigocaldeira-dart-api01-1  Created
+ Container rodrigocaldeira-dart-api02-1  Created
+ Container rodrigocaldeira-dart-nginx-1  Creating
+ Container rodrigocaldeira-dart-nginx-1  Created
+Attaching to db, queue, api01-1, api02-1, nginx-1
+queue    | Starting Redis Server
+queue    | 1:C 30 Jul 2025 04:11:58.829 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+queue    | 1:C 30 Jul 2025 04:11:58.829 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+queue    | 1:C 30 Jul 2025 04:11:58.829 * Redis version=8.0.3, bits=64, commit=00000000, modified=1, pid=1, just started
+queue    | 1:C 30 Jul 2025 04:11:58.829 * Configuration loaded
+queue    | 1:M 30 Jul 2025 04:11:58.829 * monotonic clock: POSIX clock_gettime
+queue    | 1:M 30 Jul 2025 04:11:58.830 * Running mode=standalone, port=6379.
+queue    | 1:M 30 Jul 2025 04:11:58.831 * <bf> RedisBloom version 8.0.1 (Git=unknown)
+queue    | 1:M 30 Jul 2025 04:11:58.831 * <bf> Registering configuration options: [
+queue    | 1:M 30 Jul 2025 04:11:58.831 * <bf> 	{ bf-error-rate       :      0.01 }
+queue    | 1:M 30 Jul 2025 04:11:58.831 * <bf> 	{ bf-initial-size     :       100 }
+queue    | 1:M 30 Jul 2025 04:11:58.831 * <bf> 	{ bf-expansion-factor :         2 }
+queue    | 1:M 30 Jul 2025 04:11:58.831 * <bf> 	{ cf-bucket-size      :         2 }
+queue    | 1:M 30 Jul 2025 04:11:58.831 * <bf> 	{ cf-initial-size     :      1024 }
+queue    | 1:M 30 Jul 2025 04:11:58.831 * <bf> 	{ cf-max-iterations   :        20 }
+queue    | 1:M 30 Jul 2025 04:11:58.831 * <bf> 	{ cf-expansion-factor :         1 }
+queue    | 1:M 30 Jul 2025 04:11:58.831 * <bf> 	{ cf-max-expansions   :        32 }
+queue    | 1:M 30 Jul 2025 04:11:58.831 * <bf> ]
+queue    | 1:M 30 Jul 2025 04:11:58.832 * Module 'bf' loaded from /usr/local/lib/redis/modules//redisbloom.so
+queue    | 1:M 30 Jul 2025 04:11:58.834 * <search> Redis version found by RedisSearch : 8.0.3 - oss
+queue    | 1:M 30 Jul 2025 04:11:58.834 * <search> RediSearch version 8.0.1 (Git=5688fcc)
+queue    | 1:M 30 Jul 2025 04:11:58.834 * <search> Low level api version 1 initialized successfully
+queue    | 1:M 30 Jul 2025 04:11:58.834 * <search> gc: ON, prefix min length: 2, min word length to stem: 4, prefix max expansions: 200, query timeout (ms): 500, timeout policy: return, cursor read size: 1000, cursor max idle (ms): 300000, max doctable size: 1000000, max number of search results:  1000000, 
+queue    | 1:M 30 Jul 2025 04:11:58.834 * <search> Initialized thread pools!
+queue    | 1:M 30 Jul 2025 04:11:58.834 * <search> Disabled workers threadpool of size 0
+queue    | 1:M 30 Jul 2025 04:11:58.834 * <search> Subscribe to config changes
+queue    | 1:M 30 Jul 2025 04:11:58.835 * <search> Enabled role change notification
+queue    | 1:M 30 Jul 2025 04:11:58.835 * <search> Cluster configuration: AUTO partitions, type: 0, coordinator timeout: 0ms
+queue    | 1:M 30 Jul 2025 04:11:58.835 * <search> Register write commands
+queue    | 1:M 30 Jul 2025 04:11:58.835 * Module 'search' loaded from /usr/local/lib/redis/modules//redisearch.so
+queue    | 1:M 30 Jul 2025 04:11:58.902 * <timeseries> RedisTimeSeries version 80001, git_sha=577bfa8b5909e7ee572f0b651399be8303dc6641
+queue    | 1:M 30 Jul 2025 04:11:58.902 * <timeseries> Redis version found by RedisTimeSeries : 8.0.3 - oss
+queue    | 1:M 30 Jul 2025 04:11:58.902 * <timeseries> Registering configuration options: [
+queue    | 1:M 30 Jul 2025 04:11:58.902 * <timeseries> 	{ ts-compaction-policy   :              }
+queue    | 1:M 30 Jul 2025 04:11:58.902 * <timeseries> 	{ ts-num-threads         :            3 }
+queue    | 1:M 30 Jul 2025 04:11:58.902 * <timeseries> 	{ ts-retention-policy    :            0 }
+queue    | 1:M 30 Jul 2025 04:11:58.902 * <timeseries> 	{ ts-duplicate-policy    :        block }
+queue    | 1:M 30 Jul 2025 04:11:58.902 * <timeseries> 	{ ts-chunk-size-bytes    :         4096 }
+queue    | 1:M 30 Jul 2025 04:11:58.902 * <timeseries> 	{ ts-encoding            :   compressed }
+queue    | 1:M 30 Jul 2025 04:11:58.902 * <timeseries> 	{ ts-ignore-max-time-diff:            0 }
+queue    | 1:M 30 Jul 2025 04:11:58.902 * <timeseries> 	{ ts-ignore-max-val-diff :     0.000000 }
+queue    | 1:M 30 Jul 2025 04:11:58.902 * <timeseries> ]
+queue    | 1:M 30 Jul 2025 04:11:58.902 * <timeseries> Detected redis oss
+queue    | 1:M 30 Jul 2025 04:11:58.902 * Module 'timeseries' loaded from /usr/local/lib/redis/modules//redistimeseries.so
+db       | The files belonging to this database system will be owned by user "postgres".
+db       | This user must also own the server process.
+db       | 
+db       | The database cluster will be initialized with locale "en_US.utf8".
+db       | The default database encoding has accordingly been set to "UTF8".
+db       | The default text search configuration will be set to "english".
+db       | 
+db       | Data page checksums are disabled.
+db       | 
+db       | fixing permissions on existing directory /var/lib/postgresql/data ... ok
+db       | creating subdirectories ... ok
+db       | selecting dynamic shared memory implementation ... posix
+queue    | 1:M 30 Jul 2025 04:11:58.905 * <ReJSON> Created new data type 'ReJSON-RL'
+queue    | 1:M 30 Jul 2025 04:11:58.905 * <ReJSON> version: 80001 git sha: unknown branch: unknown
+queue    | 1:M 30 Jul 2025 04:11:58.905 * <ReJSON> Exported RedisJSON_V1 API
+queue    | 1:M 30 Jul 2025 04:11:58.905 * <ReJSON> Exported RedisJSON_V2 API
+queue    | 1:M 30 Jul 2025 04:11:58.905 * <ReJSON> Exported RedisJSON_V3 API
+queue    | 1:M 30 Jul 2025 04:11:58.905 * <ReJSON> Exported RedisJSON_V4 API
+queue    | 1:M 30 Jul 2025 04:11:58.905 * <ReJSON> Exported RedisJSON_V5 API
+queue    | 1:M 30 Jul 2025 04:11:58.905 * <ReJSON> Enabled diskless replication
+queue    | 1:M 30 Jul 2025 04:11:58.905 * <ReJSON> Initialized shared string cache, thread safe: false.
+queue    | 1:M 30 Jul 2025 04:11:58.905 * Module 'ReJSON' loaded from /usr/local/lib/redis/modules//rejson.so
+queue    | 1:M 30 Jul 2025 04:11:58.905 * <search> Acquired RedisJSON_V5 API
+queue    | 1:M 30 Jul 2025 04:11:58.905 * Server initialized
+queue    | 1:M 30 Jul 2025 04:11:58.905 * Ready to accept connections tcp
+db       | selecting default "max_connections" ... 100
+db       | selecting default "shared_buffers" ... 128MB
+db       | selecting default time zone ... UTC
+db       | creating configuration files ... ok
+db       | running bootstrap script ... ok
+db       | sh: locale: not found
+db       | 2025-07-30 04:12:02.109 UTC [36] WARNING:  no usable system locales were found
+db       | performing post-bootstrap initialization ... ok
+db       | initdb: warning: enabling "trust" authentication for local connections
+db       | initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
+db       | syncing data to disk ... ok
+db       | 
+db       | 
+db       | Success. You can now start the database server using:
+db       | 
+db       |     pg_ctl -D /var/lib/postgresql/data -l logfile start
+db       | 
+db       | waiting for server to start....2025-07-30 04:12:05.818 UTC [48] LOG:  starting PostgreSQL 17.5 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
+db       | 2025-07-30 04:12:05.818 UTC [48] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db       | 2025-07-30 04:12:05.821 UTC [51] LOG:  database system was shut down at 2025-07-30 04:12:05 UTC
+db       | 2025-07-30 04:12:05.905 UTC [48] LOG:  database system is ready to accept connections
+db       |  done
+db       | server started
+db       | CREATE DATABASE
+db       | 
+db       | 
+db       | /usr/local/bin/docker-entrypoint.sh: running /docker-entrypoint-initdb.d/init.sql
+db       | CREATE TABLE
+db       | CREATE INDEX
+db       | 
+db       | 
+db       | waiting for server to shut down....2025-07-30 04:12:06.504 UTC [48] LOG:  received fast shutdown request
+db       | 2025-07-30 04:12:06.504 UTC [48] LOG:  aborting any active transactions
+db       | 2025-07-30 04:12:06.507 UTC [48] LOG:  background worker "logical replication launcher" (PID 53) exited with exit code 1
+db       | 2025-07-30 04:12:06.508 UTC [49] LOG:  shutting down
+db       | 2025-07-30 04:12:06.509 UTC [49] LOG:  checkpoint starting: shutdown immediate
+db       | 2025-07-30 04:12:06.608 UTC [49] LOG:  checkpoint complete: wrote 927 buffers (22.6%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.099 s, sync=0.001 s, total=0.100 s; sync files=0, longest=0.000 s, average=0.000 s; distance=4276 kB, estimate=4276 kB; lsn=0/191A330, redo lsn=0/191A330
+db       | 2025-07-30 04:12:06.616 UTC [48] LOG:  database system is shut down
+db       |  done
+db       | server stopped
+db       | 
+db       | PostgreSQL init process complete; ready for start up.
+db       | 
+db       | 2025-07-30 04:12:06.728 UTC [1] LOG:  starting PostgreSQL 17.5 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
+db       | 2025-07-30 04:12:06.728 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+db       | 2025-07-30 04:12:06.728 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+db       | 2025-07-30 04:12:06.728 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db       | 2025-07-30 04:12:06.803 UTC [65] LOG:  database system was shut down at 2025-07-30 04:12:06 UTC
+db       | 2025-07-30 04:12:06.807 UTC [1] LOG:  database system is ready to accept connections
+api01-1  | Server listening on port 8080
+api02-1  | Server listening on port 8081
+nginx-1  | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+nginx-1  | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+nginx-1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+nginx-1  | 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+nginx-1  | 10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
+nginx-1  | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+nginx-1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+nginx-1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+nginx-1  | /docker-entrypoint.sh: Configuration complete; ready for start up
+api01-1  | 2025-07-30T04:12:13.189584  0:00:00.006342 GET     [200] /payments-summary
+api02-1  | 2025-07-30T04:12:18.856530  0:00:00.006309 POST    [200] /purge-payments
+api01-1  | 2025-07-30T04:12:18.864885  0:00:00.002304 GET     [200] /payments-summary?from=2025-07-30T04:12:08.863Z&to=2025-07-30T04:12:18.763Z
+api02-1  | 2025-07-30T04:12:18.868945  0:00:00.000368 POST    [200] /payments
+api01-1  | Sending payment a41bd3e3-3853-49fa-8416-39a23be57d47 to default
+api01-1  | 2025-07-30T04:12:18.974651  0:00:00.000178 POST    [200] /payments
+api01-1  | Sending payment 166df65c-9ed9-46f5-94fa-2ba966de61fb to default
+api02-1  | 2025-07-30T04:12:19.083532  0:00:00.000145 POST    [200] /payments
+api01-1  | Sending payment b95289dc-5c50-45e3-ab43-6dd6580da3db to default
+api01-1  | 2025-07-30T04:12:19.193022  0:00:00.000139 POST    [200] /payments
+api01-1  | Sending payment eedaa41c-0810-4f98-b7d5-90d297d69f70 to default
+api02-1  | 2025-07-30T04:12:19.303681  0:00:00.000143 POST    [200] /payments
+api01-1  | Sending payment 27f0ba07-0efd-48b4-8d5d-6690f7f4ca81 to default
+api01-1  | 2025-07-30T04:12:19.411341  0:00:00.000116 POST    [200] /payments
+api01-1  | Sending payment 755d5284-5b29-4650-a25f-abb6ab1d2b30 to default
+api02-1  | 2025-07-30T04:12:19.520469  0:00:00.000117 POST    [200] /payments
+api01-1  | Sending payment 63e798e2-c440-45b1-96b9-639a5d07a7b5 to default
+api01-1  | 2025-07-30T04:12:19.630010  0:00:00.000188 POST    [200] /payments
+api01-1  | Sending payment f97f46b1-ba8d-4d2b-99aa-db9e43d6dc96 to default
+api02-1  | 2025-07-30T04:12:19.739329  0:00:00.000146 POST    [200] /payments
+api01-1  | Sending payment 91c73999-2a18-47b8-98dc-0a1c3dba4db5 to default
+api01-1  | 2025-07-30T04:12:19.848809  0:00:00.000162 POST    [200] /payments
+api01-1  | Sending payment 0abcd3de-a867-4414-b0f3-9385e36c5df1 to default
+api02-1  | 2025-07-30T04:12:19.871241  0:00:00.000147 POST    [200] /payments
+api02-1  | Sending payment 09a2a9ea-e5a5-4362-b9ad-a5150a8cbfdd to default
+api01-1  | 2025-07-30T04:12:19.957594  0:00:00.000158 POST    [200] /payments
+api02-1  | Sending payment 725a8676-053f-44ae-9c5c-f8bf5a9ed93f to default
+api02-1  | 2025-07-30T04:12:19.977215  0:00:00.000111 POST    [200] /payments
+api02-1  | Sending payment ab805948-ca82-4aa5-b0de-0b7e29b0b5b6 to default
+api01-1  | 2025-07-30T04:12:20.067409  0:00:00.000131 POST    [200] /payments
+api01-1  | Sending payment d3e05fb5-0bcf-4cbd-8cfa-03b76d7bd05d to default
+api02-1  | 2025-07-30T04:12:20.085195  0:00:00.000112 POST    [200] /payments
+api01-1  | Sending payment 8bb5206e-14cc-41ea-bed9-475aeb4e7731 to default
+api01-1  | 2025-07-30T04:12:20.176234  0:00:00.000116 POST    [200] /payments
+api01-1  | Sending payment ff7a581f-06a2-40e2-969e-ee4d65a35979 to default
+api02-1  | 2025-07-30T04:12:20.194847  0:00:00.000115 POST    [200] /payments
+api01-1  | Sending payment 8dbf6689-092d-4078-96db-2c32661c4f53 to default
+api01-1  | 2025-07-30T04:12:20.286444  0:00:00.000117 POST    [200] /payments
+api01-1  | Sending payment a88658be-f09e-429c-ba3f-7841a164904d to default
+api02-1  | 2025-07-30T04:12:20.305954  0:00:00.000178 POST    [200] /payments
+api01-1  | Sending payment 69a79165-1b17-41f6-bb76-72434d596e01 to default
+api01-1  | 2025-07-30T04:12:20.395375  0:00:00.000113 POST    [200] /payments
+api01-1  | Sending payment b7a7d6a5-d54a-44cc-bdfa-940b20ad09a3 to default
+api02-1  | 2025-07-30T04:12:20.412974  0:00:00.000183 POST    [200] /payments
+api01-1  | Sending payment c53e7896-5c92-46c3-a83a-9dbad30ae931 to default
+api01-1  | 2025-07-30T04:12:20.504729  0:00:00.000135 POST    [200] /payments
+api01-1  | Sending payment 680b14a8-da35-429f-85fc-429824d10ef1 to default
+api02-1  | 2025-07-30T04:12:20.522307  0:00:00.000125 POST    [200] /payments
+api01-1  | Sending payment 4fbae07d-4ca9-4310-a7dd-0b067ad9bf6a to default
+api01-1  | 2025-07-30T04:12:20.613738  0:00:00.000148 POST    [200] /payments
+api02-1  | Sending payment fb4f07b3-80c3-4c06-96f2-7fba426a0c4a to default
+api02-1  | 2025-07-30T04:12:20.631732  0:00:00.000128 POST    [200] /payments
+api02-1  | Sending payment 9e0138e9-7b89-4944-9296-5da88dc59b41 to default
+api01-1  | 2025-07-30T04:12:20.723172  0:00:00.000114 POST    [200] /payments
+api02-1  | Sending payment 2ca80d3d-6778-489f-b527-c87af8867139 to default
+api02-1  | 2025-07-30T04:12:20.741962  0:00:00.000186 POST    [200] /payments
+api01-1  | Sending payment 2a4d4ece-35ca-4a91-ae4b-5e5caa0c197c to default
+api01-1  | 2025-07-30T04:12:20.832428  0:00:00.000109 POST    [200] /payments
+api01-1  | Sending payment 99937467-567f-4c66-b903-b8d0451fc9af to default
+api02-1  | 2025-07-30T04:12:20.850975  0:00:00.000173 POST    [200] /payments
+api01-1  | Sending payment 82f5d61c-4100-4b5a-a808-7924e43dcdda to default
+api01-1  | 2025-07-30T04:12:20.872714  0:00:00.000120 POST    [200] /payments
+api01-1  | Sending payment 2f3cf643-b4f9-44bb-9468-819ba96d0766 to default
+api02-1  | 2025-07-30T04:12:20.942172  0:00:00.000165 POST    [200] /payments
+api01-1  | Sending payment 2da797a4-f3e7-4158-b1fc-b35f31fec9f8 to default
+api01-1  | 2025-07-30T04:12:20.959770  0:00:00.000115 POST    [200] /payments
+api01-1  | Sending payment 8779c927-d351-4ec1-806a-ad7dec2719ae to default
+api02-1  | 2025-07-30T04:12:20.979304  0:00:00.000110 POST    [200] /payments
+api01-1  | Sending payment b6da71b4-22fa-46cf-91a9-262722ed6c70 to default
+api01-1  | 2025-07-30T04:12:21.051573  0:00:00.000165 POST    [200] /payments
+api01-1  | Sending payment 4f81b5a1-0569-46b5-8bd8-4acb27a76648 to default
+api02-1  | 2025-07-30T04:12:21.069052  0:00:00.000167 POST    [200] /payments
+api01-1  | Sending payment b452020a-cf1a-4e43-9db0-6d35695b60c5 to default
+api01-1  | 2025-07-30T04:12:21.086871  0:00:00.000118 POST    [200] /payments
+api01-1  | Sending payment 2e343c83-a546-4a22-b03e-4babda172334 to default
+api02-1  | 2025-07-30T04:12:21.160193  0:00:00.000115 POST    [200] /payments
+api02-1  | Sending payment fa4eea1d-da61-4d82-889d-9767e455e6a4 to default
+api01-1  | 2025-07-30T04:12:21.178722  0:00:00.000157 POST    [200] /payments
+api02-1  | Sending payment f73d7188-14ac-40d7-bbbe-c1d39e4a0429 to default
+api02-1  | 2025-07-30T04:12:21.196517  0:00:00.000158 POST    [200] /payments
+api02-1  | Sending payment 5634aeca-a6a7-499e-a78c-60d7830c1334 to default
+api01-1  | 2025-07-30T04:12:21.269777  0:00:00.000118 POST    [200] /payments
+api01-1  | Sending payment ef0ad7bf-ca37-480b-8664-f37f2dcfbd7b to default
+api02-1  | 2025-07-30T04:12:21.288597  0:00:00.000128 POST    [200] /payments
+api01-1  | Sending payment 14590596-cb8a-4939-8c07-75d3ac5a3b96 to default
+api01-1  | 2025-07-30T04:12:21.308050  0:00:00.000143 POST    [200] /payments
+api01-1  | Sending payment ec5c63c6-1470-4d8f-b54e-ee8aa66787f8 to default
+api02-1  | 2025-07-30T04:12:21.379337  0:00:00.000137 POST    [200] /payments
+api01-1  | Sending payment 5c5713ff-a8c7-4e53-8406-b49fc7907869 to default
+api01-1  | 2025-07-30T04:12:21.396862  0:00:00.000123 POST    [200] /payments
+api01-1  | Sending payment 506d5fa3-a2a6-4245-a436-90862f2974de to default
+api02-1  | 2025-07-30T04:12:21.415393  0:00:00.000158 POST    [200] /payments
+api01-1  | Sending payment 45d6940d-a4e4-4b03-90e4-4c4f543c811d to default
+api01-1  | 2025-07-30T04:12:21.488391  0:00:00.000153 POST    [200] /payments
+api01-1  | Sending payment f2d5ddcd-8037-4686-896b-1cc97eb51628 to default
+api02-1  | 2025-07-30T04:12:21.506590  0:00:00.000134 POST    [200] /payments
+api01-1  | Sending payment aaf03002-d07f-4da7-aa7d-7bdbe38a023a to default
+api01-1  | 2025-07-30T04:12:21.523899  0:00:00.000242 POST    [200] /payments
+api01-1  | Sending payment 7220bbf8-63a9-4dec-853c-7120ccd56c7e to default
+api02-1  | 2025-07-30T04:12:21.597943  0:00:00.000199 POST    [200] /payments
+api01-1  | Sending payment 9793b902-f69a-4e2a-a5da-7eae05b7be2d to default
+api01-1  | 2025-07-30T04:12:21.615799  0:00:00.000114 POST    [200] /payments
+api02-1  | Sending payment a27a9860-3de3-4d63-96f6-86122cdd43c2 to default
+api02-1  | 2025-07-30T04:12:21.633601  0:00:00.000109 POST    [200] /payments
+api02-1  | Sending payment 5b7ab23d-5178-4d9a-aad9-e7b53ecb9b3f to default
+api01-1  | 2025-07-30T04:12:21.706869  0:00:00.000144 POST    [200] /payments
+api02-1  | Sending payment ce418108-642f-4555-adb4-0bb793a75858 to default
+api02-1  | 2025-07-30T04:12:21.724385  0:00:00.000109 POST    [200] /payments
+api01-1  | Sending payment fc6935ee-a3f1-4034-9a9a-f2396ea342cc to default
+api01-1  | 2025-07-30T04:12:21.743907  0:00:00.000121 POST    [200] /payments
+api01-1  | Sending payment b4dc75ec-5bb2-470f-b7ca-9e10edb7992b to default
+api02-1  | 2025-07-30T04:12:21.815933  0:00:00.000130 POST    [200] /payments
+api01-1  | Sending payment a2e8ff1b-ec2d-48ed-a222-33baa9e66c6b to default
+api01-1  | 2025-07-30T04:12:21.834598  0:00:00.000110 POST    [200] /payments
+api01-1  | Sending payment a80e4be1-e10c-4bcc-9684-42744c27ae6e to default
+api02-1  | 2025-07-30T04:12:21.852924  0:00:00.000115 POST    [200] /payments
+api01-1  | Sending payment 10ee8a14-e98f-4ad5-8473-39442317b497 to default
+api01-1  | 2025-07-30T04:12:21.874419  0:00:00.000147 POST    [200] /payments
+api01-1  | Sending payment 36b6ff2c-3ea7-44d7-8f23-bdeedd563755 to default
+api02-1  | 2025-07-30T04:12:21.925384  0:00:00.000113 POST    [200] /payments
+api01-1  | Sending payment a2ef16f1-4219-4ef0-a0ab-2eefa4275766 to default
+api01-1  | 2025-07-30T04:12:21.943966  0:00:00.000134 POST    [200] /payments
+api01-1  | Sending payment 4cda8a8c-6f6b-44b2-a4c6-162eac691963 to default
+api02-1  | 2025-07-30T04:12:21.961390  0:00:00.000124 POST    [200] /payments
+api01-1  | Sending payment 2483476f-69f8-41e5-8f1c-2dac785a710d to default
+api01-1  | 2025-07-30T04:12:21.980994  0:00:00.000145 POST    [200] /payments
+api01-1  | Sending payment 62a7a1d7-0c23-41f3-8709-b6f4d937232c to default
+api02-1  | 2025-07-30T04:12:22.034997  0:00:00.000175 POST    [200] /payments
+api02-1  | Sending payment c43d1116-1676-471e-a0fb-bb7c0e210910 to default
+api01-1  | 2025-07-30T04:12:22.053418  0:00:00.000138 POST    [200] /payments
+api02-1  | Sending payment 1dd0e882-7812-485f-857c-2d7d088c0979 to default
+api02-1  | 2025-07-30T04:12:22.070992  0:00:00.000150 POST    [200] /payments
+api02-1  | Sending payment 7cb79b76-ce9c-4712-8de5-11bf70595eab to default
+api01-1  | 2025-07-30T04:12:22.088880  0:00:00.000123 POST    [200] /payments
+api01-1  | Sending payment 5ebaf083-d116-4b8c-9628-e4959bc1b02d to default
+api02-1  | 2025-07-30T04:12:22.144135  0:00:00.000127 POST    [200] /payments
+api01-1  | Sending payment dbf7e3a0-afd9-49d5-9817-487931a61862 to default
+api01-1  | 2025-07-30T04:12:22.162451  0:00:00.000120 POST    [200] /payments
+api01-1  | Sending payment 9f5168e8-c3e3-43cd-9ad0-0b6c4f386a09 to default
+api02-1  | 2025-07-30T04:12:22.181153  0:00:00.000117 POST    [200] /payments
+api01-1  | Sending payment 76dafad7-dab6-4bf6-9e6b-5018e9cbb9aa to default
+api01-1  | 2025-07-30T04:12:22.198598  0:00:00.000116 POST    [200] /payments
+api01-1  | Sending payment 7ce98c90-8938-462a-aff0-38b273ebc2d4 to default
+api02-1  | 2025-07-30T04:12:22.252908  0:00:00.000123 POST    [200] /payments
+api01-1  | Sending payment d31dd3f2-9e7d-43e2-9439-db7a16739945 to default
+api01-1  | 2025-07-30T04:12:22.271218  0:00:00.000134 POST    [200] /payments
+api01-1  | Sending payment 0925d109-8c91-4724-85f5-b716bcd4d12d to default
+api02-1  | 2025-07-30T04:12:22.291050  0:00:00.000217 POST    [200] /payments
+api01-1  | Sending payment 498269db-5ff2-4cb1-aae2-2d3536b98924 to default
+api01-1  | 2025-07-30T04:12:22.309574  0:00:00.000144 POST    [200] /payments
+api01-1  | Sending payment d593448a-fc21-47be-a1f3-906ddb786170 to default
+api02-1  | 2025-07-30T04:12:22.362483  0:00:00.000109 POST    [200] /payments
+api01-1  | Sending payment 54036a98-a183-4d81-8924-79c265a4d515 to default
+api01-1  | 2025-07-30T04:12:22.381352  0:00:00.000166 POST    [200] /payments
+api02-1  | Sending payment 31929c7c-ddbc-4442-9699-3330e08bd16c to default
+api02-1  | 2025-07-30T04:12:22.398955  0:00:00.000118 POST    [200] /payments
+api02-1  | Sending payment 577f5684-c7b7-426b-a807-a9df72383208 to default
+api01-1  | 2025-07-30T04:12:22.417377  0:00:00.000118 POST    [200] /payments
+api02-1  | Sending payment 3aca7116-e528-4d03-bf19-3d795c721bff to default
+api02-1  | 2025-07-30T04:12:22.471426  0:00:00.000134 POST    [200] /payments
+api01-1  | Sending payment cef778fd-8cae-431e-9999-c06eca80493c to default
+api01-1  | 2025-07-30T04:12:22.491177  0:00:00.000133 POST    [200] /payments
+api01-1  | Sending payment 0aec2f31-c53c-4c48-a998-9188d050cc8e to default
+api02-1  | 2025-07-30T04:12:22.508573  0:00:00.000159 POST    [200] /payments
+api01-1  | Sending payment 59c0b179-3868-47c0-8b6c-ade702ee5ec1 to default
+api01-1  | 2025-07-30T04:12:22.525962  0:00:00.000138 POST    [200] /payments
+api01-1  | Sending payment fea1a4aa-8a1b-4147-8ac0-282be32272bf to default
+api02-1  | 2025-07-30T04:12:22.581139  0:00:00.000142 POST    [200] /payments
+api01-1  | Sending payment 0b6bef4f-15a1-4783-9531-a0ca746589c6 to default
+api01-1  | 2025-07-30T04:12:22.600515  0:00:00.000134 POST    [200] /payments
+api01-1  | Sending payment 423444df-249d-49cf-af77-7bc27346d9ae to default
+api02-1  | 2025-07-30T04:12:22.617964  0:00:00.000183 POST    [200] /payments
+api01-1  | Sending payment d398bd5c-525f-4de6-8280-7d61bb16c973 to default
+api01-1  | 2025-07-30T04:12:22.635609  0:00:00.000108 POST    [200] /payments
+api01-1  | Sending payment 2fce5686-53db-47d3-8f81-8536e68b0262 to default
+api02-1  | 2025-07-30T04:12:22.690787  0:00:00.000150 POST    [200] /payments
+api01-1  | Sending payment 0757a771-0244-48b9-8d4d-cce2ddf4a529 to default
+api01-1  | 2025-07-30T04:12:22.708320  0:00:00.000119 POST    [200] /payments
+api01-1  | Sending payment 3686bf04-65cf-488f-9408-00650a7c992a to default
+api02-1  | 2025-07-30T04:12:22.725806  0:00:00.000132 POST    [200] /payments
+api02-1  | Sending payment 9c521c17-1f6b-4984-9a0e-930c5a71204f to default
+api01-1  | 2025-07-30T04:12:22.745707  0:00:00.000117 POST    [200] /payments
+api02-1  | Sending payment 675f9591-f0a2-4f39-a805-92e4b7c117f1 to default
+api02-1  | 2025-07-30T04:12:22.799912  0:00:00.000164 POST    [200] /payments
+api02-1  | Sending payment 295919c9-8fa8-46fa-8c92-8106b95d1ef9 to default
+api01-1  | 2025-07-30T04:12:22.817421  0:00:00.000121 POST    [200] /payments
+api01-1  | Sending payment 0f9b7cdd-09c8-416f-8ce4-41a563a54c4a to default
+api02-1  | 2025-07-30T04:12:22.836259  0:00:00.000136 POST    [200] /payments
+api01-1  | Sending payment d9dcf7c5-2c86-4e13-98c6-77e7e0a249e2 to default
+api01-1  | 2025-07-30T04:12:22.854822  0:00:00.000116 POST    [200] /payments
+api01-1  | Sending payment 31226642-9cbe-493b-a89b-8a2d9ee78edd to default
+api02-1  | 2025-07-30T04:12:22.876329  0:00:00.000130 POST    [200] /payments
+api01-1  | Sending payment 0c06f059-06e4-46a0-a766-bf456ffc092e to default
+api01-1  | 2025-07-30T04:12:22.909286  0:00:00.000136 POST    [200] /payments
+api01-1  | Sending payment 0f172332-91f3-4056-ba38-f1512439c4ad to default
+api02-1  | 2025-07-30T04:12:22.926713  0:00:00.000126 POST    [200] /payments
+api01-1  | Sending payment e215d866-130b-40fb-b502-ab2d704e0c17 to default
+api01-1  | 2025-07-30T04:12:22.945278  0:00:00.000118 POST    [200] /payments
+api01-1  | Sending payment 407824c1-b56d-4fef-84d2-0ae712e4d46d to default
+api02-1  | 2025-07-30T04:12:22.963767  0:00:00.000119 POST    [200] /payments
+api01-1  | Sending payment e220c971-3194-4890-934a-67185e1e2a53 to default
+api01-1  | 2025-07-30T04:12:22.982314  0:00:00.000114 POST    [200] /payments
+api01-1  | Sending payment 890ca88b-ef68-4f60-ad5b-97a25fd8c822 to default
+api02-1  | 2025-07-30T04:12:23.018046  0:00:00.000192 POST    [200] /payments
+api01-1  | Sending payment 5aa364ed-0f8e-4259-a643-1171413fc5c2 to default
+api01-1  | 2025-07-30T04:12:23.036687  0:00:00.000128 POST    [200] /payments
+api02-1  | Sending payment b5d94143-13eb-4f72-ae9d-1b5ba7d3edc5 to default
+api02-1  | 2025-07-30T04:12:23.054937  0:00:00.000102 POST    [200] /payments
+api02-1  | Sending payment 52d24e53-0c2c-411f-9e6d-c6b0b1bcc863 to default
+api01-1  | 2025-07-30T04:12:23.073554  0:00:00.000130 POST    [200] /payments
+api02-1  | Sending payment c8250ba5-13de-4a8b-82d8-a4b452001b7b to default
+api02-1  | 2025-07-30T04:12:23.090272  0:00:00.000132 POST    [200] /payments
+api01-1  | Sending payment 787d9568-b7ae-4c0d-b3af-a271051b5e60 to default
+api01-1  | 2025-07-30T04:12:23.126947  0:00:00.000159 POST    [200] /payments
+api01-1  | Sending payment eb8a59e2-78e9-4598-8462-9ab25392021f to default
+api02-1  | 2025-07-30T04:12:23.146471  0:00:00.000120 POST    [200] /payments
+api01-1  | Sending payment 338c3062-7d4c-47dd-b16a-4a7809d96185 to default
+api01-1  | 2025-07-30T04:12:23.164216  0:00:00.000143 POST    [200] /payments
+api01-1  | Sending payment 14ff6d22-ad6d-4e0b-a5b0-3cc04c7f9198 to default
+api02-1  | 2025-07-30T04:12:23.183146  0:00:00.000172 POST    [200] /payments
+api01-1  | Sending payment 93ac4524-178d-4f75-a706-1f32a32549a3 to default
+api01-1  | 2025-07-30T04:12:23.200757  0:00:00.000136 POST    [200] /payments
+api01-1  | Sending payment e0d3f761-2f69-4d12-9d07-ceb8592e0388 to default
+api02-1  | 2025-07-30T04:12:23.236959  0:00:00.000151 POST    [200] /payments
+api01-1  | Sending payment 16237831-b74a-430a-8c37-a337109ff426 to default
+api01-1  | 2025-07-30T04:12:23.254526  0:00:00.000127 POST    [200] /payments
+api01-1  | Sending payment 04be2a89-6993-408b-a3fc-7559043b3d1d to default
+api02-1  | 2025-07-30T04:12:23.273037  0:00:00.000140 POST    [200] /payments
+api01-1  | Sending payment ee6a2742-15cd-4078-9794-0dd9a82f94ff to default
+api01-1  | 2025-07-30T04:12:23.292710  0:00:00.000189 POST    [200] /payments
+api01-1  | Sending payment b614ae07-bfbd-45a6-8221-6db78c978b98 to default
+api02-1  | 2025-07-30T04:12:23.311147  0:00:00.000138 POST    [200] /payments
+api02-1  | Sending payment 9ee91fd5-725c-4199-a57c-2471e7127eeb to default
+api01-1  | 2025-07-30T04:12:23.346218  0:00:00.000138 POST    [200] /payments
+api02-1  | Sending payment 638acad1-5f9b-4e5b-880e-6a160dac699e to default
+api02-1  | 2025-07-30T04:12:23.364632  0:00:00.000108 POST    [200] /payments
+api02-1  | Sending payment 50269618-de97-42ed-9ef8-1aa4b6813b56 to default
+api01-1  | 2025-07-30T04:12:23.383168  0:00:00.000118 POST    [200] /payments
+api01-1  | Sending payment 7e97cd34-9e89-4ed2-9771-50976d662c34 to default
+api02-1  | 2025-07-30T04:12:23.400588  0:00:00.000164 POST    [200] /payments
+api01-1  | Sending payment 23c4916b-6453-4648-8332-60c16141116a to default
+api01-1  | 2025-07-30T04:12:23.419051  0:00:00.000165 POST    [200] /payments
+api01-1  | Sending payment 558039c1-b3ea-4a08-ba33-61e1d4e4b952 to default
+api02-1  | 2025-07-30T04:12:23.455322  0:00:00.000114 POST    [200] /payments
+api01-1  | Sending payment 35fc041f-1bbd-4ae1-8b1c-3f9fa601530f to default
+api01-1  | 2025-07-30T04:12:23.472782  0:00:00.000113 POST    [200] /payments
+api01-1  | Sending payment 5bbbf5c2-7563-4823-9cfa-3f34ab0c16f6 to default
+api02-1  | 2025-07-30T04:12:23.493471  0:00:00.000116 POST    [200] /payments
+api01-1  | Sending payment e2b421a3-606a-4413-a2bc-116993439183 to default
+api01-1  | 2025-07-30T04:12:23.510957  0:00:00.000115 POST    [200] /payments
+api01-1  | Sending payment f2682402-8c0e-40df-8108-7272a249cc21 to default
+api02-1  | 2025-07-30T04:12:23.527366  0:00:00.000109 POST    [200] /payments
+api01-1  | Sending payment 86f9ba84-c5df-422e-95c5-4e8dd92deaf1 to default
+api01-1  | 2025-07-30T04:12:23.564246  0:00:00.000129 POST    [200] /payments
+api01-1  | Sending payment 7b3fe867-11b2-4515-a904-f286ba6389b5 to default
+api02-1  | 2025-07-30T04:12:23.582922  0:00:00.000116 POST    [200] /payments
+api01-1  | Sending payment 843609ff-831d-4620-b644-afb2eea0cf4b to default
+api01-1  | 2025-07-30T04:12:23.602474  0:00:00.000120 POST    [200] /payments
+api02-1  | Sending payment 4408d27c-6967-480d-be77-0385196f7559 to default
+api02-1  | 2025-07-30T04:12:23.619976  0:00:00.000145 POST    [200] /payments
+api02-1  | Sending payment 6818cb35-7835-4f1a-b571-71572cf710c0 to default
+api01-1  | 2025-07-30T04:12:23.637731  0:00:00.000122 POST    [200] /payments
+api02-1  | Sending payment 0b524fbc-f454-4852-846a-b144537f9ccd to default
+api02-1  | 2025-07-30T04:12:23.673649  0:00:00.000129 POST    [200] /payments
+api01-1  | Sending payment cd90a85f-4ba9-495a-9c1d-105b2c1df4d4 to default
+api01-1  | 2025-07-30T04:12:23.693381  0:00:00.000120 POST    [200] /payments
+api01-1  | Sending payment f0036001-7aeb-430b-8ba7-778e0846e8f5 to default
+api02-1  | 2025-07-30T04:12:23.709904  0:00:00.000148 POST    [200] /payments
+api01-1  | Sending payment 5e8d19e0-e28a-416c-95c6-52ee788d1404 to default
+api01-1  | 2025-07-30T04:12:23.727556  0:00:00.000136 POST    [200] /payments
+api01-1  | Sending payment 998ec73c-7d6f-4cb5-9614-68610521ae54 to default
+api02-1  | 2025-07-30T04:12:23.747931  0:00:00.000111 POST    [200] /payments
+api01-1  | Sending payment ef84ca7d-f056-4a6f-9702-64a3f113825f to default
+api01-1  | 2025-07-30T04:12:23.783459  0:00:00.000135 POST    [200] /payments
+api01-1  | Sending payment 0669dc3e-09ad-4d57-bb50-cf60c94c223c to default
+api02-1  | 2025-07-30T04:12:23.801859  0:00:00.000162 POST    [200] /payments
+api01-1  | Sending payment f9c72096-0e78-4309-bd87-96f943f9c4f5 to default
+api01-1  | 2025-07-30T04:12:23.819398  0:00:00.000112 POST    [200] /payments
+api01-1  | Sending payment 8fde6634-ef77-426c-9c39-c257da399c12 to default
+api02-1  | 2025-07-30T04:12:23.838025  0:00:00.000175 POST    [200] /payments
+api01-1  | Sending payment 94468f6a-efe8-4f26-b28f-6a9adafa5c0d to default
+api01-1  | 2025-07-30T04:12:23.856748  0:00:00.000149 POST    [200] /payments
+api01-1  | Sending payment 95f3cba3-4d43-4a7e-849e-a9c91414b379 to default
+api02-1  | 2025-07-30T04:12:23.878437  0:00:00.000200 POST    [200] /payments
+api02-1  | Sending payment 143547f1-6325-4db6-b8f0-54846ca552b2 to default
+api01-1  | 2025-07-30T04:12:23.892455  0:00:00.000113 POST    [200] /payments
+api02-1  | Sending payment f230dda3-8d60-4a54-b9e6-e89aee387861 to default
+api02-1  | 2025-07-30T04:12:23.910805  0:00:00.000132 POST    [200] /payments
+api02-1  | Sending payment 100d17b9-7e05-43bc-882d-55877eef32f2 to default
+api01-1  | 2025-07-30T04:12:23.928352  0:00:00.000170 POST    [200] /payments
+api01-1  | Sending payment c02d2b1a-c31e-44fc-a467-a0d08d22de8d to default
+api02-1  | 2025-07-30T04:12:23.946866  0:00:00.000137 POST    [200] /payments
+api01-1  | Sending payment c1258524-d286-4634-8c75-66c307b2e079 to default
+api01-1  | 2025-07-30T04:12:23.965877  0:00:00.000122 POST    [200] /payments
+api01-1  | Sending payment bbf7ff10-badb-4fa1-986c-d3dfc369fad9 to default
+api02-1  | 2025-07-30T04:12:23.984570  0:00:00.000116 POST    [200] /payments
+api01-1  | Sending payment 13e62c5a-4c17-4ef5-978d-e94327cb9aa2 to default
+api01-1  | 2025-07-30T04:12:24.020258  0:00:00.000803 POST    [200] /payments
+api01-1  | Sending payment 4b51d044-2047-47e4-bdcc-78fa1359ea8f to default
+api02-1  | 2025-07-30T04:12:24.022724  0:00:00.000103 POST    [200] /payments
+api01-1  | Sending payment 19b993f6-37b6-4ce5-8cc6-e93aedc3486d to default
+api01-1  | 2025-07-30T04:12:24.038332  0:00:00.000124 POST    [200] /payments
+api01-1  | Sending payment a7f1fa7a-50cb-4fa2-a551-8cede90fb747 to default
+api02-1  | 2025-07-30T04:12:24.056932  0:00:00.000128 POST    [200] /payments
+api01-1  | Sending payment c5f8dba1-0893-451e-996d-66ffb81748d1 to default
+api01-1  | 2025-07-30T04:12:24.075642  0:00:00.000106 POST    [200] /payments
+api01-1  | Sending payment d60dfef8-bd29-4fff-801f-d7e4109d52e4 to default
+api02-1  | 2025-07-30T04:12:24.092317  0:00:00.000168 POST    [200] /payments
+api01-1  | Sending payment 468d99df-412a-4b96-b069-a94ee89d0b32 to default
+api01-1  | 2025-07-30T04:12:24.111290  0:00:00.000151 POST    [200] /payments
+api02-1  | Sending payment 0fe47072-01a9-46c0-9fc4-0a6a15562a7e to default
+api02-1  | 2025-07-30T04:12:24.143957  0:00:00.000166 POST    [200] /payments
+api02-1  | Sending payment be0ea499-7f31-450a-b134-1b9bc03dc319 to default
+api01-1  | 2025-07-30T04:12:24.148384  0:00:00.000089 POST    [200] /payments
+api02-1  | Sending payment 550dfbd0-1476-4488-8050-5a80f9fa31d6 to default
+api02-1  | 2025-07-30T04:12:24.165664  0:00:00.000110 POST    [200] /payments
+api01-1  | Sending payment 5a08454c-1df2-4887-9cd6-2010ddeda4e0 to default
+api01-1  | 2025-07-30T04:12:24.185152  0:00:00.000102 POST    [200] /payments
+api01-1  | Sending payment a14d7b34-fc22-4f9d-b192-13d1930d55cc to default
+api02-1  | 2025-07-30T04:12:24.202569  0:00:00.000114 POST    [200] /payments
+api01-1  | Sending payment da8e9697-9f03-4a61-9b18-f9a78a1eaa63 to default
+api01-1  | 2025-07-30T04:12:24.220292  0:00:00.000100 POST    [200] /payments
+api01-1  | Sending payment 327f75c4-dd85-4b7b-bfbc-12fa2bb7f90e to default
+api02-1  | 2025-07-30T04:12:24.238991  0:00:00.000163 POST    [200] /payments
+api01-1  | Sending payment 5b487bad-c00e-45fa-8519-606a8814b8a6 to default
+api01-1  | 2025-07-30T04:12:24.256397  0:00:00.000107 POST    [200] /payments
+api01-1  | Sending payment 8772f1ef-a0a1-4f7a-b825-585d26f601c5 to default
+api02-1  | 2025-07-30T04:12:24.274843  0:00:00.000115 POST    [200] /payments
+api01-1  | Sending payment 4ca0fb75-4152-4f58-8bcb-fafc0ae62888 to default
+api01-1  | 2025-07-30T04:12:24.294666  0:00:00.000104 POST    [200] /payments
+api01-1  | Sending payment 8ea65afa-e5fe-4116-921f-441063003086 to default
+api02-1  | 2025-07-30T04:12:24.313162  0:00:00.000138 POST    [200] /payments
+api01-1  | Sending payment 595f88a3-21d4-423e-9869-1298f2225f7b to default
+api01-1  | 2025-07-30T04:12:24.329058  0:00:00.000151 POST    [200] /payments
+api01-1  | Sending payment 45fb3e06-1712-4434-9d68-e72b2d6a4eba to default
+api02-1  | 2025-07-30T04:12:24.348543  0:00:00.000151 POST    [200] /payments
+api02-1  | Sending payment 54826734-edb3-4fcc-a7c6-b2e1a88897af to default
+api01-1  | 2025-07-30T04:12:24.365882  0:00:00.000099 POST    [200] /payments
+api02-1  | Sending payment 19772742-dfca-49fb-8f3a-d7c8061c9828 to default
+api02-1  | 2025-07-30T04:12:24.384579  0:00:00.000130 POST    [200] /payments
+api02-1  | Sending payment 719c729f-a0bc-440f-87a5-dcec625544a0 to default
+api01-1  | 2025-07-30T04:12:24.403138  0:00:00.000099 POST    [200] /payments
+api01-1  | Sending payment ec6fb339-eba7-48a3-81d2-3c14eddcc565 to default
+api02-1  | 2025-07-30T04:12:24.420473  0:00:00.000110 POST    [200] /payments
+api01-1  | Sending payment 1f4a2b78-2404-4666-9e94-04921cfc211b to default
+api01-1  | 2025-07-30T04:12:24.438533  0:00:00.000099 POST    [200] /payments
+api01-1  | Sending payment 45f3a244-a117-4b1a-abeb-d2ef71edff7a to default
+api02-1  | 2025-07-30T04:12:24.456929  0:00:00.000112 POST    [200] /payments
+api01-1  | Sending payment 9a3ded43-2521-4ec7-9c94-6fee517c14ca to default
+api01-1  | 2025-07-30T04:12:24.474177  0:00:00.000090 POST    [200] /payments
+api01-1  | Sending payment 458e8a66-1c50-4a2c-8b22-055ef6d0ece6 to default
+api02-1  | 2025-07-30T04:12:24.494793  0:00:00.000111 POST    [200] /payments
+api01-1  | Sending payment 50d56d24-32ea-4afd-ac09-2e1df38d8f81 to default
+api01-1  | 2025-07-30T04:12:24.513119  0:00:00.000110 POST    [200] /payments
+api01-1  | Sending payment e23e2b53-f3ca-4fbf-b993-f4409deacbed to default
+api02-1  | 2025-07-30T04:12:24.529740  0:00:00.000128 POST    [200] /payments
+api01-1  | Sending payment 974e26e0-3221-48d5-857e-bf20764edd94 to default
+api01-1  | 2025-07-30T04:12:24.548542  0:00:00.000100 POST    [200] /payments
+api01-1  | Sending payment f87603f4-5bbd-41a7-af5f-31d68f3fabc2 to default
+api02-1  | 2025-07-30T04:12:24.565868  0:00:00.000113 POST    [200] /payments
+api01-1  | Sending payment a8f94832-4541-428e-b67b-417744438e5d to default
+api01-1  | 2025-07-30T04:12:24.584473  0:00:00.000101 POST    [200] /payments
+api02-1  | Sending payment bca6e1c7-7b3b-4934-9c84-debccaca02af to default
+api02-1  | 2025-07-30T04:12:24.604970  0:00:00.000147 POST    [200] /payments
+api02-1  | Sending payment caa0395e-9ea1-4780-a06b-d69bcd72d4ae to default
+api01-1  | 2025-07-30T04:12:24.621328  0:00:00.000096 POST    [200] /payments
+api02-1  | Sending payment da796570-72ea-492e-a429-3b01d1d5ff33 to default
+api02-1  | 2025-07-30T04:12:24.640070  0:00:00.000162 POST    [200] /payments
+api01-1  | Sending payment 79869d52-95a2-43d9-9744-08f0f8239ce3 to default
+api01-1  | 2025-07-30T04:12:24.658897  0:00:00.000102 POST    [200] /payments
+api01-1  | Sending payment 0131fc8c-a2f1-4b85-8f1e-d3dc0d77ef3b to default
+api02-1  | 2025-07-30T04:12:24.675315  0:00:00.000154 POST    [200] /payments
+api01-1  | Sending payment fce66631-37c0-48a6-a38e-6040c4ff7d2c to default
+api01-1  | 2025-07-30T04:12:24.694990  0:00:00.000141 POST    [200] /payments
+api01-1  | Sending payment cefa8b5e-3fed-40e2-84b2-0aca0acad520 to default
+api02-1  | 2025-07-30T04:12:24.712519  0:00:00.000113 POST    [200] /payments
+api01-1  | Sending payment 63e60853-d588-47e7-beda-47d0da850ec1 to default
+api01-1  | 2025-07-30T04:12:24.729  0:00:00.000136 POST    [200] /payments
+api01-1  | Sending payment 127ec88c-63b0-4b8c-bd5e-d2f3ea629d50 to default
+api02-1  | 2025-07-30T04:12:24.749446  0:00:00.000156 POST    [200] /payments
+api01-1  | Sending payment 21b686c5-f381-4b76-be17-167085372661 to default
+api01-1  | 2025-07-30T04:12:24.767405  0:00:00.000149 POST    [200] /payments
+api01-1  | Sending payment 26ca1fb1-1cca-47a6-b5cd-40624201deca to default
+api02-1  | 2025-07-30T04:12:24.785161  0:00:00.000135 POST    [200] /payments
+api01-1  | Sending payment 297281c6-ff83-4e54-bc81-122b57c21a3e to default
+api01-1  | 2025-07-30T04:12:24.803880  0:00:00.000127 POST    [200] /payments
+api01-1  | Sending payment f9ffb52a-72b7-4b01-a2af-04c574393b4c to default
+api02-1  | 2025-07-30T04:12:24.821488  0:00:00.000192 POST    [200] /payments
+api02-1  | Sending payment 5d726480-4b99-43c7-a9b2-4e5ddfdf62c8 to default
+api01-1  | 2025-07-30T04:12:24.840507  0:00:00.000158 POST    [200] /payments
+api02-1  | Sending payment f8b1bc94-9ae4-4904-94c4-b06dcafc8ff0 to default
+api02-1  | 2025-07-30T04:12:24.859058  0:00:00.000157 POST    [200] /payments
+api02-1  | Sending payment 099ad91a-8778-49ac-a39a-0d6588eca75e to default
+api01-1  | 2025-07-30T04:12:24.876188  0:00:00.000122 POST    [200] /payments
+api01-1  | Sending payment f1783d83-1234-4889-ad99-f3a0a23b6de0 to default
+api02-1  | 2025-07-30T04:12:24.880802  0:00:00.000113 POST    [200] /payments
+api01-1  | Sending payment 693f1063-9b4d-4e6c-b881-81b07fb61348 to default
+api01-1  | 2025-07-30T04:12:24.894345  0:00:00.000135 POST    [200] /payments
+api01-1  | Sending payment ae68afd7-5446-41ad-a92c-74ebb1f2124e to default
+api02-1  | 2025-07-30T04:12:24.912990  0:00:00.000159 POST    [200] /payments
+api01-1  | Sending payment ddff2b6a-9c3b-4b5d-a6b0-adf29a7136ff to default
+api01-1  | 2025-07-30T04:12:24.930867  0:00:00.000152 POST    [200] /payments
+api01-1  | Sending payment cec14995-cdf5-4b15-9140-b4834e63d4c7 to default
+api02-1  | 2025-07-30T04:12:24.948384  0:00:00.000146 POST    [200] /payments
+api01-1  | Sending payment 2b869593-ea08-43c0-8fe7-a4090ea435c8 to default
+api01-1  | 2025-07-30T04:12:24.967998  0:00:00.000195 POST    [200] /payments
+api01-1  | Sending payment cc43febe-bdf2-48a1-8ffa-97815eb5c40f to default
+api02-1  | 2025-07-30T04:12:24.985348  0:00:00.000115 POST    [200] /payments
+api01-1  | Sending payment 7d404084-2722-40da-b027-58e35fd2a565 to default
+api01-1  | 2025-07-30T04:12:24.986527  0:00:00.000112 POST    [200] /payments
+api01-1  | Sending payment da6912ca-8bb8-4cf9-afbf-618c195156aa to default
+api02-1  | 2025-07-30T04:12:25.022864  0:00:00.000109 POST    [200] /payments
+api01-1  | Sending payment 15944109-a5de-41ca-911f-61c5710c4739 to default
+api01-1  | 2025-07-30T04:12:25.024138  0:00:00.000099 POST    [200] /payments
+api02-1  | Sending payment 1d03d290-b176-4ff2-b4b5-8697ad087943 to default
+api02-1  | 2025-07-30T04:12:25.040071  0:00:00.001806 POST    [200] /payments
+api02-1  | Sending payment fc9297b6-3226-4a93-ab22-1a3185810143 to default
+api01-1  | 2025-07-30T04:12:25.059249  0:00:00.000111 POST    [200] /payments
+api02-1  | Sending payment 0f637a2f-6bdd-4312-a86b-d72b21e8bb6c to default
+api02-1  | 2025-07-30T04:12:25.077697  0:00:00.000130 POST    [200] /payments
+api01-1  | Sending payment 26cb8eaa-14cc-4289-ab81-4c61a816e549 to default
+api01-1  | 2025-07-30T04:12:25.094204  0:00:00.000139 POST    [200] /payments
+api01-1  | Sending payment d0dd5eee-90af-4d45-a71d-26ef0c4e5859 to default
+api02-1  | 2025-07-30T04:12:25.094703  0:00:00.000233 POST    [200] /payments
+api01-1  | Sending payment 86415a07-d725-4e84-9da2-9e5883b88fef to default
+api02-1  | 2025-07-30T04:12:25.113469  0:00:00.000156 POST    [200] /payments
+api01-1  | Sending payment e15cf4a0-a6ba-4dc2-8dc8-219e288cbfa7 to default
+api01-1  | 2025-07-30T04:12:25.146462  0:00:00.000162 POST    [200] /payments
+api01-1  | Sending payment 2bdf88a4-ac39-437e-823b-0289a3e6de35 to default
+api02-1  | 2025-07-30T04:12:25.149897  0:00:00.000106 POST    [200] /payments
+api01-1  | Sending payment 24190439-c3b1-4c65-abd8-52c91c970653 to default
+api01-1  | 2025-07-30T04:12:25.167716  0:00:00.000109 POST    [200] /payments
+api01-1  | Sending payment 9b338bbd-d380-494e-9a44-8c2449692f94 to default
+api02-1  | 2025-07-30T04:12:25.187359  0:00:00.000138 POST    [200] /payments
+api01-1  | Sending payment 34d5d926-703f-4a7b-ba59-c15d6a5d2a16 to default
+api01-1  | 2025-07-30T04:12:25.203926  0:00:00.000143 POST    [200] /payments
+api02-1  | 2025-07-30T04:12:25.204233  0:00:00.000162 POST    [200] /payments
+api01-1  | Sending payment a8679ef4-44c9-4264-b86d-3d7398368ea4 to default
+api01-1  | Sending payment d9cfdacd-671d-4ab8-91eb-8ae2ba3f2bdb to default
+api02-1  | 2025-07-30T04:12:25.221672  0:00:00.000113 POST    [200] /payments
+api02-1  | Sending payment 4d2ff5a2-72eb-49eb-9129-00dbe8d0e7b6 to default
+api01-1  | 2025-07-30T04:12:25.240349  0:00:00.000142 POST    [200] /payments
+api02-1  | Sending payment 8e36ccbf-9d89-43a7-b3a2-0f929d730b07 to default
+api02-1  | 2025-07-30T04:12:25.257838  0:00:00.000119 POST    [200] /payments
+api02-1  | Sending payment 84aecbd9-8cf1-4f2c-a681-2057e1cbb41a to default
+api01-1  | 2025-07-30T04:12:25.277303  0:00:00.000118 POST    [200] /payments
+api01-1  | Sending payment 08f53bc2-08bf-4c21-a4e3-54f9cc39fa95 to default
+api02-1  | 2025-07-30T04:12:25.296835  0:00:00.000115 POST    [200] /payments
+api01-1  | Sending payment 8b430726-be6b-4774-804f-a13afd49783b to default
+api01-1  | 2025-07-30T04:12:25.312608  0:00:00.000119 POST    [200] /payments
+api01-1  | Sending payment 29430d86-216e-44df-9611-cdea06804292 to default
+api02-1  | 2025-07-30T04:12:25.314807  0:00:00.000124 POST    [200] /payments
+api01-1  | Sending payment 3ec6b8f9-1fae-439b-aab8-9d155f379cdb to default
+api01-1  | 2025-07-30T04:12:25.330535  0:00:00.000139 POST    [200] /payments
+api01-1  | Sending payment 00579872-3b4b-4886-9d4c-6e1cf0a9da38 to default
+api02-1  | 2025-07-30T04:12:25.350046  0:00:00.000169 POST    [200] /payments
+api01-1  | Sending payment 379e0595-a8d6-4494-b3fe-7f3a54f68de6 to default
+api01-1  | 2025-07-30T04:12:25.367741  0:00:00.000124 POST    [200] /payments
+api01-1  | Sending payment 09ec36d0-1963-411f-88a1-d557d6b413d1 to default
+api02-1  | 2025-07-30T04:12:25.386715  0:00:00.000198 POST    [200] /payments
+api01-1  | Sending payment 6b2b257e-4ad8-4ba1-bb9b-8a99b8d95bbd to default
+api01-1  | 2025-07-30T04:12:25.405338  0:00:00.000101 POST    [200] /payments
+api01-1  | Sending payment 0384e6b1-8d73-4f7a-86d8-15f33b011760 to default
+api02-1  | 2025-07-30T04:12:25.421904  0:00:00.000133 POST    [200] /payments
+api01-1  | 2025-07-30T04:12:25.421915  0:00:00.000088 POST    [200] /payments
+api01-1  | Sending payment c8f5953a-d293-4668-963e-812fc57e3484 to default
+api02-1  | Sending payment 3bb1a354-f480-47ee-95b4-b19d3112c055 to default
+api01-1  | 2025-07-30T04:12:25.440064  0:00:00.000125 POST    [200] /payments
+api02-1  | Sending payment 368d9e26-c3e8-424d-9469-10d57acdf18b to default
+api02-1  | 2025-07-30T04:12:25.458629  0:00:00.000128 POST    [200] /payments
+api02-1  | Sending payment 78e6630f-afb9-466a-ae9b-12b0332fce24 to default
+api01-1  | 2025-07-30T04:12:25.476051  0:00:00.000152 POST    [200] /payments
+api01-1  | Sending payment fac45e76-186a-4d16-ab73-539a465228b4 to default
+api02-1  | 2025-07-30T04:12:25.496835  0:00:00.000112 POST    [200] /payments
+api01-1  | Sending payment 21cbdbda-bb80-4e95-86a5-4215a5f6fea3 to default
+api01-1  | 2025-07-30T04:12:25.515370  0:00:00.000135 POST    [200] /payments
+api01-1  | Sending payment d54ec586-1bac-428e-b30c-fb1b913dbb10 to default
+api02-1  | 2025-07-30T04:12:25.531146  0:00:00.000119 POST    [200] /payments
+api01-1  | 2025-07-30T04:12:25.531227  0:00:00.000114 POST    [200] /payments
+api01-1  | Sending payment 3421c245-9f4f-4f11-81f6-9d4bc5010410 to default
+api01-1  | Sending payment c6b9e745-9c59-4c34-9eed-8bb8098b7dfe to default
+api01-1  | 2025-07-30T04:12:25.549943  0:00:00.000193 POST    [200] /payments
+api01-1  | Sending payment d7d829f0-d770-40c1-b94b-1ef2372101e8 to default
+api02-1  | 2025-07-30T04:12:25.567366  0:00:00.000118 POST    [200] /payments
+api01-1  | Sending payment 88130b91-7684-4411-9d2b-a713dbcedd15 to default
+api01-1  | 2025-07-30T04:12:25.586173  0:00:00.000103 POST    [200] /payments
+api01-1  | Sending payment 5ea5e7bb-030f-4ef3-a3e2-fb58f7545762 to default
+api02-1  | 2025-07-30T04:12:25.607065  0:00:00.000201 POST    [200] /payments
+api01-1  | Sending payment f19a6838-85db-4544-bae3-a82552cf79da to default
+api01-1  | 2025-07-30T04:12:25.623728  0:00:00.000190 POST    [200] /payments
+api01-1  | Sending payment be50053b-8e80-4f72-abfe-433547f6edb4 to default
+api02-1  | 2025-07-30T04:12:25.641796  0:00:00.000156 POST    [200] /payments
+api02-1  | Sending payment 387c5f51-f315-46f5-9e78-f086766feb52 to default
+api02-1  | Sending payment 8cecd0e7-6500-460f-97a2-bb38f5330e01 to default
+api01-1  | 2025-07-30T04:12:25.642570  0:00:00.000258 POST    [200] /payments
+api01-1  | 2025-07-30T04:12:25.660580  0:00:00.000152 POST    [200] /payments
+api02-1  | Sending payment b4ee8be2-a853-4537-b81b-4a800b74b26d to default
+api02-1  | 2025-07-30T04:12:25.677399  0:00:00.000170 POST    [200] /payments
+api01-1  | Sending payment 1d394b57-b132-4d16-9ddd-3c2b214b17a5 to default
+api01-1  | 2025-07-30T04:12:25.696947  0:00:00.000105 POST    [200] /payments
+api01-1  | Sending payment 13ef4ced-e08b-4a4b-9cc4-9dac6bc59c7e to default
+api02-1  | 2025-07-30T04:12:25.714487  0:00:00.000123 POST    [200] /payments
+api01-1  | Sending payment 12c46f76-1927-404e-a91c-664cd0a70d4f to default
+api01-1  | 2025-07-30T04:12:25.731337  0:00:00.000118 POST    [200] /payments
+api01-1  | Sending payment 828d0416-448e-40a9-8381-24557cfd1fdf to default
+api02-1  | 2025-07-30T04:12:25.750022  0:00:00.000228 POST    [200] /payments
+api01-1  | Sending payment 05322d33-a7d3-49db-9361-780986ea164f to default
+api01-1  | 2025-07-30T04:12:25.751178  0:00:00.000124 POST    [200] /payments
+api01-1  | Sending payment 27beb26e-fbde-486b-96d3-2e624e1a800f to default
+api02-1  | 2025-07-30T04:12:25.769824  0:00:00.000173 POST    [200] /payments
+api01-1  | Sending payment a0f2c865-4b35-4aac-aa6c-972252641c00 to default
+api01-1  | 2025-07-30T04:12:25.786930  0:00:00.000144 POST    [200] /payments
+api01-1  | Sending payment cf4271c1-e581-4332-9229-5dbf01d6b519 to default
+api02-1  | 2025-07-30T04:12:25.805501  0:00:00.000132 POST    [200] /payments
+api01-1  | Sending payment b23d4b60-0a42-4801-9069-a8ed59aec9d9 to default
+api01-1  | 2025-07-30T04:12:25.823885  0:00:00.000111 POST    [200] /payments
+api01-1  | Sending payment 6116dd4a-83ac-441d-a289-e3f6a4313c6e to default
+api02-1  | 2025-07-30T04:12:25.842652  0:00:00.000125 POST    [200] /payments
+api02-1  | Sending payment 468d56ea-f65f-49f8-b42f-f9adf02fb5b3 to default
+api01-1  | 2025-07-30T04:12:25.859437  0:00:00.000148 POST    [200] /payments
+api02-1  | Sending payment 7e7964d7-8463-4309-aa50-f1abd5716a50 to default
+api02-1  | 2025-07-30T04:12:25.860457  0:00:00.000119 POST    [200] /payments
+api02-1  | Sending payment f71419a3-7d57-4dd4-be63-6a597f87af0a to default
+api01-1  | 2025-07-30T04:12:25.878149  0:00:00.000126 POST    [200] /payments
+api01-1  | Sending payment 674bbd73-46b8-43bd-9cd0-d208f2c1a736 to default
+api02-1  | 2025-07-30T04:12:25.882659  0:00:00.000142 POST    [200] /payments
+api01-1  | Sending payment c5b30a65-9bb7-400b-8638-2e5f81d8d3ca to default
+api01-1  | 2025-07-30T04:12:25.896119  0:00:00.000129 POST    [200] /payments
+api01-1  | Sending payment 93b34efb-5215-4d39-a8ae-91589d9facb5 to default
+api02-1  | 2025-07-30T04:12:25.914672  0:00:00.000139 POST    [200] /payments
+api01-1  | Sending payment 6c2a1890-835c-4e3b-9e67-cc7be8267932 to default
+api01-1  | 2025-07-30T04:12:25.932503  0:00:00.000121 POST    [200] /payments
+api01-1  | Sending payment fe3b5c8f-aa9a-4ae2-b5ca-7508c773bd95 to default
+api02-1  | 2025-07-30T04:12:25.949962  0:00:00.000203 POST    [200] /payments
+api01-1  | Sending payment 21c31134-1310-4a97-b610-d68dd00d4aab to default
+api01-1  | 2025-07-30T04:12:25.969125  0:00:00.000130 POST    [200] /payments
+api01-1  | Sending payment 0cc9db96-8368-4ab6-bd1a-f3fb7f006eb0 to default
+api02-1  | 2025-07-30T04:12:25.969285  0:00:00.000144 POST    [200] /payments
+api01-1  | Sending payment 57be9025-e8f8-4d4a-b2af-b419d551cf35 to default
+api02-1  | 2025-07-30T04:12:25.987075  0:00:00.000183 POST    [200] /payments
+api01-1  | Sending payment 5e44ff15-931b-4a24-9668-214fe4d68094 to default
+api01-1  | 2025-07-30T04:12:25.988036  0:00:00.000110 POST    [200] /payments
+api01-1  | Sending payment f0ba0e4e-4c64-4be3-b2c9-179c6977ecd4 to default
+api02-1  | 2025-07-30T04:12:26.024787  0:00:00.000172 POST    [200] /payments
+api02-1  | Sending payment dc094c0a-5ce6-4e60-b7b7-785600bf6239 to default
+api01-1  | 2025-07-30T04:12:26.025804  0:00:00.000143 POST    [200] /payments
+api02-1  | Sending payment 49c68350-1781-4d55-9ed5-4e8d1a0fee60 to default
+api02-1  | 2025-07-30T04:12:26.043796  0:00:00.000118 POST    [200] /payments
+api02-1  | Sending payment 000b2ab8-c1b8-4b4b-982b-7d6746f9d2db to default
+api01-1  | 2025-07-30T04:12:26.061240  0:00:00.000122 POST    [200] /payments
+api01-1  | Sending payment a34a2cdd-2925-424f-b595-513f73596c69 to default
+api02-1  | 2025-07-30T04:12:26.078212  0:00:00.000120 POST    [200] /payments
+api01-1  | Sending payment 96f4cc3c-bc3f-4cf8-8f52-5a49e3221758 to default
+api01-1  | 2025-07-30T04:12:26.079229  0:00:00.000089 POST    [200] /payments
+api01-1  | Sending payment bdf286e7-b7cc-416f-854e-300d924df8de to default
+api02-1  | 2025-07-30T04:12:26.095883  0:00:00.000145 POST    [200] /payments
+api01-1  | 2025-07-30T04:12:26.096046  0:00:00.000176 POST    [200] /payments
+api01-1  | Sending payment 7457115b-d038-4721-8f45-f33a2a52c8ce to default
+api01-1  | Sending payment 95525909-30c7-4aae-a72f-ae26d6386959 to default
+api01-1  | 2025-07-30T04:12:26.115637  0:00:00.000136 POST    [200] /payments
+api01-1  | Sending payment f692f8fe-2bb8-4ec7-945c-822db56c5583 to default
+api02-1  | 2025-07-30T04:12:26.148335  0:00:00.000114 POST    [200] /payments
+api01-1  | Sending payment 57e66de8-8c7d-4647-83c0-b33af3fc4f45 to default
+api01-1  | 2025-07-30T04:12:26.151702  0:00:00.000108 POST    [200] /payments
+api01-1  | Sending payment 8c182e1e-a455-4e4a-a49e-f82eb8bb9092 to default
+api02-1  | 2025-07-30T04:12:26.170253  0:00:00.000127 POST    [200] /payments
+api01-1  | Sending payment 9dc20980-0d9c-46b8-a2b0-fee677bfb05c to default
+api01-1  | 2025-07-30T04:12:26.187478  0:00:00.000098 POST    [200] /payments
+api01-1  | Sending payment 0ea20ea6-6463-4562-8fdf-fc3197153533 to default
+api02-1  | 2025-07-30T04:12:26.188749  0:00:00.000102 POST    [200] /payments
+api02-1  | Sending payment c27e2199-df65-4da5-981e-dc06c8a19f9a to default
+api01-1  | 2025-07-30T04:12:26.206059  0:00:00.000156 POST    [200] /payments
+api02-1  | 2025-07-30T04:12:26.206149  0:00:00.000138 POST    [200] /payments
+api02-1  | Sending payment 4b528d52-caed-4cbd-bc45-4ceee454a3c3 to default
+api02-1  | Sending payment 3b6ef967-7735-49d1-8fed-7d1de807be2d to default
+api02-1  | 2025-07-30T04:12:26.223654  0:00:00.000136 POST    [200] /payments
+api01-1  | Sending payment d84ba456-b52d-4550-b97c-c2efa4932e00 to default
+api01-1  | 2025-07-30T04:12:26.242481  0:00:00.000119 POST    [200] /payments
+api01-1  | Sending payment d92dc671-35ba-4135-9e24-c560d3305bc0 to default
+api02-1  | 2025-07-30T04:12:26.259974  0:00:00.000178 POST    [200] /payments
+api01-1  | Sending payment 06493e56-8234-40d5-9fd3-b983ab2a8ddd to default
+api01-1  | 2025-07-30T04:12:26.279678  0:00:00.000121 POST    [200] /payments
+api01-1  | Sending payment 79369f8a-a33c-4758-8518-e26431f0d01a to default
+api02-1  | 2025-07-30T04:12:26.296567  0:00:00.000110 POST    [200] /payments
+api01-1  | Sending payment c820f060-20e0-40a4-b0c8-66363e097d64 to default
+api01-1  | 2025-07-30T04:12:26.298820  0:00:00.000069 POST    [200] /payments
+api01-1  | Sending payment 0525759b-1163-4c57-bda2-ff25f02e3a7b to default
+api02-1  | 2025-07-30T04:12:26.314273  0:00:00.000147 POST    [200] /payments
+api01-1  | Sending payment a9439848-9fc9-4a9a-a5f8-674dced12484 to default
+api01-1  | 2025-07-30T04:12:26.316547  0:00:00.000068 POST    [200] /payments
+api01-1  | Sending payment f9d75607-f95d-456c-8e18-610f9389d055 to default
+api02-1  | 2025-07-30T04:12:26.332183  0:00:00.000111 POST    [200] /payments
+api01-1  | Sending payment 378ca5b0-bd86-49d2-a04d-9c7445658fc3 to default
+api01-1  | 2025-07-30T04:12:26.351808  0:00:00.000107 POST    [200] /payments
+api01-1  | Sending payment 28b64abf-94b7-49a8-8b6f-e3fd5559f84c to default
+api02-1  | 2025-07-30T04:12:26.369241  0:00:00.000113 POST    [200] /payments
+api02-1  | Sending payment 847c5b7f-dd05-41e7-bc6a-ac37242efcae to default
+api01-1  | 2025-07-30T04:12:26.389068  0:00:00.000145 POST    [200] /payments
+api02-1  | Sending payment 02dbb519-cef5-49ca-a96a-69e5651b7540 to default
+api02-1  | 2025-07-30T04:12:26.406041  0:00:00.000197 POST    [200] /payments
+api02-1  | Sending payment e8acdd86-bcf0-46da-9417-f9520800f68f to default
+api01-1  | 2025-07-30T04:12:26.407708  0:00:00.000110 POST    [200] /payments
+api01-1  | Sending payment da567e13-9db9-4a9c-9d21-fc5641e6d7de to default
+api01-1  | 2025-07-30T04:12:26.424198  0:00:00.000116 POST    [200] /payments
+api02-1  | 2025-07-30T04:12:26.424200  0:00:00.000123 POST    [200] /payments
+api01-1  | Sending payment 7c5de115-afa4-4030-bbc6-58465e44c5ac to default
+api01-1  | Sending payment 9ed2eb40-61fe-4a27-ae3e-bac0d8f414bf to default
+api01-1  | 2025-07-30T04:12:26.442169  0:00:00.000122 POST    [200] /payments
+api01-1  | Sending payment 9c04b7ae-cb78-4262-8c72-1977f44eeca4 to default
+api02-1  | 2025-07-30T04:12:26.460671  0:00:00.000151 POST    [200] /payments
+api01-1  | Sending payment e896b402-a2d7-4d08-90f6-b3d1de1f7a12 to default
+api01-1  | 2025-07-30T04:12:26.478155  0:00:00.000093 POST    [200] /payments
+api01-1  | Sending payment 76b637c0-63aa-4977-b1e8-d725e464ddfb to default
+api02-1  | 2025-07-30T04:12:26.498485  0:00:00.000112 POST    [200] /payments
+api01-1  | Sending payment b52867d9-0253-4a70-81f9-d524cdc19101 to default
+api01-1  | 2025-07-30T04:12:26.515605  0:00:00.000142 POST    [200] /payments
+api01-1  | Sending payment 00396781-64d4-4c5d-8ece-9024c46d5465 to default
+api02-1  | 2025-07-30T04:12:26.516801  0:00:00.000146 POST    [200] /payments
+api01-1  | Sending payment ffff7afc-ccf7-4b33-8813-5bf497b424e0 to default
+api02-1  | 2025-07-30T04:12:26.533074  0:00:00.000137 POST    [200] /payments
+api02-1  | Sending payment 77dbdc8b-5c9f-469e-96b5-aae357c0b082 to default
+api01-1  | 2025-07-30T04:12:26.533035  0:00:00.000148 POST    [200] /payments
+api01-1  | Sending payment 3386b07b-fa3f-4a46-8fc3-f196fdcb5b20 to default
+api02-1  | 2025-07-30T04:12:26.552252  0:00:00.000160 POST    [200] /payments
+api02-1  | Sending payment 599264dd-b5c7-450b-8ba3-91c8bc76d419 to default
+api01-1  | 2025-07-30T04:12:26.568896  0:00:00.000146 POST    [200] /payments
+api02-1  | Sending payment 5d0fb563-d889-4a1a-8021-0f8441eb66cd to default
+api02-1  | 2025-07-30T04:12:26.588254  0:00:00.000179 POST    [200] /payments
+api01-1  | Sending payment 116c2b11-56da-4f6f-9489-dd4084b9dd01 to default
+api01-1  | 2025-07-30T04:12:26.608649  0:00:00.000138 POST    [200] /payments
+api01-1  | Sending payment 70c10a26-159f-4584-af39-4fbd7a5d56a1 to default
+api02-1  | 2025-07-30T04:12:26.624672  0:00:00.000156 POST    [200] /payments
+api01-1  | Sending payment 39bce57b-23bd-450a-b13d-fcf5e9567b67 to default
+api01-1  | 2025-07-30T04:12:26.626190  0:00:00.000146 POST    [200] /payments
+api01-1  | Sending payment 41347abf-905a-4384-a9db-22121ecc87ec to default
+api01-1  | 2025-07-30T04:12:26.647220  0:00:00.000103 POST    [200] /payments
+api02-1  | 2025-07-30T04:12:26.647222  0:00:00.000118 POST    [200] /payments
+api01-1  | Sending payment cc581e01-68b9-413e-8cd6-7a3d2591bf35 to default
+api01-1  | Sending payment 44a80f88-7d2e-4a26-af49-f3e5bb774a3e to default
+api01-1  | 2025-07-30T04:12:26.662925  0:00:00.000122 POST    [200] /payments
+api01-1  | Sending payment 513381ec-b6c4-44bd-8e73-b2a1eec4fb70 to default
+api02-1  | 2025-07-30T04:12:26.679489  0:00:00.000114 POST    [200] /payments
+api01-1  | Sending payment a3f35b39-8d88-44c8-a6f7-a4c2f546b363 to default
+api01-1  | 2025-07-30T04:12:26.699004  0:00:00.000117 POST    [200] /payments
+api01-1  | Sending payment 1350dd6c-edb3-4f9b-bbc4-3dfb2ad7101e to default
+api02-1  | 2025-07-30T04:12:26.716561  0:00:00.000116 POST    [200] /payments
+api01-1  | Sending payment 873fa96b-0523-470a-bc66-423fa2542568 to default
+api01-1  | 2025-07-30T04:12:26.733500  0:00:00.000102 POST    [200] /payments
+api02-1  | 2025-07-30T04:12:26.733773  0:00:00.000150 POST    [200] /payments
+api02-1  | Sending payment a4f23c3e-25c8-4872-83ea-983c00e4b641 to default
+api02-1  | Sending payment 02cd0925-0c50-4118-9bd6-c0056851eb65 to default
+api02-1  | 2025-07-30T04:12:26.752271  0:00:00.000123 POST    [200] /payments
+api01-1  | 2025-07-30T04:12:26.752388  0:00:00.000137 POST    [200] /payments
+api02-1  | Sending payment 0d2865ca-78ba-4b61-80fc-1143b9e642dc to default
+api01-1  | Sending payment b9263d23-f860-4ad3-8762-d9a8bd6a6b3a to default
+api01-1  | 2025-07-30T04:12:26.772177  0:00:00.000136 POST    [200] /payments
+api01-1  | Sending payment 0a98c450-9a44-44b3-87dd-dae4027c8888 to default
+api02-1  | 2025-07-30T04:12:26.788916  0:00:00.000128 POST    [200] /payments
+api01-1  | Sending payment 16b74521-f3e7-49f7-aed6-9ec663d05440 to default
+api01-1  | 2025-07-30T04:12:26.807539  0:00:00.000118 POST    [200] /payments
+api01-1  | Sending payment 8c908fa5-5c70-4028-b036-4d6f746f783c to default
+api02-1  | 2025-07-30T04:12:26.825961  0:00:00.000195 POST    [200] /payments
+api01-1  | Sending payment 95e78c1c-9dfc-427c-a66a-5b4a7d612ce5 to default
+api01-1  | 2025-07-30T04:12:26.843324  0:00:00.000124 POST    [200] /payments
+api01-1  | Sending payment 45a156ac-6eaf-4b2e-a002-33a8753b84df to default
+api02-1  | 2025-07-30T04:12:26.844575  0:00:00.000149 POST    [200] /payments
+api01-1  | Sending payment 8d1be262-c1a2-4cea-9a84-d3febd1e7583 to default
+api01-1  | 2025-07-30T04:12:26.861219  0:00:00.000125 POST    [200] /payments
+api01-1  | Sending payment 9a4894f4-4dca-4f58-b256-43223aec6ba8 to default
+api02-1  | 2025-07-30T04:12:26.862172  0:00:00.000102 POST    [200] /payments
+api01-1  | Sending payment ab6c0974-6cc7-4a2a-87d4-092c154855b6 to default
+api01-1  | 2025-07-30T04:12:26.879738  0:00:00.000096 POST    [200] /payments
+api01-1  | Sending payment b9ecf870-a848-4693-9b4b-4e59b14f305b to default
+api02-1  | 2025-07-30T04:12:26.885174  0:00:00.000118 POST    [200] /payments
+api02-1  | Sending payment 26bd44fb-7a77-4abb-9b1d-dc3419ceee78 to default
+api01-1  | 2025-07-30T04:12:26.897685  0:00:00.000102 POST    [200] /payments
+api02-1  | Sending payment 4f9a0f29-dcb0-4e94-aa43-9a10530de3f0 to default
+api02-1  | 2025-07-30T04:12:26.917325  0:00:00.000139 POST    [200] /payments
+api01-1  | Sending payment e81d8152-e609-43c7-893c-45385a5dec4d to default
+api01-1  | 2025-07-30T04:12:26.934204  0:00:00.000104 POST    [200] /payments
+api02-1  | Sending payment b6111805-6009-4f5d-829f-d273a454d716 to default
+api02-1  | 2025-07-30T04:12:26.951734  0:00:00.000147 POST    [200] /payments
+api01-1  | Sending payment db431785-0fba-4a67-a98d-c67e2716c1da to default
+api01-1  | 2025-07-30T04:12:26.952383  0:00:00.000132 POST    [200] /payments
+api01-1  | Sending payment 1cb34844-4ec1-4f34-8e27-447f61f02dc5 to default
+api02-1  | 2025-07-30T04:12:26.970871  0:00:00.000099 POST    [200] /payments
+api01-1  | 2025-07-30T04:12:26.970872  0:00:00.000098 POST    [200] /payments
+api01-1  | Sending payment 6b6b8886-8c45-488b-88bb-3877eded324e to default
+api01-1  | Sending payment e3c1f0f2-f86f-462d-ab5a-4f6c9bb517f5 to default
+api01-1  | 2025-07-30T04:12:26.989919  0:00:00.000077 POST    [200] /payments
+api02-1  | 2025-07-30T04:12:26.989875  0:00:00.000117 POST    [200] /payments
+api01-1  | Sending payment 1b6aeddf-5969-4938-bc8c-e6f16654d982 to default
+api01-1  | Sending payment fa64817a-113d-4cdd-a77b-d670e713e6d5 to default
+api01-1  | 2025-07-30T04:12:27.026688  0:00:00.000102 POST    [200] /payments
+api01-1  | Sending payment c9ba3238-1514-484b-a6f9-e2a2829bb929 to default
+api02-1  | 2025-07-30T04:12:27.027709  0:00:00.000129 POST    [200] /payments
+api01-1  | Sending payment 70c65220-2189-445a-b30b-aca720040116 to default
+api01-1  | 2025-07-30T04:12:27.045269  0:00:00.000117 POST    [200] /payments
+api01-1  | Sending payment aee12eba-9560-466c-9808-d138e2b3a7d4 to default
+api02-1  | 2025-07-30T04:12:27.062447  0:00:00.000142 POST    [200] /payments
+api01-1  | 2025-07-30T04:12:27.062677  0:00:00.000116 POST    [200] /payments
+api02-1  | Sending payment a16456e4-9c93-45d5-8609-9750515eafbb to default
+api02-1  | Sending payment 5dcf3100-b715-4f3a-95b3-f16fad18b8ab to default
+api01-1  | 2025-07-30T04:12:27.080690  0:00:00.000151 POST    [200] /payments
+api02-1  | 2025-07-30T04:12:27.080705  0:00:00.000114 POST    [200] /payments
+api02-1  | Sending payment 945ba5d7-1847-40f0-806a-4aeb918dcfb5 to default
+api01-1  | Sending payment 10a85b9e-76cb-4d6b-b72e-668e9bd26dbd to default
+api01-1  | 2025-07-30T04:12:27.098219  0:00:00.000103 POST    [200] /payments
+api02-1  | 2025-07-30T04:12:27.098206  0:00:00.000113 POST    [200] /payments
+api01-1  | Sending payment cfbd0abe-8931-4008-bccd-04fdd064c601 to default
+api01-1  | Sending payment 07dda020-784b-47e8-bc9c-83836f235aa4 to default
+api01-1  | 2025-07-30T04:12:27.117883  0:00:00.000096 POST    [200] /payments
+api01-1  | Sending payment 9cb2a50c-785e-4fc0-888b-6fe539579f5a to default
+api02-1  | 2025-07-30T04:12:27.150824  0:00:00.000117 POST    [200] /payments
+api01-1  | Sending payment 19785b44-2d4b-4f72-9797-c56477543010 to default
+api01-1  | 2025-07-30T04:12:27.153327  0:00:00.000076 POST    [200] /payments
+api01-1  | Sending payment 47b11a75-d300-41e6-b3e1-1baad3a5da77 to default
+api02-1  | 2025-07-30T04:12:27.171396  0:00:00.000170 POST    [200] /payments
+api01-1  | 2025-07-30T04:12:27.172260  0:00:00.000106 POST    [200] /payments
+api01-1  | Sending payment 96731f5e-a6de-4cea-aa37-d57637080ddf to default
+api01-1  | Sending payment a73295ef-2cbd-40dd-8e82-0575e4393ded to default
+api01-1  | 2025-07-30T04:12:27.188952  0:00:00.000097 POST    [200] /payments
+api01-1  | Sending payment a4fbe81c-2328-4d55-8751-9f0069670b4c to default
+api02-1  | 2025-07-30T04:12:27.189878  0:00:00.000104 POST    [200] /payments
+api01-1  | Sending payment 3fa943a4-fd16-4e41-9ba2-69c94af0b60c to default
+api01-1  | 2025-07-30T04:12:27.208400  0:00:00.000129 POST    [200] /payments
+api02-1  | 2025-07-30T04:12:27.208399  0:00:00.000125 POST    [200] /payments
+api02-1  | Sending payment ae11fa2f-777d-4803-884a-62308e6e07a2 to default
+api02-1  | Sending payment 6570284c-7d40-4d2b-844c-4c322e484c36 to default
+api02-1  | 2025-07-30T04:12:27.225914  0:00:00.000093 POST    [200] /payments
+api02-1  | Sending payment 183a51d6-3751-4e12-90e5-01c4cc067afd to default
+api01-1  | 2025-07-30T04:12:27.244535  0:00:00.000135 POST    [200] /payments
+api01-1  | Sending payment 597d0cd6-5f1c-4843-9235-1a98a306aa59 to default
+api02-1  | 2025-07-30T04:12:27.262006  0:00:00.000158 POST    [200] /payments
+api01-1  | Sending payment 08003e57-5216-47a3-9fbf-5d1c11cfe8a9 to default
+api01-1  | 2025-07-30T04:12:27.280117  0:00:00.000125 POST    [200] /payments
+api01-1  | Sending payment 634b7598-8337-4c8c-b7d7-c75ac0622e30 to default
+api02-1  | 2025-07-30T04:12:27.281613  0:00:00.000128 POST    [200] /payments
+api01-1  | Sending payment 227398a5-ed6c-4e8e-8977-8d61eab7386f to default
+api01-1  | 2025-07-30T04:12:27.298296  0:00:00.000134 POST    [200] /payments
+api01-1  | Sending payment f6d51fed-cf14-4ede-998f-0f63153988cc to default
+api02-1  | 2025-07-30T04:12:27.300637  0:00:00.000115 POST    [200] /payments
+api01-1  | Sending payment 9de1728e-7a7c-4489-baa6-473dcd1e1304 to default
+api01-1  | 2025-07-30T04:12:27.315934  0:00:00.000127 POST    [200] /payments
+api01-1  | Sending payment 27ba730f-f415-4e8a-adb6-29328587d7ba to default
+api02-1  | 2025-07-30T04:12:27.318401  0:00:00.000120 POST    [200] /payments
+api01-1  | Sending payment 88ddd15b-e841-4cad-9535-3caa69d4bf92 to default
+api01-1  | 2025-07-30T04:12:27.334188  0:00:00.000099 POST    [200] /payments
+api01-1  | Sending payment 64f86468-7bb6-45de-8021-4b50aa7d9b45 to default
+api02-1  | 2025-07-30T04:12:27.353749  0:00:00.000118 POST    [200] /payments
+api01-1  | Sending payment bc0e4753-8b5b-4de1-9a42-58f9755cbca3 to default
+api01-1  | 2025-07-30T04:12:27.371052  0:00:00.000147 POST    [200] /payments
+api02-1  | Sending payment 92fb63b5-73d8-4598-8432-d8d7b00b8f14 to default
+api01-1  | 2025-07-30T04:12:27.390427  0:00:00.000130 POST    [200] /payments
+api02-1  | 2025-07-30T04:12:27.390424  0:00:00.000133 POST    [200] /payments
+api02-1  | Sending payment 9172bd1a-53c1-46b2-841c-5ac1a6fbd3d8 to default
+api02-1  | Sending payment 676cdb4e-0bbb-4019-bd52-26d8d764c607 to default
+api01-1  | 2025-07-30T04:12:27.408963  0:00:00.000102 POST    [200] /payments
+api02-1  | 2025-07-30T04:12:27.409015  0:00:00.000100 POST    [200] /payments
+api01-1  | Sending payment a5d2f35c-d025-4e7d-9804-1c71ceddf22d to default
+api01-1  | Sending payment 7b0a268f-56c4-4d64-99c1-31224c8a4b4e to default
+api01-1  | 2025-07-30T04:12:27.426532  0:00:00.000106 POST    [200] /payments
+api02-1  | 2025-07-30T04:12:27.426533  0:00:00.000109 POST    [200] /payments
+api01-1  | Sending payment 1641f071-ff7f-4bf9-b5d8-bd9d32bb3cda to default
+api01-1  | Sending payment b229e8a7-0878-47a1-8518-50d167ef19dc to default
+api01-1  | 2025-07-30T04:12:27.444077  0:00:00.000165 POST    [200] /payments
+api01-1  | Sending payment 991e3ba0-5cb3-4662-b3be-29a3be412d91 to default
+api02-1  | 2025-07-30T04:12:27.462592  0:00:00.000111 POST    [200] /payments
+api01-1  | Sending payment 15036237-006a-4517-89ab-b54979e28259 to default
+api01-1  | 2025-07-30T04:12:27.479996  0:00:00.000120 POST    [200] /payments
+api01-1  | Sending payment 517143bd-e151-40de-8c6b-acc98e6a94f0 to default
+api02-1  | 2025-07-30T04:12:27.498983  0:00:00.000135 POST    [200] /payments
+api01-1  | Sending payment 4f698623-de92-4b13-bf60-cbb82d561d83 to default
+api01-1  | 2025-07-30T04:12:27.500009  0:00:00.000134 POST    [200] /payments
+api01-1  | Sending payment f76fb38f-8367-444b-af86-92f4357911ce to default
+api02-1  | 2025-07-30T04:12:27.517347  0:00:00.000128 POST    [200] /payments
+api01-1  | Sending payment 349a41b4-a666-4e9a-b945-ce3052212142 to default
+api01-1  | 2025-07-30T04:12:27.518196  0:00:00.000102 POST    [200] /payments
+api02-1  | Sending payment 86e48bfc-c934-4d63-bc0e-6e4aa15fb29b to default
+api01-1  | 2025-07-30T04:12:27.534760  0:00:00.000118 POST    [200] /payments
+api02-1  | 2025-07-30T04:12:27.534761  0:00:00.000122 POST    [200] /payments
+api02-1  | Sending payment 60e5b276-3bb5-483d-8890-ba304c3eb140 to default
+api02-1  | Sending payment bbfcb63d-d49e-4269-856d-609548127c4e to default
+api01-1  | 2025-07-30T04:12:27.554256  0:00:00.000113 POST    [200] /payments
+api01-1  | Sending payment bf6add43-9d2d-4de5-965a-31dc2198e771 to default
+api02-1  | 2025-07-30T04:12:27.570577  0:00:00.000125 POST    [200] /payments
+api01-1  | Sending payment 80bd2a69-a1b3-4851-9cf8-4239fb6dc8f3 to default
+api01-1  | 2025-07-30T04:12:27.590290  0:00:00.000099 POST    [200] /payments
+api01-1  | Sending payment 00778393-ed0a-4c70-b4c9-a496e0c13a51 to default
+api02-1  | 2025-07-30T04:12:27.607993  0:00:00.000149 POST    [200] /payments
+api01-1  | Sending payment eb2cb2df-bdb0-4c67-9301-450ed0d58241 to default
+api01-1  | 2025-07-30T04:12:27.610138  0:00:00.000097 POST    [200] /payments
+api01-1  | Sending payment b3a275d6-81c0-4dc1-a313-ddf3a7f84c3e to default
+api02-1  | 2025-07-30T04:12:27.626536  0:00:00.000113 POST    [200] /payments
+api01-1  | Sending payment 4e12e48e-285b-44ee-8cc9-86b1341dce80 to default
+api01-1  | 2025-07-30T04:12:27.627602  0:00:00.000117 POST    [200] /payments
+api01-1  | Sending payment d24d827f-d8cb-4a3c-bfac-8fc7d586d050 to default
+api01-1  | 2025-07-30T04:12:27.649117  0:00:00.000081 POST    [200] /payments
+api02-1  | 2025-07-30T04:12:27.649090  0:00:00.000106 POST    [200] /payments
+api01-1  | Sending payment 385acbe3-8b62-4b5d-bf1c-7bdbeac7033d to default
+api01-1  | Sending payment 61a1efa7-d30b-430f-86f3-b71b8d5fcbfa to default
+api01-1  | 2025-07-30T04:12:27.664774  0:00:00.000140 POST    [200] /payments
+api01-1  | Sending payment 533e6554-d889-4592-a165-0194c964bfe2 to default
+api02-1  | 2025-07-30T04:12:27.681646  0:00:00.000132 POST    [200] /payments
+api02-1  | Sending payment 05dfd116-426f-4572-86e0-fef5384646dc to default
+api01-1  | 2025-07-30T04:12:27.701113  0:00:00.000112 POST    [200] /payments
+api02-1  | Sending payment d2c9bf70-f09e-48a1-875d-9fb07be9db7e to default
+api01-1  | 2025-07-30T04:12:27.717895  0:00:00.000094 POST    [200] /payments
+api02-1  | 2025-07-30T04:12:27.717895  0:00:00.000093 POST    [200] /payments
+api01-1  | Sending payment 332d18f6-03a1-4ed9-860a-447f3fadf4c9 to default
+api02-1  | Sending payment cc7b9c26-54cd-47bc-8404-a9ba4e69d1cb to default
+api01-1  | 2025-07-30T04:12:27.734787  0:00:00.000096 POST    [200] /payments
+api02-1  | 2025-07-30T04:12:27.734984  0:00:00.000147 POST    [200] /payments
+api01-1  | Sending payment e3dbdf80-2997-40a9-8900-0ecc272374b6 to default
+api01-1  | Sending payment a4bc06ce-5ec2-41dc-8dff-bffdedd23a8c to default
+api01-1  | 2025-07-30T04:12:27.754385  0:00:00.000117 POST    [200] /payments
+api02-1  | 2025-07-30T04:12:27.754385  0:00:00.000115 POST    [200] /payments
+log truncated at line 1000

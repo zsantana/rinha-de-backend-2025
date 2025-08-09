@@ -19,6 +19,7 @@ stopContainers() {
     pushd ../participantes/$1
         docker compose down -v --remove-orphans
         docker compose rm -s -v -f
+        find * ! -group $(whoami) | xargs sudo rm -rf
     popd > /dev/null
     pushd ../payment-processor > /dev/null
         docker compose down --volumes > /dev/null
@@ -28,13 +29,17 @@ stopContainers() {
 MAX_REQUESTS=550
 
 while true; do
+
+    # docker system prune -a -f --volumes
+
     for directory in ../participantes/*; do
     (
         git pull
         participant=$(echo $directory | sed -e 's/..\/participantes\///g' -e 's/\///g')
-        echo "participant: $participant"
+        echo "========================================"
+        echo "  Participant $participant starting..."
+        echo "========================================"
 
-        
         testedFile="$directory/partial-results.json"
 
         if ! test -f $testedFile; then
@@ -47,7 +52,7 @@ while true; do
             max_attempts=15
             attempt=1
             while [ $success -ne 0 ] && [ $max_attempts -ge $attempt ]; do
-                curl -f -s http://localhost:9999/payments-summary
+                curl -f -s --max-time 3 localhost:9999/payments-summary
                 success=$?
                 echo "tried $attempt out of $max_attempts..."
                 sleep 5
@@ -75,8 +80,16 @@ while true; do
             git commit -m "add $participant's partial result"
             git push
 
+            echo "================================="
+            echo "  Finished testing $participant!"
+            echo "================================="
+
+            sleep 5
+
         else
-            echo "skipping $participant"
+            echo "================================="
+            echo "  Skipping $participant"
+            echo "================================="
         fi
     )
     done

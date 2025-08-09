@@ -1,42 +1,30 @@
 name : payment-proxy
 
+networks:
+  acsbackend:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.25.0.0/16
+  payment-processor:
+    external: true
+
+x-service-templates:
+  base: &apibase
+    image: acslook/payment-proxy:v6
+
 services:  
-  redis:
-    container_name: redis
-    image: redis:8-alpine
-    ports:
-      - "6379:6379"
-    networks:
-      - backend
-      - payment-processor
-    deploy:
-      resources:
-        limits:
-          cpus: '0.1'
-          memory: "80MB"
-  db:
-    image: postgres:17-alpine
-    container_name: payment-db
-    hostname: db
-    environment:
-      - POSTGRES_PASSWORD=rinha25
-      - POSTGRES_USER=rinha25
-      - POSTGRES_DB=payments_db
-    ports:
-      - "5432:5432"
-    command: postgres -c max_connections=450 -c shared_buffers=32MB -c effective_cache_size=96MB -c work_mem=3MB -c maintenance_work_mem=12MB -c synchronous_commit=off -c fsync=off
-    networks:
-      - backend
-      - payment-processor
+  network-setup:
+    image: docker:latest
+    container_name: network-setup
+    command: >
+      sh -c "docker network inspect payment-proxy_acsbackend || docker network create --driver bridge --subnet 172.25.0.0/16 payment-proxy_acsbackend"
     volumes:
-      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
-    deploy:
-      resources:
-        limits:
-          cpus: "0.3"
-          memory: "100MB"
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart: "no"
   api1:
-      image: acslook/payment-proxy:v2
+      <<: *apibase
       container_name: api1
       environment:
         - CONN_STRING=postgres://rinha25:rinha25@db:5432/payments_db?sslmode=disable
@@ -44,20 +32,20 @@ services:
         - GATEWAY_DEFAULT_URL=http://payment-processor-default:8080
         - GATEWAY_FALLBACK_URL=http://payment-processor-fallback:8080
       networks:
-        - backend
-        - payment-processor
+        acsbackend:
+          ipv4_address: 172.25.0.10
+        payment-processor: {}
       restart: unless-stopped
       command: ["server"]
       deploy:
         resources:
           limits:
-            cpus: '0.2'
-            memory: "50MB"
+            cpus: '0.5'
+            memory: "30MB"
       depends_on:
-        - db
-        - redis
+        - network-setup
   api2:
-    image: acslook/payment-proxy:v2
+    <<: *apibase
     container_name: api2
     environment:
       - CONN_STRING=postgres://rinha25:rinha25@db:5432/payments_db?sslmode=disable
@@ -65,20 +53,21 @@ services:
       - GATEWAY_DEFAULT_URL=http://payment-processor-default:8080
       - GATEWAY_FALLBACK_URL=http://payment-processor-fallback:8080
     networks:
-      - backend
-      - payment-processor
+      acsbackend:
+        ipv4_address: 172.25.0.11
+      payment-processor: {}
     restart: unless-stopped
     command: ["server"]
     deploy:
       resources:
         limits:
-          cpus: '0.2'
-          memory: "50MB"
+          cpus: '0.5'
+          memory: "30MB"
     depends_on:
-      - db
-      - redis
+      - network-setup
+
   worker:
-      image: acslook/payment-proxy:v2
+      <<: *apibase
       container_name: worker
       environment:
         - CONN_STRING=postgres://rinha25:rinha25@db:5432/payments_db?sslmode=disable
@@ -86,18 +75,18 @@ services:
         - GATEWAY_DEFAULT_URL=http://payment-processor-default:8080
         - GATEWAY_FALLBACK_URL=http://payment-processor-fallback:8080
       networks:
-        - backend
-        - payment-processor
+        acsbackend:
+          ipv4_address: 172.25.0.12
+        payment-processor: {}
       restart: unless-stopped
       command: ["worker"]
       deploy:
         resources:
           limits:
-            cpus: '0.6'
-            memory: "40MB"
+            cpus: '0.2'
+            memory: "200MB"
       depends_on:
-        - db
-        - redis
+        - network-setup
   nginx:
     image: nginx:alpine
     container_name: nginx-lb
@@ -109,15 +98,12 @@ services:
       - api1
       - api2
       - worker
+      - network-setup
     deploy:
       resources:
         limits:
           cpus: '0.2'
-          memory: "30MB"
+          memory: "80MB"
     networks:
-      - backend
-networks:
-  backend:
-    driver: bridge
-  payment-processor:
-    external: true
+      acsbackend:
+        ipv4_address: 172.25.0.13

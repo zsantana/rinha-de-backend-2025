@@ -1,0 +1,71 @@
+
+ Network arthur-seus-100_backend  Creating
+ Network arthur-seus-100_backend  Created
+ Container nats  Creating
+ Container nats  Created
+ Container payment-worker  Creating
+ Container payment-api-1  Creating
+ Container payment-api-2  Creating
+ Container payment-worker  Created
+ Container payment-api-1  Created
+ Container payment-api-2  Created
+ Container haproxy  Creating
+ Container haproxy  Created
+Attaching to haproxy, nats, payment-api-1, payment-api-2, payment-worker
+nats            | [1] 2025/07/31 00:02:43.448131 [INF] Starting nats-server
+nats            | [1] 2025/07/31 00:02:43.448216 [INF]   Version:  2.10.29
+nats            | [1] 2025/07/31 00:02:43.448219 [INF]   Git:      [f91ddd8]
+nats            | [1] 2025/07/31 00:02:43.448221 [INF]   Name:     NCC43E43M6JMI7DTTJNPNXXW66JYBIPHJ36J5HY62HZXEAP3VSMPYWT6
+nats            | [1] 2025/07/31 00:02:43.448225 [INF]   Node:     N5aCZs6C
+nats            | [1] 2025/07/31 00:02:43.448227 [INF]   ID:       NCC43E43M6JMI7DTTJNPNXXW66JYBIPHJ36J5HY62HZXEAP3VSMPYWT6
+nats            | [1] 2025/07/31 00:02:43.449192 [INF] Starting http monitor on 0.0.0.0:8222
+nats            | [1] 2025/07/31 00:02:43.449573 [INF] Starting JetStream
+nats            | [1] 2025/07/31 00:02:43.449585 [WRN] Temporary storage directory used, data could be lost on system reboot
+nats            | [1] 2025/07/31 00:02:43.449887 [INF]     _ ___ _____ ___ _____ ___ ___   _   __  __
+nats            | [1] 2025/07/31 00:02:43.449894 [INF]  _ | | __|_   _/ __|_   _| _ \ __| /_\ |  \/  |
+nats            | [1] 2025/07/31 00:02:43.449895 [INF] | || | _|  | | \__ \ | | |   / _| / _ \| |\/| |
+nats            | [1] 2025/07/31 00:02:43.449897 [INF]  \__/|___| |_| |___/ |_| |_|_\___/_/ \_\_|  |_|
+nats            | [1] 2025/07/31 00:02:43.449898 [INF] 
+nats            | [1] 2025/07/31 00:02:43.449900 [INF]          https://docs.nats.io/jetstream
+nats            | [1] 2025/07/31 00:02:43.449901 [INF] 
+nats            | [1] 2025/07/31 00:02:43.449903 [INF] ---------------- JETSTREAM ----------------
+nats            | [1] 2025/07/31 00:02:43.449905 [INF]   Max Memory:      5.73 GB
+nats            | [1] 2025/07/31 00:02:43.449907 [INF]   Max Storage:     9.05 GB
+nats            | [1] 2025/07/31 00:02:43.449909 [INF]   Store Directory: "/tmp/nats/jetstream"
+nats            | [1] 2025/07/31 00:02:43.449911 [INF] -------------------------------------------
+nats            | [1] 2025/07/31 00:02:43.450211 [INF] Listening for client connections on 0.0.0.0:4222
+nats            | [1] 2025/07/31 00:02:43.450635 [INF] Server is ready
+payment-worker  | 2025/07/31 00:02:43 connected to NATS on attempt 1
+payment-worker  | 2025/07/31 00:02:43 created JetStream on NATS
+payment-worker  | 2025/07/31 00:02:43 Creating stream: PAYMENTS
+payment-api-1   | 2025/07/31 00:02:43 connected to NATS on attempt 1
+payment-api-1   | 2025/07/31 00:02:43 created JetStream on NATS
+payment-worker  | 2025/07/31 00:02:43 created stream on NATS
+payment-worker  | 2025/07/31 00:02:43 PROCESSOR_DEFAULT_URL: http://payment-processor-default:8080
+payment-worker  | 2025/07/31 00:02:43 PROCESSOR_FALLBACK_URL: http://payment-processor-fallback:8080
+payment-api-1   | 2025/07/31 00:02:43 created stream on NATS
+payment-api-2   | 2025/07/31 00:02:43 connected to NATS on attempt 1
+payment-api-2   | 2025/07/31 00:02:43 created JetStream on NATS
+payment-api-2   | 2025/07/31 00:02:43 created stream on NATS
+haproxy         | [NOTICE]   (1) : New worker (8) forked
+haproxy         | [NOTICE]   (1) : Loading success.
+haproxy         | [NOTICE]   (8) : haproxy version is 2.9.15-e872a3f
+haproxy         | [WARNING]  (8) : [haproxy.main()] Failed to drop supplementary groups. Using 'gid'/'group' without 'uid'/'user' is generally useless.
+haproxy         | [NOTICE]   (1) : haproxy version is 2.9.15-e872a3f
+haproxy         | [WARNING]  (1) : Exiting Master process...
+haproxy         | [WARNING]  (8) : Proxy http-in stopped (cumulated conns: FE: 553, BE: 0).
+haproxy         | [WARNING]  (8) : Proxy payment_api stopped (cumulated conns: FE: 0, BE: 16750).
+haproxy         | [WARNING]  (8) : Proxy reject_all stopped (cumulated conns: FE: 0, BE: 0).
+haproxy         | [WARNING]  (1) : Current worker (8) exited with code 0 (Exit)
+haproxy         | [WARNING]  (1) : All workers exited. Exiting... (0)
+[Khaproxy exited with code 0
+[Kpayment-worker exited with code 2
+[Kpayment-api-1 exited with code 2
+[Kpayment-api-2 exited with code 2
+nats            | [1] 2025/07/31 00:03:55.759933 [INF] Trapped "terminated" signal
+nats            | [1] 2025/07/31 00:03:55.760048 [INF] Initiating Shutdown...
+nats            | [1] 2025/07/31 00:03:55.760066 [INF] Initiating JetStream Shutdown...
+nats            | [1] 2025/07/31 00:03:55.760231 [INF] JetStream Shutdown
+nats            | [1] 2025/07/31 00:03:55.760309 [INF] Server Exiting..
+[Knats exited with code 1
+log truncated at line 1000

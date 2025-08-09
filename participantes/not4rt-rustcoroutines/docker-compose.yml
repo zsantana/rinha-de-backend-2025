@@ -1,80 +1,91 @@
 services:
   haproxy:
-    image: haproxy:latest
+    image: haproxy:3.2.3-alpine
     command: >
       sh -c "
       echo 'global
-        maxconn 5000
+        maxconn 20000
+      defaults
+        mode http
       frontend api_frontend
         bind *:80
         default_backend api_backend
       backend api_backend
         balance static-rr
-        server backend1 backend1:8080
-        server backend2 backend2:8080
-        default-server init-addr none' > /tmp/haproxy.cfg &&
+        server backend1 /sockets/may.sock.1
+        server backend2 /sockets/may.sock.2
+        server backend3 /sockets/may.sock.3' > /tmp/haproxy.cfg &&
       haproxy -f /tmp/haproxy.cfg"
+    user: "0"
     ports:
       - "9999:80"
     depends_on:
       - backend1
       - backend2
-    logging:
-      driver: "none"
+      - backend3
     networks:
       - backend
-      - payment-processor
+    volumes:
+      - sockets:/sockets:rw
     deploy:
       resources:
         limits:
           memory: 25M
-          cpus: "0.2"
+          cpus: "0.3"
 
   backend1:
-    image: not4rt/rinha-2025-fast:v2.0.0
+    image: not4rt/rinha-2025-fast:v3.1.0
     environment:
-      PORT: 8080
-      DEFAULT_PROCESSOR_URL: payment-processor-default:8080
-      FALLBACK_PROCESSOR_URL: payment-processor-fallback:8080
-      PEER_HOST: backend2:8080
+      PEER1_SOCKET: /sockets/may.sock.2
+      PEER2_SOCKET: /sockets/may.sock.3
+      SOCKET_PATH: /sockets/may.sock.1
+    volumes:
+      - sockets:/sockets:rw
     networks:
       - backend
       - payment-processor
-    restart: unless-stopped
-    command: >
-      sh -c "
-      ./rust_coroutines_rinha_2025
-      --server
-      --workers
-      "
     deploy:
       resources:
         limits:
-          memory: 50M
-          cpus: "0.65"
+          memory: 75M
+          cpus: "0.4"
 
   backend2:
-    image: not4rt/rinha-2025-fast:v2.0.0
+    image: not4rt/rinha-2025-fast:v3.1.0
     environment:
-      PORT: 8080
-      DEFAULT_PROCESSOR_URL: payment-processor-default:8080
-      FALLBACK_PROCESSOR_URL: payment-processor-fallback:8080
-      PEER_HOST: backend1:8080
+      PEER1_SOCKET: /sockets/may.sock.1
+      PEER2_SOCKET: /sockets/may.sock.3
+      SOCKET_PATH: /sockets/may.sock.2
+    volumes:
+      - sockets:/sockets:rw
     networks:
       - backend
       - payment-processor
-    restart: unless-stopped
-    command: >
-      sh -c "
-      ./rust_coroutines_rinha_2025
-      --server
-      --workers
-      "
     deploy:
       resources:
         limits:
-          memory: 50M
-          cpus: "0.65"
+          memory: 75M
+          cpus: "0.4"
+
+  backend3:
+    image: not4rt/rinha-2025-fast:v3.1.0
+    environment:
+      PEER1_SOCKET: /sockets/may.sock.1
+      PEER2_SOCKET: /sockets/may.sock.2
+      SOCKET_PATH: /sockets/may.sock.3
+    volumes:
+      - sockets:/sockets:rw
+    networks:
+      - backend
+      - payment-processor
+    deploy:
+      resources:
+        limits:
+          memory: 75M
+          cpus: "0.4"
+
+volumes:
+  sockets:
 
 networks:
   backend:
