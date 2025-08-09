@@ -1,10 +1,8 @@
 services:
   api01: &api
     image: leand02fullcycle/rinha-haskell:latest
-    build: 
-      args:
-        STAGE: prd
-        HEAD_SERVER: 1
+    environment:
+      HEAD_SERVER: 1
     hostname: wired-api-01
     expose:
       - 80
@@ -22,11 +20,8 @@ services:
   
   api02:
     <<: *api
-    image: leand02fullcycle/rinha-haskell:latest
-    build: 
-      args:
-        STAGE: prd
-        HEAD_SERVER: 0
+    environment:
+      HEAD_SERVER: 0
     hostname: wired-api-02
     expose:
       - 80
