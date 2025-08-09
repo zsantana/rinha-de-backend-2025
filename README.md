@@ -12,6 +12,7 @@ Se quiser saber mais sobre o espírito da Rinha de Backend, confira os repositó
 
 #### Rinha nas redes sociais
 
+[Server](https://discord.gg/Eca6gJba8R) no Discord
 [@rinhadebackend](https://x.com/rinhadebackend) no X
 [@rinhadebackend.bsky.social](https://bsky.app/profile/rinhadebackend.bsky.social) no Bluesky
 [zan](https://www.linkedin.com/in/francisco-zanfranceschi/) no LinkedIn (criador da rinha)
