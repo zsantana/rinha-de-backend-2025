@@ -3,10 +3,13 @@
 Este projeto foi desenvolvido para a **Rinha de Backend 2025**, uma competição onde o desafio é criar uma API RESTful de
 alta performance para processamento de pagamentos.
 
-🔗
-Repositório da aplicação: [github.com/jjeanjacques10/rinha-de-backend-2025](https://github.com/jjeanjacques10/rinha-de-backend-2025)
+## 🔗 Links Importantes
 
-Repositório do desafio: [zanfranceschi/rinha-de-backend-2025](https://github.com/zanfranceschi/rinha-de-backend-2025)
+- Repositório da
+  aplicação: [github.com/jjeanjacques10/rinha-de-backend-2025](https://github.com/jjeanjacques10/rinha-de-backend-2025)
+- Repositório do desafio: [zanfranceschi/rinha-de-backend-2025](https://github.com/zanfranceschi/rinha-de-backend-2025)
+    - Submissão do
+      desafio: [participantes/jjeanjacques10](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/jjeanjacques10)
 
 ---
 
@@ -19,7 +22,7 @@ Repositório do desafio: [zanfranceschi/rinha-de-backend-2025](https://github.co
     * Spring Data JPA
 * **Redis**
 
-    * Redis Streams
+    * Pub/Sub para comunicação assíncrona
 * **Docker**
 * **GraalVM (build nativo)**
 
@@ -104,8 +107,8 @@ Etapas:
 ### 📤 Publicação da imagem (GraalVM)
 
 ```bash
-docker tag docker.io/jjeanjacques10/rinhabackend2025:graalvm jjeanjacques/rinhabackend2025:graalvm-v5.0
-docker push jjeanjacques/rinhabackend2025:graalvm-v5.0
+docker tag docker.io/jjeanjacques10/rinhabackend2025:graalvm jjeanjacques/rinhabackend2025:graalvm-v6.0
+docker push jjeanjacques/rinhabackend2025:graalvm-v6.0
 ```
 
 ---
