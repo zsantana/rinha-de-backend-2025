@@ -1,11 +1,11 @@
 services:
 
   backend01: &backend
-    image: thiagorigonatti/rinha-2025-scratch:0.0.6
+    image: thiagorigonatti/rinha-2025-debian12:0.0.1
     container_name: backend01
     environment:
-      - HTTP_CLIENT_THREADS=2
-      - SOCKET_SERVER_THREADS=2
+      - HTTP_CLIENT_THREADS=1
+      - SOCKET_SERVER_THREADS=1
       - SHM_PATH=/shm_array
       - SOCKET_PATH=/dev/shm/server1.sock
     networks:
@@ -15,7 +15,7 @@ services:
       resources:
         limits:
           cpus: "0.50"
-          memory: "100MB"
+          memory: "20MB"
     ipc: container:shared-memory
     depends_on:
       - shared-memory
@@ -28,14 +28,14 @@ services:
     <<: *backend
     container_name: backend02
     environment:
-      - HTTP_CLIENT_THREADS=2
-      - SOCKET_SERVER_THREADS=2
+      - HTTP_CLIENT_THREADS=1
+      - SOCKET_SERVER_THREADS=1
       - SHM_PATH=/shm_array
       - SOCKET_PATH=/dev/shm/server2.sock
     ipc: container:shared-memory
 
   shared-memory:
-    image: alpine:latest
+    image: alpine:3.22
     command: tail -f /dev/null
     ipc: shareable
     shm_size: 512kb
