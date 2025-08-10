@@ -27,8 +27,7 @@ services:
           memory: "110MB"
 
   api01:
-    image: hfurlan/rinha-backend-2025-java-v1:0.0.1
-    #    image: rinha-backend-2025-java-v1
+    image: hfurlan/rinha-backend-2025-java-v1:0.0.2
     hostname: api01
     environment:
       - DB_HOST=db
@@ -53,8 +52,7 @@ services:
           memory: "100MB"
 
   api02:
-    image: hfurlan/rinha-backend-2025-java-v1:0.0.1
-    #    image: rinha-backend-2025-java-v1
+    image: hfurlan/rinha-backend-2025-java-v1:0.0.2
     hostname: api01
     environment:
       - DB_HOST=db
