@@ -1,5 +1,5 @@
 x-rinha-api-base: &rinha-api-base
-  image: jhamiltonjunior/rinha-go-socket-fasthttp:0.0.1
+  image: jhamiltonjunior/rinha-go-socket-fasthttp:0.0.2
   volumes:
     - api-socketsv6:/var/run
   depends_on:
@@ -42,7 +42,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.5"
+          cpus: "0.35"
           memory: "50MB"
 
   rinha-api-1:
@@ -92,8 +92,23 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.5"
-          memory: "60MB"
+          cpus: "0.35"
+          memory: "40MB"
+
+  nats:
+    image: nats:2.10.14-alpine
+    container_name: nats_server
+    ports:
+      - "4222:4222"
+      - "6222:6222"
+      - "8222:8222"
+    networks:
+      - app-network
+    deploy:
+      resources:
+        limits:
+          cpus: "0.3"
+          memory: "20MB"
 
 networks:
   app-network:
