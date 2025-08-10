@@ -16,15 +16,18 @@ services:
       resources:
         limits:
           cpus: "0.2"
-          memory: "10MB"
+          memory: "50MB"
 
   rinhaquark2025-a: &rinhaquark2025
-    image: kauanmocelin/rinhaquark2025:1.0.5
+    image: kauanmocelin/rinhaquark2025:1.0.17
     container_name: rinhaquark2025-a
     environment:
       - QUARKUS_MONGODB_CONNECTION_STRING=mongodb://mongo:27017
+      - QUARKUS_PAYMENTS_BATCH_SIZE=300
+      - QUARKUS_PAYMENTS_BATCH_INTERVAL_MS=500
+      - QUARKUS_PAYMENTS_THREADS_NUMBER=100
     depends_on:
-      mongo:
+      postgres:
         condition: service_healthy
     networks:
       - rinhaquark-rede
@@ -39,31 +42,32 @@ services:
     <<: *rinhaquark2025
     container_name: rinhaquark2025-b
 
-  mongo:
-    image: mongo:6.0
-    container_name: mongo
+  postgres:
+    image: postgres:17-alpine
+    container_name: postgres
+    environment:
+      POSTGRES_DB: payments_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
     ports:
-      - "27017:27017"
+      - "5432:5432"
     volumes:
-      - ./mongod.conf:/etc/mongod.conf:ro
-      - mongo-data:/data/db
-    command: [ "mongod", "--config", "/etc/mongod.conf" ]
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+      - ./postgresql.conf:/etc/postgresql/postgresql.conf
     networks:
       - rinhaquark-rede
+    command: [ "postgres", "-c", "config_file=/etc/postgresql/postgresql.conf" ]
     deploy:
       resources:
         limits:
           cpus: "0.3"
-          memory: "180MB"
+          memory: "140MB"
     healthcheck:
-      test: [ "CMD-SHELL", "echo 'db.runCommand(\"ping\").ok' | mongosh localhost:27017/test --quiet" ]
+      test: [ "CMD-SHELL", "pg_isready -U postgres -d payments_db" ]
       interval: 10s
       timeout: 5s
       retries: 5
       start_period: 30s
-
-volumes:
-  mongo-data:
 
 networks:
   rinhaquark-rede:
