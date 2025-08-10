@@ -1,5 +1,5 @@
 x-template: &template
-  image:  joelgarciajr84/rinha-backend-go:rinha-redis-galo4-de-briga
+  image: joelgarciajr84/rinha-backend-go@sha256:fc4a089102af5e3eb3d1675da927d0ab45888a29d32ecc103192c9ecf15e54e6
   environment:
     PAYMENT_PROCESSOR_DEFAULT_URL: "http://payment-processor-default:8080"
     PAYMENT_PROCESSOR_FALLBACK_URL: "http://payment-processor-fallback:8080"

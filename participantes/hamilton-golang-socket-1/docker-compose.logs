@@ -1,6 +1,63 @@
 
+ rinha-api-1 Pulling 
+ rinha-api-3 Pulling 
+ nats Pulling 
+ rinha-api-2 Pulling 
  nginx Pulling 
+ 9824c27679d3 Already exists 
+ a5c68c270f68 Already exists 
+ 4f4fb700ef54 Already exists 
+ 108b8defe785 Pulling fs layer 
+ 9824c27679d3 Already exists 
+ a5c68c270f68 Already exists 
+ 4f4fb700ef54 Already exists 
+ 108b8defe785 Pulling fs layer 
  nginx Pulled 
+ 108b8defe785 Downloading [>                                                  ]  59.67kB/5.73MB
+ 108b8defe785 Downloading [>                                                  ]  59.67kB/5.73MB
+ 9824c27679d3 Already exists 
+ a5c68c270f68 Already exists 
+ 4f4fb700ef54 Already exists 
+ 108b8defe785 Verifying Checksum 
+ 108b8defe785 Download complete 
+ 108b8defe785 Download complete 
+ 108b8defe785 Extracting [>                                                  ]  65.54kB/5.73MB
+ 108b8defe785 Extracting [>                                                  ]  65.54kB/5.73MB
+ 108b8defe785 Pulling fs layer 
+ 108b8defe785 Extracting [>                                                  ]  65.54kB/5.73MB
+ 4abcf2066143 Already exists 
+ f74b83a0e28b Pulling fs layer 
+ eb31291d7752 Pulling fs layer 
+ 287ee2a0c75e Pulling fs layer 
+ 108b8defe785 Extracting [==================================================>]   5.73MB/5.73MB
+ 108b8defe785 Extracting [==================================================>]   5.73MB/5.73MB
+ 108b8defe785 Extracting [==================================================>]   5.73MB/5.73MB
+ 108b8defe785 Pull complete 
+ 108b8defe785 Pull complete 
+ 108b8defe785 Pull complete 
+ rinha-api-3 Pulled 
+ rinha-api-1 Pulled 
+ rinha-api-2 Pulled 
+ 287ee2a0c75e Downloading [==================================================>]     414B/414B
+ 287ee2a0c75e Verifying Checksum 
+ 287ee2a0c75e Download complete 
+ eb31291d7752 Downloading [==================================================>]     586B/586B
+ eb31291d7752 Download complete 
+ f74b83a0e28b Downloading [>                                                  ]   63.1kB/6.184MB
+ f74b83a0e28b Verifying Checksum 
+ f74b83a0e28b Download complete 
+ f74b83a0e28b Extracting [>                                                  ]  65.54kB/6.184MB
+ f74b83a0e28b Extracting [===========================>                       ]  3.408MB/6.184MB
+ f74b83a0e28b Extracting [=================================================> ]   6.16MB/6.184MB
+ f74b83a0e28b Extracting [==================================================>]  6.184MB/6.184MB
+ f74b83a0e28b Pull complete 
+ eb31291d7752 Extracting [==================================================>]     586B/586B
+ eb31291d7752 Extracting [==================================================>]     586B/586B
+ eb31291d7752 Pull complete 
+ 287ee2a0c75e Extracting [==================================================>]     414B/414B
+ 287ee2a0c75e Extracting [==================================================>]     414B/414B
+ 287ee2a0c75e Pull complete 
+ nats Pulled 
  Network hamilton-golang-socket-1_app-network  Creating
  Network hamilton-golang-socket-1_app-network  Created
  Volume "hamilton-golang-socket-1_api-socketsv6"  Creating
@@ -8,994 +65,937 @@
  Volume "hamilton-golang-socket-1_redis-data"  Creating
  Volume "hamilton-golang-socket-1_redis-data"  Created
  Container redis_cache  Creating
+ Container nats_server  Creating
  Container redis_cache  Created
- Container rinha-api-3  Creating
+ Container nats_server  Created
  Container rinha-api-1  Creating
  Container rinha-api-2  Creating
+ Container rinha-api-3  Creating
+ Container rinha-api-3  Created
  Container rinha-api-1  Created
  Container rinha-api-2  Created
  Container nginx_load_balancer  Creating
- Container rinha-api-3  Created
  Container nginx_load_balancer  Created
-Attaching to nginx_load_balancer, redis_cache, rinha-api-1, rinha-api-2, rinha-api-3
-redis_cache          | 1:C 09 Aug 2025 13:48:26.127 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
-redis_cache          | 1:C 09 Aug 2025 13:48:26.127 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
-redis_cache          | 1:C 09 Aug 2025 13:48:26.127 * Redis version=7.2.4, bits=64, commit=00000000, modified=0, pid=1, just started
-redis_cache          | 1:C 09 Aug 2025 13:48:26.127 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf
-redis_cache          | 1:M 09 Aug 2025 13:48:26.130 * monotonic clock: POSIX clock_gettime
-redis_cache          | 1:M 09 Aug 2025 13:48:26.132 * Running mode=standalone, port=6379.
-redis_cache          | 1:M 09 Aug 2025 13:48:26.132 * Server initialized
-redis_cache          | 1:M 09 Aug 2025 13:48:26.132 * Ready to accept connections tcp
-rinha-api-2          | UNIX SOCKET:/var/run/api_2.sock
-rinha-api-1          | UNIX SOCKET:/var/run/api_1.sock
-rinha-api-3          | UNIX SOCKET:/var/run/api_3.sock
+Attaching to nats_server, nginx_load_balancer, redis_cache, rinha-api-1, rinha-api-2, rinha-api-3
+redis_cache          | 1:C 10 Aug 2025 22:33:22.335 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+redis_cache          | 1:C 10 Aug 2025 22:33:22.336 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+redis_cache          | 1:C 10 Aug 2025 22:33:22.336 * Redis version=7.2.4, bits=64, commit=00000000, modified=0, pid=1, just started
+redis_cache          | 1:C 10 Aug 2025 22:33:22.336 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf
+redis_cache          | 1:M 10 Aug 2025 22:33:22.336 * monotonic clock: POSIX clock_gettime
+redis_cache          | 1:M 10 Aug 2025 22:33:22.337 * Running mode=standalone, port=6379.
+redis_cache          | 1:M 10 Aug 2025 22:33:22.337 * Server initialized
+redis_cache          | 1:M 10 Aug 2025 22:33:22.337 * Ready to accept connections tcp
+nats_server          | [1] 2025/08/10 22:33:22.440345 [INF] Starting nats-server
+nats_server          | [1] 2025/08/10 22:33:22.440452 [INF]   Version:  2.10.14
+nats_server          | [1] 2025/08/10 22:33:22.440456 [INF]   Git:      [31af767]
+nats_server          | [1] 2025/08/10 22:33:22.440457 [INF]   Cluster:  my_cluster
+nats_server          | [1] 2025/08/10 22:33:22.440459 [INF]   Name:     NCBUWJ7G3K4ZOUOMACQVGJK73SK3VFF2H63YRPKYKP2EGAWDOK4N3FIB
+nats_server          | [1] 2025/08/10 22:33:22.440461 [INF]   ID:       NCBUWJ7G3K4ZOUOMACQVGJK73SK3VFF2H63YRPKYKP2EGAWDOK4N3FIB
+nats_server          | [1] 2025/08/10 22:33:22.440472 [INF] Using configuration file: /etc/nats/nats-server.conf
+nats_server          | [1] 2025/08/10 22:33:22.440976 [INF] Starting http monitor on 0.0.0.0:8222
+nats_server          | [1] 2025/08/10 22:33:22.441026 [INF] Listening for client connections on 0.0.0.0:4222
+nats_server          | [1] 2025/08/10 22:33:22.441158 [INF] Server is ready
+nats_server          | [1] 2025/08/10 22:33:22.441287 [INF] Cluster name is my_cluster
+nats_server          | [1] 2025/08/10 22:33:22.441355 [INF] Listening for route connections on 0.0.0.0:6222
+rinha-api-1          | 2025/08/10 22:33:23 Connected to NATS server
+rinha-api-1          | 2025/08/10 22:33:23 Server starting on /var/run/api_1.sock
+rinha-api-3          | 2025/08/10 22:33:23 Connected to NATS server
+rinha-api-2          | 2025/08/10 22:33:23 Connected to NATS server
+rinha-api-2          | 2025/08/10 22:33:23 Server starting on /var/run/api_2.sock
+rinha-api-3          | 2025/08/10 22:33:23 Server starting on /var/run/api_3.sock
+nginx_load_balancer  | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+nginx_load_balancer  | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+nginx_load_balancer  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+nginx_load_balancer  | 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+nginx_load_balancer  | 10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
+nginx_load_balancer  | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+nginx_load_balancer  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+nginx_load_balancer  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+nginx_load_balancer  | /docker-entrypoint.sh: Configuration complete; ready for start up
 rinha-api-2          | Histórico de pagamentos 'payment_history_1' limpo com sucesso.
 rinha-api-2          | Histórico de pagamentos 'payment_history_2' limpo com sucesso.
 rinha-api-2          | Histórico de pagamentos 'payment_history_3' limpo com sucesso.
 rinha-api-2          | Histórico de pagamentos 'payment_history_4' limpo com sucesso.
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
-rinha-api-3          | Received payment request
-rinha-api-1          | Received payment request
-rinha-api-2          | Received payment request
+rinha-api-1          | 2025/08/10 22:33:33 Tempo gasto para copiar o body: 15.953µs
+rinha-api-2          | 2025/08/10 22:33:34 Tempo gasto para copiar o body: 42.317µs
+rinha-api-1          | 2025/08/10 22:33:34 Tempo gasto para copiar o body: 30.778µs
+rinha-api-2          | 2025/08/10 22:33:34 Tempo gasto para copiar o body: 19.523µs
+rinha-api-1          | 2025/08/10 22:33:34 Tempo gasto para copiar o body: 9.924µs
+rinha-api-2          | 2025/08/10 22:33:34 Tempo gasto para copiar o body: 12.862µs
+rinha-api-1          | 2025/08/10 22:33:34 Tempo gasto para copiar o body: 20.767µs
+rinha-api-2          | 2025/08/10 22:33:34 Tempo gasto para copiar o body: 12.45µs
+rinha-api-1          | 2025/08/10 22:33:34 Tempo gasto para copiar o body: 11.19µs
+rinha-api-2          | 2025/08/10 22:33:34 Tempo gasto para copiar o body: 28.676µs
+rinha-api-3          | 2025/08/10 22:33:34 Tempo gasto para copiar o body: 25.205µs
+rinha-api-1          | 2025/08/10 22:33:35 Tempo gasto para copiar o body: 24.555µs
+rinha-api-2          | 2025/08/10 22:33:35 Tempo gasto para copiar o body: 10.162µs
+rinha-api-3          | 2025/08/10 22:33:35 Tempo gasto para copiar o body: 21.138µs
+rinha-api-1          | 2025/08/10 22:33:35 Tempo gasto para copiar o body: 13.97µs
+rinha-api-2          | 2025/08/10 22:33:35 Tempo gasto para copiar o body: 10.051µs
+rinha-api-3          | 2025/08/10 22:33:35 Tempo gasto para copiar o body: 10.275µs
+rinha-api-1          | 2025/08/10 22:33:35 Tempo gasto para copiar o body: 21.756µs
+rinha-api-2          | 2025/08/10 22:33:35 Tempo gasto para copiar o body: 9.103µs
+rinha-api-3          | 2025/08/10 22:33:35 Tempo gasto para copiar o body: 10.309µs
+rinha-api-1          | 2025/08/10 22:33:35 Tempo gasto para copiar o body: 11.33µs
+rinha-api-2          | 2025/08/10 22:33:35 Tempo gasto para copiar o body: 9.688µs
+rinha-api-3          | 2025/08/10 22:33:35 Tempo gasto para copiar o body: 19.752µs
+rinha-api-1          | 2025/08/10 22:33:35 Tempo gasto para copiar o body: 9.961µs
+rinha-api-2          | 2025/08/10 22:33:35 Tempo gasto para copiar o body: 10.299µs
+rinha-api-3          | 2025/08/10 22:33:35 Tempo gasto para copiar o body: 10.563µs
+rinha-api-1          | 2025/08/10 22:33:35 Tempo gasto para copiar o body: 9.984µs
+rinha-api-2          | 2025/08/10 22:33:35 Tempo gasto para copiar o body: 12.464µs
+rinha-api-3          | 2025/08/10 22:33:35 Tempo gasto para copiar o body: 12.687µs
+rinha-api-1          | 2025/08/10 22:33:35 Tempo gasto para copiar o body: 8.201µs
+rinha-api-2          | 2025/08/10 22:33:36 Tempo gasto para copiar o body: 9.252µs
+rinha-api-3          | 2025/08/10 22:33:36 Tempo gasto para copiar o body: 8.847µs
+rinha-api-1          | 2025/08/10 22:33:36 Tempo gasto para copiar o body: 8.897µs
+rinha-api-2          | 2025/08/10 22:33:36 Tempo gasto para copiar o body: 9.479µs
+rinha-api-3          | 2025/08/10 22:33:36 Tempo gasto para copiar o body: 9.621µs
+rinha-api-1          | 2025/08/10 22:33:36 Tempo gasto para copiar o body: 10.555µs
+rinha-api-2          | 2025/08/10 22:33:36 Tempo gasto para copiar o body: 13.716µs
+rinha-api-3          | 2025/08/10 22:33:36 Tempo gasto para copiar o body: 11.404µs
+rinha-api-1          | 2025/08/10 22:33:36 Tempo gasto para copiar o body: 12.434µs
+rinha-api-2          | 2025/08/10 22:33:36 Tempo gasto para copiar o body: 14.387µs
+rinha-api-3          | 2025/08/10 22:33:36 Tempo gasto para copiar o body: 13.164µs
+rinha-api-1          | 2025/08/10 22:33:36 Tempo gasto para copiar o body: 10.401µs
+rinha-api-2          | 2025/08/10 22:33:36 Tempo gasto para copiar o body: 9.949µs
+rinha-api-3          | 2025/08/10 22:33:36 Tempo gasto para copiar o body: 8.673µs
+rinha-api-1          | 2025/08/10 22:33:36 Tempo gasto para copiar o body: 10.451µs
+rinha-api-2          | 2025/08/10 22:33:36 Tempo gasto para copiar o body: 9.381µs
+rinha-api-3          | 2025/08/10 22:33:36 Tempo gasto para copiar o body: 10.228µs
+rinha-api-1          | 2025/08/10 22:33:36 Tempo gasto para copiar o body: 11.308µs
+rinha-api-2          | 2025/08/10 22:33:36 Tempo gasto para copiar o body: 10.592µs
+rinha-api-3          | 2025/08/10 22:33:36 Tempo gasto para copiar o body: 9.869µs
+rinha-api-1          | 2025/08/10 22:33:36 Tempo gasto para copiar o body: 8.629µs
+rinha-api-2          | 2025/08/10 22:33:36 Tempo gasto para copiar o body: 12.454µs
+rinha-api-3          | 2025/08/10 22:33:36 Tempo gasto para copiar o body: 12.75µs
+rinha-api-1          | 2025/08/10 22:33:36 Tempo gasto para copiar o body: 10.613µs
+rinha-api-2          | 2025/08/10 22:33:36 Tempo gasto para copiar o body: 11.86µs
+rinha-api-3          | 2025/08/10 22:33:36 Tempo gasto para copiar o body: 13.513µs
+rinha-api-1          | 2025/08/10 22:33:36 Tempo gasto para copiar o body: 10.644µs
+rinha-api-2          | 2025/08/10 22:33:36 Tempo gasto para copiar o body: 9.088µs
+rinha-api-3          | 2025/08/10 22:33:36 Tempo gasto para copiar o body: 10.284µs
+rinha-api-1          | 2025/08/10 22:33:37 Tempo gasto para copiar o body: 9.287µs
+rinha-api-2          | 2025/08/10 22:33:37 Tempo gasto para copiar o body: 9.834µs
+rinha-api-3          | 2025/08/10 22:33:37 Tempo gasto para copiar o body: 10.412µs
+rinha-api-1          | 2025/08/10 22:33:37 Tempo gasto para copiar o body: 9.284µs
+rinha-api-2          | 2025/08/10 22:33:37 Tempo gasto para copiar o body: 8.653µs
+rinha-api-3          | 2025/08/10 22:33:37 Tempo gasto para copiar o body: 12.359µs
+rinha-api-1          | 2025/08/10 22:33:37 Tempo gasto para copiar o body: 9.684µs
+rinha-api-2          | 2025/08/10 22:33:37 Tempo gasto para copiar o body: 12.927µs
+rinha-api-3          | 2025/08/10 22:33:37 Tempo gasto para copiar o body: 14.29µs
+rinha-api-1          | 2025/08/10 22:33:37 Tempo gasto para copiar o body: 10.717µs
+rinha-api-2          | 2025/08/10 22:33:37 Tempo gasto para copiar o body: 12.016µs
+rinha-api-3          | 2025/08/10 22:33:37 Tempo gasto para copiar o body: 12.119µs
+rinha-api-1          | 2025/08/10 22:33:37 Tempo gasto para copiar o body: 10.842µs
+rinha-api-2          | 2025/08/10 22:33:37 Tempo gasto para copiar o body: 11.673µs
+rinha-api-3          | 2025/08/10 22:33:37 Tempo gasto para copiar o body: 10.086µs
+rinha-api-1          | 2025/08/10 22:33:37 Tempo gasto para copiar o body: 9.706µs
+rinha-api-2          | 2025/08/10 22:33:37 Tempo gasto para copiar o body: 10.523µs
+rinha-api-3          | 2025/08/10 22:33:37 Tempo gasto para copiar o body: 12.032µs
+rinha-api-1          | 2025/08/10 22:33:37 Tempo gasto para copiar o body: 11.968µs
+rinha-api-2          | 2025/08/10 22:33:37 Tempo gasto para copiar o body: 9.866µs
+rinha-api-3          | 2025/08/10 22:33:37 Tempo gasto para copiar o body: 11.367µs
+rinha-api-1          | 2025/08/10 22:33:37 Tempo gasto para copiar o body: 11.247µs
+rinha-api-2          | 2025/08/10 22:33:37 Tempo gasto para copiar o body: 10.215µs
+rinha-api-3          | 2025/08/10 22:33:37 Tempo gasto para copiar o body: 10.228µs
+rinha-api-1          | 2025/08/10 22:33:37 Tempo gasto para copiar o body: 10.839µs
+rinha-api-2          | 2025/08/10 22:33:37 Tempo gasto para copiar o body: 11.922µs
+rinha-api-3          | 2025/08/10 22:33:37 Tempo gasto para copiar o body: 8.681µs
+rinha-api-1          | 2025/08/10 22:33:37 Tempo gasto para copiar o body: 74.859µs
+rinha-api-2          | 2025/08/10 22:33:37 Tempo gasto para copiar o body: 10.903µs
+rinha-api-3          | 2025/08/10 22:33:37 Tempo gasto para copiar o body: 12.424µs
+rinha-api-1          | 2025/08/10 22:33:37 Tempo gasto para copiar o body: 11.612µs
+rinha-api-2          | 2025/08/10 22:33:37 Tempo gasto para copiar o body: 12.973µs
+rinha-api-3          | 2025/08/10 22:33:37 Tempo gasto para copiar o body: 14.03µs
+rinha-api-1          | 2025/08/10 22:33:37 Tempo gasto para copiar o body: 12.594µs
+rinha-api-2          | 2025/08/10 22:33:37 Tempo gasto para copiar o body: 11.254µs
+rinha-api-3          | 2025/08/10 22:33:37 Tempo gasto para copiar o body: 8.267µs
+rinha-api-1          | 2025/08/10 22:33:37 Tempo gasto para copiar o body: 10.257µs
+rinha-api-2          | 2025/08/10 22:33:37 Tempo gasto para copiar o body: 21.591µs
+rinha-api-3          | 2025/08/10 22:33:38 Tempo gasto para copiar o body: 10.34µs
+rinha-api-1          | 2025/08/10 22:33:38 Tempo gasto para copiar o body: 13.41µs
+rinha-api-2          | 2025/08/10 22:33:38 Tempo gasto para copiar o body: 10.455µs
+rinha-api-3          | 2025/08/10 22:33:38 Tempo gasto para copiar o body: 10.514µs
+rinha-api-1          | 2025/08/10 22:33:38 Tempo gasto para copiar o body: 11.257µs
+rinha-api-2          | 2025/08/10 22:33:38 Tempo gasto para copiar o body: 14.385µs
+rinha-api-3          | 2025/08/10 22:33:38 Tempo gasto para copiar o body: 14.022µs
+rinha-api-1          | 2025/08/10 22:33:38 Tempo gasto para copiar o body: 10.1µs
+rinha-api-2          | 2025/08/10 22:33:38 Tempo gasto para copiar o body: 12.008µs
+rinha-api-3          | 2025/08/10 22:33:38 Tempo gasto para copiar o body: 10.123µs
+rinha-api-1          | 2025/08/10 22:33:38 Tempo gasto para copiar o body: 39.611µs
+rinha-api-2          | 2025/08/10 22:33:38 Tempo gasto para copiar o body: 12.784µs
+rinha-api-3          | 2025/08/10 22:33:38 Tempo gasto para copiar o body: 12.712µs
+rinha-api-1          | 2025/08/10 22:33:38 Tempo gasto para copiar o body: 14.757µs
+rinha-api-2          | 2025/08/10 22:33:38 Tempo gasto para copiar o body: 11.242µs
+rinha-api-3          | 2025/08/10 22:33:38 Tempo gasto para copiar o body: 30.448µs
+rinha-api-1          | 2025/08/10 22:33:38 Tempo gasto para copiar o body: 10.324µs
+rinha-api-2          | 2025/08/10 22:33:38 Tempo gasto para copiar o body: 10.696µs
+rinha-api-3          | 2025/08/10 22:33:38 Tempo gasto para copiar o body: 10.039µs
+rinha-api-1          | 2025/08/10 22:33:38 Tempo gasto para copiar o body: 9.78µs
+rinha-api-2          | 2025/08/10 22:33:38 Tempo gasto para copiar o body: 10.206µs
+rinha-api-3          | 2025/08/10 22:33:38 Tempo gasto para copiar o body: 13.491µs
+rinha-api-1          | 2025/08/10 22:33:38 Tempo gasto para copiar o body: 10.788µs
+rinha-api-2          | 2025/08/10 22:33:38 Tempo gasto para copiar o body: 16.104µs
+rinha-api-3          | 2025/08/10 22:33:38 Tempo gasto para copiar o body: 12.467µs
+rinha-api-1          | 2025/08/10 22:33:38 Tempo gasto para copiar o body: 12.925µs
+rinha-api-2          | 2025/08/10 22:33:38 Tempo gasto para copiar o body: 11.923µs
+rinha-api-3          | 2025/08/10 22:33:38 Tempo gasto para copiar o body: 11.979µs
+rinha-api-1          | 2025/08/10 22:33:38 Tempo gasto para copiar o body: 10.451µs
+rinha-api-2          | 2025/08/10 22:33:38 Tempo gasto para copiar o body: 14.221µs
+rinha-api-3          | 2025/08/10 22:33:38 Tempo gasto para copiar o body: 10.662µs
+rinha-api-1          | 2025/08/10 22:33:38 Tempo gasto para copiar o body: 14.192µs
+rinha-api-2          | 2025/08/10 22:33:38 Tempo gasto para copiar o body: 11.684µs
+rinha-api-3          | 2025/08/10 22:33:38 Tempo gasto para copiar o body: 11.681µs
+rinha-api-1          | 2025/08/10 22:33:38 Tempo gasto para copiar o body: 10.77µs
+rinha-api-2          | 2025/08/10 22:33:38 Tempo gasto para copiar o body: 9.791µs
+rinha-api-3          | 2025/08/10 22:33:38 Tempo gasto para copiar o body: 11.667µs
+rinha-api-1          | 2025/08/10 22:33:38 Tempo gasto para copiar o body: 11.45µs
+rinha-api-2          | 2025/08/10 22:33:38 Tempo gasto para copiar o body: 9.409µs
+rinha-api-3          | 2025/08/10 22:33:38 Tempo gasto para copiar o body: 11.525µs
+rinha-api-1          | 2025/08/10 22:33:38 Tempo gasto para copiar o body: 9.828µs
+rinha-api-2          | 2025/08/10 22:33:38 Tempo gasto para copiar o body: 14.059µs
+rinha-api-3          | 2025/08/10 22:33:38 Tempo gasto para copiar o body: 10.792µs
+rinha-api-1          | 2025/08/10 22:33:38 Tempo gasto para copiar o body: 12.22µs
+rinha-api-2          | 2025/08/10 22:33:38 Tempo gasto para copiar o body: 13.466µs
+rinha-api-3          | 2025/08/10 22:33:38 Tempo gasto para copiar o body: 10.546µs
+rinha-api-1          | 2025/08/10 22:33:38 Tempo gasto para copiar o body: 10.367µs
+rinha-api-2          | 2025/08/10 22:33:39 Tempo gasto para copiar o body: 11.403µs
+rinha-api-3          | 2025/08/10 22:33:39 Tempo gasto para copiar o body: 14.138µs
+rinha-api-1          | 2025/08/10 22:33:39 Tempo gasto para copiar o body: 26.667µs
+rinha-api-2          | 2025/08/10 22:33:39 Tempo gasto para copiar o body: 11.775µs
+rinha-api-3          | 2025/08/10 22:33:39 Tempo gasto para copiar o body: 12.872µs
+rinha-api-1          | 2025/08/10 22:33:39 Tempo gasto para copiar o body: 10.67µs
+rinha-api-2          | 2025/08/10 22:33:39 Tempo gasto para copiar o body: 11.398µs
+rinha-api-3          | 2025/08/10 22:33:39 Tempo gasto para copiar o body: 10.846µs
+rinha-api-1          | 2025/08/10 22:33:39 Tempo gasto para copiar o body: 11.929µs
+rinha-api-2          | 2025/08/10 22:33:39 Tempo gasto para copiar o body: 14.051µs
+rinha-api-3          | 2025/08/10 22:33:39 Tempo gasto para copiar o body: 10.39µs
+rinha-api-1          | 2025/08/10 22:33:39 Tempo gasto para copiar o body: 14.59µs
+rinha-api-2          | 2025/08/10 22:33:39 Tempo gasto para copiar o body: 14.847µs
+rinha-api-3          | 2025/08/10 22:33:39 Tempo gasto para copiar o body: 9.721µs
+rinha-api-1          | 2025/08/10 22:33:39 Tempo gasto para copiar o body: 8.079µs
+rinha-api-2          | 2025/08/10 22:33:39 Tempo gasto para copiar o body: 11.686µs
+rinha-api-3          | 2025/08/10 22:33:39 Tempo gasto para copiar o body: 11.241µs
+rinha-api-1          | 2025/08/10 22:33:39 Tempo gasto para copiar o body: 15.973µs
+rinha-api-2          | 2025/08/10 22:33:39 Tempo gasto para copiar o body: 15.895µs
+rinha-api-3          | 2025/08/10 22:33:39 Tempo gasto para copiar o body: 9.564µs
+rinha-api-1          | 2025/08/10 22:33:39 Tempo gasto para copiar o body: 11.734µs
+rinha-api-2          | 2025/08/10 22:33:39 Tempo gasto para copiar o body: 11.453µs
+rinha-api-3          | 2025/08/10 22:33:39 Tempo gasto para copiar o body: 10.804µs
+rinha-api-1          | 2025/08/10 22:33:39 Tempo gasto para copiar o body: 9.409µs
+rinha-api-2          | 2025/08/10 22:33:39 Tempo gasto para copiar o body: 11.126µs
+rinha-api-3          | 2025/08/10 22:33:39 Tempo gasto para copiar o body: 13.761µs
+rinha-api-1          | 2025/08/10 22:33:39 Tempo gasto para copiar o body: 10.274µs
+rinha-api-2          | 2025/08/10 22:33:39 Tempo gasto para copiar o body: 9.75µs
+rinha-api-3          | 2025/08/10 22:33:39 Tempo gasto para copiar o body: 11.784µs
+rinha-api-1          | 2025/08/10 22:33:39 Tempo gasto para copiar o body: 15.523µs
+rinha-api-2          | 2025/08/10 22:33:39 Tempo gasto para copiar o body: 9.569µs
+rinha-api-3          | 2025/08/10 22:33:39 Tempo gasto para copiar o body: 12.18µs
+rinha-api-1          | 2025/08/10 22:33:39 Tempo gasto para copiar o body: 10.144µs
+rinha-api-2          | 2025/08/10 22:33:39 Tempo gasto para copiar o body: 11.38µs
+rinha-api-3          | 2025/08/10 22:33:39 Tempo gasto para copiar o body: 10.143µs
+rinha-api-1          | 2025/08/10 22:33:39 Tempo gasto para copiar o body: 9.12µs
+rinha-api-2          | 2025/08/10 22:33:39 Tempo gasto para copiar o body: 12.679µs
+rinha-api-3          | 2025/08/10 22:33:39 Tempo gasto para copiar o body: 13.984µs
+rinha-api-1          | 2025/08/10 22:33:39 Tempo gasto para copiar o body: 9.851µs
+rinha-api-2          | 2025/08/10 22:33:39 Tempo gasto para copiar o body: 11.721µs
+rinha-api-3          | 2025/08/10 22:33:39 Tempo gasto para copiar o body: 16.364µs
+rinha-api-1          | 2025/08/10 22:33:39 Tempo gasto para copiar o body: 14.666µs
+rinha-api-2          | 2025/08/10 22:33:39 Tempo gasto para copiar o body: 17.543µs
+rinha-api-3          | 2025/08/10 22:33:39 Tempo gasto para copiar o body: 14.295µs
+rinha-api-1          | 2025/08/10 22:33:39 Tempo gasto para copiar o body: 15.321µs
+rinha-api-2          | 2025/08/10 22:33:39 Tempo gasto para copiar o body: 10.488µs
+rinha-api-3          | 2025/08/10 22:33:39 Tempo gasto para copiar o body: 13.455µs
+rinha-api-1          | 2025/08/10 22:33:39 Tempo gasto para copiar o body: 14.58µs
+rinha-api-2          | 2025/08/10 22:33:39 Tempo gasto para copiar o body: 13.102µs
+rinha-api-3          | 2025/08/10 22:33:39 Tempo gasto para copiar o body: 12.851µs
+rinha-api-1          | 2025/08/10 22:33:39 Tempo gasto para copiar o body: 11.304µs
+rinha-api-2          | 2025/08/10 22:33:39 Tempo gasto para copiar o body: 19.914µs
+rinha-api-3          | 2025/08/10 22:33:39 Tempo gasto para copiar o body: 11.314µs
+rinha-api-1          | 2025/08/10 22:33:39 Tempo gasto para copiar o body: 13.174µs
+rinha-api-2          | 2025/08/10 22:33:39 Tempo gasto para copiar o body: 92.947µs
+rinha-api-3          | 2025/08/10 22:33:39 Tempo gasto para copiar o body: 14.525µs
+rinha-api-1          | 2025/08/10 22:33:40 Tempo gasto para copiar o body: 16.4µs
+rinha-api-2          | 2025/08/10 22:33:40 Tempo gasto para copiar o body: 10.169µs
+rinha-api-3          | 2025/08/10 22:33:40 Tempo gasto para copiar o body: 15.345µs
+rinha-api-1          | 2025/08/10 22:33:40 Tempo gasto para copiar o body: 10.431µs
+rinha-api-2          | 2025/08/10 22:33:40 Tempo gasto para copiar o body: 10.842µs
+rinha-api-3          | 2025/08/10 22:33:40 Tempo gasto para copiar o body: 21.255µs
+rinha-api-1          | 2025/08/10 22:33:40 Tempo gasto para copiar o body: 12.507µs
+rinha-api-2          | 2025/08/10 22:33:40 Tempo gasto para copiar o body: 9.748µs
+rinha-api-3          | 2025/08/10 22:33:40 Tempo gasto para copiar o body: 25.325µs
+rinha-api-1          | 2025/08/10 22:33:40 Tempo gasto para copiar o body: 17.29µs
+rinha-api-2          | 2025/08/10 22:33:40 Tempo gasto para copiar o body: 7.715µs
+rinha-api-3          | 2025/08/10 22:33:40 Tempo gasto para copiar o body: 10.269µs
+rinha-api-1          | 2025/08/10 22:33:40 Tempo gasto para copiar o body: 14.213µs
+rinha-api-2          | 2025/08/10 22:33:40 Tempo gasto para copiar o body: 11.983µs
+rinha-api-3          | 2025/08/10 22:33:40 Tempo gasto para copiar o body: 11.337µs
+rinha-api-1          | 2025/08/10 22:33:40 Tempo gasto para copiar o body: 10.549µs
+rinha-api-2          | 2025/08/10 22:33:40 Tempo gasto para copiar o body: 8.636µs
+rinha-api-3          | 2025/08/10 22:33:40 Tempo gasto para copiar o body: 7.022µs
+rinha-api-1          | 2025/08/10 22:33:40 Tempo gasto para copiar o body: 10.077µs
+rinha-api-2          | 2025/08/10 22:33:40 Tempo gasto para copiar o body: 12.534µs
+rinha-api-3          | 2025/08/10 22:33:40 Tempo gasto para copiar o body: 11.525µs
+rinha-api-1          | 2025/08/10 22:33:40 Tempo gasto para copiar o body: 9.96µs
+rinha-api-2          | 2025/08/10 22:33:40 Tempo gasto para copiar o body: 12.081µs
+rinha-api-3          | 2025/08/10 22:33:40 Tempo gasto para copiar o body: 22.934µs
+rinha-api-1          | 2025/08/10 22:33:40 Tempo gasto para copiar o body: 11.379µs
+rinha-api-2          | 2025/08/10 22:33:40 Tempo gasto para copiar o body: 11.018µs
+rinha-api-3          | 2025/08/10 22:33:40 Tempo gasto para copiar o body: 18.717µs
+rinha-api-1          | 2025/08/10 22:33:40 Tempo gasto para copiar o body: 32.961µs
+rinha-api-2          | 2025/08/10 22:33:40 Tempo gasto para copiar o body: 10.733µs
+rinha-api-3          | 2025/08/10 22:33:40 Tempo gasto para copiar o body: 14.112µs
+rinha-api-1          | 2025/08/10 22:33:40 Tempo gasto para copiar o body: 14.806µs
+rinha-api-2          | 2025/08/10 22:33:40 Tempo gasto para copiar o body: 22.435µs
+rinha-api-3          | 2025/08/10 22:33:40 Tempo gasto para copiar o body: 10.627µs
+rinha-api-2          | 2025/08/10 22:33:40 Tempo gasto para copiar o body: 9.654µs
+rinha-api-1          | 2025/08/10 22:33:40 Tempo gasto para copiar o body: 9.514µs
+rinha-api-3          | 2025/08/10 22:33:40 Tempo gasto para copiar o body: 10.903µs
+rinha-api-2          | 2025/08/10 22:33:40 Tempo gasto para copiar o body: 10.216µs
+rinha-api-1          | 2025/08/10 22:33:40 Tempo gasto para copiar o body: 11.34µs
+rinha-api-3          | 2025/08/10 22:33:40 Tempo gasto para copiar o body: 11.507µs
+rinha-api-2          | 2025/08/10 22:33:40 Tempo gasto para copiar o body: 12.001µs
+rinha-api-1          | 2025/08/10 22:33:40 Tempo gasto para copiar o body: 15.329µs
+rinha-api-3          | 2025/08/10 22:33:40 Tempo gasto para copiar o body: 10.265µs
+rinha-api-2          | 2025/08/10 22:33:40 Tempo gasto para copiar o body: 9.524µs
+rinha-api-1          | 2025/08/10 22:33:40 Tempo gasto para copiar o body: 10.214µs
+rinha-api-3          | 2025/08/10 22:33:40 Tempo gasto para copiar o body: 9.979µs
+rinha-api-2          | 2025/08/10 22:33:40 Tempo gasto para copiar o body: 10.246µs
+rinha-api-1          | 2025/08/10 22:33:40 Tempo gasto para copiar o body: 29.705µs
+rinha-api-3          | 2025/08/10 22:33:40 Tempo gasto para copiar o body: 12.512µs
+rinha-api-2          | 2025/08/10 22:33:40 Tempo gasto para copiar o body: 11.566µs
+rinha-api-1          | 2025/08/10 22:33:40 Tempo gasto para copiar o body: 10.418µs
+rinha-api-3          | 2025/08/10 22:33:40 Tempo gasto para copiar o body: 12.489µs
+rinha-api-2          | 2025/08/10 22:33:40 Tempo gasto para copiar o body: 9.964µs
+rinha-api-1          | 2025/08/10 22:33:40 Tempo gasto para copiar o body: 9.789µs
+rinha-api-3          | 2025/08/10 22:33:40 Tempo gasto para copiar o body: 11.153µs
+rinha-api-2          | 2025/08/10 22:33:40 Tempo gasto para copiar o body: 10.908µs
+rinha-api-1          | 2025/08/10 22:33:40 Tempo gasto para copiar o body: 9.436µs
+rinha-api-3          | 2025/08/10 22:33:40 Tempo gasto para copiar o body: 12.127µs
+rinha-api-2          | 2025/08/10 22:33:40 Tempo gasto para copiar o body: 24.64µs
+rinha-api-1          | 2025/08/10 22:33:40 Tempo gasto para copiar o body: 11.665µs
+rinha-api-3          | 2025/08/10 22:33:40 Tempo gasto para copiar o body: 13.034µs
+rinha-api-2          | 2025/08/10 22:33:40 Tempo gasto para copiar o body: 22.62µs
+rinha-api-1          | 2025/08/10 22:33:40 Tempo gasto para copiar o body: 11.481µs
+rinha-api-3          | 2025/08/10 22:33:40 Tempo gasto para copiar o body: 25.655µs
+rinha-api-2          | 2025/08/10 22:33:40 Tempo gasto para copiar o body: 9.304µs
+rinha-api-1          | 2025/08/10 22:33:40 Tempo gasto para copiar o body: 12.14µs
+rinha-api-3          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 10.143µs
+rinha-api-2          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 13.578µs
+rinha-api-1          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 9.639µs
+rinha-api-3          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 9.858µs
+rinha-api-2          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 7.544µs
+rinha-api-1          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 9.831µs
+rinha-api-3          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 10.069µs
+rinha-api-2          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 10.1µs
+rinha-api-1          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 9.15µs
+rinha-api-3          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 12.41µs
+rinha-api-2          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 9.656µs
+rinha-api-3          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 8.219µs
+rinha-api-1          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 10.537µs
+rinha-api-2          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 23.064µs
+rinha-api-3          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 9.822µs
+rinha-api-1          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 8.918µs
+rinha-api-2          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 21.056µs
+rinha-api-3          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 31.694µs
+rinha-api-1          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 10.373µs
+rinha-api-2          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 11.188µs
+rinha-api-3          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 11.167µs
+rinha-api-1          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 16.476µs
+rinha-api-2          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 10.834µs
+rinha-api-3          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 9.927µs
+rinha-api-1          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 9.781µs
+rinha-api-2          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 12.705µs
+rinha-api-3          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 9.655µs
+rinha-api-1          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 9.211µs
+rinha-api-2          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 10.733µs
+rinha-api-3          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 10.127µs
+rinha-api-1          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 16.054µs
+rinha-api-2          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 11.845µs
+rinha-api-3          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 10.14µs
+rinha-api-1          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 14.603µs
+rinha-api-1          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 10.398µs
+rinha-api-3          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 8.291µs
+rinha-api-2          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 12.278µs
+rinha-api-1          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 10.535µs
+rinha-api-3          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 10.509µs
+rinha-api-2          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 9.614µs
+rinha-api-1          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 10.416µs
+rinha-api-3          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 13.328µs
+rinha-api-2          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 11.203µs
+rinha-api-1          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 14µs
+rinha-api-2          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 8.961µs
+rinha-api-3          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 9.463µs
+rinha-api-2          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 10.694µs
+rinha-api-1          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 12.405µs
+rinha-api-3          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 9.594µs
+rinha-api-2          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 11.728µs
+rinha-api-2          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 7.43µs
+rinha-api-1          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 10.886µs
+rinha-api-3          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 9.559µs
+rinha-api-2          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 9.713µs
+rinha-api-1          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 9.251µs
+rinha-api-3          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 11.726µs
+rinha-api-2          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 15.18µs
+rinha-api-1          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 11.093µs
+rinha-api-3          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 13.382µs
+rinha-api-2          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 9.185µs
+rinha-api-1          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 8.916µs
+rinha-api-3          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 9.515µs
+rinha-api-2          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 8.52µs
+rinha-api-1          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 10.953µs
+rinha-api-3          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 10.506µs
+rinha-api-2          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 9.424µs
+rinha-api-1          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 9.403µs
+rinha-api-3          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 8.906µs
+rinha-api-2          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 11.432µs
+rinha-api-1          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 9.331µs
+rinha-api-3          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 10.755µs
+rinha-api-2          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 11.173µs
+rinha-api-1          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 10.778µs
+rinha-api-3          | 2025/08/10 22:33:41 Tempo gasto para copiar o body: 12.108µs
+rinha-api-2          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 12.167µs
+rinha-api-1          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 10.23µs
+rinha-api-3          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 10.117µs
+rinha-api-2          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 12.581µs
+rinha-api-1          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 10.444µs
+rinha-api-3          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 11.472µs
+rinha-api-2          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 10.303µs
+rinha-api-1          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 13.054µs
+rinha-api-3          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 12.464µs
+rinha-api-2          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 18.906µs
+rinha-api-1          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 9.346µs
+rinha-api-3          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 13.04µs
+rinha-api-2          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 14.483µs
+rinha-api-1          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 10.503µs
+rinha-api-2          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 10.492µs
+rinha-api-3          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 10.503µs
+rinha-api-2          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 11.781µs
+rinha-api-1          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 9.247µs
+rinha-api-3          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 9.799µs
+rinha-api-2          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 13.556µs
+rinha-api-1          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 13.156µs
+rinha-api-3          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 13.808µs
+rinha-api-2          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 10.165µs
+rinha-api-3          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 13.807µs
+rinha-api-1          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 12.408µs
+rinha-api-2          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 18.109µs
+rinha-api-3          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 19.432µs
+rinha-api-1          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 13.538µs
+rinha-api-2          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 13.907µs
+rinha-api-1          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 11.402µs
+rinha-api-3          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 16.169µs
+rinha-api-2          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 14.089µs
+rinha-api-1          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 11.676µs
+rinha-api-3          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 23.458µs
+rinha-api-2          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 11.082µs
+rinha-api-1          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 9.754µs
+rinha-api-3          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 14.013µs
+rinha-api-2          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 10.78µs
+rinha-api-1          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 10.832µs
+rinha-api-3          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 13.167µs
+rinha-api-3          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 11.83µs
+rinha-api-2          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 9.493µs
+rinha-api-1          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 12.069µs
+rinha-api-2          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 10.438µs
+rinha-api-3          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 11.742µs
+rinha-api-1          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 12.751µs
+rinha-api-2          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 9.924µs
+rinha-api-3          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 14.699µs
+rinha-api-2          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 12.394µs
+rinha-api-1          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 26.28µs
+rinha-api-2          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 9.682µs
+rinha-api-3          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 8.681µs
+rinha-api-2          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 9.763µs
+rinha-api-1          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 11.239µs
+rinha-api-3          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 10.333µs
+rinha-api-2          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 18.915µs
+rinha-api-1          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 24.179µs
+rinha-api-1          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 1.853µs
+rinha-api-3          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 10.392µs
+rinha-api-2          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 8.532µs
+rinha-api-1          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 9.856µs
+rinha-api-3          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 10.732µs
+rinha-api-2          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 14.048µs
+rinha-api-1          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 16.769µs
+rinha-api-2          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 8.57µs
+rinha-api-3          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 22.545µs
+rinha-api-2          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 15.007µs
+rinha-api-1          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 14.492µs
+rinha-api-3          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 16.085µs
+rinha-api-2          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 14.358µs
+rinha-api-1          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 14.522µs
+rinha-api-3          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 9.813µs
+rinha-api-2          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 10.969µs
+rinha-api-1          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 14.061µs
+rinha-api-3          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 11.86µs
+rinha-api-2          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 10.527µs
+rinha-api-1          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 11.072µs
+rinha-api-3          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 10.88µs
+rinha-api-2          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 12.424µs
+rinha-api-3          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 8.863µs
+rinha-api-1          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 11.247µs
+rinha-api-3          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 8.715µs
+rinha-api-2          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 9.389µs
+rinha-api-1          | 2025/08/10 22:33:42 Tempo gasto para copiar o body: 10.743µs
+rinha-api-3          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 9.985µs
+rinha-api-2          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 7.895µs
+rinha-api-1          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 10.141µs
+rinha-api-2          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 9.315µs
+rinha-api-3          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 13.304µs
+rinha-api-1          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 8.685µs
+rinha-api-2          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 14.739µs
+rinha-api-1          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 7.838µs
+rinha-api-3          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 12.631µs
+rinha-api-2          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 7.753µs
+rinha-api-1          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 12.071µs
+rinha-api-3          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 11.932µs
+rinha-api-1          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 9.061µs
+rinha-api-2          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 14.299µs
+rinha-api-3          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 26.403µs
+rinha-api-1          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 10.431µs
+rinha-api-2          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 11.96µs
+rinha-api-1          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 9.591µs
+rinha-api-3          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 14.047µs
+rinha-api-3          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 8.86µs
+rinha-api-2          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 9.994µs
+rinha-api-1          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 10.242µs
+rinha-api-3          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 26.199µs
+rinha-api-2          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 9.402µs
+rinha-api-1          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 12.573µs
+rinha-api-2          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 7.246µs
+rinha-api-3          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 9.759µs
+rinha-api-1          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 22.856µs
+rinha-api-2          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 9.639µs
+rinha-api-1          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 10.536µs
+rinha-api-1          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 9.33µs
+rinha-api-3          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 11.883µs
+rinha-api-2          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 9.5µs
+rinha-api-1          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 10.07µs
+rinha-api-3          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 9.954µs
+rinha-api-1          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 8.254µs
+rinha-api-2          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 11.073µs
+rinha-api-3          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 12.135µs
+rinha-api-1          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 12.505µs
+rinha-api-2          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 8.452µs
+rinha-api-3          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 9.81µs
+rinha-api-1          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 7.317µs
+rinha-api-2          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 10.399µs
+rinha-api-2          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 12.404µs
+rinha-api-1          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 12.062µs
+rinha-api-3          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 23.986µs
+rinha-api-2          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 18.948µs
+rinha-api-1          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 26.732µs
+rinha-api-3          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 9.968µs
+rinha-api-3          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 6.131µs
+rinha-api-2          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 12.089µs
+rinha-api-1          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 10.876µs
+rinha-api-3          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 10.042µs
+rinha-api-1          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 7.548µs
+rinha-api-2          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 10.905µs
+rinha-api-1          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 9.797µs
+rinha-api-3          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 10.639µs
+rinha-api-1          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 12.214µs
+rinha-api-2          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 14.705µs
+rinha-api-3          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 7.75µs
+rinha-api-1          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 12.009µs
+rinha-api-2          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 9.353µs
+rinha-api-3          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 15.038µs
+rinha-api-1          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 24.473µs
+rinha-api-2          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 12.921µs
+rinha-api-1          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 7.463µs
+rinha-api-3          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 10.242µs
+rinha-api-1          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 10.921µs
+rinha-api-2          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 23.455µs
+rinha-api-3          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 10.11µs
+rinha-api-1          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 12.722µs
+rinha-api-2          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 11.818µs
+rinha-api-3          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 15.117µs
+rinha-api-2          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 9.266µs
+rinha-api-1          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 17.58µs
+rinha-api-3          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 12.467µs
+rinha-api-2          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 13.38µs
+rinha-api-1          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 14.894µs
+rinha-api-3          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 14.477µs
+rinha-api-2          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 6.642µs
+rinha-api-1          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 9.672µs
+rinha-api-3          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 10.643µs
+rinha-api-2          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 16.305µs
+rinha-api-1          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 13.104µs
+rinha-api-2          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 9.765µs
+rinha-api-3          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 7.651µs
+rinha-api-3          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 7.697µs
+rinha-api-1          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 9.792µs
+rinha-api-2          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 8.791µs
+rinha-api-3          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 9.369µs
+rinha-api-1          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 7.437µs
+rinha-api-2          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 21.065µs
+rinha-api-3          | 2025/08/10 22:33:43 Tempo gasto para copiar o body: 26.891µs
+rinha-api-1          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 12.629µs
+rinha-api-2          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 9.593µs
+rinha-api-3          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 13.096µs
+rinha-api-2          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 9.95µs
+rinha-api-1          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 10.028µs
+rinha-api-3          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 10.596µs
+rinha-api-2          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 9.109µs
+rinha-api-3          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 7.966µs
+rinha-api-1          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 8.014µs
+rinha-api-2          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 9.025µs
+rinha-api-3          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 10.132µs
+rinha-api-1          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 25.035µs
+rinha-api-2          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 9.642µs
+rinha-api-2          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 8.865µs
+rinha-api-3          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 10.474µs
+rinha-api-1          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 11.303µs
+rinha-api-2          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 20.456µs
+rinha-api-3          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 10.58µs
+rinha-api-2          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 9.188µs
+rinha-api-1          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 15.395µs
+rinha-api-3          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 27.75µs
+rinha-api-3          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 13.655µs
+rinha-api-2          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 11.562µs
+rinha-api-1          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 3.104µs
+rinha-api-2          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 10.876µs
+rinha-api-3          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 9.557µs
+rinha-api-1          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 13.204µs
+rinha-api-2          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 10.061µs
+rinha-api-3          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 9.311µs
+rinha-api-1          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 21.089µs
+rinha-api-2          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 11.011µs
+rinha-api-1          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 12.683µs
+rinha-api-3          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 10.551µs
+rinha-api-1          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 30.4µs
+rinha-api-2          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 9.508µs
+rinha-api-3          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 11.088µs
+rinha-api-2          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 11.72µs
+rinha-api-1          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 22.623µs
+rinha-api-2          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 13.734µs
+rinha-api-3          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 12.019µs
+rinha-api-1          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 12.63µs
+rinha-api-2          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 10.488µs
+rinha-api-3          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 8.531µs
+rinha-api-2          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 9.807µs
+rinha-api-1          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 9.112µs
+rinha-api-3          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 9.585µs
+rinha-api-2          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 2.352µs
+rinha-api-2          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 10.338µs
+rinha-api-1          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 11.897µs
+rinha-api-3          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 9.943µs
+rinha-api-2          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 10.589µs
+rinha-api-3          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 15.611µs
+rinha-api-3          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 27.297µs
+rinha-api-1          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 9.431µs
+rinha-api-1          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 9.084µs
+rinha-api-2          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 11.541µs
+rinha-api-3          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 17.901µs
+rinha-api-3          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 9.445µs
+rinha-api-1          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 9.137µs
+rinha-api-2          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 10.666µs
+rinha-api-3          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 5.912µs
+rinha-api-1          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 10.896µs
+rinha-api-2          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 13.026µs
+rinha-api-3          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 9.497µs
+rinha-api-1          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 11.133µs
+rinha-api-2          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 19.174µs
+rinha-api-3          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 9.526µs
+rinha-api-1          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 8.084µs
+rinha-api-2          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 10.287µs
+rinha-api-2          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 65.539µs
+rinha-api-3          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 17.412µs
+rinha-api-1          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 13.063µs
+rinha-api-2          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 10.123µs
+rinha-api-3          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 13.521µs
+rinha-api-3          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 8.787µs
+rinha-api-1          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 10.576µs
+rinha-api-2          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 7.065µs
+rinha-api-3          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 11.253µs
+rinha-api-1          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 10.943µs
+rinha-api-1          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 10.779µs
+rinha-api-2          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 10.074µs
+rinha-api-3          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 15.353µs
+rinha-api-1          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 10.603µs
+rinha-api-3          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 9.639µs
+rinha-api-1          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 11.271µs
+rinha-api-3          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 9.761µs
+rinha-api-1          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 11.426µs
+rinha-api-3          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 10.018µs
+rinha-api-3          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 11.272µs
+rinha-api-3          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 7.391µs
+rinha-api-1          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 10.426µs
+rinha-api-3          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 10.51µs
+rinha-api-1          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 14.739µs
+rinha-api-3          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 9.212µs
+rinha-api-1          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 8.573µs
+rinha-api-3          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 13.619µs
+rinha-api-1          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 9.819µs
+rinha-api-2          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 7.03µs
+rinha-api-3          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 13.576µs
+rinha-api-1          | 2025/08/10 22:33:44 Tempo gasto para copiar o body: 2.722µs
+rinha-api-1          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 8.652µs
+rinha-api-3          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 24.937µs
+rinha-api-3          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 10.957µs
+rinha-api-1          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 11.082µs
+rinha-api-3          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 9.524µs
+rinha-api-1          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 11.694µs
+rinha-api-1          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 9.829µs
+rinha-api-3          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 11.359µs
+rinha-api-1          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 11.045µs
+rinha-api-3          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 14.711µs
+rinha-api-1          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 9.702µs
+rinha-api-1          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 10.853µs
+rinha-api-3          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 12.93µs
+rinha-api-1          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 8.97µs
+rinha-api-1          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 10.943µs
+rinha-api-3          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 14.657µs
+rinha-api-3          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 8.215µs
+rinha-api-1          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 12.173µs
+rinha-api-1          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 7.792µs
+rinha-api-3          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 14.154µs
+rinha-api-1          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 11.717µs
+rinha-api-3          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 8.288µs
+rinha-api-1          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 10.146µs
+rinha-api-3          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 9.81µs
+rinha-api-3          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 37.021µs
+rinha-api-1          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 12.555µs
+rinha-api-1          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 15.516µs
+rinha-api-3          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 13.286µs
+rinha-api-1          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 9.569µs
+rinha-api-3          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 13.483µs
+rinha-api-3          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 8.993µs
+rinha-api-1          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 12.659µs
+rinha-api-3          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 11.181µs
+rinha-api-1          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 8.617µs
+rinha-api-3          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 8.28µs
+rinha-api-1          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 7.682µs
+rinha-api-1          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 11.083µs
+rinha-api-1          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 2.419µs
+rinha-api-3          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 14.778µs
+rinha-api-1          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 14.381µs
+rinha-api-1          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 9.7µs
+rinha-api-3          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 9.472µs
+rinha-api-3          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 9.621µs
+rinha-api-1          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 11.307µs
+rinha-api-3          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 9.558µs
+rinha-api-1          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 9.211µs
+rinha-api-3          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 11.937µs
+rinha-api-1          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 9.434µs
+rinha-api-1          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 9.577µs
+rinha-api-3          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 7.547µs
+rinha-api-1          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 12.183µs
+rinha-api-3          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 9.733µs
+rinha-api-2          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 12.991µs
+rinha-api-1          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 11.394µs
+rinha-api-1          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 10.135µs
+rinha-api-3          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 14.843µs
+rinha-api-1          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 10.731µs
+rinha-api-3          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 7.388µs
+rinha-api-3          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 8.207µs
+rinha-api-1          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 11.355µs
+rinha-api-1          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 9.66µs
+rinha-api-2          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 13.457µs
+rinha-api-3          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 27.391µs
+rinha-api-1          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 10.443µs
+rinha-api-1          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 16.961µs
+rinha-api-3          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 8.048µs
+rinha-api-3          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 12.894µs
+rinha-api-1          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 21.02µs
+rinha-api-1          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 15.044µs
+rinha-api-3          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 10.693µs
+rinha-api-1          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 13.337µs
+rinha-api-3          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 12.018µs
+rinha-api-3          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 9.529µs
+rinha-api-1          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 13.764µs
+rinha-api-1          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 14.03µs
+rinha-api-3          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 13.393µs
+rinha-api-3          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 12.064µs
+rinha-api-1          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 10.663µs
+rinha-api-1          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 7.906µs
+rinha-api-3          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 12.775µs
+rinha-api-1          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 13.006µs
+rinha-api-3          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 3.564µs
+rinha-api-1          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 10.984µs
+rinha-api-1          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 47.241µs
+rinha-api-2          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 8.741µs
+rinha-api-3          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 10.671µs
+rinha-api-1          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 12.48µs
+rinha-api-2          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 13.258µs
+rinha-api-3          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 9.282µs
+rinha-api-2          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 34.933µs
+rinha-api-1          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 14.057µs
+rinha-api-3          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 12.468µs
+rinha-api-2          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 11.013µs
+rinha-api-3          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 28.866µs
+rinha-api-1          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 13.949µs
+rinha-api-2          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 13.788µs
+rinha-api-3          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 14.017µs
+rinha-api-1          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 10.248µs
+rinha-api-2          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 10.638µs
+rinha-api-1          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 15.833µs
+rinha-api-3          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 11.944µs
+rinha-api-2          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 10.602µs
+rinha-api-3          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 45.281µs
+rinha-api-1          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 10.979µs
+rinha-api-1          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 9.412µs
+rinha-api-2          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 14.017µs
+rinha-api-3          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 10.669µs
+rinha-api-3          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 11.467µs
+rinha-api-1          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 11.482µs
+rinha-api-2          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 27.23µs
+rinha-api-3          | 2025/08/10 22:33:45 Tempo gasto para copiar o body: 7.412µs
+rinha-api-3          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 26.444µs
+rinha-api-1          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 26.451µs
+rinha-api-2          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 12.48µs
+rinha-api-3          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 26.138µs
+rinha-api-1          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 9.824µs
+rinha-api-3          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 7.228µs
+rinha-api-2          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 10.928µs
+rinha-api-1          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 9.632µs
+rinha-api-3          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 10.401µs
+rinha-api-1          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 8.7µs
+rinha-api-2          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 12.83µs
+rinha-api-3          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 10.397µs
+rinha-api-1          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 12.481µs
+rinha-api-2          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 12.121µs
+rinha-api-3          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 6.722µs
+rinha-api-2          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 9.758µs
+rinha-api-1          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 13.27µs
+rinha-api-2          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 11.114µs
+rinha-api-3          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 11.674µs
+rinha-api-1          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 12.624µs
+rinha-api-2          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 9.75µs
+rinha-api-3          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 8.839µs
+rinha-api-2          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 10.122µs
+rinha-api-1          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 22.416µs
+rinha-api-3          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 10.931µs
+rinha-api-1          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 4.994µs
+rinha-api-1          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 2.331µs
+rinha-api-2          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 10.602µs
+rinha-api-1          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 10.775µs
+rinha-api-3          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 9.4µs
+rinha-api-2          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 12.275µs
+rinha-api-1          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 9.672µs
+rinha-api-3          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 10.286µs
+rinha-api-1          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 10.871µs
+rinha-api-2          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 8.296µs
+rinha-api-2          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 10.367µs
+rinha-api-1          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 7.525µs
+rinha-api-3          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 12.964µs
+rinha-api-2          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 7.625µs
+rinha-api-3          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 12.472µs
+rinha-api-1          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 12.174µs
+rinha-api-2          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 20.226µs
+rinha-api-3          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 18.131µs
+rinha-api-3          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 7.282µs
+rinha-api-1          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 48.41µs
+rinha-api-2          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 13.218µs
+rinha-api-3          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 17.577µs
+rinha-api-1          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 118.515µs
+rinha-api-2          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 13.183µs
+rinha-api-3          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 12.409µs
+rinha-api-1          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 15.008µs
+rinha-api-2          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 8.215µs
+rinha-api-3          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 16.042µs
+rinha-api-2          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 23.123µs
+rinha-api-1          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 8.234µs
+rinha-api-3          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 32.973µs
+rinha-api-1          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 9.636µs
+rinha-api-2          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 13.888µs
+rinha-api-3          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 10.808µs
+rinha-api-1          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 12.22µs
+rinha-api-2          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 13.233µs
+rinha-api-2          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 11.814µs
+rinha-api-3          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 10.389µs
+rinha-api-3          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 14.665µs
+rinha-api-1          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 12.043µs
+rinha-api-2          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 12.552µs
+rinha-api-1          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 12.561µs
+rinha-api-1          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 9.174µs
+rinha-api-3          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 13.812µs
+rinha-api-2          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 20.378µs
+rinha-api-1          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 9.044µs
+rinha-api-1          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 9.562µs
+rinha-api-3          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 14.43µs
+rinha-api-2          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 10.817µs
+rinha-api-1          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 16.678µs
+rinha-api-3          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 13.424µs
+rinha-api-2          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 10.638µs
+rinha-api-1          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 7.867µs
+rinha-api-3          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 10.761µs
+rinha-api-2          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 9.847µs
+rinha-api-2          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 8.609µs
+rinha-api-1          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 13.708µs
+rinha-api-3          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 12.842µs
+rinha-api-2          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 12.101µs
+rinha-api-2          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 9.694µs
+rinha-api-1          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 9.456µs
+rinha-api-3          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 9.811µs
+rinha-api-1          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 14.992µs
+rinha-api-2          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 12.404µs
+rinha-api-3          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 7.426µs
+rinha-api-3          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 55.385µs
+rinha-api-2          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 9.71µs
+rinha-api-1          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 26.536µs
+rinha-api-1          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 13.853µs
+rinha-api-3          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 21.661µs
+rinha-api-2          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 10.252µs
+rinha-api-1          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 13.482µs
+rinha-api-3          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 14.1µs
+rinha-api-1          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 6.784µs
+rinha-api-2          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 11.756µs
+rinha-api-3          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 10.728µs
+rinha-api-2          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 10.027µs
+rinha-api-1          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 10.553µs
+rinha-api-3          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 12.813µs
+rinha-api-1          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 8.337µs
+rinha-api-2          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 10.956µs
+rinha-api-3          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 8.827µs
+rinha-api-1          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 9.421µs
+rinha-api-2          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 10.117µs
+rinha-api-3          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 22.225µs
+rinha-api-2          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 10.608µs
+rinha-api-1          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 7.674µs
+rinha-api-3          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 12.251µs
+rinha-api-1          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 13.018µs
+rinha-api-2          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 10.213µs
+rinha-api-3          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 10.96µs
+rinha-api-2          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 4.438µs
+rinha-api-2          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 2.434µs
+rinha-api-1          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 9.194µs
+rinha-api-3          | 2025/08/10 22:33:46 Tempo gasto para copiar o body: 9.464µs
+rinha-api-2          | 2025/08/10 22:33:47 Tempo gasto para copiar o body: 12.888µs
+rinha-api-3          | 2025/08/10 22:33:47 Tempo gasto para copiar o body: 8.736µs
+rinha-api-3          | 2025/08/10 22:33:47 Tempo gasto para copiar o body: 11.084µs
+rinha-api-1          | 2025/08/10 22:33:47 Tempo gasto para copiar o body: 11.045µs
+rinha-api-2          | 2025/08/10 22:33:47 Tempo gasto para copiar o body: 9.036µs
+rinha-api-3          | 2025/08/10 22:33:47 Tempo gasto para copiar o body: 6.824µs
+rinha-api-1          | 2025/08/10 22:33:47 Tempo gasto para copiar o body: 8.677µs
+rinha-api-2          | 2025/08/10 22:33:47 Tempo gasto para copiar o body: 9.972µs
+rinha-api-3          | 2025/08/10 22:33:47 Tempo gasto para copiar o body: 10.144µs
+rinha-api-1          | 2025/08/10 22:33:47 Tempo gasto para copiar o body: 8.048µs
+rinha-api-3          | 2025/08/10 22:33:47 Tempo gasto para copiar o body: 9.304µs
+rinha-api-2          | 2025/08/10 22:33:47 Tempo gasto para copiar o body: 8.755µs
+rinha-api-1          | 2025/08/10 22:33:47 Tempo gasto para copiar o body: 8.011µs
+rinha-api-3          | 2025/08/10 22:33:47 Tempo gasto para copiar o body: 10.242µs
+rinha-api-2          | 2025/08/10 22:33:47 Tempo gasto para copiar o body: 8.113µs
+rinha-api-1          | 2025/08/10 22:33:47 Tempo gasto para copiar o body: 7.133µs
+rinha-api-2          | 2025/08/10 22:33:47 Tempo gasto para copiar o body: 9.77µs
+rinha-api-3          | 2025/08/10 22:33:47 Tempo gasto para copiar o body: 9.423µs
+rinha-api-1          | 2025/08/10 22:33:47 Tempo gasto para copiar o body: 10.83µs
+rinha-api-2          | 2025/08/10 22:33:47 Tempo gasto para copiar o body: 11.912µs
+rinha-api-3          | 2025/08/10 22:33:47 Tempo gasto para copiar o body: 2.778µs
+rinha-api-2          | 2025/08/10 22:33:47 Tempo gasto para copiar o body: 6.145µs
+rinha-api-3          | 2025/08/10 22:33:47 Tempo gasto para copiar o body: 13.863µs
+rinha-api-1          | 2025/08/10 22:33:47 Tempo gasto para copiar o body: 12.18µs
+rinha-api-3          | 2025/08/10 22:33:47 Tempo gasto para copiar o body: 9.371µs
+rinha-api-2          | 2025/08/10 22:33:47 Tempo gasto para copiar o body: 8.903µs
+rinha-api-1          | 2025/08/10 22:33:47 Tempo gasto para copiar o body: 10.161µs
+rinha-api-3          | 2025/08/10 22:33:47 Tempo gasto para copiar o body: 12.966µs
+rinha-api-1          | 2025/08/10 22:33:47 Tempo gasto para copiar o body: 8.063µs
+rinha-api-2          | 2025/08/10 22:33:47 Tempo gasto para copiar o body: 9.4µs
+rinha-api-1          | 2025/08/10 22:33:47 Tempo gasto para copiar o body: 11.923µs
+rinha-api-3          | 2025/08/10 22:33:47 Tempo gasto para copiar o body: 9.437µs
+rinha-api-3          | 2025/08/10 22:33:47 Tempo gasto para copiar o body: 8.661µs
+rinha-api-2          | 2025/08/10 22:33:47 Tempo gasto para copiar o body: 11.417µs
+rinha-api-1          | 2025/08/10 22:33:47 Tempo gasto para copiar o body: 7.852µs
 log truncated at line 1000
