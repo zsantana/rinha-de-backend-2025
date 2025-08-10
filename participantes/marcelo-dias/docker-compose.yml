@@ -2,16 +2,17 @@ version: '3.9'
 
 services:
   app1: &app
-    image: maruero/rinha-de-backend-2025:v3
+    image: maruero/rinha-de-backend-2025:socket-native
     hostname: app1
     environment:
       - PROCESSOR_URL=http://payment-processor-default:8080
       - FALLBACK_PROCESSOR_URL=http://payment-processor-fallback:8080
       - OTHER_INSTANCE_URL=http://app2:8080
+      - SOCKET=/var/tmp/sockets/app1.sock
       - CONCURRENCY=2
       - WORKER_COUNT=2
-    ports:
-      - "8081:8080"
+    volumes:
+      - sockets:/var/tmp/sockets
     networks:
       - backend
       - payment-processor
@@ -28,10 +29,11 @@ services:
       - PROCESSOR_URL=http://payment-processor-default:8080
       - FALLBACK_PROCESSOR_URL=http://payment-processor-fallback:8080
       - OTHER_INSTANCE_URL=http://app1:8080
+      - SOCKET=/var/tmp/sockets/app2.sock
       - CONCURRENCY=2
       - WORKER_COUNT=2
-    ports:
-      - "8082:8080"
+    volumes:
+      - sockets:/var/tmp/sockets
     deploy:
       resources:
         limits:
@@ -45,6 +47,7 @@ services:
       - "9999:9999"
     volumes:
       - ./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
+      - sockets:/var/tmp/sockets:rw
     depends_on:
       - app1
       - app2
@@ -55,7 +58,9 @@ services:
         limits:
           cpus: "0.5"
           memory: "124MB"
-
+volumes:
+  sockets:
+  
 networks:
   backend:
     driver: bridge
