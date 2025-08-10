@@ -1,11 +1,11 @@
 services:
 
   backend01: &backend
-    image: thiagorigonatti/rinha-2025-scratch:0.0.5
+    image: thiagorigonatti/rinha-2025-scratch:0.0.6
     container_name: backend01
     environment:
-      - SOCKET_SERVER_CPU=1
-      - HTTP_CLIENT_CPU=2
+      - HTTP_CLIENT_THREADS=6
+      - SOCKET_SERVER_THREADS=6
       - SHM_PATH=/shm_array
       - SOCKET_PATH=/dev/shm/server1.sock
     networks:
@@ -15,9 +15,8 @@ services:
       resources:
         limits:
           cpus: "0.50"
-          memory: "8MB"
+          memory: "100MB"
     ipc: container:shared-memory
-    cpuset: "1,2"
     depends_on:
       - shared-memory
     ulimits:
@@ -29,12 +28,11 @@ services:
     <<: *backend
     container_name: backend02
     environment:
-      - SOCKET_SERVER_CPU=3
-      - HTTP_CLIENT_CPU=4
+      - HTTP_CLIENT_THREADS=6
+      - SOCKET_SERVER_THREADS=6
       - SHM_PATH=/shm_array
       - SOCKET_PATH=/dev/shm/server2.sock
     ipc: container:shared-memory
-    cpuset: "3,4"
 
   shared-memory:
     image: alpine:latest
@@ -47,12 +45,11 @@ services:
         limits:
           cpus: "0.01"
           memory: "8MB"
-    cpuset: "5"
 
-  nginx:
-    image: nginx:1.29-alpine
+  haproxy:
+    image: haproxy:3.3-dev6-alpine3.22
     volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
     networks:
       - net
     ports:
@@ -61,12 +58,11 @@ services:
       resources:
         limits:
           cpus: "0.49"
-          memory: "128MB"
+          memory: "100MB"
     depends_on:
       - backend01
       - backend02
     ipc: container:shared-memory
-    cpuset: "5"
     ulimits:
       nofile:
         soft: 65536
