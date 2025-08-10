@@ -1,6 +1,6 @@
 services:
   app1:
-    image: pedrohsbarbosa99/rinha-golang-2025:0.2.5
+    image: pedrohsbarbosa99/rinha-golang-2025:0.2.4
     command: ["./main"]
     volumes:
       - memsock:/tmp
@@ -21,7 +21,7 @@ services:
     restart: unless-stopped
 
   app2:
-    image: pedrohsbarbosa99/rinha-golang-2025:0.2.5
+    image: pedrohsbarbosa99/rinha-golang-2025:0.2.4
     command: ["./main"]
     volumes:
       - memsock:/tmp
