@@ -20,7 +20,7 @@ x-service-templates:
       start_period: 5s
 
   backend-application: &backend-application
-    image: apelisser/rinha-backend-2025:1.2.0
+    image: apelisser/rinha-backend-2025:1.2.1
     environment:
       - SERVER_PORT=8080
       - UNDERTOW_CUSTOMIZER=true
