@@ -1,0 +1,246 @@
+
+ backend1 Pulling 
+ backend2 Pulling 
+ 1e654d6ada44 Already exists 
+ 695bf607cc79 Already exists 
+ 9763864a6ad7 Already exists 
+ 35049e28d06f Pulling fs layer 
+ c1212fbbb2f6 Pulling fs layer 
+ d7c0cff26a26 Pulling fs layer 
+ 1e654d6ada44 Already exists 
+ 695bf607cc79 Already exists 
+ 9763864a6ad7 Already exists 
+ 35049e28d06f Pulling fs layer 
+ c1212fbbb2f6 Pulling fs layer 
+ d7c0cff26a26 Pulling fs layer 
+ c1212fbbb2f6 Downloading [======>                                            ]  1.009kB/8.392kB
+ c1212fbbb2f6 Downloading [==================================================>]  8.392kB/8.392kB
+ c1212fbbb2f6 Downloading [======>                                            ]  1.009kB/8.392kB
+ c1212fbbb2f6 Verifying Checksum 
+ c1212fbbb2f6 Verifying Checksum 
+ c1212fbbb2f6 Download complete 
+ c1212fbbb2f6 Download complete 
+ 35049e28d06f Verifying Checksum 
+ 35049e28d06f Downloading [==================================================>]     729B/729B
+ 35049e28d06f Download complete 
+ 35049e28d06f Verifying Checksum 
+ 35049e28d06f Download complete 
+ 35049e28d06f Extracting [==================================================>]     729B/729B
+ 35049e28d06f Extracting [==================================================>]     729B/729B
+ 35049e28d06f Extracting [==================================================>]     729B/729B
+ 35049e28d06f Extracting [==================================================>]     729B/729B
+ d7c0cff26a26 Downloading [>                                                  ]  4.263kB/419.2kB
+ d7c0cff26a26 Downloading [>                                                  ]  4.263kB/419.2kB
+ d7c0cff26a26 Downloading [==================================================>]  419.2kB/419.2kB
+ d7c0cff26a26 Verifying Checksum 
+ d7c0cff26a26 Download complete 
+ d7c0cff26a26 Download complete 
+ 35049e28d06f Pull complete 
+ 35049e28d06f Pull complete 
+ c1212fbbb2f6 Extracting [==================================================>]  8.392kB/8.392kB
+ c1212fbbb2f6 Extracting [==================================================>]  8.392kB/8.392kB
+ c1212fbbb2f6 Extracting [==================================================>]  8.392kB/8.392kB
+ c1212fbbb2f6 Extracting [==================================================>]  8.392kB/8.392kB
+ c1212fbbb2f6 Pull complete 
+ c1212fbbb2f6 Pull complete 
+ d7c0cff26a26 Extracting [===>                                               ]  32.77kB/419.2kB
+ d7c0cff26a26 Extracting [===>                                               ]  32.77kB/419.2kB
+ d7c0cff26a26 Extracting [==================================================>]  419.2kB/419.2kB
+ d7c0cff26a26 Extracting [==================================================>]  419.2kB/419.2kB
+ d7c0cff26a26 Extracting [==================================================>]  419.2kB/419.2kB
+ d7c0cff26a26 Extracting [==================================================>]  419.2kB/419.2kB
+ d7c0cff26a26 Pull complete 
+ d7c0cff26a26 Pull complete 
+ backend2 Pulled 
+ backend1 Pulled 
+ Network githiago-f_backend  Creating
+ Network githiago-f_backend  Created
+ Container githiago-f-storage-1  Creating
+ Container githiago-f-storage-1  Created
+ Container githiago-f-backend2-1  Creating
+ Container githiago-f-backend1-1  Creating
+ Container githiago-f-backend2-1  Created
+ Container githiago-f-backend1-1  Created
+ Container githiago-f-nginx-1  Creating
+ Container githiago-f-nginx-1  Created
+Attaching to backend1-1, backend2-1, nginx-1, storage-1
+storage-1   | INFO exec -a "java" java -XX:MaxRAMPercentage=80.0 -XX:+UseParallelGC -XX:MinHeapFreeRatio=10 -XX:MaxHeapFreeRatio=20 -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -XX:+ExitOnOutOfMemoryError -Dquarkus.http.host=0.0.0.0 -Djava.util.logging.manager=org.jboss.logmanager.LogManager -cp "." -jar /deployments/quarkus-run.jar 
+storage-1   | INFO running in /deployments
+backend2-1  | INFO exec -a "java" java -XX:MaxRAMPercentage=80.0 -XX:+UseParallelGC -XX:MinHeapFreeRatio=10 -XX:MaxHeapFreeRatio=20 -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -XX:+ExitOnOutOfMemoryError -Dquarkus.http.host=0.0.0.0 -Djava.util.logging.manager=org.jboss.logmanager.LogManager -cp "." -jar /deployments/quarkus-run.jar 
+backend2-1  | INFO running in /deployments
+backend1-1  | INFO exec -a "java" java -XX:MaxRAMPercentage=80.0 -XX:+UseParallelGC -XX:MinHeapFreeRatio=10 -XX:MaxHeapFreeRatio=20 -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -XX:+ExitOnOutOfMemoryError -Dquarkus.http.host=0.0.0.0 -Djava.util.logging.manager=org.jboss.logmanager.LogManager -cp "." -jar /deployments/quarkus-run.jar 
+backend1-1  | INFO running in /deployments
+backend2-1  | __  ____  __  _____   ___  __ ____  ______ 
+backend2-1  |  --/ __ \/ / / / _ | / _ \/ //_/ / / / __/ 
+backend2-1  |  -/ /_/ / /_/ / __ |/ , _/ ,< / /_/ /\ \   
+backend2-1  | --\___\_\____/_/ |_/_/|_/_/|_|\____/___/   
+backend2-1  | 2025-08-10 23:54:25,003 INFO  [io.quarkus] (main) payments 1.0.0-SNAPSHOT on JVM (powered by Quarkus 3.25.2) started in 4.187s. Listening on: http://0.0.0.0:8080
+backend2-1  | 2025-08-10 23:54:25,006 INFO  [io.quarkus] (main) Profile prod activated. 
+backend2-1  | 2025-08-10 23:54:25,007 INFO  [io.quarkus] (main) Installed features: [cdi, rest, rest-jackson, smallrye-context-propagation, vertx]
+backend1-1  | __  ____  __  _____   ___  __ ____  ______ 
+backend1-1  |  --/ __ \/ / / / _ | / _ \/ //_/ / / / __/ 
+backend1-1  |  -/ /_/ / /_/ / __ |/ , _/ ,< / /_/ /\ \   
+backend1-1  | --\___\_\____/_/ |_/_/|_/_/|_|\____/___/   
+backend1-1  | 2025-08-10 23:54:25,010 INFO  [io.quarkus] (main) payments 1.0.0-SNAPSHOT on JVM (powered by Quarkus 3.25.2) started in 4.172s. Listening on: http://0.0.0.0:8080
+backend1-1  | 2025-08-10 23:54:25,013 INFO  [io.quarkus] (main) Profile prod activated. 
+backend1-1  | 2025-08-10 23:54:25,014 INFO  [io.quarkus] (main) Installed features: [cdi, rest, rest-jackson, smallrye-context-propagation, vertx]
+nginx-1     | 2025/08/10 23:54:25 [error] 8#8: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.20.0.1, server: , request: "GET /payments-summary HTTP/1.1", upstream: "http://172.20.0.2:8080/payments-summary", host: "localhost:9999"
+storage-1   | __  ____  __  _____   ___  __ ____  ______ 
+storage-1   |  --/ __ \/ / / / _ | / _ \/ //_/ / / / __/ 
+storage-1   |  -/ /_/ / /_/ / __ |/ , _/ ,< / /_/ /\ \   
+storage-1   | --\___\_\____/_/ |_/_/|_/_/|_|\____/___/   
+storage-1   | 2025-08-10 23:54:28,100 INFO  [io.quarkus] (main) storage 1.0.0 on JVM (powered by Quarkus 3.25.2) started in 7.198s. Listening on: http://0.0.0.0:8080
+storage-1   | 2025-08-10 23:54:28,101 INFO  [io.quarkus] (main) Profile prod activated. 
+storage-1   | 2025-08-10 23:54:28,102 INFO  [io.quarkus] (main) Installed features: [cdi, rest, rest-jackson, smallrye-context-propagation, vertx]
+nginx-1     | 2025/08/10 23:54:38 [error] 8#8: *5 open() "/usr/local/openresty/nginx/html/purge-payments" failed (2: No such file or directory), client: 172.20.0.1, server: , request: "POST /purge-payments HTTP/1.1", host: "localhost:9999"
+nginx-1     | 2025/08/10 23:55:01 [error] 8#8: *2694 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:01 [error] 8#8: *2699 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:01 [error] 8#8: *2713 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:01 [error] 8#8: *2721 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:01 [error] 8#8: *2730 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:01 [error] 8#8: *2751 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *2816 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *2820 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *2822 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *2824 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *2826 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *2828 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *2830 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *2832 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *2834 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *2837 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *2840 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *2843 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *2846 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *2848 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *2850 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *2852 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *2854 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *2856 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *2858 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *2860 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *2862 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *2864 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *2866 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *2868 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *2870 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *2873 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *2875 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *2877 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *2880 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *2883 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *2886 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *2889 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *2892 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *2895 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *2898 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *2901 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *2904 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *2907 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *2911 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *2914 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *2917 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *2920 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *2923 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *2927 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *2931 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *2935 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *2939 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *2943 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *2946 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *2950 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *2953 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *2956 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *2959 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *2962 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *2965 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *2968 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *2971 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *2977 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *2996 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *3002 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *3008 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *3014 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *3020 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *3027 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *3033 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *3038 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *3055 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *3061 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *3063 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *3065 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *3067 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *3070 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *3073 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *3076 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *3079 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *3082 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:02 [error] 8#8: *3086 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:03 [error] 8#8: *3089 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:03 [error] 8#8: *3092 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:03 [error] 8#8: *3095 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:03 [error] 8#8: *3098 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:03 [error] 8#8: *3101 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:03 [error] 8#8: *3104 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:03 [error] 8#8: *3107 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:03 [error] 8#8: *3110 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:03 [error] 8#8: *3113 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:03 [error] 8#8: *3116 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:03 [error] 8#8: *3119 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:03 [error] 8#8: *3123 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:03 [error] 8#8: *3126 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:03 [error] 8#8: *3132 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:03 [error] 8#8: *3138 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:03 [error] 8#8: *3144 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:03 [error] 8#8: *3150 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:03 [error] 8#8: *3157 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:03 [error] 8#8: *3163 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:03 [error] 8#8: *3169 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:03 [error] 8#8: *3175 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:03 [error] 8#8: *3181 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:03 [error] 8#8: *3187 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:03 [error] 8#8: *3194 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:03 [error] 8#8: *3200 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:03 [error] 8#8: *3206 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:03 [error] 8#8: *3212 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:03 [error] 8#8: *3218 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:03 [error] 8#8: *3224 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:03 [error] 8#8: *3230 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:03 [error] 8#8: *3237 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:03 [error] 8#8: *3243 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:03 [error] 8#8: *3249 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:03 [error] 8#8: *3255 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:03 [error] 8#8: *3261 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:03 [error] 8#8: *3267 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:03 [error] 8#8: *3274 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:03 [error] 8#8: *3280 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:03 [error] 8#8: *3286 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:03 [error] 8#8: *3292 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:03 [error] 8#8: *3299 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:03 [error] 8#8: *3301 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:03 [error] 8#8: *3344 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:03 [error] 8#8: *3350 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:03 [error] 8#8: *3356 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:03 [error] 8#8: *3362 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:03 [error] 8#8: *3369 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:03 [error] 8#8: *3375 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:03 [error] 8#8: *3381 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:03 [error] 8#8: *3387 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:03 [error] 8#8: *3393 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:03 [error] 8#8: *3399 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:03 [error] 8#8: *3405 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:03 [error] 8#8: *3412 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:04 [error] 8#8: *3418 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:04 [error] 8#8: *3424 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:04 [error] 8#8: *3430 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:04 [error] 8#8: *3436 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:04 [error] 8#8: *3442 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+nginx-1     | 2025/08/10 23:55:04 [error] 8#8: *3449 lua tcp socket read timed out, context: ngx.timer, client: 172.20.0.1, server: 0.0.0.0:9999
+[Knginx-1 exited with code 0
+backend1-1  | 2025-08-10 23:55:48,909 INFO  [io.qua.thread-pool] (main) Awaiting thread pool shutdown; 16 thread(s) running
+backend2-1  | 2025-08-10 23:55:48,920 INFO  [io.qua.thread-pool] (Shutdown thread) Awaiting thread pool shutdown; 16 thread(s) running
+[Kbackend1-1 exited with code 137
+[Kbackend2-1 exited with code 137
+storage-1   | 2025-08-10 23:55:54,822 INFO  [io.quarkus] (Shutdown thread) storage stopped in 0.784s
+[Kstorage-1 exited with code 143
+log truncated at line 1000
