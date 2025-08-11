@@ -1,6 +1,6 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Mon Aug 11 01:58:00 PM -03 2025**
-313 submissões / 280 resultados / 33 submissões com erro
+Atualizado em **Mon Aug 11 02:07:46 PM -03 2025**
+315 submissões / 281 resultados / 34 submissões com erro
 
 
 | participante | p99 | bônus por desempenho (%) | multa ($) | lucro | submissão |
@@ -226,6 +226,7 @@ Atualizado em **Mon Aug 11 01:58:00 PM -03 2025**
 |	passos-matheus-python-timeout-adaptivo	|	84.07ms	|	0%	|	0	|	0	|	[passos-matheus-python-timeout-adaptivo](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/passos-matheus-python-timeout-adaptivo)
 |	passos-matheus-python-v1	|	41.73ms	|	0%	|	0	|	310228.065	|	[passos-matheus-python-v1](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/passos-matheus-python-v1)
 |	patrignani-go	|	4.85ms	|	12%	|	92105.50825	|	202632.11815	|	[patrignani-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/patrignani-go)
+|	pedrohsb-golang	|	8.65ms	|	5%	|	0	|	332559.0786	|	[pedrohsb-golang](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/pedrohsb-golang)
 |	pedrohsb-python	|	191.75ms	|	0%	|	0	|	174085.2	|	[pedrohsb-python](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/pedrohsb-python)
 |	pedropereiradev-bun	|	15.58ms	|	0%	|	0	|	309592.26	|	[pedropereiradev-bun](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/pedropereiradev-bun)
 |	pru	|	500.45ms	|	0%	|	0	|	99485.075	|	[pru](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/pru)
@@ -306,6 +307,7 @@ Atualizado em **Mon Aug 11 01:58:00 PM -03 2025**
 | lucas-moraes | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/lucas-moraes) |
 | marcelo-dias-skylake-3 | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/marcelo-dias-skylake-3) |
 | marcelo-dias-x86 | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/marcelo-dias-x86) |
+| marincor | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/marincor) |
 | mateuxlucax-elysia | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/mateuxlucax-elysia) |
 | matheusf-lucas-and-luis-java1 | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/matheusf-lucas-and-luis-java1) |
 | Maxel-Uds-quarkus-java-21 | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/Maxel-Uds-quarkus-java-21) |
