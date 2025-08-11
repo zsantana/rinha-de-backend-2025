@@ -2,9 +2,6 @@ services:
 
   backend01: &backend
     image: thiagorigonatti/rinha-2025-scratch:0.0.7
-    build:
-      context: .
-      dockerfile: scratch.Dockerfile
     container_name: backend01
     environment:
       - HTTP_CLIENT_THREADS=6
