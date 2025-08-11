@@ -2,7 +2,7 @@ x-service-templates:
   backend-payment-api: &backend-payment-api
     image: ronaldosilva95/rinha-backend-api:v1.0
     hostname: payment-backend
-    networks:
+    networks: 
       - payment-processor
       - backend-network
     environment:
@@ -10,20 +10,22 @@ x-service-templates:
       - PROCESSOR_DEFAULT_URL=http://payment-processor-default:8080
       - PROCESSOR_FALLBACK_URL=http://payment-processor-fallback:8080
       - METRICS_DATABASE_URL=payment-backend-metrics-db:5432/payment-metrics
-      - QUEUE_THREADS=15
-      - LOGGING_LEVEL_ROOT=OFF
+      - QUEUE_THREADS=10
+      - RATELIMITER_LIMIT_FOR_PERIOD=500
+      - RATELIMITER_TIMEOUT_DURATION=80ms
     depends_on:
       - metrics-db
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:8080/actuator/health" ] # Or use wget
+      interval: 30s
+      timeout: 1s
+      retries: 2
+      start_period: 20s # Time to allow the application to fully start
     deploy:
-      restart_policy:
-        condition: on-failure
-        delay: 2s
-        max_attempts: 10
-        window: 5s
       resources:
         limits:
           cpus: "0.60"
-          memory: "150MB"
+          memory: "154MB"
 services:
   nginx:
     image: nginx:1.25-alpine
@@ -42,7 +44,7 @@ services:
       resources:
         limits:
           cpus: "0.15"
-          memory: "15MB"
+          memory: "7MB"
   api-1:
     <<: *backend-payment-api
     hostname: api01
