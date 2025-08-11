@@ -22,17 +22,21 @@ services:
           memory: "60MB"
 
   backend-01: &backend
-    image: lecosas/rinha-backend-2025-java-spring-graalvm:0.1
+    image: lecosas/rinha-backend-2025-java-spring-graalvm:0.3
     container_name: backend-01
     hostname: backend-01
+    pull_policy: always
     networks:
       - backend
       - payment-processor
     environment:
-      #- SPRING_PROFILES_ACTIVE=prod
+      - SPRING_PROFILES_ACTIVE=prod
       - PAYMENT_BACKEND_MAIN_INSTANCE=true
-      - PAYMENT_BACKEND_WORKER_FALLBACK_DELAY=5
+      - PAYMENT_BACKEND_WORKER_FALLBACK_DELAY=20
       - PAYMENT_BACKEND_WORKER_THREAD_DELAY=0
+      - PAYMENT_BACKEND_WORKER_PAUSED_DELAY=50
+      - PAYMENT_BACKEND_WORKER_STOPPED_DELAY=100
+      - PAYMENT_BACKEND_WORKER_EXCEPTION_DELAY=100
       - HTTPCLIENT_CONNECTION_TIMEOUT=5000
       - HTTPCLIENT_READ_TIMEOUT=10000
       - HTTPCLIENT_SOCKET_TIMEOUT=10000
@@ -58,10 +62,13 @@ services:
     container_name: backend-02
     hostname: backend-02
     environment:
-      #- SPRING_PROFILES_ACTIVE=prod
+      - SPRING_PROFILES_ACTIVE=prod
       - PAYMENT_BACKEND_MAIN_INSTANCE=false
-      - PAYMENT_BACKEND_WORKER_FALLBACK_DELAY=5
+      - PAYMENT_BACKEND_WORKER_FALLBACK_DELAY=20
       - PAYMENT_BACKEND_WORKER_THREAD_DELAY=0
+      - PAYMENT_BACKEND_WORKER_PAUSED_DELAY=50
+      - PAYMENT_BACKEND_WORKER_STOPPED_DELAY=100
+      - PAYMENT_BACKEND_WORKER_EXCEPTION_DELAY=100
       - HTTPCLIENT_CONNECTION_TIMEOUT=5000
       - HTTPCLIENT_READ_TIMEOUT=10000
       - HTTPCLIENT_SOCKET_TIMEOUT=10000
