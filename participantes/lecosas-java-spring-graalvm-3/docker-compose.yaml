@@ -1,7 +1,7 @@
 services:
   openresty:
     image: openresty/openresty:alpine
-    container_name: graalvm-2-openresty
+    container_name: graalvm-3-openresty
     ports:
       - "9999:9999"
     volumes:
@@ -23,7 +23,7 @@ services:
 
   backend-01: &backend
     image: lecosas/rinha-backend-2025-java-spring-graalvm:0.5
-    container_name: graalvm-2-backend-01
+    container_name: graalvm-3-backend-01
     hostname: backend-01
     pull_policy: always
     networks:
@@ -65,7 +65,7 @@ services:
 
   backend-02:
     <<: *backend
-    container_name: graalvm-2-backend-02
+    container_name: graalvm-3-backend-02
     hostname: backend-02
     environment:
       - SPRING_PROFILES_ACTIVE=prod
@@ -95,7 +95,7 @@ services:
 
   redis:
     image: redis:7-alpine
-    container_name: graalvm-2-redis
+    container_name: graalvm-3-redis
     command: redis-server --save "" --appendonly no --maxmemory 30Mb --maxmemory-policy allkeys-lru --tcp-keepalive 60 --timeout 0
     networks:
       - backend
