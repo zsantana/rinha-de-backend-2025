@@ -21,6 +21,9 @@ local function async_post(premature, rawBody)
     httpc:request_uri(backend, {
         method = "POST",
         body = rawBody,
+        headers = {
+            ["Content-Type"] = "application/json",
+        },
         keepalive = true,
         keepalive_timeout = 60000,
         keepalive_pool = 1000,
