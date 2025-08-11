@@ -2,7 +2,7 @@ version: '3.9'
 
 services:
   app1: &app
-    image: maruero/rinha-de-backend-2025:socket-native-local-3
+    image: maruero/rinha-de-backend-2025:socket-skylake-local-2
     hostname: app1
     environment:
       - PROCESSOR_URL=http://payment-processor-default:8080
@@ -60,7 +60,7 @@ services:
           memory: "124MB"
 volumes:
   sockets:
-
+  
 networks:
   backend:
     driver: bridge
