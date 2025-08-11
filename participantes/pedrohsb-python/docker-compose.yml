@@ -9,7 +9,7 @@ services:
       resources:
         limits:
           cpus: "0.7"
-          memory: "150M"
+          memory: "100M"
 
   api2:
     image: pedrohsbarbosa99/rinha-fastapi-2025:0.2.1
@@ -21,7 +21,7 @@ services:
       resources:
         limits:
           cpus: "0.7"
-          memory: "150M"
+          memory: "100M"
 
   nginx:
     image: nginx:alpine
