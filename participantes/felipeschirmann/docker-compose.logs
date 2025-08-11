@@ -1,0 +1,263 @@
+
+ Container felipeschirmann-rinha  Creating
+ Container felipeschirmann-rinha  Created
+Attaching to felipeschirmann-rinha
+felipeschirmann-rinha  |   .   ____          _            __ _ _
+felipeschirmann-rinha  |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+felipeschirmann-rinha  | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+felipeschirmann-rinha  |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+felipeschirmann-rinha  |   '  |____| .__|_| |_|_| |_\__, | / / / /
+felipeschirmann-rinha  |  =========|_|==============|___/=/_/_/_/
+felipeschirmann-rinha  | 
+felipeschirmann-rinha  |  :: Spring Boot ::                (v3.3.0)
+felipeschirmann-rinha  | 
+felipeschirmann-rinha  | 21:33:16.658 [main] INFO  b.d.f.rinha.Application - Starting AOT-processed Application using Java 21.0.7 with PID 1 (/app/rinha-reativa started by nonroot in /app)
+felipeschirmann-rinha  | 21:33:16.658 [main] INFO  b.d.f.rinha.Application - No active profile set, falling back to 1 default profile: "default"
+felipeschirmann-rinha  | 21:33:16.732 [main] INFO  b.d.f.r.service.MemoryMonitorService - Iniciando monitor de memória... Verificação a cada 5 segundos.
+felipeschirmann-rinha  | 21:33:16.736 [main] INFO  b.d.f.r.s.PaymentStorageService - Fila de pagamentos configurada com tamanho máximo de 50000
+felipeschirmann-rinha  | 21:33:16.805 [main] INFO  b.d.f.r.s.PaymentProcessorService - Iniciando processador de pagamentos com inteligência de fallback...
+felipeschirmann-rinha  | 21:33:16.807 [main] INFO  b.d.f.r.s.PaymentProcessorService - Iniciando pool de consumidores com 0 threads.
+felipeschirmann-rinha  | 21:33:16.813 [pool-7-thread-1] INFO  b.d.f.r.s.PaymentProcessorService - Health Check: Default voltou a ficar SAUDÁVEL. minResponseTime: 0ms
+felipeschirmann-rinha  | 21:33:16.813 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+felipeschirmann-rinha  | 21:33:17.030 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+felipeschirmann-rinha  | 21:33:17.308 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 9999 (http)
+felipeschirmann-rinha  | 21:33:17.308 [main] INFO  b.d.f.rinha.Application - Started Application in 0.663 seconds (process running for 0.667)
+felipeschirmann-rinha  | 21:33:17.309 [main] INFO  b.d.f.r.config.ConfigurationBanner - 
+felipeschirmann-rinha  | 
+felipeschirmann-rinha  | 
+felipeschirmann-rinha  | ╔═════════════════════════════════════════════════════════════════════════════╗
+felipeschirmann-rinha  | ║                 Configurações Ativas da Aplicação Rinha                     ║
+felipeschirmann-rinha  | ╠═════════════════════════════════════════════════════════════════════════════╣
+felipeschirmann-rinha  | ║ Spring Profiles Ativos : []                                                    ║
+felipeschirmann-rinha  | ╠═══════════════════════════╦═════════════════════════════════════════════════╣
+felipeschirmann-rinha  | ║ Parâmetro                 ║ Valor                                           ║
+felipeschirmann-rinha  | ╠═══════════════════════════╬═════════════════════════════════════════════════╣
+felipeschirmann-rinha  | ║ Fila (Queue)              ║                                                 ║
+felipeschirmann-rinha  | ║   Tamanho Máximo          ║ 50000                                           ║
+felipeschirmann-rinha  | ╠═══════════════════════════╬═════════════════════════════════════════════════╣
+felipeschirmann-rinha  | ║ Processador (Processor)   ║                                                 ║
+felipeschirmann-rinha  | ║   Tolerância Fallback     ║ 600 ms                                          ║
+felipeschirmann-rinha  | ╠═══════════════════════════╬═════════════════════════════════════════════════╣
+felipeschirmann-rinha  | ║ Agendador (Scheduler)     ║                                                 ║
+felipeschirmann-rinha  | ║   Atraso Inicial Consumidor ║ 0 ms                                            ║
+felipeschirmann-rinha  | ║   Período Fixo Consumidor   ║ 0 ms                                            ║
+felipeschirmann-rinha  | ╠═══════════════════════════╬═════════════════════════════════════════════════╣
+felipeschirmann-rinha  | ║ Cliente Web (WebClient)   ║                                                 ║
+felipeschirmann-rinha  | ║   Timeout de Conexão      ║ 2000 ms                                         ║
+felipeschirmann-rinha  | ║   Timeout de Resposta     ║ 10 s                                            ║
+felipeschirmann-rinha  | ╠═══════════════════════════╬═════════════════════════════════════════════════╣
+felipeschirmann-rinha  | ║ Monitor de Memória        ║                                                 ║
+felipeschirmann-rinha  | ║   Limite para Aviso       ║ 50 MB                                           ║
+felipeschirmann-rinha  | ║   Atraso Inicial          ║ 5 s                                             ║
+felipeschirmann-rinha  | ║   Período                 ║ 5 s                                             ║
+felipeschirmann-rinha  | ╚═══════════════════════════╩═════════════════════════════════════════════════╝
+felipeschirmann-rinha  | 
+felipeschirmann-rinha  | 21:33:17.809 [pool-7-thread-1] INFO  b.d.f.r.s.PaymentProcessorService - Health Check: Fallback voltou a ficar SAUDÁVEL. minResponseTime: 0ms
+felipeschirmann-rinha  | 21:33:21.732 [pool-6-thread-1] WARN  b.d.f.r.service.MemoryMonitorService - AVISO DE MEMÓRIA: Uso de Heap ultrapassou 100 MB. Uso atual: 126 MB
+felipeschirmann-rinha  | 21:33:26.674 [reactor-http-epoll-3] WARN  b.d.f.rinha.web.PaymentHandler - Recebida requisição para PURGAR todos os dados de pagamento.
+felipeschirmann-rinha  | 21:33:26.674 [reactor-http-epoll-3] INFO  b.d.f.r.s.PaymentStorageService - Fila de pagamentos pendentes foi limpa.
+felipeschirmann-rinha  | 21:33:26.674 [reactor-http-epoll-3] INFO  b.d.f.r.s.PaymentSummaryService - Histórico de pagamentos processados foi limpo.
+felipeschirmann-rinha  | 21:33:46.709 [virtual-58] ERROR b.d.f.r.s.PaymentProcessorService - Erro GENÉRICO INESPERADO ao processar 9d1a6392-8052-4659-810b-1817db9f805f. Verificando consistência...
+felipeschirmann-rinha  | org.springframework.web.client.HttpServerErrorException$InternalServerError: 500 Internal Server Error: [no body]
+felipeschirmann-rinha  | 	at org.springframework.web.client.StatusHandler.lambda$defaultHandler$3(StatusHandler.java:89)
+felipeschirmann-rinha  | 	at org.springframework.web.client.StatusHandler.handle(StatusHandler.java:146)
+felipeschirmann-rinha  | 	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.applyStatusHandlers(DefaultRestClient.java:701)
+felipeschirmann-rinha  | 	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toBodilessEntity(DefaultRestClient.java:672)
+felipeschirmann-rinha  | 	at br.dev.felipeschirmann.rinha.service.PaymentProcessorService.lambda$processPaymentSynchronously$0(PaymentProcessorService.java:152)
+felipeschirmann-rinha  | 	at io.github.resilience4j.circuitbreaker.CircuitBreaker.lambda$decorateRunnable$8(CircuitBreaker.java:269)
+felipeschirmann-rinha  | 	at io.github.resilience4j.circuitbreaker.CircuitBreaker.executeRunnable(CircuitBreaker.java:694)
+felipeschirmann-rinha  | 	at br.dev.felipeschirmann.rinha.service.PaymentProcessorService.processPaymentSynchronously(PaymentProcessorService.java:147)
+felipeschirmann-rinha  | 	at br.dev.felipeschirmann.rinha.service.PaymentProcessorService.consumeQueueInLoop(PaymentProcessorService.java:105)
+felipeschirmann-rinha  | 	at java.base@21.0.7/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+felipeschirmann-rinha  | 	at java.base@21.0.7/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+felipeschirmann-rinha  | 	at java.base@21.0.7/java.lang.Thread.runWith(Thread.java:1596)
+felipeschirmann-rinha  | 	at java.base@21.0.7/java.lang.VirtualThread.run(VirtualThread.java:329)
+felipeschirmann-rinha  | 	at java.base@21.0.7/java.lang.VirtualThread$VThreadContinuation$1.run(VirtualThread.java:209)
+felipeschirmann-rinha  | 21:33:46.811 [virtual-58] ERROR b.d.f.r.s.PaymentProcessorService - Erro GENÉRICO INESPERADO ao processar 0493c7c0-9e8d-4385-b3eb-c78cd78eb2e7. Verificando consistência...
+felipeschirmann-rinha  | org.springframework.web.client.HttpServerErrorException$InternalServerError: 500 Internal Server Error: [no body]
+felipeschirmann-rinha  | 	at org.springframework.web.client.StatusHandler.lambda$defaultHandler$3(StatusHandler.java:89)
+felipeschirmann-rinha  | 	at org.springframework.web.client.StatusHandler.handle(StatusHandler.java:146)
+felipeschirmann-rinha  | 	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.applyStatusHandlers(DefaultRestClient.java:701)
+felipeschirmann-rinha  | 	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toBodilessEntity(DefaultRestClient.java:672)
+felipeschirmann-rinha  | 	at br.dev.felipeschirmann.rinha.service.PaymentProcessorService.lambda$processPaymentSynchronously$0(PaymentProcessorService.java:152)
+felipeschirmann-rinha  | 	at io.github.resilience4j.circuitbreaker.CircuitBreaker.lambda$decorateRunnable$8(CircuitBreaker.java:269)
+felipeschirmann-rinha  | 	at io.github.resilience4j.circuitbreaker.CircuitBreaker.executeRunnable(CircuitBreaker.java:694)
+felipeschirmann-rinha  | 	at br.dev.felipeschirmann.rinha.service.PaymentProcessorService.processPaymentSynchronously(PaymentProcessorService.java:147)
+felipeschirmann-rinha  | 	at br.dev.felipeschirmann.rinha.service.PaymentProcessorService.consumeQueueInLoop(PaymentProcessorService.java:105)
+felipeschirmann-rinha  | 	at java.base@21.0.7/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+felipeschirmann-rinha  | 	at java.base@21.0.7/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+felipeschirmann-rinha  | 	at java.base@21.0.7/java.lang.Thread.runWith(Thread.java:1596)
+felipeschirmann-rinha  | 	at java.base@21.0.7/java.lang.VirtualThread.run(VirtualThread.java:329)
+felipeschirmann-rinha  | 	at java.base@21.0.7/java.lang.VirtualThread$VThreadContinuation$1.run(VirtualThread.java:209)
+felipeschirmann-rinha  | 21:33:46.913 [virtual-58] ERROR b.d.f.r.s.PaymentProcessorService - Erro GENÉRICO INESPERADO ao processar 390ca9b9-ee79-497d-a925-89fe71c2eb50. Verificando consistência...
+felipeschirmann-rinha  | org.springframework.web.client.HttpServerErrorException$InternalServerError: 500 Internal Server Error: [no body]
+felipeschirmann-rinha  | 	at org.springframework.web.client.StatusHandler.lambda$defaultHandler$3(StatusHandler.java:89)
+felipeschirmann-rinha  | 	at org.springframework.web.client.StatusHandler.handle(StatusHandler.java:146)
+felipeschirmann-rinha  | 	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.applyStatusHandlers(DefaultRestClient.java:701)
+felipeschirmann-rinha  | 	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toBodilessEntity(DefaultRestClient.java:672)
+felipeschirmann-rinha  | 	at br.dev.felipeschirmann.rinha.service.PaymentProcessorService.lambda$processPaymentSynchronously$0(PaymentProcessorService.java:152)
+felipeschirmann-rinha  | 	at io.github.resilience4j.circuitbreaker.CircuitBreaker.lambda$decorateRunnable$8(CircuitBreaker.java:269)
+felipeschirmann-rinha  | 	at io.github.resilience4j.circuitbreaker.CircuitBreaker.executeRunnable(CircuitBreaker.java:694)
+felipeschirmann-rinha  | 	at br.dev.felipeschirmann.rinha.service.PaymentProcessorService.processPaymentSynchronously(PaymentProcessorService.java:147)
+felipeschirmann-rinha  | 	at br.dev.felipeschirmann.rinha.service.PaymentProcessorService.consumeQueueInLoop(PaymentProcessorService.java:105)
+felipeschirmann-rinha  | 	at java.base@21.0.7/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+felipeschirmann-rinha  | 	at java.base@21.0.7/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+felipeschirmann-rinha  | 	at java.base@21.0.7/java.lang.Thread.runWith(Thread.java:1596)
+felipeschirmann-rinha  | 	at java.base@21.0.7/java.lang.VirtualThread.run(VirtualThread.java:329)
+felipeschirmann-rinha  | 	at java.base@21.0.7/java.lang.VirtualThread$VThreadContinuation$1.run(VirtualThread.java:209)
+felipeschirmann-rinha  | 21:33:47.016 [virtual-58] ERROR b.d.f.r.s.PaymentProcessorService - Erro GENÉRICO INESPERADO ao processar c47f2a25-4a25-486d-b3e2-6771959a4ee2. Verificando consistência...
+felipeschirmann-rinha  | org.springframework.web.client.HttpServerErrorException$InternalServerError: 500 Internal Server Error: [no body]
+felipeschirmann-rinha  | 	at org.springframework.web.client.StatusHandler.lambda$defaultHandler$3(StatusHandler.java:89)
+felipeschirmann-rinha  | 	at org.springframework.web.client.StatusHandler.handle(StatusHandler.java:146)
+felipeschirmann-rinha  | 	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.applyStatusHandlers(DefaultRestClient.java:701)
+felipeschirmann-rinha  | 	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toBodilessEntity(DefaultRestClient.java:672)
+felipeschirmann-rinha  | 	at br.dev.felipeschirmann.rinha.service.PaymentProcessorService.lambda$processPaymentSynchronously$0(PaymentProcessorService.java:152)
+felipeschirmann-rinha  | 	at io.github.resilience4j.circuitbreaker.CircuitBreaker.lambda$decorateRunnable$8(CircuitBreaker.java:269)
+felipeschirmann-rinha  | 	at io.github.resilience4j.circuitbreaker.CircuitBreaker.executeRunnable(CircuitBreaker.java:694)
+felipeschirmann-rinha  | 	at br.dev.felipeschirmann.rinha.service.PaymentProcessorService.processPaymentSynchronously(PaymentProcessorService.java:147)
+felipeschirmann-rinha  | 	at br.dev.felipeschirmann.rinha.service.PaymentProcessorService.consumeQueueInLoop(PaymentProcessorService.java:105)
+felipeschirmann-rinha  | 	at java.base@21.0.7/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+felipeschirmann-rinha  | 	at java.base@21.0.7/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+felipeschirmann-rinha  | 	at java.base@21.0.7/java.lang.Thread.runWith(Thread.java:1596)
+felipeschirmann-rinha  | 	at java.base@21.0.7/java.lang.VirtualThread.run(VirtualThread.java:329)
+felipeschirmann-rinha  | 	at java.base@21.0.7/java.lang.VirtualThread$VThreadContinuation$1.run(VirtualThread.java:209)
+felipeschirmann-rinha  | 21:33:47.118 [virtual-58] ERROR b.d.f.r.s.PaymentProcessorService - Erro GENÉRICO INESPERADO ao processar b4ee4066-f540-48ab-9935-9e72a144f407. Verificando consistência...
+felipeschirmann-rinha  | org.springframework.web.client.HttpServerErrorException$InternalServerError: 500 Internal Server Error: [no body]
+felipeschirmann-rinha  | 	at org.springframework.web.client.StatusHandler.lambda$defaultHandler$3(StatusHandler.java:89)
+felipeschirmann-rinha  | 	at org.springframework.web.client.StatusHandler.handle(StatusHandler.java:146)
+felipeschirmann-rinha  | 	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.applyStatusHandlers(DefaultRestClient.java:701)
+felipeschirmann-rinha  | 	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toBodilessEntity(DefaultRestClient.java:672)
+felipeschirmann-rinha  | 	at br.dev.felipeschirmann.rinha.service.PaymentProcessorService.lambda$processPaymentSynchronously$0(PaymentProcessorService.java:152)
+felipeschirmann-rinha  | 	at io.github.resilience4j.circuitbreaker.CircuitBreaker.lambda$decorateRunnable$8(CircuitBreaker.java:269)
+felipeschirmann-rinha  | 	at io.github.resilience4j.circuitbreaker.CircuitBreaker.executeRunnable(CircuitBreaker.java:694)
+felipeschirmann-rinha  | 	at br.dev.felipeschirmann.rinha.service.PaymentProcessorService.processPaymentSynchronously(PaymentProcessorService.java:147)
+felipeschirmann-rinha  | 	at br.dev.felipeschirmann.rinha.service.PaymentProcessorService.consumeQueueInLoop(PaymentProcessorService.java:105)
+felipeschirmann-rinha  | 	at java.base@21.0.7/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+felipeschirmann-rinha  | 	at java.base@21.0.7/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+felipeschirmann-rinha  | 	at java.base@21.0.7/java.lang.Thread.runWith(Thread.java:1596)
+felipeschirmann-rinha  | 	at java.base@21.0.7/java.lang.VirtualThread.run(VirtualThread.java:329)
+felipeschirmann-rinha  | 	at java.base@21.0.7/java.lang.VirtualThread$VThreadContinuation$1.run(VirtualThread.java:209)
+felipeschirmann-rinha  | 21:33:47.164 [pool-7-thread-1] WARN  b.d.f.r.s.PaymentProcessorService - Health Check: Default agora está COM FALHAS.
+felipeschirmann-rinha  | 21:33:47.220 [virtual-58] ERROR b.d.f.r.s.PaymentProcessorService - Erro GENÉRICO INESPERADO ao processar bead3c0a-9c41-4e7c-b6bd-4c1e2a7be7f7. Verificando consistência...
+felipeschirmann-rinha  | org.springframework.web.client.HttpServerErrorException$InternalServerError: 500 Internal Server Error: [no body]
+felipeschirmann-rinha  | 	at org.springframework.web.client.StatusHandler.lambda$defaultHandler$3(StatusHandler.java:89)
+felipeschirmann-rinha  | 	at org.springframework.web.client.StatusHandler.handle(StatusHandler.java:146)
+felipeschirmann-rinha  | 	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.applyStatusHandlers(DefaultRestClient.java:701)
+felipeschirmann-rinha  | 	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toBodilessEntity(DefaultRestClient.java:672)
+felipeschirmann-rinha  | 	at br.dev.felipeschirmann.rinha.service.PaymentProcessorService.lambda$processPaymentSynchronously$0(PaymentProcessorService.java:152)
+felipeschirmann-rinha  | 	at io.github.resilience4j.circuitbreaker.CircuitBreaker.lambda$decorateRunnable$8(CircuitBreaker.java:269)
+felipeschirmann-rinha  | 	at io.github.resilience4j.circuitbreaker.CircuitBreaker.executeRunnable(CircuitBreaker.java:694)
+felipeschirmann-rinha  | 	at br.dev.felipeschirmann.rinha.service.PaymentProcessorService.processPaymentSynchronously(PaymentProcessorService.java:147)
+felipeschirmann-rinha  | 	at br.dev.felipeschirmann.rinha.service.PaymentProcessorService.consumeQueueInLoop(PaymentProcessorService.java:105)
+felipeschirmann-rinha  | 	at java.base@21.0.7/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+felipeschirmann-rinha  | 	at java.base@21.0.7/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+felipeschirmann-rinha  | 	at java.base@21.0.7/java.lang.Thread.runWith(Thread.java:1596)
+felipeschirmann-rinha  | 	at java.base@21.0.7/java.lang.VirtualThread.run(VirtualThread.java:329)
+felipeschirmann-rinha  | 	at java.base@21.0.7/java.lang.VirtualThread$VThreadContinuation$1.run(VirtualThread.java:209)
+felipeschirmann-rinha  | 21:33:47.307 [pool-8-thread-1] WARN  b.d.f.r.s.PaymentProcessorService - ESTRATÉGIA: Processador DEFAULT offline. Roteando 100% do tráfego para FALLBACK.
+felipeschirmann-rinha  | 21:33:47.322 [virtual-58] ERROR b.d.f.r.s.PaymentProcessorService - Erro GENÉRICO INESPERADO ao processar 4d42b064-1bea-46da-8b12-2f8c086241a4. Verificando consistência...
+felipeschirmann-rinha  | org.springframework.web.client.HttpServerErrorException$InternalServerError: 500 Internal Server Error: [no body]
+felipeschirmann-rinha  | 	at org.springframework.web.client.StatusHandler.lambda$defaultHandler$3(StatusHandler.java:89)
+felipeschirmann-rinha  | 	at org.springframework.web.client.StatusHandler.handle(StatusHandler.java:146)
+felipeschirmann-rinha  | 	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.applyStatusHandlers(DefaultRestClient.java:701)
+felipeschirmann-rinha  | 	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toBodilessEntity(DefaultRestClient.java:672)
+felipeschirmann-rinha  | 	at br.dev.felipeschirmann.rinha.service.PaymentProcessorService.lambda$processPaymentSynchronously$0(PaymentProcessorService.java:152)
+felipeschirmann-rinha  | 	at io.github.resilience4j.circuitbreaker.CircuitBreaker.lambda$decorateRunnable$8(CircuitBreaker.java:269)
+felipeschirmann-rinha  | 	at io.github.resilience4j.circuitbreaker.CircuitBreaker.executeRunnable(CircuitBreaker.java:694)
+felipeschirmann-rinha  | 	at br.dev.felipeschirmann.rinha.service.PaymentProcessorService.processPaymentSynchronously(PaymentProcessorService.java:147)
+felipeschirmann-rinha  | 	at br.dev.felipeschirmann.rinha.service.PaymentProcessorService.consumeQueueInLoop(PaymentProcessorService.java:105)
+felipeschirmann-rinha  | 	at java.base@21.0.7/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+felipeschirmann-rinha  | 	at java.base@21.0.7/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+felipeschirmann-rinha  | 	at java.base@21.0.7/java.lang.Thread.runWith(Thread.java:1596)
+felipeschirmann-rinha  | 	at java.base@21.0.7/java.lang.VirtualThread.run(VirtualThread.java:329)
+felipeschirmann-rinha  | 	at java.base@21.0.7/java.lang.VirtualThread$VThreadContinuation$1.run(VirtualThread.java:209)
+felipeschirmann-rinha  | 21:33:57.678 [virtual-58] ERROR b.d.f.r.s.PaymentProcessorService - Erro GENÉRICO INESPERADO ao processar 6bb7232e-80a7-4eaa-9a68-f22ad0038e32. Verificando consistência...
+felipeschirmann-rinha  | org.springframework.web.client.HttpServerErrorException$InternalServerError: 500 Internal Server Error: [no body]
+felipeschirmann-rinha  | 	at org.springframework.web.client.StatusHandler.lambda$defaultHandler$3(StatusHandler.java:89)
+felipeschirmann-rinha  | 	at org.springframework.web.client.StatusHandler.handle(StatusHandler.java:146)
+felipeschirmann-rinha  | 	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.applyStatusHandlers(DefaultRestClient.java:701)
+felipeschirmann-rinha  | 	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toBodilessEntity(DefaultRestClient.java:672)
+felipeschirmann-rinha  | 	at br.dev.felipeschirmann.rinha.service.PaymentProcessorService.lambda$processPaymentSynchronously$0(PaymentProcessorService.java:152)
+felipeschirmann-rinha  | 	at io.github.resilience4j.circuitbreaker.CircuitBreaker.lambda$decorateRunnable$8(CircuitBreaker.java:269)
+felipeschirmann-rinha  | 	at io.github.resilience4j.circuitbreaker.CircuitBreaker.executeRunnable(CircuitBreaker.java:694)
+felipeschirmann-rinha  | 	at br.dev.felipeschirmann.rinha.service.PaymentProcessorService.processPaymentSynchronously(PaymentProcessorService.java:147)
+felipeschirmann-rinha  | 	at br.dev.felipeschirmann.rinha.service.PaymentProcessorService.consumeQueueInLoop(PaymentProcessorService.java:105)
+felipeschirmann-rinha  | 	at java.base@21.0.7/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+felipeschirmann-rinha  | 	at java.base@21.0.7/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+felipeschirmann-rinha  | 	at java.base@21.0.7/java.lang.Thread.runWith(Thread.java:1596)
+felipeschirmann-rinha  | 	at java.base@21.0.7/java.lang.VirtualThread.run(VirtualThread.java:329)
+felipeschirmann-rinha  | 	at java.base@21.0.7/java.lang.VirtualThread$VThreadContinuation$1.run(VirtualThread.java:209)
+felipeschirmann-rinha  | 21:33:58.197 [pool-7-thread-1] WARN  b.d.f.r.s.PaymentProcessorService - Health Check: Fallback agora está COM FALHAS.
+felipeschirmann-rinha  | 21:33:58.307 [pool-8-thread-1] ERROR b.d.f.r.s.PaymentProcessorService - ESTRATÉGIA: AMBOS OS PROCESSADORES OFFLINE. Tentando voltar para o DEFAULT.
+felipeschirmann-rinha  | 21:33:58.681 [virtual-58] ERROR b.d.f.r.s.PaymentProcessorService - Erro GENÉRICO INESPERADO ao processar bb988381-068d-4f7b-b1e1-a2f38d7d6e1f. Verificando consistência...
+felipeschirmann-rinha  | org.springframework.web.client.HttpServerErrorException$InternalServerError: 500 Internal Server Error: [no body]
+felipeschirmann-rinha  | 	at org.springframework.web.client.StatusHandler.lambda$defaultHandler$3(StatusHandler.java:89)
+felipeschirmann-rinha  | 	at org.springframework.web.client.StatusHandler.handle(StatusHandler.java:146)
+felipeschirmann-rinha  | 	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.applyStatusHandlers(DefaultRestClient.java:701)
+felipeschirmann-rinha  | 	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toBodilessEntity(DefaultRestClient.java:672)
+felipeschirmann-rinha  | 	at br.dev.felipeschirmann.rinha.service.PaymentProcessorService.lambda$processPaymentSynchronously$0(PaymentProcessorService.java:152)
+felipeschirmann-rinha  | 	at io.github.resilience4j.circuitbreaker.CircuitBreaker.lambda$decorateRunnable$8(CircuitBreaker.java:269)
+felipeschirmann-rinha  | 	at io.github.resilience4j.circuitbreaker.CircuitBreaker.executeRunnable(CircuitBreaker.java:694)
+felipeschirmann-rinha  | 	at br.dev.felipeschirmann.rinha.service.PaymentProcessorService.processPaymentSynchronously(PaymentProcessorService.java:147)
+felipeschirmann-rinha  | 	at br.dev.felipeschirmann.rinha.service.PaymentProcessorService.consumeQueueInLoop(PaymentProcessorService.java:105)
+felipeschirmann-rinha  | 	at java.base@21.0.7/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+felipeschirmann-rinha  | 	at java.base@21.0.7/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+felipeschirmann-rinha  | 	at java.base@21.0.7/java.lang.Thread.runWith(Thread.java:1596)
+felipeschirmann-rinha  | 	at java.base@21.0.7/java.lang.VirtualThread.run(VirtualThread.java:329)
+felipeschirmann-rinha  | 	at java.base@21.0.7/java.lang.VirtualThread$VThreadContinuation$1.run(VirtualThread.java:209)
+felipeschirmann-rinha  | 21:34:00.684 [virtual-58] ERROR b.d.f.r.s.PaymentProcessorService - Erro GENÉRICO INESPERADO ao processar 06f9d9ac-1baf-46fb-85fd-3ae9a0a62e23. Verificando consistência...
+felipeschirmann-rinha  | org.springframework.web.client.HttpServerErrorException$InternalServerError: 500 Internal Server Error: [no body]
+felipeschirmann-rinha  | 	at org.springframework.web.client.StatusHandler.lambda$defaultHandler$3(StatusHandler.java:89)
+felipeschirmann-rinha  | 	at org.springframework.web.client.StatusHandler.handle(StatusHandler.java:146)
+felipeschirmann-rinha  | 	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.applyStatusHandlers(DefaultRestClient.java:701)
+felipeschirmann-rinha  | 	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toBodilessEntity(DefaultRestClient.java:672)
+felipeschirmann-rinha  | 	at br.dev.felipeschirmann.rinha.service.PaymentProcessorService.lambda$processPaymentSynchronously$0(PaymentProcessorService.java:152)
+felipeschirmann-rinha  | 	at io.github.resilience4j.circuitbreaker.CircuitBreaker.lambda$decorateRunnable$8(CircuitBreaker.java:269)
+felipeschirmann-rinha  | 	at io.github.resilience4j.circuitbreaker.CircuitBreaker.executeRunnable(CircuitBreaker.java:694)
+felipeschirmann-rinha  | 	at br.dev.felipeschirmann.rinha.service.PaymentProcessorService.processPaymentSynchronously(PaymentProcessorService.java:147)
+felipeschirmann-rinha  | 	at br.dev.felipeschirmann.rinha.service.PaymentProcessorService.consumeQueueInLoop(PaymentProcessorService.java:105)
+felipeschirmann-rinha  | 	at java.base@21.0.7/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+felipeschirmann-rinha  | 	at java.base@21.0.7/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+felipeschirmann-rinha  | 	at java.base@21.0.7/java.lang.Thread.runWith(Thread.java:1596)
+felipeschirmann-rinha  | 	at java.base@21.0.7/java.lang.VirtualThread.run(VirtualThread.java:329)
+felipeschirmann-rinha  | 	at java.base@21.0.7/java.lang.VirtualThread$VThreadContinuation$1.run(VirtualThread.java:209)
+felipeschirmann-rinha  | 21:34:02.688 [virtual-58] ERROR b.d.f.r.s.PaymentProcessorService - Erro GENÉRICO INESPERADO ao processar bb96f0e8-5f84-4b75-aa50-86302da70a1d. Verificando consistência...
+felipeschirmann-rinha  | org.springframework.web.client.HttpServerErrorException$InternalServerError: 500 Internal Server Error: [no body]
+felipeschirmann-rinha  | 	at org.springframework.web.client.StatusHandler.lambda$defaultHandler$3(StatusHandler.java:89)
+felipeschirmann-rinha  | 	at org.springframework.web.client.StatusHandler.handle(StatusHandler.java:146)
+felipeschirmann-rinha  | 	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.applyStatusHandlers(DefaultRestClient.java:701)
+felipeschirmann-rinha  | 	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toBodilessEntity(DefaultRestClient.java:672)
+felipeschirmann-rinha  | 	at br.dev.felipeschirmann.rinha.service.PaymentProcessorService.lambda$processPaymentSynchronously$0(PaymentProcessorService.java:152)
+felipeschirmann-rinha  | 	at io.github.resilience4j.circuitbreaker.CircuitBreaker.lambda$decorateRunnable$8(CircuitBreaker.java:269)
+felipeschirmann-rinha  | 	at io.github.resilience4j.circuitbreaker.CircuitBreaker.executeRunnable(CircuitBreaker.java:694)
+felipeschirmann-rinha  | 	at br.dev.felipeschirmann.rinha.service.PaymentProcessorService.processPaymentSynchronously(PaymentProcessorService.java:147)
+felipeschirmann-rinha  | 	at br.dev.felipeschirmann.rinha.service.PaymentProcessorService.consumeQueueInLoop(PaymentProcessorService.java:105)
+felipeschirmann-rinha  | 	at java.base@21.0.7/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+felipeschirmann-rinha  | 	at java.base@21.0.7/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+felipeschirmann-rinha  | 	at java.base@21.0.7/java.lang.Thread.runWith(Thread.java:1596)
+felipeschirmann-rinha  | 	at java.base@21.0.7/java.lang.VirtualThread.run(VirtualThread.java:329)
+felipeschirmann-rinha  | 	at java.base@21.0.7/java.lang.VirtualThread$VThreadContinuation$1.run(VirtualThread.java:209)
+felipeschirmann-rinha  | 21:34:04.693 [virtual-58] ERROR b.d.f.r.s.PaymentProcessorService - Erro GENÉRICO INESPERADO ao processar 6477727c-f55d-4263-9104-fc59e854c529. Verificando consistência...
+felipeschirmann-rinha  | org.springframework.web.client.HttpServerErrorException$InternalServerError: 500 Internal Server Error: [no body]
+felipeschirmann-rinha  | 	at org.springframework.web.client.StatusHandler.lambda$defaultHandler$3(StatusHandler.java:89)
+felipeschirmann-rinha  | 	at org.springframework.web.client.StatusHandler.handle(StatusHandler.java:146)
+felipeschirmann-rinha  | 	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.applyStatusHandlers(DefaultRestClient.java:701)
+felipeschirmann-rinha  | 	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toBodilessEntity(DefaultRestClient.java:672)
+felipeschirmann-rinha  | 	at br.dev.felipeschirmann.rinha.service.PaymentProcessorService.lambda$processPaymentSynchronously$0(PaymentProcessorService.java:152)
+felipeschirmann-rinha  | 	at io.github.resilience4j.circuitbreaker.CircuitBreaker.lambda$decorateRunnable$8(CircuitBreaker.java:269)
+felipeschirmann-rinha  | 	at io.github.resilience4j.circuitbreaker.CircuitBreaker.executeRunnable(CircuitBreaker.java:694)
+felipeschirmann-rinha  | 	at br.dev.felipeschirmann.rinha.service.PaymentProcessorService.processPaymentSynchronously(PaymentProcessorService.java:147)
+felipeschirmann-rinha  | 	at br.dev.felipeschirmann.rinha.service.PaymentProcessorService.consumeQueueInLoop(PaymentProcessorService.java:105)
+felipeschirmann-rinha  | 	at java.base@21.0.7/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+felipeschirmann-rinha  | 	at java.base@21.0.7/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+felipeschirmann-rinha  | 	at java.base@21.0.7/java.lang.Thread.runWith(Thread.java:1596)
+felipeschirmann-rinha  | 	at java.base@21.0.7/java.lang.VirtualThread.run(VirtualThread.java:329)
+felipeschirmann-rinha  | 	at java.base@21.0.7/java.lang.VirtualThread$VThreadContinuation$1.run(VirtualThread.java:209)
+felipeschirmann-rinha  | 21:34:07.365 [pool-7-thread-1] INFO  b.d.f.r.s.PaymentProcessorService - Health Check: Default voltou a ficar SAUDÁVEL. minResponseTime: 20ms
+felipeschirmann-rinha  | 21:34:08.296 [pool-7-thread-1] INFO  b.d.f.r.s.PaymentProcessorService - Health Check: Fallback voltou a ficar SAUDÁVEL. minResponseTime: 20ms
+felipeschirmann-rinha  | 21:34:29.980 [SpringApplicationShutdownHook] INFO  b.d.f.r.s.PaymentProcessorService - Iniciando desligamento gracioso...
+felipeschirmann-rinha  | 21:34:29.980 [SpringApplicationShutdownHook] INFO  b.d.f.r.s.PaymentProcessorService - Aguardando 0 tarefas em andamento finalizarem...
+felipeschirmann-rinha  | 21:34:29.980 [SpringApplicationShutdownHook] INFO  b.d.f.r.s.PaymentProcessorService - Todas as tarefas em andamento foram finalizadas. Desligamento completo.
+felipeschirmann-rinha  | 21:34:29.980 [virtual-58] WARN  b.d.f.r.s.PaymentProcessorService - Thread consumidora interrompida. Desligando...
+[Kfelipeschirmann-rinha exited with code 143
+log truncated at line 1000
