@@ -22,7 +22,7 @@ services:
           memory: "60MB"
 
   backend-01: &backend
-    image: lecosas/rinha-backend-2025-java-spring-graalvm:0.4
+    image: lecosas/rinha-backend-2025-java-spring-graalvm:0.5
     container_name: graalvm-2-backend-01
     hostname: backend-01
     pull_policy: always
@@ -42,7 +42,7 @@ services:
       - PAYMENT_BACKEND_WORKER_PAUSED_DELAY=50
       - PAYMENT_BACKEND_WORKER_STOPPED_DELAY=100
       - PAYMENT_BACKEND_WORKER_EXCEPTION_DELAY=100
-      - PAYMENT_BACKEND_ENQUEUE_DELAY=15
+      - PAYMENT_BACKEND_ENQUEUE_DELAY=10
       - HTTPCLIENT_CONNECTION_TIMEOUT=5000
       - HTTPCLIENT_READ_TIMEOUT=10000
       - HTTPCLIENT_SOCKET_TIMEOUT=10000
@@ -80,7 +80,7 @@ services:
       - PAYMENT_BACKEND_WORKER_PAUSED_DELAY=50
       - PAYMENT_BACKEND_WORKER_STOPPED_DELAY=100
       - PAYMENT_BACKEND_WORKER_EXCEPTION_DELAY=100
-      - PAYMENT_BACKEND_ENQUEUE_DELAY=15
+      - PAYMENT_BACKEND_ENQUEUE_DELAY=10
       - HTTPCLIENT_CONNECTION_TIMEOUT=5000
       - HTTPCLIENT_READ_TIMEOUT=10000
       - HTTPCLIENT_SOCKET_TIMEOUT=10000
@@ -97,8 +97,6 @@ services:
     image: redis:7-alpine
     container_name: graalvm-2-redis
     command: redis-server --save "" --appendonly no --maxmemory 30Mb --maxmemory-policy allkeys-lru --tcp-keepalive 60 --timeout 0
-    ports:
-      - "6379:6379"
     networks:
       - backend
     healthcheck:
