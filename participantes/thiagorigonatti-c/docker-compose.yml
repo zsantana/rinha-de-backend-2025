@@ -7,8 +7,8 @@ services:
 #      dockerfile: scratch.Dockerfile
     container_name: backend01
     environment:
-      - HTTP_CLIENT_THREADS=6
-      - SOCKET_SERVER_THREADS=6
+      - HTTP_CLIENT_THREADS=1
+      - SOCKET_SERVER_THREADS=1
       - SHM_PATH=/shm_array
       - SOCKET_PATH=/dev/shm/server1.sock
     networks:
@@ -17,8 +17,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.33"
-          memory: "20MB"
+          cpus: "0.30"
+          memory: "50MB"
     ipc: container:shared-memory
     depends_on:
       - shared-memory
@@ -31,8 +31,8 @@ services:
     <<: *backend
     container_name: backend02
     environment:
-      - HTTP_CLIENT_THREADS=6
-      - SOCKET_SERVER_THREADS=6
+      - HTTP_CLIENT_THREADS=1
+      - SOCKET_SERVER_THREADS=1
       - SHM_PATH=/shm_array
       - SOCKET_PATH=/dev/shm/server2.sock
     ipc: container:shared-memory
@@ -41,8 +41,8 @@ services:
     <<: *backend
     container_name: backend03
     environment:
-      - HTTP_CLIENT_THREADS=6
-      - SOCKET_SERVER_THREADS=6
+      - HTTP_CLIENT_THREADS=1
+      - SOCKET_SERVER_THREADS=1
       - SHM_PATH=/shm_array
       - SOCKET_PATH=/dev/shm/server3.sock
     ipc: container:shared-memory
@@ -51,13 +51,13 @@ services:
     image: alpine:latest
     command: tail -f /dev/null
     ipc: shareable
-    shm_size: 512kb
+    shm_size: 1mb
     container_name: shared-memory
     deploy:
       resources:
         limits:
           cpus: "0.01"
-          memory: "8MB"
+          memory: "50MB"
 
   haproxy:
     image: haproxy:3.3-dev6-alpine3.22
@@ -70,8 +70,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.50"
-          memory: "50MB"
+          cpus: "0.59"
+          memory: "150MB"
     depends_on:
       - backend01
       - backend02
