@@ -1,7 +1,7 @@
 x-rinha-api-base: &rinha-api-base
-  image: jhamiltonjunior/rinha-go-socket:0.0.9
+  image: jhamiltonjunior/rinha-go-socket:0.1.0
   volumes:
-    - api-socketsv4:/var/run
+    - api-socketsv6:/var/run
   depends_on:
     - redis
   networks:
@@ -23,7 +23,7 @@ x-rinha-api-base: &rinha-api-base
 
 services:
   nginx:
-    image: openresty/openresty:bullseye
+    image: nginx:1.25.3-alpine
     pull_policy: always
     environment:
       - EXTERNAL_HOSTS=/var/run/api_1.sock,/var/run/api_2.sock,/var/run/api_3.sock
@@ -31,8 +31,8 @@ services:
     ports:
       - "9999:80"
     volumes:
-      - ./config/nginx.conf:/usr/local/openresty/nginx/conf/nginx.conf
-      - api-socketsv4:/var/run:rw
+      - ./config/nginx.conf:/etc/nginx/nginx.conf:ro
+      - api-socketsv6:/var/run:rw
     depends_on:
       - rinha-api-1
       - rinha-api-2
@@ -42,7 +42,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.5"
+          cpus: "0.35"
           memory: "50MB"
 
   rinha-api-1:
@@ -92,8 +92,23 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.5"
+          cpus: "0.35"
           memory: "60MB"
+
+  nats:
+    image: nats:2.10.14-alpine
+    container_name: nats_server
+    ports:
+      - "4222:4222"
+      - "6222:6222"
+      - "8222:8222"
+    networks:
+      - app-network
+    deploy:
+      resources:
+        limits:
+          cpus: "0.3"
+          memory: "50MB"
 
 networks:
   app-network:
@@ -103,4 +118,8 @@ networks:
 
 volumes:
   redis-data:
-  api-socketsv4:
+  api-socketsv6:
+    driver_opts:
+      type: tmpfs
+      device: tmpfs
+      o: size=16m,mode=1777

@@ -1,13 +1,12 @@
 services:
-  api1:
+  api1:    
     image: ghcr.io/krymancer/rinha-backend-2025-ocaml:main
     container_name: api1
     hostname: api1
     environment:
       - SOCKET_PATH=/tmp/api1.sock
       - FOREIGN_STATE=api2
-      - MODE=🔥
-      - WORKERS=2
+      - WORKERS=16
     volumes:
       - rb2025:/tmp/
     networks:
@@ -26,8 +25,7 @@ services:
     environment:
       - SOCKET_PATH=/tmp/api2.sock
       - FOREIGN_STATE=api1
-      - MODE=🔥
-      - WORKERS=2
+      - WORKERS=16
     volumes:
       - rb2025:/tmp/
     networks:
