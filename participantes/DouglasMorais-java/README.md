@@ -4,7 +4,6 @@
 
 - **Java 21 Native GraalVM**
 - **Quarkus**
-- **Redis**
 - **Nginx**
 - **Docker**
 
