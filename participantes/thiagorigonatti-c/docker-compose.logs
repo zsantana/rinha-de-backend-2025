@@ -1,0 +1,48 @@
+
+ Network thiagorigonatti-c_net  Creating
+ Network thiagorigonatti-c_net  Created
+ Network thiagorigonatti-c_default  Creating
+ Network thiagorigonatti-c_default  Created
+ Container shared-memory  Creating
+ Container shared-memory  Created
+ Container backend02  Creating
+ Container backend01  Creating
+ Container backend03  Creating
+ Container backend01  Created
+ Container backend02  Created
+ Container backend03  Created
+ Container thiagorigonatti-c-haproxy-1  Creating
+ Container thiagorigonatti-c-haproxy-1  Created
+Attaching to backend01, backend02, backend03, shared-memory, haproxy-1
+backend03      | HTTP CLIENT iniciado com sucesso!
+backend01      | HTTP CLIENT iniciado com sucesso!
+backend02      | HTTP CLIENT iniciado com sucesso!
+haproxy-1      | [NOTICE]   (1) : Initializing new worker (8)
+haproxy-1      | [NOTICE]   (1) : Loading success.
+backend03      | from: 2025-08-11T18:50:00.072Z - to: 2025-08-11T18:50:13.572Z
+backend03      | 0
+backend03      | from: 2025-08-11T18:50:10.083Z - to: 2025-08-11T18:50:23.583Z
+backend03      | 375
+backend03      | from: 2025-08-11T18:50:20.085Z - to: 2025-08-11T18:50:33.585Z
+backend03      | 537
+backend03      | from: 2025-08-11T18:50:30.089Z - to: 2025-08-11T18:50:43.589Z
+backend03      | 96
+backend03      | from: 2025-08-11T18:50:40.090Z - to: 2025-08-11T18:50:53.590Z
+backend03      | 0
+backend03      | from: 2025-08-11T18:50:50.094Z - to: 2025-08-11T18:51:03.594Z
+backend03      | 390
+backend03      | from: 2025-08-11T18:50:06.076Z - to: 2025-08-11T18:51:16.076Z
+backend03      | 16748
+haproxy-1      | [NOTICE]   (1) : haproxy version is 3.3-dev6-d76ee72
+haproxy-1      | [WARNING]  (1) : Exiting Master process...
+haproxy-1      | [WARNING]  (8) : Proxy frontend stopped (cumulated conns: FE: 558, BE: 0).
+haproxy-1      | [WARNING]  (8) : Proxy backend_post stopped (cumulated conns: FE: 0, BE: 16752).
+haproxy-1      | [WARNING]  (8) : Proxy backend_get stopped (cumulated conns: FE: 0, BE: 8).
+haproxy-1      | [WARNING]  (1) : Current worker (8) exited with code 0 (Exit)
+haproxy-1      | [WARNING]  (1) : All workers exited. Exiting... (0)
+[Khaproxy-1 exited with code 0
+[Kbackend01 exited with code 137
+[Kbackend03 exited with code 137
+[Kbackend02 exited with code 137
+[Kshared-memory exited with code 137
+log truncated at line 1000
