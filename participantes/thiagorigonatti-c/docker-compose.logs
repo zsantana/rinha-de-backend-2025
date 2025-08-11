@@ -1,0 +1,84 @@
+
+ backend02 Pulling 
+ backend03 Pulling 
+ backend01 Pulling 
+ 270085ecb796 Pulling fs layer 
+ 270085ecb796 Pulling fs layer 
+ 270085ecb796 Downloading [>                                                  ]     935B/53.36kB
+ 270085ecb796 Downloading [>                                                  ]     935B/53.36kB
+ 270085ecb796 Downloading [==================================================>]  53.36kB/53.36kB
+ 270085ecb796 Verifying Checksum 
+ 270085ecb796 Download complete 
+ 270085ecb796 Downloading [==================================================>]  53.36kB/53.36kB
+ 270085ecb796 Verifying Checksum 
+ 270085ecb796 Download complete 
+ 270085ecb796 Extracting [==============================>                    ]  32.77kB/53.36kB
+ 270085ecb796 Extracting [==============================>                    ]  32.77kB/53.36kB
+ 270085ecb796 Extracting [==================================================>]  53.36kB/53.36kB
+ 270085ecb796 Extracting [==================================================>]  53.36kB/53.36kB
+ 270085ecb796 Pull complete 
+ 270085ecb796 Pull complete 
+ 270085ecb796 Already exists 
+ backend01 Pulled 
+ backend02 Pulled 
+ backend03 Pulled 
+ Network thiagorigonatti-c_default  Creating
+ Network thiagorigonatti-c_default  Created
+ Network thiagorigonatti-c_net  Creating
+ Network thiagorigonatti-c_net  Created
+ Container shared-memory  Creating
+ Container shared-memory  Created
+ Container backend03  Creating
+ Container backend01  Creating
+ Container backend02  Creating
+ Container backend03  Created
+ Container backend01  Created
+ Container backend02  Created
+ Container thiagorigonatti-c-haproxy-1  Creating
+ Container thiagorigonatti-c-haproxy-1  Created
+Attaching to backend01, backend02, backend03, shared-memory, haproxy-1
+backend03      | HTTP CLIENT iniciado com sucesso!
+backend03      | HTTP CLIENT iniciado com sucesso!
+backend03      | HTTP CLIENT iniciado com sucesso!
+backend03      | HTTP CLIENT iniciado com sucesso!
+backend03      | HTTP CLIENT iniciado com sucesso!
+backend03      | HTTP CLIENT iniciado com sucesso!
+backend01      | HTTP CLIENT iniciado com sucesso!
+backend01      | HTTP CLIENT iniciado com sucesso!
+backend01      | HTTP CLIENT iniciado com sucesso!
+backend01      | HTTP CLIENT iniciado com sucesso!
+backend01      | HTTP CLIENT iniciado com sucesso!
+backend01      | HTTP CLIENT iniciado com sucesso!
+backend02      | HTTP CLIENT iniciado com sucesso!
+backend02      | HTTP CLIENT iniciado com sucesso!
+backend02      | HTTP CLIENT iniciado com sucesso!
+backend02      | HTTP CLIENT iniciado com sucesso!
+backend02      | HTTP CLIENT iniciado com sucesso!
+backend02      | HTTP CLIENT iniciado com sucesso!
+haproxy-1      | [NOTICE]   (1) : Initializing new worker (8)
+haproxy-1      | [NOTICE]   (1) : Loading success.
+backend03      | from: 2025-08-11T18:07:31.164Z - to: 2025-08-11T18:07:44.664Z
+backend03      | 0
+backend03      | from: 2025-08-11T18:07:41.169Z - to: 2025-08-11T18:07:54.669Z
+backend03      | 374
+backend03      | from: 2025-08-11T18:07:51.173Z - to: 2025-08-11T18:08:04.673Z
+backend03      | 1345
+backend03      | from: 2025-08-11T18:08:01.176Z - to: 2025-08-11T18:08:14.676Z
+backend03      | 576
+backend03      | from: 2025-08-11T18:08:11.180Z - to: 2025-08-11T18:08:24.680Z
+backend03      | 0
+backend03      | from: 2025-08-11T18:08:21.184Z - to: 2025-08-11T18:08:34.684Z
+backend03      | 2465
+backend03      | from: 2025-08-11T18:07:37.170Z - to: 2025-08-11T18:08:47.170Z
+backend03      | 16747
+haproxy-1      | [NOTICE]   (1) : haproxy version is 3.3-dev6-d76ee72
+haproxy-1      | [WARNING]  (1) : Exiting Master process...
+haproxy-1      | [WARNING]  (8) : Proxy frontend stopped (cumulated conns: FE: 558, BE: 0).
+haproxy-1      | [WARNING]  (8) : Proxy backend_post stopped (cumulated conns: FE: 0, BE: 16750).
+haproxy-1      | [WARNING]  (8) : Proxy backend_get stopped (cumulated conns: FE: 0, BE: 8).
+haproxy-1      | [WARNING]  (1) : Current worker (8) exited with code 0 (Exit)
+haproxy-1      | [WARNING]  (1) : All workers exited. Exiting... (0)
+[Khaproxy-1 exited with code 0
+[Kbackend02 exited with code 137
+[Kshared-memory exited with code 137
+log truncated at line 1000
