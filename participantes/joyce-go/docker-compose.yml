@@ -2,7 +2,7 @@ x-base-env: &base-env
   DB_SOCKET_PATH: /sockets/database.sock
 services:
   payments-service: &payments-service
-    image: joycegodinhoo/payments-service:latest
+    image: joycegodinhoo/payments-service:v0.0.4
     container_name: payments-service
     environment:
       <<: *base-env
@@ -25,7 +25,7 @@ services:
 
   payments-service-2:
     <<: *payments-service
-    image: joycegodinhoo/payments-service:latest
+    image: joycegodinhoo/payments-service:v0.0.4
     container_name: payments-service-2
     environment:
       <<: *base-env
@@ -47,7 +47,7 @@ services:
           memory: "85MB"
 
   load-balancer-backend:
-    image: joycegodinhoo/load-balancer-backend:latest
+    image: joycegodinhoo/load-balancer-backend:v0.0.1
     ports:
       - "9999:9999"
     environment:
@@ -70,7 +70,7 @@ services:
           memory: "100MB"
 
   database:
-    image: joycegodinhoo/database:latest
+    image: joycegodinhoo/database:v0.0.3
     environment:
       - SOCKET_PATH=/sockets/database.sock
     volumes:
