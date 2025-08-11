@@ -1,10 +1,10 @@
 services:
 
   backend01: &backend
-    image: thiagorigonatti/rinha-2025-scratch:0.0.8
-#    build:
-#      context: .
-#      dockerfile: scratch.Dockerfile
+    image: thiagorigonatti/rinha-2025-debian12:0.0.2
+    #    build:
+    #      context: .
+    #      dockerfile: scratch.Dockerfile
     container_name: backend01
     environment:
       - HTTP_CLIENT_THREADS=1
