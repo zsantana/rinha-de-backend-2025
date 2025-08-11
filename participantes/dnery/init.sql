@@ -1,3 +1,5 @@
+DROP TABLE IF EXISTS payments;
+
 CREATE UNLOGGED TABLE payments (
     correlation_id UUID PRIMARY KEY,
     amount DECIMAL NOT NULL,
