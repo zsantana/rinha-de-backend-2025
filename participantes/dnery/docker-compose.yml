@@ -12,8 +12,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.55"
-          memory: "85MB"
+          cpus: "0.6"
+          memory: "90MB"
 
   api2:
     <<: *api
@@ -33,12 +33,12 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_DB=backend-db
     ports:
-      - "5432"
+      - "5432:5432"
     deploy:
       resources:
         limits:
-          cpus: "0.2"
-          memory: "130MB"
+          cpus: "0.15"
+          memory: "120MB"
 
   nginx:
     image: nginx:1.29.0-alpine
@@ -54,7 +54,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.2"
+          cpus: "0.15"
           memory: "50MB"
 
 networks:
