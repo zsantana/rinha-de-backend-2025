@@ -12,8 +12,8 @@ local function async_post(premature, rawBody)
     end
 
     local backends = {
-        "http://backend-01:8080/payments/",
-        "http://backend-02:8080/payments/"
+        "http://backend-01:8080/payments-async",
+        "http://backend-02:8080/payments-async"
     }
 
     local backend = backends[math.random(#backends)]
