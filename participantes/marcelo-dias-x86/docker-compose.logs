@@ -1,27 +1,0 @@
-
-time="2025-08-11T13:52:21-03:00" level=warning msg="/home/rinha-user/rinha-de-backend-2025/participantes/marcelo-dias-x86/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
- Network marcelo-dias-x86_backend  Creating
- Network marcelo-dias-x86_backend  Created
- Volume "marcelo-dias-x86_sockets"  Creating
- Volume "marcelo-dias-x86_sockets"  Created
- Container marcelo-dias-x86-app1-1  Creating
- Container marcelo-dias-x86-app2-1  Creating
- Container marcelo-dias-x86-app2-1  Created
- Container marcelo-dias-x86-app1-1  Created
- Container marcelo-dias-x86-haproxy-1  Creating
- Container marcelo-dias-x86-haproxy-1  Created
-Attaching to app1-1, app2-1, haproxy-1
-haproxy-1  | [NOTICE]   (1) : Initializing new worker (8)
-[Kapp1-1 exited with code 132
-[Kapp2-1 exited with code 132
-haproxy-1  | [NOTICE]   (1) : Loading success.
-haproxy-1  | [WARNING]  (8) : Server apps/app1 is DOWN, reason: Socket error, info: "General socket error (No such file or directory)", check duration: 0ms. 1 active and 0 backup servers left. 0 sessions active, 0 requeued, 0 remaining in queue.
-haproxy-1  | [WARNING]  (8) : Server apps/app2 is DOWN, reason: Socket error, info: "General socket error (No such file or directory)", check duration: 0ms. 0 active and 0 backup servers left. 0 sessions active, 0 requeued, 0 remaining in queue.
-haproxy-1  | [ALERT]    (8) : backend 'apps' has no server available!
-haproxy-1  | [NOTICE]   (1) : haproxy version is 3.2.3-1844da7
-haproxy-1  | [WARNING]  (1) : Exiting Master process...
-haproxy-1  | [WARNING]  (8) : Proxy http_front stopped (cumulated conns: FE: 14, BE: 0).
-haproxy-1  | [WARNING]  (8) : Proxy apps stopped (cumulated conns: FE: 0, BE: 14).
-haproxy-1  | [WARNING]  (1) : Current worker (8) exited with code 0 (Exit)
-haproxy-1  | [WARNING]  (1) : All workers exited. Exiting... (0)
-[Khaproxy-1 exited with code 0
