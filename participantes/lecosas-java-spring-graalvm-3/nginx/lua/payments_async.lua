@@ -20,7 +20,7 @@ local function async_post(premature, rawBody)
 
     httpc:request_uri(backend, {
         method = "POST",
-        body = body,
+        body = rawBody,
         keepalive = true,
         keepalive_timeout = 60000,
         keepalive_pool = 1000,
