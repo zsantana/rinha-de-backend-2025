@@ -4,8 +4,8 @@ services:
     image: thiagorigonatti/rinha-2025-debian12:0.0.1
     container_name: backend01
     environment:
-      - HTTP_CLIENT_THREADS=2
-      - SOCKET_SERVER_THREADS=2
+      - HTTP_CLIENT_THREADS=6
+      - SOCKET_SERVER_THREADS=6
       - SHM_PATH=/shm_array
       - SOCKET_PATH=/dev/shm/server1.sock
     networks:
@@ -28,8 +28,8 @@ services:
     <<: *backend
     container_name: backend02
     environment:
-      - HTTP_CLIENT_THREADS=2
-      - SOCKET_SERVER_THREADS=2
+      - HTTP_CLIENT_THREADS=6
+      - SOCKET_SERVER_THREADS=6
       - SHM_PATH=/shm_array
       - SOCKET_PATH=/dev/shm/server2.sock
     ipc: container:shared-memory
