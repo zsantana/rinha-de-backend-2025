@@ -1,11 +1,11 @@
 # 💸 Sistema de Processamento de Pagamentos 💸
 
-Essa é a minha participação na lendária [**Rinha de Backend 2025**](https://github.com/zanfranceschi/rinha-de-backend-2025)! 🥊
+Essa é minha participação na lendária [**Rinha de Backend 2025**](https://github.com/zanfranceschi/rinha-de-backend-2025)! 🥊
 
 ## 🛠️ Tecnologias Utilizadas 👨‍💻
 
 * **Go** - [Build simple, secure, scalable systems with Go](https://go.dev/)
-* **Fiber** - [An Express-inspired web framework written in Go.](https://gofiber.io/)
+* **Echo** - [High performance, extensible, minimalist Go web framework](https://echo.labstack.com/)
 * **Redis** - [The Real-time Data Platform](https://redis.io/)
 * **go-redis** - [Redis Go client](https://github.com/redis/go-redis)
 * **HaProxy** - [The Reliable, High Perf. TCP/HTTP Load Balancer](https://www.haproxy.org/)
