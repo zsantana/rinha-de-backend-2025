@@ -1,9 +1,8 @@
 x-service-templates:
   go-backend: &go-backend
-    image: davidalecrim1/rinha-with-go-2025:v2.0.2-api
+    image: davidalecrim1/rinha-with-go-2025:v2.0.1-api-extreme
     platform: linux/amd64
     networks:
-      - app
       - payment-processor
     depends_on:
       - redis
@@ -15,8 +14,8 @@ services:
     <<: *go-backend
     container_name: go-backend-1
     environment:
-      - PAYMENT_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080
-      - PAYMENT_PROCESSOR_URL_FALLBACK=http://payment-processor-fallback:8080
+      - PAYMENT_PROCESSOR_URL_DEFAULT=payment-processor-default:8080
+      - PAYMENT_PROCESSOR_URL_FALLBACK=payment-processor-fallback:8080
       - ENABLE_PROFILING=false
       - REDIS_ADDR=/var/run/redis.sock
       - UNIX_SOCKET=/var/run/api_1.sock
@@ -26,14 +25,15 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.3"
-          memory: "50MB"
+          cpus: "0.15"
+          memory: "35MB"
+
   go-backend-2:
     <<: *go-backend
     container_name: go-backend-2
     environment:
-      - PAYMENT_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080
-      - PAYMENT_PROCESSOR_URL_FALLBACK=http://payment-processor-fallback:8080
+      - PAYMENT_PROCESSOR_URL_DEFAULT=payment-processor-default:8080
+      - PAYMENT_PROCESSOR_URL_FALLBACK=payment-processor-fallback:8080
       - ENABLE_PROFILING=false
       - REDIS_ADDR=/var/run/redis.sock
       - UNIX_SOCKET=/var/run/api_2.sock
@@ -43,12 +43,47 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.3"
-          memory: "50MB"
+          cpus: "0.15"
+          memory: "35MB"
+
+  go-backend-3:
+    <<: *go-backend
+    container_name: go-backend-3
+    environment:
+      - PAYMENT_PROCESSOR_URL_DEFAULT=payment-processor-default:8080
+      - PAYMENT_PROCESSOR_URL_FALLBACK=payment-processor-fallback:8080
+      - ENABLE_PROFILING=false
+      - REDIS_ADDR=/var/run/redis.sock
+      - UNIX_SOCKET=/var/run/api_3.sock
+    networks:
+      - app
+      - payment-processor
+    deploy:
+      resources:
+        limits:
+          cpus: "0.15"
+          memory: "35MB"
+
+  go-backend-4:
+    <<: *go-backend
+    container_name: go-backend-4
+    environment:
+      - PAYMENT_PROCESSOR_URL_DEFAULT=payment-processor-default:8080
+      - PAYMENT_PROCESSOR_URL_FALLBACK=payment-processor-fallback:8080
+      - ENABLE_PROFILING=false
+      - REDIS_ADDR=/var/run/redis.sock
+      - UNIX_SOCKET=/var/run/api_4.sock
+    networks:
+      - app
+      - payment-processor
+    deploy:
+      resources:
+        limits:
+          cpus: "0.15"
+          memory: "35MB"
 
   go-worker-1:
-    image: davidalecrim1/rinha-with-go-2025:v2.0.2-worker
-    container_name: go-worker-1
+    image: davidalecrim1/rinha-with-go-2025:v2.0.1-worker-extreme
     platform: linux/amd64
     networks:
       - payment-processor
@@ -59,8 +94,8 @@ services:
     volumes:
       - api-sockets:/var/run:rw
     environment:
-      - PAYMENT_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080
-      - PAYMENT_PROCESSOR_URL_FALLBACK=http://payment-processor-fallback:8080
+      - PAYMENT_PROCESSOR_URL_DEFAULT=payment-processor-default:8080
+      - PAYMENT_PROCESSOR_URL_FALLBACK=payment-processor-fallback:8080
       - MONITOR_HEALTH=true
       - ENABLE_PROFILING=false
       - REDIS_ADDR=/var/run/redis.sock
@@ -68,7 +103,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.5"
+          cpus: "0.4"
           memory: "100MB"
 
   redis:
@@ -85,25 +120,25 @@ services:
       resources:
         limits:
           cpus: "0.2"
-          memory: "100MB"
+          memory: "60MB"
 
   load-balancer:
-    container_name: load-balancer-nginx
-    image: nginx:1.29-alpine
+    container_name: load-balancer-extreme-proxy
+    image: davidalecrim1/extreme-proxy:v1.1.2
     volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf:ro
       - api-sockets:/var/run:rw
+      - ./config.yaml:/app/config.yaml:ro
     depends_on:
       - go-backend-1
       - go-backend-2
     ports:
-      - "9999:80"
+      - "9999:9999"
     networks:
       - app
     deploy:
       resources:
         limits:
-          cpus: "0.2"
+          cpus: "0.3"
           memory: "50MB"
 
 networks:
