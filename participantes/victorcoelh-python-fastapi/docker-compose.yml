@@ -56,7 +56,8 @@ services:
         limits:
           cpus: "0.8"
           memory: 105M
-    command: ["/api/run_workers.sh"]
+    command: ["uv", "run", "dramatiq", "src.entrypoints.worker", "--processes", "2",
+     "--threads", "8"]
 
   redis:
     container_name: redis
