@@ -97,8 +97,6 @@ services:
     image: redis:7-alpine
     container_name: graalvm-2-redis
     command: redis-server --save "" --appendonly no --maxmemory 30Mb --maxmemory-policy allkeys-lru --tcp-keepalive 60 --timeout 0
-    ports:
-      - "6379:6379"
     networks:
       - backend
     healthcheck:
