@@ -3,7 +3,7 @@ x-service-templates:
     networks:
       - payment-processor
       - app
-    image: tarcisiozf/rinha-de-backend-2025-asm:v6
+    image: tarcisiozf/rinha-de-backend-2025-asm:v7
     security_opt:
       - seccomp:unconfined
     volumes:
@@ -27,10 +27,11 @@ services:
       PORT_DEFAULT: "8080"
       HOST_FALLBACK: "payment-processor-fallback"
       PORT_FALLBACK: "8080"
+      APP_SOCK_PATH: "sockets/one.sock"
     deploy:
       resources:
         limits:
-          cpus: "0.3"
+          cpus: "0.5"
           memory: 100M
   app-2:
     <<: *base-app
@@ -43,10 +44,11 @@ services:
       PORT_DEFAULT: "8080"
       HOST_FALLBACK: "payment-processor-fallback"
       PORT_FALLBACK: "8080"
+      APP_SOCK_PATH: "sockets/two.sock"
     deploy:
       resources:
         limits:
-          cpus: "0.3"
+          cpus: "0.5"
           memory: 100M
 
 #  lb:
@@ -103,7 +105,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.9"
+          cpus: "0.5"
           memory: "150MB"
     command: [ "nginx", "-g", "daemon off;" ]
 
