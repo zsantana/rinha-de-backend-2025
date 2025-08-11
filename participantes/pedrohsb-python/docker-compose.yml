@@ -5,6 +5,8 @@ services:
     networks:
       - backend
       - payment-processor
+    environment:
+      - SUMMARY_URL=http://api2:9999/internal/payments-summary
     deploy:
       resources:
         limits:
@@ -17,6 +19,8 @@ services:
     networks:
       - backend
       - payment-processor
+    environment:
+      - SUMMARY_URL=http://api1:9999/internal/payments-summary
     deploy:
       resources:
         limits:
