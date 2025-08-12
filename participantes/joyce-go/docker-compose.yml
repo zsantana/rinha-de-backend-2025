@@ -70,7 +70,7 @@ services:
           memory: "100MB"
 
   database:
-    image: joycegodinhoo/database:v0.0.3
+    image: joycegodinhoo/database:v0.0.4
     environment:
       - SOCKET_PATH=/sockets/database.sock
     volumes:
