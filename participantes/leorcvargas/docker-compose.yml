@@ -1,13 +1,11 @@
 x-service-templates:
   base: &base
-    build:
-      context: ../../..
+    image: ghcr.io/leorcvargas/rinha-de-backend-2025-elixir:20250812005006
     volumes:
       - sockets:/tmp/rinhex/:rw
     networks:
       - payment-processor
       - rinhex
-
 
 services:
   loadbalancer:
