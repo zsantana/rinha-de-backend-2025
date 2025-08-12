@@ -1,0 +1,50 @@
+
+ backend02 Pulling 
+ backend01 Pulling 
+ 0378f823a052 Pulling fs layer 
+ 0378f823a052 Pulling fs layer 
+ 0378f823a052 Downloading [>                                                  ]     935B/53.3kB
+ 0378f823a052 Downloading [>                                                  ]     935B/53.3kB
+ 0378f823a052 Download complete 
+ 0378f823a052 Download complete 
+ 0378f823a052 Extracting [==============================>                    ]  32.77kB/53.3kB
+ 0378f823a052 Extracting [==============================>                    ]  32.77kB/53.3kB
+ 0378f823a052 Extracting [==================================================>]   53.3kB/53.3kB
+ 0378f823a052 Extracting [==================================================>]   53.3kB/53.3kB
+ 0378f823a052 Pull complete 
+ 0378f823a052 Pull complete 
+ backend02 Pulled 
+ backend01 Pulled 
+ Network thiagorigonatti-c_net  Creating
+ Network thiagorigonatti-c_net  Created
+ Network thiagorigonatti-c_default  Creating
+ Network thiagorigonatti-c_default  Created
+ Container shared-memory  Creating
+ Container shared-memory  Created
+ Container backend02  Creating
+ Container backend01  Creating
+ Container backend02  Created
+ Container backend01  Created
+ Container thiagorigonatti-c-haproxy-1  Creating
+ Container thiagorigonatti-c-haproxy-1  Created
+Attaching to backend01, backend02, shared-memory, haproxy-1
+haproxy-1      | [NOTICE]   (1) : Initializing new worker (8)
+haproxy-1      | [NOTICE]   (1) : Loading success.
+haproxy-1      | [WARNING]  (8) : Server backend/backend01 is DOWN, reason: Socket error, info: "General socket error (No such file or directory)", check duration: 0ms. 1 active and 0 backup servers left. 0 sessions active, 0 requeued, 0 remaining in queue.
+backend02      | HTTP CLIENT iniciado com sucesso!
+backend01      | HTTP CLIENT iniciado com sucesso!
+haproxy-1      | [WARNING]  (8) : Server backend/backend02 is DOWN, reason: Socket error, info: "General socket error (No such file or directory)", check duration: 0ms. 0 active and 0 backup servers left. 0 sessions active, 0 requeued, 0 remaining in queue.
+haproxy-1      | [ALERT]    (8) : backend 'backend' has no server available!
+haproxy-1      | [WARNING]  (8) : Server backend/backend02 is UP, reason: Layer4 check passed, check duration: 0ms. 1 active and 0 backup servers online. 0 sessions requeued, 0 total in queue.
+haproxy-1      | [WARNING]  (8) : Server backend/backend01 is UP, reason: Layer4 check passed, check duration: 0ms. 2 active and 0 backup servers online. 0 sessions requeued, 0 total in queue.
+haproxy-1      | [NOTICE]   (1) : haproxy version is 3.3-dev6-d76ee72
+haproxy-1      | [WARNING]  (1) : Exiting Master process...
+haproxy-1      | [WARNING]  (8) : Proxy frontend stopped (cumulated conns: FE: 560, BE: 0).
+haproxy-1      | [WARNING]  (8) : Proxy backend stopped (cumulated conns: FE: 0, BE: 16756).
+haproxy-1      | [WARNING]  (1) : Current worker (8) exited with code 0 (Exit)
+haproxy-1      | [WARNING]  (1) : All workers exited. Exiting... (0)
+[Khaproxy-1 exited with code 0
+[Kbackend02 exited with code 137
+[Kbackend01 exited with code 137
+[Kshared-memory exited with code 137
+log truncated at line 1000
