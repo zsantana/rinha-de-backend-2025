@@ -1,11 +1,14 @@
 services:
 
   backend01: &backend
-    image: thiagorigonatti/rinha-2025:0.0.11
+    image: thiagorigonatti/rinha-2025-scratch:0.0.11
+#    build:
+#      context: .
+#      dockerfile: scratch.Dockerfile
     container_name: backend01
     environment:
-      - HTTP_CLIENT_THREADS=3
-      - SOCKET_SERVER_THREADS=3
+      - HTTP_CLIENT_THREADS=2
+      - SOCKET_SERVER_THREADS=2
       - SHM_PATH=/shm_array
       - SOCKET_PATH=/dev/shm/server1.sock
     networks:
@@ -14,36 +17,38 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.45"
-          memory: "50MB"
+          cpus: "0.10"
+          memory: "6MB"
     ipc: container:shared-memory
     depends_on:
       - shared-memory
+
 
   backend02:
     <<: *backend
     container_name: backend02
     environment:
-      - HTTP_CLIENT_THREADS=3
-      - SOCKET_SERVER_THREADS=3
+      - HTTP_CLIENT_THREADS=2
+      - SOCKET_SERVER_THREADS=2
       - SHM_PATH=/shm_array
       - SOCKET_PATH=/dev/shm/server2.sock
-    ipc: container:shared-memory
+
 
   shared-memory:
     image: alpine:latest
     command: tail -f /dev/null
     ipc: shareable
-    shm_size: 50mb
+    shm_size: 512mb
     container_name: shared-memory
     deploy:
       resources:
         limits:
-          cpus: "0.10"
-          memory: "50MB"
+          cpus: "0.01"
+          memory: "6MB"
+
 
   haproxy:
-    image: haproxy:3.3-dev5-alpine3.22
+    image: haproxy:3.3-dev6-alpine3.22
     volumes:
       - ./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
     networks:
@@ -53,12 +58,13 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.50"
-          memory: "200MB"
+          cpus: "0.29"
+          memory: "32MB"
     depends_on:
       - backend01
       - backend02
     ipc: container:shared-memory
+
 
 networks:
   net:

@@ -17,12 +17,9 @@ services:
       resources:
         limits:
           cpus: "0.20"
-          memory: "100MB"
+          memory: "50MB"
   api1:
-    # build:
-    #   context: .
-    #   dockerfile: Dockerfile
-    image: danielsuhett1999/rinha-backend-go:1.1.0
+    image: danielsuhett1999/rinha-backend-go:1.2.0
     hostname: api1
     volumes:
       - sockets:/var/run/sockets
@@ -37,7 +34,7 @@ services:
       - HEALTH_TIMEOUT=1000
       - HEALTH_INTERVAL=6000
       - LATENCY_DIFF_TO_USE_FALLBACK=5000
-      - BATCH_SIZE=25
+      - BATCH_SIZE=10
       - GOGC=off
     networks:
       - backend
@@ -49,12 +46,9 @@ services:
       resources:
         limits:
           cpus: "0.50"
-          memory: "100MB"
+          memory: "125MB"
   api2:
-    # build:
-    #   context: .
-    #   dockerfile: Dockerfile
-    image: danielsuhett1999/rinha-backend-go:1.1.0
+    image: danielsuhett1999/rinha-backend-go:1.2.0
     hostname: api2
     volumes:
       - sockets:/var/run/sockets
@@ -67,9 +61,9 @@ services:
       - PROCESSOR_FALLBACK_URL=http://payment-processor-fallback:8080
       - POOLING_INTERVAL=100
       - HEALTH_TIMEOUT=1000
-      - HEALTH_INTERVAL=3000
+      - HEALTH_INTERVAL=6000
       - LATENCY_DIFF_TO_USE_FALLBACK=5000
-      - BATCH_SIZE=25
+      - BATCH_SIZE=10
       - GOGC=off
     networks:
       - backend
@@ -81,7 +75,7 @@ services:
       resources:
         limits:
           cpus: "0.50"
-          memory: "100MB"
+          memory: "125MB"
   redis:
     image: valkey/valkey:7.2-alpine
     container_name: go-rinha-redis
@@ -109,4 +103,3 @@ networks:
     driver: bridge
   payment-processor:
     external: true
-

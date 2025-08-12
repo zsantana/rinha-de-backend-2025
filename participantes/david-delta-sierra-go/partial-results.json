@@ -1,20 +1,20 @@
 {
   "participante": "david-delta-sierra-go",
-  "total_liquido": 265961.5896,
+  "total_liquido": 376778.9186,
   "total_bruto": 333285.2,
   "total_taxas": 16664.26,
   "descricao": "'total_liquido' é sua pontuação final. Equivale ao seu lucro. Fórmula: total_liquido + (total_liquido * p99.bonus) - (total_liquido * multa.porcentagem)",
   "p99": {
-    "valor": "1.63ms",
+    "valor": "1.7ms",
     "bonus": "19%",
     "max_requests": "550",
     "descricao": "Fórmula para o bônus: max((11 - p99.valor) * 0.02, 0)"
   },
   "multa": {
-    "porcentagem": 0.35,
-    "total": 110817.329,
+    "porcentagem": 0,
+    "total": 0,
     "composicao": {
-      "num_inconsistencias": 1680,
+      "num_inconsistencias": 0,
       "descricao": "Se 'num_inconsistencias' > 0, há multa de 35%."
     }
   },
