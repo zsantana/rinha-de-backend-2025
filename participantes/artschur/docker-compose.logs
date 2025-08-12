@@ -1,0 +1,1001 @@
+
+ backend-go-1 Pulling 
+ backend-go-2 Pulling 
+ 9824c27679d3 Already exists 
+ cc029933d94a Pulling fs layer 
+ 4f4fb700ef54 Pulling fs layer 
+ f0544a5f5a11 Pulling fs layer 
+ 10255aae02e5 Pulling fs layer 
+ 10255aae02e5 Waiting 
+ 4f4fb700ef54 Downloading [==================================================>]      32B/32B
+ 4f4fb700ef54 Verifying Checksum 
+ 4f4fb700ef54 Download complete 
+ 9824c27679d3 Already exists 
+ cc029933d94a Pulling fs layer 
+ 4f4fb700ef54 Pulling fs layer 
+ f0544a5f5a11 Pulling fs layer 
+ 10255aae02e5 Pulling fs layer 
+ 10255aae02e5 Waiting 
+ 4f4fb700ef54 Download complete 
+ f0544a5f5a11 Downloading [>                                                  ]  33.27kB/3.094MB
+ f0544a5f5a11 Downloading [>                                                  ]  33.27kB/3.094MB
+ 10255aae02e5 Downloading [==================================================>]     940B/940B
+ 10255aae02e5 Verifying Checksum 
+ 10255aae02e5 Download complete 
+ 10255aae02e5 Downloading [==================================================>]     940B/940B
+ 10255aae02e5 Verifying Checksum 
+ 10255aae02e5 Download complete 
+ cc029933d94a Downloading [==>                                                ]  16.38kB/282.4kB
+ cc029933d94a Downloading [==>                                                ]  16.38kB/282.4kB
+ cc029933d94a Downloading [==================================================>]  282.4kB/282.4kB
+ cc029933d94a Verifying Checksum 
+ cc029933d94a Download complete 
+ cc029933d94a Download complete 
+ cc029933d94a Extracting [=====>                                             ]  32.77kB/282.4kB
+ cc029933d94a Extracting [=====>                                             ]  32.77kB/282.4kB
+ cc029933d94a Extracting [==================================================>]  282.4kB/282.4kB
+ cc029933d94a Extracting [==================================================>]  282.4kB/282.4kB
+ cc029933d94a Extracting [==================================================>]  282.4kB/282.4kB
+ cc029933d94a Extracting [==================================================>]  282.4kB/282.4kB
+ cc029933d94a Pull complete 
+ cc029933d94a Pull complete 
+ 4f4fb700ef54 Extracting [==================================================>]      32B/32B
+ 4f4fb700ef54 Extracting [==================================================>]      32B/32B
+ 4f4fb700ef54 Extracting [==================================================>]      32B/32B
+ 4f4fb700ef54 Extracting [==================================================>]      32B/32B
+ 4f4fb700ef54 Pull complete 
+ 4f4fb700ef54 Pull complete 
+ f0544a5f5a11 Downloading [=====================================>             ]  2.302MB/3.094MB
+ f0544a5f5a11 Downloading [=====================================>             ]  2.302MB/3.094MB
+ f0544a5f5a11 Verifying Checksum 
+ f0544a5f5a11 Download complete 
+ f0544a5f5a11 Verifying Checksum 
+ f0544a5f5a11 Download complete 
+ f0544a5f5a11 Extracting [>                                                  ]  32.77kB/3.094MB
+ f0544a5f5a11 Extracting [>                                                  ]  32.77kB/3.094MB
+ f0544a5f5a11 Extracting [==================================================>]  3.094MB/3.094MB
+ f0544a5f5a11 Extracting [==================================================>]  3.094MB/3.094MB
+ f0544a5f5a11 Pull complete 
+ f0544a5f5a11 Pull complete 
+ 10255aae02e5 Extracting [==================================================>]     940B/940B
+ 10255aae02e5 Extracting [==================================================>]     940B/940B
+ 10255aae02e5 Extracting [==================================================>]     940B/940B
+ 10255aae02e5 Extracting [==================================================>]     940B/940B
+ 10255aae02e5 Pull complete 
+ 10255aae02e5 Pull complete 
+ backend-go-2 Pulled 
+ backend-go-1 Pulled 
+ Network artschur_backend  Creating
+ Network artschur_backend  Created
+ Container backend-go-redis  Creating
+ Container backend-go-redis  Created
+ Container backend-go-1  Creating
+ Container backend-go-2  Creating
+ Container backend-go-1  Created
+ Container backend-go-2  Created
+ Container nginx-lb  Creating
+ Container nginx-lb  Created
+Attaching to backend-go-1, backend-go-2, backend-go-redis, nginx-lb
+backend-go-redis  | 1:C 12 Aug 2025 19:16:32.395 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+backend-go-redis  | 1:C 12 Aug 2025 19:16:32.395 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+backend-go-redis  | 1:C 12 Aug 2025 19:16:32.395 * Redis version=7.4.5, bits=64, commit=00000000, modified=0, pid=1, just started
+backend-go-redis  | 1:C 12 Aug 2025 19:16:32.395 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf
+backend-go-redis  | 1:M 12 Aug 2025 19:16:32.395 * monotonic clock: POSIX clock_gettime
+backend-go-redis  | 1:M 12 Aug 2025 19:16:32.397 * Running mode=standalone, port=6379.
+backend-go-redis  | 1:M 12 Aug 2025 19:16:32.397 * Server initialized
+backend-go-redis  | 1:M 12 Aug 2025 19:16:32.397 * Ready to accept connections tcp
+nginx-lb          | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+nginx-lb          | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+nginx-lb          | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+nginx-lb          | 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+nginx-lb          | 10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
+nginx-lb          | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+nginx-lb          | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+nginx-lb          | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+nginx-lb          | /docker-entrypoint.sh: Configuration complete; ready for start up
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:35 +0000] "GET /payments-summary HTTP/1.1" 200 94 "-" "curl/8.5.0"
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:41 +0000] "POST /purge-payments HTTP/1.1" 200 65 "-" "Grafana k6/1.1.0"
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:41 +0000] "GET /payments-summary?from=2025-08-12T19:16:26.062Z&to=2025-08-12T19:16:39.562Z HTTP/1.1" 200 94 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 148.589µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 113.487µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 132.698µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 112.056µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 94.435µs
+backend-go-1      | Payment enqueued in 116.957µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 113.517µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 165µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:41 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 97.645µs
+backend-go-1      | Payment enqueued in 134.148µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 145.868µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 112.216µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 108.337µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 140.188µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 99.315µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 121.507µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 123.407µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 125.017µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 116.097µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 91.665µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 125.147µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 419.405µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 117.386µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 134.958µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 119.117µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 104.306µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 87.975µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:42 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 121.017µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 91.565µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 117.596µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 130.078µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 131.588µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 194.761µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 146.838µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 127.187µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 117.737µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 133.848µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 109.797µs
+backend-go-2      | Payment enqueued in 147.949µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 128.417µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 132.818µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 143.148µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 112.656µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 94.255µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 105.526µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 128.388µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 165.24µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 126.057µs
+backend-go-2      | Payment enqueued in 142.368µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 353.031µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 156.53µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 111.357µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 113.767µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 129.697µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:43 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 155.709µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 132.548µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 104.056µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 115.027µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 113.907µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 122.398µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 101.256µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 126.857µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 118.967µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 98.836µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 118.957µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 111.876µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 114.146µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 106.656µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 124.607µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 129.987µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 136.328µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 144.499µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 115.907µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 124.717µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 114.627µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 125.278µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 103.316µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 112.586µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 119.967µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 195.021µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 133.088µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 94.485µs
+backend-go-2      | Payment enqueued in 134.138µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 141.478µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 136.708µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 122.828µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 144.378µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 89.835µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 112.537µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 93.705µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 93.506µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:44 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 123.007µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 111.486µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 146.158µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 136.738µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 120.707µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 170.48µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 103.166µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 92.315µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 91.135µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 140.358µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 125.727µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 120.368µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 124.367µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 126.967µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 113.927µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 126.417µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 118.087µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 111.426µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 99.646µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 87.255µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 152.809µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 120.717µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 125.358µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 125.098µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 151.749µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 115.457µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 95.436µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 87.875µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 122.437µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 94.595µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 134.468µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 112.257µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 116.737µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 117.987µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 116.186µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 125.087µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 90.285µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 113.376µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 102.176µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 102.106µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 108.406µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 95.065µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 121.967µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 138.768µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 126.148µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:45 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 113.306µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 112.817µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 89.435µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 118.887µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 101.425µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 114.527µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 128.728µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 107.736µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 147.209µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 124.497µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 101.816µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 100.896µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 103.356µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 95.236µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 123.457µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 101.716µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 101.186µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 127.398µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 98.996µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 113.937µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 125.257µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 115.097µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 126.017µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 102.996µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 100.925µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 153.749µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 109.946µs
+backend-go-1      | Payment enqueued in 177.69µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 119.477µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 116.927µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 91.035µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 129.107µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 120.857µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 126.688µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 134.028µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 169.51µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 133.208µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 178µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 158.969µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 200.582µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 156.149µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 147.919µs
+backend-go-2      | Payment enqueued in 177.31µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 169.87µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 174.93µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 148.669µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 203.002µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 197.482µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 163.889µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 124.517µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 90.555µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 86.575µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 168.819µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 132.778µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 101.195µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:46 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 117.687µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:47 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 130.128µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:47 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 122.387µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:47 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 122.627µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:47 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 110.217µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:47 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 92.496µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:47 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 99.376µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:47 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 93.915µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:47 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 112.957µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:47 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 88.275µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:47 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 130.147µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:47 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 113.477µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:47 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 128.448µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:47 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 99.996µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:47 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 120.747µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:47 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 107.236µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:47 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 112.607µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:47 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 120.657µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:47 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 232.734µs
+backend-go-2      | Payment enqueued in 120.797µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:47 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:47 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 142.259µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:47 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 121.447µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:47 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 124.947µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:47 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 92.465µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:47 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 108.737µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:47 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 98.676µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:47 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 105.456µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:47 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 133.447µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:47 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 146.039µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:47 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 125.427µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:47 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 92.336µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:47 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 158.65µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:47 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 315.139µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:47 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 230.114µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:47 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 119.827µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:47 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 121.878µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:47 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 144.658µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:47 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 121.147µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:47 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 92.045µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:47 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 94.596µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:47 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 119.517µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:47 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 110.187µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:47 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 123.097µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:47 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 113.657µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:47 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 111.866µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:47 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 233.844µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:47 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:47 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 135.888µs
+backend-go-1      | Payment enqueued in 93.955µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:47 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 99.286µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:47 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 90.885µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:47 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 103.826µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:47 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 94.896µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:47 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 107.347µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:47 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 135.828µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:47 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 99.746µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:47 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 91.015µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:47 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 117.777µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:47 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 101.756µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:47 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 111.286µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:47 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 125.118µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:47 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 90.786µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:47 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 102.546µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:47 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 126.388µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:47 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 106.957µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:47 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 91.506µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 89.906µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 142.528µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 116.557µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 137.638µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 127.237µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 104.146µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 109.757µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 100.845µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 120.427µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 120.217µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 109.096µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 106.696µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 107.506µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 93.026µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 117.417µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 114.766µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 86.295µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 582.284µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 116.967µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 127.518µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 131.838µs
+backend-go-2      | Payment enqueued in 140.919µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 123.387µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 105.437µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 139.249µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 82.564µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 131.168µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 116.957µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 95.616µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 160.409µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 111.596µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 99.476µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 147.659µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 142.288µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 82.865µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 85.775µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 111.796µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 88.505µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 113.296µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 119.457µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 106.686µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 103.086µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 140.458µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 91.216µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 216.153µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 72.894µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 122.347µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 100.506µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 127.017µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 110.926µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 100.486µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 96.605µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 134.628µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 116.466µs
+backend-go-1      | Payment enqueued in 101.406µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 99.456µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 108.266µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 125.458µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 106.696µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 111.607µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 96.985µs
+backend-go-2      | Payment enqueued in 97.086µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 156.669µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 115.747µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 103.496µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 137.548µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 96.825µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 128.707µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 102.546µs
+backend-go-2      | Payment enqueued in 123.428µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 109.636µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 131.477µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:48 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 151.999µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 117.937µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 97.066µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 135.208µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 113.387µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 105.636µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 105.666µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 94.895µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 102.986µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 124.998µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 114.537µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 121.537µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 108.266µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 143.618µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 191.852µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 112.947µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 98.515µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 113.127µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 76.685µs
+backend-go-2      | Payment enqueued in 114.417µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 106.156µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 107.026µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 89.815µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 107.607µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 106.127µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 165.29µs
+backend-go-2      | Payment enqueued in 128.948µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 151.699µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 149.348µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 116.917µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 101.976µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 98.846µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 101.376µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 110.136µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 92.436µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 99.396µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 110.686µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 159.419µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 85.465µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 95.645µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 152.949µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 131.138µs
+backend-go-1      | Payment enqueued in 95.996µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 134.648µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 113.207µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 125.967µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 131.608µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 99.496µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 88.145µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 146.729µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 97.996µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 195.892µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 149.169µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 194.202µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 138.888µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 133.828µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 118.707µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 147.059µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 165.53µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 145.088µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 173.91µs
+backend-go-2      | Payment enqueued in 159.759µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 168.509µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 128.577µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 127.797µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 121.867µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 116.596µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 104.226µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 119.907µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 116.687µs
+backend-go-1      | Payment enqueued in 126.587µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 137.208µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 108.616µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 159.389µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 114.107µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 122.967µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 228.754µs
+backend-go-1      | Payment enqueued in 211.362µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 140.929µs
+backend-go-1      | Payment enqueued in 158.189µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 130.027µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:49 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 116.257µs
+backend-go-2      | Payment enqueued in 123.057µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:50 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 122.757µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:50 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 146.308µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:50 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 124.347µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:50 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 102.926µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:50 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 108.756µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:50 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 96.046µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:50 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 144.279µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:50 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 90.785µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:50 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 107.356µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:50 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 116.597µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:50 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 164.789µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:50 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 118.517µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:50 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 139.208µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:50 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:50 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 148.789µs
+backend-go-2      | Payment enqueued in 132.898µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:50 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 106.056µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:50 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 104.166µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:50 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 108.006µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:50 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 114.556µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:50 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 112.766µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:50 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 87.245µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:50 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 87.265µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:50 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 124.657µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:50 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 109.447µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:50 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 155.719µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:50 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 187.111µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:50 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 135.308µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:50 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 132.138µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:50 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 118.667µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:50 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 92.516µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:50 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 156.919µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:50 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 84.755µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:50 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 138.698µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:50 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 105.396µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:50 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 131.058µs
+backend-go-2      | Payment enqueued in 141.598µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:50 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:50 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 110.996µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:50 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 118.197µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:50 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-2      | Payment enqueued in 124.838µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:50 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+backend-go-1      | Payment enqueued in 120.847µs
+nginx-lb          | 172.20.0.1 - - [12/Aug/2025:19:16:50 +0000] "POST /payments HTTP/1.1" 202 0 "-" "Grafana k6/1.1.0"
+log truncated at line 1000
