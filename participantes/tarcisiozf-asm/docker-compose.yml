@@ -3,7 +3,7 @@ x-service-templates:
     networks:
       - payment-processor
       - app
-    image: tarcisiozf/rinha-de-backend-2025-asm:v7
+    image: tarcisiozf/rinha-de-backend-2025-asm:v8
     security_opt:
       - seccomp:unconfined
     volumes:
@@ -31,7 +31,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.5"
+          cpus: "0.3"
           memory: 100M
   app-2:
     <<: *base-app
@@ -48,7 +48,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.5"
+          cpus: "0.3"
           memory: 100M
 
 #  lb:
@@ -105,7 +105,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.5"
+          cpus: "0.9"
           memory: "150MB"
     command: [ "nginx", "-g", "daemon off;" ]
 
