@@ -1,5 +1,7 @@
 # RINHEX
 
+[@leorcvargas](https://github.com/leorcvargas)
+
 - Sobre
 
   - Optei por fazer tudo dentro do ecossistema do Elixir/Erlang, tirando o load balancer
