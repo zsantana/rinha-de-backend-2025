@@ -1,0 +1,1001 @@
+
+ consumer Pulling 
+ producer Pulling 
+ f18232174bc9 Already exists 
+ deadaebdcba5 Already exists 
+ f18232174bc9 Already exists 
+ e9908b06a48c Already exists 
+ deadaebdcba5 Already exists 
+ e132a9311c51 Pulling fs layer 
+ e9908b06a48c Already exists 
+ c748b25a0d9b Pulling fs layer 
+ c748b25a0d9b Downloading [>                                                  ]   51.7kB/5.139MB
+ e132a9311c51 Downloading [>                                                  ]  50.67kB/3.649MB
+ c748b25a0d9b Downloading [==========================================>        ]  4.399MB/5.139MB
+ c748b25a0d9b Download complete 
+ c748b25a0d9b Extracting [>                                                  ]  65.54kB/5.139MB
+ e132a9311c51 Downloading [=============================>                     ]  2.184MB/3.649MB
+ e132a9311c51 Verifying Checksum 
+ e132a9311c51 Download complete 
+ e132a9311c51 Extracting [>                                                  ]  65.54kB/3.649MB
+ c748b25a0d9b Extracting [=============================================>     ]  4.653MB/5.139MB
+ e132a9311c51 Extracting [==================================================>]  3.649MB/3.649MB
+ e132a9311c51 Extracting [==================================================>]  3.649MB/3.649MB
+ c748b25a0d9b Extracting [==================================================>]  5.139MB/5.139MB
+ e132a9311c51 Pull complete 
+ c748b25a0d9b Pull complete 
+ producer Pulled 
+ consumer Pulled 
+ Network anibalferreira-rust-2_backend  Creating
+ Network anibalferreira-rust-2_backend  Created
+ Container redis  Creating
+ Container postgres  Creating
+ Container postgres  Created
+ Container redis  Created
+ Container consumer  Creating
+ Container consumer  Created
+ Container producer  Creating
+ Container producer  Created
+Attaching to consumer, postgres, producer, redis
+postgres  | The files belonging to this database system will be owned by user "postgres".
+postgres  | This user must also own the server process.
+postgres  | 
+postgres  | The database cluster will be initialized with locale "en_US.utf8".
+postgres  | The default database encoding has accordingly been set to "UTF8".
+postgres  | The default text search configuration will be set to "english".
+postgres  | 
+postgres  | Data page checksums are disabled.
+postgres  | 
+postgres  | fixing permissions on existing directory /var/lib/postgresql/data ... ok
+postgres  | creating subdirectories ... ok
+postgres  | selecting dynamic shared memory implementation ... posix
+redis     | 1:C 12 Aug 2025 19:05:06.823 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+redis     | 1:C 12 Aug 2025 19:05:06.823 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+redis     | 1:C 12 Aug 2025 19:05:06.823 * Redis version=7.4.5, bits=64, commit=00000000, modified=0, pid=1, just started
+redis     | 1:C 12 Aug 2025 19:05:06.823 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf
+redis     | 1:M 12 Aug 2025 19:05:06.823 * monotonic clock: POSIX clock_gettime
+redis     | 1:M 12 Aug 2025 19:05:06.824 * Running mode=standalone, port=6379.
+redis     | 1:M 12 Aug 2025 19:05:06.824 * Server initialized
+redis     | 1:M 12 Aug 2025 19:05:06.824 * Ready to accept connections tcp
+postgres  | selecting default max_connections ... 100
+postgres  | selecting default shared_buffers ... 128MB
+postgres  | selecting default time zone ... Etc/UTC
+postgres  | creating configuration files ... ok
+postgres  | running bootstrap script ... ok
+postgres  | performing post-bootstrap initialization ... ok
+postgres  | syncing data to disk ... ok
+postgres  | 
+postgres  | 
+postgres  | Success. You can now start the database server using:
+postgres  | 
+postgres  |     pg_ctl -D /var/lib/postgresql/data -l logfile start
+postgres  | 
+postgres  | initdb: warning: enabling "trust" authentication for local connections
+postgres  | initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
+postgres  | waiting for server to start....2025-08-12 19:05:08.614 UTC [48] LOG:  starting PostgreSQL 16.2 (Debian 16.2-1.pgdg120+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14) 12.2.0, 64-bit
+postgres  | 2025-08-12 19:05:08.614 UTC [48] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+postgres  | 2025-08-12 19:05:08.617 UTC [51] LOG:  database system was shut down at 2025-08-12 19:05:08 UTC
+postgres  | 2025-08-12 19:05:08.621 UTC [48] LOG:  database system is ready to accept connections
+postgres  |  done
+postgres  | server started
+postgres  | 
+postgres  | /usr/local/bin/docker-entrypoint.sh: running /docker-entrypoint-initdb.d/init-db.sql
+postgres  | CREATE TABLE
+postgres  | CREATE INDEX
+postgres  | CREATE INDEX
+postgres  | 
+postgres  | 
+postgres  | 2025-08-12 19:05:08.896 UTC [48] LOG:  received fast shutdown request
+postgres  | waiting for server to shut down....2025-08-12 19:05:08.896 UTC [48] LOG:  aborting any active transactions
+postgres  | 2025-08-12 19:05:08.899 UTC [48] LOG:  background worker "logical replication launcher" (PID 53) exited with exit code 1
+postgres  | 2025-08-12 19:05:08.899 UTC [49] LOG:  shutting down
+postgres  | 2025-08-12 19:05:09.004 UTC [48] LOG:  database system is shut down
+postgres  |  done
+postgres  | server stopped
+postgres  | 
+postgres  | PostgreSQL init process complete; ready for start up.
+postgres  | 
+postgres  | 2025-08-12 19:05:09.399 UTC [1] LOG:  starting PostgreSQL 16.2 (Debian 16.2-1.pgdg120+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14) 12.2.0, 64-bit
+postgres  | 2025-08-12 19:05:09.399 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+postgres  | 2025-08-12 19:05:09.399 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+postgres  | 2025-08-12 19:05:09.399 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+postgres  | 2025-08-12 19:05:09.402 UTC [63] LOG:  database system was shut down at 2025-08-12 19:05:08 UTC
+postgres  | 2025-08-12 19:05:09.406 UTC [1] LOG:  database system is ready to accept connections
+consumer  | [2m2025-08-12T19:05:12.497558Z[0m [32m INFO[0m Starting payment processor consumer
+consumer  | [2m2025-08-12T19:05:12.498909Z[0m [32m INFO[0m Connected to Redis at redis://redis:6379
+consumer  | [2m2025-08-12T19:05:12.567207Z[0m [32m INFO[0m Successfully connected to PostgreSQL database
+consumer  | [2m2025-08-12T19:05:12.567876Z[0m [32m INFO[0m Connected to Redis at redis://redis:6379 for DLQ consumer
+consumer  | [2m2025-08-12T19:05:12.567891Z[0m [32m INFO[0m Starting to consume messages from queue: payment
+consumer  | [2m2025-08-12T19:05:12.567894Z[0m [32m INFO[0m DLQ configured as: payment_dlq
+consumer  | [2m2025-08-12T19:05:12.567896Z[0m [32m INFO[0m Starting 150 consumer workers for parallel message processing
+consumer  | [2m2025-08-12T19:05:12.568665Z[0m [32m INFO[0m Starting to consume messages from DLQ: payment_dlq
+consumer  | [2m2025-08-12T19:05:12.568685Z[0m [32m INFO[0m Payment processor consumer started, waiting for messages...
+producer  | [2m2025-08-12T19:05:13.189847Z[0m [32m INFO[0m Starting anibalmf1-rust server
+producer  | [2m2025-08-12T19:05:13.190838Z[0m [32m INFO[0m Connected to Redis at redis://redis:6379
+producer  | [2m2025-08-12T19:05:13.195728Z[0m [32m INFO[0m Successfully connected to PostgreSQL database
+producer  | [2m2025-08-12T19:05:13.195905Z[0m [32m INFO[0m Server configured with 1 workers, max 10000 connections per worker
+producer  | [2m2025-08-12T19:05:13.195919Z[0m [32m INFO[0m starting 1 workers
+producer  | [2m2025-08-12T19:05:13.195937Z[0m [32m INFO[0m Actix runtime found; starting in Actix runtime
+producer  | [2m2025-08-12T19:05:13.195942Z[0m [32m INFO[0m starting service: "actix-web-service-0.0.0.0:9999", workers: 1, listening on: 0.0.0.0:9999
+consumer  | [2m2025-08-12T19:05:40.617064Z[0m [33m WARN[0m Default service failing, opening circuit breaker
+consumer  | [2m2025-08-12T19:05:40.617100Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:40.617188Z[0m [33m WARN[0m Default service failing, opening circuit breaker
+consumer  | [2m2025-08-12T19:05:40.617208Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:40.617242Z[0m [33m WARN[0m Default service failing, opening circuit breaker
+consumer  | [2m2025-08-12T19:05:40.617265Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:40.617295Z[0m [33m WARN[0m Default service failing, opening circuit breaker
+consumer  | [2m2025-08-12T19:05:40.617305Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:40.633409Z[0m [33m WARN[0m Default service failing, opening circuit breaker
+consumer  | [2m2025-08-12T19:05:40.633454Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:40.633514Z[0m [33m WARN[0m Default service failing, opening circuit breaker
+consumer  | [2m2025-08-12T19:05:40.633525Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:40.633556Z[0m [33m WARN[0m Default service failing, opening circuit breaker
+consumer  | [2m2025-08-12T19:05:40.633579Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:40.653525Z[0m [33m WARN[0m Default service failing, opening circuit breaker
+consumer  | [2m2025-08-12T19:05:40.653569Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:40.653682Z[0m [33m WARN[0m Default service failing, opening circuit breaker
+consumer  | [2m2025-08-12T19:05:40.653703Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:40.653771Z[0m [33m WARN[0m Default service failing, opening circuit breaker
+consumer  | [2m2025-08-12T19:05:40.653797Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:40.672025Z[0m [33m WARN[0m Default service failing, opening circuit breaker
+consumer  | [2m2025-08-12T19:05:40.672069Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:40.672116Z[0m [33m WARN[0m Default service failing, opening circuit breaker
+consumer  | [2m2025-08-12T19:05:40.672129Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:40.672164Z[0m [33m WARN[0m Default service failing, opening circuit breaker
+consumer  | [2m2025-08-12T19:05:40.672190Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:40.689158Z[0m [33m WARN[0m Default service failing, opening circuit breaker
+consumer  | [2m2025-08-12T19:05:40.689197Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:40.690233Z[0m [33m WARN[0m Default service failing, opening circuit breaker
+consumer  | [2m2025-08-12T19:05:40.690258Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:40.690302Z[0m [33m WARN[0m Default service failing, opening circuit breaker
+consumer  | [2m2025-08-12T19:05:40.690313Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:40.706458Z[0m [33m WARN[0m Default service failing, opening circuit breaker
+consumer  | [2m2025-08-12T19:05:40.706498Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:40.708497Z[0m [33m WARN[0m Default service failing, opening circuit breaker
+consumer  | [2m2025-08-12T19:05:40.708528Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:40.708613Z[0m [33m WARN[0m Default service failing, opening circuit breaker
+consumer  | [2m2025-08-12T19:05:40.708664Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:40.708734Z[0m [33m WARN[0m Default service failing, opening circuit breaker
+consumer  | [2m2025-08-12T19:05:40.708759Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:40.762800Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:40.816936Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:40.817005Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:40.875356Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:40.895479Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:40.895550Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:40.946661Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:40.999851Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:41.091428Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:41.109491Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:41.163790Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:41.163853Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:41.201657Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:41.201734Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:41.274102Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:41.293255Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:41.326379Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:41.363704Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:41.472138Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:41.491266Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:41.491340Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:41.510385Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:41.527501Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:41.527569Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:41.547839Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:41.548785Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:41.582094Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:41.620234Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:41.655688Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:41.672931Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:41.728225Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:41.858433Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:41.910711Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:42.035964Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:42.037038Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:42.056313Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:42.092480Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:42.166890Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:42.180952Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:42.220212Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:42.255312Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:42.257424Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:42.277728Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:42.291827Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:42.345997Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:42.366187Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:42.456446Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:42.493514Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:42.548706Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:42.565898Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:42.584003Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:42.657158Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:42.658277Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:42.692673Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:42.693775Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:42.693845Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:42.783182Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:42.821285Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:42.842405Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:42.912700Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:42.915819Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:43.002152Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:43.039397Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:43.040317Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:43.058433Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:43.156821Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:43.205100Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:43.221190Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:43.259353Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:43.330589Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:43.385832Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:43.405006Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:43.422117Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:43.476434Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:43.515607Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:43.586943Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:43.587007Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:43.588035Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:43.696194Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:43.784950Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:43.823101Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:44.005618Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:44.022762Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:44.099121Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:44.120253Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:44.120344Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:44.157428Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:44.168779Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:44.279987Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:44.333138Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:44.353375Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:44.408710Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:44.516000Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:44.552142Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:44.552204Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:44.662031Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:44.680142Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:44.808415Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:44.808486Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:44.826614Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:44.847704Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:44.862832Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:44.863957Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:44.932092Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:44.932162Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:44.934179Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:45.007539Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:45.007621Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:45.043691Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:45.083022Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:45.122198Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:45.123302Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:45.141455Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:45.159580Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:45.171917Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:45.226076Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:45.261187Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:45.334274Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:45.371566Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:45.410849Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:45.424953Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:45.426023Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:45.443180Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:45.462296Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:45.554494Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:45.573706Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:45.582370Z[0m [32m INFO[0m Processing message from DLQ (retry count: 3)
+consumer  | [2m2025-08-12T19:05:45.583268Z[0m [32m INFO[0m DLQ message processed successfully, continuing to next message
+consumer  | [2m2025-08-12T19:05:45.592806Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:45.681100Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:45.734858Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:45.773142Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:45.791238Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:45.880490Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:45.880560Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:45.934598Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:45.936730Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:45.975982Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:46.026062Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:46.028162Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:46.080769Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:46.084816Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:46.124010Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:46.162130Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:46.192234Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:46.283521Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:46.303733Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:46.393037Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:46.393087Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:46.427265Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:46.427326Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:46.428377Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:46.501777Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:46.517842Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:46.520943Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:46.556098Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:46.609407Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:46.631608Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:46.812136Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:46.830332Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:46.851489Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:46.851585Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:46.864795Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:46.884810Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:46.936942Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:47.011250Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:47.029330Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:47.048422Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:47.193048Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:47.194099Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:47.264839Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:47.285997Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:47.301065Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:47.394350Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:47.414600Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:47.523894Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:47.576159Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:47.647463Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:47.685782Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:47.718867Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:47.761141Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:47.792413Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:47.795505Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:47.833701Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:47.847851Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:47.939362Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:47.940458Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:47.980830Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:48.031929Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:48.156802Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:48.177090Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:48.233185Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:48.245319Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:48.287542Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:48.325703Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:48.359830Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:48.378074Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:48.416396Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:48.431514Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:48.448695Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:48.469920Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:48.469964Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:48.559219Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:48.585020Z[0m [32m INFO[0m Processing message from DLQ (retry count: 3)
+consumer  | [2m2025-08-12T19:05:48.599490Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:48.615661Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:48.650769Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:48.685012Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:48.685034Z[0m [31mERROR[0m Error processing message from DLQ: Process error
+consumer  | [2m2025-08-12T19:05:48.742256Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:48.744275Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:48.764559Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:48.780712Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:48.871055Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:48.886164Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:48.887274Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:48.922440Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:48.926520Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:48.964801Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:48.964860Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:48.977739Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:48.981825Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:49.070256Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:49.131486Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:49.140487Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:49.178750Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:49.234887Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:49.234945Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:49.272413Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:49.289544Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:49.396817Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:49.418079Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:49.450192Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:49.523024Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:49.580286Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:49.638187Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:49.672370Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:49.687446Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:49.688537Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:49.688654Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:49.705725Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:49.707773Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:49.744152Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:49.766322Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:49.784475Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:49.784553Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:49.799703Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:49.818781Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:49.852172Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:49.858277Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:49.943500Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:49.978780Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:50.051105Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:50.071806Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:50.106787Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:50.170959Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:50.248074Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:50.250182Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:50.269414Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:50.344528Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:50.365796Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:50.365856Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:50.381937Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:50.381993Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:50.436417Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:50.453545Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:50.492843Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:50.564445Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:50.603592Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:50.620849Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:50.635303Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:50.640384Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:50.670685Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.609668Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.609790Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.609879Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.610608Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.627808Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.627932Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.628503Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.644411Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.647579Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.647669Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.647706Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.649015Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.662259Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.662347Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.670445Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.670684Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.670888Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.670962Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.679670Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.685952Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.686126Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.686166Z[0m [32m INFO[0m Processing message from DLQ (retry count: 3)
+consumer  | [2m2025-08-12T19:05:51.686264Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.700261Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.700368Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.700432Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.700499Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.702517Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.702841Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.717831Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.717937Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.721010Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.721143Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.721479Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.735172Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.737276Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.738558Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.738825Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.740710Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.740780Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.743875Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.743960Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.754034Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.754139Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.760266Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.760617Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.760806Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.771554Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.772797Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.775049Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.775286Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.775330Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.790191Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.790332Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.790366Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.791613Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.792688Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.807858Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.807927Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.810081Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.810305Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.827338Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.827492Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.827721Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.847930Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.848022Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.848067Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.848099Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.848511Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.863182Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.863338Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.868665Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.868741Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.880892Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.881009Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.881054Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.885974Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.886199Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.886338Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.898176Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.901524Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.901617Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.901919Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.924841Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.924924Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.925008Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.925080Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.925170Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.934917Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.938050Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.938124Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.938245Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.953220Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.955407Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.956622Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.973955Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.974056Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.974107Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.975110Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.975399Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.989521Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.990579Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.993919Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.994080Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.999015Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:51.999102Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.009176Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.012475Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.013787Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.025926Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.036057Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.037331Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.037396Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.037432Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.045582Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.055002Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.055077Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.055126Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.055177Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.072926Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.074037Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.084394Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.084971Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.085111Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.085246Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.085821Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.100061Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.100139Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.100214Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.102293Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.102449Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.102556Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.610540Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.612699Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.625679Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.628767Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.629794Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.630114Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.630560Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.645233Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.648504Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.648661Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.648772Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.649940Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.663266Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.663388Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.671515Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.671764Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.672045Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.672115Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.680917Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.686016Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.686044Z[0m [31mERROR[0m Error processing message from DLQ: Process error
+consumer  | [2m2025-08-12T19:05:52.686141Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.687115Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.687232Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.687374Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.701465Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.701588Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.701677Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.701766Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.702336Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.703526Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.718874Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.718986Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.722910Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.723047Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.723195Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.736080Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.738190Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.739364Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.741558Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.744739Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.744845Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.754797Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.754873Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.760930Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.761016Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.773161Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.775783Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.776289Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.776427Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.790950Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.791509Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.791596Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.791656Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.792672Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.793773Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.807992Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.810074Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.811158Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.828312Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.828393Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.828465Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.829202Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.829383Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.849695Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.850312Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.850404Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.850445Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.850505Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.864856Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.864955Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.868491Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.869041Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.882179Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.882254Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.882308Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.887419Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.887508Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.887557Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.898660Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.899689Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.902841Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.902913Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.903003Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.924951Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.925035Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.926037Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.926122Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.926216Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.935195Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.935753Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.939380Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.939698Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.953877Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.956248Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.959252Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.959340Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.975535Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.975678Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.975730Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.976479Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.976701Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.990989Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.991095Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.995105Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.995360Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.999288Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:52.999437Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.009937Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.010697Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.011025Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.013759Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.014799Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.026090Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.036274Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.038265Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.039015Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.046607Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.055701Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.055774Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.057437Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.057521Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.062201Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.072355Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.073221Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.073521Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.074338Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.086621Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.086732Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.086771Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.086804Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.086855Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.100054Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.100137Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.103191Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.103277Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.103383Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.611512Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.611758Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.612800Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.626580Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.629691Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.633123Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.633213Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.633247Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.646362Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.649603Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.650750Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.650860Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.650929Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.663933Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.664007Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.672091Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.673224Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.673304Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.673351Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.681347Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.687465Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.688606Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.688711Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.688831Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.701865Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.702953Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.703028Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.703134Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.703188Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.704070Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.719157Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.719244Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.723308Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.724425Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.724505Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.737574Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.739740Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.739970Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.740364Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.742083Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.742562Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.745128Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.745215Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.755240Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.761389Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.761476Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.762757Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.772916Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.773513Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.776039Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.776665Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.777793Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.777872Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.792040Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.792122Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.792236Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.793169Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.794311Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.809187Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.810438Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.811428Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.811620Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.829897Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.829962Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.830009Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.830047Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.851356Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.851511Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.851760Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.851882Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.852007Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.866695Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.867008Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.868883Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.868966Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.870697Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.883017Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.888129Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.888213Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.888373Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.899432Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.900547Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.903752Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.903914Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.924959Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.926137Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.926218Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.927238Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.936373Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.940492Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.940590Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.940905Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.954037Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.954564Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.957711Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.960853Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.960934Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.976025Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.976115Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.977123Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.977202Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.992501Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.992599Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.996653Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:53.996737Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.000777Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.000857Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.009909Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.011003Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.011082Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.015139Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.027408Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.037577Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.039582Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.039908Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.040125Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.046887Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.056007Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.058126Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.062226Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.073346Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.073430Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.074461Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.075595Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.087748Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.087907Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.088063Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.088130Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.088164Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.100063Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.100153Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.100977Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.104268Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.104342Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.104494Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.612720Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.612822Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.613932Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.627775Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.630873Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.633967Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.634052Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.634169Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.647138Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.650408Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.651513Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.651598Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.651688Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.664682Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.664768Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.672794Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.673908Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.673990Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.674061Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.682028Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.688149Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.689256Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.689332Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.689391Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.702556Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.703712Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.703792Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.703833Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.704261Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.705121Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.719970Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.720057Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.724091Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.725200Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.725283Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.738337Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.740497Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.741765Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.743882Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.744158Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.744978Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.746108Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.755798Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.756269Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.762376Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.762466Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.763439Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.773592Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.774694Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.776842Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.777050Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.778021Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.778105Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.792294Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.792389Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.793006Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.793408Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.794518Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.795677Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.808160Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.810825Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.810906Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.811970Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.812055Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.829310Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.830131Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.830237Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.830374Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.852551Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.852757Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.853049Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.853097Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.854018Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.868976Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.869053Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.869433Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.871331Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.883464Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.883537Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.883591Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.889581Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.889687Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.889735Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.899910Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.901036Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.903751Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.904178Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.904446Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.925821Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.926825Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.927099Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.927175Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.927231Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.935961Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.941377Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.941453Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.941492Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.954818Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.954911Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.957950Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.961089Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.976221Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.976404Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.977539Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.978676Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.993079Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.993165Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.997205Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:54.997274Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:55.001342Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:55.001546Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:55.010805Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:55.010916Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:55.011167Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:55.014303Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:55.014912Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:55.028234Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:55.038356Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:55.040461Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:55.041573Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:55.041681Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:55.047727Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:55.056427Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:55.056830Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:55.057930Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:55.058537Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:55.062079Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:55.074383Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:55.075477Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:55.076597Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:55.088762Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:55.088853Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:55.088924Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:55.089175Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:55.089247Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:55.100017Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:55.100099Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:55.101138Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:55.105281Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:55.105360Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:55.105411Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:55.613764Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:55.613882Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:55.614097Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:55.614793Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:55.628085Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:55.631110Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:55.634268Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:55.634376Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:55.647465Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:55.651551Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:55.652860Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:55.665499Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:55.665616Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:55.673585Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:55.674649Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:55.674736Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:55.674828Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:55.682886Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:55.687567Z[0m [32m INFO[0m Processing message from DLQ (retry count: 3)
+consumer  | [2m2025-08-12T19:05:55.688187Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:55.690235Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:55.690323Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+consumer  | [2m2025-08-12T19:05:55.703621Z[0m [31mERROR[0m Error processing payment on payment_processor:  - status: 500
+log truncated at line 1000
