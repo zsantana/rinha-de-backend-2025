@@ -1,0 +1,742 @@
+
+ payment-processor-mid-1 Pulling 
+ payment-processor-mid-2 Pulling 
+ payment-processor-mid-health-check Pulling 
+ 0368fd46e3c6 Already exists 
+ 0670596c9dd1 Already exists 
+ b2683b5bf4e2 Already exists 
+ 4a805e037314 Already exists 
+ 6f730f3f37cf Already exists 
+ f7ee2846e40e Already exists 
+ 9280d0ff8f04 Pulling fs layer 
+ 82668ae8b18f Pulling fs layer 
+ 0368fd46e3c6 Already exists 
+ 0670596c9dd1 Already exists 
+ b2683b5bf4e2 Already exists 
+ 4a805e037314 Already exists 
+ 6f730f3f37cf Already exists 
+ 0368fd46e3c6 Already exists 
+ 0670596c9dd1 Already exists 
+ f7ee2846e40e Already exists 
+ b2683b5bf4e2 Already exists 
+ 9280d0ff8f04 Pulling fs layer 
+ 82668ae8b18f Pulling fs layer 
+ 4a805e037314 Already exists 
+ 6f730f3f37cf Already exists 
+ f7ee2846e40e Already exists 
+ 9280d0ff8f04 Pulling fs layer 
+ c7c08fcd2452 Pulling fs layer 
+ 9280d0ff8f04 Verifying Checksum 
+ 9280d0ff8f04 Download complete 
+ 9280d0ff8f04 Downloading [==================================================>]      93B/93B
+ 9280d0ff8f04 Verifying Checksum 
+ 9280d0ff8f04 Download complete 
+ 9280d0ff8f04 Downloading [==================================================>]      93B/93B
+ 9280d0ff8f04 Download complete 
+ 9280d0ff8f04 Extracting [==================================================>]      93B/93B
+ 9280d0ff8f04 Extracting [==================================================>]      93B/93B
+ 9280d0ff8f04 Extracting [==================================================>]      93B/93B
+ 9280d0ff8f04 Extracting [==================================================>]      93B/93B
+ 9280d0ff8f04 Extracting [==================================================>]      93B/93B
+ 9280d0ff8f04 Extracting [==================================================>]      93B/93B
+ 9280d0ff8f04 Pull complete 
+ 9280d0ff8f04 Pull complete 
+ 9280d0ff8f04 Pull complete 
+ c7c08fcd2452 Downloading [>                                                  ]  16.38kB/930.6kB
+ c7c08fcd2452 Downloading [==================================================>]  930.6kB/930.6kB
+ c7c08fcd2452 Verifying Checksum 
+ c7c08fcd2452 Download complete 
+ c7c08fcd2452 Extracting [=>                                                 ]  32.77kB/930.6kB
+ 82668ae8b18f Downloading [>                                                  ]  33.27kB/2.318MB
+ 82668ae8b18f Downloading [>                                                  ]  33.27kB/2.318MB
+ c7c08fcd2452 Extracting [==================================================>]  930.6kB/930.6kB
+ c7c08fcd2452 Extracting [==================================================>]  930.6kB/930.6kB
+ c7c08fcd2452 Pull complete 
+ payment-processor-mid-health-check Pulled 
+ 82668ae8b18f Downloading [==============================================>    ]  2.167MB/2.318MB
+ 82668ae8b18f Downloading [==============================================>    ]  2.167MB/2.318MB
+ 82668ae8b18f Verifying Checksum 
+ 82668ae8b18f Download complete 
+ 82668ae8b18f Extracting [>                                                  ]  32.77kB/2.318MB
+ 82668ae8b18f Downloading [==================================================>]  2.318MB/2.318MB
+ 82668ae8b18f Verifying Checksum 
+ 82668ae8b18f Download complete 
+ 82668ae8b18f Extracting [>                                                  ]  32.77kB/2.318MB
+ 82668ae8b18f Extracting [==================================================>]  2.318MB/2.318MB
+ 82668ae8b18f Extracting [==================================================>]  2.318MB/2.318MB
+ 82668ae8b18f Extracting [==================================================>]  2.318MB/2.318MB
+ 82668ae8b18f Extracting [==================================================>]  2.318MB/2.318MB
+ 82668ae8b18f Pull complete 
+ 82668ae8b18f Pull complete 
+ payment-processor-mid-2 Pulled 
+ payment-processor-mid-1 Pulled 
+ Network fhgm-dani-ed_backend  Creating
+ Network fhgm-dani-ed_backend  Created
+ Container payment-processor-mid-health-check  Creating
+ Container db  Creating
+ Container payment-processor-mid-health-check  Created
+ Container db  Created
+ Container payment-processor-mid-1  Creating
+ Container payment-processor-mid-2  Creating
+ Container payment-processor-mid-1  Created
+ Container payment-processor-mid-2  Created
+ Container payment-processor-lb  Creating
+ Container payment-processor-lb  Created
+Attaching to db, payment-processor-lb, payment-processor-mid-1, payment-processor-mid-2, payment-processor-mid-health-check
+db  | The files belonging to this database system will be owned by user "postgres".
+db  | This user must also own the server process.
+db  | 
+db  | The database cluster will be initialized with locale "en_US.utf8".
+db  | The default database encoding has accordingly been set to "UTF8".
+db  | The default text search configuration will be set to "english".
+db  | 
+db  | Data page checksums are disabled.
+db  | 
+db  | fixing permissions on existing directory /var/lib/postgresql/data ... ok
+db  | creating subdirectories ... ok
+db  | selecting dynamic shared memory implementation ... posix
+db  | selecting default "max_connections" ... 100
+db  | selecting default "shared_buffers" ... 128MB
+db  | selecting default time zone ... Etc/UTC
+db  | creating configuration files ... ok
+payment-processor-lb  | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+payment-processor-lb  | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+payment-processor-lb  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+payment-processor-lb  | 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+payment-processor-lb  | 10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
+payment-processor-lb  | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+payment-processor-lb  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+payment-processor-lb  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+payment-processor-lb  | /docker-entrypoint.sh: Configuration complete; ready for start up
+db                    | running bootstrap script ... ok
+payment-processor-mid-1  | warn: Microsoft.AspNetCore.Hosting.Diagnostics[15]
+payment-processor-mid-1  |       Overriding HTTP_PORTS '8080' and HTTPS_PORTS ''. Binding to values defined by URLS instead 'http://*:80'.
+payment-processor-mid-health-check  | warn: Microsoft.AspNetCore.Hosting.Diagnostics[15]
+payment-processor-mid-health-check  |       Overriding HTTP_PORTS '8080' and HTTPS_PORTS ''. Binding to values defined by URLS instead 'http://*:80'.
+payment-processor-mid-2             | warn: Microsoft.AspNetCore.Hosting.Diagnostics[15]
+payment-processor-mid-2             |       Overriding HTTP_PORTS '8080' and HTTPS_PORTS ''. Binding to values defined by URLS instead 'http://*:80'.
+payment-processor-mid-1             | fail: Microsoft.Extensions.Hosting.Internal.Host[9]
+payment-processor-mid-1             |       BackgroundService failed
+payment-processor-mid-1             |       System.Net.Http.HttpRequestException: Name does not resolve (host.docker.internal:10002)
+payment-processor-mid-1             |        ---> System.Net.Sockets.SocketException (0xFFFDFFFF): Name does not resolve
+payment-processor-mid-1             |          at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+payment-processor-mid-1             |          at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+payment-processor-mid-1             |          at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+payment-processor-mid-1             |          at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+payment-processor-mid-1             |          --- End of inner exception stack trace ---
+payment-processor-mid-1             |          at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+payment-processor-mid-1             |          at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+payment-processor-mid-1             |          at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+payment-processor-mid-1             |          at System.Net.Http.HttpConnectionPool.InjectNewHttp11ConnectionAsync(QueueItem queueItem)
+payment-processor-mid-1             |          at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+payment-processor-mid-1             |          at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+payment-processor-mid-1             |          at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+payment-processor-mid-1             |          at Microsoft.AspNetCore.Http.Connections.Client.Internal.AccessTokenHttpMessageHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+payment-processor-mid-1             |          at Microsoft.AspNetCore.Http.Connections.Client.Internal.LoggingHttpMessageHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+payment-processor-mid-1             |          at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+payment-processor-mid-1             |          at Microsoft.AspNetCore.Http.Connections.Client.HttpConnection.NegotiateAsync(Uri url, HttpClient httpClient, ILogger logger, CancellationToken cancellationToken)
+payment-processor-mid-1             |          at Microsoft.AspNetCore.Http.Connections.Client.HttpConnection.GetNegotiationResponseAsync(Uri uri, CancellationToken cancellationToken)
+payment-processor-mid-1             |          at Microsoft.AspNetCore.Http.Connections.Client.HttpConnection.SelectAndStartTransport(TransferFormat transferFormat, CancellationToken cancellationToken)
+payment-processor-mid-1             |          at Microsoft.AspNetCore.Http.Connections.Client.HttpConnection.StartAsyncCore(TransferFormat transferFormat, CancellationToken cancellationToken)
+payment-processor-mid-1             |          at Microsoft.AspNetCore.Http.Connections.Client.HttpConnection.StartAsync(TransferFormat transferFormat, CancellationToken cancellationToken)
+payment-processor-mid-1             |          at Microsoft.AspNetCore.Http.Connections.Client.HttpConnectionFactory.ConnectAsync(EndPoint endPoint, CancellationToken cancellationToken)
+payment-processor-mid-1             |          at Microsoft.AspNetCore.Http.Connections.Client.HttpConnectionFactory.ConnectAsync(EndPoint endPoint, CancellationToken cancellationToken)
+payment-processor-mid-1             |          at Microsoft.AspNetCore.SignalR.Client.HubConnection.StartAsyncCore(CancellationToken cancellationToken)
+payment-processor-mid-1             |          at Microsoft.AspNetCore.SignalR.Client.HubConnection.StartAsyncInner(CancellationToken cancellationToken)
+payment-processor-mid-1             |          at Microsoft.AspNetCore.SignalR.Client.HubConnection.StartAsync(CancellationToken cancellationToken)
+payment-processor-mid-1             |          at PaymentProcessorMiddleware.Infrastructure.SignalHub.SignalRWorker.ExecuteAsync(CancellationToken stoppingToken) in /src/PaymentProcessorMiddleware/Infrastructure/SignalHub/SignalRWorker.cs:line 16
+payment-processor-mid-1             |          at Microsoft.Extensions.Hosting.Internal.Host.TryExecuteBackgroundServiceAsync(BackgroundService backgroundService)
+payment-processor-mid-1             | crit: Microsoft.Extensions.Hosting.Internal.Host[10]
+payment-processor-mid-1             |       The HostOptions.BackgroundServiceExceptionBehavior is configured to StopHost. A BackgroundService has thrown an unhandled exception, and the IHost instance is stopping. To avoid this behavior, configure this to Ignore; however the BackgroundService will not be restarted.
+payment-processor-mid-1             |       System.Net.Http.HttpRequestException: Name does not resolve (host.docker.internal:10002)
+payment-processor-mid-1             |        ---> System.Net.Sockets.SocketException (0xFFFDFFFF): Name does not resolve
+payment-processor-mid-1             |          at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+payment-processor-mid-1             |          at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+payment-processor-mid-1             |          at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+payment-processor-mid-1             |          at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+payment-processor-mid-1             |          --- End of inner exception stack trace ---
+payment-processor-mid-1             |          at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+payment-processor-mid-1             |          at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+payment-processor-mid-1             |          at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+payment-processor-mid-1             |          at System.Net.Http.HttpConnectionPool.InjectNewHttp11ConnectionAsync(QueueItem queueItem)
+payment-processor-mid-1             |          at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+payment-processor-mid-1             |          at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+payment-processor-mid-1             |          at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+payment-processor-mid-1             |          at Microsoft.AspNetCore.Http.Connections.Client.Internal.AccessTokenHttpMessageHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+payment-processor-mid-1             |          at Microsoft.AspNetCore.Http.Connections.Client.Internal.LoggingHttpMessageHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+payment-processor-mid-1             |          at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+payment-processor-mid-1             |          at Microsoft.AspNetCore.Http.Connections.Client.HttpConnection.NegotiateAsync(Uri url, HttpClient httpClient, ILogger logger, CancellationToken cancellationToken)
+payment-processor-mid-1             |          at Microsoft.AspNetCore.Http.Connections.Client.HttpConnection.GetNegotiationResponseAsync(Uri uri, CancellationToken cancellationToken)
+payment-processor-mid-1             |          at Microsoft.AspNetCore.Http.Connections.Client.HttpConnection.SelectAndStartTransport(TransferFormat transferFormat, CancellationToken cancellationToken)
+payment-processor-mid-1             |          at Microsoft.AspNetCore.Http.Connections.Client.HttpConnection.StartAsyncCore(TransferFormat transferFormat, CancellationToken cancellationToken)
+payment-processor-mid-1             |          at Microsoft.AspNetCore.Http.Connections.Client.HttpConnection.StartAsync(TransferFormat transferFormat, CancellationToken cancellationToken)
+payment-processor-mid-1             |          at Microsoft.AspNetCore.Http.Connections.Client.HttpConnectionFactory.ConnectAsync(EndPoint endPoint, CancellationToken cancellationToken)
+payment-processor-mid-1             |          at Microsoft.AspNetCore.Http.Connections.Client.HttpConnectionFactory.ConnectAsync(EndPoint endPoint, CancellationToken cancellationToken)
+payment-processor-mid-1             |          at Microsoft.AspNetCore.SignalR.Client.HubConnection.StartAsyncCore(CancellationToken cancellationToken)
+payment-processor-mid-1             |          at Microsoft.AspNetCore.SignalR.Client.HubConnection.StartAsyncInner(CancellationToken cancellationToken)
+payment-processor-mid-1             |          at Microsoft.AspNetCore.SignalR.Client.HubConnection.StartAsync(CancellationToken cancellationToken)
+payment-processor-mid-1             |          at PaymentProcessorMiddleware.Infrastructure.SignalHub.SignalRWorker.ExecuteAsync(CancellationToken stoppingToken) in /src/PaymentProcessorMiddleware/Infrastructure/SignalHub/SignalRWorker.cs:line 16
+payment-processor-mid-1             |          at Microsoft.Extensions.Hosting.Internal.Host.TryExecuteBackgroundServiceAsync(BackgroundService backgroundService)
+payment-processor-mid-1             | info: Microsoft.Hosting.Lifetime[0]
+payment-processor-mid-1             |       Application is shutting down...
+payment-processor-mid-1             | fail: Microsoft.Extensions.Hosting.Internal.Host[11]
+payment-processor-mid-1             |       Hosting failed to start
+payment-processor-mid-1             |       System.Threading.Tasks.TaskCanceledException: A task was canceled.
+payment-processor-mid-1             |          at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+payment-processor-mid-1             |          at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+payment-processor-mid-1             |          at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+payment-processor-mid-1             |          at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__14_1(IHostedService service, CancellationToken token)
+payment-processor-mid-1             |          at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+payment-processor-mid-1             | Unhandled exception. System.Threading.Tasks.TaskCanceledException: A task was canceled.
+payment-processor-mid-1             |    at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+payment-processor-mid-1             |    at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+payment-processor-mid-1             |    at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+payment-processor-mid-1             |    at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__14_1(IHostedService service, CancellationToken token)
+payment-processor-mid-1             |    at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+payment-processor-mid-1             |    at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+payment-processor-mid-1             |    at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+payment-processor-mid-1             |    at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+payment-processor-mid-1             |    at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+payment-processor-mid-1             |    at Program.<Main>$(String[] args) in /src/PaymentProcessorMiddleware/Program.cs:line 19
+payment-processor-mid-2             | fail: Microsoft.Extensions.Hosting.Internal.Host[9]
+payment-processor-mid-2             |       BackgroundService failed
+payment-processor-mid-2             |       System.Net.Http.HttpRequestException: Name does not resolve (host.docker.internal:10002)
+payment-processor-mid-2             |        ---> System.Net.Sockets.SocketException (0xFFFDFFFF): Name does not resolve
+payment-processor-mid-2             |          at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+payment-processor-mid-2             |          at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+payment-processor-mid-2             |          at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+payment-processor-mid-2             |          at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+payment-processor-mid-2             |          --- End of inner exception stack trace ---
+payment-processor-mid-2             |          at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+payment-processor-mid-2             |          at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+payment-processor-mid-2             |          at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+payment-processor-mid-2             |          at System.Net.Http.HttpConnectionPool.InjectNewHttp11ConnectionAsync(QueueItem queueItem)
+payment-processor-mid-2             |          at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+payment-processor-mid-2             |          at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+payment-processor-mid-2             |          at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+payment-processor-mid-2             |          at Microsoft.AspNetCore.Http.Connections.Client.Internal.AccessTokenHttpMessageHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+payment-processor-mid-2             |          at Microsoft.AspNetCore.Http.Connections.Client.Internal.LoggingHttpMessageHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+payment-processor-mid-2             |          at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+payment-processor-mid-2             |          at Microsoft.AspNetCore.Http.Connections.Client.HttpConnection.NegotiateAsync(Uri url, HttpClient httpClient, ILogger logger, CancellationToken cancellationToken)
+payment-processor-mid-2             |          at Microsoft.AspNetCore.Http.Connections.Client.HttpConnection.GetNegotiationResponseAsync(Uri uri, CancellationToken cancellationToken)
+payment-processor-mid-2             |          at Microsoft.AspNetCore.Http.Connections.Client.HttpConnection.SelectAndStartTransport(TransferFormat transferFormat, CancellationToken cancellationToken)
+payment-processor-mid-2             |          at Microsoft.AspNetCore.Http.Connections.Client.HttpConnection.StartAsyncCore(TransferFormat transferFormat, CancellationToken cancellationToken)
+payment-processor-mid-2             |          at Microsoft.AspNetCore.Http.Connections.Client.HttpConnection.StartAsync(TransferFormat transferFormat, CancellationToken cancellationToken)
+payment-processor-mid-2             |          at Microsoft.AspNetCore.Http.Connections.Client.HttpConnectionFactory.ConnectAsync(EndPoint endPoint, CancellationToken cancellationToken)
+payment-processor-mid-2             |          at Microsoft.AspNetCore.Http.Connections.Client.HttpConnectionFactory.ConnectAsync(EndPoint endPoint, CancellationToken cancellationToken)
+payment-processor-mid-2             |          at Microsoft.AspNetCore.SignalR.Client.HubConnection.StartAsyncCore(CancellationToken cancellationToken)
+payment-processor-mid-2             |          at Microsoft.AspNetCore.SignalR.Client.HubConnection.StartAsyncInner(CancellationToken cancellationToken)
+payment-processor-mid-2             |          at Microsoft.AspNetCore.SignalR.Client.HubConnection.StartAsync(CancellationToken cancellationToken)
+payment-processor-mid-2             |          at PaymentProcessorMiddleware.Infrastructure.SignalHub.SignalRWorker.ExecuteAsync(CancellationToken stoppingToken) in /src/PaymentProcessorMiddleware/Infrastructure/SignalHub/SignalRWorker.cs:line 16
+payment-processor-mid-2             |          at Microsoft.Extensions.Hosting.Internal.Host.TryExecuteBackgroundServiceAsync(BackgroundService backgroundService)
+payment-processor-mid-2             | crit: Microsoft.Extensions.Hosting.Internal.Host[10]
+payment-processor-mid-2             |       The HostOptions.BackgroundServiceExceptionBehavior is configured to StopHost. A BackgroundService has thrown an unhandled exception, and the IHost instance is stopping. To avoid this behavior, configure this to Ignore; however the BackgroundService will not be restarted.
+payment-processor-mid-2             |       System.Net.Http.HttpRequestException: Name does not resolve (host.docker.internal:10002)
+payment-processor-mid-2             |        ---> System.Net.Sockets.SocketException (0xFFFDFFFF): Name does not resolve
+payment-processor-mid-2             |          at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+payment-processor-mid-2             |          at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+payment-processor-mid-2             |          at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+payment-processor-mid-2             |          at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+payment-processor-mid-2             |          --- End of inner exception stack trace ---
+payment-processor-mid-2             |          at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+payment-processor-mid-2             |          at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+payment-processor-mid-2             |          at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+payment-processor-mid-2             |          at System.Net.Http.HttpConnectionPool.InjectNewHttp11ConnectionAsync(QueueItem queueItem)
+payment-processor-mid-2             |          at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+payment-processor-mid-2             |          at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+payment-processor-mid-2             |          at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+payment-processor-mid-2             |          at Microsoft.AspNetCore.Http.Connections.Client.Internal.AccessTokenHttpMessageHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+payment-processor-mid-2             |          at Microsoft.AspNetCore.Http.Connections.Client.Internal.LoggingHttpMessageHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+payment-processor-mid-2             |          at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+payment-processor-mid-2             |          at Microsoft.AspNetCore.Http.Connections.Client.HttpConnection.NegotiateAsync(Uri url, HttpClient httpClient, ILogger logger, CancellationToken cancellationToken)
+payment-processor-mid-2             |          at Microsoft.AspNetCore.Http.Connections.Client.HttpConnection.GetNegotiationResponseAsync(Uri uri, CancellationToken cancellationToken)
+payment-processor-mid-2             |          at Microsoft.AspNetCore.Http.Connections.Client.HttpConnection.SelectAndStartTransport(TransferFormat transferFormat, CancellationToken cancellationToken)
+payment-processor-mid-2             |          at Microsoft.AspNetCore.Http.Connections.Client.HttpConnection.StartAsyncCore(TransferFormat transferFormat, CancellationToken cancellationToken)
+payment-processor-mid-2             |          at Microsoft.AspNetCore.Http.Connections.Client.HttpConnection.StartAsync(TransferFormat transferFormat, CancellationToken cancellationToken)
+payment-processor-mid-2             |          at Microsoft.AspNetCore.Http.Connections.Client.HttpConnectionFactory.ConnectAsync(EndPoint endPoint, CancellationToken cancellationToken)
+payment-processor-mid-2             |          at Microsoft.AspNetCore.Http.Connections.Client.HttpConnectionFactory.ConnectAsync(EndPoint endPoint, CancellationToken cancellationToken)
+payment-processor-mid-2             |          at Microsoft.AspNetCore.SignalR.Client.HubConnection.StartAsyncCore(CancellationToken cancellationToken)
+payment-processor-mid-2             |          at Microsoft.AspNetCore.SignalR.Client.HubConnection.StartAsyncInner(CancellationToken cancellationToken)
+payment-processor-mid-2             |          at Microsoft.AspNetCore.SignalR.Client.HubConnection.StartAsync(CancellationToken cancellationToken)
+payment-processor-mid-2             |          at PaymentProcessorMiddleware.Infrastructure.SignalHub.SignalRWorker.ExecuteAsync(CancellationToken stoppingToken) in /src/PaymentProcessorMiddleware/Infrastructure/SignalHub/SignalRWorker.cs:line 16
+payment-processor-mid-2             |          at Microsoft.Extensions.Hosting.Internal.Host.TryExecuteBackgroundServiceAsync(BackgroundService backgroundService)
+payment-processor-mid-2             | info: Microsoft.Hosting.Lifetime[0]
+payment-processor-mid-2             |       Application is shutting down...
+payment-processor-mid-health-check  | info: Microsoft.Hosting.Lifetime[14]
+payment-processor-mid-health-check  |       Now listening on: http://[::]:80
+payment-processor-mid-health-check  | info: Microsoft.Hosting.Lifetime[0]
+payment-processor-mid-health-check  |       Application started. Press Ctrl+C to shut down.
+payment-processor-mid-health-check  | info: Microsoft.Hosting.Lifetime[0]
+payment-processor-mid-health-check  |       Hosting environment: Production
+payment-processor-mid-health-check  | info: Microsoft.Hosting.Lifetime[0]
+payment-processor-mid-health-check  |       Content root path: /app
+payment-processor-mid-2             | fail: Microsoft.Extensions.Hosting.Internal.Host[11]
+payment-processor-mid-2             |       Hosting failed to start
+payment-processor-mid-2             |       System.Threading.Tasks.TaskCanceledException: A task was canceled.
+payment-processor-mid-2             |          at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+payment-processor-mid-2             |          at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+payment-processor-mid-2             |          at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+payment-processor-mid-2             |          at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__14_1(IHostedService service, CancellationToken token)
+payment-processor-mid-2             |          at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+payment-processor-mid-2             | Unhandled exception. System.Threading.Tasks.TaskCanceledException: A task was canceled.
+payment-processor-mid-2             |    at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+payment-processor-mid-2             |    at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+payment-processor-mid-2             |    at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+payment-processor-mid-2             |    at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__14_1(IHostedService service, CancellationToken token)
+payment-processor-mid-2             |    at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+payment-processor-mid-2             |    at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+payment-processor-mid-2             |    at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+payment-processor-mid-2             |    at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+payment-processor-mid-2             |    at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+payment-processor-mid-2             |    at Program.<Main>$(String[] args) in /src/PaymentProcessorMiddleware/Program.cs:line 19
+[Kpayment-processor-mid-1 exited with code 139
+[Kpayment-processor-mid-2 exited with code 139
+db                                  | performing post-bootstrap initialization ... ok
+db                                  | initdb: warning: enabling "trust" authentication for local connections
+db                                  | initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
+db                                  | syncing data to disk ... ok
+db                                  | 
+db                                  | 
+db                                  | Success. You can now start the database server using:
+db                                  | 
+db                                  |     pg_ctl -D /var/lib/postgresql/data -l logfile start
+db                                  | 
+db                                  | waiting for server to start....2025-08-12 21:12:18.951 UTC [47] LOG:  starting PostgreSQL 17.5 (Debian 17.5-1.pgdg120+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14) 12.2.0, 64-bit
+db                                  | 2025-08-12 21:12:18.951 UTC [47] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db                                  | 2025-08-12 21:12:18.955 UTC [50] LOG:  database system was shut down at 2025-08-12 21:12:18 UTC
+db                                  | 2025-08-12 21:12:18.960 UTC [47] LOG:  database system is ready to accept connections
+db                                  |  done
+db                                  | server started
+db                                  | CREATE DATABASE
+db                                  | 
+db                                  | 
+db                                  | /usr/local/bin/docker-entrypoint.sh: running /docker-entrypoint-initdb.d/setup.sql
+db                                  | CREATE TABLE
+db                                  | CREATE INDEX
+db                                  | 
+db                                  | 
+db                                  | waiting for server to shut down...2025-08-12 21:12:19.552 UTC [47] LOG:  received fast shutdown request
+db                                  | .2025-08-12 21:12:19.552 UTC [47] LOG:  aborting any active transactions
+db                                  | 2025-08-12 21:12:19.554 UTC [47] LOG:  background worker "logical replication launcher" (PID 53) exited with exit code 1
+db                                  | 2025-08-12 21:12:19.555 UTC [48] LOG:  shutting down
+db                                  | 2025-08-12 21:12:19.555 UTC [48] LOG:  checkpoint starting: shutdown immediate
+db                                  | 2025-08-12 21:12:19.645 UTC [48] LOG:  checkpoint complete: wrote 923 buffers (5.6%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.089 s, sync=0.001 s, total=0.090 s; sync files=0, longest=0.000 s, average=0.000 s; distance=4255 kB, estimate=4255 kB; lsn=0/190CD68, redo lsn=0/190CD68
+db                                  | 2025-08-12 21:12:19.654 UTC [47] LOG:  database system is shut down
+db                                  |  done
+db                                  | server stopped
+db                                  | 
+db                                  | PostgreSQL init process complete; ready for start up.
+db                                  | 
+db                                  | 2025-08-12 21:12:19.776 UTC [1] LOG:  starting PostgreSQL 17.5 (Debian 17.5-1.pgdg120+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14) 12.2.0, 64-bit
+db                                  | 2025-08-12 21:12:19.776 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+db                                  | 2025-08-12 21:12:19.776 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+db                                  | 2025-08-12 21:12:19.776 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db                                  | 2025-08-12 21:12:19.779 UTC [65] LOG:  database system was shut down at 2025-08-12 21:12:19 UTC
+db                                  | 2025-08-12 21:12:19.784 UTC [1] LOG:  database system is ready to accept connections
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+payment-processor-mid-health-check  |       Start processing HTTP request GET http://payment-processor-default:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+payment-processor-mid-health-check  |       Sending HTTP request GET http://payment-processor-default:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+payment-processor-mid-health-check  |       Start processing HTTP request GET http://payment-processor-fallback:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+payment-processor-mid-health-check  |       Sending HTTP request GET http://payment-processor-fallback:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+payment-processor-mid-health-check  |       Received HTTP response headers after 104.1075ms - 200
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+payment-processor-mid-health-check  |       Received HTTP response headers after 200.0261ms - 200
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+payment-processor-mid-health-check  |       End processing HTTP request after 306.771ms - 200
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+payment-processor-mid-health-check  |       End processing HTTP request after 206.8802ms - 200
+payment-processor-mid-health-check  | response: False - 0 | url: http://payment-processor-fallback:8080/payments/service-health
+payment-processor-mid-health-check  | response: False - 0 | url: http://payment-processor-default:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+payment-processor-mid-health-check  |       Start processing HTTP request GET http://payment-processor-default:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+payment-processor-mid-health-check  |       Sending HTTP request GET http://payment-processor-default:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+payment-processor-mid-health-check  |       Start processing HTTP request GET http://payment-processor-fallback:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+payment-processor-mid-health-check  |       Sending HTTP request GET http://payment-processor-fallback:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+payment-processor-mid-health-check  |       Received HTTP response headers after 1.4539ms - 200
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+payment-processor-mid-health-check  |       End processing HTTP request after 1.5619ms - 200
+payment-processor-mid-health-check  | response: False - 0 | url: http://payment-processor-default:8080/payments/service-health
+payment-processor-mid-health-check  | response: False - 0 | url: http://payment-processor-fallback:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+payment-processor-mid-health-check  |       Received HTTP response headers after 0.3462ms - 200
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+payment-processor-mid-health-check  |       End processing HTTP request after 0.4302ms - 200
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+payment-processor-mid-health-check  |       Start processing HTTP request GET http://payment-processor-default:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+payment-processor-mid-health-check  |       Sending HTTP request GET http://payment-processor-default:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+payment-processor-mid-health-check  |       Start processing HTTP request GET http://payment-processor-fallback:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+payment-processor-mid-health-check  |       Sending HTTP request GET http://payment-processor-fallback:8080/payments/service-health
+payment-processor-mid-health-check  | response: False - 0 | url: http://payment-processor-default:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+payment-processor-mid-health-check  |       Received HTTP response headers after 0.7615ms - 200
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+payment-processor-mid-health-check  |       End processing HTTP request after 0.8929ms - 200
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+payment-processor-mid-health-check  |       Received HTTP response headers after 0.5167ms - 200
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+payment-processor-mid-health-check  |       End processing HTTP request after 0.6062ms - 200
+payment-processor-mid-health-check  | response: False - 0 | url: http://payment-processor-fallback:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+payment-processor-mid-health-check  |       Start processing HTTP request GET http://payment-processor-default:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+payment-processor-mid-health-check  |       Sending HTTP request GET http://payment-processor-default:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+payment-processor-mid-health-check  |       Start processing HTTP request GET http://payment-processor-fallback:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+payment-processor-mid-health-check  |       Sending HTTP request GET http://payment-processor-fallback:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+payment-processor-mid-health-check  |       Received HTTP response headers after 0.9477ms - 200
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+payment-processor-mid-health-check  |       End processing HTTP request after 1.0677ms - 200
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+payment-processor-mid-health-check  |       Received HTTP response headers after 0.6587ms - 200
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+payment-processor-mid-health-check  |       End processing HTTP request after 0.7574ms - 200
+payment-processor-mid-health-check  | response: False - 0 | url: http://payment-processor-fallback:8080/payments/service-health
+payment-processor-mid-health-check  | response: False - 0 | url: http://payment-processor-default:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+payment-processor-mid-health-check  |       Start processing HTTP request GET http://payment-processor-default:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+payment-processor-mid-health-check  |       Sending HTTP request GET http://payment-processor-default:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+payment-processor-mid-health-check  |       Start processing HTTP request GET http://payment-processor-fallback:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+payment-processor-mid-health-check  |       Sending HTTP request GET http://payment-processor-fallback:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+payment-processor-mid-health-check  |       Received HTTP response headers after 0.4474ms - 200
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+payment-processor-mid-health-check  |       End processing HTTP request after 0.5325ms - 200
+payment-processor-mid-health-check  | response: False - 0 | url: http://payment-processor-fallback:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+payment-processor-mid-health-check  |       Received HTTP response headers after 0.9499ms - 200
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+payment-processor-mid-health-check  |       End processing HTTP request after 1.1637ms - 200
+payment-processor-mid-health-check  | response: False - 0 | url: http://payment-processor-default:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+payment-processor-mid-health-check  |       Start processing HTTP request GET http://payment-processor-default:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+payment-processor-mid-health-check  |       Sending HTTP request GET http://payment-processor-default:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+payment-processor-mid-health-check  |       Start processing HTTP request GET http://payment-processor-fallback:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+payment-processor-mid-health-check  |       Sending HTTP request GET http://payment-processor-fallback:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+payment-processor-mid-health-check  |       Received HTTP response headers after 0.6618ms - 200
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+payment-processor-mid-health-check  |       End processing HTTP request after 0.7425ms - 200
+payment-processor-mid-health-check  | response: False - 0 | url: http://payment-processor-fallback:8080/payments/service-health
+payment-processor-mid-health-check  | response: False - 0 | url: http://payment-processor-default:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+payment-processor-mid-health-check  |       Received HTTP response headers after 0.9071ms - 200
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+payment-processor-mid-health-check  |       End processing HTTP request after 1.4122ms - 200
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+payment-processor-mid-health-check  |       Start processing HTTP request GET http://payment-processor-default:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+payment-processor-mid-health-check  |       Sending HTTP request GET http://payment-processor-default:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+payment-processor-mid-health-check  |       Start processing HTTP request GET http://payment-processor-fallback:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+payment-processor-mid-health-check  |       Sending HTTP request GET http://payment-processor-fallback:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+payment-processor-mid-health-check  |       Received HTTP response headers after 0.6232ms - 200
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+payment-processor-mid-health-check  |       End processing HTTP request after 0.7456ms - 200
+payment-processor-mid-health-check  | response: False - 0 | url: http://payment-processor-default:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+payment-processor-mid-health-check  |       Received HTTP response headers after 79.5318ms - 200
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+payment-processor-mid-health-check  |       End processing HTTP request after 79.6095ms - 200
+payment-processor-mid-health-check  | response: False - 0 | url: http://payment-processor-fallback:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+payment-processor-mid-health-check  |       Start processing HTTP request GET http://payment-processor-default:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+payment-processor-mid-health-check  |       Sending HTTP request GET http://payment-processor-default:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+payment-processor-mid-health-check  |       Received HTTP response headers after 0.5501ms - 200
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+payment-processor-mid-health-check  |       End processing HTTP request after 0.6348ms - 200
+payment-processor-mid-health-check  | response: False - 0 | url: http://payment-processor-default:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+payment-processor-mid-health-check  |       Start processing HTTP request GET http://payment-processor-fallback:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+payment-processor-mid-health-check  |       Sending HTTP request GET http://payment-processor-fallback:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+payment-processor-mid-health-check  |       Received HTTP response headers after 0.4811ms - 200
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+payment-processor-mid-health-check  |       End processing HTTP request after 0.5715ms - 200
+payment-processor-mid-health-check  | response: False - 0 | url: http://payment-processor-fallback:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+payment-processor-mid-health-check  |       Start processing HTTP request GET http://payment-processor-default:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+payment-processor-mid-health-check  |       Sending HTTP request GET http://payment-processor-default:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+payment-processor-mid-health-check  |       Start processing HTTP request GET http://payment-processor-fallback:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+payment-processor-mid-health-check  |       Sending HTTP request GET http://payment-processor-fallback:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+payment-processor-mid-health-check  |       Received HTTP response headers after 0.6524ms - 200
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+payment-processor-mid-health-check  |       End processing HTTP request after 0.9986ms - 200
+payment-processor-mid-health-check  | response: False - 0 | url: http://payment-processor-default:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+payment-processor-mid-health-check  |       Received HTTP response headers after 98.8957ms - 200
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+payment-processor-mid-health-check  |       End processing HTTP request after 98.9498ms - 200
+payment-processor-mid-health-check  | response: False - 0 | url: http://payment-processor-fallback:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+payment-processor-mid-health-check  |       Start processing HTTP request GET http://payment-processor-default:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+payment-processor-mid-health-check  |       Sending HTTP request GET http://payment-processor-default:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+payment-processor-mid-health-check  |       Start processing HTTP request GET http://payment-processor-fallback:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+payment-processor-mid-health-check  |       Sending HTTP request GET http://payment-processor-fallback:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+payment-processor-mid-health-check  |       Received HTTP response headers after 0.5053ms - 200
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+payment-processor-mid-health-check  |       End processing HTTP request after 0.7082ms - 200
+payment-processor-mid-health-check  | response: False - 0 | url: http://payment-processor-default:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+payment-processor-mid-health-check  |       Received HTTP response headers after 99.4687ms - 200
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+payment-processor-mid-health-check  |       End processing HTTP request after 99.5117ms - 200
+payment-processor-mid-health-check  | response: False - 0 | url: http://payment-processor-fallback:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+payment-processor-mid-health-check  |       Start processing HTTP request GET http://payment-processor-default:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+payment-processor-mid-health-check  |       Sending HTTP request GET http://payment-processor-default:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+payment-processor-mid-health-check  |       Start processing HTTP request GET http://payment-processor-fallback:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+payment-processor-mid-health-check  |       Sending HTTP request GET http://payment-processor-fallback:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+payment-processor-mid-health-check  |       Received HTTP response headers after 0.6481ms - 200
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+payment-processor-mid-health-check  |       End processing HTTP request after 0.7161ms - 200
+payment-processor-mid-health-check  | response: False - 0 | url: http://payment-processor-default:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+payment-processor-mid-health-check  |       Received HTTP response headers after 100.6172ms - 200
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+payment-processor-mid-health-check  |       End processing HTTP request after 100.6904ms - 200
+payment-processor-mid-health-check  | response: False - 0 | url: http://payment-processor-fallback:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+payment-processor-mid-health-check  |       Start processing HTTP request GET http://payment-processor-default:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+payment-processor-mid-health-check  |       Sending HTTP request GET http://payment-processor-default:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+payment-processor-mid-health-check  |       Start processing HTTP request GET http://payment-processor-fallback:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+payment-processor-mid-health-check  |       Sending HTTP request GET http://payment-processor-fallback:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+payment-processor-mid-health-check  |       Received HTTP response headers after 0.6369ms - 200
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+payment-processor-mid-health-check  |       End processing HTTP request after 0.733ms - 200
+payment-processor-mid-health-check  | response: False - 0 | url: http://payment-processor-default:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+payment-processor-mid-health-check  |       Received HTTP response headers after 98.2612ms - 200
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+payment-processor-mid-health-check  |       End processing HTTP request after 98.3082ms - 200
+payment-processor-mid-health-check  | response: False - 0 | url: http://payment-processor-fallback:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+payment-processor-mid-health-check  |       Start processing HTTP request GET http://payment-processor-default:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+payment-processor-mid-health-check  |       Sending HTTP request GET http://payment-processor-default:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+payment-processor-mid-health-check  |       Start processing HTTP request GET http://payment-processor-fallback:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+payment-processor-mid-health-check  |       Sending HTTP request GET http://payment-processor-fallback:8080/payments/service-health
+payment-processor-mid-health-check  | response: False - 0 | url: http://payment-processor-default:8080/payments/service-health
+payment-processor-mid-health-check  | response: False - 0 | url: http://payment-processor-fallback:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+payment-processor-mid-health-check  |       Received HTTP response headers after 0.4679ms - 200
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+payment-processor-mid-health-check  |       End processing HTTP request after 0.5354ms - 200
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+payment-processor-mid-health-check  |       Received HTTP response headers after 0.3924ms - 200
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+payment-processor-mid-health-check  |       End processing HTTP request after 0.425ms - 200
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+payment-processor-mid-health-check  |       Start processing HTTP request GET http://payment-processor-default:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+payment-processor-mid-health-check  |       Sending HTTP request GET http://payment-processor-default:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+payment-processor-mid-health-check  |       Start processing HTTP request GET http://payment-processor-fallback:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+payment-processor-mid-health-check  |       Sending HTTP request GET http://payment-processor-fallback:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+payment-processor-mid-health-check  |       Received HTTP response headers after 0.5471ms - 200
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+payment-processor-mid-health-check  |       End processing HTTP request after 0.9608ms - 200
+payment-processor-mid-health-check  | response: False - 0 | url: http://payment-processor-default:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+payment-processor-mid-health-check  |       Received HTTP response headers after 99.8642ms - 200
+payment-processor-mid-health-check  | response: False - 0 | url: http://payment-processor-fallback:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+payment-processor-mid-health-check  |       End processing HTTP request after 99.9281ms - 200
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+payment-processor-mid-health-check  |       Start processing HTTP request GET http://payment-processor-default:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+payment-processor-mid-health-check  |       Sending HTTP request GET http://payment-processor-default:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+payment-processor-mid-health-check  |       Start processing HTTP request GET http://payment-processor-fallback:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+payment-processor-mid-health-check  |       Sending HTTP request GET http://payment-processor-fallback:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+payment-processor-mid-health-check  |       Received HTTP response headers after 0.5889ms - 200
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+payment-processor-mid-health-check  |       End processing HTTP request after 0.6665ms - 200
+payment-processor-mid-health-check  | response: False - 0 | url: http://payment-processor-default:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+payment-processor-mid-health-check  |       Received HTTP response headers after 98.6489ms - 200
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+payment-processor-mid-health-check  |       End processing HTTP request after 98.6914ms - 200
+payment-processor-mid-health-check  | response: False - 0 | url: http://payment-processor-fallback:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+payment-processor-mid-health-check  |       Start processing HTTP request GET http://payment-processor-default:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+payment-processor-mid-health-check  |       Sending HTTP request GET http://payment-processor-default:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+payment-processor-mid-health-check  |       Received HTTP response headers after 0.4136ms - 200
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+payment-processor-mid-health-check  |       Start processing HTTP request GET http://payment-processor-fallback:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+payment-processor-mid-health-check  |       End processing HTTP request after 0.4836ms - 200
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+payment-processor-mid-health-check  |       Sending HTTP request GET http://payment-processor-fallback:8080/payments/service-health
+payment-processor-mid-health-check  | response: False - 0 | url: http://payment-processor-default:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+payment-processor-mid-health-check  |       Received HTTP response headers after 99.0687ms - 200
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+payment-processor-mid-health-check  |       End processing HTTP request after 99.1408ms - 200
+payment-processor-mid-health-check  | response: False - 0 | url: http://payment-processor-fallback:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+payment-processor-mid-health-check  |       Start processing HTTP request GET http://payment-processor-default:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+payment-processor-mid-health-check  |       Sending HTTP request GET http://payment-processor-default:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+payment-processor-mid-health-check  |       Start processing HTTP request GET http://payment-processor-fallback:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+payment-processor-mid-health-check  |       Sending HTTP request GET http://payment-processor-fallback:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+payment-processor-mid-health-check  |       Received HTTP response headers after 0.5457ms - 200
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+payment-processor-mid-health-check  |       End processing HTTP request after 0.6313ms - 200
+payment-processor-mid-health-check  | response: False - 0 | url: http://payment-processor-default:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+payment-processor-mid-health-check  |       Received HTTP response headers after 98.8831ms - 200
+payment-processor-mid-health-check  | response: False - 0 | url: http://payment-processor-fallback:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+payment-processor-mid-health-check  |       End processing HTTP request after 98.9413ms - 200
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+payment-processor-mid-health-check  |       Start processing HTTP request GET http://payment-processor-default:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+payment-processor-mid-health-check  |       Sending HTTP request GET http://payment-processor-default:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+payment-processor-mid-health-check  |       Start processing HTTP request GET http://payment-processor-fallback:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+payment-processor-mid-health-check  |       Sending HTTP request GET http://payment-processor-fallback:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+payment-processor-mid-health-check  |       Received HTTP response headers after 0.3952ms - 200
+payment-processor-mid-health-check  | response: False - 0 | url: http://payment-processor-default:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+payment-processor-mid-health-check  |       End processing HTTP request after 0.4767ms - 200
+payment-processor-mid-health-check  | response: False - 0 | url: http://payment-processor-fallback:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+payment-processor-mid-health-check  |       Received HTTP response headers after 99.0698ms - 200
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+payment-processor-mid-health-check  |       End processing HTTP request after 99.1201ms - 200
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+payment-processor-mid-health-check  |       Start processing HTTP request GET http://payment-processor-default:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+payment-processor-mid-health-check  |       Sending HTTP request GET http://payment-processor-default:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+payment-processor-mid-health-check  |       Start processing HTTP request GET http://payment-processor-fallback:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+payment-processor-mid-health-check  |       Sending HTTP request GET http://payment-processor-fallback:8080/payments/service-health
+payment-processor-mid-health-check  | response: False - 0 | url: http://payment-processor-default:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+payment-processor-mid-health-check  |       Received HTTP response headers after 0.5534ms - 200
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+payment-processor-mid-health-check  |       End processing HTTP request after 0.5982ms - 200
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+payment-processor-mid-health-check  |       Received HTTP response headers after 98.8975ms - 200
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+payment-processor-mid-health-check  |       End processing HTTP request after 98.9372ms - 200
+payment-processor-mid-health-check  | response: False - 0 | url: http://payment-processor-fallback:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+payment-processor-mid-health-check  |       Start processing HTTP request GET http://payment-processor-default:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+payment-processor-mid-health-check  |       Sending HTTP request GET http://payment-processor-default:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+payment-processor-mid-health-check  |       Start processing HTTP request GET http://payment-processor-fallback:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+payment-processor-mid-health-check  |       Sending HTTP request GET http://payment-processor-fallback:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+payment-processor-mid-health-check  |       Received HTTP response headers after 0.3633ms - 200
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+payment-processor-mid-health-check  |       End processing HTTP request after 0.4264ms - 200
+payment-processor-mid-health-check  | response: False - 0 | url: http://payment-processor-default:8080/payments/service-health
+payment-processor-mid-health-check  | response: False - 0 | url: http://payment-processor-fallback:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+payment-processor-mid-health-check  |       Received HTTP response headers after 99.0676ms - 200
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+payment-processor-mid-health-check  |       End processing HTTP request after 99.1502ms - 200
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+payment-processor-mid-health-check  |       Start processing HTTP request GET http://payment-processor-default:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+payment-processor-mid-health-check  |       Sending HTTP request GET http://payment-processor-default:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+payment-processor-mid-health-check  |       Start processing HTTP request GET http://payment-processor-fallback:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+payment-processor-mid-health-check  |       Sending HTTP request GET http://payment-processor-fallback:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+payment-processor-mid-health-check  |       Received HTTP response headers after 0.3717ms - 200
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+payment-processor-mid-health-check  |       End processing HTTP request after 0.4778ms - 200
+payment-processor-mid-health-check  | response: False - 0 | url: http://payment-processor-default:8080/payments/service-health
+payment-processor-mid-health-check  | response: False - 0 | url: http://payment-processor-fallback:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+payment-processor-mid-health-check  |       Received HTTP response headers after 0.3632ms - 200
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+payment-processor-mid-health-check  |       End processing HTTP request after 0.4032ms - 200
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+payment-processor-mid-health-check  |       Start processing HTTP request GET http://payment-processor-default:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+payment-processor-mid-health-check  |       Sending HTTP request GET http://payment-processor-default:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[100]
+payment-processor-mid-health-check  |       Start processing HTTP request GET http://payment-processor-fallback:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[100]
+payment-processor-mid-health-check  |       Sending HTTP request GET http://payment-processor-fallback:8080/payments/service-health
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+payment-processor-mid-health-check  |       Received HTTP response headers after 0.9144ms - 200
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.ClientHandler[101]
+payment-processor-mid-health-check  |       Received HTTP response headers after 0.7569ms - 200
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+payment-processor-mid-health-check  |       End processing HTTP request after 0.968ms - 200
+payment-processor-mid-health-check  | info: System.Net.Http.HttpClient.Default.LogicalHandler[101]
+payment-processor-mid-health-check  |       End processing HTTP request after 0.7804ms - 200
+payment-processor-mid-health-check  | response: False - 0 | url: http://payment-processor-default:8080/payments/service-health
+payment-processor-mid-health-check  | response: False - 0 | url: http://payment-processor-fallback:8080/payments/service-health
+[Kpayment-processor-lb exited with code 0
+payment-processor-mid-health-check  | info: Microsoft.Hosting.Lifetime[0]
+payment-processor-mid-health-check  |       Application is shutting down...
+db                                  | 2025-08-12 21:14:11.781 UTC [1] LOG:  received fast shutdown request
+db                                  | 2025-08-12 21:14:11.781 UTC [1] LOG:  aborting any active transactions
+db                                  | 2025-08-12 21:14:11.784 UTC [1] LOG:  background worker "logical replication launcher" (PID 68) exited with exit code 1
+db                                  | 2025-08-12 21:14:11.785 UTC [63] LOG:  shutting down
+db                                  | 2025-08-12 21:14:11.785 UTC [63] LOG:  checkpoint starting: shutdown immediate
+db                                  | 2025-08-12 21:14:11.787 UTC [63] LOG:  checkpoint complete: wrote 45 buffers (0.3%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.002 s; sync files=0, longest=0.000 s, average=0.000 s; distance=93 kB, estimate=93 kB; lsn=0/19241A0, redo lsn=0/19241A0
+db                                  | 2025-08-12 21:14:11.794 UTC [1] LOG:  database system is shut down
+[Kdb exited with code 0
