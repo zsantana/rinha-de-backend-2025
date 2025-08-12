@@ -1,0 +1,80 @@
+services:
+  nginx:
+    image: nginx:1.25-alpine
+    container_name: nginx
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - api1
+      - api2
+    ports:
+      - "9999:9999"
+    networks:
+      - backend-rinha
+      - payment-processor
+    deploy:
+      resources:
+        limits:
+          cpus: "0.20"
+          memory: "50MB"
+
+  api1: &api
+    image: diogoloff/api-rinha2025:latest
+    depends_on:
+      - persistencia
+    hostname: api1
+    environment:
+      - DEFAULT_URL=http://payment-processor-default:8080
+      - FALLBACK_URL=http://payment-processor-fallback:8080
+      - CONSOLIDA_URL=http://persistencia:9090
+      - NUM_WORKERS=6
+      - NUM_TENTATIVAS_DEFAULT=3
+      - TEMPO_FILA=1000
+      - DEBUG=N
+    volumes:
+      - transacoes:/opt/rinha/transacoes/
+      #- ./Logs/:/opt/rinha/Logs/  #somente se debug ativo
+    networks:
+      - backend-rinha
+      - payment-processor
+    deploy:
+      resources:
+        limits:
+          cpus: "0.55"
+          memory: "100MB"
+
+  api2:
+    <<: *api
+    hostname: api2
+    volumes:
+      - transacoes2:/opt/rinha/transacoes/
+      #- ./Logs2/:/opt/rinha/Logs/ #somente se debug ativo
+
+  persistencia: 
+    image: diogoloff/persistencia-rinha2025:latest
+    hostname: persistencia
+    environment:
+      - TEMPO_FILA=5
+      - DEBUG=N
+    volumes:
+      - transacoes:/opt/rinha/transacoes/
+      - transacoes2:/opt/rinha/transacoes2/
+      #- ./LogsP/:/opt/rinha/Logs/  #somente se debug ativo
+    networks:
+      - backend-rinha
+    deploy:
+      resources:
+        limits:
+          cpus: "0.20"
+          memory: "100MB"
+
+volumes:
+  transacoes:
+  transacoes2:
+
+networks:
+  backend-rinha:
+    name: backend-rinha
+    driver: bridge
+  payment-processor:
+    external: true

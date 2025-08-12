@@ -8,17 +8,17 @@
  Container lucas-santana-worker-1  Creating
  Container lucas-santana-backend2-1  Creating
  Container lucas-santana-backend1-1  Creating
- Container lucas-santana-backend1-1  Created
  Container lucas-santana-worker-1  Created
  Container lucas-santana-backend2-1  Created
+ Container lucas-santana-backend1-1  Created
  Container lucas-santana-lighttpd-1  Creating
  Container lucas-santana-lighttpd-1  Created
 Attaching to backend1-1, backend2-1, keydb-1, lighttpd-1, worker-1
-keydb-1     | 1:1:C 05 Aug 2025 19:35:09.909 # oO0OoO0OoO0Oo KeyDB is starting oO0OoO0OoO0Oo
-keydb-1     | 1:1:C 05 Aug 2025 19:35:09.909 # KeyDB version=6.3.4, bits=64, commit=7e7e5e57, modified=1, pid=1, just started
-keydb-1     | 1:1:C 05 Aug 2025 19:35:09.909 # Configuration loaded
-keydb-1     | 1:1:C 05 Aug 2025 19:35:09.909 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
-keydb-1     | 1:1:M 05 Aug 2025 19:35:09.910 * monotonic clock: POSIX clock_gettime
+keydb-1     | 1:1:C 08 Aug 2025 00:34:14.831 # oO0OoO0OoO0Oo KeyDB is starting oO0OoO0OoO0Oo
+keydb-1     | 1:1:C 08 Aug 2025 00:34:14.832 # KeyDB version=6.3.4, bits=64, commit=7e7e5e57, modified=1, pid=1, just started
+keydb-1     | 1:1:C 08 Aug 2025 00:34:14.832 # Configuration loaded
+keydb-1     | 1:1:C 08 Aug 2025 00:34:14.832 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+keydb-1     | 1:1:M 08 Aug 2025 00:34:14.834 * monotonic clock: POSIX clock_gettime
 keydb-1     |                                                                       
 keydb-1     |                   _                                                   
 keydb-1     |                _-(+)-_                                                
@@ -38,32 +38,35 @@ keydb-1     |             --_   |   _--
 keydb-1     |                 -(+)-        KeyDB has now joined Snap! See the announcement at:  https://docs.keydb.dev/news
 keydb-1     | 
 keydb-1     |                                                                      
-keydb-1     | 1:1:M 05 Aug 2025 19:35:10.154 # Server initialized
-keydb-1     | 1:1:M 05 Aug 2025 19:35:10.154 * The server is now ready to accept connections at /sockets/keydb.sock
-keydb-1     | 1:28:M 05 Aug 2025 19:35:10.154 * Thread 0 alive.
-keydb-1     | 1:29:M 05 Aug 2025 19:35:10.154 * Thread 1 alive.
-keydb-1     | 1:30:M 05 Aug 2025 19:35:10.154 * Thread 2 alive.
-worker-1    | [Worker] Starting workers...
+keydb-1     | 1:1:M 08 Aug 2025 00:34:15.139 # Server initialized
+keydb-1     | 1:1:M 08 Aug 2025 00:34:15.139 * The server is now ready to accept connections at /sockets/keydb.sock
+keydb-1     | 1:29:M 08 Aug 2025 00:34:15.140 * Thread 0 alive.
+keydb-1     | 1:30:M 08 Aug 2025 00:34:15.140 * Thread 1 alive.
+keydb-1     | 1:31:M 08 Aug 2025 00:34:15.140 * Thread 2 alive.
 backend1-1  | [Server] Listening on unix:/sockets/backend1.sock.
 backend2-1  | [Server] Listening on unix:/sockets/backend2.sock.
-lighttpd-1  | 2025-08-05 19:35:21: (server.c.1974) server started (lighttpd/1.4.79)
-keydb-1     | 1:28:M 05 Aug 2025 19:36:10.105 * 10000 changes in 60 seconds. Saving...
-keydb-1     | 1:28:M 05 Aug 2025 19:36:10.106 * Background saving started by pid 99
-keydb-1     | 1:28:M 05 Aug 2025 19:36:10.106 * Background saving started
-keydb-1     | 99:28:C 05 Aug 2025 19:36:10.223 * DB saved on disk
-keydb-1     | 99:28:C 05 Aug 2025 19:36:10.225 * RDB: 2 MB of memory used by copy-on-write
-keydb-1     | 1:28:M 05 Aug 2025 19:36:10.310 * Background saving terminated with success
-lighttpd-1  | 2025-08-05 19:36:29: (server.c.2370) server stopped by UID = 0 PID = 1
+worker-1    | [Worker] Starting workers...
+lighttpd-1  | 2025-08-08 00:34:26: (server.c.1974) server started (lighttpd/1.4.79)
+keydb-1     | 1:29:M 08 Aug 2025 00:35:15.005 * 10000 changes in 60 seconds. Saving...
+keydb-1     | 1:29:M 08 Aug 2025 00:35:15.007 * Background saving started by pid 100
+keydb-1     | 1:29:M 08 Aug 2025 00:35:15.007 * Background saving started
+keydb-1     | 100:29:C 08 Aug 2025 00:35:15.221 * DB saved on disk
+keydb-1     | 100:29:C 08 Aug 2025 00:35:15.224 * RDB: 2 MB of memory used by copy-on-write
+keydb-1     | 1:29:M 08 Aug 2025 00:35:15.300 * Background saving terminated with success
+lighttpd-1  | 2025-08-08 00:35:34: (server.c.2370) server stopped by UID = 0 PID = 1
+lighttpd-1  | 2025-08-08 00:35:34: (server.c.2370) server stopped by UID = 0 PID = 1
+lighttpd-1  | 2025-08-08 00:35:34: (server.c.2370) server stopped by UID = 0 PID = 1
+lighttpd-1  | 2025-08-08 00:35:34: (server.c.2370) server stopped by UID = 0 PID = 1
 [Klighttpd-1 exited with code 0
 [Kworker-1 exited with code 137
-[Kbackend1-1 exited with code 137
 [Kbackend2-1 exited with code 137
-keydb-1     | 1:signal-handler (1754422600) Received SIGTERM scheduling shutdown...
-keydb-1     | 1:28:M 05 Aug 2025 19:36:40.949 # User requested shutdown...
-keydb-1     | 1:28:M 05 Aug 2025 19:36:40.949 * Saving the final RDB snapshot before exiting.
-keydb-1     | 1:28:M 05 Aug 2025 19:36:40.970 * DB saved on disk
-keydb-1     | 1:28:M 05 Aug 2025 19:36:40.970 * Removing the pid file.
-keydb-1     | 1:28:M 05 Aug 2025 19:36:40.970 * Removing the unix socket file.
-keydb-1     | 1:28:M 05 Aug 2025 19:36:41.002 # KeyDB is now ready to exit, bye bye...
+[Kbackend1-1 exited with code 137
+keydb-1     | 1:signal-handler (1754613346) Received SIGTERM scheduling shutdown...
+keydb-1     | 1:29:M 08 Aug 2025 00:35:46.412 # User requested shutdown...
+keydb-1     | 1:29:M 08 Aug 2025 00:35:46.412 * Saving the final RDB snapshot before exiting.
+keydb-1     | 1:29:M 08 Aug 2025 00:35:46.499 * DB saved on disk
+keydb-1     | 1:29:M 08 Aug 2025 00:35:46.499 * Removing the pid file.
+keydb-1     | 1:29:M 08 Aug 2025 00:35:46.499 * Removing the unix socket file.
+keydb-1     | 1:29:M 08 Aug 2025 00:35:46.499 # KeyDB is now ready to exit, bye bye...
 [Kkeydb-1 exited with code 0
 log truncated at line 1000

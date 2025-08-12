@@ -1,20 +1,20 @@
 {
   "participante": "mxlange-ws",
-  "total_liquido": 361009.1238,
-  "total_bruto": 333404.6,
-  "total_taxas": 16729.93,
+  "total_liquido": 233955.2455,
+  "total_bruto": 300390.5,
+  "total_taxas": 15079.225,
   "descricao": "'total_liquido' é sua pontuação final. Equivale ao seu lucro. Fórmula: total_liquido + (total_liquido * p99.bonus) - (total_liquido * multa.porcentagem)",
   "p99": {
-    "valor": "4.18ms",
-    "bonus": "14%",
+    "valor": "2.37ms",
+    "bonus": "17%",
     "max_requests": "550",
     "descricao": "Fórmula para o bônus: max((11 - p99.valor) * 0.02, 0)"
   },
   "multa": {
-    "porcentagem": 0,
-    "total": 0,
+    "porcentagem": 0.35,
+    "total": 99858.94625,
     "composicao": {
-      "num_inconsistencias": 0,
+      "num_inconsistencias": 1,
       "descricao": "Se 'num_inconsistencias' > 0, há multa de 35%."
     }
   },
@@ -23,20 +23,20 @@
     "descricao": "Se 'lag' for negativo, significa que seu backend registrou mais pagamentos do que solicitado, automaticamente desclassificando sua submissão!"
   },
   "lag": {
-    "num_pagamentos_total": 16754,
-    "num_pagamentos_solicitados": 16754,
-    "lag": 0,
+    "num_pagamentos_total": 15095,
+    "num_pagamentos_solicitados": 16748,
+    "lag": 1653,
     "descricao": "Lag é a diferença entre a quantidade de solicitações de pagamentos e o que foi realmente computado pelo backend. Mostra a perda de pagamentos possivelmente por estarem enfileirados."
   },
   "pagamentos_solicitados": {
-    "qtd_sucesso": 16754,
+    "qtd_sucesso": 16748,
     "qtd_falha": 0,
     "descricao": "'qtd_sucesso' foram requests bem sucedidos para 'POST /payments' e 'qtd_falha' os requests com erro."
   },
   "pagamentos_realizados_default": {
-    "total_bruto": 332807.6,
-    "num_pagamentos": 16724,
-    "total_taxas": 16640.38,
+    "total_bruto": 299793.5,
+    "num_pagamentos": 15065,
+    "total_taxas": 14989.675,
     "descricao": "Informações do backend sobre solicitações de pagamento para o Payment Processor Default."
   },
   "pagamentos_realizados_fallback": {

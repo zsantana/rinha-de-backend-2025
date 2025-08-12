@@ -1,6 +1,6 @@
 x-service-templates:
   base: &base
-    image: josiney/rdb25_02-amd64:a5ff5bf
+    image: josiney/rdb25_02-amd64:dcf26e4
     volumes:
       - sockets:/sockets
     networks:
@@ -91,7 +91,7 @@ services:
       resources:
         limits:
           cpus: "0.75"
-          memory: "150MB"
+          memory: "100MB"
     environment:
       - SOCKET_PATH=/sockets/worker_http.sock
       - PAYMENTS_SOCKET_PATH=/sockets/payments.sock
