@@ -1,30 +1,0 @@
-
- Network rinha-de-backend-2025  Creating
- Network rinha-de-backend-2025  Created
- Container gabrieleiro-tracker-1  Creating
- Container gabrieleiro-tracker-1  Created
- Container gabrieleiro-api-2-1  Creating
- Container gabrieleiro-api-1-1  Creating
- Container gabrieleiro-api-2-1  Created
- Container gabrieleiro-api-1-1  Created
- Container gabrieleiro-load-balancer-1  Creating
- Container gabrieleiro-load-balancer-1  Created
-Attaching to api-1-1, api-2-1, load-balancer-1, tracker-1
-tracker-1        | up and running
-api-2-1          | up and running
-api-1-1          | up and running
-load-balancer-1  | [WARNING] 222/231001 (7) : config : missing timeouts for frontend 'http_front'.
-load-balancer-1  |    | While not properly invalid, you will certainly encounter various problems
-load-balancer-1  |    | with such a configuration. To fix this, please ensure that all following
-load-balancer-1  |    | timeouts are set to a non-zero value: 'client', 'connect', 'server'.
-load-balancer-1  | [WARNING] 222/231001 (7) : config : missing timeouts for backend 'http_back'.
-load-balancer-1  |    | While not properly invalid, you will certainly encounter various problems
-load-balancer-1  |    | with such a configuration. To fix this, please ensure that all following
-load-balancer-1  |    | timeouts are set to a non-zero value: 'client', 'connect', 'server'.
-[Kload-balancer-1 exited with code 137
-tracker-1        | 2025/08/11 23:11:21 reading from connection: EOF
-tracker-1        | 2025/08/11 23:11:21 reading from connection: EOF
-[Kapi-2-1 exited with code 1
-[Kapi-1-1 exited with code 1
-[Ktracker-1 exited with code 1
-log truncated at line 1000
