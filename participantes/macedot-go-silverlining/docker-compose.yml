@@ -1,7 +1,7 @@
 name: rinha-2025
 
 x-api_template: &api_template
-  image: docker.io/macedot/rinha-2025:757b333
+  image: docker.io/macedot/rinha-2025:a0d00ed
   env_file:
     - path: .env
       required: true
@@ -59,7 +59,7 @@ services:
       - backend
     ports:
       - "6379:6379"
-    command: ["redis-server", "--appendonly", "yes", "--appendfsync", "everysec"]
+    command: [ "redis-server", "--appendonly", "yes", "--appendfsync", "everysec" ]
     deploy:
       resources:
         limits:
