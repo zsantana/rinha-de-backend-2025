@@ -11,7 +11,7 @@ services:
       - OTHER_INSTANCE_URL=http://app2:8080
       - SOCKET=/var/tmp/sockets/app1.sock
       - CONCURRENCY=2
-      - WORKER_COUNT=2
+      - WORKER_COUNT=3
     volumes:
       - sockets:/var/tmp/sockets
     networks:
@@ -33,7 +33,7 @@ services:
       - OTHER_INSTANCE_URL=http://app1:8080
       - SOCKET=/var/tmp/sockets/app2.sock
       - CONCURRENCY=2
-      - WORKER_COUNT=2
+      - WORKER_COUNT=3
     volumes:
       - sockets:/var/tmp/sockets
     deploy:
