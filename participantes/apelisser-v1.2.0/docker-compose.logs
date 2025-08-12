@@ -1,13 +1,31 @@
 
- backend02 Pulling 
+ load-balancer Pulling 
  backend01 Pulling 
+ backend02 Pulling 
+ database Pulling 
+ database Pulled 
+ load-balancer Pulled 
  400fe5c6b87b Already exists 
  2e4cf50eeb92 Already exists 
  4e9f20d26c87 Already exists 
  e1089d61b200 Already exists 
  0f8b424aa0b9 Already exists 
+ 400fe5c6b87b Already exists 
  d557676654e5 Already exists 
  d82bc7a76a83 Already exists 
+ 2e4cf50eeb92 Already exists 
+ 4e9f20d26c87 Already exists 
+ d858cbc252ad Already exists 
+ 1069fc2daed1 Already exists 
+ e1089d61b200 Already exists 
+ 0f8b424aa0b9 Already exists 
+ b40161cd83fc Already exists 
+ 3f4e2c586348 Already exists 
+ d557676654e5 Already exists 
+ eb8f5749650b Already exists 
+ d82bc7a76a83 Already exists 
+ ec9b57996cb3 Pulling fs layer 
+ 7a83f9381ade Pulling fs layer 
  d858cbc252ad Already exists 
  1069fc2daed1 Already exists 
  b40161cd83fc Already exists 
@@ -15,149 +33,130 @@
  eb8f5749650b Already exists 
  ec9b57996cb3 Pulling fs layer 
  7a83f9381ade Pulling fs layer 
- 400fe5c6b87b Already exists 
- 2e4cf50eeb92 Already exists 
- 4e9f20d26c87 Already exists 
- e1089d61b200 Already exists 
- 0f8b424aa0b9 Already exists 
- d557676654e5 Already exists 
- d82bc7a76a83 Already exists 
- d858cbc252ad Already exists 
- 1069fc2daed1 Already exists 
- b40161cd83fc Already exists 
- 3f4e2c586348 Already exists 
- eb8f5749650b Already exists 
- ec9b57996cb3 Pulling fs layer 
- 7a83f9381ade Pulling fs layer 
+ ec9b57996cb3 Downloading [==================================================>]      93B/93B
+ ec9b57996cb3 Verifying Checksum 
  ec9b57996cb3 Download complete 
+ ec9b57996cb3 Downloading [==================================================>]      93B/93B
+ ec9b57996cb3 Verifying Checksum 
  ec9b57996cb3 Download complete 
  ec9b57996cb3 Extracting [==================================================>]      93B/93B
  ec9b57996cb3 Extracting [==================================================>]      93B/93B
  ec9b57996cb3 Extracting [==================================================>]      93B/93B
  ec9b57996cb3 Extracting [==================================================>]      93B/93B
- 7a83f9381ade Downloading [>                                                  ]  376.3kB/37.5MB
- 7a83f9381ade Downloading [>                                                  ]  376.3kB/37.5MB
  ec9b57996cb3 Pull complete 
  ec9b57996cb3 Pull complete 
- 7a83f9381ade Downloading [=============>                                     ]   9.89MB/37.5MB
- 7a83f9381ade Downloading [=============>                                     ]   9.89MB/37.5MB
- 7a83f9381ade Downloading [==========================>                        ]  19.78MB/37.5MB
- 7a83f9381ade Downloading [==========================>                        ]  19.78MB/37.5MB
- 7a83f9381ade Downloading [========================================>          ]  30.45MB/37.5MB
- 7a83f9381ade Downloading [========================================>          ]  30.45MB/37.5MB
+ 7a83f9381ade Downloading [>                                                  ]  381.4kB/37.5MB
+ 7a83f9381ade Downloading [>                                                  ]  381.4kB/37.5MB
+ 7a83f9381ade Downloading [=======================>                           ]  17.99MB/37.5MB
+ 7a83f9381ade Downloading [=======================>                           ]  17.99MB/37.5MB
+ 7a83f9381ade Downloading [============================================>      ]   33.7MB/37.5MB
+ 7a83f9381ade Downloading [============================================>      ]   33.7MB/37.5MB
+ 7a83f9381ade Downloading [===============================================>   ]  35.99MB/37.5MB
+ 7a83f9381ade Downloading [===============================================>   ]  35.99MB/37.5MB
  7a83f9381ade Download complete 
  7a83f9381ade Verifying Checksum 
  7a83f9381ade Download complete 
  7a83f9381ade Extracting [>                                                  ]  393.2kB/37.5MB
  7a83f9381ade Extracting [>                                                  ]  393.2kB/37.5MB
- 7a83f9381ade Extracting [=======>                                           ]  5.898MB/37.5MB
- 7a83f9381ade Extracting [=======>                                           ]  5.898MB/37.5MB
- 7a83f9381ade Extracting [===============>                                   ]   11.8MB/37.5MB
- 7a83f9381ade Extracting [===============>                                   ]   11.8MB/37.5MB
- 7a83f9381ade Extracting [========================>                          ]  18.09MB/37.5MB
- 7a83f9381ade Extracting [========================>                          ]  18.09MB/37.5MB
- 7a83f9381ade Extracting [================================>                  ]  24.38MB/37.5MB
- 7a83f9381ade Extracting [================================>                  ]  24.38MB/37.5MB
- 7a83f9381ade Extracting [=====================================>             ]  28.31MB/37.5MB
- 7a83f9381ade Extracting [=====================================>             ]  28.31MB/37.5MB
+ 7a83f9381ade Extracting [=========>                                         ]  7.471MB/37.5MB
+ 7a83f9381ade Extracting [=========>                                         ]  7.471MB/37.5MB
+ 7a83f9381ade Extracting [===================>                               ]  14.55MB/37.5MB
+ 7a83f9381ade Extracting [===================>                               ]  14.55MB/37.5MB
+ 7a83f9381ade Extracting [============================>                      ]  21.63MB/37.5MB
+ 7a83f9381ade Extracting [============================>                      ]  21.63MB/37.5MB
+ 7a83f9381ade Extracting [====================================>              ]  27.53MB/37.5MB
+ 7a83f9381ade Extracting [====================================>              ]  27.53MB/37.5MB
+ 7a83f9381ade Extracting [================================================>  ]  36.18MB/37.5MB
+ 7a83f9381ade Extracting [================================================>  ]  36.18MB/37.5MB
  7a83f9381ade Extracting [==================================================>]   37.5MB/37.5MB
  7a83f9381ade Extracting [==================================================>]   37.5MB/37.5MB
  7a83f9381ade Pull complete 
  7a83f9381ade Pull complete 
- backend01 Pulled 
  backend02 Pulled 
+ backend01 Pulled 
  Network rinha-2025_rinha-net  Creating
  Network rinha-2025_rinha-net  Created
  Container rinha-backend-db  Creating
  Container rinha-backend-db  Created
- Container backend-instance-02  Creating
  Container backend-instance-01  Creating
- Container backend-instance-02  Created
+ Container backend-instance-02  Creating
  Container backend-instance-01  Created
+ Container backend-instance-02  Created
  Container load-balancer  Creating
  Container load-balancer  Created
 Attaching to backend-instance-01, backend-instance-02, load-balancer, rinha-backend-db
-rinha-backend-db     | The files belonging to this database system will be owned by user "postgres".
-rinha-backend-db     | This user must also own the server process.
-rinha-backend-db     | 
-rinha-backend-db     | The database cluster will be initialized with locale "en_US.utf8".
-rinha-backend-db     | The default database encoding has accordingly been set to "UTF8".
-rinha-backend-db     | The default text search configuration will be set to "english".
-rinha-backend-db     | 
-rinha-backend-db     | Data page checksums are disabled.
-rinha-backend-db     | 
-rinha-backend-db     | fixing permissions on existing directory /var/lib/postgresql/data ... ok
-rinha-backend-db     | creating subdirectories ... ok
-rinha-backend-db     | selecting dynamic shared memory implementation ... posix
-rinha-backend-db     | selecting default "max_connections" ... 100
-rinha-backend-db     | selecting default "shared_buffers" ... 128MB
-rinha-backend-db     | selecting default time zone ... UTC
-rinha-backend-db     | creating configuration files ... ok
-rinha-backend-db     | running bootstrap script ... ok
-rinha-backend-db     | sh: locale: not found
-rinha-backend-db     | 2025-08-10 23:18:33.906 UTC [35] WARNING:  no usable system locales were found
-rinha-backend-db     | performing post-bootstrap initialization ... ok
-rinha-backend-db     | initdb: warning: enabling "trust" authentication for local connections
-rinha-backend-db     | initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
-rinha-backend-db     | syncing data to disk ... ok
-rinha-backend-db     | 
-rinha-backend-db     | 
-rinha-backend-db     | Success. You can now start the database server using:
-rinha-backend-db     | 
-rinha-backend-db     |     pg_ctl -D /var/lib/postgresql/data -l logfile start
-rinha-backend-db     | 
-rinha-backend-db     | waiting for server to start....2025-08-10 23:18:35.900 UTC [41] LOG:  starting PostgreSQL 17.5 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
-rinha-backend-db     | 2025-08-10 23:18:35.907 UTC [41] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
-rinha-backend-db     | 2025-08-10 23:18:35.930 UTC [44] LOG:  database system was shut down at 2025-08-10 23:18:35 UTC
-rinha-backend-db     | 2025-08-10 23:18:35.940 UTC [41] LOG:  database system is ready to accept connections
-rinha-backend-db     |  done
-rinha-backend-db     | server started
-rinha-backend-db     | CREATE DATABASE
-rinha-backend-db     | 
-rinha-backend-db     | 
-rinha-backend-db     | /usr/local/bin/docker-entrypoint.sh: running /docker-entrypoint-initdb.d/init.sql
-rinha-backend-db     | SET
-rinha-backend-db     | SET
-rinha-backend-db     | SET
-rinha-backend-db     | SET
-rinha-backend-db     | SET
-rinha-backend-db     | CREATE TABLE
-rinha-backend-db     | CREATE TABLE
-rinha-backend-db     | CREATE TABLE
-rinha-backend-db     | INSERT 0 1
-rinha-backend-db     | INSERT 0 2
-rinha-backend-db     | SET
-rinha-backend-db     | CREATE INDEX
-rinha-backend-db     | 
-rinha-backend-db     | 
-rinha-backend-db     | waiting for server to shut down....2025-08-10 23:18:36.343 UTC [41] LOG:  received fast shutdown request
-rinha-backend-db     | 2025-08-10 23:18:36.348 UTC [41] LOG:  aborting any active transactions
-rinha-backend-db     | 2025-08-10 23:18:36.350 UTC [41] LOG:  background worker "logical replication launcher" (PID 47) exited with exit code 1
-rinha-backend-db     | 2025-08-10 23:18:36.399 UTC [42] LOG:  shutting down
-rinha-backend-db     | 2025-08-10 23:18:36.407 UTC [42] LOG:  checkpoint starting: shutdown immediate
-rinha-backend-db     | 2025-08-10 23:18:36.513 UTC [42] LOG:  checkpoint complete: wrote 933 buffers (5.7%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.026 s, sync=0.062 s, total=0.114 s; sync files=308, longest=0.016 s, average=0.001 s; distance=4286 kB, estimate=4286 kB; lsn=0/191CC80, redo lsn=0/191CC80
-rinha-backend-db     | 2025-08-10 23:18:36.520 UTC [41] LOG:  database system is shut down
-rinha-backend-db     |  done
-rinha-backend-db     | server stopped
-rinha-backend-db     | 
-rinha-backend-db     | PostgreSQL init process complete; ready for start up.
-rinha-backend-db     | 
-rinha-backend-db     | 2025-08-10 23:18:36.576 UTC [1] LOG:  starting PostgreSQL 17.5 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
-rinha-backend-db     | 2025-08-10 23:18:36.576 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
-rinha-backend-db     | 2025-08-10 23:18:36.576 UTC [1] LOG:  listening on IPv6 address "::", port 5432
-rinha-backend-db     | 2025-08-10 23:18:36.589 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
-rinha-backend-db     | 2025-08-10 23:18:36.612 UTC [59] LOG:  database system was shut down at 2025-08-10 23:18:36 UTC
-rinha-backend-db     | 2025-08-10 23:18:36.623 UTC [1] LOG:  database system is ready to accept connections
-backend-instance-02  | 
-backend-instance-02  |   .   ____          _            __ _ _
-backend-instance-02  |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
-backend-instance-02  | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
-backend-instance-02  |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
-backend-instance-02  |   '  |____| .__|_| |_|_| |_\__, | / / / /
-backend-instance-02  |  =========|_|==============|___/=/_/_/_/
-backend-instance-02  | 
-backend-instance-02  |  :: Spring Boot ::                (v3.5.3)
-backend-instance-02  | 
+rinha-backend-db  | The files belonging to this database system will be owned by user "postgres".
+rinha-backend-db  | This user must also own the server process.
+rinha-backend-db  | 
+rinha-backend-db  | The database cluster will be initialized with locale "en_US.utf8".
+rinha-backend-db  | The default database encoding has accordingly been set to "UTF8".
+rinha-backend-db  | The default text search configuration will be set to "english".
+rinha-backend-db  | 
+rinha-backend-db  | Data page checksums are disabled.
+rinha-backend-db  | 
+rinha-backend-db  | fixing permissions on existing directory /var/lib/postgresql/data ... ok
+rinha-backend-db  | creating subdirectories ... ok
+rinha-backend-db  | selecting dynamic shared memory implementation ... posix
+rinha-backend-db  | selecting default "max_connections" ... 100
+rinha-backend-db  | selecting default "shared_buffers" ... 128MB
+rinha-backend-db  | selecting default time zone ... UTC
+rinha-backend-db  | creating configuration files ... ok
+rinha-backend-db  | running bootstrap script ... ok
+rinha-backend-db  | sh: locale: not found
+rinha-backend-db  | 2025-08-12 19:08:41.655 UTC [35] WARNING:  no usable system locales were found
+rinha-backend-db  | performing post-bootstrap initialization ... ok
+rinha-backend-db  | syncing data to disk ... ok
+rinha-backend-db  | 
+rinha-backend-db  | 
+rinha-backend-db  | Success. You can now start the database server using:
+rinha-backend-db  | 
+rinha-backend-db  |     pg_ctl -D /var/lib/postgresql/data -l logfile start
+rinha-backend-db  | 
+rinha-backend-db  | initdb: warning: enabling "trust" authentication for local connections
+rinha-backend-db  | initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
+rinha-backend-db  | waiting for server to start....2025-08-12 19:08:44.777 UTC [41] LOG:  starting PostgreSQL 17.5 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
+rinha-backend-db  | 2025-08-12 19:08:44.780 UTC [41] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+rinha-backend-db  | 2025-08-12 19:08:44.790 UTC [44] LOG:  database system was shut down at 2025-08-12 19:08:44 UTC
+rinha-backend-db  | 2025-08-12 19:08:44.797 UTC [41] LOG:  database system is ready to accept connections
+rinha-backend-db  |  done
+rinha-backend-db  | server started
+rinha-backend-db  | CREATE DATABASE
+rinha-backend-db  | 
+rinha-backend-db  | 
+rinha-backend-db  | /usr/local/bin/docker-entrypoint.sh: running /docker-entrypoint-initdb.d/init.sql
+rinha-backend-db  | SET
+rinha-backend-db  | SET
+rinha-backend-db  | SET
+rinha-backend-db  | SET
+rinha-backend-db  | SET
+rinha-backend-db  | CREATE TABLE
+rinha-backend-db  | CREATE TABLE
+rinha-backend-db  | CREATE TABLE
+rinha-backend-db  | INSERT 0 1
+rinha-backend-db  | INSERT 0 2
+rinha-backend-db  | SET
+rinha-backend-db  | CREATE INDEX
+rinha-backend-db  | 
+rinha-backend-db  | 
+rinha-backend-db  | waiting for server to shut down....2025-08-12 19:08:45.265 UTC [41] LOG:  received fast shutdown request
+rinha-backend-db  | 2025-08-12 19:08:45.268 UTC [41] LOG:  aborting any active transactions
+rinha-backend-db  | 2025-08-12 19:08:45.354 UTC [62] FATAL:  the database system is shutting down
+rinha-backend-db  | 2025-08-12 19:08:45.354 UTC [41] LOG:  background worker "logical replication launcher" (PID 47) exited with exit code 1
+rinha-backend-db  | 2025-08-12 19:08:45.354 UTC [42] LOG:  shutting down
+rinha-backend-db  | 2025-08-12 19:08:45.357 UTC [42] LOG:  checkpoint starting: shutdown immediate
+rinha-backend-db  | 2025-08-12 19:08:45.416 UTC [42] LOG:  checkpoint complete: wrote 933 buffers (5.7%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.036 s, sync=0.014 s, total=0.062 s; sync files=308, longest=0.003 s, average=0.001 s; distance=4286 kB, estimate=4286 kB; lsn=0/191CC80, redo lsn=0/191CC80
+rinha-backend-db  | 2025-08-12 19:08:45.460 UTC [41] LOG:  database system is shut down
+rinha-backend-db  |  done
+rinha-backend-db  | server stopped
+rinha-backend-db  | 
+rinha-backend-db  | PostgreSQL init process complete; ready for start up.
+rinha-backend-db  | 
+rinha-backend-db  | 2025-08-12 19:08:45.554 UTC [1] LOG:  starting PostgreSQL 17.5 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
+rinha-backend-db  | 2025-08-12 19:08:45.554 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+rinha-backend-db  | 2025-08-12 19:08:45.554 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+rinha-backend-db  | 2025-08-12 19:08:45.560 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+rinha-backend-db  | 2025-08-12 19:08:45.569 UTC [66] LOG:  database system was shut down at 2025-08-12 19:08:45 UTC
+rinha-backend-db  | 2025-08-12 19:08:45.576 UTC [1] LOG:  database system is ready to accept connections
 backend-instance-01  | 
 backend-instance-01  |   .   ____          _            __ _ _
 backend-instance-01  |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -168,834 +167,26 @@ backend-instance-01  |  =========|_|==============|___/=/_/_/_/
 backend-instance-01  | 
 backend-instance-01  |  :: Spring Boot ::                (v3.5.3)
 backend-instance-01  | 
+backend-instance-02  | 
+backend-instance-02  |   .   ____          _            __ _ _
+backend-instance-02  |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+backend-instance-02  | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+backend-instance-02  |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+backend-instance-02  |   '  |____| .__|_| |_|_| |_\__, | / / / /
+backend-instance-02  |  =========|_|==============|___/=/_/_/_/
+backend-instance-02  | 
+backend-instance-02  |  :: Spring Boot ::                (v3.5.3)
+backend-instance-02  | 
 load-balancer        | [NOTICE]   (1) : Initializing new worker (8)
-load-balancer        | [NOTICE]   (1) : Loading success.
-load-balancer        | Connect from 172.19.0.1:46424 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39856 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39868 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39884 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39892 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39896 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39908 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39912 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39914 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39920 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39936 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39952 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39962 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39884 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39976 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39892 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39982 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39896 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39990 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39908 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40004 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39912 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40016 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39914 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40024 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39920 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40036 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39936 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40040 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39952 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39962 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40056 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39884 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40070 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39976 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39892 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40076 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39982 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39896 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40082 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39990 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39908 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40096 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40004 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39912 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40110 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40016 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39914 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40114 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40024 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39920 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40118 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40036 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39936 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40122 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40040 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39952 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40136 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39962 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40056 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39884 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40148 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40070 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39976 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39892 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40160 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40076 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39982 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39896 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40166 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40082 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39990 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39908 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40182 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40096 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40004 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39912 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40196 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40110 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40016 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39914 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40210 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40114 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40024 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39920 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40218 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40118 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40036 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39936 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40222 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40122 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40040 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39952 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40232 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40136 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39962 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40056 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39884 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40242 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40148 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40070 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39976 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39892 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40244 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40160 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40076 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39982 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39896 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40166 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40082 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39990 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39908 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40258 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40262 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40182 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40096 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40004 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39912 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40270 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40196 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40110 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40016 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39914 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40274 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40210 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40114 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40024 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39920 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40284 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40218 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40118 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40036 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39936 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40290 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40222 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40122 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40040 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39952 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40296 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40232 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40136 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39962 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40056 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39884 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40308 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40242 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40148 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40070 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39976 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39892 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40320 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40244 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40160 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40076 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39982 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39896 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40322 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40166 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40082 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39990 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39908 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40258 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40262 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40332 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40182 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40096 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40004 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39912 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40336 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40270 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40196 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40110 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40016 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39914 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40346 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40274 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40210 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40114 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40024 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39920 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40352 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40284 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40218 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40118 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40036 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39936 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40356 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40290 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40222 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40122 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40040 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39952 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40364 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40296 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40232 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40136 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39962 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40056 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40380 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39884 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40308 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40242 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40148 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40070 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39976 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40386 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39892 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40320 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40244 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40160 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40076 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39982 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40396 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39896 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40322 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40166 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40082 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39990 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40398 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39908 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40258 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40262 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40332 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40182 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40096 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40004 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40402 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39912 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40336 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40270 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40196 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40110 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40016 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40404 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39914 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40346 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40274 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40210 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40114 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40024 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39920 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40406 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40352 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40284 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40218 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40118 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40036 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40408 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39936 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40356 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40290 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40222 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40122 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40040 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40418 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39952 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40364 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40296 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40232 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40136 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40424 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39962 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40056 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40380 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39884 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40308 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40242 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40148 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40070 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39976 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40438 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40386 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39892 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40320 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40244 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40160 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40076 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40448 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39982 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40396 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39896 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40322 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40166 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40082 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40454 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39990 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40398 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39908 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40258 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40262 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40332 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40182 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40096 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40464 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40004 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40402 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39912 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40336 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40270 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40196 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40110 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40468 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40016 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40404 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39914 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40346 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40274 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40210 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40114 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40472 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40024 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40406 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39920 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40352 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40284 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40218 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40118 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40474 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40036 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40408 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39936 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40356 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40290 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40222 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40122 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38110 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40040 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39952 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40364 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40296 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40232 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40136 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38126 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39962 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40056 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40380 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39884 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40308 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40242 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40148 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38128 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40070 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39976 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40386 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39892 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40320 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40244 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40160 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40076 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38138 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40448 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39982 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39896 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40396 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40322 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40166 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38152 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40082 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40454 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39990 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40398 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39908 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40262 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40258 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40332 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40182 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38160 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40096 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40464 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40004 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40402 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39912 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40336 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40270 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40196 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40110 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38170 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40016 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39914 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40346 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40274 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40210 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38174 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40114 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40472 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40024 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40406 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39920 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40352 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40284 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40218 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40118 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38176 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40036 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40408 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39936 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40356 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40290 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40222 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40122 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38180 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38110 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40040 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39952 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40364 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40296 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40232 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38184 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40136 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38126 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40424 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39962 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40056 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40380 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39884 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40308 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40242 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38188 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40148 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38128 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40070 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40438 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40386 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39892 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40320 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40244 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40160 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38138 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38200 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40448 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39982 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39896 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40396 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40322 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38216 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40166 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38152 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40082 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40454 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39990 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40398 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39908 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40258 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40262 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40332 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38220 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40182 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38160 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40096 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40464 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40004 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40402 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39912 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40336 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40270 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40196 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38232 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40110 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40016 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39914 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40346 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40274 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38238 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40210 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38174 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40114 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40024 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40472 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39920 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40406 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40352 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40284 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38248 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40218 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38176 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40036 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40408 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39936 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40356 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40290 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38252 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40222 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38180 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38110 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40040 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39952 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40364 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40296 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40232 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38256 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38184 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38126 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40424 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39962 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40056 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40380 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39884 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40308 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38268 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40242 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38272 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38188 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40148 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38128 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40070 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39976 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40386 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39892 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40320 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40244 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40160 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38276 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40076 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38200 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39982 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40396 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39896 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40322 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38280 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38216 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40166 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38152 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40082 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39990 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40398 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39908 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38290 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40258 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40262 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40332 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38220 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40182 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38160 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40096 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40464 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40004 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40402 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39912 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40336 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40270 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40196 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38232 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40110 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40468 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39914 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40346 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38306 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40274 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38238 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40210 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38174 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40114 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40024 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39920 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40406 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40352 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38308 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40284 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38248 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38176 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40474 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40408 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39936 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40356 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38318 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40290 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38252 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40222 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40122 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38180 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38110 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40418 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40364 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40296 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38328 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38256 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40136 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38184 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38126 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39962 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40056 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40380 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39884 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38336 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40308 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38268 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40242 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40148 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38128 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40070 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40438 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39892 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40386 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38344 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40320 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40244 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40160 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38276 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40076 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38200 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39982 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40448 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40396 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39896 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38360 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40322 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38280 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38216 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40166 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38152 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40082 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39990 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40398 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39908 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38372 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38290 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40258 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40262 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40332 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38220 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40182 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38160 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40096 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40464 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40004 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40402 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39912 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40336 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38374 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40270 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38232 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40196 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40110 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40016 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39914 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40404 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38390 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40346 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38306 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40274 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38238 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40210 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40114 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40472 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40024 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40406 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39920 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40352 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38402 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38308 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40284 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38248 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40218 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40118 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38176 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40474 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40036 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40408 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39936 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38416 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40356 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40290 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38318 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40222 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38252 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40122 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38180 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40040 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38110 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39952 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40418 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40364 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38422 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38328 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38256 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40232 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40136 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38184 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38126 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39962 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40424 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40056 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40380 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39884 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38336 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40308 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38424 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38268 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40242 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38188 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40070 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39976 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40438 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40386 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39892 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38436 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38344 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40320 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40244 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40160 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38276 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40076 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38200 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39982 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40448 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40396 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38442 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39896 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40322 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38360 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38280 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40166 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38216 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38152 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40082 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40454 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39990 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38444 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40398 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39908 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38372 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38290 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40262 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40258 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40332 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40182 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38220 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38160 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40096 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40464 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40004 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38452 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40402 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39912 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40336 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38374 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40270 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40196 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38232 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38170 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40016 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39914 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40404 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38464 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38390 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40346 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38306 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40274 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38238 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40210 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40114 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40024 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40406 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39920 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40352 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38402 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38308 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40284 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38248 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40218 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38176 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40118 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40036 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38490 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40408 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39936 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38416 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40356 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40290 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38252 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40222 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38180 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40122 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40040 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38110 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38504 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39952 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40418 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40364 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38422 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40296 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38328 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38256 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40232 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40136 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38184 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38126 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38512 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39962 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40424 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40056 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40380 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39884 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38336 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40308 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38424 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40242 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38268 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40148 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40070 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38526 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40438 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39976 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39892 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40386 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38436 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38344 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40320 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40244 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40160 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38276 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38138 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38200 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38532 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39982 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40448 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40396 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38442 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:39896 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40322 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38360 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38280 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38216 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40166 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38152 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40082 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:38536 to 172.19.0.6:9999 (http_in/HTTP)
-load-balancer        | Connect from 172.19.0.1:40454 to 172.19.0.6:9999 (http_in/HTTP)
-log truncated at line 1000
+load-balancer        | [NOTICE]   (1) : haproxy version is 3.2.3-1844da7
+load-balancer        | [WARNING]  (1) : Failed to load worker!
+[Kload-balancer exited with code 137
+[Kbackend-instance-02 exited with code 143
+[Kbackend-instance-01 exited with code 143
+rinha-backend-db     | 2025-08-12 19:09:53.100 UTC [1] LOG:  received fast shutdown request
+rinha-backend-db     | 2025-08-12 19:09:53.103 UTC [1] LOG:  aborting any active transactions
+rinha-backend-db     | 2025-08-12 19:09:53.106 UTC [1] LOG:  background worker "logical replication launcher" (PID 69) exited with exit code 1
+rinha-backend-db     | 2025-08-12 19:09:53.106 UTC [64] LOG:  shutting down
+rinha-backend-db     | 2025-08-12 19:09:53.109 UTC [64] LOG:  checkpoint starting: shutdown immediate
+rinha-backend-db     | 2025-08-12 19:09:53.130 UTC [64] LOG:  checkpoint complete: wrote 36 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.006 s, sync=0.004 s, total=0.024 s; sync files=15, longest=0.002 s, average=0.001 s; distance=138 kB, estimate=138 kB; lsn=0/193F818, redo lsn=0/193F818
+rinha-backend-db     | 2025-08-12 19:09:53.136 UTC [1] LOG:  database system is shut down

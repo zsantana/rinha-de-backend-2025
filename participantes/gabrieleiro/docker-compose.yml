@@ -1,6 +1,6 @@
 x-service-templates:
   api: &api
-    image: gabrieleiro/rinha-de-backend-2025-api:9.0
+    image: gabrieleiro/rinha-de-backend-2025-api:10.0
     networks:
       - rinha-de-backend-2025
       - payment-processor
@@ -22,7 +22,7 @@ services:
       DEFAULT_PROCESSOR_URL: "http://payment-processor-default:8080"
       FALLBACK_PROCESSOR_URL: "http://payment-processor-fallback:8080"
       TRACKER_URI: "/tmp/tracker.sock"
-      ADDRESS: ":9901"
+      ADDRESS: "/tmp/api_1.sock"
 
   api-2:
     <<: *api
@@ -31,10 +31,10 @@ services:
       DEFAULT_PROCESSOR_URL: "http://payment-processor-default:8080"
       FALLBACK_PROCESSOR_URL: "http://payment-processor-fallback:8080"
       TRACKER_URI: "/tmp/tracker.sock"
-      ADDRESS: ":9902"
+      ADDRESS: "/tmp/api_2.sock"
 
   load-balancer:
-    image: gabrieleiro/rinha-de-backend-2025-load-balancer:haproxy-1.0
+    image: gabrieleiro/rinha-de-backend-2025-load-balancer:haproxy-2.0
     networks:
       - rinha-de-backend-2025
     deploy:
@@ -44,6 +44,8 @@ services:
           memory: "50MB"
     ports:
       - "9999:9999"
+    volumes:
+      - /tmp:/tmp
     depends_on:
       - api-1
       - api-2
