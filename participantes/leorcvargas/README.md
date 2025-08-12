@@ -1,5 +1,11 @@
 # RINHEX
 
+- Sobre
+
+  - Optei por fazer tudo dentro do ecossistema do Elixir/Erlang, tirando o load balancer
+  - LB <-> HTTP API <-> Worker node -> Payment Processors
+  - Juro que deixo um diagrama legal aqui em breve
+
 - Tecnologias:
   - HAProxy ou Nginx (load balancer)
   - Elixir (linguagem)
