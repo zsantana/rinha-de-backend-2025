@@ -8,6 +8,6 @@
 
 ## Repositório
 Go Horse!
-![Repository](https://github.com/Edmar-Sousa/rinha-de-back-end-2025)
+[Repository](https://github.com/Edmar-Sousa/rinha-de-back-end-2025)
 
 
