@@ -1,6 +1,6 @@
 services:
   api1: &api
-    image: joaoulian/rinha-backend-2025-api:v1.0.4
+    image: joaoulian/rinha-backend-2025-api:v1.0.5
     command: node dist/index.js
     hostname: api1
     environment:
@@ -24,7 +24,7 @@ services:
     hostname: api2
 
   worker1: &worker
-    image: joaoulian/rinha-backend-2025-api:v1.0.4
+    image: joaoulian/rinha-backend-2025-api:v1.0.5
     command: node dist/worker.js
     hostname: worker1
     environment:
