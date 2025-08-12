@@ -49,6 +49,7 @@ services:
 
 networks:
   payment-processor-server-network:
+    driver: bridge
   payment-processor:
     external: true
 
