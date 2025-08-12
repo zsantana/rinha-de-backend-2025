@@ -1,11 +1,29 @@
+x-base-service: &fastapi-server
+  image: victorcoelh/rinha-backend-2025-app:latest
+  environment:
+    REDIS_URL: redis://redis:6379/0
+  networks:
+    - default
+    - payment-processor
+  expose:
+    - "8000"
+  deploy:
+    resources:
+      limits:
+        cpus: "0.25"
+        memory: 100M
+
 services:
   nginx:
     image: nginx:latest
+    container_name: nginx
     ports:
       - "9999:9999"
     depends_on:
-      - web-server-1
-      - web-server-2
+      web-server-1:
+        condition: service_started
+      web-server-2:
+        condition: service_started
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf:ro
     deploy:
@@ -15,55 +33,39 @@ services:
           memory: 25M
 
   web-server-1:
-    image: victorcoelh/rinha-backend-2025-app:server
-    expose:
-      - "8000"
-    depends_on:
-      - redis
-    environment:
-      REDIS_URL: redis://redis:6379/0
-    networks:
-      - default
-    deploy:
-      resources:
-        limits:
-          cpus: "0.25"
-          memory: 100M
+    <<: *fastapi-server
+    container_name: fastapi-1
+    command: ["uv", "run", "granian", "--interface", "asgi", "src.entrypoints.server:app",
+     "--host", "0.0.0.0", "--workers", "1", "--runtime-threads", "1", "--no-reload"]
 
   web-server-2:
-    image: victorcoelh/rinha-backend-2025-app:server
-    expose:
-      - "8000"
-    depends_on:
-      - redis
-    environment:
-      REDIS_URL: redis://redis:6379/0
-    networks:
-      - default
-    deploy:
-      resources:
-        limits:
-          cpus: "0.25"
-          memory: 100M
+    <<: *fastapi-server
+    container_name: fastapi-2
+    command: ["uv", "run", "granian", "--interface", "asgi", "src.entrypoints.server:app",
+     "--host", "0.0.0.0", "--workers", "1", "--runtime-threads", "1", "--no-reload"]
 
   workers:
-    image: victorcoelh/rinha-backend-2025-app:worker
+    <<: *fastapi-server
+    container_name: workers
     depends_on:
       - redis
-    environment:
-      REDIS_URL: redis://redis:6379/0
-    networks:
-      - default
-      - payment-processor
+      - web-server-1
+      - web-server-2
     deploy:
       resources:
         limits:
           cpus: "0.8"
           memory: 105M
+    command: ["uv", "run", "dramatiq", "src.entrypoints.worker", "--processes", "2",
+     "--threads", "8"]
 
   redis:
-    hostname: redis
-    image: redis:alpine
+    container_name: redis
+    image: redis:7.2-alpine
+    command:
+      - redis-server
+      - --save ""
+      - --tcp-backlog 511
     expose:
       - "6379"
     deploy:

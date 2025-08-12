@@ -5,16 +5,16 @@
   "total_taxas": 0,
   "descricao": "'total_liquido' é sua pontuação final. Equivale ao seu lucro. Fórmula: total_liquido + (total_liquido * p99.bonus) - (total_liquido * multa.porcentagem)",
   "p99": {
-    "valor": "9.36ms",
-    "bonus": "3%",
+    "valor": "23.97ms",
+    "bonus": "0%",
     "max_requests": "550",
     "descricao": "Fórmula para o bônus: max((11 - p99.valor) * 0.02, 0)"
   },
   "multa": {
-    "porcentagem": 0,
+    "porcentagem": 0.35,
     "total": 0,
     "composicao": {
-      "num_inconsistencias": 0,
+      "num_inconsistencias": 12102,
       "descricao": "Se 'num_inconsistencias' > 0, há multa de 35%."
     }
   },
