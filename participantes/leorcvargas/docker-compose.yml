@@ -44,7 +44,7 @@ services:
       UDS_SOCKET: "/tmp/rinhex/api1.sock"
 
   api2:
-    <<: *api
+    <<: *base
     hostname: api2
     deploy:
       resources:
@@ -60,7 +60,7 @@ services:
       UDS_SOCKET: "/tmp/rinhex/api2.sock"
 
   worker:
-    <<: *api
+    <<: *base
     hostname: worker
     deploy:
       resources:
