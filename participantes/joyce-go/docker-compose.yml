@@ -2,7 +2,7 @@ x-base-env: &base-env
   DB_SOCKET_PATH: /sockets/database.sock
 services:
   payments-service: &payments-service
-    image: joycegodinhoo/payments-service:v0.0.4
+    image: joycegodinhoo/payments-service:v0.0.5
     container_name: payments-service
     environment:
       <<: *base-env
@@ -25,7 +25,7 @@ services:
 
   payments-service-2:
     <<: *payments-service
-    image: joycegodinhoo/payments-service:v0.0.4
+    image: joycegodinhoo/payments-service:v0.0.5
     container_name: payments-service-2
     environment:
       <<: *base-env
