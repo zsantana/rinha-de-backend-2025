@@ -1,5 +1,5 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Tue Aug 12 12:00:36 PM -03 2025**
+Atualizado em **Tue Aug 12 12:16:31 PM -03 2025**
 334 submissões / 302 resultados / 32 submissões com erro
 
 
@@ -65,7 +65,7 @@ Atualizado em **Tue Aug 12 12:00:36 PM -03 2025**
 |	davidalecrim1-go-3	|	3.63ms	|	15%	|	0	|	364135.82175	|	[davidalecrim1-go-3](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/davidalecrim1-go-3)
 |	davidalecrim1-go-4	|	5.63ms	|	11%	|	0	|	351302.35155	|	[davidalecrim1-go-4](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/davidalecrim1-go-4)
 |	davidalecrim1-go-5	|	2.35ms	|	17%	|	0	|	370358.0244	|	[davidalecrim1-go-5](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/davidalecrim1-go-5)
-|	david-delta-sierra-go	|	1.7ms	|	19%	|	0	|	376778.9186	|	[david-delta-sierra-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/david-delta-sierra-go)
+|	david-delta-sierra-go	|	2.14ms	|	18%	|	0	|	370177.2926	|	[david-delta-sierra-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/david-delta-sierra-go)
 |	davigga-node-2	|	111.37ms	|	0%	|	0	|	263350.63	|	[davigga-node-2](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/davigga-node-2)
 |	davigga-node	|	96.8ms	|	0%	|	0	|	300462.14	|	[davigga-node](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/davigga-node)
 |	dbiagi	|	91.18ms	|	0%	|	107212.59325	|	199109.10175	|	[dbiagi](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/dbiagi)
