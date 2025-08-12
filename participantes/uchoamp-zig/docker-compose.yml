@@ -19,7 +19,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.50"
+          cpus: "1.10"
           memory: "50MB"
   zig1: &zig
     container_name: zig-pay-1
