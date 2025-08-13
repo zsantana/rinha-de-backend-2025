@@ -31,7 +31,7 @@ MAX_REQUESTS=550
 while true; do
 
     # docker system prune -a -f --volumes
-    execution=1
+    execution=0
     max_executions_before_shutdown=15
 
     for directory in ../participantes/*; do
