@@ -26,27 +26,42 @@ stopContainers() {
     popd > /dev/null
 }
 
-MAX_REQUESTS=550
+scheduleReboot() {
+    epoch=$(date +%s)
+    schedule_epochtime=$((epoch + (5 * 60)))
+    schedule_datetime=$(date -d @$schedule_epochtime +"%Y-%m-%dT%H:%M:%S")
 
-start=$(date +%s)
-max_seconds=$((60 * 60)) # 60 minutos
-shutdown_enabled=0
+    aws scheduler create-schedule \
+        --name OneTimeScheduler-$epoch \
+        --schedule-expression "at($schedule_datetime)" \
+        --target "{\"Arn\": \"arn:aws:lambda:us-east-1:${AWS_ACCOUNT}:function:start-ec2-instance\", \"RoleArn\": \"arn:aws:iam::${AWS_ACCOUNT}:role/service-role/start-ec2-instance-role\"}" \
+        --flexible-time-window '{"Mode": "OFF"}' \
+        --region us-east-1
+}
+
+maybeReboot() {
+    pushd ../participantes/$1 > /dev/null
+    pull_errors=$(grep -l "Error toomanyrequests" docker-compose.logs | wc -l)
+    if [ $pull_errors -gt 0 ]; then
+        echo "Preparing to shutdown due to docker pull limit errors"
+        stopContainers $1
+        rm docker-compose.logs
+        rm partial-results.json
+        scheduleReboot
+        sleep 15
+        sudo shutdown now
+        kill -9 $$
+        exit 0
+    fi
+    popd > /dev/null
+}
+
+MAX_REQUESTS=550
 
 while true; do
 
     for directory in ../participantes/*; do
     (
-        _now=$(date +%s)
-        diff=$(($_now - $start))
-
-        echo "$diff/$max_seconds seconds passed"
-
-        if [ $shutdown_enabled -eq 1 ] && [ $diff -ge $max_seconds ]; then
-            sudo shutdown now
-            kill -9 $$
-            exit 0
-        fi
-
         git pull
         participant=$(echo $directory | sed -e 's/..\/participantes\///g' -e 's/\///g')
         echo ""
@@ -62,6 +77,7 @@ while true; do
             echo "executing test for $participant..."
             stopContainers $participant
             startContainers $participant
+            maybeReboot $participant
 
             success=1
             max_attempts=15
