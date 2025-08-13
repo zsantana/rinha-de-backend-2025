@@ -1,6 +1,6 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Wed Aug 13 11:37:00 UTC 2025**
-338 submissões / 253 resultados / 85 submissões com erro
+Atualizado em **Wed Aug 13 11:44:05 UTC 2025**
+339 submissões / 254 resultados / 85 submissões com erro
 
 
 | participante | p99 | bônus por desempenho (%) | multa ($) | lucro | submissão |
@@ -221,6 +221,7 @@ Atualizado em **Wed Aug 13 11:37:00 UTC 2025**
 |	rodrigodotdev-bun	|	103.86ms	|	0%	|	0	|	230281.805	|	[rodrigodotdev-bun](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/rodrigodotdev-bun)
 |	rodrigoknol	|	2.84ms	|	16%	|	110537.336	|	255814.9776	|	[rodrigoknol](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/rodrigoknol)
 |	ronssm-CopiRinhaGo	|	103.48ms	|	0%	|	42376.10475	|	78698.48025	|	[ronssm-CopiRinhaGo](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/ronssm-CopiRinhaGo)
+|	rst77	|	107.32ms	|	0%	|	0	|	0	|	[rst77](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/rst77)
 |	ryangst-bun	|	946.83ms	|	0%	|	0	|	0	|	[ryangst-bun](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/ryangst-bun)
 |	samuelpanzera-rs-coroutines	|	2.07ms	|	18%	|	0	|	309771.0217	|	[samuelpanzera-rs-coroutines](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/samuelpanzera-rs-coroutines)
 |	samypng-go	|	2.34ms	|	17%	|	0	|	370512.85635	|	[samypng-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/samypng-go)
