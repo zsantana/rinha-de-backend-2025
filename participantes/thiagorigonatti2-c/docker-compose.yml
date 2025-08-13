@@ -1,14 +1,14 @@
 services:
 
   backend01: &backend
-    image: thiagorigonatti/rinha-2025-scratch:0.0.14
+    image: thiagorigonatti/rinha-2025-scratch:0.0.13
 #    build:
 #      context: .
 #      dockerfile: scratch.Dockerfile
     container_name: backend01
     environment:
-      - HTTP_CLIENT_THREADS=6
-      - SOCKET_SERVER_THREADS=6
+      - HTTP_CLIENT_THREADS=1
+      - SOCKET_SERVER_THREADS=1
       - SHM_PATH=/shm_array
       - SOCKET_PATH=/dev/shm/server1.sock
     networks:
@@ -28,8 +28,8 @@ services:
     <<: *backend
     container_name: backend02
     environment:
-      - HTTP_CLIENT_THREADS=6
-      - SOCKET_SERVER_THREADS=6
+      - HTTP_CLIENT_THREADS=1
+      - SOCKET_SERVER_THREADS=1
       - SHM_PATH=/shm_array
       - SOCKET_PATH=/dev/shm/server2.sock
 
