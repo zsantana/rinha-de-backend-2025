@@ -8,6 +8,6 @@ sed -i 's/^/rm /' $cleanup_file
 
 chmod +x $cleanup_file
 
-source ./$cleanup_file
+sh ./$cleanup_file
 
 rm $cleanup_file
