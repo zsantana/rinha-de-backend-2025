@@ -1,28 +1,109 @@
 
+ api1 Pulling 
+ api2 Pulling 
+ socket Pulling 
+ 0368fd46e3c6 Already exists 
+ 0368fd46e3c6 Already exists 
+ b2cfd92d46e1 Already exists 
+ b2cfd92d46e1 Already exists 
+ 0368fd46e3c6 Already exists 
+ bed0ae60cca4 Already exists 
+ bed0ae60cca4 Already exists 
+ b2cfd92d46e1 Already exists 
+ bed0ae60cca4 Already exists 
+ a70d06f762c0 Already exists 
+ a70d06f762c0 Already exists 
+ a70d06f762c0 Already exists 
+ 431200b796ef Already exists 
+ 431200b796ef Already exists 
+ 431200b796ef Already exists 
+ d4da49add472 Already exists 
+ d4da49add472 Already exists 
+ 0aada88c847b Pulling fs layer 
+ 7a91983697b6 Pulling fs layer 
+ d4da49add472 Already exists 
+ 0aada88c847b Pulling fs layer 
+ 056d083d3f5f Pulling fs layer 
+ 876e50672b9d Pulling fs layer 
+ 876e50672b9d Waiting 
+ 0aada88c847b Pulling fs layer 
+ 056d083d3f5f Pulling fs layer 
+ 876e50672b9d Pulling fs layer 
+ 876e50672b9d Waiting 
+ 0aada88c847b Download complete 
+ 0aada88c847b Downloading [==================================================>]      92B/92B
+ 0aada88c847b Downloading [==================================================>]      92B/92B
+ 0aada88c847b Verifying Checksum 
+ 0aada88c847b Download complete 
+ 0aada88c847b Verifying Checksum 
+ 0aada88c847b Download complete 
+ 0aada88c847b Extracting [==================================================>]      92B/92B
+ 0aada88c847b Extracting [==================================================>]      92B/92B
+ 0aada88c847b Extracting [==================================================>]      92B/92B
+ 0aada88c847b Extracting [==================================================>]      92B/92B
+ 0aada88c847b Extracting [==================================================>]      92B/92B
+ 0aada88c847b Extracting [==================================================>]      92B/92B
+ 0aada88c847b Pull complete 
+ 0aada88c847b Pull complete 
+ 0aada88c847b Pull complete 
+ 7a91983697b6 Downloading [>                                                  ]  33.25kB/1.858MB
+ 7a91983697b6 Download complete 
+ 7a91983697b6 Extracting [>                                                  ]  32.77kB/1.858MB
+ 876e50672b9d Downloading [>                                                  ]  33.27kB/2.082MB
+ 876e50672b9d Downloading [>                                                  ]  33.27kB/2.082MB
+ 876e50672b9d Verifying Checksum 
+ 876e50672b9d Download complete 
+ 876e50672b9d Verifying Checksum 
+ 876e50672b9d Download complete 
+ 7a91983697b6 Extracting [==================================================>]  1.858MB/1.858MB
+ 7a91983697b6 Extracting [==================================================>]  1.858MB/1.858MB
+ 056d083d3f5f Downloading [>                                                  ]  33.27kB/2.307MB
+ 056d083d3f5f Downloading [>                                                  ]  33.27kB/2.307MB
+ 7a91983697b6 Pull complete 
+ socket Pulled 
+ 056d083d3f5f Downloading [===============================================>   ]  2.184MB/2.307MB
+ 056d083d3f5f Downloading [===============================================>   ]  2.184MB/2.307MB
+ 056d083d3f5f Download complete 
+ 056d083d3f5f Download complete 
+ 056d083d3f5f Extracting [>                                                  ]  32.77kB/2.307MB
+ 056d083d3f5f Extracting [>                                                  ]  32.77kB/2.307MB
+ 056d083d3f5f Extracting [==================================================>]  2.307MB/2.307MB
+ 056d083d3f5f Extracting [==================================================>]  2.307MB/2.307MB
+ 056d083d3f5f Pull complete 
+ 056d083d3f5f Pull complete 
+ 876e50672b9d Extracting [>                                                  ]  32.77kB/2.082MB
+ 876e50672b9d Extracting [>                                                  ]  32.77kB/2.082MB
+ 876e50672b9d Extracting [==================================================>]  2.082MB/2.082MB
+ 876e50672b9d Extracting [==================================================>]  2.082MB/2.082MB
+ 876e50672b9d Pull complete 
+ 876e50672b9d Pull complete 
+ api1 Pulled 
+ api2 Pulled 
  Network shell-c_rinha  Creating
  Network shell-c_rinha  Created
  Volume "shell-c_socket"  Creating
  Volume "shell-c_socket"  Created
  Container socket  Creating
  Container socket  Created
- Container api1  Creating
  Container api2  Creating
+ Container api1  Creating
  Container api2  Created
  Container api1  Created
  Container haproxy-lb  Creating
  Container haproxy-lb  Created
 Attaching to api1, api2, haproxy-lb, socket
-socket      | Listening on /tmp/shell.sock…
+socket  | Listening on /tmp/shell.sock…
 haproxy-lb  | [NOTICE]   (1) : Initializing new worker (8)
 haproxy-lb  | [NOTICE]   (1) : Loading success.
+haproxy-lb  | [WARNING]  (8) : Server backend/api1 is DOWN, reason: Layer4 connection problem, info: "Connection refused", check duration: 0ms. 1 active and 0 backup servers left. 0 sessions active, 0 requeued, 0 remaining in queue.
+haproxy-lb  | [WARNING]  (8) : Server backend/api1 is UP, reason: Layer4 check passed, check duration: 0ms. 2 active and 0 backup servers online. 0 sessions requeued, 0 total in queue.
 haproxy-lb  | [NOTICE]   (1) : haproxy version is 3.2.3-1844da7
 haproxy-lb  | [WARNING]  (1) : Exiting Master process...
 haproxy-lb  | [WARNING]  (8) : Proxy frontend stopped (cumulated conns: FE: 553, BE: 0).
-haproxy-lb  | [WARNING]  (8) : Proxy backend stopped (cumulated conns: FE: 0, BE: 16733).
+haproxy-lb  | [WARNING]  (8) : Proxy backend stopped (cumulated conns: FE: 0, BE: 16743).
 haproxy-lb  | [WARNING]  (1) : Current worker (8) exited with code 0 (Exit)
 haproxy-lb  | [WARNING]  (1) : All workers exited. Exiting... (0)
 [Khaproxy-lb exited with code 0
 [Kapi2 exited with code 0
 [Kapi1 exited with code 0
-[Ksocket exited with code 143
 log truncated at line 1000

@@ -9,34 +9,35 @@
  f574de5baf4a Pulling fs layer 
  27404bb7cda4 Pulling fs layer 
  82a5c4107586 Pulling fs layer 
- f574de5baf4a Downloading [=>                                                 ]  1.369kB/55.28kB
- f574de5baf4a Downloading [=>                                                 ]  1.369kB/55.28kB
- f574de5baf4a Download complete 
- f574de5baf4a Download complete 
- f574de5baf4a Extracting [=============================>                     ]  32.77kB/55.28kB
- f574de5baf4a Extracting [=============================>                     ]  32.77kB/55.28kB
- f574de5baf4a Extracting [==================================================>]  55.28kB/55.28kB
- f574de5baf4a Extracting [==================================================>]  55.28kB/55.28kB
- f574de5baf4a Pull complete 
- f574de5baf4a Pull complete 
- 27404bb7cda4 Downloading [==================================================>]      93B/93B
- 27404bb7cda4 Verifying Checksum 
- 27404bb7cda4 Download complete 
- 27404bb7cda4 Downloading [==================================================>]      93B/93B
- 27404bb7cda4 Download complete 
- 27404bb7cda4 Extracting [==================================================>]      93B/93B
- 27404bb7cda4 Extracting [==================================================>]      93B/93B
- 27404bb7cda4 Extracting [==================================================>]      93B/93B
- 27404bb7cda4 Extracting [==================================================>]      93B/93B
- 27404bb7cda4 Pull complete 
- 27404bb7cda4 Pull complete 
- 82a5c4107586 Downloading [====>                                              ]  1.369kB/13.92kB
- 82a5c4107586 Downloading [====>                                              ]  1.369kB/13.92kB
- 82a5c4107586 Downloading [==================================================>]  13.92kB/13.92kB
  82a5c4107586 Downloading [==================================================>]  13.92kB/13.92kB
  82a5c4107586 Verifying Checksum 
  82a5c4107586 Download complete 
+ 82a5c4107586 Downloading [==================================================>]  13.92kB/13.92kB
+ 82a5c4107586 Verifying Checksum 
  82a5c4107586 Download complete 
+ f574de5baf4a Downloading [==============>                                    ]  16.38kB/55.28kB
+ f574de5baf4a Downloading [==============>                                    ]  16.38kB/55.28kB
+ f574de5baf4a Downloading [==================================================>]  55.28kB/55.28kB
+ f574de5baf4a Download complete 
+ f574de5baf4a Downloading [==================================================>]  55.28kB/55.28kB
+ f574de5baf4a Verifying Checksum 
+ f574de5baf4a Download complete 
+ f574de5baf4a Extracting [=============================>                     ]  32.77kB/55.28kB
+ f574de5baf4a Extracting [=============================>                     ]  32.77kB/55.28kB
+ f574de5baf4a Extracting [==================================================>]  55.28kB/55.28kB
+ f574de5baf4a Extracting [==================================================>]  55.28kB/55.28kB
+ 27404bb7cda4 Downloading [==================================================>]      93B/93B
+ 27404bb7cda4 Downloading [==================================================>]      93B/93B
+ 27404bb7cda4 Download complete 
+ 27404bb7cda4 Download complete 
+ f574de5baf4a Pull complete 
+ f574de5baf4a Pull complete 
+ 27404bb7cda4 Extracting [==================================================>]      93B/93B
+ 27404bb7cda4 Extracting [==================================================>]      93B/93B
+ 27404bb7cda4 Extracting [==================================================>]      93B/93B
+ 27404bb7cda4 Extracting [==================================================>]      93B/93B
+ 27404bb7cda4 Pull complete 
+ 27404bb7cda4 Pull complete 
  82a5c4107586 Extracting [==================================================>]  13.92kB/13.92kB
  82a5c4107586 Extracting [==================================================>]  13.92kB/13.92kB
  82a5c4107586 Extracting [==================================================>]  13.92kB/13.92kB
@@ -61,7 +62,7 @@ app-2-1  | Using default processor: payment-processor-default:8080
 proxy    | HAProxy version 3.2.3-1844da7 2025/07/09 - https://haproxy.org/
 proxy    | Status: long-term supported branch - will stop receiving fixes around Q2 2030.
 proxy    | Known bugs: http://www.haproxy.org/bugs/bugs-3.2.3.html
-proxy    | Running on: Linux 6.1.0-37-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.140-1 (2025-05-22) x86_64
+proxy    | Running on: Linux 6.14.0-1010-aws #10~24.04.1-Ubuntu SMP Fri Jul 18 20:44:30 UTC 2025 x86_64
 proxy    | Usage : haproxy [-f <cfgfile|cfgdir>]* [ -vdVD ] [ -n <maxconn> ] [ -N <maxpconn> ]
 proxy    |         [ -p <pidfile> ] [ -m <max megs> ] [ -C <dir> ] [-- <cfgfile>*]
 proxy    |         -v displays version ; -vv shows known build options.
@@ -101,4 +102,3 @@ proxy    |         -x <unix_socket> get listening sockets from a unix socket
 proxy    |         -S <bind>[,<bind options>...] new master CLI
 proxy    | 
 [Kproxy exited with code 1
-[Kapp-1-1 exited with code 137
