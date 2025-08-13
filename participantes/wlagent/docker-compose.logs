@@ -1,0 +1,155 @@
+
+ app2 Pulling 
+ nats Pulling 
+ app1 Pulling 
+ 9824c27679d3 Already exists 
+ 847861e8dd44 Pulling fs layer 
+ 43e37305c0d9 Pulling fs layer 
+ 9824c27679d3 Already exists 
+ 847861e8dd44 Pulling fs layer 
+ 43e37305c0d9 Pulling fs layer 
+ 9824c27679d3 Already exists 
+ 24c015b31706 Pulling fs layer 
+ 6a97296c7fe6 Pulling fs layer 
+ ca7355fe018b Pulling fs layer 
+ 6a97296c7fe6 Waiting 
+ ca7355fe018b Waiting 
+ 847861e8dd44 Downloading [==================================================>]      93B/93B
+ 847861e8dd44 Verifying Checksum 
+ 847861e8dd44 Download complete 
+ 847861e8dd44 Downloading [==================================================>]      93B/93B
+ 847861e8dd44 Verifying Checksum 
+ 847861e8dd44 Download complete 
+ 847861e8dd44 Extracting [==================================================>]      93B/93B
+ 847861e8dd44 Extracting [==================================================>]      93B/93B
+ 847861e8dd44 Extracting [==================================================>]      93B/93B
+ 847861e8dd44 Extracting [==================================================>]      93B/93B
+ 847861e8dd44 Pull complete 
+ 847861e8dd44 Pull complete 
+ 6a97296c7fe6 Downloading [==================================================>]     559B/559B
+ 6a97296c7fe6 Download complete 
+ 43e37305c0d9 Downloading [>                                                  ]   78.8kB/6.524MB
+ 43e37305c0d9 Downloading [>                                                  ]   78.8kB/6.524MB
+ ca7355fe018b Downloading [==================================================>]     407B/407B
+ ca7355fe018b Verifying Checksum 
+ ca7355fe018b Download complete 
+ 43e37305c0d9 Verifying Checksum 
+ 43e37305c0d9 Download complete 
+ 43e37305c0d9 Verifying Checksum 
+ 43e37305c0d9 Download complete 
+ 43e37305c0d9 Extracting [>                                                  ]  65.54kB/6.524MB
+ 43e37305c0d9 Extracting [>                                                  ]  65.54kB/6.524MB
+ 24c015b31706 Downloading [>                                                  ]  78.83kB/6.628MB
+ 24c015b31706 Verifying Checksum 
+ 24c015b31706 Download complete 
+ 24c015b31706 Extracting [>                                                  ]   98.3kB/6.628MB
+ 43e37305c0d9 Extracting [==================================================>]  6.524MB/6.524MB
+ 43e37305c0d9 Extracting [==================================================>]  6.524MB/6.524MB
+ 43e37305c0d9 Pull complete 
+ 43e37305c0d9 Pull complete 
+ app1 Pulled 
+ app2 Pulled 
+ 24c015b31706 Extracting [==============>                                    ]  1.966MB/6.628MB
+ 24c015b31706 Extracting [==================================================>]  6.628MB/6.628MB
+ 24c015b31706 Pull complete 
+ 6a97296c7fe6 Extracting [==================================================>]     559B/559B
+ 6a97296c7fe6 Extracting [==================================================>]     559B/559B
+ 6a97296c7fe6 Pull complete 
+ ca7355fe018b Extracting [==================================================>]     407B/407B
+ ca7355fe018b Extracting [==================================================>]     407B/407B
+ ca7355fe018b Pull complete 
+ nats Pulled 
+ Network wlagent_backend  Creating
+ Network wlagent_backend  Created
+ Volume "wlagent_redis-data"  Creating
+ Volume "wlagent_redis-data"  Created
+ Volume "wlagent_nats-data"  Creating
+ Volume "wlagent_nats-data"  Created
+ Volume "wlagent_rinha-store"  Creating
+ Volume "wlagent_rinha-store"  Created
+ Container wlagent-nats-1  Creating
+ Container wlagent-redis-1  Creating
+ Container wlagent-nats-1  Created
+ Container wlagent-redis-1  Created
+ Container wlagent-app2-1  Creating
+ Container wlagent-app1-1  Creating
+ Container wlagent-app2-1  Created
+ Container wlagent-app1-1  Created
+ Container wlagent-nginx-1  Creating
+ Container wlagent-nginx-1  Created
+Attaching to app1-1, app2-1, nats-1, nginx-1, redis-1
+nats-1  | [1] 2025/08/13 08:42:22.043696 [INF] Starting nats-server
+nats-1  | [1] 2025/08/13 08:42:22.043865 [INF]   Version:  2.10.29
+nats-1  | [1] 2025/08/13 08:42:22.043868 [INF]   Git:      [f91ddd8]
+nats-1  | [1] 2025/08/13 08:42:22.043870 [INF]   Name:     NASV6PTGYWTKF3DCP36DQECXYUT4X5AJSJRQ6FFK7RS4NNWTRQZG67TR
+nats-1  | [1] 2025/08/13 08:42:22.043880 [INF]   Node:     Gm7Wa65g
+nats-1  | [1] 2025/08/13 08:42:22.043882 [INF]   ID:       NASV6PTGYWTKF3DCP36DQECXYUT4X5AJSJRQ6FFK7RS4NNWTRQZG67TR
+nats-1  | [1] 2025/08/13 08:42:22.044640 [INF] Starting JetStream
+nats-1  | [1] 2025/08/13 08:42:22.044749 [WRN] Temporary storage directory used, data could be lost on system reboot
+nats-1  | [1] 2025/08/13 08:42:22.047160 [INF]     _ ___ _____ ___ _____ ___ ___   _   __  __
+nats-1  | [1] 2025/08/13 08:42:22.047168 [INF]  _ | | __|_   _/ __|_   _| _ \ __| /_\ |  \/  |
+nats-1  | [1] 2025/08/13 08:42:22.047170 [INF] | || | _|  | | \__ \ | | |   / _| / _ \| |\/| |
+nats-1  | [1] 2025/08/13 08:42:22.047171 [INF]  \__/|___| |_| |___/ |_| |_|_\___/_/ \_\_|  |_|
+nats-1  | [1] 2025/08/13 08:42:22.047173 [INF] 
+nats-1  | [1] 2025/08/13 08:42:22.047174 [INF]          https://docs.nats.io/jetstream
+nats-1  | [1] 2025/08/13 08:42:22.047176 [INF] 
+nats-1  | [1] 2025/08/13 08:42:22.047177 [INF] ---------------- JETSTREAM ----------------
+nats-1  | [1] 2025/08/13 08:42:22.047181 [INF]   Max Memory:      5.73 GB
+nats-1  | [1] 2025/08/13 08:42:22.047184 [INF]   Max Storage:     155.99 GB
+nats-1  | [1] 2025/08/13 08:42:22.047186 [INF]   Store Directory: "/tmp/nats/jetstream"
+nats-1  | [1] 2025/08/13 08:42:22.047187 [INF] -------------------------------------------
+nats-1  | [1] 2025/08/13 08:42:22.047783 [INF] Listening for client connections on 0.0.0.0:4222
+nats-1  | [1] 2025/08/13 08:42:22.047946 [INF] Server is ready
+redis-1  | 1:C 13 Aug 2025 08:42:22.174 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+redis-1  | 1:C 13 Aug 2025 08:42:22.174 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+redis-1  | 1:C 13 Aug 2025 08:42:22.174 * Redis version=7.4.5, bits=64, commit=00000000, modified=0, pid=1, just started
+redis-1  | 1:C 13 Aug 2025 08:42:22.174 * Configuration loaded
+redis-1  | 1:M 13 Aug 2025 08:42:22.174 * monotonic clock: POSIX clock_gettime
+redis-1  | 1:M 13 Aug 2025 08:42:22.255 * Running mode=standalone, port=6379.
+redis-1  | 1:M 13 Aug 2025 08:42:22.256 * Server initialized
+redis-1  | 1:M 13 Aug 2025 08:42:22.256 * Ready to accept connections tcp
+app2-1   | 2025/08/13 08:42:22 Broker connected successfully
+app2-1   | Stream PAYMENT criado com sucesso!
+app2-1   | 2025/08/13 08:42:22 Redis connected successfully
+app2-1   | 2025/08/13 08:42:22 Starting consumer 7
+app2-1   | 2025/08/13 08:42:22 Starting consumer 3
+app2-1   | 2025/08/13 08:42:22 Starting consumer 0
+app2-1   | 2025/08/13 08:42:22 Starting consumer 1
+app2-1   | 2025/08/13 08:42:22 Starting consumer 2
+app2-1   | 2025/08/13 08:42:22 Starting consumer 5
+app2-1   | 2025/08/13 08:42:22 Starting consumer 4
+app2-1   | 2025/08/13 08:42:22 Starting consumer 6
+app1-1   | Stream PAYMENT criado com sucesso!
+app1-1   | 2025/08/13 08:42:22 Broker connected successfully
+app1-1   | 2025/08/13 08:42:22 Redis connected successfully
+app1-1   | 2025/08/13 08:42:22 Starting consumer 3
+app1-1   | 2025/08/13 08:42:22 Starting consumer 2
+app1-1   | 2025/08/13 08:42:22 Starting consumer 7
+app1-1   | 2025/08/13 08:42:22 Starting consumer 4
+app1-1   | 2025/08/13 08:42:22 Starting consumer 5
+app1-1   | 2025/08/13 08:42:22 Starting consumer 6
+app1-1   | 2025/08/13 08:42:22 Starting consumer 1
+app1-1   | 2025/08/13 08:42:22 Starting consumer 0
+nginx-1  | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+nginx-1  | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+nginx-1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+nginx-1  | 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+nginx-1  | 10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
+nginx-1  | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+nginx-1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+nginx-1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+nginx-1  | /docker-entrypoint.sh: Configuration complete; ready for start up
+app2-1   | 2025/08/13 08:42:30 All payment sets purged successfully
+[Knginx-1 exited with code 0
+[Kapp1-1 exited with code 2
+[Kapp2-1 exited with code 2
+redis-1  | 1:signal-handler (1755074612) Received SIGTERM scheduling shutdown...
+nats-1   | [1] 2025/08/13 08:43:32.584630 [INF] Trapped "terminated" signal
+nats-1   | [1] 2025/08/13 08:43:32.634957 [INF] Initiating Shutdown...
+nats-1   | [1] 2025/08/13 08:43:32.635008 [INF] Initiating JetStream Shutdown...
+nats-1   | [1] 2025/08/13 08:43:32.635253 [INF] JetStream Shutdown
+nats-1   | [1] 2025/08/13 08:43:32.635318 [INF] Server Exiting..
+redis-1  | 1:M 13 Aug 2025 08:43:32.641 * User requested shutdown...
+redis-1  | 1:M 13 Aug 2025 08:43:32.641 # Redis is now ready to exit, bye bye...
+[Knats-1 exited with code 1
+log truncated at line 1000

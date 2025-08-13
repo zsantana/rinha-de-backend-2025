@@ -1,0 +1,1001 @@
+
+ redis Pulling 
+ redis Pulled 
+ Network mauricio-cantu-2_rinha-backend  Creating
+ Network mauricio-cantu-2_rinha-backend  Created
+ Container redis  Creating
+ Container redis  Created
+ Container payment-api-01  Creating
+ Container payment-api-02  Creating
+ Container payment-api-01  Created
+ Container payment-api-02  Created
+ Container nginx  Creating
+ Container nginx  Created
+Attaching to nginx, payment-api-01, payment-api-02, redis
+redis  | Starting Redis Server
+redis  | 1:C 13 Aug 2025 15:44:53.313 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+redis  | 1:C 13 Aug 2025 15:44:53.313 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+redis  | 1:C 13 Aug 2025 15:44:53.313 * Redis version=8.2.0, bits=64, commit=00000000, modified=1, pid=1, just started
+redis  | 1:C 13 Aug 2025 15:44:53.313 * Configuration loaded
+redis  | 1:M 13 Aug 2025 15:44:53.315 * monotonic clock: POSIX clock_gettime
+redis  | 1:M 13 Aug 2025 15:44:53.318 * Running mode=standalone, port=6379.
+redis  | 1:M 13 Aug 2025 15:44:53.322 * <bf> RedisBloom version 8.2.0 (Git=unknown)
+redis  | 1:M 13 Aug 2025 15:44:53.322 * <bf> Registering configuration options: [
+redis  | 1:M 13 Aug 2025 15:44:53.322 * <bf> 	{ bf-error-rate       :      0.01 }
+redis  | 1:M 13 Aug 2025 15:44:53.322 * <bf> 	{ bf-initial-size     :       100 }
+redis  | 1:M 13 Aug 2025 15:44:53.322 * <bf> 	{ bf-expansion-factor :         2 }
+redis  | 1:M 13 Aug 2025 15:44:53.322 * <bf> 	{ cf-bucket-size      :         2 }
+redis  | 1:M 13 Aug 2025 15:44:53.322 * <bf> 	{ cf-initial-size     :      1024 }
+redis  | 1:M 13 Aug 2025 15:44:53.322 * <bf> 	{ cf-max-iterations   :        20 }
+redis  | 1:M 13 Aug 2025 15:44:53.322 * <bf> 	{ cf-expansion-factor :         1 }
+redis  | 1:M 13 Aug 2025 15:44:53.322 * <bf> 	{ cf-max-expansions   :        32 }
+redis  | 1:M 13 Aug 2025 15:44:53.322 * <bf> ]
+redis  | 1:M 13 Aug 2025 15:44:53.323 * Module 'bf' loaded from /usr/local/lib/redis/modules//redisbloom.so
+redis  | 1:M 13 Aug 2025 15:44:53.372 * <search> Redis version found by RedisSearch : 8.2.0 - oss
+redis  | 1:M 13 Aug 2025 15:44:53.372 * <search> RediSearch version 8.2.0 (Git=d81ebce)
+redis  | 1:M 13 Aug 2025 15:44:53.373 * <search> Low level api version 1 initialized successfully
+redis  | 1:M 13 Aug 2025 15:44:53.375 * <search> gc: ON, prefix min length: 2, min word length to stem: 4, prefix max expansions: 200, query timeout (ms): 500, timeout policy: return, cursor read size: 1000, cursor max idle (ms): 300000, max doctable size: 1000000, max number of search results:  1000000, 
+redis  | 1:M 13 Aug 2025 15:44:53.378 * <search> Initialized thread pools!
+redis  | 1:M 13 Aug 2025 15:44:53.378 * <search> Disabled workers threadpool of size 0
+redis  | 1:M 13 Aug 2025 15:44:53.383 * <search> Subscribe to config changes
+redis  | 1:M 13 Aug 2025 15:44:53.383 * <search> Enabled role change notification
+redis  | 1:M 13 Aug 2025 15:44:53.383 * <search> Cluster configuration: AUTO partitions, type: 0, coordinator timeout: 0ms
+redis  | 1:M 13 Aug 2025 15:44:53.383 * <search> Register write commands
+redis  | 1:M 13 Aug 2025 15:44:53.384 * Module 'search' loaded from /usr/local/lib/redis/modules//redisearch.so
+redis  | 1:M 13 Aug 2025 15:44:53.389 * <timeseries> RedisTimeSeries version 80200, git_sha=1439d4a439ca9c063e6ef124a510abff09a5d493
+redis  | 1:M 13 Aug 2025 15:44:53.389 * <timeseries> Redis version found by RedisTimeSeries : 8.2.0 - oss
+redis  | 1:M 13 Aug 2025 15:44:53.389 * <timeseries> Registering configuration options: [
+redis  | 1:M 13 Aug 2025 15:44:53.389 * <timeseries> 	{ ts-compaction-policy   :              }
+redis  | 1:M 13 Aug 2025 15:44:53.389 * <timeseries> 	{ ts-num-threads         :            3 }
+redis  | 1:M 13 Aug 2025 15:44:53.389 * <timeseries> 	{ ts-retention-policy    :            0 }
+redis  | 1:M 13 Aug 2025 15:44:53.389 * <timeseries> 	{ ts-duplicate-policy    :        block }
+redis  | 1:M 13 Aug 2025 15:44:53.389 * <timeseries> 	{ ts-chunk-size-bytes    :         4096 }
+redis  | 1:M 13 Aug 2025 15:44:53.389 * <timeseries> 	{ ts-encoding            :   compressed }
+redis  | 1:M 13 Aug 2025 15:44:53.389 * <timeseries> 	{ ts-ignore-max-time-diff:            0 }
+redis  | 1:M 13 Aug 2025 15:44:53.389 * <timeseries> 	{ ts-ignore-max-val-diff :     0.000000 }
+redis  | 1:M 13 Aug 2025 15:44:53.389 * <timeseries> ]
+redis  | 1:M 13 Aug 2025 15:44:53.390 * <timeseries> Detected redis oss
+redis  | 1:M 13 Aug 2025 15:44:53.391 * <timeseries> Enabled diskless replication
+redis  | 1:M 13 Aug 2025 15:44:53.391 * Module 'timeseries' loaded from /usr/local/lib/redis/modules//redistimeseries.so
+redis  | 1:M 13 Aug 2025 15:44:53.406 * <ReJSON> Created new data type 'ReJSON-RL'
+redis  | 1:M 13 Aug 2025 15:44:53.409 * <ReJSON> version: 80200 git sha: unknown branch: unknown
+redis  | 1:M 13 Aug 2025 15:44:53.410 * <ReJSON> Exported RedisJSON_V1 API
+redis  | 1:M 13 Aug 2025 15:44:53.410 * <ReJSON> Exported RedisJSON_V2 API
+redis  | 1:M 13 Aug 2025 15:44:53.410 * <ReJSON> Exported RedisJSON_V3 API
+redis  | 1:M 13 Aug 2025 15:44:53.410 * <ReJSON> Exported RedisJSON_V4 API
+redis  | 1:M 13 Aug 2025 15:44:53.410 * <ReJSON> Exported RedisJSON_V5 API
+redis  | 1:M 13 Aug 2025 15:44:53.410 * <ReJSON> Enabled diskless replication
+redis  | 1:M 13 Aug 2025 15:44:53.410 * <ReJSON> Initialized shared string cache, thread safe: false.
+redis  | 1:M 13 Aug 2025 15:44:53.410 * Module 'ReJSON' loaded from /usr/local/lib/redis/modules//rejson.so
+redis  | 1:M 13 Aug 2025 15:44:53.410 * <search> Acquired RedisJSON_V5 API
+redis  | 1:M 13 Aug 2025 15:44:53.410 * Server initialized
+redis  | 1:M 13 Aug 2025 15:44:53.411 * Ready to accept connections tcp
+nginx  | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+nginx  | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+nginx  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+nginx  | 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+nginx  | 10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
+nginx  | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+nginx  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+nginx  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+nginx  | /docker-entrypoint.sh: Configuration complete; ready for start up
+payment-api-02  | 
+payment-api-02  | > rinha-backend-25@1.0.0 start
+payment-api-02  | > node dist/src/external/server.js
+payment-api-02  | 
+payment-api-01  | 
+payment-api-01  | > rinha-backend-25@1.0.0 start
+payment-api-01  | > node dist/src/external/server.js
+payment-api-01  | 
+payment-api-02  | Server payment-api-02 rodando na porta 3000
+payment-api-01  | Server payment-api-01 rodando na porta 3000
+payment-api-02  | [UpdateProcessorHealthUseCase] Working...
+payment-api-01  | (node:18) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+payment-api-01  | (Use `node --trace-deprecation ...` to show where the warning was created)
+payment-api-02  | [UpdateProcessorHealthUseCase] Working...
+payment-api-02  | (node:18) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+payment-api-02  | (Use `node --trace-deprecation ...` to show where the warning was created)
+payment-api-02  | [ProcessPaymentUseCase] Working... { correlationId: '625973b5-a83f-4979-95e9-d0f479b7ba9a', amount: 19.9 }
+payment-api-02  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-02  |   correlationId: '625973b5-a83f-4979-95e9-d0f479b7ba9a',
+payment-api-02  |   amount: 19.9,
+payment-api-02  |   requestedAt: '2025-08-13T15:45:09.402Z',
+payment-api-02  |   processor: 'default'
+payment-api-02  | }
+payment-api-02  | [Payment worker] Job 1 completed
+payment-api-01  | [ProcessPaymentUseCase] Working... { correlationId: 'a5ef5f9a-bfd7-4940-8243-19c505acb8e0', amount: 19.9 }
+payment-api-01  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-01  |   correlationId: 'a5ef5f9a-bfd7-4940-8243-19c505acb8e0',
+payment-api-01  |   amount: 19.9,
+payment-api-01  |   requestedAt: '2025-08-13T15:45:09.505Z',
+payment-api-01  |   processor: 'default'
+payment-api-01  | }
+payment-api-01  | [Payment worker] Job 2 completed
+payment-api-02  | [ProcessPaymentUseCase] Working... { correlationId: 'a4ed5252-87f6-457e-a781-29bcb7fd9314', amount: 19.9 }
+payment-api-02  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-02  |   correlationId: 'a4ed5252-87f6-457e-a781-29bcb7fd9314',
+payment-api-02  |   amount: 19.9,
+payment-api-02  |   requestedAt: '2025-08-13T15:45:09.614Z',
+payment-api-02  |   processor: 'default'
+payment-api-02  | }
+payment-api-02  | [Payment worker] Job 3 completed
+payment-api-01  | [ProcessPaymentUseCase] Working... { correlationId: '9f8c69e2-e208-4d40-abbd-2ba3b61c88e8', amount: 19.9 }
+payment-api-01  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-01  |   correlationId: '9f8c69e2-e208-4d40-abbd-2ba3b61c88e8',
+payment-api-01  |   amount: 19.9,
+payment-api-01  |   requestedAt: '2025-08-13T15:45:09.720Z',
+payment-api-01  |   processor: 'default'
+payment-api-01  | }
+payment-api-01  | [Payment worker] Job 4 completed
+payment-api-02  | [ProcessPaymentUseCase] Working... { correlationId: '5b5c0729-7bd1-4585-859f-3d886c0851c5', amount: 19.9 }
+payment-api-02  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-02  |   correlationId: '5b5c0729-7bd1-4585-859f-3d886c0851c5',
+payment-api-02  |   amount: 19.9,
+payment-api-02  |   requestedAt: '2025-08-13T15:45:09.830Z',
+payment-api-02  |   processor: 'default'
+payment-api-02  | }
+payment-api-02  | [Payment worker] Job 5 completed
+payment-api-01  | [ProcessPaymentUseCase] Working... { correlationId: '8262ed9a-fc47-4c5a-ba7d-bb44f8120fc0', amount: 19.9 }
+payment-api-01  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-01  |   correlationId: '8262ed9a-fc47-4c5a-ba7d-bb44f8120fc0',
+payment-api-01  |   amount: 19.9,
+payment-api-01  |   requestedAt: '2025-08-13T15:45:09.939Z',
+payment-api-01  |   processor: 'default'
+payment-api-01  | }
+payment-api-01  | [Payment worker] Job 6 completed
+payment-api-02  | [ProcessPaymentUseCase] Working... { correlationId: '01770e44-7a56-47a5-9466-5e9d0ade1e54', amount: 19.9 }
+payment-api-02  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-02  |   correlationId: '01770e44-7a56-47a5-9466-5e9d0ade1e54',
+payment-api-02  |   amount: 19.9,
+payment-api-02  |   requestedAt: '2025-08-13T15:45:10.048Z',
+payment-api-02  |   processor: 'default'
+payment-api-02  | }
+payment-api-02  | [Payment worker] Job 7 completed
+payment-api-01  | [ProcessPaymentUseCase] Working... { correlationId: 'fe9b7f43-30d2-4549-b5df-792e88cca42b', amount: 19.9 }
+payment-api-01  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-01  |   correlationId: 'fe9b7f43-30d2-4549-b5df-792e88cca42b',
+payment-api-01  |   amount: 19.9,
+payment-api-01  |   requestedAt: '2025-08-13T15:45:10.157Z',
+payment-api-01  |   processor: 'default'
+payment-api-01  | }
+payment-api-01  | [Payment worker] Job 8 completed
+payment-api-02  | [ProcessPaymentUseCase] Working... { correlationId: 'e7937d03-af47-4741-8205-b3f12e2e9a65', amount: 19.9 }
+payment-api-02  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-02  |   correlationId: 'e7937d03-af47-4741-8205-b3f12e2e9a65',
+payment-api-02  |   amount: 19.9,
+payment-api-02  |   requestedAt: '2025-08-13T15:45:10.266Z',
+payment-api-02  |   processor: 'default'
+payment-api-02  | }
+payment-api-02  | [Payment worker] Job 9 completed
+payment-api-02  | [ProcessPaymentUseCase] Working... { correlationId: '3e7fbd04-b9fa-417c-8b45-bc0024e87a4e', amount: 19.9 }
+payment-api-02  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-02  |   correlationId: '3e7fbd04-b9fa-417c-8b45-bc0024e87a4e',
+payment-api-02  |   amount: 19.9,
+payment-api-02  |   requestedAt: '2025-08-13T15:45:10.376Z',
+payment-api-02  |   processor: 'default'
+payment-api-02  | }
+payment-api-02  | [Payment worker] Job 10 completed
+payment-api-01  | [ProcessPaymentUseCase] Working... { correlationId: 'f5a8e201-26c9-496e-bb77-21e88358adb6', amount: 19.9 }
+payment-api-01  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-01  |   correlationId: 'f5a8e201-26c9-496e-bb77-21e88358adb6',
+payment-api-01  |   amount: 19.9,
+payment-api-01  |   requestedAt: '2025-08-13T15:45:10.400Z',
+payment-api-01  |   processor: 'default'
+payment-api-01  | }
+payment-api-01  | [Payment worker] Job 11 completed
+payment-api-02  | [ProcessPaymentUseCase] Working... { correlationId: '002dc236-dcf4-4df7-88d4-9e571691f70d', amount: 19.9 }
+payment-api-02  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-02  |   correlationId: '002dc236-dcf4-4df7-88d4-9e571691f70d',
+payment-api-02  |   amount: 19.9,
+payment-api-02  |   requestedAt: '2025-08-13T15:45:10.485Z',
+payment-api-02  |   processor: 'default'
+payment-api-02  | }
+payment-api-02  | [Payment worker] Job 12 completed
+payment-api-01  | [ProcessPaymentUseCase] Working... { correlationId: 'a1a00eec-8189-40bf-a6b9-fe144a35c1cd', amount: 19.9 }
+payment-api-01  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-01  |   correlationId: 'a1a00eec-8189-40bf-a6b9-fe144a35c1cd',
+payment-api-01  |   amount: 19.9,
+payment-api-01  |   requestedAt: '2025-08-13T15:45:10.503Z',
+payment-api-01  |   processor: 'default'
+payment-api-01  | }
+payment-api-01  | [Payment worker] Job 13 completed
+payment-api-02  | [ProcessPaymentUseCase] Working... { correlationId: '3dab4b85-604f-49fe-a781-0a31a7dad0b7', amount: 19.9 }
+payment-api-02  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-02  |   correlationId: '3dab4b85-604f-49fe-a781-0a31a7dad0b7',
+payment-api-02  |   amount: 19.9,
+payment-api-02  |   requestedAt: '2025-08-13T15:45:10.595Z',
+payment-api-02  |   processor: 'default'
+payment-api-02  | }
+payment-api-02  | [Payment worker] Job 14 completed
+payment-api-02  | [UpdateProcessorHealthUseCase] Working...
+payment-api-01  | [ProcessPaymentUseCase] Working... { correlationId: 'ad468918-1e95-4503-b4ed-7b2655681e32', amount: 19.9 }
+payment-api-01  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-01  |   correlationId: 'ad468918-1e95-4503-b4ed-7b2655681e32',
+payment-api-01  |   amount: 19.9,
+payment-api-01  |   requestedAt: '2025-08-13T15:45:10.613Z',
+payment-api-01  |   processor: 'default'
+payment-api-01  | }
+payment-api-01  | [Payment worker] Job 15 completed
+payment-api-02  | [ProcessPaymentUseCase] Working... { correlationId: '95765690-27a6-49c8-8fb0-8d0df8ffb74c', amount: 19.9 }
+payment-api-02  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-02  |   correlationId: '95765690-27a6-49c8-8fb0-8d0df8ffb74c',
+payment-api-02  |   amount: 19.9,
+payment-api-02  |   requestedAt: '2025-08-13T15:45:10.706Z',
+payment-api-02  |   processor: 'default'
+payment-api-02  | }
+payment-api-02  | [Payment worker] Job 16 completed
+payment-api-01  | [ProcessPaymentUseCase] Working... { correlationId: '4804b127-dcd5-4c74-ac78-9e6cbc7b79e3', amount: 19.9 }
+payment-api-01  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-01  |   correlationId: '4804b127-dcd5-4c74-ac78-9e6cbc7b79e3',
+payment-api-01  |   amount: 19.9,
+payment-api-01  |   requestedAt: '2025-08-13T15:45:10.722Z',
+payment-api-01  |   processor: 'default'
+payment-api-01  | }
+payment-api-01  | [Payment worker] Job 17 completed
+payment-api-02  | [ProcessPaymentUseCase] Working... { correlationId: '130e3508-2d2f-4ae0-a682-eaed25ffd12e', amount: 19.9 }
+payment-api-02  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-02  |   correlationId: '130e3508-2d2f-4ae0-a682-eaed25ffd12e',
+payment-api-02  |   amount: 19.9,
+payment-api-02  |   requestedAt: '2025-08-13T15:45:10.814Z',
+payment-api-02  |   processor: 'default'
+payment-api-02  | }
+payment-api-02  | [Payment worker] Job 18 completed
+payment-api-01  | [ProcessPaymentUseCase] Working... { correlationId: 'fbce44ef-9ac3-4245-add6-272c3e6c9712', amount: 19.9 }
+payment-api-01  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-01  |   correlationId: 'fbce44ef-9ac3-4245-add6-272c3e6c9712',
+payment-api-01  |   amount: 19.9,
+payment-api-01  |   requestedAt: '2025-08-13T15:45:10.833Z',
+payment-api-01  |   processor: 'default'
+payment-api-01  | }
+payment-api-01  | [Payment worker] Job 19 completed
+payment-api-02  | [ProcessPaymentUseCase] Working... { correlationId: 'c8017f94-bb7d-4e3c-a42b-38936c956f44', amount: 19.9 }
+payment-api-02  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-02  |   correlationId: 'c8017f94-bb7d-4e3c-a42b-38936c956f44',
+payment-api-02  |   amount: 19.9,
+payment-api-02  |   requestedAt: '2025-08-13T15:45:10.922Z',
+payment-api-02  |   processor: 'default'
+payment-api-02  | }
+payment-api-02  | [Payment worker] Job 20 completed
+payment-api-01  | [ProcessPaymentUseCase] Working... { correlationId: '2b8adaef-2e20-496a-8f8f-54105c2b82dd', amount: 19.9 }
+payment-api-01  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-01  |   correlationId: '2b8adaef-2e20-496a-8f8f-54105c2b82dd',
+payment-api-01  |   amount: 19.9,
+payment-api-01  |   requestedAt: '2025-08-13T15:45:10.941Z',
+payment-api-01  |   processor: 'default'
+payment-api-01  | }
+payment-api-01  | [Payment worker] Job 21 completed
+payment-api-02  | [ProcessPaymentUseCase] Working... { correlationId: 'fb47cab4-1652-45ab-8c47-8273b224e611', amount: 19.9 }
+payment-api-02  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-02  |   correlationId: 'fb47cab4-1652-45ab-8c47-8273b224e611',
+payment-api-02  |   amount: 19.9,
+payment-api-02  |   requestedAt: '2025-08-13T15:45:11.031Z',
+payment-api-02  |   processor: 'default'
+payment-api-02  | }
+payment-api-02  | [Payment worker] Job 22 completed
+payment-api-01  | [ProcessPaymentUseCase] Working... { correlationId: '334bd155-28b9-4afb-a8ee-e579d73071b6', amount: 19.9 }
+payment-api-01  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-01  |   correlationId: '334bd155-28b9-4afb-a8ee-e579d73071b6',
+payment-api-01  |   amount: 19.9,
+payment-api-01  |   requestedAt: '2025-08-13T15:45:11.050Z',
+payment-api-01  |   processor: 'default'
+payment-api-01  | }
+payment-api-01  | [Payment worker] Job 23 completed
+payment-api-02  | [ProcessPaymentUseCase] Working... { correlationId: '332c0089-f8f5-4b35-847c-47805aec1adf', amount: 19.9 }
+payment-api-02  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-02  |   correlationId: '332c0089-f8f5-4b35-847c-47805aec1adf',
+payment-api-02  |   amount: 19.9,
+payment-api-02  |   requestedAt: '2025-08-13T15:45:11.140Z',
+payment-api-02  |   processor: 'default'
+payment-api-02  | }
+payment-api-02  | [Payment worker] Job 24 completed
+payment-api-01  | [ProcessPaymentUseCase] Working... { correlationId: '0f473978-bb58-4eb4-902e-dc7b7b5c5ce5', amount: 19.9 }
+payment-api-01  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-01  |   correlationId: '0f473978-bb58-4eb4-902e-dc7b7b5c5ce5',
+payment-api-01  |   amount: 19.9,
+payment-api-01  |   requestedAt: '2025-08-13T15:45:11.159Z',
+payment-api-01  |   processor: 'default'
+payment-api-01  | }
+payment-api-01  | [Payment worker] Job 25 completed
+payment-api-02  | [ProcessPaymentUseCase] Working... { correlationId: '53953565-230e-4bd0-a058-892a7a9a4116', amount: 19.9 }
+payment-api-02  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-02  |   correlationId: '53953565-230e-4bd0-a058-892a7a9a4116',
+payment-api-02  |   amount: 19.9,
+payment-api-02  |   requestedAt: '2025-08-13T15:45:11.250Z',
+payment-api-02  |   processor: 'default'
+payment-api-02  | }
+payment-api-02  | [Payment worker] Job 26 completed
+payment-api-01  | [ProcessPaymentUseCase] Working... { correlationId: '102d5760-2027-4085-bca8-66e3047ba2c8', amount: 19.9 }
+payment-api-01  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-01  |   correlationId: '102d5760-2027-4085-bca8-66e3047ba2c8',
+payment-api-01  |   amount: 19.9,
+payment-api-01  |   requestedAt: '2025-08-13T15:45:11.269Z',
+payment-api-01  |   processor: 'default'
+payment-api-01  | }
+payment-api-01  | [Payment worker] Job 27 completed
+payment-api-02  | [ProcessPaymentUseCase] Working... { correlationId: '373d7ef9-8266-47f8-aa27-84ac1aca59ba', amount: 19.9 }
+payment-api-02  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-02  |   correlationId: '373d7ef9-8266-47f8-aa27-84ac1aca59ba',
+payment-api-02  |   amount: 19.9,
+payment-api-02  |   requestedAt: '2025-08-13T15:45:11.359Z',
+payment-api-02  |   processor: 'default'
+payment-api-02  | }
+payment-api-02  | [Payment worker] Job 28 completed
+payment-api-01  | [ProcessPaymentUseCase] Working... { correlationId: 'b673e7da-93b3-40ff-aca6-24bb19e7de38', amount: 19.9 }
+payment-api-01  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-01  |   correlationId: 'b673e7da-93b3-40ff-aca6-24bb19e7de38',
+payment-api-01  |   amount: 19.9,
+payment-api-01  |   requestedAt: '2025-08-13T15:45:11.378Z',
+payment-api-01  |   processor: 'default'
+payment-api-01  | }
+payment-api-01  | [Payment worker] Job 29 completed
+payment-api-02  | [ProcessPaymentUseCase] Working... { correlationId: '81d396e2-2087-491c-a1e6-35a1e988dda6', amount: 19.9 }
+payment-api-02  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-02  |   correlationId: '81d396e2-2087-491c-a1e6-35a1e988dda6',
+payment-api-02  |   amount: 19.9,
+payment-api-02  |   requestedAt: '2025-08-13T15:45:11.402Z',
+payment-api-02  |   processor: 'default'
+payment-api-02  | }
+payment-api-02  | [Payment worker] Job 30 completed
+payment-api-01  | [ProcessPaymentUseCase] Working... { correlationId: '4f554b84-d812-4713-b2e2-11d82bf71f58', amount: 19.9 }
+payment-api-01  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-01  |   correlationId: '4f554b84-d812-4713-b2e2-11d82bf71f58',
+payment-api-01  |   amount: 19.9,
+payment-api-01  |   requestedAt: '2025-08-13T15:45:11.476Z',
+payment-api-01  |   processor: 'default'
+payment-api-01  | }
+payment-api-01  | [Payment worker] Job 31 completed
+payment-api-02  | [ProcessPaymentUseCase] Working... { correlationId: '8fa19e3a-7efa-4f99-a362-eae1701b7cd4', amount: 19.9 }
+payment-api-02  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-02  |   correlationId: '8fa19e3a-7efa-4f99-a362-eae1701b7cd4',
+payment-api-02  |   amount: 19.9,
+payment-api-02  |   requestedAt: '2025-08-13T15:45:11.486Z',
+payment-api-02  |   processor: 'default'
+payment-api-02  | }
+payment-api-02  | [Payment worker] Job 32 completed
+payment-api-01  | [ProcessPaymentUseCase] Working... { correlationId: 'd091d562-ce0c-4d53-b9fb-93385427e7f1', amount: 19.9 }
+payment-api-01  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-01  |   correlationId: 'd091d562-ce0c-4d53-b9fb-93385427e7f1',
+payment-api-01  |   amount: 19.9,
+payment-api-01  |   requestedAt: '2025-08-13T15:45:11.505Z',
+payment-api-01  |   processor: 'default'
+payment-api-01  | }
+payment-api-01  | [Payment worker] Job 33 completed
+payment-api-02  | [ProcessPaymentUseCase] Working... { correlationId: '5c65f033-1824-44f0-a65a-85d2d2843d2f', amount: 19.9 }
+payment-api-02  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-02  |   correlationId: '5c65f033-1824-44f0-a65a-85d2d2843d2f',
+payment-api-02  |   amount: 19.9,
+payment-api-02  |   requestedAt: '2025-08-13T15:45:11.577Z',
+payment-api-02  |   processor: 'default'
+payment-api-02  | }
+payment-api-02  | [Payment worker] Job 34 completed
+payment-api-01  | [ProcessPaymentUseCase] Working... { correlationId: '8f071e07-16f6-4e01-a0bd-ac1a943b34c0', amount: 19.9 }
+payment-api-01  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-01  |   correlationId: '8f071e07-16f6-4e01-a0bd-ac1a943b34c0',
+payment-api-01  |   amount: 19.9,
+payment-api-01  |   requestedAt: '2025-08-13T15:45:11.597Z',
+payment-api-01  |   processor: 'default'
+payment-api-01  | }
+payment-api-01  | [Payment worker] Job 35 completed
+payment-api-02  | [ProcessPaymentUseCase] Working... { correlationId: '642e1615-0eda-492e-90f4-d5e38eaece3e', amount: 19.9 }
+payment-api-02  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-02  |   correlationId: '642e1615-0eda-492e-90f4-d5e38eaece3e',
+payment-api-02  |   amount: 19.9,
+payment-api-02  |   requestedAt: '2025-08-13T15:45:11.615Z',
+payment-api-02  |   processor: 'default'
+payment-api-02  | }
+payment-api-02  | [Payment worker] Job 36 completed
+payment-api-01  | [ProcessPaymentUseCase] Working... { correlationId: '8e5029f8-30f4-4253-8ccf-9dc4035a0176', amount: 19.9 }
+payment-api-01  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-01  |   correlationId: '8e5029f8-30f4-4253-8ccf-9dc4035a0176',
+payment-api-01  |   amount: 19.9,
+payment-api-01  |   requestedAt: '2025-08-13T15:45:11.687Z',
+payment-api-01  |   processor: 'default'
+payment-api-01  | }
+payment-api-01  | [Payment worker] Job 37 completed
+payment-api-02  | [ProcessPaymentUseCase] Working... { correlationId: '8b3cf818-d245-4fcb-8cc4-02644599a31e', amount: 19.9 }
+payment-api-02  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-02  |   correlationId: '8b3cf818-d245-4fcb-8cc4-02644599a31e',
+payment-api-02  |   amount: 19.9,
+payment-api-02  |   requestedAt: '2025-08-13T15:45:11.706Z',
+payment-api-02  |   processor: 'default'
+payment-api-02  | }
+payment-api-02  | [Payment worker] Job 38 completed
+payment-api-01  | [ProcessPaymentUseCase] Working... { correlationId: 'c946776c-d86d-493a-b945-392db77f61bb', amount: 19.9 }
+payment-api-01  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-01  |   correlationId: 'c946776c-d86d-493a-b945-392db77f61bb',
+payment-api-01  |   amount: 19.9,
+payment-api-01  |   requestedAt: '2025-08-13T15:45:11.723Z',
+payment-api-01  |   processor: 'default'
+payment-api-01  | }
+payment-api-01  | [Payment worker] Job 39 completed
+payment-api-02  | [ProcessPaymentUseCase] Working... { correlationId: 'ccc48218-4ed7-4d21-859f-d0cbdd1b06d9', amount: 19.9 }
+payment-api-02  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-02  |   correlationId: 'ccc48218-4ed7-4d21-859f-d0cbdd1b06d9',
+payment-api-02  |   amount: 19.9,
+payment-api-02  |   requestedAt: '2025-08-13T15:45:11.796Z',
+payment-api-02  |   processor: 'default'
+payment-api-02  | }
+payment-api-02  | [Payment worker] Job 40 completed
+payment-api-01  | [ProcessPaymentUseCase] Working... { correlationId: 'f6b76313-422e-4854-a011-6132feddc0f9', amount: 19.9 }
+payment-api-01  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-01  |   correlationId: 'f6b76313-422e-4854-a011-6132feddc0f9',
+payment-api-01  |   amount: 19.9,
+payment-api-01  |   requestedAt: '2025-08-13T15:45:11.815Z',
+payment-api-01  |   processor: 'default'
+payment-api-01  | }
+payment-api-01  | [Payment worker] Job 41 completed
+payment-api-02  | [ProcessPaymentUseCase] Working... { correlationId: '047dcfae-1d82-4b37-a08f-70999706d18b', amount: 19.9 }
+payment-api-02  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-02  |   correlationId: '047dcfae-1d82-4b37-a08f-70999706d18b',
+payment-api-02  |   amount: 19.9,
+payment-api-02  |   requestedAt: '2025-08-13T15:45:11.833Z',
+payment-api-02  |   processor: 'default'
+payment-api-02  | }
+payment-api-02  | [Payment worker] Job 42 completed
+payment-api-01  | [ProcessPaymentUseCase] Working... { correlationId: 'e06395ee-e702-48e7-b2ac-4d5c3af22450', amount: 19.9 }
+payment-api-01  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-01  |   correlationId: 'e06395ee-e702-48e7-b2ac-4d5c3af22450',
+payment-api-01  |   amount: 19.9,
+payment-api-01  |   requestedAt: '2025-08-13T15:45:11.906Z',
+payment-api-01  |   processor: 'default'
+payment-api-01  | }
+payment-api-01  | [Payment worker] Job 43 completed
+payment-api-02  | [ProcessPaymentUseCase] Working... { correlationId: 'bd8a9554-7b13-451b-821a-d4d40cc624b2', amount: 19.9 }
+payment-api-02  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-02  |   correlationId: 'bd8a9554-7b13-451b-821a-d4d40cc624b2',
+payment-api-02  |   amount: 19.9,
+payment-api-02  |   requestedAt: '2025-08-13T15:45:11.924Z',
+payment-api-02  |   processor: 'default'
+payment-api-02  | }
+payment-api-02  | [Payment worker] Job 44 completed
+payment-api-01  | [ProcessPaymentUseCase] Working... { correlationId: '59c9939a-346f-4f00-99a3-020483c8118f', amount: 19.9 }
+payment-api-01  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-01  |   correlationId: '59c9939a-346f-4f00-99a3-020483c8118f',
+payment-api-01  |   amount: 19.9,
+payment-api-01  |   requestedAt: '2025-08-13T15:45:11.943Z',
+payment-api-01  |   processor: 'default'
+payment-api-01  | }
+payment-api-01  | [Payment worker] Job 45 completed
+payment-api-02  | [ProcessPaymentUseCase] Working... { correlationId: 'dfe24873-a8de-463f-88fd-4f2e6cda7561', amount: 19.9 }
+payment-api-02  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-02  |   correlationId: 'dfe24873-a8de-463f-88fd-4f2e6cda7561',
+payment-api-02  |   amount: 19.9,
+payment-api-02  |   requestedAt: '2025-08-13T15:45:12.015Z',
+payment-api-02  |   processor: 'default'
+payment-api-02  | }
+payment-api-02  | [Payment worker] Job 46 completed
+payment-api-01  | [ProcessPaymentUseCase] Working... { correlationId: '3c70bafc-45e3-4c07-a584-71a71443b1ba', amount: 19.9 }
+payment-api-01  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-01  |   correlationId: '3c70bafc-45e3-4c07-a584-71a71443b1ba',
+payment-api-01  |   amount: 19.9,
+payment-api-01  |   requestedAt: '2025-08-13T15:45:12.034Z',
+payment-api-01  |   processor: 'default'
+payment-api-01  | }
+payment-api-01  | [Payment worker] Job 47 completed
+payment-api-02  | [ProcessPaymentUseCase] Working... { correlationId: '8b9caef7-58d1-407b-9f3e-ab7892b8c762', amount: 19.9 }
+payment-api-02  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-02  |   correlationId: '8b9caef7-58d1-407b-9f3e-ab7892b8c762',
+payment-api-02  |   amount: 19.9,
+payment-api-02  |   requestedAt: '2025-08-13T15:45:12.052Z',
+payment-api-02  |   processor: 'default'
+payment-api-02  | }
+payment-api-02  | [Payment worker] Job 48 completed
+payment-api-01  | [ProcessPaymentUseCase] Working... { correlationId: 'd7bb2445-f70c-4dcc-bb55-327043848ac6', amount: 19.9 }
+payment-api-01  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-01  |   correlationId: 'd7bb2445-f70c-4dcc-bb55-327043848ac6',
+payment-api-01  |   amount: 19.9,
+payment-api-01  |   requestedAt: '2025-08-13T15:45:12.125Z',
+payment-api-01  |   processor: 'default'
+payment-api-01  | }
+payment-api-01  | [Payment worker] Job 49 completed
+payment-api-02  | [ProcessPaymentUseCase] Working... { correlationId: '026e76c4-4a47-4c16-ba4f-2a82e340b9c7', amount: 19.9 }
+payment-api-02  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-02  |   correlationId: '026e76c4-4a47-4c16-ba4f-2a82e340b9c7',
+payment-api-02  |   amount: 19.9,
+payment-api-02  |   requestedAt: '2025-08-13T15:45:12.141Z',
+payment-api-02  |   processor: 'default'
+payment-api-02  | }
+payment-api-02  | [Payment worker] Job 50 completed
+payment-api-01  | [ProcessPaymentUseCase] Working... { correlationId: '9ecb5218-a964-4d22-bae4-70d5da979693', amount: 19.9 }
+payment-api-01  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-01  |   correlationId: '9ecb5218-a964-4d22-bae4-70d5da979693',
+payment-api-01  |   amount: 19.9,
+payment-api-01  |   requestedAt: '2025-08-13T15:45:12.161Z',
+payment-api-01  |   processor: 'default'
+payment-api-01  | }
+payment-api-01  | [Payment worker] Job 51 completed
+payment-api-02  | [ProcessPaymentUseCase] Working... { correlationId: '8c2ea8be-6145-4612-b162-873b7aa5df38', amount: 19.9 }
+payment-api-02  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-02  |   correlationId: '8c2ea8be-6145-4612-b162-873b7aa5df38',
+payment-api-02  |   amount: 19.9,
+payment-api-02  |   requestedAt: '2025-08-13T15:45:12.233Z',
+payment-api-02  |   processor: 'default'
+payment-api-02  | }
+payment-api-02  | [Payment worker] Job 52 completed
+payment-api-01  | [ProcessPaymentUseCase] Working... { correlationId: 'c974c2db-1f75-4e1d-908a-c38f56afe405', amount: 19.9 }
+payment-api-01  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-01  |   correlationId: 'c974c2db-1f75-4e1d-908a-c38f56afe405',
+payment-api-01  |   amount: 19.9,
+payment-api-01  |   requestedAt: '2025-08-13T15:45:12.251Z',
+payment-api-01  |   processor: 'default'
+payment-api-01  | }
+payment-api-01  | [Payment worker] Job 53 completed
+payment-api-02  | [ProcessPaymentUseCase] Working... { correlationId: 'dcca1bb2-b4d2-48ab-bf0b-18ca83bee990', amount: 19.9 }
+payment-api-02  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-02  |   correlationId: 'dcca1bb2-b4d2-48ab-bf0b-18ca83bee990',
+payment-api-02  |   amount: 19.9,
+payment-api-02  |   requestedAt: '2025-08-13T15:45:12.270Z',
+payment-api-02  |   processor: 'default'
+payment-api-02  | }
+payment-api-02  | [Payment worker] Job 54 completed
+payment-api-01  | [ProcessPaymentUseCase] Working... { correlationId: 'e21b26fd-10cc-422e-8eeb-c04ff1b9db31', amount: 19.9 }
+payment-api-01  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-01  |   correlationId: 'e21b26fd-10cc-422e-8eeb-c04ff1b9db31',
+payment-api-01  |   amount: 19.9,
+payment-api-01  |   requestedAt: '2025-08-13T15:45:12.343Z',
+payment-api-01  |   processor: 'default'
+payment-api-01  | }
+payment-api-01  | [Payment worker] Job 55 completed
+payment-api-02  | [ProcessPaymentUseCase] Working... { correlationId: '106f9b24-6b61-4445-ad8b-82d5c011f8f9', amount: 19.9 }
+payment-api-02  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-02  |   correlationId: '106f9b24-6b61-4445-ad8b-82d5c011f8f9',
+payment-api-02  |   amount: 19.9,
+payment-api-02  |   requestedAt: '2025-08-13T15:45:12.361Z',
+payment-api-02  |   processor: 'default'
+payment-api-02  | }
+payment-api-02  | [Payment worker] Job 56 completed
+payment-api-01  | [ProcessPaymentUseCase] Working... { correlationId: 'e8ae7e48-3619-4cd6-a73f-c022cc10cc76', amount: 19.9 }
+payment-api-01  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-01  |   correlationId: 'e8ae7e48-3619-4cd6-a73f-c022cc10cc76',
+payment-api-01  |   amount: 19.9,
+payment-api-01  |   requestedAt: '2025-08-13T15:45:12.379Z',
+payment-api-01  |   processor: 'default'
+payment-api-01  | }
+payment-api-01  | [Payment worker] Job 57 completed
+payment-api-02  | [ProcessPaymentUseCase] Working... { correlationId: 'cab40f9b-414e-4541-a79a-45920dfa0b4d', amount: 19.9 }
+payment-api-02  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-02  |   correlationId: 'cab40f9b-414e-4541-a79a-45920dfa0b4d',
+payment-api-02  |   amount: 19.9,
+payment-api-02  |   requestedAt: '2025-08-13T15:45:12.403Z',
+payment-api-02  |   processor: 'default'
+payment-api-02  | }
+payment-api-02  | [Payment worker] Job 58 completed
+payment-api-01  | [ProcessPaymentUseCase] Working... { correlationId: '1344e51e-b11b-4695-8862-cc85e1d95324', amount: 19.9 }
+payment-api-01  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-01  |   correlationId: '1344e51e-b11b-4695-8862-cc85e1d95324',
+payment-api-01  |   amount: 19.9,
+payment-api-01  |   requestedAt: '2025-08-13T15:45:12.452Z',
+payment-api-01  |   processor: 'default'
+payment-api-01  | }
+payment-api-01  | [Payment worker] Job 59 completed
+payment-api-02  | [ProcessPaymentUseCase] Working... { correlationId: '7fd41464-ff43-4f8b-8dd8-1e021ada24a9', amount: 19.9 }
+payment-api-02  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-02  |   correlationId: '7fd41464-ff43-4f8b-8dd8-1e021ada24a9',
+payment-api-02  |   amount: 19.9,
+payment-api-02  |   requestedAt: '2025-08-13T15:45:12.477Z',
+payment-api-02  |   processor: 'default'
+payment-api-02  | }
+payment-api-02  | [Payment worker] Job 60 completed
+payment-api-01  | [ProcessPaymentUseCase] Working... { correlationId: '3494815b-2be8-48f3-8cf3-22077e4af7af', amount: 19.9 }
+payment-api-01  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-01  |   correlationId: '3494815b-2be8-48f3-8cf3-22077e4af7af',
+payment-api-01  |   amount: 19.9,
+payment-api-01  |   requestedAt: '2025-08-13T15:45:12.487Z',
+payment-api-01  |   processor: 'default'
+payment-api-01  | }
+payment-api-01  | [Payment worker] Job 61 completed
+payment-api-02  | [ProcessPaymentUseCase] Working... { correlationId: '0aec50e3-15d4-46fb-8b09-04099aa43cd9', amount: 19.9 }
+payment-api-02  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-02  |   correlationId: '0aec50e3-15d4-46fb-8b09-04099aa43cd9',
+payment-api-02  |   amount: 19.9,
+payment-api-02  |   requestedAt: '2025-08-13T15:45:12.507Z',
+payment-api-02  |   processor: 'default'
+payment-api-02  | }
+payment-api-02  | [Payment worker] Job 62 completed
+payment-api-01  | [ProcessPaymentUseCase] Working... { correlationId: '3a0ba61e-7863-4322-82ca-58beafa5064d', amount: 19.9 }
+payment-api-01  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-01  |   correlationId: '3a0ba61e-7863-4322-82ca-58beafa5064d',
+payment-api-01  |   amount: 19.9,
+payment-api-01  |   requestedAt: '2025-08-13T15:45:12.562Z',
+payment-api-01  |   processor: 'default'
+payment-api-01  | }
+payment-api-01  | [Payment worker] Job 63 completed
+payment-api-02  | [ProcessPaymentUseCase] Working... { correlationId: '88d3e0d4-d61d-4e2a-b5a5-0b880c849c6f', amount: 19.9 }
+payment-api-02  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-02  |   correlationId: '88d3e0d4-d61d-4e2a-b5a5-0b880c849c6f',
+payment-api-02  |   amount: 19.9,
+payment-api-02  |   requestedAt: '2025-08-13T15:45:12.580Z',
+payment-api-02  |   processor: 'default'
+payment-api-02  | }
+payment-api-02  | [Payment worker] Job 64 completed
+payment-api-01  | [ProcessPaymentUseCase] Working... { correlationId: '4ed4a01a-b666-4a45-bd6d-dc1ce04a4e30', amount: 19.9 }
+payment-api-01  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-01  |   correlationId: '4ed4a01a-b666-4a45-bd6d-dc1ce04a4e30',
+payment-api-01  |   amount: 19.9,
+payment-api-01  |   requestedAt: '2025-08-13T15:45:12.599Z',
+payment-api-01  |   processor: 'default'
+payment-api-01  | }
+payment-api-01  | [Payment worker] Job 65 completed
+payment-api-02  | [ProcessPaymentUseCase] Working... { correlationId: 'cd734271-1bce-4a51-a0f9-927cc82f9b10', amount: 19.9 }
+payment-api-02  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-02  |   correlationId: 'cd734271-1bce-4a51-a0f9-927cc82f9b10',
+payment-api-02  |   amount: 19.9,
+payment-api-02  |   requestedAt: '2025-08-13T15:45:12.618Z',
+payment-api-02  |   processor: 'default'
+payment-api-02  | }
+payment-api-02  | [Payment worker] Job 66 completed
+payment-api-01  | [ProcessPaymentUseCase] Working... { correlationId: 'b554a44a-c8c9-4b5c-8a43-daf1a2cf097b', amount: 19.9 }
+payment-api-01  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-01  |   correlationId: 'b554a44a-c8c9-4b5c-8a43-daf1a2cf097b',
+payment-api-01  |   amount: 19.9,
+payment-api-01  |   requestedAt: '2025-08-13T15:45:12.671Z',
+payment-api-01  |   processor: 'default'
+payment-api-01  | }
+payment-api-01  | [Payment worker] Job 67 completed
+payment-api-02  | [ProcessPaymentUseCase] Working... { correlationId: '071c344b-9241-417c-8fe4-e762e1f2f2b3', amount: 19.9 }
+payment-api-02  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-02  |   correlationId: '071c344b-9241-417c-8fe4-e762e1f2f2b3',
+payment-api-02  |   amount: 19.9,
+payment-api-02  |   requestedAt: '2025-08-13T15:45:12.689Z',
+payment-api-02  |   processor: 'default'
+payment-api-02  | }
+payment-api-02  | [Payment worker] Job 68 completed
+payment-api-01  | [ProcessPaymentUseCase] Working... { correlationId: 'd5d52dc1-13fa-4de9-876f-e744a3576de8', amount: 19.9 }
+payment-api-01  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-01  |   correlationId: 'd5d52dc1-13fa-4de9-876f-e744a3576de8',
+payment-api-01  |   amount: 19.9,
+payment-api-01  |   requestedAt: '2025-08-13T15:45:12.708Z',
+payment-api-01  |   processor: 'default'
+payment-api-01  | }
+payment-api-01  | [Payment worker] Job 69 completed
+payment-api-02  | [ProcessPaymentUseCase] Working... { correlationId: '41544a34-d5d6-4870-8976-bc80399523cd', amount: 19.9 }
+payment-api-02  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-02  |   correlationId: '41544a34-d5d6-4870-8976-bc80399523cd',
+payment-api-02  |   amount: 19.9,
+payment-api-02  |   requestedAt: '2025-08-13T15:45:12.726Z',
+payment-api-02  |   processor: 'default'
+payment-api-02  | }
+payment-api-02  | [Payment worker] Job 70 completed
+payment-api-01  | [ProcessPaymentUseCase] Working... { correlationId: 'f8f60dc9-8ce6-4695-8058-66c798675015', amount: 19.9 }
+payment-api-01  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-01  |   correlationId: 'f8f60dc9-8ce6-4695-8058-66c798675015',
+payment-api-01  |   amount: 19.9,
+payment-api-01  |   requestedAt: '2025-08-13T15:45:12.780Z',
+payment-api-01  |   processor: 'default'
+payment-api-01  | }
+payment-api-01  | [Payment worker] Job 71 completed
+payment-api-02  | [ProcessPaymentUseCase] Working... { correlationId: 'bf99795b-bb54-4ca4-bb43-0545de3e072b', amount: 19.9 }
+payment-api-02  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-02  |   correlationId: 'bf99795b-bb54-4ca4-bb43-0545de3e072b',
+payment-api-02  |   amount: 19.9,
+payment-api-02  |   requestedAt: '2025-08-13T15:45:12.798Z',
+payment-api-02  |   processor: 'default'
+payment-api-02  | }
+payment-api-02  | [Payment worker] Job 72 completed
+payment-api-02  | [ProcessPaymentUseCase] Working... { correlationId: '11287170-50d4-4eb7-84c9-2e193ee7e936', amount: 19.9 }
+payment-api-02  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-02  |   correlationId: '11287170-50d4-4eb7-84c9-2e193ee7e936',
+payment-api-02  |   amount: 19.9,
+payment-api-02  |   requestedAt: '2025-08-13T15:45:12.817Z',
+payment-api-02  |   processor: 'default'
+payment-api-02  | }
+payment-api-02  | [Payment worker] Job 73 completed
+payment-api-01  | [ProcessPaymentUseCase] Working... { correlationId: 'bb80d0a3-4618-4144-b5f2-6ed82926db3e', amount: 19.9 }
+payment-api-01  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-01  |   correlationId: 'bb80d0a3-4618-4144-b5f2-6ed82926db3e',
+payment-api-01  |   amount: 19.9,
+payment-api-01  |   requestedAt: '2025-08-13T15:45:12.834Z',
+payment-api-01  |   processor: 'default'
+payment-api-01  | }
+payment-api-01  | [Payment worker] Job 74 completed
+payment-api-02  | [ProcessPaymentUseCase] Working... { correlationId: '79450b43-60b1-44bb-a9df-9e82ce1c41d0', amount: 19.9 }
+payment-api-02  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-02  |   correlationId: '79450b43-60b1-44bb-a9df-9e82ce1c41d0',
+payment-api-02  |   amount: 19.9,
+payment-api-02  |   requestedAt: '2025-08-13T15:45:12.889Z',
+payment-api-02  |   processor: 'default'
+payment-api-02  | }
+payment-api-02  | [Payment worker] Job 75 completed
+payment-api-01  | [ProcessPaymentUseCase] Working... { correlationId: '7f867df4-1f9f-4bf1-a731-0ca9ceae87cd', amount: 19.9 }
+payment-api-01  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-01  |   correlationId: '7f867df4-1f9f-4bf1-a731-0ca9ceae87cd',
+payment-api-01  |   amount: 19.9,
+payment-api-01  |   requestedAt: '2025-08-13T15:45:12.908Z',
+payment-api-01  |   processor: 'default'
+payment-api-01  | }
+payment-api-01  | [Payment worker] Job 76 completed
+payment-api-02  | [ProcessPaymentUseCase] Working... { correlationId: 'cf1a0ce1-341f-4060-a17a-683713441d6b', amount: 19.9 }
+payment-api-02  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-02  |   correlationId: 'cf1a0ce1-341f-4060-a17a-683713441d6b',
+payment-api-02  |   amount: 19.9,
+payment-api-02  |   requestedAt: '2025-08-13T15:45:12.926Z',
+payment-api-02  |   processor: 'default'
+payment-api-02  | }
+payment-api-02  | [Payment worker] Job 77 completed
+payment-api-01  | [ProcessPaymentUseCase] Working... { correlationId: '311354ca-d654-4a4c-b9b4-93faf73a1416', amount: 19.9 }
+payment-api-01  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-01  |   correlationId: '311354ca-d654-4a4c-b9b4-93faf73a1416',
+payment-api-01  |   amount: 19.9,
+payment-api-01  |   requestedAt: '2025-08-13T15:45:12.945Z',
+payment-api-01  |   processor: 'default'
+payment-api-01  | }
+payment-api-01  | [Payment worker] Job 78 completed
+payment-api-02  | [ProcessPaymentUseCase] Working... { correlationId: '746dc99b-7978-4e4d-8bda-61b98efc7733', amount: 19.9 }
+payment-api-02  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-02  |   correlationId: '746dc99b-7978-4e4d-8bda-61b98efc7733',
+payment-api-02  |   amount: 19.9,
+payment-api-02  |   requestedAt: '2025-08-13T15:45:12.999Z',
+payment-api-02  |   processor: 'default'
+payment-api-02  | }
+payment-api-02  | [Payment worker] Job 79 completed
+payment-api-01  | [ProcessPaymentUseCase] Working... { correlationId: 'f9068456-8993-402e-89cd-6cd3512ff022', amount: 19.9 }
+payment-api-01  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-01  |   correlationId: 'f9068456-8993-402e-89cd-6cd3512ff022',
+payment-api-01  |   amount: 19.9,
+payment-api-01  |   requestedAt: '2025-08-13T15:45:13.018Z',
+payment-api-01  |   processor: 'default'
+payment-api-01  | }
+payment-api-01  | [Payment worker] Job 80 completed
+payment-api-02  | [ProcessPaymentUseCase] Working... { correlationId: '1697fb64-0fe0-4246-bec0-4fdb20d8ce1f', amount: 19.9 }
+payment-api-02  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-02  |   correlationId: '1697fb64-0fe0-4246-bec0-4fdb20d8ce1f',
+payment-api-02  |   amount: 19.9,
+payment-api-02  |   requestedAt: '2025-08-13T15:45:13.035Z',
+payment-api-02  |   processor: 'default'
+payment-api-02  | }
+payment-api-02  | [Payment worker] Job 81 completed
+payment-api-01  | [ProcessPaymentUseCase] Working... { correlationId: '57103b64-b75d-48c0-b92d-cc37300d77ea', amount: 19.9 }
+payment-api-01  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-01  |   correlationId: '57103b64-b75d-48c0-b92d-cc37300d77ea',
+payment-api-01  |   amount: 19.9,
+payment-api-01  |   requestedAt: '2025-08-13T15:45:13.054Z',
+payment-api-01  |   processor: 'default'
+payment-api-01  | }
+payment-api-01  | [Payment worker] Job 82 completed
+payment-api-02  | [ProcessPaymentUseCase] Working... { correlationId: '6159534a-8b4a-4d6f-8b4d-09d16a5eec5d', amount: 19.9 }
+payment-api-02  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-02  |   correlationId: '6159534a-8b4a-4d6f-8b4d-09d16a5eec5d',
+payment-api-02  |   amount: 19.9,
+payment-api-02  |   requestedAt: '2025-08-13T15:45:13.109Z',
+payment-api-02  |   processor: 'default'
+payment-api-02  | }
+payment-api-02  | [Payment worker] Job 83 completed
+payment-api-01  | [ProcessPaymentUseCase] Working... { correlationId: 'b9d24504-27f1-4787-9684-65384c19210b', amount: 19.9 }
+payment-api-01  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-01  |   correlationId: 'b9d24504-27f1-4787-9684-65384c19210b',
+payment-api-01  |   amount: 19.9,
+payment-api-01  |   requestedAt: '2025-08-13T15:45:13.127Z',
+payment-api-01  |   processor: 'default'
+payment-api-01  | }
+payment-api-01  | [Payment worker] Job 84 completed
+payment-api-02  | [ProcessPaymentUseCase] Working... { correlationId: '634b4c59-cf49-4993-bd31-1b624f1c56b4', amount: 19.9 }
+payment-api-02  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-02  |   correlationId: '634b4c59-cf49-4993-bd31-1b624f1c56b4',
+payment-api-02  |   amount: 19.9,
+payment-api-02  |   requestedAt: '2025-08-13T15:45:13.143Z',
+payment-api-02  |   processor: 'default'
+payment-api-02  | }
+payment-api-02  | [Payment worker] Job 85 completed
+payment-api-01  | [ProcessPaymentUseCase] Working... { correlationId: '6fcabf5e-c292-4c63-a9c8-e43739260566', amount: 19.9 }
+payment-api-01  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-01  |   correlationId: '6fcabf5e-c292-4c63-a9c8-e43739260566',
+payment-api-01  |   amount: 19.9,
+payment-api-01  |   requestedAt: '2025-08-13T15:45:13.163Z',
+payment-api-01  |   processor: 'default'
+payment-api-01  | }
+payment-api-01  | [Payment worker] Job 86 completed
+payment-api-02  | [ProcessPaymentUseCase] Working... { correlationId: 'e591a4f8-9396-41e9-ad21-93948b98e109', amount: 19.9 }
+payment-api-02  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-02  |   correlationId: 'e591a4f8-9396-41e9-ad21-93948b98e109',
+payment-api-02  |   amount: 19.9,
+payment-api-02  |   requestedAt: '2025-08-13T15:45:13.218Z',
+payment-api-02  |   processor: 'default'
+payment-api-02  | }
+payment-api-02  | [Payment worker] Job 87 completed
+payment-api-01  | [ProcessPaymentUseCase] Working... { correlationId: '51644dad-4e3c-44a6-be27-d37545639cb0', amount: 19.9 }
+payment-api-01  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-01  |   correlationId: '51644dad-4e3c-44a6-be27-d37545639cb0',
+payment-api-01  |   amount: 19.9,
+payment-api-01  |   requestedAt: '2025-08-13T15:45:13.236Z',
+payment-api-01  |   processor: 'default'
+payment-api-01  | }
+payment-api-01  | [Payment worker] Job 88 completed
+payment-api-02  | [ProcessPaymentUseCase] Working... { correlationId: '07815cde-864d-4612-8b7e-70e7c45f2bbd', amount: 19.9 }
+payment-api-02  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-02  |   correlationId: '07815cde-864d-4612-8b7e-70e7c45f2bbd',
+payment-api-02  |   amount: 19.9,
+payment-api-02  |   requestedAt: '2025-08-13T15:45:13.254Z',
+payment-api-02  |   processor: 'default'
+payment-api-02  | }
+payment-api-02  | [Payment worker] Job 89 completed
+payment-api-01  | [ProcessPaymentUseCase] Working... { correlationId: '3a918fff-38a6-4694-84d1-dccc0142dc72', amount: 19.9 }
+payment-api-01  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-01  |   correlationId: '3a918fff-38a6-4694-84d1-dccc0142dc72',
+payment-api-01  |   amount: 19.9,
+payment-api-01  |   requestedAt: '2025-08-13T15:45:13.272Z',
+payment-api-01  |   processor: 'default'
+payment-api-01  | }
+payment-api-01  | [Payment worker] Job 90 completed
+payment-api-02  | [ProcessPaymentUseCase] Working... { correlationId: '8fde721c-485d-45df-b84c-1b70c71376ce', amount: 19.9 }
+payment-api-02  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-02  |   correlationId: '8fde721c-485d-45df-b84c-1b70c71376ce',
+payment-api-02  |   amount: 19.9,
+payment-api-02  |   requestedAt: '2025-08-13T15:45:13.327Z',
+payment-api-02  |   processor: 'default'
+payment-api-02  | }
+payment-api-02  | [Payment worker] Job 91 completed
+payment-api-01  | [ProcessPaymentUseCase] Working... { correlationId: '5f1c411b-a51f-4d11-88d5-f3267bf4c3c4', amount: 19.9 }
+payment-api-01  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-01  |   correlationId: '5f1c411b-a51f-4d11-88d5-f3267bf4c3c4',
+payment-api-01  |   amount: 19.9,
+payment-api-01  |   requestedAt: '2025-08-13T15:45:13.346Z',
+payment-api-01  |   processor: 'default'
+payment-api-01  | }
+payment-api-01  | [Payment worker] Job 92 completed
+payment-api-02  | [ProcessPaymentUseCase] Working... { correlationId: 'b6b70e6d-872e-4e35-9a98-c66a668bacd7', amount: 19.9 }
+payment-api-02  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-02  |   correlationId: 'b6b70e6d-872e-4e35-9a98-c66a668bacd7',
+payment-api-02  |   amount: 19.9,
+payment-api-02  |   requestedAt: '2025-08-13T15:45:13.364Z',
+payment-api-02  |   processor: 'default'
+payment-api-02  | }
+payment-api-02  | [Payment worker] Job 93 completed
+payment-api-01  | [ProcessPaymentUseCase] Working... { correlationId: '0f497acd-82ed-4e65-9f5d-64bc13ae5334', amount: 19.9 }
+payment-api-01  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-01  |   correlationId: '0f497acd-82ed-4e65-9f5d-64bc13ae5334',
+payment-api-01  |   amount: 19.9,
+payment-api-01  |   requestedAt: '2025-08-13T15:45:13.381Z',
+payment-api-01  |   processor: 'default'
+payment-api-01  | }
+payment-api-01  | [Payment worker] Job 94 completed
+payment-api-02  | [ProcessPaymentUseCase] Working... { correlationId: '9589150e-3da9-4eed-ae74-b01cae2fc2a6', amount: 19.9 }
+payment-api-02  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-02  |   correlationId: '9589150e-3da9-4eed-ae74-b01cae2fc2a6',
+payment-api-02  |   amount: 19.9,
+payment-api-02  |   requestedAt: '2025-08-13T15:45:13.405Z',
+payment-api-02  |   processor: 'default'
+payment-api-02  | }
+payment-api-02  | [Payment worker] Job 95 completed
+payment-api-01  | [ProcessPaymentUseCase] Working... { correlationId: '91dd944e-86ee-43f8-b222-59b78efe03ac', amount: 19.9 }
+payment-api-01  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-01  |   correlationId: '91dd944e-86ee-43f8-b222-59b78efe03ac',
+payment-api-01  |   amount: 19.9,
+payment-api-01  |   requestedAt: '2025-08-13T15:45:13.435Z',
+payment-api-01  |   processor: 'default'
+payment-api-01  | }
+payment-api-01  | [Payment worker] Job 96 completed
+payment-api-02  | [ProcessPaymentUseCase] Working... { correlationId: '67e13300-43be-4d3c-9a68-0e5d78f5de8d', amount: 19.9 }
+payment-api-02  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-02  |   correlationId: '67e13300-43be-4d3c-9a68-0e5d78f5de8d',
+payment-api-02  |   amount: 19.9,
+payment-api-02  |   requestedAt: '2025-08-13T15:45:13.454Z',
+payment-api-02  |   processor: 'default'
+payment-api-02  | }
+payment-api-02  | [Payment worker] Job 97 completed
+payment-api-01  | [ProcessPaymentUseCase] Working... { correlationId: '61a661b1-e97b-4f1f-bb28-a66a063d06a7', amount: 19.9 }
+payment-api-01  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-01  |   correlationId: '61a661b1-e97b-4f1f-bb28-a66a063d06a7',
+payment-api-01  |   amount: 19.9,
+payment-api-01  |   requestedAt: '2025-08-13T15:45:13.479Z',
+payment-api-01  |   processor: 'default'
+payment-api-01  | }
+payment-api-01  | [Payment worker] Job 98 completed
+payment-api-02  | [ProcessPaymentUseCase] Working... { correlationId: '85242c6f-4051-4a58-adcd-1e3379e1639e', amount: 19.9 }
+payment-api-02  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-02  |   correlationId: '85242c6f-4051-4a58-adcd-1e3379e1639e',
+payment-api-02  |   amount: 19.9,
+payment-api-02  |   requestedAt: '2025-08-13T15:45:13.489Z',
+payment-api-02  |   processor: 'default'
+payment-api-02  | }
+payment-api-02  | [Payment worker] Job 99 completed
+payment-api-01  | [ProcessPaymentUseCase] Working... { correlationId: '529b3bb0-7e78-417d-9f9c-38e17683fbca', amount: 19.9 }
+payment-api-01  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-01  |   correlationId: '529b3bb0-7e78-417d-9f9c-38e17683fbca',
+payment-api-01  |   amount: 19.9,
+payment-api-01  |   requestedAt: '2025-08-13T15:45:13.510Z',
+payment-api-01  |   processor: 'default'
+payment-api-01  | }
+payment-api-01  | [Payment worker] Job 100 completed
+payment-api-02  | [ProcessPaymentUseCase] Working... { correlationId: 'fd1c1386-a328-4797-8e06-692e71767f85', amount: 19.9 }
+payment-api-01  | [ProcessPaymentUseCase] Working... { correlationId: 'cc78dec5-a663-4304-b968-41ef784b9583', amount: 19.9 }
+payment-api-02  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-02  |   correlationId: 'fd1c1386-a328-4797-8e06-692e71767f85',
+payment-api-02  |   amount: 19.9,
+payment-api-02  |   requestedAt: '2025-08-13T15:45:13.565Z',
+payment-api-02  |   processor: 'default'
+payment-api-02  | }
+payment-api-02  | [Payment worker] Job 101 completed
+payment-api-01  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-01  |   correlationId: 'cc78dec5-a663-4304-b968-41ef784b9583',
+payment-api-01  |   amount: 19.9,
+payment-api-01  |   requestedAt: '2025-08-13T15:45:13.567Z',
+payment-api-01  |   processor: 'default'
+payment-api-01  | }
+payment-api-01  | [Payment worker] Job 102 completed
+payment-api-02  | [ProcessPaymentUseCase] Working... { correlationId: '9f5a7fb3-401b-49d5-b62f-04dc7287ba1c', amount: 19.9 }
+payment-api-02  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-02  |   correlationId: '9f5a7fb3-401b-49d5-b62f-04dc7287ba1c',
+payment-api-02  |   amount: 19.9,
+payment-api-02  |   requestedAt: '2025-08-13T15:45:13.582Z',
+payment-api-02  |   processor: 'default'
+payment-api-02  | }
+payment-api-02  | [Payment worker] Job 103 completed
+payment-api-01  | [ProcessPaymentUseCase] Working... { correlationId: '6034306e-2497-4e12-8e9a-67da02afcd97', amount: 19.9 }
+payment-api-01  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-01  |   correlationId: '6034306e-2497-4e12-8e9a-67da02afcd97',
+payment-api-01  |   amount: 19.9,
+payment-api-01  |   requestedAt: '2025-08-13T15:45:13.601Z',
+payment-api-01  |   processor: 'default'
+payment-api-01  | }
+payment-api-01  | [Payment worker] Job 104 completed
+payment-api-02  | [ProcessPaymentUseCase] Working... { correlationId: 'ed4c5d34-ac3f-494b-936c-8bd6aa658fd7', amount: 19.9 }
+payment-api-02  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-02  |   correlationId: 'ed4c5d34-ac3f-494b-936c-8bd6aa658fd7',
+payment-api-02  |   amount: 19.9,
+payment-api-02  |   requestedAt: '2025-08-13T15:45:13.621Z',
+payment-api-02  |   processor: 'default'
+payment-api-02  | }
+payment-api-02  | [Payment worker] Job 105 completed
+payment-api-01  | [ProcessPaymentUseCase] Working... { correlationId: '4af9fc70-af1f-4316-8b0f-cebaa6c93156', amount: 19.9 }
+payment-api-01  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-01  |   correlationId: '4af9fc70-af1f-4316-8b0f-cebaa6c93156',
+payment-api-01  |   amount: 19.9,
+payment-api-01  |   requestedAt: '2025-08-13T15:45:13.655Z',
+payment-api-01  |   processor: 'default'
+payment-api-01  | }
+payment-api-01  | [Payment worker] Job 106 completed
+payment-api-02  | [ProcessPaymentUseCase] Working... { correlationId: '72c16601-7559-4315-9e9e-93fcf472462e', amount: 19.9 }
+payment-api-02  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-02  |   correlationId: '72c16601-7559-4315-9e9e-93fcf472462e',
+payment-api-02  |   amount: 19.9,
+payment-api-02  |   requestedAt: '2025-08-13T15:45:13.673Z',
+payment-api-02  |   processor: 'default'
+payment-api-02  | }
+payment-api-02  | [Payment worker] Job 107 completed
+payment-api-01  | [ProcessPaymentUseCase] Working... { correlationId: '59c0eb1a-2bef-4265-ad74-79ecc5b3b204', amount: 19.9 }
+payment-api-01  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-01  |   correlationId: '59c0eb1a-2bef-4265-ad74-79ecc5b3b204',
+payment-api-01  |   amount: 19.9,
+payment-api-01  |   requestedAt: '2025-08-13T15:45:13.692Z',
+payment-api-01  |   processor: 'default'
+payment-api-01  | }
+payment-api-01  | [Payment worker] Job 108 completed
+payment-api-02  | [ProcessPaymentUseCase] Working... { correlationId: '8b86362e-9753-48fa-8a24-195cd52bb893', amount: 19.9 }
+payment-api-02  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-02  |   correlationId: '8b86362e-9753-48fa-8a24-195cd52bb893',
+payment-api-02  |   amount: 19.9,
+payment-api-02  |   requestedAt: '2025-08-13T15:45:13.711Z',
+payment-api-02  |   processor: 'default'
+payment-api-02  | }
+payment-api-02  | [Payment worker] Job 109 completed
+payment-api-01  | [ProcessPaymentUseCase] Working... { correlationId: '28f8f121-61de-4205-a6f0-f7000547852e', amount: 19.9 }
+payment-api-01  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-01  |   correlationId: '28f8f121-61de-4205-a6f0-f7000547852e',
+payment-api-01  |   amount: 19.9,
+payment-api-01  |   requestedAt: '2025-08-13T15:45:13.728Z',
+payment-api-01  |   processor: 'default'
+payment-api-01  | }
+payment-api-01  | [Payment worker] Job 110 completed
+payment-api-02  | [ProcessPaymentUseCase] Working... { correlationId: '695e58c0-5c0a-4024-a30c-2900bfe5e392', amount: 19.9 }
+payment-api-02  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-02  |   correlationId: '695e58c0-5c0a-4024-a30c-2900bfe5e392',
+payment-api-02  |   amount: 19.9,
+payment-api-02  |   requestedAt: '2025-08-13T15:45:13.772Z',
+payment-api-02  |   processor: 'default'
+payment-api-02  | }
+payment-api-02  | [Payment worker] Job 111 completed
+payment-api-01  | [ProcessPaymentUseCase] Working... { correlationId: 'e8d29080-db88-42b0-b842-7bfbc5decf0a', amount: 19.9 }
+payment-api-01  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-01  |   correlationId: 'e8d29080-db88-42b0-b842-7bfbc5decf0a',
+payment-api-01  |   amount: 19.9,
+payment-api-01  |   requestedAt: '2025-08-13T15:45:13.781Z',
+payment-api-01  |   processor: 'default'
+payment-api-01  | }
+payment-api-01  | [Payment worker] Job 112 completed
+payment-api-02  | [ProcessPaymentUseCase] Working... { correlationId: '17dd2fea-4cf1-454e-93ce-4b94e24e58e7', amount: 19.9 }
+payment-api-02  | [ProcessPaymentUseCase] Finished processing payment {
+payment-api-02  |   correlationId: '17dd2fea-4cf1-454e-93ce-4b94e24e58e7',
+payment-api-02  |   amount: 19.9,
+payment-api-02  |   requestedAt: '2025-08-13T15:45:13.800Z',
+payment-api-02  |   processor: 'default'
+log truncated at line 1000

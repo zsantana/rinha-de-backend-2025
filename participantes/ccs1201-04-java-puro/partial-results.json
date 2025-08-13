@@ -1,12 +1,12 @@
 {
   "participante": "ccs1201-04-java-puro",
-  "total_liquido": 366425.0282,
+  "total_liquido": 363252.46075,
   "total_bruto": 333305.1,
-  "total_taxas": 17421.455,
+  "total_taxas": 17433.395,
   "descricao": "'total_liquido' é sua pontuação final. Equivale ao seu lucro. Fórmula: total_liquido + (total_liquido * p99.bonus) - (total_liquido * multa.porcentagem)",
   "p99": {
-    "valor": "3.25ms",
-    "bonus": "16%",
+    "valor": "3.49ms",
+    "bonus": "15%",
     "max_requests": "550",
     "descricao": "Fórmula para o bônus: max((11 - p99.valor) * 0.02, 0)"
   },
@@ -34,15 +34,15 @@
     "descricao": "'qtd_sucesso' foram requests bem sucedidos para 'POST /payments' e 'qtd_falha' os requests com erro."
   },
   "pagamentos_realizados_default": {
-    "total_bruto": 325743.1,
-    "num_pagamentos": 16369,
-    "total_taxas": 16287.155,
+    "total_bruto": 325623.7,
+    "num_pagamentos": 16363,
+    "total_taxas": 16281.185,
     "descricao": "Informações do backend sobre solicitações de pagamento para o Payment Processor Default."
   },
   "pagamentos_realizados_fallback": {
-    "total_bruto": 7562,
-    "num_pagamentos": 380,
-    "total_taxas": 1134.3,
+    "total_bruto": 7681.4,
+    "num_pagamentos": 386,
+    "total_taxas": 1152.21,
     "descricao": "Informações do backend sobre solicitações de pagamento para o Payment Processor Fallback."
   }
 }

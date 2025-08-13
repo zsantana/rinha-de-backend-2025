@@ -19,7 +19,7 @@ stopContainers() {
     pushd ../participantes/$1
         docker compose down -v --remove-orphans
         docker compose rm -s -v -f
-        #find * ! -group $(whoami) | xargs sudo rm -rf
+        sudo find * -group root | xargs sudo rm -rf
     popd > /dev/null
     pushd ../payment-processor > /dev/null
         docker compose down --volumes > /dev/null
@@ -28,15 +28,30 @@ stopContainers() {
 
 MAX_REQUESTS=550
 
-while true; do
+start=$(date +%s)
+max_seconds=$((60 * 60)) # 60 minutos
+shutdown_enabled=0
 
-    # docker system prune -a -f --volumes
+while true; do
 
     for directory in ../participantes/*; do
     (
+        _now=$(date +%s)
+        diff=$(($_now - $start))
+
+        echo "$diff/$max_seconds seconds passed"
+
+        if [ $shutdown_enabled -eq 1 ] && [ $diff -ge $max_seconds ]; then
+            sudo shutdown now
+            kill -9 $$
+            exit 0
+        fi
+
         git pull
         participant=$(echo $directory | sed -e 's/..\/participantes\///g' -e 's/\///g')
-        echo "========================================"
+        echo ""
+        echo ""
+	    echo "========================================"
         echo "  Participant $participant starting..."
         echo "========================================"
 
@@ -47,7 +62,7 @@ while true; do
             echo "executing test for $participant..."
             stopContainers $participant
             startContainers $participant
-            
+
             success=1
             max_attempts=15
             attempt=1
