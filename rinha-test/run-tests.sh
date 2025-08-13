@@ -29,7 +29,7 @@ stopContainers() {
 MAX_REQUESTS=550
 
 start=$(date +%s)
-max_seconds=$((20 * 60)) # 20 minutos
+max_seconds=$((60 * 60)) # 60 minutos
 
 while true; do
 
