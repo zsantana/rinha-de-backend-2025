@@ -1,0 +1,129 @@
+
+ worker Pulling 
+ api1 Pulling 
+ api2 Pulling 
+ 0368fd46e3c6 Already exists 
+ 2fdb41990bfd Pulling fs layer 
+ 1871c0a2bc45 Pulling fs layer 
+ 537c2e6b8e4e Pulling fs layer 
+ d4ea1c0357c0 Pulling fs layer 
+ 42ba165c12fb Pulling fs layer 
+ d4ea1c0357c0 Waiting 
+ 42ba165c12fb Waiting 
+ 2fdb41990bfd Downloading [>                                                  ]  32.77kB/1.641MB
+ 1871c0a2bc45 Downloading [==================================================>]      93B/93B
+ 1871c0a2bc45 Verifying Checksum 
+ 1871c0a2bc45 Download complete 
+ 2fdb41990bfd Verifying Checksum 
+ 2fdb41990bfd Download complete 
+ 2fdb41990bfd Extracting [>                                                  ]  32.77kB/1.641MB
+ 537c2e6b8e4e Downloading [>                                                  ]   98.3kB/8.894MB
+ 42ba165c12fb Downloading [==================================================>]     144B/144B
+ 42ba165c12fb Verifying Checksum 
+ 42ba165c12fb Download complete 
+ d4ea1c0357c0 Downloading [==================================================>]     146B/146B
+ d4ea1c0357c0 Verifying Checksum 
+ d4ea1c0357c0 Download complete 
+ 537c2e6b8e4e Download complete 
+ 2fdb41990bfd Extracting [==================================================>]  1.641MB/1.641MB
+ 2fdb41990bfd Pull complete 
+ 1871c0a2bc45 Extracting [==================================================>]      93B/93B
+ 1871c0a2bc45 Extracting [==================================================>]      93B/93B
+ 1871c0a2bc45 Pull complete 
+ 537c2e6b8e4e Extracting [>                                                  ]   98.3kB/8.894MB
+ 537c2e6b8e4e Extracting [====================>                              ]  3.736MB/8.894MB
+ 537c2e6b8e4e Extracting [============================>                      ]  5.112MB/8.894MB
+ 0368fd46e3c6 Already exists 
+ 2fdb41990bfd Already exists 
+ 1871c0a2bc45 Already exists 
+ 537c2e6b8e4e Pulling fs layer 
+ d4ea1c0357c0 Pulling fs layer 
+ 42ba165c12fb Pulling fs layer 
+ 42ba165c12fb Download complete 
+ 537c2e6b8e4e Extracting [============================>                      ]  5.112MB/8.894MB
+ d4ea1c0357c0 Download complete 
+ 0368fd46e3c6 Already exists 
+ 2fdb41990bfd Already exists 
+ 1871c0a2bc45 Already exists 
+ 537c2e6b8e4e Extracting [==================================>                ]  6.095MB/8.894MB
+ 537c2e6b8e4e Extracting [==================================>                ]  6.095MB/8.894MB
+ 537c2e6b8e4e Pulling fs layer 
+ d4ea1c0357c0 Pulling fs layer 
+ 42ba165c12fb Pulling fs layer 
+ 42ba165c12fb Download complete 
+ 537c2e6b8e4e Extracting [==================================>                ]  6.095MB/8.894MB
+ d4ea1c0357c0 Download complete 
+ 537c2e6b8e4e Extracting [=========================================>         ]  7.373MB/8.894MB
+ 537c2e6b8e4e Extracting [=========================================>         ]  7.373MB/8.894MB
+ 537c2e6b8e4e Extracting [=========================================>         ]  7.373MB/8.894MB
+ 537c2e6b8e4e Extracting [==================================================>]  8.894MB/8.894MB
+ 537c2e6b8e4e Extracting [==================================================>]  8.894MB/8.894MB
+ 537c2e6b8e4e Extracting [==================================================>]  8.894MB/8.894MB
+ 537c2e6b8e4e Pull complete 
+ 537c2e6b8e4e Pull complete 
+ 537c2e6b8e4e Pull complete 
+ d4ea1c0357c0 Extracting [==================================================>]     146B/146B
+ d4ea1c0357c0 Extracting [==================================================>]     146B/146B
+ d4ea1c0357c0 Extracting [==================================================>]     146B/146B
+ d4ea1c0357c0 Extracting [==================================================>]     146B/146B
+ d4ea1c0357c0 Extracting [==================================================>]     146B/146B
+ d4ea1c0357c0 Extracting [==================================================>]     146B/146B
+ d4ea1c0357c0 Pull complete 
+ d4ea1c0357c0 Pull complete 
+ d4ea1c0357c0 Pull complete 
+ 42ba165c12fb Extracting [==================================================>]     144B/144B
+ 42ba165c12fb Extracting [==================================================>]     144B/144B
+ 42ba165c12fb Extracting [==================================================>]     144B/144B
+ 42ba165c12fb Extracting [==================================================>]     144B/144B
+ 42ba165c12fb Extracting [==================================================>]     144B/144B
+ 42ba165c12fb Extracting [==================================================>]     144B/144B
+ 42ba165c12fb Pull complete 
+ 42ba165c12fb Pull complete 
+ 42ba165c12fb Pull complete 
+ api2 Pulled 
+ worker Pulled 
+ api1 Pulled 
+ Network leorcvargas_rinhex  Creating
+ Network leorcvargas_rinhex  Created
+ Volume "leorcvargas_sockets"  Creating
+ Volume "leorcvargas_sockets"  Created
+ Container leorcvargas-api1-1  Creating
+ Container leorcvargas-api2-1  Creating
+ Container leorcvargas-worker-1  Creating
+ Container leorcvargas-api2-1  Created
+ Container leorcvargas-api1-1  Created
+ Container leorcvargas-worker-1  Created
+ Container leorcvargas-loadbalancer-1  Creating
+ Container leorcvargas-loadbalancer-1  Created
+Attaching to api1-1, api2-1, loadbalancer-1, worker-1
+loadbalancer-1  | 2025/08/13 16:23:56 [crit] 10#10: *1 connect() to unix:/tmp/rinhex/api1.sock failed (2: No such file or directory) while connecting to upstream, client: 172.20.0.1, server: , request: "GET /payments-summary HTTP/1.1", upstream: "http://unix:/tmp/rinhex/api1.sock:/payments-summary", host: "localhost:9999"
+loadbalancer-1  | 2025/08/13 16:23:56 [crit] 10#10: *1 connect() to unix:/tmp/rinhex/api2.sock failed (2: No such file or directory) while connecting to upstream, client: 172.20.0.1, server: , request: "GET /payments-summary HTTP/1.1", upstream: "http://unix:/tmp/rinhex/api2.sock:/payments-summary", host: "localhost:9999"
+worker-1        | 
+worker-1        | 16:23:57.882 [info] [libcluster:gossip] connected to :rinhex@api1
+api1-1          | 
+api1-1          | 16:23:57.885 [info] Running RinhexWeb.HttpServer with Bandit 1.7.0 at /tmp/rinhex/api1.sock (http+unix)
+worker-1        | 
+worker-1        | 16:23:57.895 [info] [libcluster:gossip] connected to :rinhex@api2
+api1-1          | 
+api1-1          | 16:23:57.896 [info] [libcluster:gossip] connected to :rinhex@api2
+api2-1          | 
+api2-1          | 16:23:57.970 [info] Running RinhexWeb.HttpServer with Bandit 1.7.0 at /tmp/rinhex/api2.sock (http+unix)
+loadbalancer-1  | 2025/08/13 16:24:01 [error] 10#10: *4 no live upstreams while connecting to upstream, client: 172.20.0.1, server: , request: "GET /payments-summary HTTP/1.1", upstream: "http://api/payments-summary", host: "localhost:9999"
+loadbalancer-1  | 2025/08/13 16:24:06 [error] 10#10: *5 no live upstreams while connecting to upstream, client: 172.20.0.1, server: , request: "GET /payments-summary HTTP/1.1", upstream: "http://api/payments-summary", host: "localhost:9999"
+[Kloadbalancer-1 exited with code 0
+api1-1          | 
+api1-1          | 16:25:18.339 [notice] SIGTERM received - shutting down
+api1-1          | 
+worker-1        | 
+worker-1        | 16:25:18.340 [notice] SIGTERM received - shutting down
+worker-1        | 
+api2-1          | 
+api2-1          | 16:25:18.343 [notice] SIGTERM received - shutting down
+api2-1          | 
+api1-1          | 
+api1-1          | 16:25:18.365 [info] Final summary: {"default":{"totalRequests":16753,"totalAmount":333384.7},"fallback":{"totalRequests":0,"totalAmount":0.0}}
+worker-1        | 
+worker-1        | 16:25:18.366 [info] Final summary: {"default":{"totalRequests":16753,"totalAmount":333384.7},"fallback":{"totalRequests":0,"totalAmount":0.0}}
+api2-1          | 
+api2-1          | 16:25:18.366 [info] Final summary: {"default":{"totalRequests":16753,"totalAmount":333384.7},"fallback":{"totalRequests":0,"totalAmount":0.0}}
+log truncated at line 1000
