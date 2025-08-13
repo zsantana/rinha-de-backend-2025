@@ -28,19 +28,19 @@ stopContainers() {
 
 MAX_REQUESTS=550
 
-while true; do
+start=$(date +%s)
+max_seconds=$((5 * 1))
 
-    # docker system prune -a -f --volumes
-    execution=0
-    max_executions_before_shutdown=15
+while true; do
 
     for directory in ../participantes/*; do
     (
-        ((execution++))
+        _now=$(date +%s)
+        diff=$(($_now - $start))
         
-        echo "Execution nº $execution of $max_executions_before_shutdown."
+        echo "$diff seconds passed (out of $max_seconds)"
         
-        if [ $execution -ge $max_executions_before_shutdown ]; then
+        if [ $diff -ge $max_seconds ]; then
             echo "sudo shutdown now"
             exit 0
         fi
@@ -48,7 +48,7 @@ while true; do
         git pull
         participant=$(echo $directory | sed -e 's/..\/participantes\///g' -e 's/\///g')
         echo ""
-	    echo ""
+        echo ""
 	    echo "========================================"
         echo "  Participant $participant starting..."
         echo "========================================"
