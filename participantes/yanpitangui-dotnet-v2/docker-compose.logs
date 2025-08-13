@@ -1,0 +1,169 @@
+
+ backend-1 Pulling 
+ backend-2 Pulling 
+ nats Pulling 
+ worker Pulling 
+ 0368fd46e3c6 Already exists 
+ 0368fd46e3c6 Already exists 
+ nats Pulled 
+ 0670596c9dd1 Already exists 
+ b2683b5bf4e2 Already exists 
+ 0670596c9dd1 Already exists 
+ b2683b5bf4e2 Already exists 
+ 4a805e037314 Already exists 
+ 4a805e037314 Already exists 
+ 6f730f3f37cf Already exists 
+ 6f730f3f37cf Already exists 
+ f7ee2846e40e Already exists 
+ 1c21be00f048 Already exists 
+ f7ee2846e40e Already exists 
+ 52f658966c7f Pulling fs layer 
+ 4f4fb700ef54 Pulling fs layer 
+ 3b87b62665e0 Pulling fs layer 
+ 0368fd46e3c6 Already exists 
+ 1c21be00f048 Already exists 
+ 4f4fb700ef54 Already exists 
+ 0670596c9dd1 Already exists 
+ b2683b5bf4e2 Already exists 
+ 557206f55b4b Pulling fs layer 
+ 557206f55b4b Waiting 
+ 4a805e037314 Already exists 
+ 6f730f3f37cf Already exists 
+ f7ee2846e40e Already exists 
+ 1c21be00f048 Already exists 
+ 52f658966c7f Pulling fs layer 
+ 4f4fb700ef54 Pulling fs layer 
+ 3b87b62665e0 Pulling fs layer 
+ 4f4fb700ef54 Downloading [==================================================>]      32B/32B
+ 4f4fb700ef54 Verifying Checksum 
+ 4f4fb700ef54 Download complete 
+ 4f4fb700ef54 Verifying Checksum 
+ 4f4fb700ef54 Download complete 
+ 52f658966c7f Verifying Checksum 
+ 52f658966c7f Extracting [==================================================>]     100B/100B
+ 52f658966c7f Downloading [==================================================>]     100B/100B
+ 52f658966c7f Verifying Checksum 
+ 52f658966c7f Extracting [==================================================>]     100B/100B
+ 52f658966c7f Extracting [==================================================>]     100B/100B
+ 52f658966c7f Extracting [==================================================>]     100B/100B
+ 52f658966c7f Pull complete 
+ 52f658966c7f Pull complete 
+ 4f4fb700ef54 Extracting [==================================================>]      32B/32B
+ 4f4fb700ef54 Extracting [==================================================>]      32B/32B
+ 4f4fb700ef54 Extracting [==================================================>]      32B/32B
+ 4f4fb700ef54 Extracting [==================================================>]      32B/32B
+ 4f4fb700ef54 Pull complete 
+ 4f4fb700ef54 Pull complete 
+ 3b87b62665e0 Downloading [>                                                  ]  244.6kB/23.82MB
+ 3b87b62665e0 Downloading [>                                                  ]  244.6kB/23.82MB
+ 557206f55b4b Downloading [>                                                  ]  31.55kB/3.147MB
+ 557206f55b4b Verifying Checksum 
+ 557206f55b4b Download complete 
+ 557206f55b4b Extracting [>                                                  ]  32.77kB/3.147MB
+ 3b87b62665e0 Downloading [=======================>                           ]  11.06MB/23.82MB
+ 3b87b62665e0 Downloading [=======================>                           ]  11.06MB/23.82MB
+ 3b87b62665e0 Download complete 
+ 3b87b62665e0 Download complete 
+ 557206f55b4b Extracting [==================================================>]  3.147MB/3.147MB
+ 3b87b62665e0 Extracting [>                                                  ]  262.1kB/23.82MB
+ 3b87b62665e0 Extracting [>                                                  ]  262.1kB/23.82MB
+ 557206f55b4b Pull complete 
+ worker Pulled 
+ 3b87b62665e0 Extracting [==================>                                ]  8.913MB/23.82MB
+ 3b87b62665e0 Extracting [==================>                                ]  8.913MB/23.82MB
+ 3b87b62665e0 Extracting [===========================================>       ]  20.71MB/23.82MB
+ 3b87b62665e0 Extracting [===========================================>       ]  20.71MB/23.82MB
+ 3b87b62665e0 Extracting [==================================================>]  23.82MB/23.82MB
+ 3b87b62665e0 Extracting [==================================================>]  23.82MB/23.82MB
+ 3b87b62665e0 Pull complete 
+ 3b87b62665e0 Pull complete 
+ backend-1 Pulled 
+ backend-2 Pulled 
+ Network yanpitangui-dotnet-v2_backend  Creating
+ Network yanpitangui-dotnet-v2_backend  Created
+ Volume "yanpitangui-dotnet-v2_postgres-socket"  Creating
+ Volume "yanpitangui-dotnet-v2_postgres-socket"  Created
+ Volume "yanpitangui-dotnet-v2_uds-sockets"  Creating
+ Volume "yanpitangui-dotnet-v2_uds-sockets"  Created
+ Container yanpitangui-dotnet-v2-nats-1  Creating
+ Container yanpitangui-dotnet-v2-rinha-db-1  Creating
+ Container yanpitangui-dotnet-v2-nats-1  Created
+ Container yanpitangui-dotnet-v2-rinha-db-1  Created
+ Container backend-1  Creating
+ Container yanpitangui-dotnet-v2-worker-1  Creating
+ Container backend-2  Creating
+ Container yanpitangui-dotnet-v2-worker-1  Created
+ Container backend-2  Created
+ Container backend-1  Created
+ Container yanpitangui-dotnet-v2-nginx-1  Creating
+ Container yanpitangui-dotnet-v2-nginx-1  Created
+Attaching to backend-1, backend-2, nats-1, nginx-1, rinha-db-1, worker-1
+nats-1  | [1] 2025/08/13 08:47:01.902278 [INF] Starting nats-server
+nats-1  | [1] 2025/08/13 08:47:01.902325 [INF]   Version:  2.11.7
+nats-1  | [1] 2025/08/13 08:47:01.902328 [INF]   Git:      [df44964]
+nats-1  | [1] 2025/08/13 08:47:01.902330 [INF]   Cluster:  my_cluster
+nats-1  | [1] 2025/08/13 08:47:01.902332 [INF]   Name:     NBHUW6FQQIBWOIWEEWUSF7DHTYL5VCP7AJOA4SFUR4YPKDV4Y3UV2PAE
+nats-1  | [1] 2025/08/13 08:47:01.902342 [INF]   ID:       NBHUW6FQQIBWOIWEEWUSF7DHTYL5VCP7AJOA4SFUR4YPKDV4Y3UV2PAE
+nats-1  | [1] 2025/08/13 08:47:01.902370 [INF] Using configuration file: /etc/nats/nats-server.conf (sha256:c7aaa34d64beb74e7c700fd3504b40b01deb1275f6567fb81ed3809ff03a5fe4)
+nats-1  | [1] 2025/08/13 08:47:01.905800 [INF] Starting http monitor on 0.0.0.0:8222
+nats-1  | [1] 2025/08/13 08:47:01.906745 [INF] Listening for client connections on 0.0.0.0:4222
+nats-1  | [1] 2025/08/13 08:47:01.906918 [INF] Server is ready
+nats-1  | [1] 2025/08/13 08:47:01.909664 [INF] Cluster name is my_cluster
+nats-1  | [1] 2025/08/13 08:47:01.909707 [INF] Listening for route connections on 0.0.0.0:6222
+rinha-db-1  | The files belonging to this database system will be owned by user "postgres".
+rinha-db-1  | This user must also own the server process.
+rinha-db-1  | 
+rinha-db-1  | The database cluster will be initialized with locale "en_US.utf8".
+rinha-db-1  | The default database encoding has accordingly been set to "UTF8".
+rinha-db-1  | The default text search configuration will be set to "english".
+rinha-db-1  | 
+rinha-db-1  | Data page checksums are disabled.
+rinha-db-1  | 
+rinha-db-1  | fixing permissions on existing directory /var/lib/postgresql/data ... ok
+rinha-db-1  | creating subdirectories ... ok
+rinha-db-1  | selecting dynamic shared memory implementation ... posix
+rinha-db-1  | selecting default "max_connections" ... 100
+rinha-db-1  | selecting default "shared_buffers" ... 128MB
+rinha-db-1  | selecting default time zone ... UTC
+rinha-db-1  | creating configuration files ... ok
+rinha-db-1  | running bootstrap script ... ok
+rinha-db-1  | sh: locale: not found
+rinha-db-1  | 2025-08-13 08:47:09.597 UTC [53] WARNING:  no usable system locales were found
+rinha-db-1  | performing post-bootstrap initialization ... ok
+rinha-db-1  | syncing data to disk ... ok
+rinha-db-1  | 
+rinha-db-1  | 
+rinha-db-1  | Success. You can now start the database server using:
+rinha-db-1  | 
+rinha-db-1  |     pg_ctl -D /var/lib/postgresql/data -l logfile start
+rinha-db-1  | 
+rinha-db-1  | initdb: warning: enabling "trust" authentication for local connections
+rinha-db-1  | initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
+rinha-db-1  | waiting for server to start....2025-08-13 08:47:16.300 UTC [95] LOG:  starting PostgreSQL 17.5 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
+rinha-db-1  | 2025-08-13 08:47:16.300 UTC [95] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+rinha-db-1  | 2025-08-13 08:47:16.302 UTC [98] LOG:  database system was shut down at 2025-08-13 08:47:15 UTC
+rinha-db-1  | 2025-08-13 08:47:16.398 UTC [95] LOG:  database system is ready to accept connections
+rinha-db-1  |  done
+rinha-db-1  | server started
+rinha-db-1  | CREATE DATABASE
+rinha-db-1  | 
+rinha-db-1  | 
+rinha-db-1  | /usr/local/bin/docker-entrypoint.sh: running /docker-entrypoint-initdb.d/init.sql
+rinha-db-1  | CREATE TABLE
+rinha-db-1  | CREATE INDEX
+rinha-db-1  | 
+rinha-db-1  | 
+rinha-db-1  | waiting for server to shut down...2025-08-13 08:47:17.799 UTC [95] LOG:  received fast shutdown request
+rinha-db-1  | 2025-08-13 08:47:17.799 UTC [95] LOG:  aborting any active transactions
+rinha-db-1  | .2025-08-13 08:47:17.899 UTC [95] LOG:  background worker "logical replication launcher" (PID 101) exited with exit code 1
+rinha-db-1  | 2025-08-13 08:47:17.997 UTC [116] FATAL:  the database system is shutting down
+rinha-db-1  | 2025-08-13 08:47:17.999 UTC [96] LOG:  shutting down
+rinha-db-1  | 2025-08-13 08:47:17.999 UTC [96] LOG:  checkpoint starting: shutdown immediate
+rinha-db-1  | 2025-08-13 08:47:18.104 UTC [96] LOG:  checkpoint complete: wrote 927 buffers (5.7%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.105 s, sync=0.001 s, total=0.105 s; sync files=0, longest=0.000 s, average=0.000 s; distance=4276 kB, estimate=4276 kB; lsn=0/191A328, redo lsn=0/191A328
+rinha-db-1  | 2025-08-13 08:47:18.204 UTC [95] LOG:  database system is shut down
+rinha-db-1  |  done
+rinha-db-1  | server stopped
+rinha-db-1  | 
+rinha-db-1  | PostgreSQL init process complete; ready for start up.
+rinha-db-1  | 
+dependency failed to start: container yanpitangui-dotnet-v2-rinha-db-1 is unhealthy

@@ -1,0 +1,74 @@
+
+ traefik Pulling 
+ da9db072f522 Already exists 
+ b7bc362d9483 Pulling fs layer 
+ 2e42f1fa21f1 Pulling fs layer 
+ 2f2dc5ed6642 Pulling fs layer 
+ 2f2dc5ed6642 Downloading [==================================================>]     370B/370B
+ 2f2dc5ed6642 Verifying Checksum 
+ 2f2dc5ed6642 Download complete 
+ b7bc362d9483 Downloading [=>                                                 ]  16.38kB/455.1kB
+ b7bc362d9483 Verifying Checksum 
+ b7bc362d9483 Download complete 
+ b7bc362d9483 Extracting [===>                                               ]  32.77kB/455.1kB
+ 2e42f1fa21f1 Downloading [>                                                  ]  461.7kB/45.97MB
+ b7bc362d9483 Extracting [==================================================>]  455.1kB/455.1kB
+ b7bc362d9483 Extracting [==================================================>]  455.1kB/455.1kB
+ 2e42f1fa21f1 Downloading [==================>                                ]  17.38MB/45.97MB
+ 2e42f1fa21f1 Downloading [============================>                      ]  26.31MB/45.97MB
+ b7bc362d9483 Pull complete 
+ 2e42f1fa21f1 Downloading [====================================>              ]  33.81MB/45.97MB
+ 2e42f1fa21f1 Downloading [========================================>          ]   37.1MB/45.97MB
+ 2e42f1fa21f1 Downloading [===============================================>   ]  44.12MB/45.97MB
+ 2e42f1fa21f1 Verifying Checksum 
+ 2e42f1fa21f1 Download complete 
+ 2e42f1fa21f1 Extracting [>                                                  ]  491.5kB/45.97MB
+ 2e42f1fa21f1 Extracting [=======>                                           ]  6.881MB/45.97MB
+ 2e42f1fa21f1 Extracting [=============>                                     ]  12.78MB/45.97MB
+ 2e42f1fa21f1 Extracting [=====================>                             ]  19.66MB/45.97MB
+ 2e42f1fa21f1 Extracting [============================>                      ]  26.05MB/45.97MB
+ 2e42f1fa21f1 Extracting [==================================>                ]  31.95MB/45.97MB
+ 2e42f1fa21f1 Extracting [========================================>          ]  36.86MB/45.97MB
+ 2e42f1fa21f1 Extracting [================================================>  ]  44.24MB/45.97MB
+ 2e42f1fa21f1 Extracting [==================================================>]  45.97MB/45.97MB
+ 2e42f1fa21f1 Pull complete 
+ 2f2dc5ed6642 Extracting [==================================================>]     370B/370B
+ 2f2dc5ed6642 Extracting [==================================================>]     370B/370B
+ 2f2dc5ed6642 Pull complete 
+ traefik Pulled 
+ Network pru-async_backend  Creating
+ Network pru-async_backend  Created
+ Container redis  Creating
+ Container api01  Creating
+ Container api02  Creating
+ Container redis  Created
+ Container api01  Created
+ Container api02  Created
+ Container traefik  Creating
+ Container traefik  Created
+Attaching to api01, api02, redis, traefik
+redis  | 1:C 13 Aug 2025 15:52:43.728 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+redis  | 1:C 13 Aug 2025 15:52:43.728 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+redis  | 1:C 13 Aug 2025 15:52:43.728 * Redis version=7.4.5, bits=64, commit=00000000, modified=0, pid=1, just started
+redis  | 1:C 13 Aug 2025 15:52:43.728 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf
+redis  | 1:M 13 Aug 2025 15:52:43.728 * monotonic clock: POSIX clock_gettime
+redis  | 1:M 13 Aug 2025 15:52:43.729 * Running mode=standalone, port=6379.
+redis  | 1:M 13 Aug 2025 15:52:43.730 * Server initialized
+redis  | 1:M 13 Aug 2025 15:52:43.730 * Ready to accept connections tcp
+redis  | 1:M 13 Aug 2025 15:53:44.024 * 10000 changes in 60 seconds. Saving...
+redis  | 1:M 13 Aug 2025 15:53:44.025 * Background saving started by pid 21
+redis  | 21:C 13 Aug 2025 15:53:44.057 * DB saved on disk
+redis  | 21:C 13 Aug 2025 15:53:44.058 * Fork CoW for RDB: current 1 MB, peak 1 MB, average 0 MB
+redis  | 1:M 13 Aug 2025 15:53:44.130 * Background saving terminated with success
+api01  | {"time":"2025-08-13T15:53:51+00:00","severity":"warn","pid":1,"oid":106616,"fiber_id":106624,"subject":"Async::Task","annotation":"Reading HTTP/1.1 requests for Async::HTTP::Protocol::HTTP1::Server.","message":"Task may have ended with unhandled exception.","event":{"type":"failure","root":"/app","class":"Errno::ECONNRESET","message":"Connection reset by peer","backtrace":["/usr/local/lib/ruby/3.4.0/socket.rb:457:in 'BasicSocket#__read_nonblock'","/usr/local/lib/ruby/3.4.0/socket.rb:457:in 'BasicSocket#read_nonblock'","/usr/local/bundle/gems/io-stream-0.10.0/lib/io/stream/buffered.rb:138:in 'IO::Stream::Buffered#sysread'","/usr/local/bundle/gems/io-stream-0.10.0/lib/io/stream/readable.rb:347:in 'IO::Stream::Readable#fill_read_buffer'","/usr/local/bundle/gems/io-stream-0.10.0/lib/io/stream/readable.rb:268:in 'IO::Stream::Readable#gets'","/usr/local/bundle/gems/protocol-http1-0.34.1/lib/protocol/http1/connection.rb:352:in 'Protocol::HTTP1::Connection#read_line?'","/usr/local/bundle/gems/protocol-http1-0.34.1/lib/protocol/http1/connection.rb:374:in 'Protocol::HTTP1::Connection#read_request_line'","/usr/local/bundle/gems/protocol-http1-0.34.1/lib/protocol/http1/connection.rb:395:in 'Protocol::HTTP1::Connection#read_request'","/usr/local/bundle/gems/async-http-0.90.1/lib/async/http/protocol/http1/request.rb:26:in 'Async::HTTP::Protocol::HTTP1::Request.read'","/usr/local/bundle/gems/async-http-0.90.1/lib/async/http/protocol/http1/server.rb:49:in 'Async::HTTP::Protocol::HTTP1::Server#next_request'","/usr/local/bundle/gems/async-http-0.90.1/lib/async/http/protocol/http1/server.rb:66:in 'Async::HTTP::Protocol::HTTP1::Server#each'","/usr/local/bundle/gems/async-http-0.90.1/lib/async/http/server.rb:50:in 'Async::HTTP::Server#accept'","/usr/local/bundle/gems/io-endpoint-0.15.2/lib/io/endpoint/wrapper.rb:216:in 'block (2 levels) in IO::Endpoint::Wrapper#accept'","/usr/local/bundle/gems/async-2.27.2/lib/async/task.rb:183:in 'block in Async::Task#run'","/usr/local/bundle/gems/async-2.27.2/lib/async/task.rb:427:in 'block in Async::Task#schedule'"]}}
+[Ktraefik exited with code 137
+redis    | 1:signal-handler (1755100437) Received SIGTERM scheduling shutdown...
+api01    | {"time":"2025-08-13T15:52:44.641Z","level":"INFO","prog":"pru","event":"server_start","port":3000}
+api01    | {"time":"2025-08-13T15:52:44.643Z","level":"INFO","prog":"pru","message":"job_queue_start"}
+api02    | {"time":"2025-08-13T15:52:44.641Z","level":"INFO","prog":"pru","event":"server_start","port":3000}
+api02    | {"time":"2025-08-13T15:52:44.643Z","level":"INFO","prog":"pru","message":"job_queue_start"}
+redis    | 1:M 13 Aug 2025 15:53:57.243 * User requested shutdown...
+redis    | 1:M 13 Aug 2025 15:53:57.243 * Saving the final RDB snapshot before exiting.
+redis    | 1:M 13 Aug 2025 15:53:57.347 * DB saved on disk
+redis    | 1:M 13 Aug 2025 15:53:57.347 # Redis is now ready to exit, bye bye...
+log truncated at line 1000

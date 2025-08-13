@@ -16,13 +16,12 @@ A tabela abaixo mostra como os recursos foram alocados:
 
 | Serviço      | Linguagem | CPU  | Memória   |
 |--------------|-----------|------|-----------|
-| **api-1**    | Go        | 0.15 | 45MB      |
-| **api-2**    | Go        | 0.15 | 45MB      |
-| **worker-1** | PHP       | 0.35 | 90MB      |
-| **worker-2** | PHP       | 0.35 | 90MB      |
-| **haproxy**  | -         | 0.30 | 50MB      |
-| **redis**    | -         | 0.20 | 30MB      |
-| **Total**    | -         | 1.50 | 350MB     |
+| **api-1**    | Go        | 0.15 | 50MB      |
+| **api-2**    | Go        | 0.15 | 50MB      |
+| **worker**   | PHP       | 0.5  | 150MB     |
+| **haproxy**  | -         | 0.4  | 50MB      |
+| **redis**    | -         | 0.3  | 30MB      |
+| **Total**    | -         | 1.5  | 350MB     |
 
 ##### Arquitetura dos Serviços
 

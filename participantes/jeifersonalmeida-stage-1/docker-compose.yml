@@ -22,9 +22,10 @@ services:
   api-1:
     image: jeiferson/rinha-backend-2025:latest-amd64
     container_name: api-1
+    pull_policy: always
     environment:
       - MASTER=true
-      - NUM_WORKERS=20
+      - NUM_WORKERS=40
       - MAX_DEFAULT_LATENCY=30
       - USE_FALLBACK=true
       - MAX_FALLBACK_LATENCY=30
@@ -44,9 +45,10 @@ services:
   api-2:
     image: jeiferson/rinha-backend-2025:latest-amd64
     container_name: api-2
+    pull_policy: always
     environment:
       - MASTER=false
-      - NUM_WORKERS=20
+      - NUM_WORKERS=40
     networks:
       - rinha-network
       - payment-processor
