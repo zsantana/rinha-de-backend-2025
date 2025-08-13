@@ -1,0 +1,311 @@
+
+ api1 Pulling 
+ api2 Pulling 
+ 396b1da7636e Already exists 
+ 967d248389a0 Pulling fs layer 
+ 50425eb33921 Pulling fs layer 
+ 396b1da7636e Already exists 
+ 967d248389a0 Pulling fs layer 
+ 50425eb33921 Pulling fs layer 
+ 967d248389a0 Downloading [==================================================>]      93B/93B
+ 967d248389a0 Verifying Checksum 
+ 967d248389a0 Download complete 
+ 967d248389a0 Extracting [==================================================>]      93B/93B
+ 967d248389a0 Download complete 
+ 967d248389a0 Extracting [==================================================>]      93B/93B
+ 967d248389a0 Extracting [==================================================>]      93B/93B
+ 967d248389a0 Extracting [==================================================>]      93B/93B
+ 50425eb33921 Downloading [>                                                  ]  20.52kB/1.932MB
+ 50425eb33921 Downloading [>                                                  ]  20.52kB/1.932MB
+ 50425eb33921 Verifying Checksum 
+ 50425eb33921 Download complete 
+ 50425eb33921 Verifying Checksum 
+ 50425eb33921 Download complete 
+ 967d248389a0 Pull complete 
+ 967d248389a0 Pull complete 
+ 50425eb33921 Extracting [>                                                  ]  32.77kB/1.932MB
+ 50425eb33921 Extracting [>                                                  ]  32.77kB/1.932MB
+ 50425eb33921 Extracting [==================================================>]  1.932MB/1.932MB
+ 50425eb33921 Extracting [==================================================>]  1.932MB/1.932MB
+ 50425eb33921 Extracting [==================================================>]  1.932MB/1.932MB
+ 50425eb33921 Extracting [==================================================>]  1.932MB/1.932MB
+ 50425eb33921 Pull complete 
+ 50425eb33921 Pull complete 
+ api1 Pulled 
+ api2 Pulled 
+ Network vimsos-rust_internal-network  Creating
+ Network vimsos-rust_internal-network  Created
+ Container vimsos-rust-pg-1  Creating
+ Container vimsos-rust-pg-1  Created
+ Container vimsos-rust-api1-1  Creating
+ Container vimsos-rust-api2-1  Creating
+ Container vimsos-rust-api2-1  Created
+ Container vimsos-rust-api1-1  Created
+ Container vimsos-rust-nginx-1  Creating
+ Container vimsos-rust-nginx-1  Created
+Attaching to api1-1, api2-1, nginx-1, pg-1
+pg-1  | The files belonging to this database system will be owned by user "postgres".
+pg-1  | This user must also own the server process.
+pg-1  | 
+pg-1  | The database cluster will be initialized with locale "en_US.utf8".
+pg-1  | The default database encoding has accordingly been set to "UTF8".
+pg-1  | The default text search configuration will be set to "english".
+pg-1  | 
+pg-1  | Data page checksums are disabled.
+pg-1  | 
+pg-1  | fixing permissions on existing directory /var/lib/postgresql/data ... ok
+pg-1  | creating subdirectories ... ok
+pg-1  | selecting dynamic shared memory implementation ... posix
+pg-1  | selecting default "max_connections" ... 100
+pg-1  | selecting default "shared_buffers" ... 128MB
+pg-1  | selecting default time zone ... Etc/UTC
+pg-1  | creating configuration files ... ok
+pg-1  | running bootstrap script ... ok
+nginx-1  | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+nginx-1  | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+nginx-1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+nginx-1  | 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+nginx-1  | 10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
+nginx-1  | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+nginx-1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+nginx-1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+nginx-1  | /docker-entrypoint.sh: Configuration complete; ready for start up
+pg-1     | performing post-bootstrap initialization ... ok
+pg-1     | syncing data to disk ... ok
+pg-1     | 
+pg-1     | 
+pg-1     | Success. You can now start the database server using:
+pg-1     | 
+pg-1     |     pg_ctl -D /var/lib/postgresql/data -l logfile start
+pg-1     | 
+pg-1     | initdb: warning: enabling "trust" authentication for local connections
+pg-1     | initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
+pg-1     | waiting for server to start.... done
+pg-1     | server started
+pg-1     | CREATE DATABASE
+pg-1     | 
+pg-1     | 
+pg-1     | /usr/local/bin/docker-entrypoint.sh: running /docker-entrypoint-initdb.d/01_create_log_table.sql
+pg-1     | CREATE SCHEMA
+pg-1     | CREATE TABLE
+pg-1     | 
+pg-1     | 
+pg-1     | waiting for server to shut down.... done
+pg-1     | server stopped
+pg-1     | 
+pg-1     | PostgreSQL init process complete; ready for start up.
+pg-1     | 
+api1-1   | 16:38:19 [0m[31m[ERROR] [0m5f6651b6-05dc-4aab-a8d3-8eafc5c7afe3 failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:19 [0m[31m[ERROR] [0m81cfaabf-dafc-4f5e-aadb-4430d30e25e5 failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:19 [0m[31m[ERROR] [0m118ac9c3-0ad3-4f1c-98ea-f182991b8e37 failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:19 [0m[31m[ERROR] [0m82be099f-8258-4bd1-9c42-bcf5eba22497 failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:19 [0m[31m[ERROR] [0md81db7f4-e90f-4948-aa78-6e72c6b151e7 failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:19 [0m[31m[ERROR] [0mbcb506fb-5237-4784-9a58-03671f696bf1 failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:19 [0m[31m[ERROR] [0mf9f1f6cb-09ab-4f56-9851-651f8f35fa42 failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:19 [0m[31m[ERROR] [0m3f9eda3a-6d5e-401a-be85-c381fe17a72d failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:20 [0m[31m[ERROR] [0mb745439f-9302-41fc-a06b-49318068197e failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:20 [0m[31m[ERROR] [0m2701b097-dc5d-4432-a524-1cc240f5c964 failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:20 [0m[31m[ERROR] [0m8410cc8e-ce14-4c9d-ae54-76563af88c25 failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:20 [0m[31m[ERROR] [0mc779a61b-a3ed-4085-ae92-92a8435ee142 failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:20 [0m[31m[ERROR] [0mc9846521-3579-47cb-9b7b-b29a7de8d976 failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:20 [0m[31m[ERROR] [0md1e92ccd-e5cb-4336-9c67-8a01c3555365 failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:20 [0m[31m[ERROR] [0m798430e3-5fce-424b-af69-f17160663470 failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:20 [0m[31m[ERROR] [0maf1aa00c-40e9-4762-b0c1-9aa0b6f4284e failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:20 [0m[31m[ERROR] [0m7376226f-0bac-4e72-85db-ace0d45dfb5a failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:20 [0m[31m[ERROR] [0mcb4310cf-3e1f-4484-929b-7c5892323d38 failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:20 [0m[31m[ERROR] [0ma9b921ae-6678-4a4f-8f04-96a9e80e1956 failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:20 [0m[31m[ERROR] [0m2147707c-d873-4164-89df-5afe1461e509 failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:20 [0m[31m[ERROR] [0md0adf3b5-b2d6-4fde-bae9-d7b832189917 failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:20 [0m[31m[ERROR] [0mc71f53b6-56eb-44ab-a732-ae9589af41f8 failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:20 [0m[31m[ERROR] [0m37767177-72ed-4c2a-aa89-ad4bcd137260 failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:20 [0m[31m[ERROR] [0m9877a41e-b55b-46f3-84dd-7b33bf9d9818 failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:20 [0m[31m[ERROR] [0m9fdae871-1b2d-4193-8140-b253f6f60094 failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:20 [0m[31m[ERROR] [0m639c55a7-c661-4f13-b24c-67e3acfc1353 failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:20 [0m[31m[ERROR] [0m4b511adf-95b5-4450-a646-ab8b7731eda3 failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:20 [0m[31m[ERROR] [0m10913cb6-5eea-425f-88de-8c112ade087c failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:21 [0m[31m[ERROR] [0m97aa94d3-90fc-4cb7-8d23-81cb4302240e failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:21 [0m[31m[ERROR] [0m0d2ca14c-8c49-40cb-a834-5cb1069f40f2 failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:21 [0m[31m[ERROR] [0m4ea47d8c-313f-4af0-8713-7e5e9040108f failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:21 [0m[31m[ERROR] [0m1616d5e9-ab35-47f8-9745-050cc053a2ff failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:21 [0m[31m[ERROR] [0mee56012c-25ff-45e7-abc0-401ffc7202c3 failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:21 [0m[31m[ERROR] [0mbce3a5d3-0473-4e21-8470-3842d880d83b failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:21 [0m[31m[ERROR] [0m40692d1a-3721-4f7c-924c-d4c3712e9ad4 failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:21 [0m[31m[ERROR] [0m8618a4fd-7175-4fec-a64e-ddca52ead5ed failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:21 [0m[31m[ERROR] [0m569fcc3b-d60d-43de-b154-f01abf7de65d failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:21 [0m[31m[ERROR] [0m4c6dc88c-5941-4b37-a0e8-383837f9e683 failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:21 [0m[31m[ERROR] [0m1f45f65d-1d9c-4af6-9d88-aad1a725b335 failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:21 [0m[31m[ERROR] [0m5e66c715-5c33-4645-ba79-9a0f1c5a4ffb failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:21 [0m[31m[ERROR] [0m17e8829f-550b-4614-ab4b-2076be726e4f failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:21 [0m[31m[ERROR] [0mc78ba7d2-2849-4d55-9ee7-84180378af3d failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:21 [0m[31m[ERROR] [0m14c6e190-670a-49a2-ae83-fb094632d864 failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:21 [0m[31m[ERROR] [0m9412b769-d0a3-4a6d-9818-84ea0b93a462 failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:21 [0m[31m[ERROR] [0m72bc874e-791d-40a4-9021-1b42a7ca0b3e failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:21 [0m[31m[ERROR] [0m66992d76-ea19-43c5-9332-c27399907d29 failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:21 [0m[31m[ERROR] [0m261bd167-c042-46b7-a2a5-27a52e3d9eb4 failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:21 [0m[31m[ERROR] [0mbd71c336-fd92-455d-b742-754608c374e5 failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:22 [0m[31m[ERROR] [0m2bab383f-23d5-492b-8a44-f66e7e53e075 failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:22 [0m[31m[ERROR] [0m92f2312c-742a-467c-b5d3-cb17c9571034 failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:22 [0m[31m[ERROR] [0m2cf471c9-44e9-48a6-b1a7-31b8e7bfd97c failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:22 [0m[31m[ERROR] [0m4814dcd2-75a9-4387-8e73-50edd2fc9513 failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:22 [0m[31m[ERROR] [0m592d61b9-9ef2-4499-b6f5-794bbcd47d70 failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:22 [0m[31m[ERROR] [0ma3f1b7c4-05dc-42be-a563-5147f0b293b9 failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:22 [0m[31m[ERROR] [0m309d5620-7608-4455-b458-145b84e94a95 failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:22 [0m[31m[ERROR] [0mcce53284-ca56-476e-b57b-045fd17a8c87 failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:22 [0m[31m[ERROR] [0mddb9f43f-b69c-437a-8a77-3c2b55f78b89 failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:22 [0m[31m[ERROR] [0m92b67bde-a8c2-42d5-9af5-c59053469525 failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:22 [0m[31m[ERROR] [0mdd83482a-a5ff-4db3-b85f-96479bc60a00 failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:22 [0m[31m[ERROR] [0m691139a2-9fb3-43a0-8122-661ebcfab4be failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:22 [0m[31m[ERROR] [0m620f7b87-5e48-4979-a86f-bb3ce3f6d59d failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:22 [0m[31m[ERROR] [0m72a4a701-55dd-406e-add6-a8804350cde6 failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:22 [0m[31m[ERROR] [0mb7648546-6a40-4668-868c-962cb1592f97 failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:22 [0m[31m[ERROR] [0m6032072c-12c5-450a-bfb8-9e9236f168c0 failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:22 [0m[31m[ERROR] [0m9dbf85bd-4e72-441f-9b1e-7e8a9bce09a3 failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:22 [0m[31m[ERROR] [0m2228610d-8a0a-4f7a-9991-afc6e4e98fbc failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:22 [0m[31m[ERROR] [0m4c62cecb-d6da-4ff1-9666-04802fa184f6 failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:22 [0m[31m[ERROR] [0m06732d51-1218-4640-9f00-821fc4a54a24 failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:23 [0m[31m[ERROR] [0m2fc48bc1-6530-4619-ae3f-e403ba92aa12 failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:23 [0m[31m[ERROR] [0m817f82ef-bb4a-4d5f-a4c0-d87bbcddd70b failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:23 [0m[31m[ERROR] [0mb9a44dc2-d28b-4784-b000-3b1997ba766c failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:23 [0m[31m[ERROR] [0m355692df-a098-4eb7-b65f-a26bfce776fc failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:23 [0m[31m[ERROR] [0m60b137ba-79ea-482a-bc43-76db1a92a261 failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:23 [0m[31m[ERROR] [0md0411833-3416-423e-941b-89e217a2727f failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:23 [0m[31m[ERROR] [0m4d6cef12-7a99-470b-8c2d-7675f4504c54 failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:23 [0m[31m[ERROR] [0m1ba5228c-f1fb-4b32-a21b-c755f68ba340 failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:23 [0m[31m[ERROR] [0md852ac2c-85fc-48e7-bf89-45faaf1e9179 failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:23 [0m[31m[ERROR] [0m74e6f9a5-b8c8-4302-ab13-e58514adf265 failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:23 [0m[31m[ERROR] [0m1638def0-aacd-416d-95fc-ff6cdf0745bd failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:23 [0m[31m[ERROR] [0m64f3bde6-bccb-4f95-b0bb-d0c058ad83c7 failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:23 [0m[31m[ERROR] [0m74905bc8-8a2e-43df-af0f-93cf173da560 failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:23 [0m[31m[ERROR] [0mf6de1407-e9bd-43ba-803f-cdfb2003730a failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:23 [0m[31m[ERROR] [0m6cade73e-1759-4094-ae24-84e836a60e5f failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:23 [0m[31m[ERROR] [0mcdf99838-f260-443f-8dbf-e7b25cb22ee6 failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:23 [0m[31m[ERROR] [0mf4b6277b-cf8c-4514-9c11-9de93c7ff691 failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:23 [0m[31m[ERROR] [0m89417fe4-0b8a-4e58-bc72-e110400bd805 failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:24 [0m[31m[ERROR] [0mf76d669d-b3ce-45f2-a18b-abb261259a54 failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:24 [0m[31m[ERROR] [0mcc779fac-2779-4eaf-a74e-d43d085bd617 failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:24 [0m[31m[ERROR] [0m1acf18bf-1abb-4817-9364-704f8aab3d23 failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:24 [0m[31m[ERROR] [0m6276260c-a3a0-4b29-8ff5-03cbc511f613 failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:24 [0m[31m[ERROR] [0m2623a1da-7256-40b0-8b64-5812ced4110e failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:24 [0m[31m[ERROR] [0mbcdb9f98-42a0-4263-89d5-5e11ed8d3a52 failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:24 [0m[31m[ERROR] [0mdff36fde-ab5f-4765-a8d9-895b951d9b66 failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:24 [0m[31m[ERROR] [0m39f4e360-5dd6-4775-872f-d78e58d49bf2 failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:24 [0m[31m[ERROR] [0m6cb89247-2f47-4439-8a04-cdb85371ee93 failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:24 [0m[31m[ERROR] [0m73c4482c-ba20-4960-87bd-8fb495bd40c1 failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:24 [0m[31m[ERROR] [0mf87e4ed2-b5c1-45a2-864e-35d9307c24d6 failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:24 [0m[31m[ERROR] [0m366a62bd-92ad-4810-a9f8-3c5f2ba5213f failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:24 [0m[31m[ERROR] [0mcdbe1271-79bc-42c5-b476-b5ec764e4876 failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:24 [0m[31m[ERROR] [0m07e97e6c-ef53-43ea-bff7-256e2db0b9ad failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:24 [0m[31m[ERROR] [0m0bfcb40b-5192-432c-9657-7df914eb8681 failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:24 [0m[31m[ERROR] [0m86c08ede-bad4-426d-8bba-cefb56000826 failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:24 [0m[31m[ERROR] [0m97167295-cecb-4f69-a206-458bda3e7b6e failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:24 [0m[31m[ERROR] [0m5628fed9-cafe-4d92-acaf-e62eaa1679f4 failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:24 [0m[31m[ERROR] [0md171af88-0074-412b-bba0-824c9106ed43 failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:24 [0m[31m[ERROR] [0m427e3b1e-4ab7-4dfb-83c3-68a18b138f73 failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:25 [0m[31m[ERROR] [0m4cd39145-7669-4565-b9c9-f8f97077c8bd failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:25 [0m[31m[ERROR] [0m82f60275-96fd-4318-8d55-48a6dad76925 failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:25 [0m[31m[ERROR] [0mc127380f-077e-4b6d-8d80-646efa05eff6 failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:25 [0m[31m[ERROR] [0m1a50c7f5-cf61-4b36-9e77-c7550824aa65 failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:25 [0m[31m[ERROR] [0meafa9bdd-989b-4681-ae5e-0cb8e1542660 failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:25 [0m[31m[ERROR] [0m24aa4d79-1ff7-4f84-9233-2f633fb7de35 failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:25 [0m[31m[ERROR] [0m4f1e7588-e75a-411e-a7ab-84c4346b5849 failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:25 [0m[31m[ERROR] [0m1d54719a-a3bf-45c2-9d0c-7c596706fbfe failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:25 [0m[31m[ERROR] [0m10e40c73-3cb2-42d5-a909-5e0d7d9a3584 failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:25 [0m[31m[ERROR] [0m8b6f97e9-c703-484f-a44e-913147dac28d failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:25 [0m[31m[ERROR] [0mf9fe9ece-5a72-46ed-a1dc-70e479f9264f failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:25 [0m[31m[ERROR] [0mdaf41a94-a809-4220-be19-86efee3c3bcd failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:25 [0m[31m[ERROR] [0m342a19d7-1b9a-4046-8da8-fec0181611cf failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:25 [0m[31m[ERROR] [0mc2219d18-4a7b-43e4-96d3-bc35092b8b49 failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:25 [0m[31m[ERROR] [0m7aa3ad0e-b7da-4802-b0b5-a3262fae9b7f failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:25 [0m[31m[ERROR] [0mb7b00dcc-38cf-42dd-87a0-384c5f08d623 failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:25 [0m[31m[ERROR] [0m648cc711-b515-4455-9502-d874b182dd1f failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:25 [0m[31m[ERROR] [0m8776891d-eaec-4d4f-95fd-6e82ef1c25ab failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:25 [0m[31m[ERROR] [0mc4014615-e3f9-4090-a322-a6229189e51e failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:25 [0m[31m[ERROR] [0m081f55e4-5e5a-4cd3-8192-698aceec402e failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:26 [0m[31m[ERROR] [0ma12a510e-ab7f-41c3-87e5-0e2040afc65d failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:26 [0m[31m[ERROR] [0m81c98d2f-e24d-4f90-921c-d403bb7a6b9c failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:26 [0m[31m[ERROR] [0mfaf94baa-75f7-4762-a9a8-f6a2b35c61ba failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:26 [0m[31m[ERROR] [0m3d0c844d-57f7-4756-8dc5-00c992359fa5 failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:26 [0m[31m[ERROR] [0mdc00420b-a73a-4a91-8be2-687033ad2ca2 failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:26 [0m[31m[ERROR] [0md23174af-e767-442c-bbd0-c2b1cc199e06 failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:26 [0m[31m[ERROR] [0maea2c114-a17d-403c-b15c-f9cd49cff23d failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:26 [0m[31m[ERROR] [0m9aba0914-27b5-4fc2-b394-10fe1c82265b failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:26 [0m[31m[ERROR] [0m43a28652-91f0-46ad-b790-09271ca97c4e failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:26 [0m[31m[ERROR] [0mfaf273f2-d059-4c45-a9e9-68fa87734ef6 failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:26 [0m[31m[ERROR] [0m23cce78d-f4f8-4648-be55-7fdc65d17d63 failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:26 [0m[31m[ERROR] [0m5620d0b8-1cae-4323-901e-d15e87421e9f failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:26 [0m[31m[ERROR] [0m35ac94d2-b155-4e61-9cb9-a73f87f3ce0f failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:26 [0m[31m[ERROR] [0mc79d8566-c5a0-4457-bcf2-e417cef12bcc failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:26 [0m[31m[ERROR] [0me933dde6-1c71-43ec-986c-a68596194f89 failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:26 [0m[31m[ERROR] [0mde436a10-df1c-4f1f-b4cf-29e84340740b failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:26 [0m[31m[ERROR] [0me9f8097d-d55c-457d-a998-c59e8a2250d8 failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:26 [0m[31m[ERROR] [0m979b4ea9-d567-43b8-a6bb-0d9ea4369b61 failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:26 [0m[31m[ERROR] [0mb449fbeb-ec70-4751-9282-c175163bc346 failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:26 [0m[31m[ERROR] [0mca4ec330-0599-4fc1-8b46-32026d7289f4 failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:27 [0m[31m[ERROR] [0ma8e6243a-95a7-498f-a7f2-3aa2cf963a3d failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:27 [0m[31m[ERROR] [0mbeb3695a-2768-40f3-8e39-e112bf5f4d00 failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:27 [0m[31m[ERROR] [0mc7815357-5d9b-4c46-8c60-147f6fe4e545 failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:27 [0m[31m[ERROR] [0mf287c7e6-4253-4516-8159-40f4ac8e76e5 failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:27 [0m[31m[ERROR] [0m3c4f1823-8d34-4085-8e4d-3bca3367412f failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:27 [0m[31m[ERROR] [0m84466652-3972-443a-9091-8a52800a6818 failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:27 [0m[31m[ERROR] [0m35ff17e9-c3c5-4e2c-8c37-6c168ed39d13 failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:27 [0m[31m[ERROR] [0m4cc39f81-329a-4a54-a351-a566d534e228 failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:27 [0m[31m[ERROR] [0m83bb61bf-f494-47a5-9353-0349a7555192 failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:27 [0m[31m[ERROR] [0m0c61369a-9aee-4ab5-bce4-a8628b01c900 failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:27 [0m[31m[ERROR] [0m903dd8dc-8f91-471d-b12e-e8bf0b1cae2d failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:27 [0m[31m[ERROR] [0m1e1210c8-c9c8-43d3-a2e6-94c195301d09 failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:27 [0m[31m[ERROR] [0m55dafa42-09e0-49bc-b4b2-8bcb4211cdea failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:27 [0m[31m[ERROR] [0m333a96c1-5425-4d62-ab4a-2d162c2a5f7c failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:27 [0m[31m[ERROR] [0m24c8f0be-b607-47bb-b62c-26774aa7b0bd failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:27 [0m[31m[ERROR] [0mafe47e22-fa63-46bd-a546-b861ed43d4db failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:27 [0m[31m[ERROR] [0mab7c7946-3ac1-489f-a9b6-1996a7aea2eb failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:27 [0m[31m[ERROR] [0mce89cecc-7733-4a9d-9b3c-5d3c34fba822 failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:28 [0m[31m[ERROR] [0mf478923d-b5d5-462a-8487-13a3a948bc1d failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:28 [0m[31m[ERROR] [0mf7d308f4-4d33-435a-924b-1b5a664889a4 failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:28 [0m[31m[ERROR] [0mcffb0411-f6c2-42b1-88f1-11f370252e31 failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:28 [0m[31m[ERROR] [0m80ae670e-f8e4-4f8e-ad74-ae649c1b3f51 failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:28 [0m[31m[ERROR] [0m997d4840-999c-4e25-88bc-824356991c83 failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:28 [0m[31m[ERROR] [0me026052e-ed14-4db2-9b5a-18e907f8b013 failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:28 [0m[31m[ERROR] [0m7f45c280-be20-4891-b4a9-4fbfd56f831f failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:28 [0m[31m[ERROR] [0m86f73611-ace4-456f-9aad-7679a75b0485 failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:28 [0m[31m[ERROR] [0m4c195d9f-a8b3-47dc-9f17-bff30d57e379 failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:28 [0m[31m[ERROR] [0m2e562032-b19d-4cd1-a9e0-2cce928869b4 failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:28 [0m[31m[ERROR] [0m5b0f4220-9484-4deb-8705-80366ff860c6 failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:28 [0m[31m[ERROR] [0md77b1c13-3b30-4cf4-b670-a06aaf3b7f48 failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:28 [0m[31m[ERROR] [0mb6e2483d-ae8f-483a-8934-af9c2cbcad15 failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:28 [0m[31m[ERROR] [0m1637c3ab-7f27-45b8-a097-1dc82dceb7bb failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:28 [0m[31m[ERROR] [0m4138093a-adda-4c51-bea0-c1c937ef55fa failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:28 [0m[31m[ERROR] [0mc8a51e03-066b-483b-826d-c76ed3ee049b failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:28 [0m[31m[ERROR] [0m52b88e26-aef7-4c70-a984-ebee2f0ff83d failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:28 [0m[31m[ERROR] [0m038e7c38-6530-4fd8-a0b6-73e96ee370ef failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:28 [0m[31m[ERROR] [0m9489433a-c7b9-4537-82b2-67bf6accb960 failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:28 [0m[31m[ERROR] [0m66646c8a-9e04-4bad-a20b-22309ba59e98 failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:29 [0m[31m[ERROR] [0me3513d5f-390f-4da1-88c8-21bb2f04bede failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:29 [0m[31m[ERROR] [0mc0485081-54cb-4c4a-b85d-7ccb8c316620 failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:29 [0m[31m[ERROR] [0mad8e38c9-91ed-4b66-aff0-b26d397ca197 failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:29 [0m[31m[ERROR] [0m403a2134-57ed-4f18-94ee-83b45c6e8830 failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:29 [0m[31m[ERROR] [0ma7b48a53-82ec-4ed1-8b8d-e572f57a75f1 failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:29 [0m[31m[ERROR] [0m5eb677de-8672-4463-845d-9fe4f6627826 failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:29 [0m[31m[ERROR] [0m4791a37e-11c1-4779-9b08-b9e477ff712c failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:29 [0m[31m[ERROR] [0mcbc91e4b-dec7-49ca-88d6-8750578d4f56 failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:29 [0m[31m[ERROR] [0mea8c0400-8293-4de3-93f5-374d11c6d48c failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:29 [0m[31m[ERROR] [0me8f6f155-6c8f-44ef-ad93-932b3da9b9af failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:29 [0m[31m[ERROR] [0m42806ebe-7c57-42a9-a4b9-82553309cfd6 failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:29 [0m[31m[ERROR] [0m62aef4ad-d01e-4d40-aae2-01fd84cea3ad failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:29 [0m[31m[ERROR] [0m688598b1-c5db-403d-9c43-9d3e775f93cc failed at default with status 500 Internal Server Error, 1 attempts
+api2-1   | 16:38:29 [0m[31m[ERROR] [0m873b20cc-1ea6-4a43-96d1-bd740510025f failed at default with status 500 Internal Server Error, 1 attempts
+api1-1   | 16:38:30 [0m[31m[ERROR] [0m688598b1-c5db-403d-9c43-9d3e775f93cc failed at fallback with status 500 Internal Server Error, 2 attempts
+api2-1   | 16:38:30 [0m[31m[ERROR] [0m873b20cc-1ea6-4a43-96d1-bd740510025f failed at fallback with status 500 Internal Server Error, 2 attempts
+api1-1   | 16:38:32 [0m[31m[ERROR] [0m688598b1-c5db-403d-9c43-9d3e775f93cc failed at default with status 500 Internal Server Error, 3 attempts
+api2-1   | 16:38:32 [0m[31m[ERROR] [0m873b20cc-1ea6-4a43-96d1-bd740510025f failed at default with status 500 Internal Server Error, 3 attempts
+api1-1   | 16:38:33 [0m[31m[ERROR] [0m688598b1-c5db-403d-9c43-9d3e775f93cc failed at fallback with status 500 Internal Server Error, 4 attempts
+api2-1   | 16:38:33 [0m[31m[ERROR] [0m873b20cc-1ea6-4a43-96d1-bd740510025f failed at fallback with status 500 Internal Server Error, 4 attempts
+api1-1   | 16:38:35 [0m[31m[ERROR] [0m688598b1-c5db-403d-9c43-9d3e775f93cc failed at default with status 500 Internal Server Error, 5 attempts
+api2-1   | 16:38:35 [0m[31m[ERROR] [0m873b20cc-1ea6-4a43-96d1-bd740510025f failed at default with status 500 Internal Server Error, 5 attempts
+api1-1   | 16:38:36 [0m[31m[ERROR] [0m688598b1-c5db-403d-9c43-9d3e775f93cc failed at fallback with status 500 Internal Server Error, 6 attempts
+api2-1   | 16:38:36 [0m[31m[ERROR] [0m873b20cc-1ea6-4a43-96d1-bd740510025f failed at fallback with status 500 Internal Server Error, 6 attempts
+api1-1   | 16:38:38 [0m[31m[ERROR] [0m688598b1-c5db-403d-9c43-9d3e775f93cc failed at default with status 500 Internal Server Error, 7 attempts
+api2-1   | 16:38:38 [0m[31m[ERROR] [0m873b20cc-1ea6-4a43-96d1-bd740510025f failed at default with status 500 Internal Server Error, 7 attempts
+[Knginx-1 exited with code 0
+[Kapi1-1 exited with code 137
+[Kapi2-1 exited with code 137
+log truncated at line 1000

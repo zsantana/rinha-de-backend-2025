@@ -22,7 +22,7 @@ services:
     # build:
     #   context: .
     #   dockerfile: Dockerfile
-    image: danielsuhett1999/rinha-backend-go:1.0.10
+    image: danielsuhett1999/rinha-backend-go:1.2.1
     hostname: api1
     volumes:
       - sockets:/var/run/sockets
@@ -54,7 +54,7 @@ services:
     # build:
     #   context: .
     #   dockerfile: Dockerfile
-    image: danielsuhett1999/rinha-backend-go:1.0.10
+    image: danielsuhett1999/rinha-backend-go:1.2.1
     hostname: api2
     volumes:
       - sockets:/var/run/sockets
