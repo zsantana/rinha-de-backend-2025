@@ -1,6 +1,6 @@
 services:
   api1: &api
-    image: ghcr.io/chriscorrales/cash-fighter-api:v1.0.1
+    image: ghcr.io/chriscorrales/cash-fighter-api:latest
     hostname: api1
     networks:
       - backend
@@ -23,7 +23,7 @@ services:
     hostname: api2
 
   worker1: &worker
-    image: ghcr.io/chriscorrales/cash-fighter-worker:v1.0.1
+    image: ghcr.io/chriscorrales/cash-fighter-worker:latest
     networks:
       - backend
       - payment-processor
