@@ -45,7 +45,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.6"
+          cpus: "0.5"
           memory: "150MB"
 
   haproxy:
@@ -66,7 +66,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.3"
+          cpus: "0.4"
           memory: "50MB"
 
   redis:
