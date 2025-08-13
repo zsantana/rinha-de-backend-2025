@@ -1,6 +1,6 @@
 x-service-templates:
   backend-service: &backend-service
-    image: 4emcos/rinha-backend-2025-bun:1.0.8
+    image: 4emcos/rinha-backend-2025-bun:1.0.9
     depends_on:
       - writer
     volumes:
@@ -12,7 +12,7 @@ x-service-templates:
       resources:
         limits:
           cpus: "0.35"
-          memory: "35MB"
+          memory: "70MB"
 
 services:
   backend-01:
@@ -47,7 +47,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.30"
+          cpus: "0.6"
           memory: "90MB"
 
   load-balance:
@@ -66,7 +66,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.5"
+          cpus: "0.2"
           memory: "75MB"
           
 volumes:
