@@ -31,14 +31,25 @@ MAX_REQUESTS=550
 while true; do
 
     # docker system prune -a -f --volumes
+    execution=1
+    max_executions_before_shutdown=20
 
     for directory in ../participantes/*; do
     (
+        ((execution++))
+        
+        echo "Execution nº $execution of $max_executions_before_shutdown."
+        
+        if [ $max_executions_before_shutdown -ge $execution ]; then
+            sudo shutdown now
+            exit 0
+        fi
+
         git pull
         participant=$(echo $directory | sed -e 's/..\/participantes\///g' -e 's/\///g')
         echo ""
-	echo ""
-	echo "========================================"
+	    echo ""
+	    echo "========================================"
         echo "  Participant $participant starting..."
         echo "========================================"
 
