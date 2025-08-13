@@ -1,11 +1,8 @@
 ﻿x-services-templates:
   api: &api-template  
-   image: ghcr.io/white1lopes/rinha-2025:latest
+    image: ghcr.io/white1lopes/rinha-2025:v1.0.5
     ports:
       - "8080"
-    build:
-      context: .
-      dockerfile: Dockerfile
     environment:
       - ASPNETCORE_ENVIRONMENT=Production
       - default_url=http://payment-processor-default:8080
@@ -20,7 +17,7 @@
       resources:
         limits:
           cpus: "0.6"
-          memory: "140MB"
+          memory: "140MB"          
           
 services:
   api1:
@@ -63,7 +60,7 @@ services:
           memory: "30MB"
 
 networks:
-    app-network:
-        driver: bridge
-    payment-processor:
-      external: true
+  app-network:
+    driver: bridge
+  payment-processor:
+    external: true
