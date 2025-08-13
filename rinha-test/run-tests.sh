@@ -30,6 +30,7 @@ MAX_REQUESTS=550
 
 start=$(date +%s)
 max_seconds=$((60 * 60)) # 60 minutos
+shutdown_enabled=0
 
 while true; do
 
@@ -40,7 +41,7 @@ while true; do
 
         echo "$diff/$max_seconds seconds passed"
 
-        if [ $diff -ge $max_seconds ]; then
+        if [ $shutdown_enabled -eq 1 ] && [ $diff -ge $max_seconds ]; then
             sudo shutdown now
             kill -9 $$
             exit 0
