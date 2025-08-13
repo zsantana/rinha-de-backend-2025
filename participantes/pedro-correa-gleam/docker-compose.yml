@@ -9,7 +9,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.1"
+          cpus: "0.15"
           memory: "30MB"
     volumes:
       - redis-data:/data
@@ -31,8 +31,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "1"
-          memory: "255MB"
+          cpus: "0.8"
+          memory: "230MB"
 
   api2:
     <<: *app
@@ -43,8 +43,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.3"
-          memory: "55MB"
+          cpus: "0.4"
+          memory: "80MB"
 
   nginx:
     image: nginx:1.29.0-alpine
@@ -60,7 +60,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.1"
+          cpus: "0.15"
           memory: "10MB"
 
 volumes:
