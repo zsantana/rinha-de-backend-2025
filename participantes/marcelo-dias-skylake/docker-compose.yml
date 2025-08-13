@@ -6,7 +6,7 @@ services:
     hostname: app1
     environment:
       - FALLBACK_ENABLED=0
-      - INTER_INTERVAL=2500
+      - INTER_INTERVAL=2000
       - PROCESSOR_URL=http://payment-processor-default:8080
       - FALLBACK_PROCESSOR_URL=http://payment-processor-fallback:8080
       - OTHER_INSTANCE_URL=http://app2:8080
@@ -21,7 +21,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.3"
+          cpus: "0.5"
           memory: "64MB"
 
   app2:
@@ -29,7 +29,7 @@ services:
     hostname: app2
     environment:
       - FALLBACK_ENABLED=0
-      - INTER_INTERVAL=2500
+      - INTER_INTERVAL=2000
       - PROCESSOR_URL=http://payment-processor-default:8080
       - FALLBACK_PROCESSOR_URL=http://payment-processor-fallback:8080
       - OTHER_INSTANCE_URL=http://app1:8080
@@ -41,7 +41,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.3"
+          cpus: "0.5"
           memory: "64MB"
 
   haproxy:
@@ -60,7 +60,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.3"
+          cpus: "0.5"
           memory: "222MB"
 volumes:
   sockets:
