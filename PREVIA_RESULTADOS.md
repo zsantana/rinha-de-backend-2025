@@ -1,12 +1,14 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Wed Aug 13 16:41:12 UTC 2025**
-339 submissões / 278 resultados / 61 submissões com erro
+Atualizado em **Wed Aug 13 16:52:48 UTC 2025**
+343 submissões / 282 resultados / 61 submissões com erro
 
 
 | participante | p99 | bônus por desempenho (%) | multa ($) | lucro | submissão |
 | -- | -- | -- | -- | -- | -- |
+|	4emcos-bun-lb	|	2.22ms	|	18%	|	0	|	373478.8618000325	|	[4emcos-bun-lb](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/4emcos-bun-lb)
 |	4emcos-bun	|	1.55ms	|	19%	|	0	|	376733.92470003286	|	[4emcos-bun](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/4emcos-bun)
 |	4emcos-golang	|	4.03ms	|	14%	|	0	|	304137.5904	|	[4emcos-golang](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/4emcos-golang)
+|	DouglasMorais-java	|	2.88ms	|	16%	|	0	|	362058.6896	|	[DouglasMorais-java](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/DouglasMorais-java)
 |	MathausCarvalhoNode	|	2.42ms	|	17%	|	0	|	365654.8584	|	[MathausCarvalhoNode](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/MathausCarvalhoNode)
 |	Maxel-Uds-quarkus-java-21	|	5.4ms	|	11%	|	0	|	351091.4016	|	[Maxel-Uds-quarkus-java-21](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/Maxel-Uds-quarkus-java-21)
 |	Maxel-Uds-quarkus	|	2.12ms	|	18%	|	0	|	373346.1885	|	[Maxel-Uds-quarkus](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/Maxel-Uds-quarkus)
@@ -37,6 +39,7 @@ Atualizado em **Wed Aug 13 16:41:12 UTC 2025**
 |	boaglio-player456	|	4.41ms	|	13%	|	110737.924675	|	246787.37499	|	[boaglio-player456](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/boaglio-player456)
 |	brecabral-go	|	90.32ms	|	0%	|	27548.31625	|	51161.15875	|	[brecabral-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/brecabral-go)
 |	breno5g	|	3.89ms	|	14%	|	0	|	339102.3879	|	[breno5g](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/breno5g)
+|	brunokiau-jvm	|	785.57ms	|	0%	|	0	|	302111.85	|	[brunokiau-jvm](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/brunokiau-jvm)
 |	brunosilvadev	|	564.45ms	|	0%	|	44652.26675	|	82925.63825	|	[brunosilvadev](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/brunosilvadev)
 |	caiodgallo-go	|	9.93ms	|	2%	|	0	|	322972.6419	|	[caiodgallo-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/caiodgallo-go)
 |	caiqueborges-quarkus	|	3.23ms	|	16%	|	0	|	360877.943	|	[caiqueborges-quarkus](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/caiqueborges-quarkus)
@@ -55,6 +58,7 @@ Atualizado em **Wed Aug 13 16:41:12 UTC 2025**
 |	chriscorrales	|	50.97ms	|	0%	|	0	|	310550.445	|	[chriscorrales](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/chriscorrales)
 |	codevsk-go-1	|	2.27ms	|	17%	|	0	|	364841.11755	|	[codevsk-go-1](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/codevsk-go-1)
 |	cristian-s-bun-go-1	|	52.47ms	|	0%	|	0	|	173192.685	|	[cristian-s-bun-go-1](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/cristian-s-bun-go-1)
+|	danielsuhett-golang-2	|	20.36ms	|	0%	|	0	|	313180.23	|	[danielsuhett-golang-2](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/danielsuhett-golang-2)
 |	danielsuhett-golang	|	1.73ms	|	19%	|	0	|	376688.9308	|	[danielsuhett-golang](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/danielsuhett-golang)
 |	danielsuhett-nestjs	|	53.4ms	|	0%	|	0	|	311284.755	|	[danielsuhett-nestjs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/danielsuhett-nestjs)
 |	daniilha-php	|	4.17ms	|	14%	|	0	|	352800.1947	|	[daniilha-php](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/daniilha-php)
