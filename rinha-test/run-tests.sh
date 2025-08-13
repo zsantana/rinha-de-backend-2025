@@ -29,7 +29,7 @@ stopContainers() {
 MAX_REQUESTS=550
 
 start=$(date +%s)
-max_seconds=$((5 * 1))
+max_seconds=$((20 * 60 * 60)) # 20 minutos
 
 while true; do
 
@@ -37,11 +37,12 @@ while true; do
     (
         _now=$(date +%s)
         diff=$(($_now - $start))
-        
-        echo "$diff seconds passed (out of $max_seconds)"
-        
+
+        echo "$diff/$max_seconds seconds passed"
+
         if [ $diff -ge $max_seconds ]; then
-            echo "sudo shutdown now"
+            sudo shutdown now
+            kill -9 $$
             exit 0
         fi
 
