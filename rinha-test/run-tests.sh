@@ -41,7 +41,7 @@ while true; do
         echo "Execution nº $execution of $max_executions_before_shutdown."
         
         if [ $execution -ge $max_executions_before_shutdown ]; then
-            sudo shutdown now
+            echo "sudo shutdown now"
             exit 0
         fi
 
