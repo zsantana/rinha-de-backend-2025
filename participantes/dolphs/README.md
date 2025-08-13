@@ -5,11 +5,10 @@ A backend project for the Rinha de Backend 2025 challenge.
 ## 🛠️ Stack
 
 - Java 21 (GraalVM) Native build
-- Quarkus 3.25.0 (**Reactive**)
+- Quarkus 3.25.0 (Reactive/Native)
 - Redis (Reactive Client)
 - HAProxy
 - Maven
-- Docker & Docker Compose
 
 ## 📦 Project Structure
 

@@ -10,11 +10,10 @@ Lapidado com o que coloca o leite na mesa das criança:
 ## Como é a solução?
 ![Diagrama da Solução](solution.png)
 
-Resumão do resumão: fiz um semáforo que indica se pode ou não passar requisições pro default ou fallback do payment processor. Caso nenhum dos dois estejam disponíveis, joga pra fila que tem um retry de 20x, 1 a cada 1 segundo, ou seja, vai na força do ódio. Ainda vou olhar com carinho pro bonus do p99.
+Fiz um semáforo que indica se pode ou não passar requisições pro default ou fallback do payment processor. Peguei essa implementação de Channel para fila em memória do .NET aqui e ajeitando pra esse desafio:
+https://learn.microsoft.com/pt-br/aspnet/core/fundamentals/host/hosted-services?view=aspnetcore-9.0&tabs=visual-studio#:~:text=AddScoped%3CIScopedProcessingService%2C%20ScopedProcessingService%3E()%3B-,Tarefas%20em%20segundo%20plano%20na%20fila,-Uma%20fila%20de
 
-*mas isso pode mudar até a data de entrega, estou testando se mantenho o rabbit
-
-## Como executar? Precisa de muito não, só mandar um enter no:
+## Como executar?
 ```docker-compose up -d```
 
 E boa pa nois.

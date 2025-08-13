@@ -1,6 +1,6 @@
 x-service-templates:
   api: &api
-    image: flads/rinha25-php-api
+    image: flads/rinha25-php-api:0.1.0
     networks:
       - php-network
       - payment-processor
@@ -10,7 +10,7 @@ x-service-templates:
           cpus: "0.25"
           memory: "50MB"
   worker: &worker
-    image: flads/rinha25-php-worker:0.1.0
+    image: flads/rinha25-php-worker:0.1.1
     container_name: worker
     networks:
       - php-network
@@ -21,7 +21,7 @@ x-service-templates:
     deploy:
       resources:
         limits:
-          cpus: "0.20"
+          cpus: "0.30"
           memory: "102.5MB"
 
 services:
@@ -71,7 +71,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.45"
+          cpus: "0.25"
           memory: "30MB"
 
 networks:

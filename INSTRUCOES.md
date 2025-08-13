@@ -7,7 +7,7 @@ Sua equipe e/ou você precisa desenvolver um backend que intermedie solicitaçõ
 
 Para cada pagamento intermediado, uma taxa financeira é cobrada. Por exemplo, com uma taxa de 5% para uma solicitação de pagamento de \$100,00; você seria cobrado \$5,00 e ficaria com $95,00.
 
-Entretando, como a vida de verdade é dura, esse serviço irá sofrer instabilidades. Os tempos de resposta dele poderá ficar muito alto e poderá até começar a ficar indisponível respodendo com erros HTTP 500. E como sabemos que a vida é dura, nós nos preparamos para essas coisas e criamos um plano B. O plano B, é que existe um segundo serviço Payment Processor.
+Entretanto, como a vida de verdade é dura, esse serviço irá sofrer instabilidades. Os tempos de resposta dele poderá ficar muito alto e poderá até começar a ficar indisponível respondendo com erros HTTP 500. E como sabemos que a vida é dura, nós nos preparamos para essas coisas e criamos um plano B. O plano B, é que existe um segundo serviço Payment Processor.
 
 ![diagrama](misc/imgs/instrucoes/image-02.png)
 

@@ -1,6 +1,6 @@
 x-service-templates:
   go-backend: &go-backend
-    image: davidalecrim1/rinha-with-go-2025:v0.9-redis
+    image: davidalecrim1/rinha-with-go-2025:v0.12-redis
     networks:
       - app
       - payment-processor
@@ -18,10 +18,12 @@ services:
       - REDIS_ADDR=redis-db:6379
       - MONITOR_HEALTH=true
       - ENABLE_PROFILING=false
+      - WORKERS=20
+      - RETRY_QUEUE_SIZE=6000
     deploy:
       resources:
         limits:
-          cpus: "0.5"
+          cpus: "0.45"
           memory: "100MB"
 
   go-backend-2:
@@ -34,10 +36,12 @@ services:
       - REDIS_ADDR=redis-db:6379
       - MONITOR_HEALTH=false
       - ENABLE_PROFILING=false
+      - WORKERS=20
+      - RETRY_QUEUE_SIZE=6000
     deploy:
       resources:
         limits:
-          cpus: "0.5"
+          cpus: "0.45"
           memory: "100MB"
 
   redis:
@@ -47,11 +51,6 @@ services:
     networks:
       - app
       - payment-processor
-    healthcheck:
-      test: ["CMD", "redis-cli", "ping"]
-      interval: 5s
-      timeout: 5s
-      retries: 5
     deploy:
       resources:
         limits:
@@ -73,7 +72,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.2"
+          cpus: "0.3"
           memory: "50MB"
 
 networks:

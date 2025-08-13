@@ -1,12 +1,12 @@
 services:
   api1:
-    image: jrblatt/rinha-de-backend-2025-nodejs
+    image: jrblatt/rinha-de-backend-2025-nodejs:1
     container_name: api1
     hostname: api1
     environment:
-      - SOCKET_PATH=/tmp/api1.sock
-      - FOREIGN_STATE=api2
       - MODE=🔥
+      - WORKERS=1
+      - EXTERNAL_SUMMARY_HOSTNAME=api2
     volumes:
       - rb2025:/tmp/
     networks:
@@ -19,13 +19,13 @@ services:
           memory: 155MB
 
   api2:
-    image: jrblatt/rinha-de-backend-2025-nodejs
+    image: jrblatt/rinha-de-backend-2025-nodejs:1
     container_name: api2
     hostname: api2
     environment:
-      - SOCKET_PATH=/tmp/api2.sock
-      - FOREIGN_STATE=api1
       - MODE=🔥
+      - WORKERS=1
+      - EXTERNAL_SUMMARY_HOSTNAME=api1
     volumes:
       - rb2025:/tmp/
     networks:
@@ -43,7 +43,7 @@ services:
     ports:
       - "9999:9999"
     volumes:
-      - ./nginx.conf:/usr/local/openresty/nginx/conf/nginx.conf:ro
+      - ./nginx.conf:/usr/local/openresty/nginx/conf/nginx.conf
       - rb2025:/tmp/
     depends_on:
       - api1
