@@ -1,6 +1,6 @@
 x-service-templates:
   base: &base
-    image: ghcr.io/leorcvargas/rinha-de-backend-2025-elixir:20250812005006
+    image: ghcr.io/leorcvargas/rinha-de-backend-2025-elixir:20250813010132
     volumes:
       - sockets:/tmp/rinhex/:rw
     networks:
@@ -82,4 +82,3 @@ networks:
     external: true
   rinhex:
     driver: bridge
-
