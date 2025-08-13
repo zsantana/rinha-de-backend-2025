@@ -32,7 +32,7 @@ while true; do
 
     # docker system prune -a -f --volumes
     execution=1
-    max_executions_before_shutdown=20
+    max_executions_before_shutdown=15
 
     for directory in ../participantes/*; do
     (
@@ -40,7 +40,7 @@ while true; do
         
         echo "Execution nº $execution of $max_executions_before_shutdown."
         
-        if [ $max_executions_before_shutdown -ge $execution ]; then
+        if [ $execution -ge $max_executions_before_shutdown ]; then
             sudo shutdown now
             exit 0
         fi
