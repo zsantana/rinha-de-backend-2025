@@ -1,15 +1,15 @@
 x-template-api:
   base: &base
-    image: feusertuxx/rinha-backend-2025:shellapi
+    image: shellapi
     environment:
       - ASPNETCORE_ENVIRONMENT=Production
-      - ASPNETCORE_URLS=http://+:8080
+      - ASPNETCORE_URLS=http://+:8080;http://+:8081
       - DOTNET_RUNNING_IN_CONTAINER=true
       - DEFAULT_PAYMENT_PROCESSOR_URI=http://payment-processor-default:8080/payments
       - FALLBACK_PAYMENT_PROCESSOR_URI=http://payment-processor-fallback:8080/payments
       - HEALTH_CHECK_PATH=/service-health
       - SOCK_PATH=/tmp/shell.sock
-      - BATCH_SIZE=45
+      - BATCH_SIZE=15
       - WOKERS_COUNT=1
     depends_on:
       - socket
@@ -19,7 +19,13 @@ x-template-api:
       - rinha
       - payment-processor
     healthcheck:
-      test: ["CMD", "curl", "--fail", "--silent", "--show-error", "http://localhost:8080/health"]
+      test:
+        - CMD
+        - curl
+        - --fail
+        - --silent
+        - --show-error
+        - http://localhost:8080/health
       interval: 3s
       timeout: 5s
       retries: 3
@@ -27,40 +33,40 @@ x-template-api:
     deploy:
       resources:
         limits:
-          cpus: '0.5'
+          cpus: '0.45'
           memory: 100MB
-
 services:
-  haproxy:
-    image: haproxy:3.2.3-alpine
-    container_name: haproxy-lb
-    ports:
-      - 9999:80
+  nginx:
+    image: nginx:1.29.0-alpine
+    hostname: lb
+    container_name: lb
     volumes:
-      - ./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
-    networks:
-      - rinha
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
     depends_on:
       - api1
       - api2
+    ports:
+      - "9999:80"
+    networks:
+      - rinha
     deploy:
       resources:
         limits:
-          cpus: "0.3"
+          cpus: "0.5"
           memory: "50MB"
-
+            
   api1:
-    <<: *base
+    <<: *base   
     hostname: api1
-    container_name: api1    
+    container_name: api1
 
   api2:
-    <<: *base
+    <<: *base   
     hostname: api2
     container_name: api2
 
   socket:
-    image: feusertuxx/rinha-backend-2025:shellsocket
+    image: shellsocket
     container_name: socket
     hostname: socket
     volumes:
@@ -70,12 +76,11 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '0.2'
-          memory: 100MB
+          cpus: '0.1'
+          memory: 50MB
 
 volumes:
   socket:
-
 networks:
   rinha:
     driver: bridge
