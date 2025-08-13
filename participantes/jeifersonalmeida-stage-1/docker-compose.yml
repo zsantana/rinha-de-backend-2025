@@ -22,6 +22,7 @@ services:
   api-1:
     image: jeiferson/rinha-backend-2025:latest-amd64
     container_name: api-1
+    pull_policy: always
     environment:
       - MASTER=true
       - NUM_WORKERS=20
@@ -44,6 +45,7 @@ services:
   api-2:
     image: jeiferson/rinha-backend-2025:latest-amd64
     container_name: api-2
+    pull_policy: always
     environment:
       - MASTER=false
       - NUM_WORKERS=20
