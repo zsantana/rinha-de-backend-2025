@@ -1,6 +1,6 @@
 x-service-templates:
   base: &base
-    image: ghcr.io/leorcvargas/rinha-de-backend-2025-elixir:20250812005006
+    image: ghcr.io/leorcvargas/rinha-de-backend-2025-elixir:20250813145517
     volumes:
       - sockets:/tmp/rinhex/:rw
     networks:
@@ -33,7 +33,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.35"
+          cpus: "0.3"
           memory: "107MB"
     environment:
       APPLICATION_MODE: "api"
@@ -49,7 +49,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.35"
+          cpus: "0.3"
           memory: "107MB"
     environment:
       APPLICATION_MODE: "api"
@@ -65,7 +65,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.4"
+          cpus: "0.5"
           memory: "107MB"
     environment:
       APPLICATION_MODE: "worker"
@@ -82,4 +82,3 @@ networks:
     external: true
   rinhex:
     driver: bridge
-
