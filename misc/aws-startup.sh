@@ -13,4 +13,6 @@ tmux send-keys -t "$SESSION_NAME:test" './run-tests.sh' C-m
 
 tmux new-window -t "$SESSION_NAME" -n 'editor'
 tmux split-window -h 'cd participantes'
+tmux send-keys -t "$SESSION_NAME:editor" 'cd participantes' C-m
 tmux send-keys -t "$SESSION_NAME:editor" 'ls | wc -l' C-m
+tmux send-keys -t "$SESSION_NAME:editor" 'ls */partial-results.json | wc -l' C-m
