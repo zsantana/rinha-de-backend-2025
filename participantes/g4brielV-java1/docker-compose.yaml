@@ -46,7 +46,7 @@ services:
       resources:
         limits:
           cpus: "0.5"
-          memory: "135MB"
+          memory: "140MB"
 
   api2:
     image: g4brielv/rinha-backend-2025:standard
@@ -74,7 +74,7 @@ services:
       resources:
         limits:
           cpus: "0.5"
-          memory: "135MB"
+          memory: "140MB"
 
   postgresql-rinha:
     image: postgres:16-alpine
@@ -97,7 +97,7 @@ services:
       resources:
         limits:
           cpus: "0.4"
-          memory: "70MB"
+          memory: "60MB"
 
 volumes:
   pgdata:
