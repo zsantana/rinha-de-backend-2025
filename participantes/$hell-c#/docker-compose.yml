@@ -1,6 +1,6 @@
 x-template-api:
   base: &base
-    image: shellapi
+    image: feusertuxx/rinha-backend-2025:shellapi-v2
     environment:
       - ASPNETCORE_ENVIRONMENT=Production
       - ASPNETCORE_URLS=http://+:8080;http://+:8081
@@ -9,7 +9,7 @@ x-template-api:
       - FALLBACK_PAYMENT_PROCESSOR_URI=http://payment-processor-fallback:8080/payments
       - HEALTH_CHECK_PATH=/service-health
       - SOCK_PATH=/tmp/shell.sock
-      - BATCH_SIZE=15
+      - BATCH_SIZE=14
       - WOKERS_COUNT=1
     depends_on:
       - socket
@@ -33,7 +33,7 @@ x-template-api:
     deploy:
       resources:
         limits:
-          cpus: '0.45'
+          cpus: '0.5'
           memory: 100MB
 services:
   nginx:
@@ -52,7 +52,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.5"
+          cpus: "0.4"
           memory: "50MB"
             
   api1:
@@ -66,7 +66,7 @@ services:
     container_name: api2
 
   socket:
-    image: shellsocket
+    image: feusertuxx/rinha-backend-2025:shellsocket-v2
     container_name: socket
     hostname: socket
     volumes:
