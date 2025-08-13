@@ -24,7 +24,6 @@ services:
     environment:
       REDIS_CONN: valkey
       PROVIDERS: "http://payment-processor-default:8080,http://payment-processor-fallback:8080"
-      PROCESSOR_QTT: 1
       PROCESSOR_TIME: 50
     depends_on:
       - valkey
@@ -39,7 +38,6 @@ services:
     container_name: api2
     environment:
       REDIS_CONN: valkey
-      PROVIDERS:
     deploy:
       resources:
         limits:
