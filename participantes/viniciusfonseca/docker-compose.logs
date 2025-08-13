@@ -560,3 +560,84 @@
  Container viniciusfonseca-nginx-1  Creating
  Container viniciusfonseca-nginx-1  Created
 Attaching to api01-1, api02-1, nginx-1, postgres-1, worker-1
+postgres-1  | The files belonging to this database system will be owned by user "postgres".
+postgres-1  | This user must also own the server process.
+postgres-1  | 
+postgres-1  | The database cluster will be initialized with locale "C.UTF-8".
+postgres-1  | The default database encoding has accordingly been set to "UTF8".
+postgres-1  | The default text search configuration will be set to "english".
+postgres-1  | 
+postgres-1  | Data page checksums are disabled.
+postgres-1  | 
+postgres-1  | fixing permissions on existing directory /home/postgres/pgdata/data ... ok
+postgres-1  | creating subdirectories ... ok
+postgres-1  | selecting dynamic shared memory implementation ... posix
+postgres-1  | selecting default "max_connections" ... 100
+postgres-1  | selecting default "shared_buffers" ... 128MB
+postgres-1  | selecting default time zone ... Etc/UTC
+postgres-1  | creating configuration files ... ok
+postgres-1  | running bootstrap script ... ok
+postgres-1  | performing post-bootstrap initialization ... ok
+postgres-1  | initdb: warning: enabling "trust" authentication for local connections
+postgres-1  | initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
+postgres-1  | syncing data to disk ... ok
+postgres-1  | 
+postgres-1  | 
+postgres-1  | Success. You can now start the database server using:
+postgres-1  | 
+postgres-1  |     pg_ctl -D /home/postgres/pgdata/data -l logfile start
+postgres-1  | 
+postgres-1  | waiting for server to start....2025-08-13 08:15:02.811 GMT [38] LOG:  00000: starting PostgreSQL 17.5 (Ubuntu 17.5-1.pgdg22.04+1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0, 64-bit
+postgres-1  | 2025-08-13 08:15:02.811 GMT [38] LOCATION:  PostmasterMain, postmaster.c:1080
+postgres-1  | 2025-08-13 08:15:02.814 GMT [38] LOG:  00000: listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+postgres-1  | 2025-08-13 08:15:02.814 GMT [38] LOCATION:  ListenServerPort, pqcomm.c:657
+postgres-1  | 2025-08-13 08:15:02.826 GMT [41] LOG:  00000: database system was shut down at 2025-08-13 08:15:00 GMT
+postgres-1  | 2025-08-13 08:15:02.826 GMT [41] LOCATION:  StartupXLOG, xlog.c:5445
+postgres-1  | 2025-08-13 08:15:02.838 GMT [38] LOG:  00000: database system is ready to accept connections
+postgres-1  | 2025-08-13 08:15:02.838 GMT [38] LOCATION:  process_pm_child_exit, postmaster.c:2484
+postgres-1  | 2025-08-13 08:15:02.839 GMT [44] LOG:  00000: TimescaleDB background worker launcher connected to shared catalogs
+postgres-1  | 2025-08-13 08:15:02.839 GMT [44] LOCATION:  ts_bgw_cluster_launcher_main, bgw_launcher.c:851
+postgres-1  |  done
+postgres-1  | server started
+postgres-1  | CREATE DATABASE
+postgres-1  | 
+postgres-1  | 
+postgres-1  | /docker-entrypoint.sh: sourcing /docker-entrypoint-initdb.d/000_install_timescaledb.sh
+postgres-1  | CREATE EXTENSION
+postgres-1  | CREATE EXTENSION
+postgres-1  | 2025-08-13 08:15:03.716 GMT [62] ERROR:  XX000: background worker "TimescaleDB Background Worker Scheduler for database 1" trying to connect to template database, exiting
+postgres-1  | 2025-08-13 08:15:03.716 GMT [62] LOCATION:  database_checks, bgw_launcher.c:940
+postgres-1  | CREATE EXTENSION
+postgres-1  | 
+postgres-1  | /docker-entrypoint.sh: running /docker-entrypoint-initdb.d/001_timescaledb_tune.sh
+postgres-1  | [37;1mUsing postgresql.conf at this path:
+postgres-1  | [0m/home/postgres/pgdata/data/postgresql.conf
+postgres-1  | 
+postgres-1  | [37;1mWriting backup to:
+postgres-1  | [0m/tmp/timescaledb_tune.backup202508130815
+postgres-1  | 
+postgres-1  | [37;1mRecommendations based on 210.00 MB of available memory and 1 CPUs for PostgreSQL 17
+postgres-1  | shared_buffers = 53760kB
+postgres-1  | effective_cache_size = 161280kB
+postgres-1  | maintenance_work_mem = 26880kB
+postgres-1  | work_mem = 1075kB
+postgres-1  | wal_buffers = 1612kB
+postgres-1  | min_wal_size = 512MB
+postgres-1  | default_statistics_target = 100
+postgres-1  | random_page_cost = 1.1
+postgres-1  | checkpoint_completion_target = 0.9
+postgres-1  | max_connections = 25
+postgres-1  | max_locks_per_transaction = 128
+postgres-1  | autovacuum_max_workers = 10
+postgres-1  | autovacuum_naptime = 10
+postgres-1  | default_toast_compression = lz4
+postgres-1  | jit = off
+postgres-1  | effective_io_concurrency = 256
+postgres-1  | timescaledb.last_tuned = '2025-08-13T08:15:04Z'
+postgres-1  | timescaledb.last_tuned_version = '0.18.0'
+postgres-1  | [0m[37;1mSaving changes to: /home/postgres/pgdata/data/postgresql.conf
+postgres-1  | 
+postgres-1  | /docker-entrypoint.sh: running /docker-entrypoint-initdb.d/010_install_timescaledb_toolkit.sh
+postgres-1  | [0m/docker-entrypoint-initdb.d/010_install_timescaledb_toolkit.sh: line 5: [: 17}: integer expression expected
+postgres-1  | CREATE EXTENSION
+Error response from daemon: failed to set up container networking: network payment-processor not found
