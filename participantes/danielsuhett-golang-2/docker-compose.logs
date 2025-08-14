@@ -1,0 +1,174 @@
+
+ api2 Pulling 
+ api1 Pulling 
+ 9824c27679d3 Already exists 
+ b2a86d9dadfb Already exists 
+ 37dd80ecb604 Already exists 
+ c8cfb653d52c Pulling fs layer 
+ a1716e6e463e Pulling fs layer 
+ 9824c27679d3 Already exists 
+ b2a86d9dadfb Already exists 
+ 37dd80ecb604 Already exists 
+ c8cfb653d52c Pulling fs layer 
+ a1716e6e463e Pulling fs layer 
+ a1716e6e463e Downloading [>                                                  ]  50.72kB/4.792MB
+ a1716e6e463e Downloading [>                                                  ]  50.72kB/4.792MB
+ c8cfb653d52c Downloading [>                                                  ]  50.72kB/4.792MB
+ c8cfb653d52c Downloading [>                                                  ]  50.72kB/4.792MB
+ a1716e6e463e Verifying Checksum 
+ a1716e6e463e Download complete 
+ a1716e6e463e Verifying Checksum 
+ a1716e6e463e Download complete 
+ c8cfb653d52c Verifying Checksum 
+ c8cfb653d52c Download complete 
+ c8cfb653d52c Download complete 
+ c8cfb653d52c Extracting [>                                                  ]  65.54kB/4.792MB
+ c8cfb653d52c Extracting [>                                                  ]  65.54kB/4.792MB
+ c8cfb653d52c Extracting [==================================================>]  4.792MB/4.792MB
+ c8cfb653d52c Extracting [==================================================>]  4.792MB/4.792MB
+ c8cfb653d52c Pull complete 
+ c8cfb653d52c Pull complete 
+ a1716e6e463e Extracting [>                                                  ]  65.54kB/4.792MB
+ a1716e6e463e Extracting [>                                                  ]  65.54kB/4.792MB
+ a1716e6e463e Extracting [==================================================>]  4.792MB/4.792MB
+ a1716e6e463e Extracting [==================================================>]  4.792MB/4.792MB
+ a1716e6e463e Pull complete 
+ a1716e6e463e Pull complete 
+ api1 Pulled 
+ api2 Pulled 
+ Network danielsuhett-golang-2_backend  Creating
+ Network danielsuhett-golang-2_backend  Created
+ Volume "danielsuhett-golang-2_sockets"  Creating
+ Volume "danielsuhett-golang-2_sockets"  Created
+ Container go-rinha-redis  Creating
+ Container go-rinha-redis  Created
+ Container danielsuhett-golang-2-api1-1  Creating
+ Container danielsuhett-golang-2-api2-1  Creating
+ Container danielsuhett-golang-2-api1-1  Created
+ Container danielsuhett-golang-2-api2-1  Created
+ Container go-rinha-nginx  Creating
+ Container go-rinha-nginx  Created
+Attaching to api1-1, api2-1, go-rinha-nginx, go-rinha-redis
+go-rinha-redis  | 1:C 14 Aug 2025 03:59:13.836 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+go-rinha-redis  | 1:C 14 Aug 2025 03:59:13.837 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+go-rinha-redis  | 1:C 14 Aug 2025 03:59:13.837 * Valkey version=7.2.10, bits=64, commit=00000000, modified=0, pid=1, just started
+go-rinha-redis  | 1:C 14 Aug 2025 03:59:13.837 * Configuration loaded
+go-rinha-redis  | 1:M 14 Aug 2025 03:59:13.837 * monotonic clock: POSIX clock_gettime
+go-rinha-redis  | 1:M 14 Aug 2025 03:59:13.837 * Running mode=standalone, port=6379.
+go-rinha-redis  | 1:M 14 Aug 2025 03:59:13.838 * Server initialized
+go-rinha-redis  | 1:M 14 Aug 2025 03:59:13.838 * Ready to accept connections tcp
+api1-1          | 2025/08/14 03:59:29 [PERF]: Add took: 20.121µs
+api2-1          | 2025/08/14 03:59:30 [PERF]: Add took: 23.901µs
+api1-1          | 2025/08/14 03:59:32 [PERF]: Add took: 27.391µs
+api1-1          | 2025/08/14 03:59:32 [PERF]: Add took: 29.731µs
+api1-1          | 2025/08/14 03:59:35 [PERF]: Add took: 23.981µs
+api2-1          | 2025/08/14 03:59:39 [PERF]: Add took: 27.451µs
+api2-1          | 2025/08/14 03:59:47 Non-success status 500 from processor default
+api2-1          | 2025/08/14 03:59:47 Signal failure for default
+api2-1          | 2025/08/14 03:59:47 Circuit breaker color changed from GREEN to RED
+api1-1          | 2025/08/14 03:59:47 Non-success status 500 from processor default
+api1-1          | 2025/08/14 03:59:47 Signal failure for default
+api1-1          | 2025/08/14 03:59:47 Circuit breaker color changed from GREEN to RED
+api2-1          | 2025/08/14 03:59:47 Received color change: RED
+api2-1          | 2025/08/14 03:59:48 [PERF]: Add took: 25.141µs
+api2-1          | 2025/08/14 03:59:50 [PERF]: Add took: 21.941µs
+api1-1          | 2025/08/14 03:59:52 [PERF]: Add took: 24.171µs
+api2-1          | 2025/08/14 04:00:02 [PERF]: Add took: 26.791µs
+api1-1          | 2025/08/14 04:00:03 [PERF]: Add took: 21.141µs
+api1-1          | 2025/08/14 04:00:03 [PERF]: Add took: 21.241µs
+api2-1          | 2025/08/14 04:00:04 [PERF]: Add took: 30.101µs
+api2-1          | 2025/08/14 04:00:04 [PERF]: Add took: 21.25µs
+api1-1          | 2025/08/14 04:00:04 [PERF]: Add took: 29.061µs
+api1-1          | 2025/08/14 04:00:05 [PERF]: Add took: 21.96µs
+api2-1          | 2025/08/14 04:00:05 [PERF]: Add took: 40.642µs
+api1-1          | 2025/08/14 04:00:05 [PERF]: Add took: 28.621µs
+api1-1          | 2025/08/14 04:00:05 [PERF]: Add took: 27.661µs
+api2-1          | 2025/08/14 04:00:05 [PERF]: Add took: 20.231µs
+api1-1          | 2025/08/14 04:00:06 [PERF]: Add took: 21.161µs
+api1-1          | 2025/08/14 04:00:06 [PERF]: Add took: 45.652µs
+api2-1          | 2025/08/14 04:00:07 [PERF]: Add took: 20.921µs
+api2-1          | 2025/08/14 04:00:08 [PERF]: Add took: 37.182µs
+api2-1          | 2025/08/14 04:00:08 [PERF]: Add took: 39.971µs
+api1-1          | 2025/08/14 04:00:08 [PERF]: Add took: 39.762µs
+api2-1          | 2025/08/14 04:00:08 [PERF]: Add took: 107.164µs
+api1-1          | 2025/08/14 04:00:08 [PERF]: Add took: 30.351µs
+api1-1          | 2025/08/14 04:00:08 [PERF]: Add took: 20.341µs
+api1-1          | 2025/08/14 04:00:09 [PERF]: Add took: 35.361µs
+api2-1          | 2025/08/14 04:00:09 [PERF]: Add took: 20.69µs
+api1-1          | 2025/08/14 04:00:09 [PERF]: Add took: 22.511µs
+api1-1          | 2025/08/14 04:00:09 [PERF]: Add took: 20.201µs
+api2-1          | 2025/08/14 04:00:10 [PERF]: Add took: 20.261µs
+api1-1          | 2025/08/14 04:00:10 [PERF]: Add took: 37.081µs
+api1-1          | 2025/08/14 04:00:10 [PERF]: Add took: 22.661µs
+api1-1          | 2025/08/14 04:00:10 [PERF]: Add took: 21.84µs
+api1-1          | 2025/08/14 04:00:11 [PERF]: Add took: 23.101µs
+api2-1          | 2025/08/14 04:00:11 [PERF]: Add took: 23.631µs
+api1-1          | 2025/08/14 04:00:11 Circuit breaker color changed from RED to GREEN
+api2-1          | 2025/08/14 04:00:11 Received color change: GREEN
+api2-1          | 2025/08/14 04:00:12 [PERF]: Add took: 32.001µs
+api2-1          | 2025/08/14 04:00:12 [PERF]: Add took: 23.041µs
+api2-1          | 2025/08/14 04:00:13 [PERF]: Add took: 21.131µs
+api2-1          | 2025/08/14 04:00:14 [PERF]: Add took: 34.471µs
+api2-1          | 2025/08/14 04:00:14 [PERF]: Add took: 45.691µs
+api2-1          | 2025/08/14 04:00:14 [PERF]: Add took: 24.391µs
+api1-1          | 2025/08/14 04:00:15 [PERF]: Add took: 26.231µs
+api1-1          | 2025/08/14 04:00:16 [PERF]: Add took: 32.971µs
+api1-1          | 2025/08/14 04:00:17 [PERF]: Add took: 26.421µs
+api2-1          | 2025/08/14 04:00:17 [PERF]: Add took: 20.651µs
+api1-1          | 2025/08/14 04:00:17 [PERF]: Add took: 31.191µs
+api2-1          | 2025/08/14 04:00:18 [PERF]: Add took: 54.512µs
+api1-1          | 2025/08/14 04:00:18 [PERF]: Add took: 21.221µs
+api2-1          | 2025/08/14 04:00:18 [PERF]: Add took: 36.822µs
+api2-1          | 2025/08/14 04:00:18 [PERF]: Add took: 26.221µs
+api1-1          | 2025/08/14 04:00:18 [PERF]: Add took: 178.536µs
+api1-1          | 2025/08/14 04:00:19 [PERF]: Add took: 37.601µs
+api1-1          | 2025/08/14 04:00:19 [PERF]: Add took: 23.96µs
+api2-1          | 2025/08/14 04:00:19 [PERF]: Add took: 38.801µs
+api2-1          | 2025/08/14 04:00:19 [PERF]: Add took: 47.542µs
+api1-1          | 2025/08/14 04:00:20 [PERF]: Add took: 24.821µs
+api2-1          | 2025/08/14 04:00:20 [PERF]: Add took: 219.887µs
+api2-1          | 2025/08/14 04:00:20 [PERF]: Add took: 269.419µs
+api1-1          | 2025/08/14 04:00:20 [PERF]: Add took: 71.922µs
+api2-1          | 2025/08/14 04:00:21 [PERF]: Add took: 77.932µs
+api1-1          | 2025/08/14 04:00:21 [PERF]: Add took: 22.691µs
+api1-1          | 2025/08/14 04:00:21 [PERF]: Add took: 39.281µs
+api1-1          | 2025/08/14 04:00:21 [PERF]: Add took: 40.241µs
+api1-1          | 2025/08/14 04:00:21 [PERF]: Add took: 35.361µs
+api2-1          | 2025/08/14 04:00:21 [PERF]: Add took: 27.091µs
+api2-1          | 2025/08/14 04:00:21 [PERF]: Add took: 52.311µs
+api1-1          | 2025/08/14 04:00:21 [PERF]: Add took: 124.705µs
+api2-1          | 2025/08/14 04:00:22 [PERF]: Add took: 46.512µs
+api1-1          | 2025/08/14 04:00:23 [PERF]: Add took: 124.625µs
+api1-1          | 2025/08/14 04:00:23 [PERF]: Add took: 95.133µs
+api2-1          | 2025/08/14 04:00:23 [PERF]: Add took: 38.361µs
+api1-1          | 2025/08/14 04:00:23 [PERF]: Add took: 24.501µs
+api1-1          | 2025/08/14 04:00:23 [PERF]: Add took: 33.921µs
+api1-1          | 2025/08/14 04:00:23 [PERF]: Add took: 33.341µs
+api1-1          | 2025/08/14 04:00:24 [PERF]: Add took: 46.352µs
+api1-1          | 2025/08/14 04:00:24 [PERF]: Add took: 34.841µs
+api1-1          | 2025/08/14 04:00:24 [PERF]: Add took: 22.561µs
+api2-1          | 2025/08/14 04:00:24 [PERF]: Add took: 66.222µs
+api1-1          | 2025/08/14 04:00:25 [PERF]: Add took: 37.771µs
+api2-1          | 2025/08/14 04:00:25 [PERF]: Add took: 125.434µs
+api1-1          | 2025/08/14 04:00:25 [PERF]: Add took: 28.701µs
+api1-1          | 2025/08/14 04:00:25 [PERF]: Add took: 194.686µs
+api2-1          | 2025/08/14 04:00:25 [PERF]: Add took: 70.002µs
+api1-1          | 2025/08/14 04:00:26 [PERF]: Add took: 43.672µs
+api2-1          | 2025/08/14 04:00:26 [PERF]: Add took: 46.152µs
+api2-1          | 2025/08/14 04:00:26 [PERF]: Add took: 143.905µs
+api1-1          | 2025/08/14 04:00:26 [PERF]: Add took: 36.921µs
+api1-1          | 2025/08/14 04:00:26 [PERF]: Add took: 290.36µs
+api2-1          | 2025/08/14 04:00:26 [PERF]: Add took: 93.093µs
+api2-1          | 2025/08/14 04:00:26 [PERF]: Add took: 26.201µs
+api2-1          | 2025/08/14 04:00:27 [PERF]: Add took: 35.201µs
+api1-1          | 2025/08/14 04:00:27 [PERF]: Add took: 25.461µs
+api2-1          | 2025/08/14 04:00:27 [PERF]: Add took: 85.163µs
+api1-1          | 2025/08/14 04:00:27 [PERF]: Add took: 46.262µs
+api2-1          | 2025/08/14 04:00:27 [PERF]: Add took: 42.261µs
+[Kgo-rinha-nginx exited with code 0
+[Kapi2-1 exited with code 0
+[Kapi1-1 exited with code 0
+go-rinha-redis  | 1:signal-handler (1755144029) Received SIGTERM scheduling shutdown...
+go-rinha-redis  | 1:M 14 Aug 2025 04:00:29.611 * User requested shutdown...
+go-rinha-redis  | 1:M 14 Aug 2025 04:00:29.611 # Valkey is now ready to exit, bye bye...
+log truncated at line 1000
