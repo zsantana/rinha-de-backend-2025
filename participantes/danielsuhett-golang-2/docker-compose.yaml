@@ -39,6 +39,7 @@ services:
       - LATENCY_DIFF_TO_USE_FALLBACK=5000
       - BATCH_SIZE=10
       - GOGC=off
+      - GOMAXPROCS=1
     networks:
       - backend
       - payment-processor
@@ -48,7 +49,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.50"
+          cpus: "0.30"
           memory: "125MB"
   api2:
     # build:
@@ -67,10 +68,11 @@ services:
       - PROCESSOR_FALLBACK_URL=http://payment-processor-fallback:8080
       - POOLING_INTERVAL=100
       - HEALTH_TIMEOUT=1000
-      - HEALTH_INTERVAL=3000
+      - HEALTH_INTERVAL=6000
       - LATENCY_DIFF_TO_USE_FALLBACK=5000
       - BATCH_SIZE=10
       - GOGC=off
+      - GOMAXPROCS=1
     networks:
       - backend
       - payment-processor
@@ -80,7 +82,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.50"
+          cpus: "0.30"
           memory: "125MB"
   redis:
     image: valkey/valkey:7.2-alpine
