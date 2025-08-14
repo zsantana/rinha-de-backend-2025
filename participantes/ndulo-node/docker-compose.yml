@@ -1,8 +1,9 @@
-version: '3.8'
+version: "3.8"
 
 services:
   nginx:
-    build: ./nginx
+    user: root
+    image: eddiendulo/monitor-nginx
     ports:
       - "9999:9999"
     depends_on:
@@ -13,9 +14,14 @@ services:
       interval: 5s
       timeout: 2s
       retries: 3
+    deploy:
+      resources:
+        limits:
+          cpus: "0.3"
+          memory: "50MB"
 
   app1:
-    build: .
+    image: eddiendulo/monitor-app1
     environment:
       - NODE_ENV=production
       - PORT=3000
@@ -29,9 +35,14 @@ services:
       interval: 10s
       timeout: 3s
       retries: 3
+    deploy:
+      resources:
+        limits:
+          cpus: "0.5"
+          memory: "150MB"
 
   app2:
-    build: .
+    image: eddiendulo/monitor-app2
     environment:
       - NODE_ENV=production
       - PORT=3000
@@ -45,6 +56,11 @@ services:
       interval: 10s
       timeout: 3s
       retries: 3
+    deploy:
+      resources:
+        limits:
+          cpus: "0.5"
+          memory: "150MB"
 
   db:
     image: postgres:15-alpine
@@ -60,12 +76,11 @@ services:
       interval: 5s
       timeout: 5s
       retries: 5
+    deploy:
+      resources:
+        limits:
+          cpus: "0.2"
+          memory: "100MB"
 
 volumes:
   pg_data:
-
-networks:
-  default:
-    driver: bridge
-  payment-processor:
-    external: true
