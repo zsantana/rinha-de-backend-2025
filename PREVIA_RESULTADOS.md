@@ -1,6 +1,6 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Thu Aug 14 23:50:10 UTC 2025**
-367 submissões / 308 resultados / 59 submissões com erro
+Atualizado em **Thu Aug 14 23:57:27 UTC 2025**
+368 submissões / 309 resultados / 59 submissões com erro
 
 
 | participante | p99 | bônus por desempenho (%) | multa ($) | lucro | submissão |
@@ -62,6 +62,7 @@ Atualizado em **Thu Aug 14 23:50:10 UTC 2025**
 |	cgb-go-v1	|	37.63ms	|	0%	|	0	|	309203.215	|	[cgb-go-v1](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/cgb-go-v1)
 |	cgb-go-v2	|	4.87ms	|	12%	|	0	|	352149.2856	|	[cgb-go-v2](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/cgb-go-v2)
 |	chriscorrales	|	50.97ms	|	0%	|	0	|	310550.445	|	[chriscorrales](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/chriscorrales)
+|	cleissonbarbosa-lua	|	36.36ms	|	0%	|	0	|	0	|	[cleissonbarbosa-lua](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/cleissonbarbosa-lua)
 |	codevsk-go-1	|	2.27ms	|	17%	|	0	|	364841.11755	|	[codevsk-go-1](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/codevsk-go-1)
 |	cristian-s-bun-go-1	|	52.47ms	|	0%	|	0	|	173192.685	|	[cristian-s-bun-go-1](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/cristian-s-bun-go-1)
 |	cristian-s-node-1	|	26.69ms	|	0%	|	0	|	311641.95999997697	|	[cristian-s-node-1](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/cristian-s-node-1)
