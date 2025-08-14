@@ -20,7 +20,7 @@ services:
           memory: "70MB"
 
   api1: &api
-    image: enermaxx/rinha-standalone:1.0.11
+    image: enermaxx/rinha-standalone:1.0.12
     container_name: springboot-api1
     hostname: api1
     environment:
@@ -39,11 +39,7 @@ services:
     deploy:
       resources:
         limits:
-<<<<<<< Updated upstream
-          cpus: "0.50"
-=======
           cpus: "0.5"
->>>>>>> Stashed changes
           memory: "140MB"
 
   api2:
@@ -63,11 +59,7 @@ services:
     deploy:
       resources:
         limits:
-<<<<<<< Updated upstream
-          cpus: "0.50"
-=======
           cpus: "0.5"
->>>>>>> Stashed changes
           memory: "140MB"
 
 networks:
