@@ -1,6 +1,6 @@
 x-service-templates:
   backend: &backend
-    image: ghcr.io/yanpitangui/rinha-2025-01-api:20250803-1659
+    image: ghcr.io/yanpitangui/rinha-2025-01-api:20250814-2021
     deploy:
       resources:
         limits:
@@ -33,7 +33,7 @@ services:
     hostname: backend-2
     
   worker: 
-    image: ghcr.io/yanpitangui/rinha-2025-01-worker:20250803-1659
+    image: ghcr.io/yanpitangui/rinha-2025-01-worker:20250814-2021
     environment:
       - DOTNETCORE_ENVIRONMENT=Production
       - ASPNETCORE_ENVIRONMENT=Production
