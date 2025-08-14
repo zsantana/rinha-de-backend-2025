@@ -19,8 +19,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.10"
-          memory: "50MB"
+          cpus: "0.20"
+          memory: "250MB"
   zig1: &zig
     container_name: zig-pay-1
     image: uchoamp/zigpay:1.09-metrics
@@ -40,7 +40,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.10"
+          cpus: "0.20"
           memory: "50MB"
   zig2: 
     <<: *zig
