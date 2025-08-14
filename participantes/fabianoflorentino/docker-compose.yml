@@ -1,6 +1,6 @@
 x-service-templates:
   app: &app
-    image: fabianoflorentino/mr_robot:v0.0.3
+    image: fabianoflorentino/mr_robot:v0.0.4
     env_file: ./config/.env
     volumes:
       - ./config:/config
@@ -26,7 +26,7 @@ x-service-templates:
       resources:
         limits:
           cpus: "0.45"
-          memory: "50MB"
+          memory: "55MB"
 
   db: &db
     image: postgres:17.5-alpine3.22
@@ -53,7 +53,7 @@ x-service-templates:
       resources:
         limits:
           cpus: "0.50"
-          memory: "150MB"
+          memory: "180MB"
 
   lb: &lb
     image: haproxy:3.1.8-alpine3.22

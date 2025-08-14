@@ -3,8 +3,8 @@
  Network david-delta-sierra-go-lab_backend  Created
  Container david-delta-sierra-go-lab-postgres-1  Creating
  Container david-delta-sierra-go-lab-postgres-1  Created
- Container david-delta-sierra-go-lab-app-2-1  Creating
  Container david-delta-sierra-go-lab-app-1-1  Creating
+ Container david-delta-sierra-go-lab-app-2-1  Creating
  Container david-delta-sierra-go-lab-app-1-1  Created
  Container david-delta-sierra-go-lab-app-2-1  Created
  Container david-delta-sierra-go-lab-lb-1  Creating
@@ -27,14 +27,16 @@ postgres-1  | selecting default "max_connections" ... 100
 app-2-1     | init api
 app-1-1     | init api
 postgres-1  | selecting default "shared_buffers" ... 128MB
-postgres-1  | selecting default time zone ... UTC
-postgres-1  | creating configuration files ... ok
 lb-1        | Await app1 and app2...
 lb-1        | All ready! init NGINX...
+postgres-1  | selecting default time zone ... UTC
+postgres-1  | creating configuration files ... ok
 postgres-1  | running bootstrap script ... ok
 postgres-1  | sh: locale: not found
-postgres-1  | 2025-08-13 20:01:23.466 UTC [22] WARNING:  no usable system locales were found
+postgres-1  | 2025-08-13 23:21:17.973 UTC [22] WARNING:  no usable system locales were found
 postgres-1  | performing post-bootstrap initialization ... ok
+postgres-1  | initdb: warning: enabling "trust" authentication for local connections
+postgres-1  | initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
 postgres-1  | syncing data to disk ... ok
 postgres-1  | 
 postgres-1  | 
@@ -42,12 +44,10 @@ postgres-1  | Success. You can now start the database server using:
 postgres-1  | 
 postgres-1  |     pg_ctl -D /var/lib/postgresql/data -l logfile start
 postgres-1  | 
-postgres-1  | initdb: warning: enabling "trust" authentication for local connections
-postgres-1  | initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
-postgres-1  | waiting for server to start....2025-08-13 20:01:26.174 UTC [28] LOG:  starting PostgreSQL 17.5 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
-postgres-1  | 2025-08-13 20:01:26.177 UTC [28] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
-postgres-1  | 2025-08-13 20:01:26.189 UTC [31] LOG:  database system was shut down at 2025-08-13 20:01:25 UTC
-postgres-1  | 2025-08-13 20:01:26.255 UTC [28] LOG:  database system is ready to accept connections
+postgres-1  | waiting for server to start....2025-08-13 23:21:20.681 UTC [28] LOG:  starting PostgreSQL 17.5 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
+postgres-1  | 2025-08-13 23:21:20.684 UTC [28] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+postgres-1  | 2025-08-13 23:21:20.696 UTC [31] LOG:  database system was shut down at 2025-08-13 23:21:20 UTC
+postgres-1  | 2025-08-13 23:21:20.764 UTC [28] LOG:  database system is ready to accept connections
 postgres-1  |  done
 postgres-1  | server started
 postgres-1  | CREATE DATABASE
@@ -62,55 +62,48 @@ postgres-1  | ALTER SYSTEM
 postgres-1  | ALTER SYSTEM
 postgres-1  | ALTER SYSTEM
 postgres-1  | CREATE TABLE
-postgres-1  | CREATE TABLE
-postgres-1  | INSERT 0 2
-postgres-1  | CREATE INDEX
 postgres-1  | 
 postgres-1  | 
-postgres-1  | waiting for server to shut down....2025-08-13 20:01:26.773 UTC [28] LOG:  received fast shutdown request
-postgres-1  | 2025-08-13 20:01:26.777 UTC [28] LOG:  aborting any active transactions
-postgres-1  | 2025-08-13 20:01:26.854 UTC [28] LOG:  background worker "logical replication launcher" (PID 34) exited with exit code 1
-postgres-1  | 2025-08-13 20:01:26.856 UTC [29] LOG:  shutting down
-postgres-1  | 2025-08-13 20:01:26.859 UTC [29] LOG:  checkpoint starting: shutdown immediate
-postgres-1  | 2025-08-13 20:01:27.001 UTC [29] LOG:  checkpoint complete: wrote 933 buffers (5.7%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.099 s, sync=0.033 s, total=0.146 s; sync files=321, longest=0.004 s, average=0.001 s; distance=4290 kB, estimate=4290 kB; lsn=0/191DC50, redo lsn=0/191DC50
-postgres-1  | 2025-08-13 20:01:27.010 UTC [28] LOG:  database system is shut down
+postgres-1  | waiting for server to shut down....2025-08-13 23:21:21.302 UTC [28] LOG:  received fast shutdown request
+postgres-1  | 2025-08-13 23:21:21.305 UTC [28] LOG:  aborting any active transactions
+postgres-1  | 2025-08-13 23:21:21.359 UTC [28] LOG:  background worker "logical replication launcher" (PID 34) exited with exit code 1
+postgres-1  | 2025-08-13 23:21:21.360 UTC [29] LOG:  shutting down
+postgres-1  | 2025-08-13 23:21:21.363 UTC [29] LOG:  checkpoint starting: shutdown immediate
+postgres-1  | 2025-08-13 23:21:21.491 UTC [29] LOG:  checkpoint complete: wrote 930 buffers (5.7%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.099 s, sync=0.018 s, total=0.131 s; sync files=311, longest=0.004 s, average=0.001 s; distance=4274 kB, estimate=4274 kB; lsn=0/1919C78, redo lsn=0/1919C78
+postgres-1  | 2025-08-13 23:21:21.499 UTC [28] LOG:  database system is shut down
 postgres-1  |  done
 postgres-1  | server stopped
 postgres-1  | 
 postgres-1  | PostgreSQL init process complete; ready for start up.
 postgres-1  | 
-postgres-1  | 2025-08-13 20:01:27.156 UTC [1] LOG:  starting PostgreSQL 17.5 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
-postgres-1  | 2025-08-13 20:01:27.156 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
-postgres-1  | 2025-08-13 20:01:27.156 UTC [1] LOG:  listening on IPv6 address "::", port 5432
-postgres-1  | 2025-08-13 20:01:27.156 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
-postgres-1  | 2025-08-13 20:01:27.158 UTC [46] LOG:  database system was shut down at 2025-08-13 20:01:26 UTC
-postgres-1  | 2025-08-13 20:01:27.163 UTC [1] LOG:  database system is ready to accept connections
+postgres-1  | 2025-08-13 23:21:21.578 UTC [1] LOG:  starting PostgreSQL 17.5 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
+postgres-1  | 2025-08-13 23:21:21.578 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+postgres-1  | 2025-08-13 23:21:21.578 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+postgres-1  | 2025-08-13 23:21:21.578 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+postgres-1  | 2025-08-13 23:21:21.660 UTC [46] LOG:  database system was shut down at 2025-08-13 23:21:21 UTC
+postgres-1  | 2025-08-13 23:21:21.664 UTC [1] LOG:  database system is ready to accept connections
 [Klb-1 exited with code 137
 [Kapp-2-1 exited with code 2
 [Kapp-1-1 exited with code 2
-postgres-1  | 2025-08-13 20:02:48.754 UTC [1] LOG:  received fast shutdown request
-postgres-1  | 2025-08-13 20:02:48.754 UTC [1] LOG:  aborting any active transactions
-postgres-1  | 2025-08-13 20:02:48.756 UTC [74] FATAL:  terminating connection due to administrator command
-postgres-1  | 2025-08-13 20:02:48.758 UTC [92] FATAL:  terminating connection due to administrator command
-postgres-1  | 2025-08-13 20:02:48.758 UTC [92] LOG:  could not send data to client: Broken pipe
-postgres-1  | 2025-08-13 20:02:48.854 UTC [74] LOG:  could not send data to client: Broken pipe
-postgres-1  | 2025-08-13 20:02:48.857 UTC [72] FATAL:  terminating connection due to administrator command
-postgres-1  | 2025-08-13 20:02:48.857 UTC [72] LOG:  could not send data to client: Broken pipe
-postgres-1  | 2025-08-13 20:02:48.860 UTC [63] FATAL:  terminating connection due to administrator command
-postgres-1  | 2025-08-13 20:02:48.860 UTC [63] LOG:  could not send data to client: Broken pipe
-postgres-1  | 2025-08-13 20:02:48.954 UTC [61] FATAL:  terminating connection due to administrator command
-postgres-1  | 2025-08-13 20:02:48.954 UTC [61] LOG:  could not send data to client: Broken pipe
-postgres-1  | 2025-08-13 20:02:49.154 UTC [53] FATAL:  terminating connection due to administrator command
-postgres-1  | 2025-08-13 20:02:49.154 UTC [53] LOG:  could not send data to client: Broken pipe
-postgres-1  | 2025-08-13 20:02:49.157 UTC [51] FATAL:  terminating connection due to administrator command
-postgres-1  | 2025-08-13 20:02:49.157 UTC [51] LOG:  could not send data to client: Broken pipe
-postgres-1  | 2025-08-13 20:02:49.254 UTC [57] FATAL:  terminating connection due to administrator command
-postgres-1  | 2025-08-13 20:02:49.254 UTC [57] LOG:  could not send data to client: Broken pipe
-postgres-1  | 2025-08-13 20:02:49.255 UTC [1] LOG:  background worker "logical replication launcher" (PID 49) exited with exit code 1
-postgres-1  | 2025-08-13 20:02:49.255 UTC [59] FATAL:  terminating connection due to administrator command
-postgres-1  | 2025-08-13 20:02:49.255 UTC [59] LOG:  could not send data to client: Broken pipe
-postgres-1  | 2025-08-13 20:02:49.258 UTC [44] LOG:  shutting down
-postgres-1  | 2025-08-13 20:02:49.259 UTC [44] LOG:  checkpoint starting: shutdown immediate
-postgres-1  | 2025-08-13 20:02:49.261 UTC [44] LOG:  checkpoint complete: wrote 325 buffers (2.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.003 s, sync=0.001 s, total=0.003 s; sync files=0, longest=0.000 s, average=0.000 s; distance=734 kB, estimate=734 kB; lsn=0/19D56F0, redo lsn=0/19D56F0
-postgres-1  | 2025-08-13 20:02:49.361 UTC [1] LOG:  database system is shut down
+postgres-1  | 2025-08-13 23:22:43.463 UTC [1] LOG:  received fast shutdown request
+postgres-1  | 2025-08-13 23:22:43.463 UTC [1] LOG:  aborting any active transactions
+postgres-1  | 2025-08-13 23:22:43.559 UTC [83] FATAL:  terminating connection due to administrator command
+postgres-1  | 2025-08-13 23:22:43.559 UTC [83] LOG:  could not send data to client: Broken pipe
+postgres-1  | 2025-08-13 23:22:43.560 UTC [84] FATAL:  terminating connection due to administrator command
+postgres-1  | 2025-08-13 23:22:43.560 UTC [84] LOG:  could not send data to client: Broken pipe
+postgres-1  | 2025-08-13 23:22:43.561 UTC [111] FATAL:  terminating connection due to administrator command
+postgres-1  | 2025-08-13 23:22:43.561 UTC [111] LOG:  could not send data to client: Broken pipe
+postgres-1  | 2025-08-13 23:22:43.563 UTC [81] FATAL:  terminating connection due to administrator command
+postgres-1  | 2025-08-13 23:22:43.563 UTC [81] LOG:  could not send data to client: Broken pipe
+postgres-1  | 2025-08-13 23:22:43.659 UTC [80] FATAL:  terminating connection due to administrator command
+postgres-1  | 2025-08-13 23:22:43.659 UTC [80] LOG:  could not send data to client: Broken pipe
+postgres-1  | 2025-08-13 23:22:43.661 UTC [109] FATAL:  terminating connection due to administrator command
+postgres-1  | 2025-08-13 23:22:43.661 UTC [109] LOG:  could not send data to client: Broken pipe
+postgres-1  | 2025-08-13 23:22:43.661 UTC [79] FATAL:  terminating connection due to administrator command
+postgres-1  | 2025-08-13 23:22:43.661 UTC [79] LOG:  could not send data to client: Broken pipe
+postgres-1  | 2025-08-13 23:22:43.762 UTC [1] LOG:  background worker "logical replication launcher" (PID 49) exited with exit code 1
+postgres-1  | 2025-08-13 23:22:43.762 UTC [44] LOG:  shutting down
+postgres-1  | 2025-08-13 23:22:43.763 UTC [44] LOG:  checkpoint starting: shutdown immediate
+postgres-1  | 2025-08-13 23:22:43.765 UTC [44] LOG:  checkpoint complete: wrote 269 buffers (1.6%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.001 s, total=0.003 s; sync files=0, longest=0.000 s, average=0.000 s; distance=734 kB, estimate=734 kB; lsn=0/19D1508, redo lsn=0/19D1508
+postgres-1  | 2025-08-13 23:22:43.862 UTC [1] LOG:  database system is shut down
 log truncated at line 1000

@@ -1,6 +1,6 @@
 x-service-templates:
   backend-payment-api: &backend-payment-api
-    image: ronaldosilva95/rinha-backend-api:v1.3
+    image: ronaldosilva95/rinha-backend-api:v2.0
     hostname: payment-backend
     networks:
       - payment-processor
@@ -31,7 +31,7 @@ x-service-templates:
       resources:
         limits:
           cpus: "0.60"
-          memory: "152MB"
+          memory: "120MB"
 services:
   nginx:
     image: nginx:1.25-alpine
@@ -57,7 +57,7 @@ services:
       resources:
         limits:
           cpus: "0.15"
-          memory: "7MB"
+          memory: "20MB"
   api-1:
     <<: *backend-payment-api
     hostname: api01
@@ -92,7 +92,7 @@ services:
       resources:
         limits:
           cpus: "0.15"
-          memory: "39MB"
+          memory: "90MB"
 networks:
   backend-network:
     driver: bridge

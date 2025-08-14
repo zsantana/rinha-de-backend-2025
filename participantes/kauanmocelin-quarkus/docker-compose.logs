@@ -1,4 +1,35 @@
 
+ rinhaquark2025-b Pulling 
+ rinhaquark2025-a Pulling 
+ dedad6ae5764 Already exists 
+ b880e3f470bb Already exists 
+ d3be895434ca Already exists 
+ 4d39ae92aa08 Pulling fs layer 
+ dedad6ae5764 Already exists 
+ b880e3f470bb Already exists 
+ d3be895434ca Already exists 
+ 4d39ae92aa08 Pulling fs layer 
+ 4d39ae92aa08 Downloading [>                                                  ]  235.5kB/23.47MB
+ 4d39ae92aa08 Downloading [>                                                  ]  235.5kB/23.47MB
+ 4d39ae92aa08 Downloading [=====================================>             ]  17.78MB/23.47MB
+ 4d39ae92aa08 Downloading [=====================================>             ]  17.78MB/23.47MB
+ 4d39ae92aa08 Download complete 
+ 4d39ae92aa08 Verifying Checksum 
+ 4d39ae92aa08 Download complete 
+ 4d39ae92aa08 Extracting [>                                                  ]  262.1kB/23.47MB
+ 4d39ae92aa08 Extracting [>                                                  ]  262.1kB/23.47MB
+ 4d39ae92aa08 Extracting [===============>                                   ]   7.34MB/23.47MB
+ 4d39ae92aa08 Extracting [===============>                                   ]   7.34MB/23.47MB
+ 4d39ae92aa08 Extracting [===============================>                   ]  14.68MB/23.47MB
+ 4d39ae92aa08 Extracting [===============================>                   ]  14.68MB/23.47MB
+ 4d39ae92aa08 Extracting [==============================================>    ]  22.02MB/23.47MB
+ 4d39ae92aa08 Extracting [==============================================>    ]  22.02MB/23.47MB
+ 4d39ae92aa08 Extracting [==================================================>]  23.47MB/23.47MB
+ 4d39ae92aa08 Extracting [==================================================>]  23.47MB/23.47MB
+ 4d39ae92aa08 Pull complete 
+ 4d39ae92aa08 Pull complete 
+ rinhaquark2025-a Pulled 
+ rinhaquark2025-b Pulled 
  Network kauanmocelin-quarkus_rinhaquark-rede  Creating
  Network kauanmocelin-quarkus_rinhaquark-rede  Created
  Container postgres  Creating
@@ -28,10 +59,8 @@ postgres  | selecting default time zone ... UTC
 postgres  | creating configuration files ... ok
 postgres  | running bootstrap script ... ok
 postgres  | sh: locale: not found
-postgres  | 2025-08-13 17:09:44.092 UTC [36] WARNING:  no usable system locales were found
+postgres  | 2025-08-13 21:50:43.282 UTC [35] WARNING:  no usable system locales were found
 postgres  | performing post-bootstrap initialization ... ok
-postgres  | initdb: warning: enabling "trust" authentication for local connections
-postgres  | initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
 postgres  | syncing data to disk ... ok
 postgres  | 
 postgres  | 
@@ -39,10 +68,12 @@ postgres  | Success. You can now start the database server using:
 postgres  | 
 postgres  |     pg_ctl -D /var/lib/postgresql/data -l logfile start
 postgres  | 
-postgres  | waiting for server to start....2025-08-13 17:09:45.819 GMT [42] LOG:  starting PostgreSQL 17.5 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
-postgres  | 2025-08-13 17:09:45.822 GMT [42] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
-postgres  | 2025-08-13 17:09:45.833 GMT [45] LOG:  database system was shut down at 2025-08-13 17:09:45 GMT
-postgres  | 2025-08-13 17:09:45.897 GMT [42] LOG:  database system is ready to accept connections
+postgres  | initdb: warning: enabling "trust" authentication for local connections
+postgres  | initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
+postgres  | waiting for server to start....2025-08-13 21:50:45.081 GMT [41] LOG:  starting PostgreSQL 17.5 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
+postgres  | 2025-08-13 21:50:45.085 GMT [41] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+postgres  | 2025-08-13 21:50:45.096 GMT [44] LOG:  database system was shut down at 2025-08-13 21:50:44 GMT
+postgres  | 2025-08-13 21:50:45.107 GMT [41] LOG:  database system is ready to accept connections
 postgres  |  done
 postgres  | server started
 postgres  | CREATE DATABASE
@@ -53,38 +84,38 @@ postgres  | CREATE TABLE
 postgres  | CREATE INDEX
 postgres  | 
 postgres  | 
-postgres  | waiting for server to shut down....2025-08-13 17:09:46.304 GMT [42] LOG:  received fast shutdown request
-postgres  | 2025-08-13 17:09:46.308 GMT [42] LOG:  aborting any active transactions
-postgres  | 2025-08-13 17:09:46.311 GMT [42] LOG:  background worker "logical replication launcher" (PID 48) exited with exit code 1
-postgres  | 2025-08-13 17:09:46.388 GMT [43] LOG:  shutting down
-postgres  | 2025-08-13 17:09:46.391 GMT [43] LOG:  checkpoint starting: shutdown immediate
-postgres  | 2025-08-13 17:09:46.493 GMT [43] LOG:  checkpoint complete: wrote 575 buffers (44.9%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.086 s, sync=0.006 s, total=0.106 s; sync files=304, longest=0.003 s, average=0.001 s; distance=4270 kB, estimate=4270 kB; lsn=0/1918AA0, redo lsn=0/1918AA0
-postgres  | 2025-08-13 17:09:46.500 GMT [42] LOG:  database system is shut down
+postgres  | waiting for server to shut down....2025-08-13 21:50:45.466 GMT [41] LOG:  received fast shutdown request
+postgres  | 2025-08-13 21:50:45.469 GMT [41] LOG:  aborting any active transactions
+postgres  | 2025-08-13 21:50:45.472 GMT [41] LOG:  background worker "logical replication launcher" (PID 47) exited with exit code 1
+postgres  | 2025-08-13 21:50:45.473 GMT [42] LOG:  shutting down
+postgres  | 2025-08-13 21:50:45.475 GMT [42] LOG:  checkpoint starting: shutdown immediate
+postgres  | 2025-08-13 21:50:45.767 GMT [42] LOG:  checkpoint complete: wrote 655 buffers (51.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.082 s, sync=0.199 s, total=0.295 s; sync files=304, longest=0.005 s, average=0.001 s; distance=4270 kB, estimate=4270 kB; lsn=0/1918AA0, redo lsn=0/1918AA0
+postgres  | 2025-08-13 21:50:45.774 GMT [41] LOG:  database system is shut down
 postgres  |  done
 postgres  | server stopped
 postgres  | 
 postgres  | PostgreSQL init process complete; ready for start up.
 postgres  | 
-postgres  | 2025-08-13 17:09:46.528 GMT [1] LOG:  starting PostgreSQL 17.5 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
-postgres  | 2025-08-13 17:09:46.528 GMT [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
-postgres  | 2025-08-13 17:09:46.528 GMT [1] LOG:  listening on IPv6 address "::", port 5432
-postgres  | 2025-08-13 17:09:46.534 GMT [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
-postgres  | 2025-08-13 17:09:46.542 GMT [60] LOG:  database system was shut down at 2025-08-13 17:09:46 GMT
-postgres  | 2025-08-13 17:09:46.587 GMT [1] LOG:  database system is ready to accept connections
+postgres  | 2025-08-13 21:50:45.890 GMT [1] LOG:  starting PostgreSQL 17.5 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
+postgres  | 2025-08-13 21:50:45.890 GMT [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+postgres  | 2025-08-13 21:50:45.890 GMT [1] LOG:  listening on IPv6 address "::", port 5432
+postgres  | 2025-08-13 21:50:45.896 GMT [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+postgres  | 2025-08-13 21:50:45.905 GMT [59] LOG:  database system was shut down at 2025-08-13 21:50:45 GMT
+postgres  | 2025-08-13 21:50:45.912 GMT [1] LOG:  database system is ready to accept connections
 rinhaquark2025-a  | __  ____  __  _____   ___  __ ____  ______ 
 rinhaquark2025-a  |  --/ __ \/ / / / _ | / _ \/ //_/ / / / __/ 
 rinhaquark2025-a  |  -/ /_/ / /_/ / __ |/ , _/ ,< / /_/ /\ \   
 rinhaquark2025-a  | --\___\_\____/_/ |_/_/|_/_/|_|\____/___/   
-rinhaquark2025-a  | 2025-08-13 17:09:48,159 INFO  [io.quarkus] (main) rinhaquark-2025 1.0.0-SNAPSHOT native (powered by Quarkus 3.24.5) started in 0.074s. Listening on: http://0.0.0.0:8080
-rinhaquark2025-a  | 2025-08-13 17:09:48,159 INFO  [io.quarkus] (main) Profile prod activated. 
-rinhaquark2025-a  | 2025-08-13 17:09:48,159 INFO  [io.quarkus] (main) Installed features: [agroal, cdi, jdbc-postgresql, narayana-jta, reactive-pg-client, rest, rest-client, rest-client-jackson, rest-jackson, smallrye-context-propagation, vertx]
+rinhaquark2025-a  | 2025-08-13 21:50:47,552 INFO  [io.quarkus] (main) rinhaquark-2025 1.0.0-SNAPSHOT native (powered by Quarkus 3.24.5) started in 0.071s. Listening on: http://0.0.0.0:8080
+rinhaquark2025-a  | 2025-08-13 21:50:47,552 INFO  [io.quarkus] (main) Profile prod activated. 
+rinhaquark2025-a  | 2025-08-13 21:50:47,552 INFO  [io.quarkus] (main) Installed features: [agroal, cdi, jdbc-postgresql, narayana-jta, reactive-pg-client, rest, rest-client, rest-client-jackson, rest-jackson, smallrye-context-propagation, vertx]
 rinhaquark2025-b  | __  ____  __  _____   ___  __ ____  ______ 
 rinhaquark2025-b  |  --/ __ \/ / / / _ | / _ \/ //_/ / / / __/ 
 rinhaquark2025-b  |  -/ /_/ / /_/ / __ |/ , _/ ,< / /_/ /\ \   
 rinhaquark2025-b  | --\___\_\____/_/ |_/_/|_/_/|_|\____/___/   
-rinhaquark2025-b  | 2025-08-13 17:09:48,159 INFO  [io.quarkus] (main) rinhaquark-2025 1.0.0-SNAPSHOT native (powered by Quarkus 3.24.5) started in 0.062s. Listening on: http://0.0.0.0:8080
-rinhaquark2025-b  | 2025-08-13 17:09:48,159 INFO  [io.quarkus] (main) Profile prod activated. 
-rinhaquark2025-b  | 2025-08-13 17:09:48,159 INFO  [io.quarkus] (main) Installed features: [agroal, cdi, jdbc-postgresql, narayana-jta, reactive-pg-client, rest, rest-client, rest-client-jackson, rest-jackson, smallrye-context-propagation, vertx]
+rinhaquark2025-b  | 2025-08-13 21:50:47,555 INFO  [io.quarkus] (main) rinhaquark-2025 1.0.0-SNAPSHOT native (powered by Quarkus 3.24.5) started in 0.044s. Listening on: http://0.0.0.0:8080
+rinhaquark2025-b  | 2025-08-13 21:50:47,555 INFO  [io.quarkus] (main) Profile prod activated. 
+rinhaquark2025-b  | 2025-08-13 21:50:47,555 INFO  [io.quarkus] (main) Installed features: [agroal, cdi, jdbc-postgresql, narayana-jta, reactive-pg-client, rest, rest-client, rest-client-jackson, rest-jackson, smallrye-context-propagation, vertx]
 nginx-loadbalancer  | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
 nginx-loadbalancer  | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
 nginx-loadbalancer  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
@@ -95,15 +126,15 @@ nginx-loadbalancer  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-e
 nginx-loadbalancer  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
 nginx-loadbalancer  | /docker-entrypoint.sh: Configuration complete; ready for start up
 [Knginx-loadbalancer exited with code 0
-rinhaquark2025-a    | 2025-08-13 17:10:58,659 INFO  [io.quarkus] (Shutdown thread) rinhaquark-2025 stopped in 0.003s
-rinhaquark2025-b    | 2025-08-13 17:10:58,659 INFO  [io.quarkus] (Shutdown thread) rinhaquark-2025 stopped in 0.003s
-[Krinhaquark2025-b exited with code 143
+rinhaquark2025-a    | 2025-08-13 21:51:56,509 INFO  [io.quarkus] (Shutdown thread) rinhaquark-2025 stopped in 0.005s
+rinhaquark2025-b    | 2025-08-13 21:51:56,513 INFO  [io.quarkus] (Shutdown thread) rinhaquark-2025 stopped in 0.005s
 [Krinhaquark2025-a exited with code 143
-postgres            | 2025-08-13 17:10:58.906 GMT [1] LOG:  received fast shutdown request
-postgres            | 2025-08-13 17:10:58.910 GMT [1] LOG:  aborting any active transactions
-postgres            | 2025-08-13 17:10:58.913 GMT [1] LOG:  background worker "logical replication launcher" (PID 63) exited with exit code 1
-postgres            | 2025-08-13 17:10:58.913 GMT [58] LOG:  shutting down
-postgres            | 2025-08-13 17:10:58.916 GMT [58] LOG:  checkpoint starting: shutdown immediate
-postgres            | 2025-08-13 17:10:58.937 GMT [58] LOG:  checkpoint complete: wrote 41 buffers (3.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.006 s, sync=0.005 s, total=0.024 s; sync files=14, longest=0.003 s, average=0.001 s; distance=201 kB, estimate=201 kB; lsn=0/194B1D8, redo lsn=0/194B1D8
-postgres            | 2025-08-13 17:10:58.943 GMT [1] LOG:  database system is shut down
+[Krinhaquark2025-b exited with code 143
+postgres            | 2025-08-13 21:51:56.779 GMT [1] LOG:  received fast shutdown request
+postgres            | 2025-08-13 21:51:56.782 GMT [1] LOG:  aborting any active transactions
+postgres            | 2025-08-13 21:51:56.785 GMT [1] LOG:  background worker "logical replication launcher" (PID 62) exited with exit code 1
+postgres            | 2025-08-13 21:51:56.785 GMT [57] LOG:  shutting down
+postgres            | 2025-08-13 21:51:56.788 GMT [57] LOG:  checkpoint starting: shutdown immediate
+postgres            | 2025-08-13 21:51:56.813 GMT [57] LOG:  checkpoint complete: wrote 327 buffers (25.5%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.009 s, sync=0.005 s, total=0.028 s; sync files=23, longest=0.003 s, average=0.001 s; distance=4373 kB, estimate=4373 kB; lsn=0/1D5DF58, redo lsn=0/1D5DF58
+postgres            | 2025-08-13 21:51:56.819 GMT [1] LOG:  database system is shut down
 log truncated at line 1000

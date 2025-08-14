@@ -12,7 +12,7 @@ x-service-templates:
       resources:
         limits:
           cpus: "0.35"
-          memory: "70MB"
+          memory: "60MB"
 
 services:
   backend-01:
@@ -47,7 +47,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.6"
+          cpus: "0.5"
           memory: "90MB"
 
   load-balance:
@@ -66,7 +66,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.2"
+          cpus: "0.3"
           memory: "75MB"
           
 volumes:

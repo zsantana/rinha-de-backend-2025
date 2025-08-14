@@ -15,7 +15,7 @@ services:
       - redis-data:/data
 
   api1: &app
-    image: pedrohcorrea/rinha-backend-2025-gleam:latest
+    image: pedrohcorrea/rinha-backend-2025-gleam:v2.1
     container_name: api1
     networks:
       - backend
