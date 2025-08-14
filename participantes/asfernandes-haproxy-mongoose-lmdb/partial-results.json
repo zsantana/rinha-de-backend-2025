@@ -1,18 +1,18 @@
 {
   "participante": "asfernandes-haproxy-mongoose-lmdb",
-  "total_liquido": 233885.1975,
+  "total_liquido": 258831.3002,
   "total_bruto": 333285.2,
-  "total_taxas": 21438.27,
+  "total_taxas": 21440.26,
   "descricao": "'total_liquido' é sua pontuação final. Equivale ao seu lucro. Fórmula: total_liquido + (total_liquido * p99.bonus) - (total_liquido * multa.porcentagem)",
   "p99": {
-    "valor": "6.19ms",
-    "bonus": "10%",
+    "valor": "1.84ms",
+    "bonus": "18%",
     "max_requests": "550",
     "descricao": "Fórmula para o bônus: max((11 - p99.valor) * 0.02, 0)"
   },
   "multa": {
     "porcentagem": 0.35,
-    "total": 109146.4255,
+    "total": 109145.729,
     "composicao": {
       "num_inconsistencias": 1,
       "descricao": "Se 'num_inconsistencias' > 0, há multa de 35%."
@@ -34,15 +34,15 @@
     "descricao": "'qtd_sucesso' foram requests bem sucedidos para 'POST /payments' e 'qtd_falha' os requests com erro."
   },
   "pagamentos_realizados_default": {
-    "total_bruto": 285545.1,
-    "num_pagamentos": 14349,
-    "total_taxas": 14277.255,
+    "total_bruto": 285525.2,
+    "num_pagamentos": 14348,
+    "total_taxas": 14276.26,
     "descricao": "Informações do backend sobre solicitações de pagamento para o Payment Processor Default."
   },
   "pagamentos_realizados_fallback": {
-    "total_bruto": 47740.1,
-    "num_pagamentos": 2399,
-    "total_taxas": 7161.015,
+    "total_bruto": 47760,
+    "num_pagamentos": 2400,
+    "total_taxas": 7164,
     "descricao": "Informações do backend sobre solicitações de pagamento para o Payment Processor Fallback."
   }
 }

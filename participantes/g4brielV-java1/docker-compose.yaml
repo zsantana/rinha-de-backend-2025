@@ -77,7 +77,7 @@ services:
           memory: "150MB"
 
   postgresql-rinha:
-    image: postgres:16
+    image: postgres:16-alpine
     container_name: rinha-postgresql
     restart: always
     env_file:
@@ -107,4 +107,3 @@ networks:
     driver: bridge
   payment-processor:
     external: true
-
