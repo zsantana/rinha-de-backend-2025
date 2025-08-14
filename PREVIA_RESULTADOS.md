@@ -1,5 +1,5 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Thu Aug 14 03:48:16 UTC 2025**
+Atualizado em **Thu Aug 14 04:02:39 UTC 2025**
 353 submissões / 293 resultados / 60 submissões com erro
 
 
@@ -62,7 +62,7 @@ Atualizado em **Thu Aug 14 03:48:16 UTC 2025**
 |	chriscorrales	|	50.97ms	|	0%	|	0	|	310550.445	|	[chriscorrales](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/chriscorrales)
 |	codevsk-go-1	|	2.27ms	|	17%	|	0	|	364841.11755	|	[codevsk-go-1](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/codevsk-go-1)
 |	cristian-s-bun-go-1	|	52.47ms	|	0%	|	0	|	173192.685	|	[cristian-s-bun-go-1](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/cristian-s-bun-go-1)
-|	danielsuhett-golang-2	|	32.65ms	|	0%	|	0	|	291987.725	|	[danielsuhett-golang-2](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/danielsuhett-golang-2)
+|	danielsuhett-golang-2	|	1.76ms	|	18%	|	0	|	324178.4028	|	[danielsuhett-golang-2](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/danielsuhett-golang-2)
 |	danielsuhett-golang	|	1.73ms	|	19%	|	0	|	376688.9308	|	[danielsuhett-golang](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/danielsuhett-golang)
 |	danielsuhett-nestjs	|	53.4ms	|	0%	|	0	|	311284.755	|	[danielsuhett-nestjs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/danielsuhett-nestjs)
 |	daniilha-php	|	4.17ms	|	14%	|	0	|	352800.1947	|	[daniilha-php](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/daniilha-php)
@@ -228,7 +228,7 @@ Atualizado em **Thu Aug 14 03:48:16 UTC 2025**
 |	ovelha	|	49.31ms	|	0%	|	93636.067	|	173895.553	|	[ovelha](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/ovelha)
 |	pancine-dotnet-aot	|	2.58ms	|	17%	|	0	|	366878.38005	|	[pancine-dotnet-aot](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/pancine-dotnet-aot)
 |	panissetrafael-go	|	2.34ms	|	17%	|	75672.8973	|	177290.78796	|	[panissetrafael-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/panissetrafael-go)
-|	passos-matheus-only-default	|	4.44ms	|	13%	|	0	|	0	|	[passos-matheus-only-default](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/passos-matheus-only-default)
+|	passos-matheus-only-default	|	40.31ms	|	0%	|	0	|	0	|	[passos-matheus-only-default](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/passos-matheus-only-default)
 |	passos-matheus-python-16reqs-timeout-aptivo	|	14.75ms	|	0%	|	0	|	309983.295	|	[passos-matheus-python-16reqs-timeout-aptivo](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/passos-matheus-python-16reqs-timeout-aptivo)
 |	passos-matheus-python-timeout-adaptivo	|	9.61ms	|	3%	|	0	|	325983.26315	|	[passos-matheus-python-timeout-adaptivo](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/passos-matheus-python-timeout-adaptivo)
 |	passos-matheus-python-v1	|	11.92ms	|	0%	|	0	|	316431.89	|	[passos-matheus-python-v1](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/passos-matheus-python-v1)
