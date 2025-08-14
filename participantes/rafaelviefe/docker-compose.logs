@@ -1,0 +1,71 @@
+
+time="2025-08-14T00:08:50Z" level=warning msg="/home/ubuntu/rinha-de-backend-2025/participantes/rafaelviefe/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+ Network rafaelviefe_backend  Creating
+ Network rafaelviefe_backend  Created
+ Container rinha-redis  Creating
+ Container rinha-redis  Created
+ Container rafaelviefe-api2-1  Creating
+ Container rafaelviefe-api1-1  Creating
+ Container rafaelviefe-api1-1  Created
+ Container rafaelviefe-api2-1  Created
+ Container rinha-load-balancer  Creating
+ Container rinha-load-balancer  Created
+Attaching to api1-1, api2-1, rinha-load-balancer, rinha-redis
+rinha-redis  | 1:C 14 Aug 2025 00:08:51.272 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+rinha-redis  | 1:C 14 Aug 2025 00:08:51.272 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+rinha-redis  | 1:C 14 Aug 2025 00:08:51.272 * Redis version=7.4.5, bits=64, commit=00000000, modified=0, pid=1, just started
+rinha-redis  | 1:C 14 Aug 2025 00:08:51.272 * Configuration loaded
+rinha-redis  | 1:M 14 Aug 2025 00:08:51.272 * monotonic clock: POSIX clock_gettime
+rinha-redis  | 1:M 14 Aug 2025 00:08:51.273 * Running mode=standalone, port=6379.
+rinha-redis  | 1:M 14 Aug 2025 00:08:51.280 * <timeseries> RedisTimeSeries version 11206, git_sha=cdcbe34f8e87e15ea700b737634be6bac6b6700b
+rinha-redis  | 1:M 14 Aug 2025 00:08:51.280 * <timeseries> Redis version found by RedisTimeSeries : 7.4.5 - oss
+rinha-redis  | 1:M 14 Aug 2025 00:08:51.280 * <timeseries> loaded default CHUNK_SIZE_BYTES policy: 4096
+rinha-redis  | 1:M 14 Aug 2025 00:08:51.280 * <timeseries> loaded server DUPLICATE_POLICY: block
+rinha-redis  | 1:M 14 Aug 2025 00:08:51.280 * <timeseries> loaded default IGNORE_MAX_TIME_DIFF: 0
+rinha-redis  | 1:M 14 Aug 2025 00:08:51.280 * <timeseries> loaded default IGNORE_MAX_VAL_DIFF: 0.000000
+rinha-redis  | 1:M 14 Aug 2025 00:08:51.280 * <timeseries> Setting default series ENCODING to: compressed
+rinha-redis  | 1:M 14 Aug 2025 00:08:51.280 * <timeseries> Detected redis oss
+rinha-redis  | 1:M 14 Aug 2025 00:08:51.280 * Module 'timeseries' loaded from /opt/redis-stack/lib/redistimeseries.so
+rinha-redis  | 1:M 14 Aug 2025 00:08:51.280 * Server initialized
+rinha-redis  | 1:M 14 Aug 2025 00:08:51.281 * Ready to accept connections tcp
+api2-1       | 
+api2-1       |   .   ____          _            __ _ _
+api2-1       |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+api2-1       | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+api2-1       |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+api2-1       |   '  |____| .__|_| |_|_| |_\__, | / / / /
+api2-1       |  =========|_|==============|___/=/_/_/_/
+api2-1       | 
+api2-1       |  :: Spring Boot ::                (v3.5.3)
+api2-1       | 
+api1-1       | 
+api1-1       |   .   ____          _            __ _ _
+api1-1       |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+api1-1       | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+api1-1       |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+api1-1       |   '  |____| .__|_| |_|_| |_\__, | / / / /
+api1-1       |  =========|_|==============|___/=/_/_/_/
+api1-1       | 
+api1-1       |  :: Spring Boot ::                (v3.5.3)
+api1-1       | 
+api2-1       | 2025-08-14T00:08:57.458Z  INFO 1 --- [pagamentos] [           main] b.c.r.pagamentos.PagamentosApplication   : Starting AOT-processed PagamentosApplication using Java 21.0.8 with PID 1 (/app/pagamentos started by root in /app)
+api2-1       | 2025-08-14T00:08:57.460Z  INFO 1 --- [pagamentos] [           main] b.c.r.pagamentos.PagamentosApplication   : No active profile set, falling back to 1 default profile: "default"
+api1-1       | 2025-08-14T00:08:57.458Z  INFO 1 --- [pagamentos] [           main] b.c.r.pagamentos.PagamentosApplication   : Starting AOT-processed PagamentosApplication using Java 21.0.8 with PID 1 (/app/pagamentos started by root in /app)
+api1-1       | 2025-08-14T00:08:57.460Z  INFO 1 --- [pagamentos] [           main] b.c.r.pagamentos.PagamentosApplication   : No active profile set, falling back to 1 default profile: "default"
+api2-1       | 2025-08-14T00:08:57.830Z  INFO 1 --- [pagamentos] [           main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8080 (http)
+api2-1       | 2025-08-14T00:08:57.855Z  INFO 1 --- [pagamentos] [           main] b.c.r.pagamentos.PagamentosApplication   : Started PagamentosApplication in 0.53 seconds (process running for 0.803)
+api1-1       | 2025-08-14T00:08:57.862Z  INFO 1 --- [pagamentos] [           main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8080 (http)
+api1-1       | 2025-08-14T00:08:57.880Z  INFO 1 --- [pagamentos] [           main] b.c.r.pagamentos.PagamentosApplication   : Started PagamentosApplication in 0.556 seconds (process running for 0.828)
+[Krinha-load-balancer exited with code 2
+api2-1               | 2025-08-14T00:10:07.520Z  INFO 1 --- [pagamentos] [ionShutdownHook] o.s.b.w.embedded.netty.GracefulShutdown  : Commencing graceful shutdown. Waiting for active requests to complete
+api2-1               | 2025-08-14T00:10:07.521Z  INFO 1 --- [pagamentos] [ netty-shutdown] o.s.b.w.embedded.netty.GracefulShutdown  : Graceful shutdown complete
+api1-1               | 2025-08-14T00:10:07.522Z  INFO 1 --- [pagamentos] [ionShutdownHook] o.s.b.w.embedded.netty.GracefulShutdown  : Commencing graceful shutdown. Waiting for active requests to complete
+api1-1               | 2025-08-14T00:10:07.523Z  INFO 1 --- [pagamentos] [ netty-shutdown] o.s.b.w.embedded.netty.GracefulShutdown  : Graceful shutdown complete
+api2-1               | 2025-08-14T00:10:09.533Z  WARN 1 --- [pagamentos] [llEventLoop-5-2] io.lettuce.core.RedisChannelHandler      : Connection is already closed
+api1-1               | 2025-08-14T00:10:09.534Z  WARN 1 --- [pagamentos] [llEventLoop-5-1] io.lettuce.core.RedisChannelHandler      : Connection is already closed
+[Kapi2-1 exited with code 143
+[Kapi1-1 exited with code 143
+rinha-redis          | 1:signal-handler (1755130209) Received SIGTERM scheduling shutdown...
+rinha-redis          | 1:M 14 Aug 2025 00:10:09.903 * User requested shutdown...
+rinha-redis          | 1:M 14 Aug 2025 00:10:09.903 # Redis is now ready to exit, bye bye...
+log truncated at line 1000
