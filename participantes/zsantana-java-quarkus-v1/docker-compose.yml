@@ -8,13 +8,20 @@ services:
       - rinha-net
     volumes:
       - redis-data:/data
+    command: [
+      "redis-server",
+      "--save", "",
+      "--appendonly", "no",
+      "--databases", "1",
+      "--loglevel", "warning",
+      "--logfile", "/dev/null",
+      "--tcp-keepalive", "60"
+    ]
     healthcheck:
-      test: ["CMD", "redis-cli", "ping"]
-      interval: 10s
-      timeout: 5s
+      test: [ "CMD", "redis-cli", "ping" ]
+      interval: 5s
+      timeout: 3s
       retries: 5
-      start_period: 5s
-    command: ["redis-server", "--appendonly", "yes", "--save", "60", "10000"]
     deploy:
       resources:
         limits:

@@ -1,0 +1,35 @@
+
+ Network flads-php-go_main-network  Creating
+ Network flads-php-go_main-network  Created
+ Volume "flads-php-go_sockets"  Creating
+ Volume "flads-php-go_sockets"  Created
+ Container flads-php-go-redis-1  Creating
+ Container api-1  Creating
+ Container api-2  Creating
+ Container api-1  Created
+ Container api-2  Created
+ Container flads-php-go-haproxy-1  Creating
+ Container flads-php-go-redis-1  Created
+ Container worker  Creating
+ Container worker  Created
+ Container flads-php-go-haproxy-1  Created
+Attaching to api-1, api-2, haproxy-1, redis-1, worker
+redis-1  | 1:M 13 Aug 2025 17:30:55.089 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+redis-1  | 1:M 13 Aug 2025 17:30:55.091 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+redis-1  | 1:M 13 Aug 2025 17:30:55.091 * Valkey version=8.1.3, bits=64, commit=00000000, modified=0, pid=1, just started
+redis-1  | 1:M 13 Aug 2025 17:30:55.091 * Configuration loaded
+redis-1  | 1:M 13 Aug 2025 17:30:55.092 * monotonic clock: POSIX clock_gettime
+redis-1  | 1:M 13 Aug 2025 17:30:55.093 * Running mode=standalone, port=6379.
+redis-1  | 1:M 13 Aug 2025 17:30:55.093 # WARNING: The TCP backlog setting of 65535 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 4096.
+redis-1  | 1:M 13 Aug 2025 17:30:55.094 * Server initialized
+redis-1  | 1:M 13 Aug 2025 17:30:55.097 * Ready to accept connections tcp
+haproxy-1  | [NOTICE]   (1) : Initializing new worker (8)
+haproxy-1  | [NOTICE]   (1) : haproxy version is 3.2.3-1844da7
+haproxy-1  | [WARNING]  (1) : Failed to load worker!
+[Khaproxy-1 exited with code 137
+[Kapi-2 exited with code 2
+[Kapi-1 exited with code 2
+[Kworker exited with code 137
+redis-1    | 1:signal-handler (1755106339) Received SIGTERM scheduling shutdown...
+redis-1    | 1:M 13 Aug 2025 17:32:19.681 * User requested shutdown...
+redis-1    | 1:M 13 Aug 2025 17:32:19.681 # Valkey is now ready to exit, bye bye...

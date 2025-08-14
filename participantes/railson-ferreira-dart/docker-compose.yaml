@@ -13,8 +13,8 @@ x-service-templates:
     deploy:
       resources:
         limits:
-          cpus: '0.5'
-          memory: "100MB"
+          cpus: '0.2'
+          memory: "50MB"
 
 services:
   repository:
@@ -25,11 +25,17 @@ services:
       resources:
         limits:
           cpus: '0.3'
-          memory: "100MB"
+          memory: "50MB"
 
   api1:
     <<: *api
   api2:
+    <<: *api
+  api3:
+    <<: *api
+  api4:
+    <<: *api
+  api5:
     <<: *api
 
   pingora:
@@ -37,12 +43,15 @@ services:
     ports:
       - "9999:8080"
     environment:
-        - HOSTS=api1:8080,api2:8080
+        - HOSTS=api1:8080,api2:8080,api3:8080,api4:8080,api5:8080
     networks:
       - backend
     depends_on:
       - api1
       - api2
+      - api3
+      - api4
+      - api5
     deploy:
       resources:
         limits:

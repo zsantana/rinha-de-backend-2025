@@ -1,7 +1,7 @@
 services:
   nginx:
     image: nginx:alpine
-    container_name: nginx-lb
+    container_name: teste-nginx-lb
     platform: linux/amd64
     ports:
       - "9999:9999"
@@ -13,7 +13,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.05"
+          cpus: "0.1"
           memory: "10MB"
     restart: unless-stopped
     networks:
@@ -21,8 +21,8 @@ services:
       - payment-processor
 
   api1:
-    image: ruanpcr/rinha-backend:latest
-    container_name: r-api-1
+    image: ruanpcr/rinha-api:latest
+    container_name: teste-r-api-1
     platform: linux/amd64
     command: ["/app/wait-for-redis.sh"]
     depends_on:
@@ -30,70 +30,56 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.35"
-          memory: "68MB"
-    restart: unless-stopped
-    networks:
-      - backend
-
-  api2:
-    image: ruanpcr/rinha-backend:latest
-    container_name: r-api-2
-    platform: linux/amd64
-    command: ["/app/wait-for-redis.sh"]
-    depends_on:
-      - redis
-    deploy:
-      resources:
-        limits:
-          cpus: "0.35"
-          memory: "68MB"
-    restart: unless-stopped
-    networks:
-      - backend
-
-  redis:
-    image: redis:7-alpine
-    container_name: redis
-    platform: linux/amd64
-    deploy:
-      resources:
-        limits:
-          cpus: "0.15"
-          memory: "54MB"
-    restart: unless-stopped
-    networks:
-      - backend
-
-  worker1:
-    image: ruanpcr/rinha-backend:latest
-    container_name: r-worker-1
-    platform: linux/amd64
-    command: ["/app/start-worker.sh"]
-    depends_on:
-      - redis
-    deploy:
-      resources:
-        limits:
-          cpus: "0.325"
-          memory: "75MB"
+          cpus: "0.55"
+          memory: "105MB"
     restart: unless-stopped
     networks:
       - backend
       - payment-processor
 
-  worker2:
-    image: ruanpcr/rinha-backend:latest
-    container_name: r-worker-2
+  api2:
+    image: ruanpcr/rinha-api:latest
+    container_name: teste-r-api-2
     platform: linux/amd64
-    command: ["/app/start-worker.sh"]
+    command: ["/app/wait-for-redis.sh"]
     depends_on:
       - redis
     deploy:
       resources:
         limits:
-          cpus: "0.325"
-          memory: "75MB"
+          cpus: "0.55"
+          memory: "105MB"
+    restart: unless-stopped
+    networks:
+      - backend
+      - payment-processor
+
+  redis:
+    image: redis:7-alpine
+    container_name: teste-redis
+    platform: linux/amd64
+    deploy:
+      resources:
+        limits:
+          cpus: "0.1"
+          memory: "40MB"
+    restart: unless-stopped
+    networks:
+      - backend
+
+  worker:
+    image: ruanpcr/rinha-worker:latest
+    container_name: teste-worker
+    platform: linux/amd64
+    depends_on:
+      - redis
+    environment:
+      - REDIS_HOST=redis:6379
+    deploy:
+      resources:
+        limits:
+          cpus: "0.2"
+          memory: "90MB"
     restart: unless-stopped
     networks:
       - backend

@@ -1,0 +1,91 @@
+x-api: &payment-api-template
+  # build: ./payment-api
+  image: mauriciocantu/payment-api:latest
+  depends_on:
+    redis:
+      condition: service_healthy
+  networks:
+    - rinha-backend
+    - payment-processor
+
+services:
+  nginx:
+    image: nginx:1.25-alpine
+    container_name: nginx
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - payment-api-01
+      - payment-api-02
+    ports:
+      - "9999:9999"
+    networks:
+      - rinha-backend
+      - payment-processor
+    deploy:
+      resources:
+        limits:
+          cpus: "0.2"
+          memory: "10MB"
+
+  payment-api-01:
+    <<: *payment-api-template
+    hostname: payment-api-01
+    container_name: payment-api-01
+    environment:
+      - PAYMENTS_QUEUE=${PAYMENTS_QUEUE}
+      - REDIS_URL=${REDIS_URL}
+      - PROCESS_PAYMENT_JOB_NAME=${PROCESS_PAYMENT_JOB_NAME}
+      - PAYMENT_PROCESSOR_URL_DEFAULT=${PAYMENT_PROCESSOR_URL_DEFAULT}
+      - PAYMENT_PROCESSOR_URL_FALLBACK=${PAYMENT_PROCESSOR_URL_FALLBACK}
+      - HTTP_CONNECTIONS_NUMBER=${HTTP_CONNECTIONS_NUMBER}
+      - WORKER_CONCURRENCY=${WORKER_CONCURRENCY_API_1}
+    deploy:
+      resources:
+        limits:
+          cpus: "0.5"
+          memory: "125MB"
+
+  payment-api-02:
+    <<: *payment-api-template
+    hostname: payment-api-02
+    container_name: payment-api-02
+    environment:
+      - PAYMENTS_QUEUE=${PAYMENTS_QUEUE}
+      - REDIS_URL=${REDIS_URL}
+      - PROCESS_PAYMENT_JOB_NAME=${PROCESS_PAYMENT_JOB_NAME}
+      - PAYMENT_PROCESSOR_URL_DEFAULT=${PAYMENT_PROCESSOR_URL_DEFAULT}
+      - PAYMENT_PROCESSOR_URL_FALLBACK=${PAYMENT_PROCESSOR_URL_FALLBACK}
+      - HTTP_CONNECTIONS_NUMBER=${HTTP_CONNECTIONS_NUMBER}
+      - WORKER_CONCURRENCY=${WORKER_CONCURRENCY_API_2}
+      - RUN_HEALTHCHECK=true
+    deploy:
+      resources:
+        limits:
+          cpus: "0.6"
+          memory: "165MB"
+
+  redis:
+    image: redis:8.2-alpine
+    container_name: redis
+    hostname: redis
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 3
+    deploy:
+      resources:
+        limits:
+          cpus: "0.2"
+          memory: "50MB"
+    networks:
+      - rinha-backend
+
+networks:
+  rinha-backend:
+    driver: bridge
+  payment-processor:
+    external: true

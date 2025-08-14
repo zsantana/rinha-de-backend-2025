@@ -1,0 +1,88 @@
+version: "3.9"
+
+networks:
+  default:
+    external: true
+    name: payment-processor
+
+services:
+  lb:
+    image: quay.io/rhn_support_arolivei/rinha-haproxy-ubi:latest
+    container_name: lb
+    ports:
+      - "9999:9999"
+    volumes:
+      - ./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:z
+    stop_signal: SIGINT
+    depends_on:
+      - api01
+      - api02
+    networks:
+      - default
+    deploy:
+      resources:
+        limits:
+          cpus: "0.15"
+          memory: "15MB"
+
+  api01:
+    image: quay.io/rhn_support_arolivei/rinha-de-backend-2025-golang-ubi:latest
+    environment:
+      - WORKER_HOST=worker
+      - POSTGRES_DSN=postgresql://postgres:postgres@postgres:5432/rinha?sslmode=disable
+    depends_on:
+      - postgres
+    networks:
+      - default
+    deploy:
+      resources:
+        limits:
+          cpus: "0.35"
+          memory: "80MB"
+
+  api02:
+    image: quay.io/rhn_support_arolivei/rinha-de-backend-2025-golang-ubi:latest
+    environment:
+      - WORKER_HOST=worker
+      - POSTGRES_DSN=postgresql://postgres:postgres@postgres:5432/rinha?sslmode=disable
+    depends_on:
+      - postgres
+    networks:
+      - default
+    deploy:
+      resources:
+        limits:
+          cpus: "0.35"
+          memory: "80MB"
+
+  worker:
+    image: quay.io/rhn_support_arolivei/rinha-de-backend-2025-golang-ubi:latest
+    ports:
+      - "8081:8081"
+    environment:
+      - DEFAULT_PROCESSOR_URL=http://payment-processor-default:8080
+      - FALLBACK_PROCESSOR_URL=http://payment-processor-fallback:8080
+      - POSTGRES_DSN=postgresql://postgres:postgres@postgres:5432/rinha?sslmode=disable
+      - MODE=worker
+    depends_on:
+      - postgres
+    networks:
+      - default
+    deploy:
+      resources:
+        limits:
+          cpus: "0.25"
+          memory: "40MB"
+
+  postgres:
+    image: postgres:15-alpine
+    environment:
+      - POSTGRES_DB=rinha
+      - POSTGRES_PASSWORD=postgres
+    networks:
+      - default
+    deploy:
+      resources:
+        limits:
+          cpus: "0.25"
+          memory: "80MB" 

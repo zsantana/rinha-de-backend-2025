@@ -1,22 +1,66 @@
 
+ api2 Pulling 
+ api1 Pulling 
+ 59e22667830b Already exists 
+ 2ef0ce97bc02 Already exists 
+ e4150c7b90ce Already exists 
+ 76c21f0245c6 Pulling fs layer 
+ e17df50ef903 Pulling fs layer 
+ 59e22667830b Already exists 
+ 2ef0ce97bc02 Already exists 
+ e4150c7b90ce Already exists 
+ 76c21f0245c6 Pulling fs layer 
+ e17df50ef903 Pulling fs layer 
+ e17df50ef903 Downloading [==================================================>]      97B/97B
+ e17df50ef903 Download complete 
+ e17df50ef903 Verifying Checksum 
+ e17df50ef903 Download complete 
+ 76c21f0245c6 Downloading [>                                                  ]  176.7kB/17.24MB
+ 76c21f0245c6 Downloading [>                                                  ]  176.7kB/17.24MB
+ 76c21f0245c6 Downloading [============================================>      ]  15.51MB/17.24MB
+ 76c21f0245c6 Downloading [============================================>      ]  15.51MB/17.24MB
+ 76c21f0245c6 Verifying Checksum 
+ 76c21f0245c6 Download complete 
+ 76c21f0245c6 Download complete 
+ 76c21f0245c6 Extracting [>                                                  ]  196.6kB/17.24MB
+ 76c21f0245c6 Extracting [>                                                  ]  196.6kB/17.24MB
+ 76c21f0245c6 Extracting [==================>                                ]  6.291MB/17.24MB
+ 76c21f0245c6 Extracting [==================>                                ]  6.291MB/17.24MB
+ 76c21f0245c6 Extracting [=====================================>             ]  12.78MB/17.24MB
+ 76c21f0245c6 Extracting [=====================================>             ]  12.78MB/17.24MB
+ 76c21f0245c6 Extracting [==================================================>]  17.24MB/17.24MB
+ 76c21f0245c6 Extracting [==================================================>]  17.24MB/17.24MB
+ 76c21f0245c6 Pull complete 
+ 76c21f0245c6 Pull complete 
+ e17df50ef903 Extracting [==================================================>]      97B/97B
+ e17df50ef903 Extracting [==================================================>]      97B/97B
+ e17df50ef903 Extracting [==================================================>]      97B/97B
+ e17df50ef903 Extracting [==================================================>]      97B/97B
+ e17df50ef903 Pull complete 
+ e17df50ef903 Pull complete 
+ api2 Pulled 
+ api1 Pulled 
  Network murilo-guedes-toloni_backend  Creating
  Network murilo-guedes-toloni_backend  Created
- Container springboot-api1  Creating
+ Volume "murilo-guedes-toloni_sockets"  Creating
+ Volume "murilo-guedes-toloni_sockets"  Created
  Container springboot-api2  Creating
- Container springboot-api2  Created
+ Container springboot-api1  Creating
  Container springboot-api1  Created
+ Container springboot-api2  Created
  Container my-haproxy  Creating
  Container my-haproxy  Created
 Attaching to my-haproxy, springboot-api1, springboot-api2
+springboot-api2  | UDS HTTP listening on /sockets/api2.sock
+springboot-api1  | UDS HTTP listening on /sockets/api1.sock
 my-haproxy       | [NOTICE]   (1) : New worker (8) forked
 my-haproxy       | [NOTICE]   (1) : Loading success.
 my-haproxy       | [NOTICE]   (1) : haproxy version is 2.9.15-e872a3f
 my-haproxy       | [WARNING]  (1) : Exiting Master process...
-my-haproxy       | [WARNING]  (8) : Proxy http_front stopped (cumulated conns: FE: 558, BE: 0).
-my-haproxy       | [WARNING]  (8) : Proxy http_back stopped (cumulated conns: FE: 0, BE: 16758).
+my-haproxy       | [WARNING]  (8) : Proxy http_front stopped (cumulated conns: FE: 557, BE: 0).
+my-haproxy       | [WARNING]  (8) : Proxy http_back stopped (cumulated conns: FE: 0, BE: 16763).
 my-haproxy       | [WARNING]  (1) : Current worker (8) exited with code 0 (Exit)
 my-haproxy       | [WARNING]  (1) : All workers exited. Exiting... (0)
 [Kmy-haproxy exited with code 0
-[Kspringboot-api2 exited with code 137
 [Kspringboot-api1 exited with code 137
 log truncated at line 1000

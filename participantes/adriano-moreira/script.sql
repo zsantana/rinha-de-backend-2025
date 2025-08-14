@@ -7,6 +7,3 @@ CREATE UNLOGGED TABLE payments (
 );
 
 CREATE INDEX payments_requested_at ON payments (requested_at);
-
--- ALTER DATABASE rinha
---     SET log_statement = 'all';
