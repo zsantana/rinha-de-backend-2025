@@ -13,10 +13,11 @@ services:
       - SUMMARY_URL=http://app2:8080/internal/payments-summary
       - PROCESSOR_DEFAULT_URL=http://payment-processor-default:8080/payments
       - PROCESSOR_FALLBACK_URL=http://payment-processor-fallback:8080/payments
+      - GOMAXPROCS=1
     deploy:
       resources:
         limits:
-          cpus: "0.5"
+          cpus: "0.6"
           memory: 70M
     restart: unless-stopped
 
@@ -34,10 +35,11 @@ services:
       - SUMMARY_URL=http://app1:8080/internal/payments-summary
       - PROCESSOR_DEFAULT_URL=http://payment-processor-default:8080/payments
       - PROCESSOR_FALLBACK_URL=http://payment-processor-fallback:8080/payments
+      - GOMAXPROCS=1
     deploy:
       resources:
         limits:
-          cpus: "0.5"
+          cpus: "0.6"
           memory: 70M
     restart: unless-stopped
 
@@ -58,7 +60,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.5"
+          cpus: "0.3"
           memory: 210M
     restart: unless-stopped
 
