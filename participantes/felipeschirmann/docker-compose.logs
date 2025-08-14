@@ -1,0 +1,167 @@
+
+ Container felipeschirmann-redis-1  Creating
+ Container felipeschirmann-redis-1  Created
+ Container felipeschirmann-api02-1  Creating
+ Container felipeschirmann-api01-1  Creating
+ Container felipeschirmann-api02-1  Created
+ Container felipeschirmann-api01-1  Created
+ Container felipeschirmann-nginx-1  Creating
+ Container felipeschirmann-nginx-1  Created
+Attaching to api01-1, api02-1, nginx-1, redis-1
+redis-1  | 1:C 14 Aug 2025 22:28:23.544 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+redis-1  | 1:C 14 Aug 2025 22:28:23.544 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+redis-1  | 1:C 14 Aug 2025 22:28:23.544 * Redis version=7.2.10, bits=64, commit=00000000, modified=0, pid=1, just started
+redis-1  | 1:C 14 Aug 2025 22:28:23.544 * Configuration loaded
+redis-1  | 1:M 14 Aug 2025 22:28:23.545 * monotonic clock: POSIX clock_gettime
+redis-1  | 1:M 14 Aug 2025 22:28:23.546 * Running mode=standalone, port=6379.
+redis-1  | 1:M 14 Aug 2025 22:28:23.547 * Server initialized
+redis-1  | 1:M 14 Aug 2025 22:28:23.601 * Ready to accept connections tcp
+api01-1  |   .   ____          _            __ _ _
+api02-1  |   .   ____          _            __ _ _
+api02-1  |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+api02-1  | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+api02-1  |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+api02-1  |   '  |____| .__|_| |_|_| |_\__, | / / / /
+api02-1  |  =========|_|==============|___/=/_/_/_/
+api01-1  |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+api01-1  | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+api01-1  |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+api01-1  |   '  |____| .__|_| |_|_| |_\__, | / / / /
+api01-1  |  =========|_|==============|___/=/_/_/_/
+api01-1  | 
+api02-1  | 
+api02-1  |  :: Spring Boot ::                (v3.3.0)
+api02-1  | 
+api01-1  |  :: Spring Boot ::                (v3.3.0)
+api01-1  | 
+api02-1  | 22:28:23.917 [main] INFO  b.d.f.rinha.Application - Starting AOT-processed Application using Java 21.0.7 with PID 1 (/app/rinha-reativa started by nonroot in /app)
+api02-1  | 22:28:23.917 [main] INFO  b.d.f.rinha.Application - The following 1 profile is active: "test"
+api01-1  | 22:28:23.917 [main] INFO  b.d.f.rinha.Application - Starting AOT-processed Application using Java 21.0.7 with PID 1 (/app/rinha-reativa started by nonroot in /app)
+api01-1  | 22:28:23.917 [main] INFO  b.d.f.rinha.Application - The following 1 profile is active: "test"
+api02-1  | 22:28:24.088 [main] INFO  b.d.f.r.service.MemoryMonitorService - Iniciando monitor de memória... Verificação a cada 5 segundos.
+api01-1  | 22:28:24.088 [main] INFO  b.d.f.r.service.MemoryMonitorService - Iniciando monitor de memória... Verificação a cada 5 segundos.
+api02-1  | 22:28:24.344 [main] INFO  b.d.f.r.s.PaymentProcessorService - Iniciando processador de pagamentos com estratégia adaptativa...
+api01-1  | 22:28:24.359 [main] INFO  b.d.f.r.s.PaymentProcessorService - Iniciando processador de pagamentos com estratégia adaptativa...
+api01-1  | 22:28:25.084 [main] INFO  b.d.f.rinha.Application - Started Application in 1.259 seconds (process running for 1.355)
+api01-1  | 22:28:25.084 [main] INFO  b.d.f.r.config.ConfigurationBanner - 
+api01-1  | 
+api01-1  | 
+api01-1  | ╔═════════════════════════════════════════════════════════════════════════════╗
+api01-1  | ║                 Configurações Ativas da Aplicação Rinha                     ║
+api01-1  | ╠═════════════════════════════════════════════════════════════════════════════╣
+api01-1  | ║ Spring Profiles Ativos : [test]                                                ║
+api01-1  | ╠═══════════════════════════╦═════════════════════════════════════════════════╣
+api01-1  | ║ Parâmetro                 ║ Valor                                           ║
+api01-1  | ╠═══════════════════════════╬═════════════════════════════════════════════════╣
+api01-1  | ║ Fila (Queue)              ║                                                 ║
+api01-1  | ║   Tamanho Máximo          ║ 50000                                           ║
+api01-1  | ╠═══════════════════════════╬═════════════════════════════════════════════════╣
+api01-1  | ║ Executor de Consumidores  ║                                                 ║
+api01-1  | ║   Threads                 ║ Virtual Threads (Dinâmico)                      ║
+api01-1  | ╠═══════════════════════════╬═════════════════════════════════════════════════╣
+api01-1  | ║ Agendador de Estratégia   ║                                                 ║
+api01-1  | ║   Período de Decisão      ║ 1000 ms                                         ║
+api01-1  | ╠═══════════════════════════╬═════════════════════════════════════════════════╣
+api01-1  | ║ Cliente Web (WebClient)   ║                                                 ║
+api01-1  | ║   Conexões Máximas        ║ 700                                             ║
+api01-1  | ║   Timeout de Conexão      ║ 2000 ms                                         ║
+api01-1  | ║   Timeout de Resposta     ║ 10 s                                            ║
+api01-1  | ╠═══════════════════════════╬═════════════════════════════════════════════════╣
+api01-1  | ║ Monitor de Memória        ║                                                 ║
+api01-1  | ║   Limite para Aviso       ║ 50 MB                                           ║
+api01-1  | ║   Atraso Inicial          ║ 5 s                                             ║
+api01-1  | ║   Período                 ║ 5 s                                             ║
+api01-1  | ╚═══════════════════════════╩═════════════════════════════════════════════════╝
+api01-1  | 
+api02-1  | 22:28:25.084 [main] INFO  b.d.f.rinha.Application - Started Application in 1.259 seconds (process running for 1.358)
+api02-1  | 22:28:25.084 [main] INFO  b.d.f.r.config.ConfigurationBanner - 
+api02-1  | 
+api02-1  | 
+api02-1  | ╔═════════════════════════════════════════════════════════════════════════════╗
+api02-1  | ║                 Configurações Ativas da Aplicação Rinha                     ║
+api02-1  | ╠═════════════════════════════════════════════════════════════════════════════╣
+api02-1  | ║ Spring Profiles Ativos : [test]                                                ║
+api02-1  | ╠═══════════════════════════╦═════════════════════════════════════════════════╣
+api02-1  | ║ Parâmetro                 ║ Valor                                           ║
+api02-1  | ╠═══════════════════════════╬═════════════════════════════════════════════════╣
+api02-1  | ║ Fila (Queue)              ║                                                 ║
+api02-1  | ║   Tamanho Máximo          ║ 50000                                           ║
+api02-1  | ╠═══════════════════════════╬═════════════════════════════════════════════════╣
+api02-1  | ║ Executor de Consumidores  ║                                                 ║
+api02-1  | ║   Threads                 ║ Virtual Threads (Dinâmico)                      ║
+api02-1  | ╠═══════════════════════════╬═════════════════════════════════════════════════╣
+api02-1  | ║ Agendador de Estratégia   ║                                                 ║
+api02-1  | ║   Período de Decisão      ║ 1000 ms                                         ║
+api02-1  | ╠═══════════════════════════╬═════════════════════════════════════════════════╣
+api02-1  | ║ Cliente Web (WebClient)   ║                                                 ║
+api02-1  | ║   Conexões Máximas        ║ 700                                             ║
+api02-1  | ║   Timeout de Conexão      ║ 2000 ms                                         ║
+api02-1  | ║   Timeout de Resposta     ║ 10 s                                            ║
+api02-1  | ╠═══════════════════════════╬═════════════════════════════════════════════════╣
+api02-1  | ║ Monitor de Memória        ║                                                 ║
+api02-1  | ║   Limite para Aviso       ║ 50 MB                                           ║
+api02-1  | ║   Atraso Inicial          ║ 5 s                                             ║
+api02-1  | ║   Período                 ║ 5 s                                             ║
+api02-1  | ╚═══════════════════════════╩═════════════════════════════════════════════════╝
+api02-1  | 
+api01-1  | 22:28:29.088 [pool-6-thread-1] WARN  b.d.f.r.service.MemoryMonitorService - AVISO DE MEMÓRIA: Uso de Heap ultrapassou 100 MB. Uso atual: 131 MB
+api02-1  | 22:28:29.088 [pool-6-thread-1] WARN  b.d.f.r.service.MemoryMonitorService - AVISO DE MEMÓRIA: Uso de Heap ultrapassou 100 MB. Uso atual: 128 MB
+api02-1  | 22:28:29.345 [pool-8-thread-1] WARN  b.d.f.r.s.PaymentProcessorService - ESTRATÉGIA: Processador DEFAULT não confiável. Roteando preferencialmente para FALLBACK.
+api02-1  | 22:28:30.345 [pool-8-thread-1] WARN  b.d.f.r.s.PaymentProcessorService - ESTRATÉGIA: Processador DEFAULT confiável. Roteando preferencialmente para DEFAULT.
+api02-1  | 22:28:33.223 [reactor-http-epoll-2] WARN  b.d.f.rinha.web.PaymentHandler - Recebida requisição para PURGAR todos os dados de pagamento.
+api02-1  | 22:28:33.223 [reactor-http-epoll-2] INFO  b.d.f.r.s.PaymentStorageService - Filas de pagamentos no Redis foram limpas.
+api02-1  | 22:28:34.345 [pool-8-thread-1] WARN  b.d.f.r.s.PaymentProcessorService - ESTRATÉGIA: Processador DEFAULT não confiável. Roteando preferencialmente para FALLBACK.
+api02-1  | 22:28:35.345 [pool-8-thread-1] WARN  b.d.f.r.s.PaymentProcessorService - ESTRATÉGIA: Processador DEFAULT confiável. Roteando preferencialmente para DEFAULT.
+api02-1  | 22:28:39.345 [pool-8-thread-1] WARN  b.d.f.r.s.PaymentProcessorService - ESTRATÉGIA: Processador DEFAULT não confiável. Roteando preferencialmente para FALLBACK.
+api01-1  | 22:28:39.360 [pool-8-thread-1] WARN  b.d.f.r.s.PaymentProcessorService - ESTRATÉGIA: Processador DEFAULT não confiável. Roteando preferencialmente para FALLBACK.
+api02-1  | 22:28:40.345 [pool-8-thread-1] WARN  b.d.f.r.s.PaymentProcessorService - ESTRATÉGIA: Processador DEFAULT confiável. Roteando preferencialmente para DEFAULT.
+api01-1  | 22:28:40.360 [pool-8-thread-1] WARN  b.d.f.r.s.PaymentProcessorService - ESTRATÉGIA: Processador DEFAULT confiável. Roteando preferencialmente para DEFAULT.
+api02-1  | 22:28:44.345 [pool-8-thread-1] WARN  b.d.f.r.s.PaymentProcessorService - ESTRATÉGIA: Processador DEFAULT não confiável. Roteando preferencialmente para FALLBACK.
+api01-1  | 22:28:44.360 [pool-8-thread-1] WARN  b.d.f.r.s.PaymentProcessorService - ESTRATÉGIA: Processador DEFAULT não confiável. Roteando preferencialmente para FALLBACK.
+api02-1  | 22:28:45.345 [pool-8-thread-1] WARN  b.d.f.r.s.PaymentProcessorService - ESTRATÉGIA: Processador DEFAULT confiável. Roteando preferencialmente para DEFAULT.
+api01-1  | 22:28:45.360 [pool-8-thread-1] WARN  b.d.f.r.s.PaymentProcessorService - ESTRATÉGIA: Processador DEFAULT confiável. Roteando preferencialmente para DEFAULT.
+api02-1  | 22:28:49.345 [pool-8-thread-1] WARN  b.d.f.r.s.PaymentProcessorService - ESTRATÉGIA: Processador DEFAULT não confiável. Roteando preferencialmente para FALLBACK.
+api01-1  | 22:28:49.360 [pool-8-thread-1] WARN  b.d.f.r.s.PaymentProcessorService - ESTRATÉGIA: Processador DEFAULT não confiável. Roteando preferencialmente para FALLBACK.
+api02-1  | 22:28:50.345 [pool-8-thread-1] WARN  b.d.f.r.s.PaymentProcessorService - ESTRATÉGIA: Processador DEFAULT confiável. Roteando preferencialmente para DEFAULT.
+api01-1  | 22:28:50.360 [pool-8-thread-1] WARN  b.d.f.r.s.PaymentProcessorService - ESTRATÉGIA: Processador DEFAULT confiável. Roteando preferencialmente para DEFAULT.
+api01-1  | 22:28:54.402 [pool-8-thread-1] WARN  b.d.f.r.s.PaymentProcessorService - ESTRATÉGIA: Processador DEFAULT não confiável. Roteando preferencialmente para FALLBACK.
+api02-1  | 22:28:54.402 [pool-8-thread-1] WARN  b.d.f.r.s.PaymentProcessorService - ESTRATÉGIA: Processador DEFAULT não confiável. Roteando preferencialmente para FALLBACK.
+api02-1  | 22:28:54.605 [pool-7-thread-1] WARN  b.d.f.r.s.PaymentProcessorService - Health Check: Default COM FALHAS (falha consecutiva #1)
+api02-1  | 22:28:55.345 [pool-8-thread-1] WARN  b.d.f.r.s.PaymentProcessorService - ESTRATÉGIA: Processador DEFAULT confiável. Roteando preferencialmente para DEFAULT.
+api01-1  | 22:28:55.360 [pool-8-thread-1] WARN  b.d.f.r.s.PaymentProcessorService - ESTRATÉGIA: Processador DEFAULT confiável. Roteando preferencialmente para DEFAULT.
+api01-1  | 22:28:59.401 [pool-8-thread-1] WARN  b.d.f.r.s.PaymentProcessorService - ESTRATÉGIA: Processador DEFAULT não confiável. Roteando preferencialmente para FALLBACK.
+api02-1  | 22:28:59.401 [pool-8-thread-1] WARN  b.d.f.r.s.PaymentProcessorService - ESTRATÉGIA: Processador DEFAULT não confiável. Roteando preferencialmente para FALLBACK.
+api02-1  | 22:28:59.701 [pool-7-thread-1] WARN  b.d.f.r.s.PaymentProcessorService - Health Check: Default COM FALHAS (falha consecutiva #2)
+api01-1  | 22:29:00.401 [pool-8-thread-1] WARN  b.d.f.r.s.PaymentProcessorService - ESTRATÉGIA: Processador DEFAULT confiável. Roteando preferencialmente para DEFAULT.
+api02-1  | 22:29:00.402 [pool-8-thread-1] WARN  b.d.f.r.s.PaymentProcessorService - ESTRATÉGIA: Processador DEFAULT confiável. Roteando preferencialmente para DEFAULT.
+api01-1  | 22:29:04.401 [pool-8-thread-1] WARN  b.d.f.r.s.PaymentProcessorService - ESTRATÉGIA: Processador DEFAULT não confiável. Roteando preferencialmente para FALLBACK.
+api02-1  | 22:29:04.401 [pool-8-thread-1] WARN  b.d.f.r.s.PaymentProcessorService - ESTRATÉGIA: Processador DEFAULT não confiável. Roteando preferencialmente para FALLBACK.
+api02-1  | 22:29:04.801 [pool-7-thread-1] WARN  b.d.f.r.s.PaymentProcessorService - Health Check: Default COM FALHAS (falha consecutiva #3)
+api02-1  | 22:29:05.433 [pool-8-thread-1] WARN  b.d.f.r.s.PaymentProcessorService - ESTRATÉGIA: Processador DEFAULT confiável. Roteando preferencialmente para DEFAULT.
+api01-1  | 22:29:05.516 [pool-8-thread-1] WARN  b.d.f.r.s.PaymentProcessorService - ESTRATÉGIA: Processador DEFAULT confiável. Roteando preferencialmente para DEFAULT.
+api02-1  | 22:29:05.820 [pool-7-thread-1] WARN  b.d.f.r.s.PaymentProcessorService - Health Check: Fallback COM FALHAS (falha consecutiva #1)
+api02-1  | 22:29:09.402 [pool-8-thread-1] WARN  b.d.f.r.s.PaymentProcessorService - ESTRATÉGIA: Processador DEFAULT não confiável. Roteando preferencialmente para FALLBACK.
+api01-1  | 22:29:09.401 [pool-8-thread-1] WARN  b.d.f.r.s.PaymentProcessorService - ESTRATÉGIA: Processador DEFAULT não confiável. Roteando preferencialmente para FALLBACK.
+api02-1  | 22:29:09.801 [pool-7-thread-1] WARN  b.d.f.r.s.PaymentProcessorService - Health Check: Default COM FALHAS (falha consecutiva #4)
+api02-1  | 22:29:10.401 [pool-8-thread-1] WARN  b.d.f.r.s.PaymentProcessorService - ESTRATÉGIA: Processador DEFAULT confiável. Roteando preferencialmente para DEFAULT.
+api01-1  | 22:29:10.401 [pool-8-thread-1] WARN  b.d.f.r.s.PaymentProcessorService - ESTRATÉGIA: Processador DEFAULT confiável. Roteando preferencialmente para DEFAULT.
+api02-1  | 22:29:10.901 [pool-7-thread-1] WARN  b.d.f.r.s.PaymentProcessorService - Health Check: Fallback COM FALHAS (falha consecutiva #2)
+api02-1  | 22:29:14.403 [pool-8-thread-1] WARN  b.d.f.r.s.PaymentProcessorService - ESTRATÉGIA: Processador DEFAULT não confiável. Roteando preferencialmente para FALLBACK.
+api01-1  | 22:29:14.404 [pool-8-thread-1] WARN  b.d.f.r.s.PaymentProcessorService - ESTRATÉGIA: Processador DEFAULT não confiável. Roteando preferencialmente para FALLBACK.
+api02-1  | 22:29:14.901 [pool-7-thread-1] INFO  b.d.f.r.s.PaymentProcessorService - Health Check: Default recuperado.
+api02-1  | 22:29:15.402 [pool-8-thread-1] WARN  b.d.f.r.s.PaymentProcessorService - ESTRATÉGIA: Processador DEFAULT confiável. Roteando preferencialmente para DEFAULT.
+api01-1  | 22:29:15.402 [pool-8-thread-1] WARN  b.d.f.r.s.PaymentProcessorService - ESTRATÉGIA: Processador DEFAULT confiável. Roteando preferencialmente para DEFAULT.
+api02-1  | 22:29:16.003 [pool-7-thread-1] INFO  b.d.f.r.s.PaymentProcessorService - Health Check: Fallback recuperado.
+api01-1  | 22:29:19.405 [pool-8-thread-1] WARN  b.d.f.r.s.PaymentProcessorService - ESTRATÉGIA: Processador DEFAULT não confiável. Roteando preferencialmente para FALLBACK.
+api01-1  | 22:29:20.402 [pool-8-thread-1] WARN  b.d.f.r.s.PaymentProcessorService - ESTRATÉGIA: Processador DEFAULT confiável. Roteando preferencialmente para DEFAULT.
+api01-1  | 22:29:24.360 [pool-8-thread-1] WARN  b.d.f.r.s.PaymentProcessorService - ESTRATÉGIA: Processador DEFAULT não confiável. Roteando preferencialmente para FALLBACK.
+api01-1  | 22:29:25.401 [pool-8-thread-1] WARN  b.d.f.r.s.PaymentProcessorService - ESTRATÉGIA: Processador DEFAULT confiável. Roteando preferencialmente para DEFAULT.
+[Knginx-1 exited with code 0
+api02-1  | 22:29:36.683 [SpringApplicationShutdownHook] INFO  b.d.f.r.s.PaymentProcessorService - Iniciando desligamento gracioso...
+api01-1  | 22:29:36.683 [SpringApplicationShutdownHook] INFO  b.d.f.r.s.PaymentProcessorService - Iniciando desligamento gracioso...
+[Kapi01-1 exited with code 137
+[Kapi02-1 exited with code 137
+redis-1  | 1:signal-handler (1755210584) Received SIGTERM scheduling shutdown...
+redis-1  | 1:M 14 Aug 2025 22:29:44.958 * User requested shutdown...
+redis-1  | 1:M 14 Aug 2025 22:29:44.958 # Redis is now ready to exit, bye bye...
+log truncated at line 1000
