@@ -3,7 +3,7 @@
 ![Go](https://img.shields.io/badge/Go-1.24.5-blue.svg)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-17-blue.svg)
 ![Docker](https://img.shields.io/badge/Docker-Compose-blue.svg)
-![Version](https://img.shields.io/badge/Version-v0.0.3-green.svg)
+![Version](https://img.shields.io/badge/Version-v0.0.4-green.svg)
 
 Uma API backend desenvolvida em Go para processamento de pagamentos, implementando uma arquitetura hexagonal (ports and adapters) com padrões de Clean Architecture.
 
@@ -218,10 +218,13 @@ flowchart TD
 - ✅ **Implementado**: Default Processor e Fallback Processor totalmente funcionais
 - ✅ **Implementado**: Sistema de fallback automático integrado no Payment Service
 - ✅ **Implementado**: Interfaces comum para permitir flexibilidade entre services
+- ✅ **Implementado**: Unix Sockets para comunicação HAProxy ↔ App
 - ✅ **Funcional**: Processamento assíncrono, retry com backoff exponencial, controle de concorrência
 - ✅ **Funcional**: Fallback automático quando o processador padrão falha
 - ✅ **Funcional**: Tracking de qual processador foi usado para cada pagamento
 - ✅ **Funcional**: Ambos processadores (Default e Fallback) são URLs configuráveis
+- ✅ **Funcional**: Circuit Breakers independentes para cada processador
+- ✅ **Funcional**: Sistema de purge para limpeza de dados (desenvolvimento/testes)
 
 ### 🔧 **Configuração dos Processadores**
 
@@ -277,18 +280,52 @@ A aplicação Mr. Robot foi configurada para usar **Unix sockets** para comunica
 
 ### Arquitetura de Unix Sockets
 
-```text
-┌─────────────┐    Unix Socket    ┌──────────────┐
-│   HAProxy   │◄─────────────────►│  App Instance│
-│             │    /var/run/      │      1       │
-│ (Port 9999) │    mr_robot/      └──────────────┘
-│             │    mr_robot1.sock
-│             │
-│             │    Unix Socket    ┌──────────────┐
-│             │◄─────────────────►│  App Instance│
-│             │    /var/run/      │      2       │
-│             │    mr_robot/      └──────────────┘
-└─────────────┘    mr_robot2.sock
+```mermaid
+graph TD
+    %% Define styles
+    classDef haproxy fill:#e1f5fe,stroke:#01579b,stroke-width:3px,color:#000
+    classDef app fill:#e8f5e8,stroke:#1b5e20,stroke-width:2px,color:#000
+    classDef external fill:#f3e5f5,stroke:#4a148c,stroke-width:2px,color:#000
+    classDef socket fill:#fff3e0,stroke:#e65100,stroke-width:1px,color:#000
+
+    %% External client
+    C["🌍 External Client<br/>HTTP Requests"]
+    
+    %% HAProxy load balancer  
+    H["🌐 HAProxy Load Balancer<br/>📍 Port 9999<br/>⚖️ Round Robin"]
+    
+    %% App instances grouped
+    subgraph "🏗️ Application Instances"
+        direction LR
+        A1["📱 App Instance 1<br/>🔌 Unix Socket Ready"]
+        A2["📱 App Instance 2<br/>🔌 Unix Socket Ready"]
+    end
+    
+    subgraph "📁 Socket Files (/var/run/mr_robot/)"
+        direction LR
+        S1["📄 mr_robot1.sock"]
+        S2["📄 mr_robot2.sock"]
+    end
+    
+    %% Flow connections
+    C -->|"HTTP Request"| H
+    H -.->|"Load Balance via Unix Socket"| A1
+    H -.->|"Load Balance via Unix Socket"| A2
+    
+    %% Socket file mappings
+    A1 -.->|"Binds to"| S1
+    A2 -.->|"Binds to"| S2
+    
+    %% Response flow (bidirectional)
+    A1 -.->|"Response"| H
+    A2 -.->|"Response"| H
+    H -->|"HTTP Response"| C
+    
+    %% Apply styles
+    class C external
+    class H haproxy
+    class A1,A2 app
+    class S1,S2 socket
 ```
 
 ### Configuração dos Unix Sockets
@@ -400,6 +437,10 @@ O projeto utiliza um **Dockerfile unificado** (`build/Dockerfile`) que serve tan
 
 ### Configuração do ambiente
 
+> **🔗 Documentação Completa**: Para informações detalhadas sobre configurações, consulte:
+> - [📖 CONFIG_ARCHITECTURE.md](docs/CONFIG_ARCHITECTURE.md) - Nova arquitetura de configurações
+> - [🛠️ HOW_TO_ADD_NEW_CONFIG.md](docs/HOW_TO_ADD_NEW_CONFIG.md) - Como adicionar novas configurações
+
 1. **Clone o repositório**:
 
    ```bash
@@ -423,18 +464,84 @@ O projeto utiliza um **Dockerfile unificado** (`build/Dockerfile`) que serve tan
    vim config/.env
    ```
 
-   As principais variáveis que você pode querer ajustar:
+#### 🔧 **Configurações por Categoria**
 
-   | Variável | Descrição | Padrão |
-   |----------|-----------|---------|
-   | `APP_PORT` | Porta da aplicação | 8888 |
-   | `POSTGRES_PASSWORD` | Senha do banco de dados | your_secure_password_here |
-   | `DEBUG` | Modo debug | true (dev) |
-   | `LOG_LEVEL` | Nível de log | debug |
-   | `DEFAULT_PROCESSOR_URL` | URL do processador principal | `http://payment-processor-default:8080/payments` |
-   | `FALLBACK_PROCESSOR_URL` | URL do processador de fallback | `http://payment-processor-fallback:8080/payments` |
-   | `QUEUE_WORKERS` | Número de workers na fila | 10 |
-   | `QUEUE_BUFFER_SIZE` | Tamanho do buffer da fila | 10000 |
+A aplicação agora utiliza uma **arquitetura modular de configurações** com managers específicos:
+
+##### 🗄️ **Database Configuration**
+| Variável | Descrição | Padrão | Obrigatória |
+|----------|-----------|---------|-------------|
+| `POSTGRES_HOST` | Host do banco de dados | localhost | ❌ |
+| `POSTGRES_PORT` | Porta do banco de dados | 5432 | ❌ |
+| `POSTGRES_USER` | Usuário do banco | postgres | ❌ |
+| `POSTGRES_PASSWORD` | Senha do banco | - | ✅ |
+| `POSTGRES_DB` | Nome do banco | mr_robot | ❌ |
+| `POSTGRES_SSLMODE` | Modo SSL | disable | ❌ |
+| `POSTGRES_TIMEZONE` | Timezone | UTC | ❌ |
+
+##### 💳 **Payment Configuration**
+| Variável | Descrição | Padrão | Obrigatória |
+|----------|-----------|---------|-------------|
+| `DEFAULT_PROCESSOR_URL` | URL do processador principal | - | ✅ |
+| `FALLBACK_PROCESSOR_URL` | URL do processador de fallback | - | ✅ |
+
+##### 📬 **Queue Configuration**
+| Variável | Descrição | Padrão | Obrigatória |
+|----------|-----------|---------|-------------|
+| `QUEUE_WORKERS` | Número de workers | 10 | ❌ |
+| `QUEUE_BUFFER_SIZE` | Tamanho do buffer | 10000 | ❌ |
+| `QUEUE_MAX_ENQUEUE_RETRIES` | Máximo de tentativas | 4 | ❌ |
+| `QUEUE_MAX_SIMULTANEOUS_WRITES` | Escritas simultâneas | 50 | ❌ |
+
+##### ⚡ **Circuit Breaker Configuration**
+| Variável | Descrição | Padrão | Obrigatória |
+|----------|-----------|---------|-------------|
+| `CIRCUIT_BREAKER_TIMEOUT` | Timeout das requisições | 1s | ❌ |
+| `CIRCUIT_BREAKER_MAX_FAILURES` | Máximo de falhas | 5 | ❌ |
+| `CIRCUIT_BREAKER_RESET_TIMEOUT` | Timeout para reset | 10s | ❌ |
+| `CIRCUIT_BREAKER_RATE_LIMIT` | Rate limit | 5 | ❌ |
+
+##### 🌐 **Controller Configuration**
+| Variável | Descrição | Padrão | Obrigatória |
+|----------|-----------|---------|-------------|
+| `HOSTNAME` | Nome do host | localhost | ❌ |
+
+#### 📋 **Exemplo de .env**
+
+```bash
+# Database Configuration
+POSTGRES_HOST=localhost
+POSTGRES_PORT=5432
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=your_secure_password_here
+POSTGRES_DB=mr_robot
+POSTGRES_SSLMODE=disable
+POSTGRES_TIMEZONE=UTC
+
+# Payment Configuration (OBRIGATÓRIAS)
+DEFAULT_PROCESSOR_URL=http://payment-processor-default:8080/payments
+FALLBACK_PROCESSOR_URL=http://payment-processor-fallback:8080/payments
+
+# Queue Configuration
+QUEUE_WORKERS=10
+QUEUE_BUFFER_SIZE=10000
+QUEUE_MAX_ENQUEUE_RETRIES=4
+QUEUE_MAX_SIMULTANEOUS_WRITES=50
+
+# Circuit Breaker Configuration
+CIRCUIT_BREAKER_TIMEOUT=1s
+CIRCUIT_BREAKER_MAX_FAILURES=5
+CIRCUIT_BREAKER_RESET_TIMEOUT=10s
+CIRCUIT_BREAKER_RATE_LIMIT=5
+
+# Controller Configuration
+HOSTNAME=localhost
+
+# Outras configurações legadas (ainda suportadas)
+APP_PORT=8888
+DEBUG=true
+LOG_LEVEL=debug
+```
 
 ### Executando em modo de desenvolvimento
 
@@ -537,6 +644,13 @@ make status          # Alias para dev-status
 make test            # Executar testes no container de desenvolvimento
 make test-coverage   # Executar testes com coverage
 make test-db-connection  # Testar conexão com banco de dados
+make test-unix-sockets   # Testar implementação de Unix sockets
+
+# Comandos de Unix Sockets
+make enable-tcp-mode          # Alternar para modo TCP (desabilitar Unix sockets)
+make enable-unix-socket-mode  # Alternar para modo Unix socket
+make socket-mode-status       # Verificar configuração atual do modo socket
+make debug-unix-sockets       # Diagnosticar problemas com Unix sockets
 
 # Ajuda
 make help            # Ver todos os comandos disponíveis
@@ -589,6 +703,7 @@ A API fornece os seguintes endpoints para processamento de pagamentos:
 ```http
 POST /payments           # Processar um novo pagamento (assíncrono)
 GET /payment-summary     # Resumo dos pagamentos processados
+DELETE /payments         # Purgar todos os pagamentos (limpeza completa)
 GET /health              # Health check da aplicação
 ```
 
@@ -618,6 +733,15 @@ GET /health              # Health check da aplicação
   - `from`: Data de início (formato RFC3339)
   - `to`: Data de fim (formato RFC3339)
 - **Nota**: Ambos os parâmetros devem ser fornecidos juntos ou nenhum deles
+
+### Endpoint de Limpeza de Pagamentos
+
+`DELETE /payments`
+
+- **Método**: DELETE
+- **Resposta**: 204 No Content (sucesso)
+- **Função**: Remove todos os registros de pagamentos do banco de dados
+- **Uso**: Principalmente para testes e desenvolvimento
 
 ### Exemplo de resposta do resumo
 
@@ -800,56 +924,93 @@ type ProcessorSummary struct {
 
 ## 🎯 Funcionalidades Implementadas
 
-- ✅ **API REST**: Endpoints para processamento assíncrono de pagamentos
+- ✅ **API REST**: Endpoints para processamento assíncrono de pagamentos e limpeza de dados
 - ✅ **Arquitetura Hexagonal**: Separação clara de responsabilidades em camadas
 - ✅ **Clean Architecture**: Inversão de dependências e isolamento do domínio
 - ✅ **Queue System**: Sistema de filas com workers para processamento assíncrono
-- ✅ **Circuit Breaker**: Proteção contra falhas em cascata (3 falhas em 5s)
-- ✅ **Rate Limiter**: Controle de taxa de processamento concorrente (máx. 5)
-- ✅ **Sistema de Fallback**: Fallback automático entre processadores
+- ✅ **Circuit Breaker**: Proteção contra falhas em cascata (independente por processador)
+- ✅ **Rate Limiter**: Controle de taxa de processamento concorrente (máx. configurável)
+- ✅ **Sistema de Fallback**: Fallback automático entre processadores com circuit breakers independentes
 - ✅ **Unix Sockets**: Comunicação HAProxy ↔ App via Unix sockets para melhor performance
 - ✅ **SQL Nativo**: Implementação com PostgreSQL e pgx para transações e retry automático
 - ✅ **Docker**: Ambiente containerizado para desenvolvimento e produção
 - ✅ **Hot Reload**: Desenvolvimento com Air para recarregamento automático
 - ✅ **Health Check**: Monitoramento da aplicação e conectividade do banco
-- ✅ **Makefile Completo**: Automação de 40+ comandos para desenvolvimento e produção
-- ✅ **Versionamento**: Controle unificado de versões com VERSION.mk (atual: v0.0.2)
-- ✅ **Environment**: Configuração via variáveis de ambiente
-- ✅ **Retry Logic**: Backoff exponencial para jobs falhados (1s, 2s, 4s)
+- ✅ **Makefile Completo**: Automação de 50+ comandos para desenvolvimento e produção
+- ✅ **Versionamento**: Controle unificado de versões com VERSION.mk (atual: v0.0.4)
+- ✅ **Environment**: Configuração via variáveis de ambiente com fallback TCP/Unix Socket
+- ✅ **Retry Logic**: Backoff exponencial para jobs falhados e transações SQL
 - ✅ **Timeout Control**: Timeouts configuráveis para requisições e jobs
 - ✅ **Mock Processor**: Processador de pagamentos mock para desenvolvimento
-- ✅ **Database Management**: Comandos para backup, restore e administração do BD
-- ✅ **Monitoring Tools**: Comandos para monitoramento de containers e aplicação
+- ✅ **Database Management**: Comandos para backup, restore, purge e administração do BD
+- ✅ **Monitoring Tools**: Comandos para monitoramento de containers, Unix sockets e aplicação
+- ✅ **Testing Scripts**: Scripts automatizados de teste para Unix sockets e conectividade
+- ✅ **Troubleshooting Docs**: Documentação completa para resolução de problemas
 
 ## 🚧 Roadmap
 
 ### Próximas Implementações (Prioridade Alta)
 
 - [ ] **Testes de Integração**: Cobertura completa de testes para controllers e services
-- [ ] **Métricas de Monitoramento**: Implementar coleta de métricas do sistema de fallback
+- [ ] **Métricas de Monitoramento**: Implementar coleta de métricas do sistema de fallback e Unix sockets
 - [ ] **Documentação de API**: Documentação completa com Swagger/OpenAPI
+- [ ] **Logging Estruturado**: Implementar logging JSON com níveis configuráveis
 
 ### Melhorias Futuras (Prioridade Média)
 
 - [ ] **Observabilidade**: Métricas estruturadas com Prometheus/Grafana
-- [ ] **Logging Estruturado**: Implementar logging JSON com níveis configuráveis
 - [ ] **CI/CD**: Pipeline de integração contínua com GitHub Actions
 - [ ] **Dead Letter Queue**: Fila para jobs que falharam após todas as tentativas
+- [ ] **Health Checks Avançados**: Health checks detalhados para todos os componentes
 
 ### Funcionalidades Avançadas (Prioridade Baixa)
 
-- [ ] **Monitoring**: Dashboard de métricas em tempo real e alertas
+- [ ] **Monitoring Dashboard**: Dashboard de métricas em tempo real e alertas
 - [ ] **Graceful Shutdown**: Finalização elegante do processamento de filas
 - [ ] **Rate Limiting Avançado**: Rate limiting baseado em usuário/IP
 - [ ] **Audit Trail**: Rastreamento completo de todas as operações
 
 ## 📋 Versão Atual
 
-**Versão**: v0.0.2
+**Versão**: v0.0.4
 
 ### Changelog
 
-#### v0.0.2 (Atual)
+#### v0.0.4 (Atual)
+
+- ✅ Limpeza completa da documentação - remoção de documentos redundantes e históricos
+- ✅ Consolidação e reorganização do índice de documentação
+- ✅ Atualização de versões e referências desatualizadas
+- ✅ Melhoria da estrutura organizacional da documentação
+- ✅ Remoção de arquivos vazios ou desnecessários
+- ✅ Simplificação do conjunto de documentos mantendo funcionalidade completa
+
+#### v0.0.4
+
+- ✅ Unix Sockets implementados completamente para comunicação HAProxy ↔ App
+- ✅ Scripts de teste automatizado para Unix sockets
+- ✅ Comandos Makefile para gerenciamento de Unix sockets (enable-tcp-mode, debug-unix-sockets, etc.)
+- ✅ Documentação completa de troubleshooting para Unix sockets
+- ✅ Fallback automático TCP quando Unix sockets não estão disponíveis
+- ✅ Sistema de configuração via variáveis de ambiente para socket/TCP mode
+- ✅ Melhorias na documentação e consistência do projeto
+- ✅ Atualização de todas as documentações para refletir estado atual
+
+#### v0.0.3
+
+- ✅ Sistema de filas com workers implementado
+- ✅ Circuit Breaker e Rate Limiter funcionais
+- ✅ Retry com backoff exponencial
+- ✅ Controle de concorrência no banco de dados
+- ✅ Processamento assíncrono completo
+- ✅ Makefile completo com comandos para desenvolvimento e produção
+- ✅ Sistema de versionamento unificado com VERSION.mk
+- ✅ **Dockerfile Unificado**: Multi-stage build para dev e prod
+- ✅ **Novos comandos Makefile**: `dockerfile-stages`, `dockerfile-info`, `quick-dev`, `quick-prod`
+- ✅ **Otimização de Build**: Cache compartilhado entre ambientes
+- ✅ **Segurança**: Produção executa como usuário `nobody`
+
+#### v0.0.2
 
 - ✅ Sistema de filas com workers implementado
 - ✅ Circuit Breaker e Rate Limiter funcionais
