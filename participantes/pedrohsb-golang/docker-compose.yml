@@ -13,7 +13,7 @@ services:
       - SUMMARY_URL=http://app2:8080/internal/payments-summary
       - PROCESSOR_DEFAULT_URL=http://payment-processor-default:8080/payments
       - PROCESSOR_FALLBACK_URL=http://payment-processor-fallback:8080/payments
-      - GOMAXPROCS=1
+      - GOMAXPROCS=3
     deploy:
       resources:
         limits:
@@ -35,7 +35,7 @@ services:
       - SUMMARY_URL=http://app1:8080/internal/payments-summary
       - PROCESSOR_DEFAULT_URL=http://payment-processor-default:8080/payments
       - PROCESSOR_FALLBACK_URL=http://payment-processor-fallback:8080/payments
-      - GOMAXPROCS=1
+      - GOMAXPROCS=3
     deploy:
       resources:
         limits:
