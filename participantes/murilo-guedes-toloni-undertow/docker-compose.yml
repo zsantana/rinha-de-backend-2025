@@ -1,15 +1,12 @@
 services:
-  lbproxy:
-    image: enermaxx/lb-novo-undertow:2.0.7
-    container_name: lb-proxy
-    environment:
-      - API_1_HOST=api1
-      - API_1_PORT=8080
-      - API_2_HOST=api2
-      - API_2_PORT=8080
-      - LB_PORT=9999
+  haproxy:
+    image: haproxy:3.2-alpine
+    container_name: my-haproxy
     ports:
       - "9999:9999"
+    volumes:
+      - ./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
+      - sockets:/sockets
     depends_on:
       - api1
       - api2
@@ -19,52 +16,57 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "1.2"
-          memory: "150MB"
+          cpus: "0.5"
+          memory: "70MB"
+
   api1: &api
-    image: enermaxx/rinha-backend-udp:1.0.4
+    image: enermaxx/rinha-standalone:1.0.14
     container_name: springboot-api1
     hostname: api1
-    ports:
-      - "7777:8080"
     environment:
-      - HOST_TO_LOCK=api2
-      - PORT_TO_LOCK=8080
       - MAIN_PROCESSOR_HOST=payment-processor-default
       - MAIN_PROCESSOR_PORT=8080
       - FALLBACK_PROCESSOR_HOST=payment-processor-fallback
       - FALLBACK_PROCESSOR_PORT=8080
       - INSTANCE_ID=API-1
+      - SOCKET=/sockets/api1.sock
+      - PEER_SOCKET=/sockets/api2.sock
+    volumes:
+      - sockets:/sockets
     networks:
       - backend
       - payment-processor
     deploy:
       resources:
         limits:
-          cpus: "0.15"
-          memory: "100MB"
+          cpus: "0.5"
+          memory: "140MB"
 
   api2:
     <<: *api
     container_name: springboot-api2
     hostname: api2
-    ports:
-      - "7778:8080"
     environment:
-      - HOST_TO_LOCK=api1
-      - PORT_TO_LOCK=8080
       - MAIN_PROCESSOR_HOST=payment-processor-default
       - MAIN_PROCESSOR_PORT=8080
       - FALLBACK_PROCESSOR_HOST=payment-processor-fallback
       - FALLBACK_PROCESSOR_PORT=8080
       - INSTANCE_ID=API-2
+      - SOCKET=/sockets/api2.sock
+      - PEER_SOCKET=/sockets/api1.sock
+    volumes:
+      - sockets:/sockets
     deploy:
       resources:
         limits:
-          cpus: "0.15"
-          memory: "100MB"
+          cpus: "0.5"
+          memory: "140MB"
+
 networks:
   backend:
     driver: bridge
   payment-processor:
     external: true
+
+volumes:
+  sockets:
