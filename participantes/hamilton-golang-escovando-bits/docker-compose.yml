@@ -10,7 +10,7 @@ x-rinha-api-base: &rinha-api-base
   deploy: &rinha-api-deploy
     resources:
       limits:
-        cpus: "0.18750"
+        cpus: "0.2"
         memory: "50MB"
 
   environment: &common-environment
@@ -40,7 +40,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.45"
+          cpus: "0.4"
           memory: "30MB"
 
   rinha-api-1:
@@ -84,6 +84,21 @@ services:
         limits:
           cpus: "0.3"
           memory: "40MB"
+
+  nats:
+    image: nats:2.10.14-alpine
+    container_name: nats_server
+    ports:
+      - "4222:4222"
+      - "6222:6222"
+      - "8222:8222"
+    networks:
+      - app-network
+    deploy:
+      resources:
+        limits:
+          cpus: "0.2"
+          memory: "30MB"
 
 networks:
   app-network:
