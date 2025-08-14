@@ -43,14 +43,14 @@ services:
     environment:
       - WRITER_SOCKET_PATH=/tmp/writer.sock
       - GOGC=100
-      - GOMEMLIMIT=60MiB
+      - GOMEMLIMIT=20MiB
     volumes:
       - socket_data:/tmp
     deploy:
       resources:
         limits:
           cpus: "0.3"
-          memory: "150MB"
+          memory: "40MB"
 
   load-balance:
     image: openresty/openresty:bullseye
