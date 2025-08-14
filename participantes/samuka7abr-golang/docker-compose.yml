@@ -21,54 +21,54 @@ services:
       - rinha-net
 
   app-1:
-    image: samuka7abrr/rinha-backend-2025:latest
+    image: samuka7abrr/my-rinha-backend:latest
     container_name: app-1
     environment:
-      - SERVICE_PORT=8080
+      - DB_HOST=rinha-postgres
+      - DB_PORT=5432
+      - DB_USER=postgres
+      - DB_PASSWORD=postgres
+      - DB_NAME=rinha
+      - REDIS_ADDR=rinha-redis:6379
       - PAYMENT_PROCESSOR_DEFAULT_URL=http://payment-processor-default:8080
       - PAYMENT_PROCESSOR_FALLBACK_URL=http://payment-processor-fallback:8080
-      - DB_HOST=postgres
-      - DB_USER=admin
-      - DB_PASSWORD=123
-      - DB_NAME=rinha
-      - REDIS_ADDR=redis:6379
     expose:
       - "8080"
     depends_on:
-      - postgres
-      - redis
+      - rinha-postgres
+      - rinha-redis
     deploy:
       resources:
         limits:
-          cpus: "0.55"
-          memory: "130MB"
+          cpus: '0.4'
+          memory: 64M
     restart: always
     networks:
       - rinha-net
       - payment-processor
 
   app-2:
-    image: samuka7abrr/rinha-backend-2025:latest
+    image: samuka7abrr/my-rinha-backend:latest
     container_name: app-2
     environment:
-      - SERVICE_PORT=8080
+      - DB_HOST=rinha-postgres
+      - DB_PORT=5432
+      - DB_USER=postgres
+      - DB_PASSWORD=postgres
+      - DB_NAME=rinha
+      - REDIS_ADDR=rinha-redis:6379
       - PAYMENT_PROCESSOR_DEFAULT_URL=http://payment-processor-default:8080
       - PAYMENT_PROCESSOR_FALLBACK_URL=http://payment-processor-fallback:8080
-      - DB_HOST=postgres
-      - DB_USER=admin
-      - DB_PASSWORD=123
-      - DB_NAME=rinha
-      - REDIS_ADDR=redis:6379
     expose:
       - "8080"
     depends_on:
-      - postgres
-      - redis
+      - rinha-postgres
+      - rinha-redis
     deploy:
       resources:
         limits:
-          cpus: "0.55"
-          memory: "130MB"
+          cpus: '0.4'
+          memory: 64M
     restart: always
     networks:
       - rinha-net
@@ -87,8 +87,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.20"
-          memory: "50MB"
+          cpus: "0.20" 
+          memory: "50MB"  
     restart: always
     networks:
       - rinha-net
@@ -99,8 +99,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.10"
-          memory: "20MB"
+          cpus: "0.10" 
+          memory: "20MB"  
     restart: always
     networks:
       - rinha-net
@@ -112,4 +112,4 @@ networks:
   rinha-net:
     driver: bridge
   payment-processor:
-    external: true 
+    external: true
