@@ -1,6 +1,6 @@
 x-service-templates:
   backend-service: &backend-service
-    image: 4emcos/rinha-backend-2025-bun:1.0.11
+    image: 4emcos/rinha-backend-2025-bun:1.0.12
     depends_on:
       - writer
     volumes:
@@ -39,7 +39,7 @@ services:
 
   writer:
     hostname: writer
-    image: 4emcos/writer:2.0.0
+    image: 4emcos/writer:2.0.1
     environment:
       - WRITER_SOCKET_PATH=/tmp/writer.sock
       - GOGC=100
