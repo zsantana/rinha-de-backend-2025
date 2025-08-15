@@ -42,7 +42,8 @@ services:
     image: 4emcos/writer:2.0.1
     environment:
       - WRITER_SOCKET_PATH=/tmp/writer.sock
-      - GOGC=off
+      - GOGC=100
+      - GOMEMLIMIT=20MiB
     volumes:
       - socket_data:/tmp
     deploy:
