@@ -21,6 +21,7 @@ services:
     image: lecosas/rinha-backend-2025-java-spring-graalvm:0.4-direct
     container_name: graalvm-4-direct-backend-01
     hostname: backend-01
+    pull_policy: always
     networks:
       - backend
       - payment-processor
@@ -32,7 +33,7 @@ services:
       - PAYMENT_BACKEND_SUMMARY_DELAY_3=20
       - PAYMENT_BACKEND_SUMMARY_DELAY_4=10
       - PAYMENT_BACKEND_WARMUP_CYCLES=500
-      - PAYMENT_BACKEND_WORKER_COUNT=200
+      - PAYMENT_BACKEND_WORKER_COUNT=10
       - PAYMENT_BACKEND_WORKER_FALLBACK_DELAY=20
       - PAYMENT_BACKEND_WORKER_THREAD_DELAY=0
       - PAYMENT_BACKEND_WORKER_PAUSED_DELAY=50
@@ -71,7 +72,7 @@ services:
       - PAYMENT_BACKEND_SUMMARY_DELAY_3=20
       - PAYMENT_BACKEND_SUMMARY_DELAY_4=10
       - PAYMENT_BACKEND_WARMUP_CYCLES=500
-      - PAYMENT_BACKEND_WORKER_COUNT=200
+      - PAYMENT_BACKEND_WORKER_COUNT=10
       - PAYMENT_BACKEND_WORKER_FALLBACK_DELAY=20
       - PAYMENT_BACKEND_WORKER_THREAD_DELAY=0
       - PAYMENT_BACKEND_WORKER_PAUSED_DELAY=50
@@ -94,8 +95,8 @@ services:
     image: redis:7-alpine
     container_name: graalvm-4-direct-redis
     command: redis-server --save "" --appendonly no --maxmemory 30Mb --maxmemory-policy allkeys-lru --tcp-keepalive 60 --timeout 0
-    ports:
-      - "6379:6379"
+    # ports:
+    #   - "6379:6379"
     networks:
       - backend
     healthcheck:
