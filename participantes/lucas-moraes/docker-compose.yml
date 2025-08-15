@@ -23,15 +23,14 @@ services:
     tmpfs:
       - /var/lib/postgresql/data
     networks:
-        - default
-    deploy:
-      resources:
-        limits:
-          cpus:   '0.10'
-          memory: '128M'
-  
+      - default
+    cpus: "0.25"
+    mem_limit: "110m"
+
   api-1:
-    image: 881029/rinha-backend-2025:2.3.3
+    cpus: "0.60"
+    mem_limit: "100m"
+    image: 881029/rinha-backend-2025:2.3.4
     # build:
     #   context: .
     #   dockerfile: ./Dockerfile
@@ -43,24 +42,29 @@ services:
       DB_USER: user
       DB_PASS: pass
       DB_NAME: rinha
+      RUN_MIGRATIONS: true
       PROCESSOR_DEFAULT:  "http://payment-processor-default:8080"
       PROCESSOR_FALLBACK: "http://payment-processor-fallback:8080"
+      NODE_OPTIONS: "--max-old-space-size=96 --max-semi-space-size=8"
     expose:
       - "9999"
     depends_on:
       postgres:
         condition: service_healthy
-    deploy:
-      resources:
-        limits:
-          cpus:   '1.2'
-          memory: '170M'
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://localhost:9999/health || exit 1"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
 
   api-2:
-    image: 881029/rinha-backend-2025:2.3.3
+    cpus: "0.55"
+    mem_limit: "90m"
+    image: 881029/rinha-backend-2025:2.3.4
     # build:
-    #    context: .
-    #    dockerfile: ./Dockerfile
+    #   context: .
+    #   dockerfile: ./Dockerfile
     environment:
       HOST: 0.0.0.0
       PORT: 9999
@@ -69,32 +73,36 @@ services:
       DB_USER: user
       DB_PASS: pass
       DB_NAME: rinha
+      RUN_MIGRATIONS: false
       PROCESSOR_DEFAULT:  "http://payment-processor-default:8080"
       PROCESSOR_FALLBACK: "http://payment-processor-fallback:8080"
+      NODE_OPTIONS: "--max-old-space-size=96 --max-semi-space-size=8"
     expose:
       - "9999"
     depends_on:
       postgres:
         condition: service_healthy
-    deploy:
-      resources:
-        limits:
-          cpus:   '1.2'
-          memory: '160M'
- 
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://localhost:9999/health || exit 1"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
   lb:
     image: nginx:alpine
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf:ro
     ports:
       - "9999:9999"
-    networks:
-      - default
     depends_on:
       - api-1
       - api-2
-    deploy:
-      resources:
-        limits:
-          cpus:   '0.10'
-          memory: '10M'
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://localhost:9999/health || exit 1"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+    cpus: "0.05"
+    mem_limit: "20m"
+    restart: unless-stopped
