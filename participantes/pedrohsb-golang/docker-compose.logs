@@ -1,0 +1,45 @@
+
+ app1 Pulling 
+ app2 Pulling 
+ 9824c27679d3 Already exists 
+ c10eb810d561 Already exists 
+ 3ca6e2d3532f Already exists 
+ 3182c07fa5bf Pulling fs layer 
+ 9824c27679d3 Already exists 
+ c10eb810d561 Already exists 
+ 3ca6e2d3532f Already exists 
+ 3182c07fa5bf Pulling fs layer 
+ 3182c07fa5bf Downloading [>                                                  ]  62.49kB/6.112MB
+ 3182c07fa5bf Downloading [>                                                  ]  62.49kB/6.112MB
+ 3182c07fa5bf Downloading [====================================>              ]  4.434MB/6.112MB
+ 3182c07fa5bf Downloading [====================================>              ]  4.434MB/6.112MB
+ 3182c07fa5bf Download complete 
+ 3182c07fa5bf Download complete 
+ 3182c07fa5bf Extracting [>                                                  ]  65.54kB/6.112MB
+ 3182c07fa5bf Extracting [>                                                  ]  65.54kB/6.112MB
+ 3182c07fa5bf Extracting [==================================================>]  6.112MB/6.112MB
+ 3182c07fa5bf Extracting [==================================================>]  6.112MB/6.112MB
+ 3182c07fa5bf Pull complete 
+ 3182c07fa5bf Pull complete 
+ app1 Pulled 
+ app2 Pulled 
+ Network pedrohsb-golang_backend  Creating
+ Network pedrohsb-golang_backend  Created
+ Container pedrohsb-golang-app1-1  Creating
+ Container pedrohsb-golang-app2-1  Creating
+ Container pedrohsb-golang-app1-1  Created
+ Container pedrohsb-golang-app2-1  Created
+ Container haproxy-1  Creating
+ Container haproxy-1  Created
+Attaching to haproxy-1, app1-1, app2-1
+haproxy-1  | [NOTICE]   (1) : Initializing new worker (8)
+haproxy-1  | [NOTICE]   (1) : Loading success.
+haproxy-1  | [NOTICE]   (1) : haproxy version is 3.2.3-1844da7
+haproxy-1  | [NOTICE]   (1) : path to executable is /usr/local/sbin/haproxy
+haproxy-1  | [WARNING]  (1) : Exiting Master process...
+haproxy-1  | [WARNING]  (8) : Proxy fe_tcp stopped (cumulated conns: FE: 558, BE: 0).
+haproxy-1  | [WARNING]  (8) : Proxy be_tcp stopped (cumulated conns: FE: 0, BE: 558).
+haproxy-1  | [WARNING]  (1) : Current worker (8) exited with code 0 (Exit)
+haproxy-1  | [WARNING]  (1) : All workers exited. Exiting... (0)
+[Khaproxy-1 exited with code 0
+log truncated at line 1000
