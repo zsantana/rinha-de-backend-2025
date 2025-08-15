@@ -1,6 +1,6 @@
 x-service-templates:
   backend-service: &backend-service
-    image: 4emcos/rinha-backend-2025-bun:1.0.13
+    image: 4emcos/rinha-backend-2025-bun:1.0.12
     depends_on:
       - writer
     volumes:
@@ -39,7 +39,7 @@ services:
 
   writer:
     hostname: writer
-    image: 4emcos/writer:2.0.2
+    image: 4emcos/writer:2.0.1
     environment:
       - WRITER_SOCKET_PATH=/tmp/writer.sock
       - GOGC=100
@@ -50,8 +50,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.4"
-          memory: "100MB"
+          cpus: "0.3"
+          memory: "70MB"
 
   load-balance:
     image: openresty/openresty:bullseye
@@ -69,7 +69,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.3"
+          cpus: "0.4"
           memory: "75MB"
           
 volumes:
