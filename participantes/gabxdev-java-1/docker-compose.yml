@@ -34,7 +34,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '0.6'
+          cpus: '0.5'
           memory: '125MB'
 
   backend-2:
@@ -69,7 +69,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '0.6'
+          cpus: '0.5'
           memory: '125MB'
 
   load-balancer:
@@ -87,7 +87,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.30"
+          cpus: "0.5"
           memory: "100MB"
     environment:
       BACK_END_1_URL: backend-1
