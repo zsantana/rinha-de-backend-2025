@@ -12,7 +12,7 @@ x-service-templates:
       resources:
         limits:
           cpus: "0.4"
-          memory: "55MB"
+          memory: "75MB"
 
 services:
   backend-01:
@@ -42,8 +42,7 @@ services:
     image: 4emcos/writer:2.0.1
     environment:
       - WRITER_SOCKET_PATH=/tmp/writer.sock
-      - GOGC=100
-      - GOMEMLIMIT=20MiB
+      - GOGC=off
     volumes:
       - socket_data:/tmp
     deploy:
