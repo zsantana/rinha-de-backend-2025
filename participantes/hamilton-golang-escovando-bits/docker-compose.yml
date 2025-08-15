@@ -10,7 +10,7 @@ x-rinha-api-base: &rinha-api-base
   deploy: &rinha-api-deploy
     resources:
       limits:
-        cpus: "0.25"
+        cpus: "0.2"
         memory: "100MB"
 
   environment: &common-environment
@@ -82,7 +82,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.4"
+          cpus: "0.5"
           memory: "40MB"
 
   nats:

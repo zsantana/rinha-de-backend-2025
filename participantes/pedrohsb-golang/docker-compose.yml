@@ -13,7 +13,7 @@ services:
       resources:
         limits:
           cpus: "0.5"
-          memory: 100M
+          memory: 125M
     restart: unless-stopped
 
   app2:
@@ -30,7 +30,7 @@ services:
       resources:
         limits:
           cpus: "0.5"
-          memory: 100M
+          memory: 125M
     restart: unless-stopped
 
   haproxy:
@@ -50,7 +50,7 @@ services:
       resources:
         limits:
           cpus: "0.5"
-          memory: 150M
+          memory: 100M
     restart: unless-stopped
 
 
