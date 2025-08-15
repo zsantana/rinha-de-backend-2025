@@ -21,6 +21,7 @@ services:
     image: lecosas/rinha-backend-2025-java-spring-graalvm:0.4-direct
     container_name: graalvm-4-direct-backend-01
     hostname: backend-01
+    pull_policy: always
     networks:
       - backend
       - payment-processor
