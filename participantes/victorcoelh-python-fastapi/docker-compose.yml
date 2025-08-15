@@ -1,5 +1,5 @@
 x-base-service: &fastapi-server
-  image: victorcoelh/rinha-backend-2025-app:latest
+  image: victorcoelh/rinha-backend-2025-app:custom-async
   environment:
     REDIS_URL: redis://redis:6379/0
   networks:
