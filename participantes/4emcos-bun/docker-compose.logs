@@ -1,0 +1,93 @@
+
+ writer Pulling 
+ backend-01 Pulling 
+ backend-02 Pulling 
+ 84c1612666f6 Already exists 
+ ca2dc5ebe77c Pulling fs layer 
+ a3be5d4ce401 Already exists 
+ 09b3af3c9d76 Already exists 
+ a3be5d4ce401 Already exists 
+ 01dc2b9b9974 Already exists 
+ 09b3af3c9d76 Already exists 
+ 61d8100e0bd1 Already exists 
+ 01dc2b9b9974 Already exists 
+ 61d8100e0bd1 Already exists 
+ 2679ccdb0946 Pulling fs layer 
+ 4f4fb700ef54 Pulling fs layer 
+ 2679ccdb0946 Pulling fs layer 
+ 4f4fb700ef54 Pulling fs layer 
+ 4f4fb700ef54 Download complete 
+ 4f4fb700ef54 Download complete 
+ ca2dc5ebe77c Downloading [>                                                  ]  33.31kB/2.456MB
+ 2679ccdb0946 Downloading [>                                                  ]  411.8kB/39.96MB
+ 2679ccdb0946 Downloading [>                                                  ]  411.8kB/39.96MB
+ ca2dc5ebe77c Downloading [============================================>      ]  2.184MB/2.456MB
+ ca2dc5ebe77c Verifying Checksum 
+ ca2dc5ebe77c Download complete 
+ ca2dc5ebe77c Extracting [>                                                  ]  32.77kB/2.456MB
+ ca2dc5ebe77c Extracting [==================================================>]  2.456MB/2.456MB
+ ca2dc5ebe77c Extracting [==================================================>]  2.456MB/2.456MB
+ ca2dc5ebe77c Pull complete 
+ writer Pulled 
+ 2679ccdb0946 Downloading [======================>                            ]     18MB/39.96MB
+ 2679ccdb0946 Downloading [======================>                            ]     18MB/39.96MB
+ 2679ccdb0946 Downloading [==========================================>        ]  33.94MB/39.96MB
+ 2679ccdb0946 Downloading [==========================================>        ]  33.94MB/39.96MB
+ 2679ccdb0946 Verifying Checksum 
+ 2679ccdb0946 Download complete 
+ 2679ccdb0946 Download complete 
+ 2679ccdb0946 Extracting [>                                                  ]    426kB/39.96MB
+ 2679ccdb0946 Extracting [>                                                  ]    426kB/39.96MB
+ 2679ccdb0946 Extracting [============>                                      ]  9.798MB/39.96MB
+ 2679ccdb0946 Extracting [============>                                      ]  9.798MB/39.96MB
+ 2679ccdb0946 Extracting [=====================>                             ]  17.47MB/39.96MB
+ 2679ccdb0946 Extracting [=====================>                             ]  17.47MB/39.96MB
+ 2679ccdb0946 Extracting [===============================>                   ]  25.56MB/39.96MB
+ 2679ccdb0946 Extracting [===============================>                   ]  25.56MB/39.96MB
+ 2679ccdb0946 Extracting [==========================================>        ]  33.65MB/39.96MB
+ 2679ccdb0946 Extracting [==========================================>        ]  33.65MB/39.96MB
+ 2679ccdb0946 Extracting [==================================================>]  39.96MB/39.96MB
+ 2679ccdb0946 Extracting [==================================================>]  39.96MB/39.96MB
+ 2679ccdb0946 Pull complete 
+ 2679ccdb0946 Pull complete 
+ 4f4fb700ef54 Extracting [==================================================>]      32B/32B
+ 4f4fb700ef54 Extracting [==================================================>]      32B/32B
+ 4f4fb700ef54 Extracting [==================================================>]      32B/32B
+ 4f4fb700ef54 Extracting [==================================================>]      32B/32B
+ 4f4fb700ef54 Pull complete 
+ 4f4fb700ef54 Pull complete 
+ backend-02 Pulled 
+ backend-01 Pulled 
+ Network 4emcos-bun_backend  Creating
+ Network 4emcos-bun_backend  Created
+ Network 4emcos-bun_default  Creating
+ Network 4emcos-bun_default  Created
+ Volume "4emcos-bun_socket_data"  Creating
+ Volume "4emcos-bun_socket_data"  Created
+ Container 4emcos-bun-writer-1  Creating
+ Container 4emcos-bun-writer-1  Created
+ Container backend-01  Creating
+ Container backend-02  Creating
+ Container backend-01  Created
+ Container backend-02  Created
+ Container 4emcos-bun-load-balance-1  Creating
+ Container 4emcos-bun-load-balance-1  Created
+Attaching to load-balance-1, writer-1, backend-01, backend-02
+writer-1  | 2025/08/15 16:36:09 Server running on unix socket: /tmp/writer.sock
+load-balance-1  | 2025/08/15 16:36:09 [alert] 7#7: setpriority(-5) failed (13: Permission denied)
+load-balance-1  | 2025/08/15 16:36:09 [alert] 8#8: setpriority(-5) failed (13: Permission denied)
+load-balance-1  | 2025/08/15 16:36:09 [alert] 9#9: setpriority(-5) failed (13: Permission denied)
+load-balance-1  | 2025/08/15 16:36:09 [alert] 10#10: setpriority(-5) failed (13: Permission denied)
+backend-01      | Failed to get all payments via UDS client: 2 | import{request as _}from"undici";var{serve:E}=globalThis.Bun;class R{socketPath;constructor(g){this.socketPath=g}async storePayment(g){return await fetch("http://localhost/store",{method:"POST",body:JSON.stringify({payment:g}),unix:this.socketPath,headers:{Connection:"keep-alive"}})}async getAllPayments(){try{return await(await fetch("http://localhost/getAll",{method:"GET",unix:this.socketPath,headers:{Connection:"keep-alive"}})).json()}catch(g){return console.error("Failed to get all payments via UDS client:",g),[]}}async getPaymentsByRange(g,j){try{return await(await fetch(`http://localhost/getByRange?from=${g}&to=${j}`,{method:"GET",unix:this.socketPath,headers:{Connection:"keep-alive"}})).json()}catch(A){return console.error("Failed to get all payments via UDS client:",A),""}}}var J={BATCH_SIZE:100,MIN_WAIT_TIME:1,MAX_WAIT_TIME:10,MAX_RETRY_DELAY:1,CONCURRENT_REQUESTS:25,QUEUE_DRAIN_THRESHOLD:50,MAX_QUEUE_SIZE:20000,BASE_RETRY_DELAY:50,RETRY_BACKOFF_MULTIPLIER:1.2},z=0,X=new R(Bun.env.WRITER_SOCKET_PATH);
+backend-01      | 
+backend-01      | SyntaxError: Failed to parse JSON
+backend-01      |       at getPaymentsByRange (/$bunfs/root/app-binary:2:707)
+backend-01      | 
+[Kload-balance-1 exited with code 0
+backend-02      | Shutting down gracefully...
+backend-02      | Shutdown complete
+backend-01      | Shutting down gracefully...
+backend-01      | Shutdown complete
+[Kbackend-01 exited with code 0
+[Kbackend-02 exited with code 0
+log truncated at line 1000

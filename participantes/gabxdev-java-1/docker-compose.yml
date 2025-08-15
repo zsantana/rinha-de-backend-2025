@@ -1,6 +1,6 @@
 services:
   backend-1:
-    image: gabxdevv/rinha-backend-2025-java-gabxdev-unix:2.0.1
+    image: gabxdevv/rinha-backend-2025-java-gabx-unix:1.0.1
     restart: always
     volumes:
       - /tmp:/tmp
@@ -34,11 +34,11 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '0.6'
+          cpus: '0.5'
           memory: '125MB'
 
   backend-2:
-    image: gabxdevv/rinha-backend-2025-java-gabxdev-unix:2.0.1
+    image: gabxdevv/rinha-backend-2025-java-gabx-unix:1.0.1
     restart: always
     volumes:
       - /tmp:/tmp
@@ -69,11 +69,11 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '0.6'
+          cpus: '0.5'
           memory: '125MB'
 
   load-balancer:
-    image: gabxdevv/loud-balance-java-gabxv-unix:2.0.1
+    image: gabxdevv/loud-balance-java-gabxv-unix-java-as:1.0.1
     restart: always
     volumes:
       - /tmp:/tmp
@@ -87,7 +87,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.30"
+          cpus: "0.5"
           memory: "100MB"
     environment:
       BACK_END_1_URL: backend-1

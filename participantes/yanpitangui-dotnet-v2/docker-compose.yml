@@ -104,7 +104,6 @@ services:
     image: postgres:17-alpine
     networks:
       - payment-processor
-    command: 'postgres -c max_connections=100 -c synchronous_commit=off -c fsync=off -c full_page_writes=off'
     volumes:
       - postgres-socket:/var/run/postgresql
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
@@ -112,12 +111,10 @@ services:
       - POSTGRES_PASSWORD=postgres
       - POSTGRES_USER=postgres
       - POSTGRES_DB=rinha
-    ports:
-      - "5432:5432"
     healthcheck:
       test: [ "CMD-SHELL", "pg_isready -U postgres -d rinha" ]
-      interval: 1s
-      timeout: 10s
+      interval: 2s
+      timeout: 15s
       retries: 10
     deploy:
       resources:

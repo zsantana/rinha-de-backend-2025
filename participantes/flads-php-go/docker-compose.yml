@@ -6,6 +6,16 @@ x-service-templates:
       - main-network
       - payment-processor
 
+  worker: &worker
+    image: flads/rinha25-php-go-worker:0.1.0
+    container_name: worker
+    networks:
+      - main-network
+      - payment-processor
+    depends_on:
+      redis:
+        condition: service_started
+
 services:
   api-1:
     <<: *api
@@ -33,25 +43,29 @@ services:
           cpus: "0.15"
           memory: "50MB"
 
-  worker:
-    image: flads/rinha25-php-go-worker:0.1.0
-    container_name: worker
-    networks:
-      - main-network
-      - payment-processor
-    depends_on:
-      redis:
-        condition: service_started
+  worker-1:
+    <<: *worker
+    container_name: worker-1
     deploy:
       resources:
         limits:
-          cpus: "0.6"
-          memory: "150MB"
+          cpus: "0.3"
+          memory: "100MB"
 
-  haproxy:
-    image: haproxy:alpine
+  worker-2:
+    <<: *worker
+    container_name: worker-2
+    deploy:
+      resources:
+        limits:
+          cpus: "0.3"
+          memory: "100MB"
+
+  nginx:
+    image: nginx:alpine
     volumes:
-      - ./haproxy/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
+      - ./nginx:/var/www
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
       - sockets:/sockets
     user: "1000:1001"
     ports:
@@ -66,8 +80,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.3"
-          memory: "50MB"
+          cpus: "0.2"
+          memory: "20MB"
 
   redis:
     image: valkey/valkey:8.1-alpine
@@ -95,8 +109,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.3"
-          memory: "50MB"
+          cpus: "0.2"
+          memory: "30MB"
 
 volumes:
   sockets:

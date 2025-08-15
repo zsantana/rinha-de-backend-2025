@@ -1,46 +1,54 @@
-version: "3.9"
-
 services:
-  
-  api01: &api
-    image: ghcr.io/rst77/devpr2025/cli-app:2
-    hostname: api01
-    environment:
-          LB_URL: lb-server
-          PAYMENT_PROCESSOR_FALLBACK: http://payment-processor-fallback:8080
-          PAYMENT_PROCESSOR_DEFAULT: http://payment-processor-default:8080    
-    networks:
-      - payment-processor
-      - rinha-net
+  nginx:
+    image: nginx:1.25-alpine
+    container_name: rinha-nginx
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
     depends_on:
-      - lb      
-    deploy:
-      resources:
-        limits:
-          cpus: "0.5"
-          memory: "120MB"
-
-  api02:
-    <<: *api
-    hostname: api02
-
-  lb:
-    hostname: lb-server
-    image: ghcr.io/rst77/devpr2025/api-app:2
-    environment:
-          PAYMENT_PROCESSOR_FALLBACK: http://payment-processor-fallback:8080
-          PAYMENT_PROCESSOR_DEFAULT: http://payment-processor-default:8080    
+      - node01
+      - node02
     ports:
       - "9999:9999"
-      - "5000:5000"
+    networks:
+      - rinha-net
+      - payment-processor
+    deploy:
+      resources:
+        limits:
+          cpus: "0.20"
+          memory: "10MB"
+  
+  node01: 
+    image: ghcr.io/rst77/app:8
+    hostname: node01
+    environment:
+          PAYMENT_PROCESSOR_FALLBACK: http://payment-processor-fallback:8080
+          PAYMENT_PROCESSOR_DEFAULT: http://payment-processor-default:8080    
+          NODE_ID: node01
     networks:
       - payment-processor
       - rinha-net
     deploy:
       resources:
         limits:
-          cpus: "0.5"
-          memory: "100MB"
+          cpus: "0.65"
+          memory: "170MB"
+
+  node02: 
+    image: ghcr.io/rst77/app:8
+    hostname: node02
+    environment:
+          PAYMENT_PROCESSOR_FALLBACK: http://payment-processor-fallback:8080
+          PAYMENT_PROCESSOR_DEFAULT: http://payment-processor-default:8080    
+          NODE_ID: node02
+    networks:
+      - payment-processor
+      - rinha-net
+    deploy:
+      resources:
+        limits:
+          cpus: "0.65"
+          memory: "170MB"
 
 networks:
   payment-processor:

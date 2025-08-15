@@ -1,6 +1,6 @@
 x-service-templates:
   base: &base
-    image: ghcr.io/leorcvargas/rinha-de-backend-2025-elixir:20250812005006
+    image: ghcr.io/leorcvargas/rinha-de-backend-2025-elixir-api:main-7f5e7ba
     volumes:
       - sockets:/tmp/rinhex/:rw
     networks:
@@ -25,7 +25,7 @@ services:
       resources:
         limits:
           cpus: "0.4"
-          memory: "29MB"
+          memory: "27MB"
 
   api1:
     <<: *base
@@ -34,14 +34,14 @@ services:
       resources:
         limits:
           cpus: "0.35"
-          memory: "107MB"
+          memory: "104MB"
     environment:
       APPLICATION_MODE: "api"
-      ERL_MAX_PORTS: 4500
-      PAYMENT_PROCESSOR_DEFAULT_URL: http://payment-processor-default:8080
-      PAYMENT_PROCESSOR_FALLBACK_URL: http://payment-processor-fallback:8080
-      ERL_FLAGS: "+S 1:1 +sbwt none +sbwtdcpu none +sbwtdio none +L"
+      ERL_MAX_PORTS: 1024
+      ERL_FLAGS: "+S 1:1 +sbwt none +sbwtdcpu none +sbwtdio none +A 1 +SDio 1 +SDcpu 1 +L"
       UDS_SOCKET: "/tmp/rinhex/api1.sock"
+      ERLANG_COOKIE: rinhex
+      RELEASE_COOKIE: rinhex
 
   api2:
     <<: *base
@@ -50,29 +50,32 @@ services:
       resources:
         limits:
           cpus: "0.35"
-          memory: "107MB"
+          memory: "104MB"
     environment:
       APPLICATION_MODE: "api"
-      ERL_MAX_PORTS: 4500
-      PAYMENT_PROCESSOR_DEFAULT_URL: http://payment-processor-default:8080
-      PAYMENT_PROCESSOR_FALLBACK_URL: http://payment-processor-fallback:8080
-      ERL_FLAGS: "+S 1:1 +sbwt none +sbwtdcpu none +sbwtdio none +L"
+      ERL_MAX_PORTS: 1024
+      ERL_FLAGS: "+S 1:1 +sbwt none +sbwtdcpu none +sbwtdio none +A 1 +SDio 1 +SDcpu 1 +L"
       UDS_SOCKET: "/tmp/rinhex/api2.sock"
+      ERLANG_COOKIE: rinhex
+      RELEASE_COOKIE: rinhex
 
   worker:
     <<: *base
+    image: ghcr.io/leorcvargas/rinha-de-backend-2025-elixir-worker:main-7f5e7ba
     hostname: worker
     deploy:
       resources:
         limits:
           cpus: "0.4"
-          memory: "107MB"
+          memory: "115MB"
     environment:
       APPLICATION_MODE: "worker"
       ERL_MAX_PORTS: 2048
       PAYMENT_PROCESSOR_DEFAULT_URL: http://payment-processor-default:8080
       PAYMENT_PROCESSOR_FALLBACK_URL: http://payment-processor-fallback:8080
-      ERL_FLAGS: "+S 1:1 +sbwt none +sbwtdcpu none +sbwtdio none +L"
+      ERL_FLAGS: "+S 1:1 +sbwt none +sbwtdcpu none +sbwtdio none +A 1 +SDio 1 +SDcpu 1 +L"
+      ERLANG_COOKIE: rinhex
+      RELEASE_COOKIE: rinhex
 
 volumes:
   sockets:
@@ -82,4 +85,3 @@ networks:
     external: true
   rinhex:
     driver: bridge
-
