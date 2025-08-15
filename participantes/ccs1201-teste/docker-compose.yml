@@ -1,6 +1,6 @@
 x-backend-templates:
   app: &app
-    image: csouzadocker/rinha-native-pgo:v0.0.2
+    image: csouzadocker/rinha-native-pgo:v0.0.3
     depends_on:
       backend-db:
         condition: service_healthy
@@ -15,16 +15,16 @@ x-backend-templates:
         window: 5s
       resources:
         limits:
-          cpus: "0.6"
-          memory: "100MB"
+          cpus: "0.4"
+          memory: "65MB"
 
   app-cmd: &app-cmd
     - "./app-optimized"
     - "-DBATCH_SIZE=100"
     - "-DBATCH_LIMIT=10"
     - "-DDATASOURCE_CLASS_NAME=org.postgresql.Driver"
-    - "-DDATASOURCE_MAXIMUM_POOL_SIZE=3"
-    - "-DDATASOURCE_MINIMUM_IDLE=3"
+    - "-DDATASOURCE_MAXIMUM_POOL_SIZE=2"
+    - "-DDATASOURCE_MINIMUM_IDLE=2"
     - "-DDATASOURCE_PASSWORD=rinha"
     - "-DDATASOURCE_TIMEOUT=20000"
     - "-DDATASOURCE_URL=jdbc:postgresql://postgres:5432/rinha"
@@ -33,10 +33,10 @@ x-backend-templates:
     - "-DPAYMENT_PROCESSOR_FALLBACK_URL=http://payment-processor-fallback:8080"
     - "-DPAYMENT_PROCESSOR_WORKERS=15"
     - "-DPAYMENT_PROCESSOR_REQUEST_TIMEOUT=6000"
-    - "-DPAYMENT_PROCESSOR_CONNECTION_TIMEOUT=50"
+    - "-DPAYMENT_PROCESSOR_CONNECTION_TIMEOUT=30"
     - "-DSERVER_PORT=8080"
-    - "-DSERVER_IO_THREADS=1"
-    - "-DSERVER_WORKER_THREADS=1"
+    - "-DSERVER_IO_THREADS=4"
+    - "-DSERVER_WORKER_THREADS=2"
 
 #############################################################################################
 
@@ -58,7 +58,7 @@ services:
       resources:
         limits:
           cpus: "0.1"
-          memory: "30MB"
+          memory: "20MB"
 
   app1:
     <<: *app
@@ -70,6 +70,12 @@ services:
     <<: *app
     container_name: backend-api2
     hostname: app2
+    command: *app-cmd
+
+  app3:
+    <<: *app
+    container_name: backend-api3
+    hostname: app3
     command: *app-cmd
 
   backend-db:
@@ -95,8 +101,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.2"
-          memory: "120MB"
+          cpus: "0.1"
+          memory: "130MB"
 
 networks:
   backend:
