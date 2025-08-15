@@ -15,7 +15,7 @@ services:
       resources:
         limits:
           cpus: "0.2"
-          memory: 35M
+          memory: 30M
 
   backend-1:
     image: chrisblood777/rinha-de-backend-2025-node:latest
@@ -39,7 +39,7 @@ services:
       resources:
         limits:
           cpus: "0.55"
-          memory: 120M
+          memory: 115M
 
   backend-2:
     image: chrisblood777/rinha-de-backend-2025-node:latest
@@ -63,7 +63,7 @@ services:
       resources:
         limits:
           cpus: "0.55"
-          memory: 120M
+          memory: 115M
 
   memorydb:
     image: chrisblood777/rinha-de-backend-2025-node-memorydb:latest
@@ -82,7 +82,7 @@ services:
       resources:
         limits:
           cpus: "0.2"
-          memory: 75M
+          memory: 90M
     healthcheck:
       test: ["CMD", "test", "-S", "/var/run/memorydb.sock"] # verifica se o socket existe
       interval: 2s
