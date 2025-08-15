@@ -8,8 +8,8 @@
     deploy:
       resources:
         limits:
-          cpus: "0.1"
-          memory: "10MB"
+          cpus: "0.5"
+          memory: "50MB"
     networks:
       - frontdoor
       - backend
@@ -24,7 +24,7 @@
     deploy:
       resources:
         limits:
-          cpus: "0.45"
+          cpus: "0.25"
           memory: "100MB"
     networks:
       - backend
@@ -35,7 +35,7 @@
     deploy:
       resources:
         limits:
-          cpus: "0.45"
+          cpus: "0.25"
           memory: "100MB"
     networks:
       - backend
@@ -46,7 +46,7 @@
     deploy:
       resources:
         limits:
-          cpus: "0.8"
+          cpus: "0.5"
           memory: "100MB"
     networks:
       - backend
