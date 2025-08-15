@@ -1,63 +1,15 @@
 
  Network victorcoelh-python-fastapi_default  Creating
  Network victorcoelh-python-fastapi_default  Created
- Container redis  Creating
  Container fastapi-1  Creating
  Container fastapi-2  Creating
- Container fastapi-2  Created
+ Container redis  Creating
  Container fastapi-1  Created
- Container nginx  Creating
  Container redis  Created
+ Container fastapi-2  Created
  Container workers  Creating
- Container workers  Created
+ Container nginx  Creating
  Container nginx  Created
+ Container workers  Created
 Attaching to fastapi-1, fastapi-2, nginx, redis, workers
-redis      | 1:C 11 Aug 2025 18:09:23.302 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
-redis      | 1:C 11 Aug 2025 18:09:23.302 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
-redis      | 1:C 11 Aug 2025 18:09:23.302 * Redis version=7.2.10, bits=64, commit=00000000, modified=0, pid=1, just started
-redis      | 1:C 11 Aug 2025 18:09:23.302 * Configuration loaded
-redis      | 1:M 11 Aug 2025 18:09:23.302 * monotonic clock: POSIX clock_gettime
-redis      | 1:M 11 Aug 2025 18:09:23.303 * Running mode=standalone, port=6379.
-redis      | 1:M 11 Aug 2025 18:09:23.303 * Server initialized
-redis      | 1:M 11 Aug 2025 18:09:23.303 * Ready to accept connections tcp
-nginx      | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
-nginx      | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
-nginx      | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
-nginx      | 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
-nginx      | 10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
-nginx      | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
-nginx      | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
-nginx      | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
-nginx      | /docker-entrypoint.sh: Configuration complete; ready for start up
-workers    | [2025-08-11 18:09:26,427] [PID 11] [MainThread] [dramatiq.MainProcess] [INFO] Dramatiq '1.18.0' is booting up.
-workers    | [2025-08-11 18:09:26,428] [PID 38] [MainThread] [dramatiq.ForkProcess(0)] [INFO] Fork process 'dramatiq.middleware.prometheus:_run_exposition_server' is ready for action.
-nginx      | 2025/08/11 18:09:26 [error] 29#29: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.20.0.1, server: , request: "GET /payments-summary HTTP/1.1", upstream: "http://172.20.0.2:8000/payments-summary", host: "localhost:9999"
-nginx      | 2025/08/11 18:09:26 [error] 29#29: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.20.0.1, server: , request: "GET /payments-summary HTTP/1.1", upstream: "http://172.20.0.3:8000/payments-summary", host: "localhost:9999"
-fastapi-1  | [INFO] Starting granian (main PID: 11)
-fastapi-1  | [INFO] Listening at: http://0.0.0.0:8000
-fastapi-1  | [INFO] Spawning worker-1 with PID: 12
-fastapi-2  | [INFO] Starting granian (main PID: 11)
-fastapi-2  | [INFO] Listening at: http://0.0.0.0:8000
-fastapi-2  | [INFO] Spawning worker-1 with PID: 12
-nginx      | 2025/08/11 18:09:31 [error] 29#29: *4 connect() failed (111: Connection refused) while connecting to upstream, client: 172.20.0.1, server: , request: "GET /payments-summary HTTP/1.1", upstream: "http://172.20.0.3:8000/payments-summary", host: "localhost:9999"
-nginx      | 2025/08/11 18:09:31 [error] 29#29: *4 connect() failed (111: Connection refused) while connecting to upstream, client: 172.20.0.1, server: , request: "GET /payments-summary HTTP/1.1", upstream: "http://172.20.0.2:8000/payments-summary", host: "localhost:9999"
-fastapi-1  | [INFO] Started worker-1
-fastapi-1  | [INFO] Started worker-1 runtime-1
-fastapi-2  | [INFO] Started worker-1
-fastapi-2  | [INFO] Started worker-1 runtime-1
-workers    | [2025-08-11 18:10:36,802] [PID 11] [MainThread] [dramatiq.MainProcess] [INFO] Sending signal 'SIGTERM' to subprocesses...
-workers    | [2025-08-11 18:10:36,802] [PID 38] [MainThread] [dramatiq.ForkProcess(0)] [INFO] Stopping fork process...
-[Knginx exited with code 0
-[Kworkers exited with code 0
-fastapi-2  | [INFO] Shutting down granian
-fastapi-2  | [INFO] Stopping worker-1
-redis      | 1:signal-handler (1754935840) Received SIGTERM scheduling shutdown...
-fastapi-2  | [INFO] Stopping worker-1 runtime-1
-fastapi-1  | [INFO] Shutting down granian
-fastapi-1  | [INFO] Stopping worker-1
-fastapi-1  | [INFO] Stopping worker-1 runtime-1
-redis      | 1:M 11 Aug 2025 18:10:40.866 * User requested shutdown...
-redis      | 1:M 11 Aug 2025 18:10:40.866 # Redis is now ready to exit, bye bye...
-[Kredis exited with code 0
-[Kfastapi-2 exited with code 0
-[Kfastapi-1 exited with code 0
+Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: error during container init: exec: "granian": executable file not found in $PATH: unknown

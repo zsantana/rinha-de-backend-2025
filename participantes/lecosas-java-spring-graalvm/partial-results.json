@@ -1,12 +1,12 @@
 {
   "participante": "lecosas-java-spring-graalvm",
-  "total_liquido": 372539.5818,
+  "total_liquido": 369412.7346,
   "total_bruto": 333404.6,
-  "total_taxas": 17693.09,
+  "total_taxas": 17667.22,
   "descricao": "'total_liquido' é sua pontuação final. Equivale ao seu lucro. Fórmula: total_liquido + (total_liquido * p99.bonus) - (total_liquido * multa.porcentagem)",
   "p99": {
-    "valor": "1.89ms",
-    "bonus": "18%",
+    "valor": "2.72ms",
+    "bonus": "17%",
     "max_requests": "550",
     "descricao": "Fórmula para o bônus: max((11 - p99.valor) * 0.02, 0)"
   },
@@ -34,15 +34,15 @@
     "descricao": "'qtd_sucesso' foram requests bem sucedidos para 'POST /payments' e 'qtd_falha' os requests com erro."
   },
   "pagamentos_realizados_default": {
-    "total_bruto": 323176,
-    "num_pagamentos": 16240,
-    "total_taxas": 16158.8,
+    "total_bruto": 323434.7,
+    "num_pagamentos": 16253,
+    "total_taxas": 16171.735,
     "descricao": "Informações do backend sobre solicitações de pagamento para o Payment Processor Default."
   },
   "pagamentos_realizados_fallback": {
-    "total_bruto": 10228.6,
-    "num_pagamentos": 514,
-    "total_taxas": 1534.29,
+    "total_bruto": 9969.9,
+    "num_pagamentos": 501,
+    "total_taxas": 1495.485,
     "descricao": "Informações do backend sobre solicitações de pagamento para o Payment Processor Fallback."
   }
 }
