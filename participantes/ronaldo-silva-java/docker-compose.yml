@@ -30,7 +30,7 @@ x-service-templates:
         window: 5s
       resources:
         limits:
-          cpus: "0.60"
+          cpus: "0.55"
           memory: "120MB"
 services:
   nginx:
@@ -91,7 +91,7 @@ services:
         window: 5s
       resources:
         limits:
-          cpus: "0.15"
+          cpus: "0.25"
           memory: "90MB"
 networks:
   backend-network:

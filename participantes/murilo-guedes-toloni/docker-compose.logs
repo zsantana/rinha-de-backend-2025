@@ -4,41 +4,38 @@
  59e22667830b Already exists 
  2ef0ce97bc02 Already exists 
  e4150c7b90ce Already exists 
+ 9fb8c6908e06 Pulling fs layer 
+ 3475959cbe12 Pulling fs layer 
  59e22667830b Already exists 
- 89c44f8383dd Pulling fs layer 
- d29e108fafe0 Pulling fs layer 
  2ef0ce97bc02 Already exists 
  e4150c7b90ce Already exists 
- d29e108fafe0 Downloading [==================================================>]      97B/97B
- d29e108fafe0 Verifying Checksum 
- d29e108fafe0 Download complete 
- 89c44f8383dd Pulling fs layer 
- d29e108fafe0 Pulling fs layer 
- d29e108fafe0 Download complete 
- 89c44f8383dd Downloading [>                                                  ]  179.5kB/17.38MB
- 89c44f8383dd Downloading [>                                                  ]  179.5kB/17.38MB
- 89c44f8383dd Downloading [============================================>      ]  15.55MB/17.38MB
- 89c44f8383dd Downloading [============================================>      ]  15.55MB/17.38MB
- 89c44f8383dd Verifying Checksum 
- 89c44f8383dd Download complete 
- 89c44f8383dd Verifying Checksum 
- 89c44f8383dd Download complete 
- 89c44f8383dd Extracting [>                                                  ]  196.6kB/17.38MB
- 89c44f8383dd Extracting [>                                                  ]  196.6kB/17.38MB
- 89c44f8383dd Extracting [================>                                  ]  5.702MB/17.38MB
- 89c44f8383dd Extracting [================>                                  ]  5.702MB/17.38MB
- 89c44f8383dd Extracting [===============================>                   ]  10.81MB/17.38MB
- 89c44f8383dd Extracting [===============================>                   ]  10.81MB/17.38MB
- 89c44f8383dd Extracting [==================================================>]  17.38MB/17.38MB
- 89c44f8383dd Extracting [==================================================>]  17.38MB/17.38MB
- 89c44f8383dd Pull complete 
- 89c44f8383dd Pull complete 
- d29e108fafe0 Extracting [==================================================>]      97B/97B
- d29e108fafe0 Extracting [==================================================>]      97B/97B
- d29e108fafe0 Extracting [==================================================>]      97B/97B
- d29e108fafe0 Extracting [==================================================>]      97B/97B
- d29e108fafe0 Pull complete 
- d29e108fafe0 Pull complete 
+ 3475959cbe12 Downloading [==================================================>]      97B/97B
+ 3475959cbe12 Verifying Checksum 
+ 3475959cbe12 Download complete 
+ 9fb8c6908e06 Pulling fs layer 
+ 3475959cbe12 Pulling fs layer 
+ 3475959cbe12 Download complete 
+ 9fb8c6908e06 Downloading [>                                                  ]  176.7kB/17.37MB
+ 9fb8c6908e06 Downloading [>                                                  ]  176.7kB/17.37MB
+ 9fb8c6908e06 Verifying Checksum 
+ 9fb8c6908e06 Download complete 
+ 9fb8c6908e06 Download complete 
+ 9fb8c6908e06 Extracting [>                                                  ]  196.6kB/17.37MB
+ 9fb8c6908e06 Extracting [>                                                  ]  196.6kB/17.37MB
+ 9fb8c6908e06 Extracting [===============>                                   ]  5.308MB/17.37MB
+ 9fb8c6908e06 Extracting [===============>                                   ]  5.308MB/17.37MB
+ 9fb8c6908e06 Extracting [=================================>                 ]   11.6MB/17.37MB
+ 9fb8c6908e06 Extracting [=================================>                 ]   11.6MB/17.37MB
+ 9fb8c6908e06 Extracting [==================================================>]  17.37MB/17.37MB
+ 9fb8c6908e06 Extracting [==================================================>]  17.37MB/17.37MB
+ 9fb8c6908e06 Pull complete 
+ 9fb8c6908e06 Pull complete 
+ 3475959cbe12 Extracting [==================================================>]      97B/97B
+ 3475959cbe12 Extracting [==================================================>]      97B/97B
+ 3475959cbe12 Extracting [==================================================>]      97B/97B
+ 3475959cbe12 Extracting [==================================================>]      97B/97B
+ 3475959cbe12 Pull complete 
+ 3475959cbe12 Pull complete 
  api1 Pulled 
  api2 Pulled 
  Network murilo-guedes-toloni_backend  Creating
@@ -52,14 +49,14 @@
  Container my-haproxy  Creating
  Container my-haproxy  Created
 Attaching to my-haproxy, springboot-api1, springboot-api2
-springboot-api2  | UDS HTTP listening on /sockets/api2.sock
 springboot-api1  | UDS HTTP listening on /sockets/api1.sock
+springboot-api2  | UDS HTTP listening on /sockets/api2.sock
 my-haproxy       | [NOTICE]   (1) : Initializing new worker (8)
 my-haproxy       | [NOTICE]   (1) : Loading success.
 my-haproxy       | [NOTICE]   (1) : haproxy version is 3.2.3-1844da7
 my-haproxy       | [WARNING]  (1) : Exiting Master process...
 my-haproxy       | [WARNING]  (8) : Proxy http_front stopped (cumulated conns: FE: 555, BE: 0).
-my-haproxy       | [WARNING]  (8) : Proxy http_back stopped (cumulated conns: FE: 0, BE: 16762).
+my-haproxy       | [WARNING]  (8) : Proxy http_back stopped (cumulated conns: FE: 0, BE: 16761).
 my-haproxy       | [WARNING]  (1) : Current worker (8) exited with code 0 (Exit)
 my-haproxy       | [WARNING]  (1) : All workers exited. Exiting... (0)
 [Kmy-haproxy exited with code 0
