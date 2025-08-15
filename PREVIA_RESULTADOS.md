@@ -1,6 +1,6 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Fri Aug 15 16:48:13 UTC 2025**
-375 submissões / 317 resultados / 58 submissões com erro
+Atualizado em **Fri Aug 15 16:55:23 UTC 2025**
+374 submissões / 316 resultados / 58 submissões com erro
 
 
 | participante | p99 | bônus por desempenho (%) | multa ($) | lucro | submissão |
@@ -31,7 +31,6 @@ Atualizado em **Fri Aug 15 16:48:13 UTC 2025**
 |	anibalferreira-rust	|	8.93ms	|	4%	|	0	|	0	|	[anibalferreira-rust](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/anibalferreira-rust)
 |	apelisser-v1.2.0	|	4.63ms	|	13%	|	0	|	356689.91835	|	[apelisser-v1.2.0](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/apelisser-v1.2.0)
 |	arthur-isvi-php-hyperf-nano	|	2.55ms	|	17%	|	0	|	364633.89885	|	[arthur-isvi-php-hyperf-nano](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/arthur-isvi-php-hyperf-nano)
-|	arthur-isvi-php-swoole	|	2.83ms	|	16%	|	0	|	367258.3606	|	[arthur-isvi-php-swoole](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/arthur-isvi-php-swoole)
 |	arthur-queiroz-golang	|	3.19ms	|	16%	|	0	|	189518.4857999872	|	[arthur-queiroz-golang](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/arthur-queiroz-golang)
 |	arthur-r-oliveira	|	3.37ms	|	15%	|	58842.06125	|	134496.14	|	[arthur-r-oliveira](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/arthur-r-oliveira)
 |	arthur-seus-1.0.0	|	4.31ms	|	13%	|	107906.6555	|	240477.6894	|	[arthur-seus-1.0.0](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/arthur-seus-1.0.0)
@@ -252,7 +251,7 @@ Atualizado em **Fri Aug 15 16:48:13 UTC 2025**
 |	passos-matheus-python-v1	|	11.92ms	|	0%	|	0	|	316431.89	|	[passos-matheus-python-v1](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/passos-matheus-python-v1)
 |	patrignani-go	|	1.81ms	|	18%	|	0	|	290346.7113	|	[patrignani-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/patrignani-go)
 |	pedro-correa-gleam	|	322.77ms	|	0%	|	0	|	16768.734999999888	|	[pedro-correa-gleam](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/pedro-correa-gleam)
-|	pedrohsb-golang	|	1.59ms	|	19%	|	0	|	376846.38684	|	[pedrohsb-golang](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/pedrohsb-golang)
+|	pedrohsb-golang	|	1.44ms	|	19%	|	0	|	376733.90209	|	[pedrohsb-golang](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/pedrohsb-golang)
 |	pedrohsb-python	|	22.33ms	|	0%	|	0	|	295106.05499995843	|	[pedrohsb-python](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/pedrohsb-python)
 |	phaalonso-java-1	|	4.58ms	|	13%	|	0	|	357674.84895	|	[phaalonso-java-1](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/phaalonso-java-1)
 |	phaalonso-java-2	|	7.42ms	|	7%	|	0	|	338743.9491	|	[phaalonso-java-2](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/phaalonso-java-2)
