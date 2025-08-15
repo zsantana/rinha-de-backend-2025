@@ -19,7 +19,7 @@ services:
 
   backend-01: &backend
     image: lecosas/rinha-backend-2025-java-spring-graalvm:0.4-direct
-    container_name: graalvm-4-direct-backend-01
+    container_name: graalvm-4-direct-haproxy-backend-01
     hostname: backend-01
     # pull_policy: always
     networks:
@@ -62,7 +62,7 @@ services:
 
   backend-02:
     <<: *backend
-    container_name: graalvm-4-direct-backend-02
+    container_name: graalvm-4-direct-haproxy-backend-02
     hostname: backend-02
     environment:
       - SPRING_PROFILES_ACTIVE=prod
