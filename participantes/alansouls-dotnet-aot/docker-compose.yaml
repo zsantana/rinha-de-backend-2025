@@ -1,6 +1,6 @@
 ﻿services:      
   nginx:
-    image: nginx-loadbalancer
+    image: nginx:alpine
     platform: "linux/amd64"
     depends_on:
       - rinhabackend.api1
@@ -20,6 +20,7 @@
 
   rinhabackend.api1:
     image: ghcr.io/alansouls/rinhabackend.api:main
+    platform: "linux/amd64"
     deploy:
       resources:
         limits:
@@ -41,11 +42,12 @@
       
   rinhabackend.worker:
     image: ghcr.io/alansouls/rinhabackend.worker:main
+    platform: "linux/amd64"
     deploy:
       resources:
         limits:
-          cpus: "0.5"
-          memory: "140MB"
+          cpus: "0.8"
+          memory: "100MB"
     networks:
       - backend
       - payment-processor
