@@ -1,55 +1,47 @@
 
- app1 Pulling 
  app2 Pulling 
+ app1 Pulling 
  9824c27679d3 Already exists 
  c10eb810d561 Already exists 
  3ca6e2d3532f Already exists 
- 6055dda141e2 Pulling fs layer 
+ 56d1cb460d70 Pulling fs layer 
  9824c27679d3 Already exists 
  c10eb810d561 Already exists 
  3ca6e2d3532f Already exists 
- 6055dda141e2 Pulling fs layer 
- 6055dda141e2 Downloading [>                                                  ]  64.94kB/6.112MB
- 6055dda141e2 Downloading [>                                                  ]  64.94kB/6.112MB
- 6055dda141e2 Downloading [=>                                                 ]  191.8kB/6.112MB
- 6055dda141e2 Downloading [=>                                                 ]  191.8kB/6.112MB
- 6055dda141e2 Downloading [======>                                            ]  773.9kB/6.112MB
- 6055dda141e2 Downloading [======>                                            ]  773.9kB/6.112MB
- 6055dda141e2 Downloading [==================>                                ]  2.248MB/6.112MB
- 6055dda141e2 Downloading [==================>                                ]  2.248MB/6.112MB
- 6055dda141e2 Downloading [=================================>                 ]  4.064MB/6.112MB
- 6055dda141e2 Downloading [=================================>                 ]  4.064MB/6.112MB
- 6055dda141e2 Download complete 
- 6055dda141e2 Download complete 
- 6055dda141e2 Extracting [>                                                  ]  65.54kB/6.112MB
- 6055dda141e2 Extracting [>                                                  ]  65.54kB/6.112MB
- 6055dda141e2 Extracting [==================================================>]  6.112MB/6.112MB
- 6055dda141e2 Extracting [==================================================>]  6.112MB/6.112MB
- 6055dda141e2 Pull complete 
- 6055dda141e2 Pull complete 
- app1 Pulled 
+ 56d1cb460d70 Pulling fs layer 
+ 56d1cb460d70 Downloading [>                                                  ]  68.12kB/6.114MB
+ 56d1cb460d70 Downloading [>                                                  ]  68.12kB/6.114MB
+ 56d1cb460d70 Downloading [====================================>              ]  4.451MB/6.114MB
+ 56d1cb460d70 Downloading [====================================>              ]  4.451MB/6.114MB
+ 56d1cb460d70 Verifying Checksum 
+ 56d1cb460d70 Download complete 
+ 56d1cb460d70 Verifying Checksum 
+ 56d1cb460d70 Download complete 
+ 56d1cb460d70 Extracting [>                                                  ]  65.54kB/6.114MB
+ 56d1cb460d70 Extracting [>                                                  ]  65.54kB/6.114MB
+ 56d1cb460d70 Extracting [==================================================>]  6.114MB/6.114MB
+ 56d1cb460d70 Extracting [==================================================>]  6.114MB/6.114MB
+ 56d1cb460d70 Pull complete 
+ 56d1cb460d70 Pull complete 
  app2 Pulled 
+ app1 Pulled 
  Network pedrohsb-golang_backend  Creating
  Network pedrohsb-golang_backend  Created
- Volume "pedrohsb-golang_memsock"  Creating
- Volume "pedrohsb-golang_memsock"  Created
  Container pedrohsb-golang-app2-1  Creating
  Container pedrohsb-golang-app1-1  Creating
  Container pedrohsb-golang-app1-1  Created
  Container pedrohsb-golang-app2-1  Created
- Container nginx-1  Creating
- Container nginx-1  Created
-Attaching to nginx-1, app1-1, app2-1
-nginx-1  | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
-nginx-1  | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
-nginx-1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
-nginx-1  | 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
-nginx-1  | 10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
-nginx-1  | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
-nginx-1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
-nginx-1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
-nginx-1  | /docker-entrypoint.sh: Configuration complete; ready for start up
-[Knginx-1 exited with code 0
-[Kapp1-1 exited with code 2
-[Kapp2-1 exited with code 2
+ Container haproxy-1  Creating
+ Container haproxy-1  Created
+Attaching to haproxy-1, app1-1, app2-1
+haproxy-1  | [NOTICE]   (1) : Initializing new worker (8)
+haproxy-1  | [NOTICE]   (1) : Loading success.
+haproxy-1  | [NOTICE]   (1) : haproxy version is 3.2.3-1844da7
+haproxy-1  | [NOTICE]   (1) : path to executable is /usr/local/sbin/haproxy
+haproxy-1  | [WARNING]  (1) : Exiting Master process...
+haproxy-1  | [WARNING]  (8) : Proxy fe_tcp stopped (cumulated conns: FE: 558, BE: 0).
+haproxy-1  | [WARNING]  (8) : Proxy be_tcp stopped (cumulated conns: FE: 0, BE: 558).
+haproxy-1  | [WARNING]  (1) : Current worker (8) exited with code 0 (Exit)
+haproxy-1  | [WARNING]  (1) : All workers exited. Exiting... (0)
+[Khaproxy-1 exited with code 0
 log truncated at line 1000

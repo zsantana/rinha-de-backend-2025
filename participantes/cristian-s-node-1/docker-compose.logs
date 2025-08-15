@@ -1,0 +1,1001 @@
+
+ Network cristian-s-node-1_backend  Creating
+ Network cristian-s-node-1_backend  Created
+ Volume "cristian-s-node-1_socket_volume"  Creating
+ Volume "cristian-s-node-1_socket_volume"  Created
+ Container cristian-s-node-1-memorydb-1  Creating
+ Container cristian-s-node-1-memorydb-1  Created
+ Container cristian-s-node-1-backend-2-1  Creating
+ Container cristian-s-node-1-backend-1-1  Creating
+ Container cristian-s-node-1-backend-1-1  Created
+ Container cristian-s-node-1-backend-2-1  Created
+ Container cristian-s-node-1-haproxy-1  Creating
+ Container cristian-s-node-1-haproxy-1  Created
+Attaching to backend-1-1, backend-2-1, haproxy-1, memorydb-1
+memorydb-1  | [zmq] Subscriber connected to ipc:///tmp/zeromq1.sock
+memorydb-1  | [zmq] Subscriber connected to ipc:///tmp/zeromq2.sock
+memorydb-1  | Starting MemoryDB...
+memorydb-1  | MemoryDB is ready and listening on port /var/run/memorydb.sock...
+haproxy-1   | [NOTICE]   (1) : Initializing new worker (8)
+backend-1-1  | Listening to socket /var/run/server1.sock
+backend-2-1  | Listening to socket /var/run/server2.sock
+haproxy-1    | [NOTICE]   (8) : haproxy version is 3.2.3-1844da7
+haproxy-1    | [WARNING]  (8) : [haproxy.main()] Failed to drop supplementary groups. Using 'gid'/'group' without 'uid'/'user' is generally useless.
+haproxy-1    | [NOTICE]   (1) : Loading success.
+backend-1-1  | [zmq] Publisher bind ipc:///tmp/zeromq1.sock
+backend-2-1  | [zmq] Publisher bind ipc:///tmp/zeromq2.sock
+backend-1-1  | Summary request: { from: undefined, to: undefined }
+memorydb-1   | Fetching summary from: undefined to: undefined
+haproxy-1    | 172.20.0.1:53920 [15/Aug/2025:17:02:07.067] http_front http_back/app1 0/0/0/11/11 200 218 - - ---- 1/1/0/0/0 0/0 "GET /payments-summary HTTP/1.1"
+haproxy-1    | 172.20.0.1:53924 [15/Aug/2025:17:02:12.593] http_front http_back/app2 0/0/0/9/9 200 95 - - ---- 1/1/0/0/0 0/0 "POST /purge-payments HTTP/1.1"
+backend-1-1  | Summary request: { from: '2025-08-15T17:01:57.603Z', to: '2025-08-15T17:02:11.103Z' }
+memorydb-1   | Fetching summary from: 2025-08-15T17:01:57.603Z to: 2025-08-15T17:02:11.103Z
+haproxy-1    | 172.20.0.1:53940 [15/Aug/2025:17:02:12.604] http_front http_back/app1 0/0/0/4/4 200 218 - - ---- 3/3/1/0/0 0/0 "GET /payments-summary?from=2025-08-15T17:01:57.603Z&to=2025-08-15T17:02:11.103Z HTTP/1.1"
+haproxy-1    | 172.20.0.1:53942 [15/Aug/2025:17:02:12.608] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 3/3/0/0/0 0/0 "POST /payments HTTP/1.1"
+memorydb-1   | Fetching health summaries...
+memorydb-1   | Default Health: { failing: false, minResponseTime: 0 }
+memorydb-1   | Fallback Health: { failing: false, minResponseTime: 0 }
+haproxy-1    | 172.20.0.1:53946 [15/Aug/2025:17:02:12.714] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 4/4/0/0/0 0/0 "POST /payments HTTP/1.1"
+memorydb-1   | Using cached best processor: {
+memorydb-1   |   processor: 'default',
+memorydb-1   |   url: 'http://payment-processor-default:8080/payments',
+memorydb-1   |   expireAt: 1755277337457
+memorydb-1   | }
+haproxy-1    | 172.20.0.1:53962 [15/Aug/2025:17:02:12.823] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 5/5/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:53978 [15/Aug/2025:17:02:12.932] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 6/6/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:53988 [15/Aug/2025:17:02:13.042] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 7/7/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54002 [15/Aug/2025:17:02:13.151] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 8/8/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54006 [15/Aug/2025:17:02:13.260] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 9/9/0/0/0 0/0 "POST /payments HTTP/1.1"
+memorydb-1   | Using cached best processor: {
+memorydb-1   |   processor: 'default',
+memorydb-1   |   url: 'http://payment-processor-default:8080/payments',
+memorydb-1   |   expireAt: 1755277337457
+memorydb-1   | }
+haproxy-1    | 172.20.0.1:54008 [15/Aug/2025:17:02:13.369] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 10/10/0/0/0 0/0 "POST /payments HTTP/1.1"
+memorydb-1   | Using cached best processor: {
+memorydb-1   |   processor: 'default',
+memorydb-1   |   url: 'http://payment-processor-default:8080/payments',
+memorydb-1   |   expireAt: 1755277337457
+memorydb-1   | }
+haproxy-1    | 172.20.0.1:54018 [15/Aug/2025:17:02:13.478] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 11/11/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54028 [15/Aug/2025:17:02:13.588] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 12/12/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:53942 [15/Aug/2025:17:02:13.610] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 12/12/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54030 [15/Aug/2025:17:02:13.697] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 13/13/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:53946 [15/Aug/2025:17:02:13.716] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 13/13/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54032 [15/Aug/2025:17:02:13.806] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 14/14/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:53962 [15/Aug/2025:17:02:13.824] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 14/14/0/0/0 0/0 "POST /payments HTTP/1.1"
+memorydb-1   | Using cached best processor: {
+memorydb-1   |   processor: 'default',
+memorydb-1   |   url: 'http://payment-processor-default:8080/payments',
+memorydb-1   |   expireAt: 1755277337457
+memorydb-1   | }
+haproxy-1    | 172.20.0.1:54042 [15/Aug/2025:17:02:13.916] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 15/15/0/0/0 0/0 "POST /payments HTTP/1.1"
+memorydb-1   | Using cached best processor: {
+memorydb-1   |   processor: 'default',
+memorydb-1   |   url: 'http://payment-processor-default:8080/payments',
+memorydb-1   |   expireAt: 1755277337457
+memorydb-1   | }
+haproxy-1    | 172.20.0.1:53978 [15/Aug/2025:17:02:13.934] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 15/15/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54056 [15/Aug/2025:17:02:14.025] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 16/16/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:53988 [15/Aug/2025:17:02:14.043] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 16/16/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54060 [15/Aug/2025:17:02:14.134] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 17/17/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54002 [15/Aug/2025:17:02:14.152] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 17/17/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54062 [15/Aug/2025:17:02:14.244] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 18/18/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54006 [15/Aug/2025:17:02:14.261] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 18/18/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54076 [15/Aug/2025:17:02:14.353] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 19/19/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54008 [15/Aug/2025:17:02:14.371] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 19/19/0/0/0 0/0 "POST /payments HTTP/1.1"
+memorydb-1   | Using cached best processor: {
+memorydb-1   |   processor: 'default',
+memorydb-1   |   url: 'http://payment-processor-default:8080/payments',
+memorydb-1   |   expireAt: 1755277337457
+memorydb-1   | }
+haproxy-1    | 172.20.0.1:54086 [15/Aug/2025:17:02:14.462] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 20/20/0/0/0 0/0 "POST /payments HTTP/1.1"
+memorydb-1   | Using cached best processor: {
+memorydb-1   |   processor: 'default',
+memorydb-1   |   url: 'http://payment-processor-default:8080/payments',
+memorydb-1   |   expireAt: 1755277337457
+memorydb-1   | }
+haproxy-1    | 172.20.0.1:54018 [15/Aug/2025:17:02:14.480] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 20/20/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54090 [15/Aug/2025:17:02:14.576] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 21/21/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54028 [15/Aug/2025:17:02:14.589] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 21/21/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:53942 [15/Aug/2025:17:02:14.611] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 21/21/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54102 [15/Aug/2025:17:02:14.681] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 22/22/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54030 [15/Aug/2025:17:02:14.699] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 22/22/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:53946 [15/Aug/2025:17:02:14.718] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 22/22/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54108 [15/Aug/2025:17:02:14.790] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 23/23/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54032 [15/Aug/2025:17:02:14.807] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 23/23/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:53962 [15/Aug/2025:17:02:14.826] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 23/23/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54120 [15/Aug/2025:17:02:14.899] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 24/24/0/0/0 0/0 "POST /payments HTTP/1.1"
+memorydb-1   | Using cached best processor: {
+memorydb-1   |   processor: 'default',
+memorydb-1   |   url: 'http://payment-processor-default:8080/payments',
+memorydb-1   |   expireAt: 1755277337457
+memorydb-1   | }
+haproxy-1    | 172.20.0.1:54042 [15/Aug/2025:17:02:14.918] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 24/24/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:53978 [15/Aug/2025:17:02:14.936] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 24/24/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54136 [15/Aug/2025:17:02:15.009] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 25/25/0/0/0 0/0 "POST /payments HTTP/1.1"
+memorydb-1   | Using cached best processor: {
+memorydb-1   |   processor: 'default',
+memorydb-1   |   url: 'http://payment-processor-default:8080/payments',
+memorydb-1   |   expireAt: 1755277337457
+memorydb-1   | }
+haproxy-1    | 172.20.0.1:54056 [15/Aug/2025:17:02:15.027] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 25/25/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:53988 [15/Aug/2025:17:02:15.045] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 25/25/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54142 [15/Aug/2025:17:02:15.118] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 26/26/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54060 [15/Aug/2025:17:02:15.136] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 26/26/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54002 [15/Aug/2025:17:02:15.154] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 26/26/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54144 [15/Aug/2025:17:02:15.228] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 27/27/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54062 [15/Aug/2025:17:02:15.244] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 27/27/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54006 [15/Aug/2025:17:02:15.263] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 27/27/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54150 [15/Aug/2025:17:02:15.337] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 28/28/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54076 [15/Aug/2025:17:02:15.353] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 28/28/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54008 [15/Aug/2025:17:02:15.372] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 28/28/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54160 [15/Aug/2025:17:02:15.445] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 29/29/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54086 [15/Aug/2025:17:02:15.462] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 29/29/0/0/0 0/0 "POST /payments HTTP/1.1"
+memorydb-1   | Using cached best processor: {
+memorydb-1   |   processor: 'default',
+memorydb-1   |   url: 'http://payment-processor-default:8080/payments',
+memorydb-1   |   expireAt: 1755277337457
+memorydb-1   | }
+haproxy-1    | 172.20.0.1:54018 [15/Aug/2025:17:02:15.481] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 29/29/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54176 [15/Aug/2025:17:02:15.555] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 30/30/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54090 [15/Aug/2025:17:02:15.578] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 30/30/0/0/0 0/0 "POST /payments HTTP/1.1"
+memorydb-1   | Using cached best processor: {
+memorydb-1   |   processor: 'default',
+memorydb-1   |   url: 'http://payment-processor-default:8080/payments',
+memorydb-1   |   expireAt: 1755277337457
+memorydb-1   | }
+haproxy-1    | 172.20.0.1:54028 [15/Aug/2025:17:02:15.591] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 30/30/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:53942 [15/Aug/2025:17:02:15.613] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 30/30/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:50956 [15/Aug/2025:17:02:15.664] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 31/31/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54102 [15/Aug/2025:17:02:15.682] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 31/31/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54030 [15/Aug/2025:17:02:15.699] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 31/31/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:53946 [15/Aug/2025:17:02:15.718] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 31/31/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:50962 [15/Aug/2025:17:02:15.774] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 32/32/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54108 [15/Aug/2025:17:02:15.791] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 32/32/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54032 [15/Aug/2025:17:02:15.809] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 32/32/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:53962 [15/Aug/2025:17:02:15.826] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 32/32/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:50970 [15/Aug/2025:17:02:15.883] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 33/33/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54120 [15/Aug/2025:17:02:15.901] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 33/33/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54042 [15/Aug/2025:17:02:15.919] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 33/33/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:53978 [15/Aug/2025:17:02:15.937] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 33/33/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:50976 [15/Aug/2025:17:02:15.993] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 34/34/0/0/0 0/0 "POST /payments HTTP/1.1"
+memorydb-1   | Using cached best processor: {
+memorydb-1   |   processor: 'default',
+memorydb-1   |   url: 'http://payment-processor-default:8080/payments',
+memorydb-1   |   expireAt: 1755277337457
+memorydb-1   | }
+haproxy-1    | 172.20.0.1:54136 [15/Aug/2025:17:02:16.010] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 34/34/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54056 [15/Aug/2025:17:02:16.028] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 34/34/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:53988 [15/Aug/2025:17:02:16.045] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 34/34/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:50978 [15/Aug/2025:17:02:16.102] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 35/35/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54142 [15/Aug/2025:17:02:16.119] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 35/35/0/0/0 0/0 "POST /payments HTTP/1.1"
+memorydb-1   | Using cached best processor: {
+memorydb-1   |   processor: 'default',
+memorydb-1   |   url: 'http://payment-processor-default:8080/payments',
+memorydb-1   |   expireAt: 1755277337457
+memorydb-1   | }
+haproxy-1    | 172.20.0.1:54060 [15/Aug/2025:17:02:16.137] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 35/35/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54002 [15/Aug/2025:17:02:16.156] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 35/35/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:50982 [15/Aug/2025:17:02:16.211] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 37/37/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54144 [15/Aug/2025:17:02:16.228] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 36/36/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54062 [15/Aug/2025:17:02:16.245] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 36/36/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54006 [15/Aug/2025:17:02:16.263] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 36/36/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:50992 [15/Aug/2025:17:02:16.320] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 37/37/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54150 [15/Aug/2025:17:02:16.337] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 37/37/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54076 [15/Aug/2025:17:02:16.354] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 37/37/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54008 [15/Aug/2025:17:02:16.373] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 37/37/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51008 [15/Aug/2025:17:02:16.429] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 38/38/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54160 [15/Aug/2025:17:02:16.447] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 38/38/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54086 [15/Aug/2025:17:02:16.464] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 38/38/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54018 [15/Aug/2025:17:02:16.483] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 38/38/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51010 [15/Aug/2025:17:02:16.539] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 39/39/0/0/0 0/0 "POST /payments HTTP/1.1"
+memorydb-1   | Using cached best processor: {
+memorydb-1   |   processor: 'default',
+memorydb-1   |   url: 'http://payment-processor-default:8080/payments',
+memorydb-1   |   expireAt: 1755277337457
+memorydb-1   | }
+haproxy-1    | 172.20.0.1:54176 [15/Aug/2025:17:02:16.556] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 39/39/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54090 [15/Aug/2025:17:02:16.579] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 39/39/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54028 [15/Aug/2025:17:02:16.592] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 39/39/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:53942 [15/Aug/2025:17:02:16.614] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 39/39/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51026 [15/Aug/2025:17:02:16.648] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 40/40/0/0/0 0/0 "POST /payments HTTP/1.1"
+memorydb-1   | Using cached best processor: {
+memorydb-1   |   processor: 'default',
+memorydb-1   |   url: 'http://payment-processor-default:8080/payments',
+memorydb-1   |   expireAt: 1755277337457
+memorydb-1   | }
+haproxy-1    | 172.20.0.1:50956 [15/Aug/2025:17:02:16.665] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 40/40/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54102 [15/Aug/2025:17:02:16.683] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 40/40/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54030 [15/Aug/2025:17:02:16.701] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 40/40/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:53946 [15/Aug/2025:17:02:16.720] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 40/40/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51030 [15/Aug/2025:17:02:16.757] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 41/41/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:50962 [15/Aug/2025:17:02:16.775] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 41/41/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54108 [15/Aug/2025:17:02:16.792] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 41/41/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54032 [15/Aug/2025:17:02:16.810] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 41/41/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:53962 [15/Aug/2025:17:02:16.828] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 41/41/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51038 [15/Aug/2025:17:02:16.872] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 42/42/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:50970 [15/Aug/2025:17:02:16.884] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 42/42/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54120 [15/Aug/2025:17:02:16.903] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 42/42/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54042 [15/Aug/2025:17:02:16.921] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 42/42/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:53978 [15/Aug/2025:17:02:16.939] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 42/42/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51052 [15/Aug/2025:17:02:16.976] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 43/43/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:50976 [15/Aug/2025:17:02:16.993] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 43/43/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54136 [15/Aug/2025:17:02:17.011] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 43/43/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54056 [15/Aug/2025:17:02:17.030] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 43/43/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:53988 [15/Aug/2025:17:02:17.047] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 43/43/0/0/0 0/0 "POST /payments HTTP/1.1"
+memorydb-1   | Using cached best processor: {
+memorydb-1   |   processor: 'default',
+memorydb-1   |   url: 'http://payment-processor-default:8080/payments',
+memorydb-1   |   expireAt: 1755277337457
+memorydb-1   | }
+haproxy-1    | 172.20.0.1:51064 [15/Aug/2025:17:02:17.085] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 44/44/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:50978 [15/Aug/2025:17:02:17.103] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 44/44/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54142 [15/Aug/2025:17:02:17.120] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 44/44/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54060 [15/Aug/2025:17:02:17.139] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 44/44/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54002 [15/Aug/2025:17:02:17.157] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 44/44/0/0/0 0/0 "POST /payments HTTP/1.1"
+memorydb-1   | Using cached best processor: {
+memorydb-1   |   processor: 'default',
+memorydb-1   |   url: 'http://payment-processor-default:8080/payments',
+memorydb-1   |   expireAt: 1755277337457
+memorydb-1   | }
+haproxy-1    | 172.20.0.1:51076 [15/Aug/2025:17:02:17.195] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 45/45/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:50982 [15/Aug/2025:17:02:17.212] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 45/45/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54144 [15/Aug/2025:17:02:17.230] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 45/45/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54062 [15/Aug/2025:17:02:17.247] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 45/45/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54006 [15/Aug/2025:17:02:17.265] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 45/45/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51078 [15/Aug/2025:17:02:17.303] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 46/46/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:50992 [15/Aug/2025:17:02:17.321] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 46/46/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54150 [15/Aug/2025:17:02:17.339] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 46/46/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54076 [15/Aug/2025:17:02:17.356] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 46/46/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54008 [15/Aug/2025:17:02:17.375] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 46/46/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51090 [15/Aug/2025:17:02:17.413] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 47/47/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51008 [15/Aug/2025:17:02:17.431] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 47/47/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54160 [15/Aug/2025:17:02:17.448] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 47/47/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54086 [15/Aug/2025:17:02:17.466] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 47/47/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54018 [15/Aug/2025:17:02:17.485] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 47/47/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51102 [15/Aug/2025:17:02:17.523] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 48/48/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51010 [15/Aug/2025:17:02:17.540] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 48/48/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54176 [15/Aug/2025:17:02:17.557] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 48/48/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54090 [15/Aug/2025:17:02:17.581] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 48/48/0/0/0 0/0 "POST /payments HTTP/1.1"
+memorydb-1   | Fetching health summaries...
+haproxy-1    | 172.20.0.1:54028 [15/Aug/2025:17:02:17.594] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 48/48/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:53942 [15/Aug/2025:17:02:17.617] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 48/48/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51114 [15/Aug/2025:17:02:17.632] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 49/49/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51026 [15/Aug/2025:17:02:17.650] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 49/49/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:50956 [15/Aug/2025:17:02:17.667] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 49/49/0/0/0 0/0 "POST /payments HTTP/1.1"
+memorydb-1   | Fetching health summaries...
+haproxy-1    | 172.20.0.1:54102 [15/Aug/2025:17:02:17.685] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 49/49/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54030 [15/Aug/2025:17:02:17.703] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 49/49/0/0/0 0/0 "POST /payments HTTP/1.1"
+memorydb-1   | Default Health: { failing: false, minResponseTime: 0 }
+memorydb-1   | Fallback Health: { failing: false, minResponseTime: 0 }
+haproxy-1    | 172.20.0.1:53946 [15/Aug/2025:17:02:17.721] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 49/49/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51118 [15/Aug/2025:17:02:17.747] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 50/50/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51030 [15/Aug/2025:17:02:17.758] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 50/50/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:50962 [15/Aug/2025:17:02:17.777] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 50/50/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54108 [15/Aug/2025:17:02:17.794] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 50/50/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54032 [15/Aug/2025:17:02:17.812] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 50/50/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:53962 [15/Aug/2025:17:02:17.831] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 50/50/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51126 [15/Aug/2025:17:02:17.850] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 51/51/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51038 [15/Aug/2025:17:02:17.873] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 51/51/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:50970 [15/Aug/2025:17:02:17.885] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 51/51/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54120 [15/Aug/2025:17:02:17.904] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 51/51/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54042 [15/Aug/2025:17:02:17.922] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 51/51/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:53978 [15/Aug/2025:17:02:17.940] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 51/51/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51134 [15/Aug/2025:17:02:17.960] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 52/52/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51052 [15/Aug/2025:17:02:17.977] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 52/52/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:50976 [15/Aug/2025:17:02:17.994] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 52/52/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54136 [15/Aug/2025:17:02:18.013] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 52/52/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54056 [15/Aug/2025:17:02:18.032] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 52/52/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:53988 [15/Aug/2025:17:02:18.049] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 52/52/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51136 [15/Aug/2025:17:02:18.069] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 53/53/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51064 [15/Aug/2025:17:02:18.086] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 53/53/0/0/0 0/0 "POST /payments HTTP/1.1"
+memorydb-1   | Using cached best processor: {
+memorydb-1   |   processor: 'default',
+memorydb-1   |   url: 'http://payment-processor-default:8080/payments',
+memorydb-1   |   expireAt: 1755277342508
+memorydb-1   | }
+haproxy-1    | 172.20.0.1:50978 [15/Aug/2025:17:02:18.104] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 53/53/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54142 [15/Aug/2025:17:02:18.121] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 53/53/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54060 [15/Aug/2025:17:02:18.140] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 53/53/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54002 [15/Aug/2025:17:02:18.159] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 53/53/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51140 [15/Aug/2025:17:02:18.178] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 54/54/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51076 [15/Aug/2025:17:02:18.196] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 54/54/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:50982 [15/Aug/2025:17:02:18.214] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 54/54/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54144 [15/Aug/2025:17:02:18.232] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 54/54/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54062 [15/Aug/2025:17:02:18.248] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 54/54/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54006 [15/Aug/2025:17:02:18.267] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 54/54/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51154 [15/Aug/2025:17:02:18.288] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 55/55/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51078 [15/Aug/2025:17:02:18.305] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 55/55/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:50992 [15/Aug/2025:17:02:18.322] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 55/55/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54150 [15/Aug/2025:17:02:18.341] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 55/55/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54076 [15/Aug/2025:17:02:18.357] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 55/55/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54008 [15/Aug/2025:17:02:18.377] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 55/55/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51162 [15/Aug/2025:17:02:18.397] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 56/56/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51090 [15/Aug/2025:17:02:18.415] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 56/56/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51008 [15/Aug/2025:17:02:18.431] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 56/56/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54160 [15/Aug/2025:17:02:18.449] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 56/56/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54086 [15/Aug/2025:17:02:18.468] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 56/56/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54018 [15/Aug/2025:17:02:18.486] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 56/56/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51168 [15/Aug/2025:17:02:18.506] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 57/57/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51102 [15/Aug/2025:17:02:18.524] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 57/57/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51010 [15/Aug/2025:17:02:18.542] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 57/57/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54176 [15/Aug/2025:17:02:18.559] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 57/57/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54090 [15/Aug/2025:17:02:18.582] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 57/57/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54028 [15/Aug/2025:17:02:18.596] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 57/57/0/0/0 0/0 "POST /payments HTTP/1.1"
+memorydb-1   | Using cached best processor: {
+memorydb-1   |   processor: 'default',
+memorydb-1   |   url: 'http://payment-processor-default:8080/payments',
+memorydb-1   |   expireAt: 1755277342508
+memorydb-1   | }
+haproxy-1    | 172.20.0.1:51176 [15/Aug/2025:17:02:18.615] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 58/58/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:53942 [15/Aug/2025:17:02:18.618] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 58/58/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51114 [15/Aug/2025:17:02:18.633] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 58/58/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51026 [15/Aug/2025:17:02:18.651] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 58/58/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:50956 [15/Aug/2025:17:02:18.669] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 58/58/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54102 [15/Aug/2025:17:02:18.686] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 58/58/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54030 [15/Aug/2025:17:02:18.705] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 58/58/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:53946 [15/Aug/2025:17:02:18.722] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 58/58/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51184 [15/Aug/2025:17:02:18.724] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 59/59/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51118 [15/Aug/2025:17:02:18.749] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 59/59/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51030 [15/Aug/2025:17:02:18.760] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 59/59/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:50962 [15/Aug/2025:17:02:18.779] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 59/59/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54108 [15/Aug/2025:17:02:18.795] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 59/59/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54032 [15/Aug/2025:17:02:18.814] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 59/59/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:53962 [15/Aug/2025:17:02:18.832] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 59/59/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51200 [15/Aug/2025:17:02:18.833] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 60/60/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51126 [15/Aug/2025:17:02:18.852] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 60/60/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51038 [15/Aug/2025:17:02:18.876] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 60/60/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:50970 [15/Aug/2025:17:02:18.887] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 60/60/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54120 [15/Aug/2025:17:02:18.906] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 60/60/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54042 [15/Aug/2025:17:02:18.924] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 60/60/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:53978 [15/Aug/2025:17:02:18.942] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 61/61/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51212 [15/Aug/2025:17:02:18.943] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 61/61/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51134 [15/Aug/2025:17:02:18.962] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 61/61/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51052 [15/Aug/2025:17:02:18.979] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 61/61/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:50976 [15/Aug/2025:17:02:18.996] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 61/61/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54136 [15/Aug/2025:17:02:19.015] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 61/61/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54056 [15/Aug/2025:17:02:19.034] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 61/61/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:53988 [15/Aug/2025:17:02:19.051] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 62/62/1/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51228 [15/Aug/2025:17:02:19.052] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 62/62/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51136 [15/Aug/2025:17:02:19.070] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 62/62/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51064 [15/Aug/2025:17:02:19.088] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 62/62/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:50978 [15/Aug/2025:17:02:19.107] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 62/62/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54142 [15/Aug/2025:17:02:19.123] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 62/62/0/0/0 0/0 "POST /payments HTTP/1.1"
+memorydb-1   | Using cached best processor: {
+memorydb-1   |   processor: 'default',
+memorydb-1   |   url: 'http://payment-processor-default:8080/payments',
+memorydb-1   |   expireAt: 1755277342508
+memorydb-1   | }
+haproxy-1    | 172.20.0.1:54060 [15/Aug/2025:17:02:19.141] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 62/62/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54002 [15/Aug/2025:17:02:19.161] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 63/63/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51244 [15/Aug/2025:17:02:19.162] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 63/63/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51140 [15/Aug/2025:17:02:19.181] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 63/63/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51076 [15/Aug/2025:17:02:19.197] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 63/63/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:50982 [15/Aug/2025:17:02:19.215] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 63/63/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54144 [15/Aug/2025:17:02:19.234] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 63/63/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54062 [15/Aug/2025:17:02:19.250] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 63/63/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54006 [15/Aug/2025:17:02:19.269] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 63/63/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51258 [15/Aug/2025:17:02:19.270] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 64/64/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51154 [15/Aug/2025:17:02:19.289] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 64/64/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51078 [15/Aug/2025:17:02:19.307] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 64/64/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:50992 [15/Aug/2025:17:02:19.324] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 64/64/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54150 [15/Aug/2025:17:02:19.343] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 64/64/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54076 [15/Aug/2025:17:02:19.359] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 64/64/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54008 [15/Aug/2025:17:02:19.378] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 64/64/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51272 [15/Aug/2025:17:02:19.380] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 65/65/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51162 [15/Aug/2025:17:02:19.399] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 65/65/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51090 [15/Aug/2025:17:02:19.417] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 65/65/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51008 [15/Aug/2025:17:02:19.433] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 65/65/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54160 [15/Aug/2025:17:02:19.451] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 65/65/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54086 [15/Aug/2025:17:02:19.469] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 65/65/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54018 [15/Aug/2025:17:02:19.488] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 65/65/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51286 [15/Aug/2025:17:02:19.489] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 66/66/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51168 [15/Aug/2025:17:02:19.508] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 66/66/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51102 [15/Aug/2025:17:02:19.526] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 66/66/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51010 [15/Aug/2025:17:02:19.545] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 66/66/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54176 [15/Aug/2025:17:02:19.560] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 66/66/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54090 [15/Aug/2025:17:02:19.584] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 66/66/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54028 [15/Aug/2025:17:02:19.598] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 67/67/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51302 [15/Aug/2025:17:02:19.599] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 67/67/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51176 [15/Aug/2025:17:02:19.617] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 67/67/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:53942 [15/Aug/2025:17:02:19.619] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 67/67/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51114 [15/Aug/2025:17:02:19.635] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 67/67/0/0/0 0/0 "POST /payments HTTP/1.1"
+memorydb-1   | Using cached best processor: {
+memorydb-1   |   processor: 'default',
+memorydb-1   |   url: 'http://payment-processor-default:8080/payments',
+memorydb-1   |   expireAt: 1755277342508
+memorydb-1   | }
+haproxy-1    | 172.20.0.1:51026 [15/Aug/2025:17:02:19.654] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 67/67/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:50956 [15/Aug/2025:17:02:19.671] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 67/67/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54102 [15/Aug/2025:17:02:19.688] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 67/67/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54030 [15/Aug/2025:17:02:19.707] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 67/67/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51316 [15/Aug/2025:17:02:19.708] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 68/68/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:53946 [15/Aug/2025:17:02:19.724] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 68/68/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51184 [15/Aug/2025:17:02:19.725] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 68/68/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51118 [15/Aug/2025:17:02:19.750] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 68/68/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51030 [15/Aug/2025:17:02:19.761] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 68/68/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:50962 [15/Aug/2025:17:02:19.781] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 68/68/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54108 [15/Aug/2025:17:02:19.797] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 68/68/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54032 [15/Aug/2025:17:02:19.816] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 68/68/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51318 [15/Aug/2025:17:02:19.817] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 69/69/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:53962 [15/Aug/2025:17:02:19.834] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 69/69/1/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51200 [15/Aug/2025:17:02:19.834] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 69/69/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51126 [15/Aug/2025:17:02:19.853] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 69/69/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51038 [15/Aug/2025:17:02:19.876] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 69/69/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:50970 [15/Aug/2025:17:02:19.889] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 69/69/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54120 [15/Aug/2025:17:02:19.907] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 69/69/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54042 [15/Aug/2025:17:02:19.925] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 70/70/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51334 [15/Aug/2025:17:02:19.927] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 70/70/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:53978 [15/Aug/2025:17:02:19.944] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 70/70/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51134 [15/Aug/2025:17:02:19.964] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 70/70/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51052 [15/Aug/2025:17:02:19.981] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 70/70/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:50976 [15/Aug/2025:17:02:19.998] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 70/70/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54136 [15/Aug/2025:17:02:20.017] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 70/70/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54056 [15/Aug/2025:17:02:20.036] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 71/71/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51346 [15/Aug/2025:17:02:20.036] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 71/71/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51228 [15/Aug/2025:17:02:20.054] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 71/71/1/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:53988 [15/Aug/2025:17:02:20.053] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 71/71/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51136 [15/Aug/2025:17:02:20.072] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 71/71/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51064 [15/Aug/2025:17:02:20.091] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 71/71/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:50978 [15/Aug/2025:17:02:20.109] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 71/71/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54142 [15/Aug/2025:17:02:20.125] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 71/71/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54060 [15/Aug/2025:17:02:20.144] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 71/71/0/0/0 0/0 "POST /payments HTTP/1.1"
+memorydb-1   | Using cached best processor: {
+memorydb-1   |   processor: 'default',
+memorydb-1   |   url: 'http://payment-processor-default:8080/payments',
+memorydb-1   |   expireAt: 1755277342508
+memorydb-1   | }
+haproxy-1    | 172.20.0.1:51356 [15/Aug/2025:17:02:20.145] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 72/72/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54002 [15/Aug/2025:17:02:20.162] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 72/72/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51244 [15/Aug/2025:17:02:20.163] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 72/72/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51140 [15/Aug/2025:17:02:20.182] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 72/72/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51076 [15/Aug/2025:17:02:20.199] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 72/72/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:50982 [15/Aug/2025:17:02:20.217] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 72/72/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54144 [15/Aug/2025:17:02:20.234] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 72/72/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54062 [15/Aug/2025:17:02:20.252] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 72/72/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51360 [15/Aug/2025:17:02:20.255] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 73/73/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54006 [15/Aug/2025:17:02:20.271] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 73/73/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51258 [15/Aug/2025:17:02:20.272] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 73/73/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51154 [15/Aug/2025:17:02:20.291] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 73/73/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51078 [15/Aug/2025:17:02:20.309] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 73/73/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:50992 [15/Aug/2025:17:02:20.326] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 73/73/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54150 [15/Aug/2025:17:02:20.345] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 73/73/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54076 [15/Aug/2025:17:02:20.361] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 73/73/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51374 [15/Aug/2025:17:02:20.364] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 74/74/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54008 [15/Aug/2025:17:02:20.380] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 74/74/1/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51272 [15/Aug/2025:17:02:20.380] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 74/74/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51162 [15/Aug/2025:17:02:20.401] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 74/74/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51090 [15/Aug/2025:17:02:20.418] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 74/74/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51008 [15/Aug/2025:17:02:20.435] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 74/74/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54160 [15/Aug/2025:17:02:20.453] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 74/74/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54086 [15/Aug/2025:17:02:20.471] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 74/74/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51386 [15/Aug/2025:17:02:20.473] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 75/75/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54018 [15/Aug/2025:17:02:20.490] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 75/75/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51168 [15/Aug/2025:17:02:20.509] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 75/75/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51102 [15/Aug/2025:17:02:20.528] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 75/75/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51010 [15/Aug/2025:17:02:20.547] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 75/75/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54176 [15/Aug/2025:17:02:20.561] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 75/75/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51392 [15/Aug/2025:17:02:20.582] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 76/76/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54090 [15/Aug/2025:17:02:20.586] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 76/76/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51302 [15/Aug/2025:17:02:20.600] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 76/76/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54028 [15/Aug/2025:17:02:20.600] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 76/76/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51176 [15/Aug/2025:17:02:20.619] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 76/76/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:53942 [15/Aug/2025:17:02:20.621] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 76/76/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51114 [15/Aug/2025:17:02:20.637] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 76/76/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51026 [15/Aug/2025:17:02:20.656] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 76/76/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:50956 [15/Aug/2025:17:02:20.673] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 76/76/0/0/0 0/0 "POST /payments HTTP/1.1"
+memorydb-1   | Using cached best processor: {
+memorydb-1   |   processor: 'default',
+memorydb-1   |   url: 'http://payment-processor-default:8080/payments',
+memorydb-1   |   expireAt: 1755277342508
+memorydb-1   | }
+haproxy-1    | 172.20.0.1:54102 [15/Aug/2025:17:02:20.690] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 77/77/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51402 [15/Aug/2025:17:02:20.691] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 77/77/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51316 [15/Aug/2025:17:02:20.709] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 77/77/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54030 [15/Aug/2025:17:02:20.709] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 77/77/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:53946 [15/Aug/2025:17:02:20.726] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 77/77/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51184 [15/Aug/2025:17:02:20.727] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 77/77/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51118 [15/Aug/2025:17:02:20.752] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 77/77/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51030 [15/Aug/2025:17:02:20.763] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 77/77/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:50962 [15/Aug/2025:17:02:20.783] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 77/77/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54108 [15/Aug/2025:17:02:20.799] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 77/77/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51418 [15/Aug/2025:17:02:20.801] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 78/78/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54032 [15/Aug/2025:17:02:20.817] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 78/78/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51318 [15/Aug/2025:17:02:20.818] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 78/78/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:53962 [15/Aug/2025:17:02:20.836] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 78/78/1/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51200 [15/Aug/2025:17:02:20.836] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 78/78/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51126 [15/Aug/2025:17:02:20.855] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 78/78/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51038 [15/Aug/2025:17:02:20.879] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 78/78/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:50970 [15/Aug/2025:17:02:20.891] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 78/78/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54120 [15/Aug/2025:17:02:20.909] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 79/79/1/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51434 [15/Aug/2025:17:02:20.910] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 79/79/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51334 [15/Aug/2025:17:02:20.928] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 79/79/1/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54042 [15/Aug/2025:17:02:20.928] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 79/79/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:53978 [15/Aug/2025:17:02:20.945] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 79/79/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51212 [15/Aug/2025:17:02:20.945] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 79/79/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51134 [15/Aug/2025:17:02:20.965] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 79/79/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51052 [15/Aug/2025:17:02:20.982] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 79/79/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:50976 [15/Aug/2025:17:02:20.999] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 79/79/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54136 [15/Aug/2025:17:02:21.018] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 79/79/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51438 [15/Aug/2025:17:02:21.019] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 80/80/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54056 [15/Aug/2025:17:02:21.038] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 80/80/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51346 [15/Aug/2025:17:02:21.037] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 80/80/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51228 [15/Aug/2025:17:02:21.054] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 80/80/1/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:53988 [15/Aug/2025:17:02:21.054] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 80/80/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51136 [15/Aug/2025:17:02:21.074] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 80/80/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51064 [15/Aug/2025:17:02:21.092] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 80/80/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:50978 [15/Aug/2025:17:02:21.111] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 80/80/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54142 [15/Aug/2025:17:02:21.127] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 81/81/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51442 [15/Aug/2025:17:02:21.129] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 81/81/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54060 [15/Aug/2025:17:02:21.146] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 81/81/1/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51356 [15/Aug/2025:17:02:21.146] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 81/81/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54002 [15/Aug/2025:17:02:21.164] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 81/81/1/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51244 [15/Aug/2025:17:02:21.164] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 81/81/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51140 [15/Aug/2025:17:02:21.183] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 81/81/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51076 [15/Aug/2025:17:02:21.201] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 81/81/0/0/0 0/0 "POST /payments HTTP/1.1"
+memorydb-1   | Using cached best processor: {
+memorydb-1   |   processor: 'default',
+memorydb-1   |   url: 'http://payment-processor-default:8080/payments',
+memorydb-1   |   expireAt: 1755277342508
+memorydb-1   | }
+haproxy-1    | 172.20.0.1:50982 [15/Aug/2025:17:02:21.218] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 81/81/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54144 [15/Aug/2025:17:02:21.237] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 81/81/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51444 [15/Aug/2025:17:02:21.238] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 82/82/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54062 [15/Aug/2025:17:02:21.254] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 82/82/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51360 [15/Aug/2025:17:02:21.255] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 82/82/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54006 [15/Aug/2025:17:02:21.273] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 82/82/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51258 [15/Aug/2025:17:02:21.274] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 82/82/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51154 [15/Aug/2025:17:02:21.293] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 82/82/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51078 [15/Aug/2025:17:02:21.311] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 82/82/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:50992 [15/Aug/2025:17:02:21.328] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 82/82/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54150 [15/Aug/2025:17:02:21.346] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 83/83/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51454 [15/Aug/2025:17:02:21.347] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 83/83/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54076 [15/Aug/2025:17:02:21.362] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 83/83/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51374 [15/Aug/2025:17:02:21.365] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 83/83/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54008 [15/Aug/2025:17:02:21.382] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 83/83/1/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51272 [15/Aug/2025:17:02:21.382] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 83/83/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51162 [15/Aug/2025:17:02:21.403] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 83/83/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51090 [15/Aug/2025:17:02:21.420] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 83/83/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51008 [15/Aug/2025:17:02:21.436] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 83/83/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54160 [15/Aug/2025:17:02:21.454] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 83/83/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51460 [15/Aug/2025:17:02:21.456] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 84/84/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54086 [15/Aug/2025:17:02:21.473] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 84/84/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51386 [15/Aug/2025:17:02:21.475] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 84/84/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51286 [15/Aug/2025:17:02:21.492] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 84/84/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54018 [15/Aug/2025:17:02:21.492] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 84/84/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51168 [15/Aug/2025:17:02:21.511] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 84/84/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51102 [15/Aug/2025:17:02:21.530] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 84/84/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51010 [15/Aug/2025:17:02:21.549] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 84/84/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54176 [15/Aug/2025:17:02:21.563] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 84/84/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51472 [15/Aug/2025:17:02:21.571] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 85/85/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51392 [15/Aug/2025:17:02:21.584] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 85/85/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54090 [15/Aug/2025:17:02:21.588] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 85/85/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54028 [15/Aug/2025:17:02:21.602] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 85/85/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51302 [15/Aug/2025:17:02:21.602] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 85/85/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51176 [15/Aug/2025:17:02:21.620] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 85/85/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:53942 [15/Aug/2025:17:02:21.622] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 85/85/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51114 [15/Aug/2025:17:02:21.638] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 85/85/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51026 [15/Aug/2025:17:02:21.658] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 85/85/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:50956 [15/Aug/2025:17:02:21.675] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 86/86/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51476 [15/Aug/2025:17:02:21.675] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 86/86/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51402 [15/Aug/2025:17:02:21.693] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 86/86/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54030 [15/Aug/2025:17:02:21.710] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 86/86/0/0/0 0/0 "POST /payments HTTP/1.1"
+memorydb-1   | Using cached best processor: {
+memorydb-1   |   processor: 'default',
+memorydb-1   |   url: 'http://payment-processor-default:8080/payments',
+memorydb-1   |   expireAt: 1755277342508
+memorydb-1   | }
+haproxy-1    | 172.20.0.1:53946 [15/Aug/2025:17:02:21.727] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 86/86/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51184 [15/Aug/2025:17:02:21.729] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 86/86/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51118 [15/Aug/2025:17:02:21.754] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 86/86/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51030 [15/Aug/2025:17:02:21.764] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 86/86/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:50962 [15/Aug/2025:17:02:21.785] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 87/87/1/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51480 [15/Aug/2025:17:02:21.784] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 87/87/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54108 [15/Aug/2025:17:02:21.800] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 87/87/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51418 [15/Aug/2025:17:02:21.803] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 87/87/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54032 [15/Aug/2025:17:02:21.818] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 87/87/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51318 [15/Aug/2025:17:02:21.819] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 87/87/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51200 [15/Aug/2025:17:02:21.838] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 87/87/1/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:53962 [15/Aug/2025:17:02:21.838] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 87/87/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51126 [15/Aug/2025:17:02:21.857] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 87/87/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51038 [15/Aug/2025:17:02:21.880] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 87/87/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:50970 [15/Aug/2025:17:02:21.893] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 87/87/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51492 [15/Aug/2025:17:02:21.894] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 88/88/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54120 [15/Aug/2025:17:02:21.911] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 88/88/1/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51434 [15/Aug/2025:17:02:21.911] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 88/88/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51334 [15/Aug/2025:17:02:21.930] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 88/88/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51212 [15/Aug/2025:17:02:21.947] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 88/88/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:53978 [15/Aug/2025:17:02:21.947] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 88/88/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51134 [15/Aug/2025:17:02:21.967] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 88/88/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51052 [15/Aug/2025:17:02:21.984] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 88/88/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:50976 [15/Aug/2025:17:02:22.001] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 88/88/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51506 [15/Aug/2025:17:02:22.003] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 89/89/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54136 [15/Aug/2025:17:02:22.019] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 89/89/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51438 [15/Aug/2025:17:02:22.020] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 89/89/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54056 [15/Aug/2025:17:02:22.039] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 89/89/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51346 [15/Aug/2025:17:02:22.039] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 89/89/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:53988 [15/Aug/2025:17:02:22.057] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 89/89/1/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51228 [15/Aug/2025:17:02:22.057] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 89/89/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51136 [15/Aug/2025:17:02:22.076] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 89/89/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51064 [15/Aug/2025:17:02:22.094] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 89/89/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:50978 [15/Aug/2025:17:02:22.111] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 90/90/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51514 [15/Aug/2025:17:02:22.113] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 90/90/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54142 [15/Aug/2025:17:02:22.130] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 90/90/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54060 [15/Aug/2025:17:02:22.147] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 90/90/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51356 [15/Aug/2025:17:02:22.147] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 90/90/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54002 [15/Aug/2025:17:02:22.166] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 90/90/1/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51244 [15/Aug/2025:17:02:22.166] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 90/90/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51140 [15/Aug/2025:17:02:22.185] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 90/90/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51076 [15/Aug/2025:17:02:22.203] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 90/90/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:50982 [15/Aug/2025:17:02:22.220] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 90/90/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51518 [15/Aug/2025:17:02:22.221] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 91/91/0/0/0 0/0 "POST /payments HTTP/1.1"
+memorydb-1   | Using cached best processor: {
+memorydb-1   |   processor: 'default',
+memorydb-1   |   url: 'http://payment-processor-default:8080/payments',
+memorydb-1   |   expireAt: 1755277342508
+memorydb-1   | }
+haproxy-1    | 172.20.0.1:51444 [15/Aug/2025:17:02:22.238] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 91/91/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54062 [15/Aug/2025:17:02:22.256] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 91/91/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51360 [15/Aug/2025:17:02:22.258] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 91/91/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54006 [15/Aug/2025:17:02:22.274] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 91/91/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51258 [15/Aug/2025:17:02:22.274] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 91/91/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51154 [15/Aug/2025:17:02:22.294] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 91/91/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51078 [15/Aug/2025:17:02:22.312] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 91/91/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:50992 [15/Aug/2025:17:02:22.329] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 91/91/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51530 [15/Aug/2025:17:02:22.331] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 92/92/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54150 [15/Aug/2025:17:02:22.347] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 92/92/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51454 [15/Aug/2025:17:02:22.347] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 92/92/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54076 [15/Aug/2025:17:02:22.364] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 92/92/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51374 [15/Aug/2025:17:02:22.367] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 92/92/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54008 [15/Aug/2025:17:02:22.384] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 92/92/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51272 [15/Aug/2025:17:02:22.384] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 92/92/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51162 [15/Aug/2025:17:02:22.404] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 92/92/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51090 [15/Aug/2025:17:02:22.421] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 92/92/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51008 [15/Aug/2025:17:02:22.438] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 92/92/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51536 [15/Aug/2025:17:02:22.440] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 93/93/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54160 [15/Aug/2025:17:02:22.456] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 93/93/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51460 [15/Aug/2025:17:02:22.458] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 93/93/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54086 [15/Aug/2025:17:02:22.474] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 93/93/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51386 [15/Aug/2025:17:02:22.476] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 93/93/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51286 [15/Aug/2025:17:02:22.494] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 93/93/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51168 [15/Aug/2025:17:02:22.512] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 93/93/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51102 [15/Aug/2025:17:02:22.531] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 93/93/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51550 [15/Aug/2025:17:02:22.550] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 94/94/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51010 [15/Aug/2025:17:02:22.550] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 94/94/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54176 [15/Aug/2025:17:02:22.565] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 94/94/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51472 [15/Aug/2025:17:02:22.573] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 94/94/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51392 [15/Aug/2025:17:02:22.586] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 94/94/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54090 [15/Aug/2025:17:02:22.588] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 94/94/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51302 [15/Aug/2025:17:02:22.603] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 94/94/1/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54028 [15/Aug/2025:17:02:22.603] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 94/94/0/0/0 0/0 "POST /payments HTTP/1.1"
+backend-1-1  | Summary request: { from: '2025-08-15T17:02:07.609Z', to: '2025-08-15T17:02:21.109Z' }
+memorydb-1   | Fetching summary from: 2025-08-15T17:02:07.609Z to: 2025-08-15T17:02:21.109Z
+haproxy-1    | 172.20.0.1:53940 [15/Aug/2025:17:02:22.609] http_front http_back/app1 0/0/0/3/3 200 237 - - ---- 94/94/0/0/0 0/0 "GET /payments-summary?from=2025-08-15T17:02:07.609Z&to=2025-08-15T17:02:21.109Z HTTP/1.1"
+haproxy-1    | 172.20.0.1:51176 [15/Aug/2025:17:02:22.622] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 94/94/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:53942 [15/Aug/2025:17:02:22.624] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 94/94/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51114 [15/Aug/2025:17:02:22.640] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 94/94/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51562 [15/Aug/2025:17:02:22.659] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 95/95/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51026 [15/Aug/2025:17:02:22.659] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 95/95/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:50956 [15/Aug/2025:17:02:22.677] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 95/95/1/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54102 [15/Aug/2025:17:02:22.694] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 95/95/1/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51402 [15/Aug/2025:17:02:22.694] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 95/95/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51316 [15/Aug/2025:17:02:22.712] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 95/95/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:53946 [15/Aug/2025:17:02:22.728] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 95/95/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51184 [15/Aug/2025:17:02:22.729] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 95/95/0/0/0 0/0 "POST /payments HTTP/1.1"
+memorydb-1   | Fetching health summaries...
+haproxy-1    | 172.20.0.1:51118 [15/Aug/2025:17:02:22.755] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 95/95/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51030 [15/Aug/2025:17:02:22.766] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 95/95/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51578 [15/Aug/2025:17:02:22.768] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 96/96/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51480 [15/Aug/2025:17:02:22.785] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 96/96/1/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:50962 [15/Aug/2025:17:02:22.786] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 96/96/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54108 [15/Aug/2025:17:02:22.801] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 96/96/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51418 [15/Aug/2025:17:02:22.805] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 96/96/0/0/0 0/0 "POST /payments HTTP/1.1"
+memorydb-1   | Default Health: { failing: false, minResponseTime: 100 }
+memorydb-1   | Fallback Health: { failing: false, minResponseTime: 0 }
+haproxy-1    | 172.20.0.1:54032 [15/Aug/2025:17:02:22.821] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 96/96/1/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51318 [15/Aug/2025:17:02:22.821] http_front http_back/app1 0/0/0/2/2 201 100 - - ---- 96/96/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51200 [15/Aug/2025:17:02:22.840] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 96/96/1/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:53962 [15/Aug/2025:17:02:22.840] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 96/96/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51126 [15/Aug/2025:17:02:22.859] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 96/96/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51586 [15/Aug/2025:17:02:22.878] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 97/97/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51038 [15/Aug/2025:17:02:22.881] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 97/97/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51492 [15/Aug/2025:17:02:22.895] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 97/97/1/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51434 [15/Aug/2025:17:02:22.913] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 97/97/2/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:50970 [15/Aug/2025:17:02:22.894] http_front http_back/app1 0/0/0/24/24 201 100 - - ---- 97/97/1/1/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54042 [15/Aug/2025:17:02:22.932] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 97/97/1/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51334 [15/Aug/2025:17:02:22.932] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 97/97/0/0/0 0/0 "POST /payments HTTP/1.1"
+memorydb-1   | Using cached best processor: {
+memorydb-1   |   processor: 'default',
+memorydb-1   |   url: 'http://payment-processor-default:8080/payments',
+memorydb-1   |   expireAt: 1755277347608
+memorydb-1   | }
+haproxy-1    | 172.20.0.1:51212 [15/Aug/2025:17:02:22.949] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 97/97/1/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51134 [15/Aug/2025:17:02:22.969] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 97/97/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51052 [15/Aug/2025:17:02:22.986] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 98/98/1/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51598 [15/Aug/2025:17:02:22.987] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 98/98/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:50976 [15/Aug/2025:17:02:23.002] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 98/98/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51506 [15/Aug/2025:17:02:23.004] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 98/98/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54136 [15/Aug/2025:17:02:23.020] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 98/98/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51438 [15/Aug/2025:17:02:23.021] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 98/98/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51346 [15/Aug/2025:17:02:23.041] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 98/98/1/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:53988 [15/Aug/2025:17:02:23.058] http_front http_back/app2 0/0/0/4/4 201 100 - - ---- 98/98/1/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51228 [15/Aug/2025:17:02:23.062] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 98/98/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51136 [15/Aug/2025:17:02:23.078] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 98/98/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51606 [15/Aug/2025:17:02:23.097] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 99/99/1/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51064 [15/Aug/2025:17:02:23.096] http_front http_back/app1 0/0/0/3/3 201 100 - - ---- 99/99/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:50978 [15/Aug/2025:17:02:23.114] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 99/99/1/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51514 [15/Aug/2025:17:02:23.114] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 99/99/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51442 [15/Aug/2025:17:02:23.131] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 99/99/1/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54142 [15/Aug/2025:17:02:23.131] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 99/99/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51356 [15/Aug/2025:17:02:23.149] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 99/99/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54002 [15/Aug/2025:17:02:23.167] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 99/99/1/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51244 [15/Aug/2025:17:02:23.167] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 99/99/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51140 [15/Aug/2025:17:02:23.186] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 99/99/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51076 [15/Aug/2025:17:02:23.203] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 99/99/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51616 [15/Aug/2025:17:02:23.205] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 100/100/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:50982 [15/Aug/2025:17:02:23.222] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 100/100/1/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51518 [15/Aug/2025:17:02:23.222] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 100/100/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51444 [15/Aug/2025:17:02:23.240] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 100/100/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54062 [15/Aug/2025:17:02:23.257] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 100/100/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51360 [15/Aug/2025:17:02:23.259] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 100/100/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54006 [15/Aug/2025:17:02:23.274] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 100/100/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51258 [15/Aug/2025:17:02:23.275] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 100/100/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51154 [15/Aug/2025:17:02:23.295] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 100/100/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51078 [15/Aug/2025:17:02:23.314] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 102/102/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51628 [15/Aug/2025:17:02:23.314] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 101/101/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:50992 [15/Aug/2025:17:02:23.330] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 101/101/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51530 [15/Aug/2025:17:02:23.332] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 101/101/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51454 [15/Aug/2025:17:02:23.349] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 101/101/1/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54076 [15/Aug/2025:17:02:23.366] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 101/101/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51374 [15/Aug/2025:17:02:23.368] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 101/101/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54008 [15/Aug/2025:17:02:23.385] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 101/101/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51162 [15/Aug/2025:17:02:23.405] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 101/101/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51090 [15/Aug/2025:17:02:23.423] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 102/102/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51644 [15/Aug/2025:17:02:23.423] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 102/102/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51008 [15/Aug/2025:17:02:23.439] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 102/102/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51536 [15/Aug/2025:17:02:23.441] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 102/102/0/0/0 0/0 "POST /payments HTTP/1.1"
+memorydb-1   | Using cached best processor: {
+memorydb-1   |   processor: 'default',
+memorydb-1   |   url: 'http://payment-processor-default:8080/payments',
+memorydb-1   |   expireAt: 1755277347608
+memorydb-1   | }
+haproxy-1    | 172.20.0.1:54160 [15/Aug/2025:17:02:23.458] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 102/102/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51460 [15/Aug/2025:17:02:23.460] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 102/102/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54086 [15/Aug/2025:17:02:23.476] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 102/102/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51386 [15/Aug/2025:17:02:23.478] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 102/102/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51286 [15/Aug/2025:17:02:23.495] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 102/102/1/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54018 [15/Aug/2025:17:02:23.495] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 102/102/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51168 [15/Aug/2025:17:02:23.514] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 102/102/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51102 [15/Aug/2025:17:02:23.533] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 102/102/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51658 [15/Aug/2025:17:02:23.534] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 103/103/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51550 [15/Aug/2025:17:02:23.550] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 103/103/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51010 [15/Aug/2025:17:02:23.551] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 103/103/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54176 [15/Aug/2025:17:02:23.566] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 103/103/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51472 [15/Aug/2025:17:02:23.574] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 103/103/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51392 [15/Aug/2025:17:02:23.588] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 103/103/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54090 [15/Aug/2025:17:02:23.590] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 103/103/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54028 [15/Aug/2025:17:02:23.605] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 103/103/1/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51302 [15/Aug/2025:17:02:23.605] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 103/103/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51176 [15/Aug/2025:17:02:23.624] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 103/103/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:53942 [15/Aug/2025:17:02:23.625] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 103/103/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51114 [15/Aug/2025:17:02:23.642] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 103/103/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51668 [15/Aug/2025:17:02:23.642] http_front http_back/app2 0/0/0/10/10 201 100 - - ---- 104/104/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51562 [15/Aug/2025:17:02:23.660] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 104/104/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51026 [15/Aug/2025:17:02:23.660] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 104/104/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:50956 [15/Aug/2025:17:02:23.678] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 104/104/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54102 [15/Aug/2025:17:02:23.695] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 104/104/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51402 [15/Aug/2025:17:02:23.695] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 104/104/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51316 [15/Aug/2025:17:02:23.712] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 104/104/1/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54030 [15/Aug/2025:17:02:23.712] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 104/104/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:53946 [15/Aug/2025:17:02:23.729] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 104/104/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51184 [15/Aug/2025:17:02:23.731] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 104/104/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51672 [15/Aug/2025:17:02:23.752] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 105/105/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51118 [15/Aug/2025:17:02:23.757] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 105/105/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51030 [15/Aug/2025:17:02:23.768] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 105/105/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51578 [15/Aug/2025:17:02:23.769] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 105/105/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51480 [15/Aug/2025:17:02:23.787] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 105/105/1/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:50962 [15/Aug/2025:17:02:23.787] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 105/105/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54108 [15/Aug/2025:17:02:23.803] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 105/105/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51418 [15/Aug/2025:17:02:23.806] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 105/105/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54032 [15/Aug/2025:17:02:23.823] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 105/105/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51318 [15/Aug/2025:17:02:23.824] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 105/105/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:53962 [15/Aug/2025:17:02:23.842] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 105/105/1/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51200 [15/Aug/2025:17:02:23.842] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 105/105/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51684 [15/Aug/2025:17:02:23.861] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 106/106/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51126 [15/Aug/2025:17:02:23.860] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 106/106/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51586 [15/Aug/2025:17:02:23.879] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 106/106/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51038 [15/Aug/2025:17:02:23.883] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 106/106/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51492 [15/Aug/2025:17:02:23.897] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 106/106/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51434 [15/Aug/2025:17:02:23.914] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 106/106/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54120 [15/Aug/2025:17:02:23.920] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 106/106/1/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:50970 [15/Aug/2025:17:02:23.920] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 106/106/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51334 [15/Aug/2025:17:02:23.932] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 106/106/1/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54042 [15/Aug/2025:17:02:23.933] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 106/106/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:53978 [15/Aug/2025:17:02:23.951] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 106/106/0/0/0 0/0 "POST /payments HTTP/1.1"
+memorydb-1   | Using cached best processor: {
+memorydb-1   |   processor: 'default',
+memorydb-1   |   url: 'http://payment-processor-default:8080/payments',
+memorydb-1   |   expireAt: 1755277347608
+memorydb-1   | }
+haproxy-1    | 172.20.0.1:51134 [15/Aug/2025:17:02:23.970] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 107/107/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51698 [15/Aug/2025:17:02:23.971] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 107/107/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51052 [15/Aug/2025:17:02:23.988] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 107/107/1/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51598 [15/Aug/2025:17:02:23.988] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 107/107/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:50976 [15/Aug/2025:17:02:24.004] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 107/107/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51506 [15/Aug/2025:17:02:24.006] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 107/107/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54136 [15/Aug/2025:17:02:24.022] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 107/107/1/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51438 [15/Aug/2025:17:02:24.022] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 107/107/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51346 [15/Aug/2025:17:02:24.042] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 107/107/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54056 [15/Aug/2025:17:02:24.044] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 107/107/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:53988 [15/Aug/2025:17:02:24.064] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 107/107/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51228 [15/Aug/2025:17:02:24.064] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 107/107/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51702 [15/Aug/2025:17:02:24.080] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 108/108/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51136 [15/Aug/2025:17:02:24.080] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 108/108/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51606 [15/Aug/2025:17:02:24.099] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 108/108/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51064 [15/Aug/2025:17:02:24.100] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 108/108/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:50978 [15/Aug/2025:17:02:24.115] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 108/108/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51514 [15/Aug/2025:17:02:24.116] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 108/108/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54142 [15/Aug/2025:17:02:24.133] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 108/108/1/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51442 [15/Aug/2025:17:02:24.133] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 108/108/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51356 [15/Aug/2025:17:02:24.149] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 108/108/1/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54060 [15/Aug/2025:17:02:24.150] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 108/108/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51244 [15/Aug/2025:17:02:24.168] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 108/108/1/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54002 [15/Aug/2025:17:02:24.169] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 108/108/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51140 [15/Aug/2025:17:02:24.188] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 108/108/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51714 [15/Aug/2025:17:02:24.189] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 109/109/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51076 [15/Aug/2025:17:02:24.205] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 109/109/1/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51616 [15/Aug/2025:17:02:24.206] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 109/109/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:50982 [15/Aug/2025:17:02:24.224] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 109/109/1/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51518 [15/Aug/2025:17:02:24.224] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 109/109/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54144 [15/Aug/2025:17:02:24.242] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 109/109/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54062 [15/Aug/2025:17:02:24.258] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 109/109/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51360 [15/Aug/2025:17:02:24.260] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 109/109/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54006 [15/Aug/2025:17:02:24.277] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 109/109/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51154 [15/Aug/2025:17:02:24.297] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 109/109/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51718 [15/Aug/2025:17:02:24.298] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 110/110/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51078 [15/Aug/2025:17:02:24.315] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 110/110/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51628 [15/Aug/2025:17:02:24.315] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 110/110/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:50992 [15/Aug/2025:17:02:24.332] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 110/110/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51530 [15/Aug/2025:17:02:24.333] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 110/110/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54150 [15/Aug/2025:17:02:24.351] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 110/110/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54076 [15/Aug/2025:17:02:24.366] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 110/110/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51374 [15/Aug/2025:17:02:24.370] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 110/110/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54008 [15/Aug/2025:17:02:24.387] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 110/110/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51162 [15/Aug/2025:17:02:24.407] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 110/110/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51732 [15/Aug/2025:17:02:24.408] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 111/111/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51090 [15/Aug/2025:17:02:24.423] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 111/111/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51644 [15/Aug/2025:17:02:24.425] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 111/111/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51008 [15/Aug/2025:17:02:24.441] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 111/111/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51536 [15/Aug/2025:17:02:24.443] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 111/111/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54160 [15/Aug/2025:17:02:24.460] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 111/111/0/0/0 0/0 "POST /payments HTTP/1.1"
+memorydb-1   | Using cached best processor: {
+memorydb-1   |   processor: 'default',
+memorydb-1   |   url: 'http://payment-processor-default:8080/payments',
+memorydb-1   |   expireAt: 1755277347608
+memorydb-1   | }
+haproxy-1    | 172.20.0.1:51460 [15/Aug/2025:17:02:24.461] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 111/111/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54086 [15/Aug/2025:17:02:24.477] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 111/111/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51386 [15/Aug/2025:17:02:24.479] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 111/111/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54018 [15/Aug/2025:17:02:24.497] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 111/111/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51168 [15/Aug/2025:17:02:24.514] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 111/111/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51736 [15/Aug/2025:17:02:24.526] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 112/112/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51102 [15/Aug/2025:17:02:24.534] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 112/112/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51658 [15/Aug/2025:17:02:24.535] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 112/112/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51550 [15/Aug/2025:17:02:24.551] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 112/112/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51010 [15/Aug/2025:17:02:24.552] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 112/112/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54176 [15/Aug/2025:17:02:24.568] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 112/112/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51472 [15/Aug/2025:17:02:24.575] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 112/112/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51392 [15/Aug/2025:17:02:24.590] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 112/112/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54090 [15/Aug/2025:17:02:24.592] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 112/112/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54028 [15/Aug/2025:17:02:24.607] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 112/112/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51176 [15/Aug/2025:17:02:24.625] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 113/113/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51742 [15/Aug/2025:17:02:24.626] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 113/113/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:53942 [15/Aug/2025:17:02:24.626] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 113/113/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51114 [15/Aug/2025:17:02:24.643] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 113/113/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51668 [15/Aug/2025:17:02:24.652] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 113/113/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51562 [15/Aug/2025:17:02:24.660] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 113/113/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51026 [15/Aug/2025:17:02:24.661] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 113/113/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51476 [15/Aug/2025:17:02:24.679] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 113/113/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54102 [15/Aug/2025:17:02:24.696] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 113/113/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51316 [15/Aug/2025:17:02:24.714] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 113/113/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:53946 [15/Aug/2025:17:02:24.730] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 113/113/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51184 [15/Aug/2025:17:02:24.731] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 113/113/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51754 [15/Aug/2025:17:02:24.736] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 114/114/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51672 [15/Aug/2025:17:02:24.753] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 114/114/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51118 [15/Aug/2025:17:02:24.758] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 114/114/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51030 [15/Aug/2025:17:02:24.771] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 114/114/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51480 [15/Aug/2025:17:02:24.789] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 114/114/1/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:50962 [15/Aug/2025:17:02:24.789] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 114/114/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54108 [15/Aug/2025:17:02:24.805] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 114/114/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51418 [15/Aug/2025:17:02:24.808] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 114/114/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54032 [15/Aug/2025:17:02:24.825] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 114/114/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51318 [15/Aug/2025:17:02:24.825] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 114/114/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51200 [15/Aug/2025:17:02:24.844] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 114/114/1/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:53962 [15/Aug/2025:17:02:24.844] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 114/114/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51756 [15/Aug/2025:17:02:24.845] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 115/115/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51126 [15/Aug/2025:17:02:24.861] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 115/115/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51684 [15/Aug/2025:17:02:24.861] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 115/115/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51586 [15/Aug/2025:17:02:24.879] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 115/115/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51038 [15/Aug/2025:17:02:24.883] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 115/115/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51492 [15/Aug/2025:17:02:24.898] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 115/115/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51434 [15/Aug/2025:17:02:24.915] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 115/115/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54120 [15/Aug/2025:17:02:24.921] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 115/115/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51334 [15/Aug/2025:17:02:24.934] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 115/115/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51212 [15/Aug/2025:17:02:24.952] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 115/115/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51762 [15/Aug/2025:17:02:24.954] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 116/116/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51134 [15/Aug/2025:17:02:24.972] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 116/116/1/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51698 [15/Aug/2025:17:02:24.971] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 116/116/0/0/0 0/0 "POST /payments HTTP/1.1"
+memorydb-1   | Using cached best processor: {
+memorydb-1   |   processor: 'default',
+memorydb-1   |   url: 'http://payment-processor-default:8080/payments',
+memorydb-1   |   expireAt: 1755277347608
+memorydb-1   | }
+haproxy-1    | 172.20.0.1:51598 [15/Aug/2025:17:02:24.988] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 116/116/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51052 [15/Aug/2025:17:02:24.988] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 116/116/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:50976 [15/Aug/2025:17:02:25.006] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 116/116/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51506 [15/Aug/2025:17:02:25.006] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 116/116/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51438 [15/Aug/2025:17:02:25.024] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 116/116/1/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54136 [15/Aug/2025:17:02:25.024] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 116/116/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51346 [15/Aug/2025:17:02:25.044] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 116/116/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54056 [15/Aug/2025:17:02:25.046] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 116/116/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51776 [15/Aug/2025:17:02:25.063] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 117/117/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51228 [15/Aug/2025:17:02:25.066] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 117/117/1/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:53988 [15/Aug/2025:17:02:25.066] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 117/117/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51702 [15/Aug/2025:17:02:25.081] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 117/117/1/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51136 [15/Aug/2025:17:02:25.081] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 117/117/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51606 [15/Aug/2025:17:02:25.100] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 117/117/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51064 [15/Aug/2025:17:02:25.100] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 117/117/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51514 [15/Aug/2025:17:02:25.117] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 117/117/1/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:50978 [15/Aug/2025:17:02:25.116] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 117/117/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51442 [15/Aug/2025:17:02:25.135] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 117/117/1/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54142 [15/Aug/2025:17:02:25.135] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 117/117/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54060 [15/Aug/2025:17:02:25.150] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 117/117/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54002 [15/Aug/2025:17:02:25.170] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 117/117/1/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51244 [15/Aug/2025:17:02:25.170] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 117/117/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51788 [15/Aug/2025:17:02:25.173] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 118/118/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51714 [15/Aug/2025:17:02:25.189] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 118/118/1/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51140 [15/Aug/2025:17:02:25.190] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 118/118/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51616 [15/Aug/2025:17:02:25.206] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 118/118/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51518 [15/Aug/2025:17:02:25.226] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 118/118/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54144 [15/Aug/2025:17:02:25.244] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 118/118/1/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54062 [15/Aug/2025:17:02:25.259] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 118/118/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51360 [15/Aug/2025:17:02:25.261] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 118/118/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51258 [15/Aug/2025:17:02:25.278] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 118/118/1/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51792 [15/Aug/2025:17:02:25.282] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 119/119/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51154 [15/Aug/2025:17:02:25.299] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 119/119/1/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51718 [15/Aug/2025:17:02:25.298] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 119/119/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51078 [15/Aug/2025:17:02:25.317] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 119/119/1/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51628 [15/Aug/2025:17:02:25.317] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 119/119/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:50992 [15/Aug/2025:17:02:25.333] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 119/119/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51530 [15/Aug/2025:17:02:25.334] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 119/119/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51454 [15/Aug/2025:17:02:25.353] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 119/119/1/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54150 [15/Aug/2025:17:02:25.352] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 119/119/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54076 [15/Aug/2025:17:02:25.367] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 119/119/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51374 [15/Aug/2025:17:02:25.372] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 119/119/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51272 [15/Aug/2025:17:02:25.389] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 119/119/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51804 [15/Aug/2025:17:02:25.391] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 120/120/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51162 [15/Aug/2025:17:02:25.409] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 120/120/1/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51732 [15/Aug/2025:17:02:25.408] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 120/120/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51090 [15/Aug/2025:17:02:25.425] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 120/120/1/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51644 [15/Aug/2025:17:02:25.425] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 120/120/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51008 [15/Aug/2025:17:02:25.442] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 120/120/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51536 [15/Aug/2025:17:02:25.444] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 120/120/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54160 [15/Aug/2025:17:02:25.461] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 120/120/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51460 [15/Aug/2025:17:02:25.463] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 120/120/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54086 [15/Aug/2025:17:02:25.479] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 120/120/0/0/0 0/0 "POST /payments HTTP/1.1"
+memorydb-1   | Using cached best processor: {
+memorydb-1   |   processor: 'default',
+memorydb-1   |   url: 'http://payment-processor-default:8080/payments',
+memorydb-1   |   expireAt: 1755277347608
+memorydb-1   | }
+haproxy-1    | 172.20.0.1:51386 [15/Aug/2025:17:02:25.480] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 120/120/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:54018 [15/Aug/2025:17:02:25.498] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 120/120/1/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51286 [15/Aug/2025:17:02:25.498] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 120/120/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51818 [15/Aug/2025:17:02:25.500] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 121/121/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51168 [15/Aug/2025:17:02:25.516] http_front http_back/app2 0/0/0/1/1 201 100 - - ---- 121/121/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51736 [15/Aug/2025:17:02:25.528] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 121/121/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51102 [15/Aug/2025:17:02:25.536] http_front http_back/app1 0/0/0/0/0 201 100 - - ---- 121/121/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51550 [15/Aug/2025:17:02:25.553] http_front http_back/app2 0/0/0/0/0 201 100 - - ---- 121/121/0/0/0 0/0 "POST /payments HTTP/1.1"
+haproxy-1    | 172.20.0.1:51010 [15/Aug/2025:17:02:25.553] http_front http_back/app1 0/0/0/1/1 201 100 - - ---- 121/121/0/0/0 0/0 "POST /payments HTTP/1.1"
+log truncated at line 1000

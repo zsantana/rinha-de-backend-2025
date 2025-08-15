@@ -35,4 +35,8 @@ curl -X POST http://localhost:9999/payments \
   -d '{"correlationId":"123","amount":100.0,"requestedAt":"2025-01-01T10:00:00Z"}'
 ```
 
+<<<<<<< HEAD
 ---
+=======
+---
+>>>>>>> 48e703e0712144a585b45873c0525a3ad85dcd43
