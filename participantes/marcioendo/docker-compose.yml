@@ -1,7 +1,7 @@
 services:
   back0:
-    image: ghcr.io/marcioendo/rinha2025-back:v002
-    command: ["0"]
+    image: ghcr.io/marcioendo/rinha2025-back:v003
+    command: ["0", "50"]
     container_name: back0
     hostname: back0
     volumes:
@@ -16,11 +16,11 @@ services:
       resources:
         limits:
           cpus: "0.6"
-          memory: "150MB"
+          memory: "125MB"
 
   back1:
-    image: ghcr.io/marcioendo/rinha2025-back:v002
-    command: ["1"]
+    image: ghcr.io/marcioendo/rinha2025-back:v003
+    command: ["1", "50"]
     container_name: back1
     hostname: back1
     volumes:
@@ -35,10 +35,10 @@ services:
       resources:
         limits:
           cpus: "0.6"
-          memory: "150MB"
+          memory: "125MB"
 
   front:
-    image: ghcr.io/marcioendo/rinha2025-front:v002
+    image: ghcr.io/marcioendo/rinha2025-front:v003
     container_name: front
     hostname: front
     volumes:
@@ -55,7 +55,7 @@ services:
       resources:
         limits:
           cpus: "0.3"
-          memory: "50MB"
+          memory: "100MB"
 
 networks:
   backend:
