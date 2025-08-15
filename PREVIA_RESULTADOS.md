@@ -1,5 +1,5 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Fri Aug 15 23:18:32 UTC 2025**
+Atualizado em **Fri Aug 15 23:27:32 UTC 2025**
 379 submissões / 325 resultados / 54 submissões com erro
 
 
@@ -68,7 +68,7 @@ Atualizado em **Fri Aug 15 23:18:32 UTC 2025**
 |	cleissonbarbosa-lua	|	4.98ms	|	12%	|	110548.82825	|	243207.42215	|	[cleissonbarbosa-lua](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/cleissonbarbosa-lua)
 |	codevsk-go-1	|	2.27ms	|	17%	|	0	|	364841.11755	|	[codevsk-go-1](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/codevsk-go-1)
 |	cristian-s-bun-go-1	|	51.62ms	|	0%	|	0	|	173134.97499999998	|	[cristian-s-bun-go-1](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/cristian-s-bun-go-1)
-|	cristian-s-node-1	|	26.64ms	|	0%	|	0	|	313048.8899999904	|	[cristian-s-node-1](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/cristian-s-node-1)
+|	cristian-s-node-1	|	41.99ms	|	0%	|	0	|	311253.9099999765	|	[cristian-s-node-1](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/cristian-s-node-1)
 |	danielsuhett-golang-2	|	1.57ms	|	19%	|	0	|	376891.40335	|	[danielsuhett-golang-2](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/danielsuhett-golang-2)
 |	danielsuhett-golang	|	2.01ms	|	18%	|	0	|	373701.9408	|	[danielsuhett-golang](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/danielsuhett-golang)
 |	danielsuhett-nestjs	|	53.4ms	|	0%	|	0	|	311284.755	|	[danielsuhett-nestjs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/danielsuhett-nestjs)
@@ -137,7 +137,7 @@ Atualizado em **Fri Aug 15 23:18:32 UTC 2025**
 |	gustavocesario-ktor	|	160.39ms	|	0%	|	0	|	0	|	[gustavocesario-ktor](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/gustavocesario-ktor)
 |	gustavotbett-java	|	274.88ms	|	0%	|	39199.02	|	72798.18	|	[gustavotbett-java](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/gustavotbett-java)
 |	hamilton-golang-erly	|	2.14ms	|	18%	|	0	|	373679.63290003274	|	[hamilton-golang-erly](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/hamilton-golang-erly)
-|	hamilton-golang-escovando-bits	|	2.36ms	|	17%	|	110843.79600000972	|	259691.17920002277	|	[hamilton-golang-escovando-bits](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/hamilton-golang-escovando-bits)
+|	hamilton-golang-escovando-bits	|	2.93ms	|	16%	|	110810.71225000966	|	256447.64835002235	|	[hamilton-golang-escovando-bits](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/hamilton-golang-escovando-bits)
 |	hamilton-golang-redis	|	2.79ms	|	16%	|	0	|	367126.7818000319	|	[hamilton-golang-redis](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/hamilton-golang-redis)
 |	henriquevalcanaia-swift-vapor	|	105.79ms	|	0%	|	74730.658275	|	138785.508225	|	[henriquevalcanaia-swift-vapor](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/henriquevalcanaia-swift-vapor)
 |	igor-gregori-bun-v1	|	3.36ms	|	15%	|	106861.209	|	244254.192	|	[igor-gregori-bun-v1](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/igor-gregori-bun-v1)
