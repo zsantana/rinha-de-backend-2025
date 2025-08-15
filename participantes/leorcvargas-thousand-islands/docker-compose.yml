@@ -1,6 +1,6 @@
 x-service-templates:
   base: &base
-    image: ghcr.io/leorcvargas/rinha-de-backend-2025-elixir-api:20250814064011
+    image: ghcr.io/leorcvargas/rinha-de-backend-2025-elixir-api:20250815012616
     volumes:
       - sockets:/tmp/rinhex/:rw
     networks:
@@ -61,7 +61,7 @@ services:
 
   worker:
     <<: *base
-    image: ghcr.io/leorcvargas/rinha-de-backend-2025-elixir-worker:20250814064007
+    image: ghcr.io/leorcvargas/rinha-de-backend-2025-elixir-worker:20250815012616
     hostname: worker
     deploy:
       resources:
