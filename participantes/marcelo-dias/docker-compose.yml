@@ -8,8 +8,8 @@ services:
       - EMPTY_INTERVAL=500
       - FALLBACK_ENABLED=0
       - INTER_INTERVAL=0
-      - PROCESSOR_URL=http://payment-processor-default:8080
-      - FALLBACK_PROCESSOR_URL=http://payment-processor-fallback:8080
+      - PROCESSOR_URL=http://payment-processor-default:8080/payments
+      - FALLBACK_PROCESSOR_URL=http://payment-processor-fallback:8080/payments
       - OTHER_INSTANCE_URL=http://app2:8080
       - SOCKET=/var/tmp/sockets/app1.sock
       - CONCURRENCY=1
@@ -33,8 +33,8 @@ services:
       - EMPTY_INTERVAL=500
       - FALLBACK_ENABLED=0
       - INTER_INTERVAL=0
-      - PROCESSOR_URL=http://payment-processor-default:8080
-      - FALLBACK_PROCESSOR_URL=http://payment-processor-fallback:8080
+      - PROCESSOR_URL=http://payment-processor-default:8080/payments
+      - FALLBACK_PROCESSOR_URL=http://payment-processor-fallback:8080/payments
       - OTHER_INSTANCE_URL=http://app1:8080
       - SOCKET=/var/tmp/sockets/app2.sock
       - CONCURRENCY=1
