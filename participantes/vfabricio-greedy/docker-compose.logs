@@ -1,0 +1,189 @@
+
+ Network vfabricio-greedy_internal-network  Creating
+ Network vfabricio-greedy_internal-network  Created
+ Volume "vfabricio-greedy_payment-results"  Creating
+ Volume "vfabricio-greedy_payment-results"  Created
+ Volume "vfabricio-greedy_valkey-data"  Creating
+ Volume "vfabricio-greedy_valkey-data"  Created
+ Container valkey  Creating
+ Container valkey  Created
+ Container vfabricio-greedy-gateway-1-1  Creating
+ Container vfabricio-greedy-gateway-2-1  Creating
+ Container worker  Creating
+ Container vfabricio-greedy-gateway-1-1  Created
+ Container worker  Created
+ Container vfabricio-greedy-gateway-2-1  Created
+ Container load-balancer  Creating
+ Container load-balancer  Created
+Attaching to load-balancer, valkey, gateway-1-1, gateway-2-1, worker
+valkey  | 1:C 15 Aug 2025 13:43:49.955 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+valkey  | 1:C 15 Aug 2025 13:43:49.955 * oO0OoO0OoO0Oo Valkey is starting oO0OoO0OoO0Oo
+valkey  | 1:C 15 Aug 2025 13:43:49.955 * Valkey version=7.2.10, bits=64, commit=00000000, modified=0, pid=1, just started
+valkey  | 1:C 15 Aug 2025 13:43:49.955 * Configuration loaded
+valkey  | 1:M 15 Aug 2025 13:43:49.955 * monotonic clock: POSIX clock_gettime
+valkey  | 1:M 15 Aug 2025 13:43:49.956 * Running mode=standalone, port=6379.
+valkey  | 1:M 15 Aug 2025 13:43:49.957 * Server initialized
+valkey  | 1:M 15 Aug 2025 13:43:49.957 * Ready to accept connections tcp
+worker  | Starting 4 payment workers
+worker  | Worker 0 started
+worker  | Worker started with Greedy strategy
+worker  | Worker 2 started
+worker  | Worker started with Greedy strategy
+worker  | Worker 3 started
+worker  | Worker started with Greedy strategy
+worker  | Worker 1 started
+worker  | Worker started with Greedy strategy
+worker  | Queue size: 0
+gateway-2-1  | Gateway listening on 0.0.0.0:9001
+gateway-1-1  | Gateway listening on 0.0.0.0:9000
+load-balancer  | Load balancer listening on 0.0.0.0:9999
+worker         | Queue size: 0
+worker         | Queue size: 0
+worker         | Queue size: 0
+worker         | Queue size: 0
+worker         | Queue size: 0
+worker         | Queue size: 0
+worker         | Queue size: 0
+worker         | Queue size: 0
+worker         | Queue size: 0
+valkey         | 1:M 15 Aug 2025 13:43:59.786 * 1 changes in 5 seconds. Saving...
+valkey         | 1:M 15 Aug 2025 13:43:59.787 * Background saving started by pid 15
+valkey         | 15:C 15 Aug 2025 13:43:59.793 * DB saved on disk
+valkey         | 15:C 15 Aug 2025 13:43:59.794 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+valkey         | 1:M 15 Aug 2025 13:43:59.888 * Background saving terminated with success
+worker         | Queue size: 0
+worker         | Queue size: 0
+worker         | Queue size: 0
+worker         | Queue size: 0
+worker         | Queue size: 0
+valkey         | 1:M 15 Aug 2025 13:44:05.022 * 1 changes in 5 seconds. Saving...
+valkey         | 1:M 15 Aug 2025 13:44:05.022 * Background saving started by pid 16
+valkey         | 16:C 15 Aug 2025 13:44:05.028 * DB saved on disk
+valkey         | 16:C 15 Aug 2025 13:44:05.029 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+valkey         | 1:M 15 Aug 2025 13:44:05.123 * Background saving terminated with success
+worker         | Queue size: 0
+worker         | Queue size: 0
+worker         | Queue size: 0
+worker         | Queue size: 0
+worker         | Queue size: 0
+worker         | Queue size: 27
+valkey         | 1:M 15 Aug 2025 13:44:11.060 * 1 changes in 5 seconds. Saving...
+valkey         | 1:M 15 Aug 2025 13:44:11.061 * Background saving started by pid 17
+valkey         | 17:C 15 Aug 2025 13:44:11.068 * DB saved on disk
+valkey         | 17:C 15 Aug 2025 13:44:11.069 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+valkey         | 1:M 15 Aug 2025 13:44:11.162 * Background saving terminated with success
+worker         | Queue size: 93
+worker         | Queue size: 168
+worker         | Queue size: 252
+worker         | Queue size: 346
+worker         | Queue size: 448
+worker         | Queue size: 559
+valkey         | 1:M 15 Aug 2025 13:44:17.001 * 1 changes in 5 seconds. Saving...
+valkey         | 1:M 15 Aug 2025 13:44:17.002 * Background saving started by pid 18
+valkey         | 18:C 15 Aug 2025 13:44:17.009 * DB saved on disk
+valkey         | 18:C 15 Aug 2025 13:44:17.009 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+valkey         | 1:M 15 Aug 2025 13:44:17.103 * Background saving terminated with success
+worker         | Queue size: 681
+worker         | Queue size: 813
+worker         | Queue size: 952
+worker         | Queue size: 1120
+worker         | Queue size: 1317
+worker         | Queue size: 1523
+valkey         | 1:M 15 Aug 2025 13:44:23.040 * 1 changes in 5 seconds. Saving...
+valkey         | 1:M 15 Aug 2025 13:44:23.041 * Background saving started by pid 19
+valkey         | 19:C 15 Aug 2025 13:44:23.051 * DB saved on disk
+valkey         | 19:C 15 Aug 2025 13:44:23.051 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+valkey         | 1:M 15 Aug 2025 13:44:23.141 * Background saving terminated with success
+worker         | Queue size: 1739
+worker         | Queue size: 1964
+worker         | Queue size: 2196
+worker         | Queue size: 2436
+worker         | Queue size: 2688
+worker         | Queue size: 2949
+valkey         | 1:M 15 Aug 2025 13:44:29.080 * 1 changes in 5 seconds. Saving...
+valkey         | 1:M 15 Aug 2025 13:44:29.081 * Background saving started by pid 20
+valkey         | 20:C 15 Aug 2025 13:44:29.090 * DB saved on disk
+valkey         | 20:C 15 Aug 2025 13:44:29.090 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+valkey         | 1:M 15 Aug 2025 13:44:29.181 * Background saving terminated with success
+worker         | Queue size: 3219
+worker         | Queue size: 3499
+worker         | Queue size: 3788
+worker         | Queue size: 4086
+worker         | Queue size: 4393
+worker         | Queue size: 4709
+valkey         | 1:M 15 Aug 2025 13:44:35.021 * 1 changes in 5 seconds. Saving...
+valkey         | 1:M 15 Aug 2025 13:44:35.021 * Background saving started by pid 21
+valkey         | 21:C 15 Aug 2025 13:44:35.031 * DB saved on disk
+valkey         | 21:C 15 Aug 2025 13:44:35.031 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+valkey         | 1:M 15 Aug 2025 13:44:35.122 * Background saving terminated with success
+worker         | Queue size: 5034
+worker         | Queue size: 5369
+worker         | Queue size: 5713
+worker         | Queue size: 6066
+worker         | Queue size: 6434
+worker         | Queue size: 6718
+valkey         | 1:M 15 Aug 2025 13:44:41.063 * 1 changes in 5 seconds. Saving...
+valkey         | 1:M 15 Aug 2025 13:44:41.064 * Background saving started by pid 22
+valkey         | 22:C 15 Aug 2025 13:44:41.075 * DB saved on disk
+valkey         | 22:C 15 Aug 2025 13:44:41.076 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+valkey         | 1:M 15 Aug 2025 13:44:41.164 * Background saving terminated with success
+worker         | Queue size: 6900
+worker         | Queue size: 7098
+worker         | Queue size: 7301
+worker         | Queue size: 7519
+worker         | Queue size: 7742
+worker         | Queue size: 7976
+valkey         | 1:M 15 Aug 2025 13:44:47.000 * 1 changes in 5 seconds. Saving...
+valkey         | 1:M 15 Aug 2025 13:44:47.001 * Background saving started by pid 23
+valkey         | 23:C 15 Aug 2025 13:44:47.013 * DB saved on disk
+valkey         | 23:C 15 Aug 2025 13:44:47.014 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+valkey         | 1:M 15 Aug 2025 13:44:47.102 * Background saving terminated with success
+worker         | Queue size: 8223
+worker         | Queue size: 8480
+worker         | Queue size: 8750
+worker         | Queue size: 6530
+worker         | Queue size: 2398
+worker         | Queue size: 0
+valkey         | 1:M 15 Aug 2025 13:44:53.028 * 1 changes in 5 seconds. Saving...
+valkey         | 1:M 15 Aug 2025 13:44:53.029 * Background saving started by pid 24
+valkey         | 24:C 15 Aug 2025 13:44:53.035 * DB saved on disk
+valkey         | 24:C 15 Aug 2025 13:44:53.035 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+valkey         | 1:M 15 Aug 2025 13:44:53.129 * Background saving terminated with success
+worker         | Queue size: 0
+worker         | Queue size: 0
+worker         | Queue size: 0
+worker         | Queue size: 0
+worker         | Queue size: 0
+worker         | Queue size: 0
+valkey         | 1:M 15 Aug 2025 13:44:59.061 * 1 changes in 5 seconds. Saving...
+valkey         | 1:M 15 Aug 2025 13:44:59.061 * Background saving started by pid 25
+valkey         | 25:C 15 Aug 2025 13:44:59.068 * DB saved on disk
+valkey         | 25:C 15 Aug 2025 13:44:59.069 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+valkey         | 1:M 15 Aug 2025 13:44:59.162 * Background saving terminated with success
+worker         | Queue size: 0
+worker         | Queue size: 0
+worker         | Queue size: 0
+worker         | Queue size: 0
+worker         | Queue size: 0
+worker         | Queue size: 0
+valkey         | 1:M 15 Aug 2025 13:45:05.080 * 1 changes in 5 seconds. Saving...
+valkey         | 1:M 15 Aug 2025 13:45:05.081 * Background saving started by pid 26
+valkey         | 26:C 15 Aug 2025 13:45:05.087 * DB saved on disk
+valkey         | 26:C 15 Aug 2025 13:45:05.087 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+valkey         | 1:M 15 Aug 2025 13:45:05.181 * Background saving terminated with success
+worker         | Queue size: 0
+worker         | Queue size: 0
+worker         | Queue size: 0
+worker         | Queue size: 0
+worker         | Queue size: 0
+worker         | Queue size: 0
+[Kload-balancer exited with code 137
+[Kworker exited with code 137
+[Kgateway-1-1 exited with code 137
+[Kgateway-2-1 exited with code 137
+valkey         | 1:signal-handler (1755265521) Received SIGTERM scheduling shutdown...
+valkey         | 1:M 15 Aug 2025 13:45:21.417 * User requested shutdown...
+valkey         | 1:M 15 Aug 2025 13:45:21.417 * Saving the final RDB snapshot before exiting.
+valkey         | 1:M 15 Aug 2025 13:45:21.422 * DB saved on disk
+valkey         | 1:M 15 Aug 2025 13:45:21.422 # Valkey is now ready to exit, bye bye...
+log truncated at line 1000
