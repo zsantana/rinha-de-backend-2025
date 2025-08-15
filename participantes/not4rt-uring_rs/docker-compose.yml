@@ -33,7 +33,7 @@ services:
           cpus: "0.3"
 
   backend1:
-    image: not4rt/rinha-2025-fast:u-ring
+    image: not4rt/rinha-2025-fast:uring_v4
     environment:
       PEER1_SOCKET: /sockets/may.sock.2
       SOCKET_PATH: /sockets/may.sock.1
@@ -53,7 +53,7 @@ services:
           cpus: "0.6"
 
   backend2:
-    image: not4rt/rinha-2025-fast:u-ring
+    image: not4rt/rinha-2025-fast:uring_v4
     environment:
       PEER1_SOCKET: /sockets/may.sock.1
       SOCKET_PATH: /sockets/may.sock.2
