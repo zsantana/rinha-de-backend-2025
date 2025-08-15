@@ -74,17 +74,22 @@ configs:
       }
       http {
         access_log off;
-        sendfile   on;
+
+        tcp_nopush on;
+        tcp_nodelay on;
         
         upstream api {
+          keepalive 500;
+
           server api01:3042;
           server api02:3043;
         }
         server {
           listen 9999;
           location / {
+            proxy_buffering off;
+            proxy_http_version 1.1;
             proxy_pass http://api;
           }
-          access_log  off;
         }
       }
