@@ -1,5 +1,5 @@
-# [bz1-rinha-de-backend-2025](https://github.com/rafaelberrocalj/bz1-rinha-de-backend-2025)
+# bz1-rinha-de-backend-2025
 
-Projeto feito em dotnet 9 C# para competir na [rinha de back end 2025](https://github.com/zanfranceschi/rinha-de-backend-2025)
+Projeto feito em com framework dotnet, linguaguem C#, loadbalance nginx e datavase sqlite
 
-[Podman](https://podman.io/) foi o "container tool" utilizado
+- https://github.com/rafaelberrocalj/bz1-rinha-de-backend-2025
