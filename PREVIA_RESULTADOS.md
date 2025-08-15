@@ -1,6 +1,6 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Fri Aug 15 12:00:28 UTC 2025**
-370 submissões / 313 resultados / 57 submissões com erro
+Atualizado em **Fri Aug 15 12:07:51 UTC 2025**
+371 submissões / 315 resultados / 56 submissões com erro
 
 
 | participante | p99 | bônus por desempenho (%) | multa ($) | lucro | submissão |
@@ -181,6 +181,7 @@ Atualizado em **Fri Aug 15 12:00:28 UTC 2025**
 |	leandroalves-haskell	|	481.37ms	|	0%	|	0	|	0	|	[leandroalves-haskell](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/leandroalves-haskell)
 |	lecosas-java-spring-graalvm-2	|	2.1ms	|	18%	|	0	|	371350.2185	|	[lecosas-java-spring-graalvm-2](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/lecosas-java-spring-graalvm-2)
 |	lecosas-java-spring-graalvm-3	|	1.87ms	|	18%	|	0	|	371654.3104	|	[lecosas-java-spring-graalvm-3](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/lecosas-java-spring-graalvm-3)
+|	lecosas-java-spring-graalvm-4-direct	|	11.55ms	|	0%	|	0	|	311360.375	|	[lecosas-java-spring-graalvm-4-direct](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/lecosas-java-spring-graalvm-4-direct)
 |	lecosas-java-spring-graalvm-4	|	1.93ms	|	18%	|	0	|	371621.4356	|	[lecosas-java-spring-graalvm-4](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/lecosas-java-spring-graalvm-4)
 |	lecosas-java-spring-graalvm-5	|	2.83ms	|	16%	|	0	|	366253.0524	|	[lecosas-java-spring-graalvm-5](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/lecosas-java-spring-graalvm-5)
 |	lecosas-java-spring-graalvm	|	2.72ms	|	17%	|	0	|	369412.7346	|	[lecosas-java-spring-graalvm](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/lecosas-java-spring-graalvm)
@@ -199,6 +200,7 @@ Atualizado em **Fri Aug 15 12:00:28 UTC 2025**
 |	lucas-go-01	|	84.86ms	|	0%	|	89943.9205	|	167038.7095	|	[lucas-go-01](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/lucas-go-01)
 |	lucas-laurentino-go	|	2.21ms	|	18%	|	0	|	365674.6191	|	[lucas-laurentino-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/lucas-laurentino-go)
 |	lucas-lima-chaves	|	1.62ms	|	19%	|	0	|	0	|	[lucas-lima-chaves](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/lucas-lima-chaves)
+|	lucas-porto-python-01	|	60.92ms	|	0%	|	0	|	133652.38	|	[lucas-porto-python-01](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/lucas-porto-python-01)
 |	lucas-santana	|	110.1ms	|	0%	|	0	|	242065.59	|	[lucas-santana](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/lucas-santana)
 |	lucasgoveia	|	1.79ms	|	18%	|	0	|	373724.2487	|	[lucasgoveia](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/lucasgoveia)
 |	lucaslimafernandes	|	2.98ms	|	16%	|	108310.6255	|	250661.7333	|	[lucaslimafernandes](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/lucaslimafernandes)
@@ -395,7 +397,6 @@ Atualizado em **Fri Aug 15 12:00:28 UTC 2025**
 | lucas-go-01 | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/lucas-go-01) |
 | lucas-laurentino-go | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/lucas-laurentino-go) |
 | lucas-moraes | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/lucas-moraes) |
-| lucas-porto-python-01 | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/lucas-porto-python-01) |
 | lucas-santana | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/lucas-santana) |
 | lucasvsouza28-bun | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/lucasvsouza28-bun) |
 | luucaspole-crystal | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/luucaspole-crystal) |
