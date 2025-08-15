@@ -2,9 +2,10 @@ version: '3.9'
 
 services:
   app1: &app
-    image: maruero/rinha-de-backend-2025:20250815_v20
+    image: maruero/rinha-de-backend-2025:20250815_v30
     hostname: app1
     environment:
+      - EMPTY_INTERVAL=500
       - FALLBACK_ENABLED=0
       - INTER_INTERVAL=0
       - PROCESSOR_URL=http://payment-processor-default:8080
@@ -29,6 +30,7 @@ services:
     <<: *app
     hostname: app2
     environment:
+      - EMPTY_INTERVAL=500
       - FALLBACK_ENABLED=0
       - INTER_INTERVAL=0
       - PROCESSOR_URL=http://payment-processor-default:8080
