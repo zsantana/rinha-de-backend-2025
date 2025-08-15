@@ -9,7 +9,6 @@ services:
       - SUMMARY_URL=http://app2:8080/internal/payments-summary
       - PROCESSOR_DEFAULT_URL=http://payment-processor-default:8080/payments
       - PROCESSOR_FALLBACK_URL=http://payment-processor-fallback:8080/payments
-      - GOMAXPROCS=3
     deploy:
       resources:
         limits:
@@ -50,7 +49,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.3"
+          cpus: "0.2"
           memory: 210M
     restart: unless-stopped
 
