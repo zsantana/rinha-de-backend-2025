@@ -1,6 +1,6 @@
 services:
   app1:
-    image: pedrohsbarbosa99/rinha-golang-2025:0.3.5
+    image: pedrohsbarbosa99/rinha-golang-2025:0.3.3
     command: ["./main"]
     networks:
       - backend
@@ -17,7 +17,7 @@ services:
     restart: unless-stopped
 
   app2:
-    image: pedrohsbarbosa99/rinha-golang-2025:0.3.5
+    image: pedrohsbarbosa99/rinha-golang-2025:0.3.3
     command: ["./main"]
     networks:
       - backend
