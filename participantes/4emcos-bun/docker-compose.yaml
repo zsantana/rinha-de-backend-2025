@@ -12,7 +12,7 @@ x-service-templates:
       resources:
         limits:
           cpus: "0.4"
-          memory: "75MB"
+          memory: "85MB"
 
 services:
   backend-01:
@@ -44,13 +44,14 @@ services:
       - WRITER_SOCKET_PATH=/tmp/writer.sock
       - GOGC=100
       - GOMEMLIMIT=20MiB
+      - GOMAXPROCS=1
     volumes:
       - socket_data:/tmp
     deploy:
       resources:
         limits:
-          cpus: "0.3"
-          memory: "70MB"
+          cpus: "0.4"
+          memory: "100MB"
 
   load-balance:
     image: openresty/openresty:bullseye
@@ -68,7 +69,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.4"
+          cpus: "0.3"
           memory: "75MB"
           
 volumes:
