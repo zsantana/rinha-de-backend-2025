@@ -10,7 +10,7 @@ x-api-template: &api-template
   deploy:
     resources:
       limits:
-        cpus: '0.4'
+        cpus: '0.5'
         memory: '70MB'
   sysctls:
     - net.core.somaxconn=65535
@@ -43,7 +43,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '0.12'
+          cpus: '0.1'
           memory: '65MB'
 
   api-1:
@@ -87,7 +87,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '0.4'
+          cpus: '0.3'
           memory: '70MB'
     sysctls:
       - net.core.somaxconn=65535
@@ -117,7 +117,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '0.18'
+          cpus: '0.1'
           memory: '65MB'
     sysctls:
       - net.core.somaxconn=131072
