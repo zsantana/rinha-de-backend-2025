@@ -1,6 +1,6 @@
 services:
   api1:
-    image: &image ghcr.io/vimsos/rinha-de-pagamento-25:main@sha256:13b11ece434c76aab40bc2f8b5949f344cc0584f2665b1676c858598a696ab2b
+    image: &image ghcr.io/vimsos/rinha-de-pagamento-25@sha256:ce52ef1b72e8addb305e2a79695f41515b173f4b3d3f75828bef0bfba14f504e
     hostname: api1
     environment:
       APP_CONFIG: &app_config >
