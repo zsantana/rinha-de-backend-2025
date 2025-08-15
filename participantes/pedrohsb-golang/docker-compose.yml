@@ -1,15 +1,11 @@
 services:
   app1:
-    image: pedrohsbarbosa99/rinha-golang-2025:0.3.2
+    image: pedrohsbarbosa99/rinha-golang-2025:0.3.3
     command: ["./main"]
-    volumes:
-      - sockmem:/tmp
     networks:
       - backend
       - payment-processor
     environment:
-      - SOCKET_PATH=/tmp/api1.sock
-      - OTHER_SOCKET_PATH=/tmp/api2.sock
       - SUMMARY_URL=http://app2:8080/internal/payments-summary
       - PROCESSOR_DEFAULT_URL=http://payment-processor-default:8080/payments
       - PROCESSOR_FALLBACK_URL=http://payment-processor-fallback:8080/payments
@@ -22,20 +18,15 @@ services:
     restart: unless-stopped
 
   app2:
-    image: pedrohsbarbosa99/rinha-golang-2025:0.3.2
+    image: pedrohsbarbosa99/rinha-golang-2025:0.3.3
     command: ["./main"]
-    volumes:
-      - sockmem:/tmp
     networks:
       - backend
       - payment-processor
     environment:
-      - SOCKET_PATH=/tmp/api2.sock
-      - OTHER_SOCKET_PATH=/tmp/api1.sock
       - SUMMARY_URL=http://app1:8080/internal/payments-summary
       - PROCESSOR_DEFAULT_URL=http://payment-processor-default:8080/payments
       - PROCESSOR_FALLBACK_URL=http://payment-processor-fallback:8080/payments
-      - GOMAXPROCS=3
     deploy:
       resources:
         limits:
@@ -43,14 +34,13 @@ services:
           memory: 70M
     restart: unless-stopped
 
-  nginx:
-    image: nginx:latest
-    container_name: nginx-1
+  haproxy:
+    image: haproxy:latest
+    container_name: haproxy-1
     ports:
       - "9999:80"
     volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf:ro
-      - sockmem:/tmp
+      - ./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
     depends_on:
       - app1
       - app2
@@ -64,13 +54,6 @@ services:
           memory: 210M
     restart: unless-stopped
 
-volumes:
-  sockmem:
-    driver: local
-    driver_opts:
-      type: tmpfs
-      device: tmpfs
-      o: size=4m
 
 networks:
   backend:
