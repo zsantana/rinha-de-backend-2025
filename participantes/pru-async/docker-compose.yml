@@ -9,7 +9,7 @@ services:
       - RUBY_GC_HEAP_FREE_SLOTS=4096
       - RUBY_GC_HEAP_GROWTH_FACTOR=1.2
       - RUBY_GC_HEAP_GROWTH_MAX_SLOTS=30000
-    command: bundle exec falcon --bind http://0.0.0.0:3000  -n 1 --no-restart  -t 20
+    command: bundle exec falcon --bind http://0.0.0.0:3000  -n 2 --no-restart  -t 20
     depends_on:
       - redis
     networks:
