@@ -12,8 +12,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.45"
-          memory: 100M
+          cpus: "0.5"
+          memory: 125M
     restart: unless-stopped
 
   app2:
@@ -29,8 +29,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.45"
-          memory: 100M
+          cpus: "0.5"
+          memory: 125M
     restart: unless-stopped
 
   haproxy:
@@ -49,8 +49,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.6"
-          memory: 150M
+          cpus: "0.5"
+          memory: 100M
     restart: unless-stopped
 
 
