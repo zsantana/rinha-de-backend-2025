@@ -43,8 +43,7 @@ services:
     environment:
       - WRITER_SOCKET_PATH=/tmp/writer.sock
       - GOGC=100
-      - GOMAXPROCS=1
-      - GODEBUG=gctrace=0
+      - GOMEMLIMIT=20MiB
     volumes:
       - socket_data:/tmp
     deploy:
