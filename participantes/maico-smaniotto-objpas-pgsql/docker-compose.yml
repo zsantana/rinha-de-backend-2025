@@ -26,7 +26,7 @@ services:
       start_period: 5s
 
   api01:
-    image: maicosmaniotto/rinha-backend-2025-objpas-pgsql:0.0.1
+    image: maicosmaniotto/rinha-backend-2025-objpas-pgsql:0.0.2
     hostname: api01
     networks:
       - backend
@@ -41,7 +41,7 @@ services:
           memory: "60MB"
 
   api02:
-    image: maicosmaniotto/rinha-backend-2025-objpas-pgsql:0.0.1
+    image: maicosmaniotto/rinha-backend-2025-objpas-pgsql:0.0.2
     hostname: api02
     networks:
       - backend
