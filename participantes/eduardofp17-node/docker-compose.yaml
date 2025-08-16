@@ -25,7 +25,7 @@ services:
       - REDIS_URL=redis:6379
       - PROCESSOR_DEFAULT_URL=http://payment-processor-default:8080
       - PROCESSOR_FALLBACK_URL=http://payment-processor-fallback:8080
-      - UV_THREADPOOL_SIZE=64
+      - UV_THREADPOOL_SIZE=16
     networks:
       - rinha-net
       - payment-processor
@@ -35,8 +35,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.25"
-          memory: "90MB"
+          cpus: "0.55"
+          memory: "120MB"
 
   api2:
     <<: *api
@@ -46,24 +46,7 @@ services:
       - REDIS_URL=redis:6379
       - PROCESSOR_DEFAULT_URL=http://payment-processor-default:8080
       - PROCESSOR_FALLBACK_URL=http://payment-processor-fallback:8080
-      - UV_THREADPOOL_SIZE=64
-  worker-job:
-    image: eduardofp/rinha-backend
-    command: node dist/infra/queue.js
-    environment:
-      - APP_PORT=8080
-      - REDIS_URL=redis:6379
-      - PROCESSOR_DEFAULT_URL=http://payment-processor-default:8080
-      - PROCESSOR_FALLBACK_URL=http://payment-processor-fallback:8080
-      - UV_THREADPOOL_SIZE=64
-    deploy:
-      resources:
-        limits:
-          cpus: "0.60"
-          memory: "80MB"
-    networks:
-      - rinha-net
-      - payment-processor
+      - UV_THREADPOOL_SIZE=16
 
   redis:
     image: redis:7.2-alpine
