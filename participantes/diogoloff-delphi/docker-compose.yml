@@ -31,29 +31,29 @@ services:
       - TEMPO_FILA=10
       - DEBUG=N
     volumes:
-      - shm-volume:/dev/shm
-      #- ./Logs/:/opt/rinha/Logs/  #somente se DEBUG=S
+      - persistencia:/opt/rinha/persistencia
+      - dev-shm:/dev/shm
     networks:
       - backend-rinha
       - payment-processor
     deploy:
       resources:
         limits:
-          cpus: "0.675" 
+          cpus: "0.675"
           memory: "150MB"
-    
+
   api2:
     <<: *api
     depends_on:
       - api1
     hostname: api2
     volumes:
-      - shm-volume:/dev/shm
-      #- ./Logs2/:/opt/rinha/Logs/ #somente se DEBUG=S
+      - persistencia:/opt/rinha/persistencia
+      - dev-shm:/dev/shm
 
 volumes:
-  shm-volume:
-    driver: local
+  persistencia:
+  dev-shm:
 
 networks:
   backend-rinha:
