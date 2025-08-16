@@ -84,7 +84,7 @@ services:
           memory: 65M
 
   queue:
-    image: fabriciojuliatto/rinha_2025-worker:v.0.2.0
+    image: fabriciojuliatto/rinha_2025-queue:v.0.2.0
     container_name: queue
     ports:
       - "6969:6969"
