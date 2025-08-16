@@ -46,7 +46,6 @@ services:
       - REDIS_URL=redis:6379
       - PROCESSOR_DEFAULT_URL=http://payment-processor-default:8080
       - PROCESSOR_FALLBACK_URL=http://payment-processor-fallback:8080
-      - UV_THREADPOOL_SIZE=64
   worker-job:
     image: eduardofp/rinha-backend
     command: node dist/infra/queue.js
@@ -55,7 +54,6 @@ services:
       - REDIS_URL=redis:6379
       - PROCESSOR_DEFAULT_URL=http://payment-processor-default:8080
       - PROCESSOR_FALLBACK_URL=http://payment-processor-fallback:8080
-      - UV_THREADPOOL_SIZE=64
     deploy:
       resources:
         limits:
