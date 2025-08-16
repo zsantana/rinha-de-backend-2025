@@ -73,8 +73,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.085"
-          memory: "20MB"
+          cpus: "0.09"
+          memory: "23MB"
 
   apiworker2: &workers
     <<: *apiworker
@@ -99,9 +99,6 @@ services:
     <<: *workers
     
   apiworker6: 
-    <<: *workers
-
-  apiworker7: 
     <<: *workers
 
   api1: &api
