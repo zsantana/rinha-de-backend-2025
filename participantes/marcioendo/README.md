@@ -12,7 +12,7 @@ It showcases:
 
 Visit the GitHub repository for more information:
 
-- https://github.com/marcioendo/demo.rinha/tree/v003
+- https://github.com/marcioendo/demo.rinha/tree/v004
 
 ## License
 
