@@ -1,0 +1,75 @@
+
+ app-1 Pulling 
+ app-2 Pulling 
+ 9824c27679d3 Already exists 
+ a2d8d042fe59 Pulling fs layer 
+ e1dae3f22751 Pulling fs layer 
+ 4cdf739d5a46 Pulling fs layer 
+ 9824c27679d3 Already exists 
+ a2d8d042fe59 Pulling fs layer 
+ e1dae3f22751 Pulling fs layer 
+ 4cdf739d5a46 Pulling fs layer 
+ e1dae3f22751 Downloading [==================================================>]      92B/92B
+ e1dae3f22751 Verifying Checksum 
+ e1dae3f22751 Download complete 
+ e1dae3f22751 Verifying Checksum 
+ e1dae3f22751 Download complete 
+ a2d8d042fe59 Downloading [=================>                                 ]  16.38kB/45.83kB
+ a2d8d042fe59 Downloading [=================>                                 ]  16.38kB/45.83kB
+ a2d8d042fe59 Downloading [==================================================>]  45.83kB/45.83kB
+ a2d8d042fe59 Download complete 
+ a2d8d042fe59 Extracting [===================================>               ]  32.77kB/45.83kB
+ a2d8d042fe59 Downloading [==================================================>]  45.83kB/45.83kB
+ a2d8d042fe59 Download complete 
+ a2d8d042fe59 Extracting [===================================>               ]  32.77kB/45.83kB
+ a2d8d042fe59 Extracting [==================================================>]  45.83kB/45.83kB
+ a2d8d042fe59 Extracting [==================================================>]  45.83kB/45.83kB
+ a2d8d042fe59 Pull complete 
+ a2d8d042fe59 Pull complete 
+ e1dae3f22751 Extracting [==================================================>]      92B/92B
+ e1dae3f22751 Extracting [==================================================>]      92B/92B
+ e1dae3f22751 Extracting [==================================================>]      92B/92B
+ e1dae3f22751 Extracting [==================================================>]      92B/92B
+ 4cdf739d5a46 Downloading [===>                                               ]  16.38kB/264.9kB
+ 4cdf739d5a46 Downloading [===>                                               ]  16.38kB/264.9kB
+ 4cdf739d5a46 Download complete 
+ 4cdf739d5a46 Download complete 
+ e1dae3f22751 Pull complete 
+ e1dae3f22751 Pull complete 
+ 4cdf739d5a46 Extracting [======>                                            ]  32.77kB/264.9kB
+ 4cdf739d5a46 Extracting [======>                                            ]  32.77kB/264.9kB
+ 4cdf739d5a46 Extracting [==================================================>]  264.9kB/264.9kB
+ 4cdf739d5a46 Extracting [==================================================>]  264.9kB/264.9kB
+ 4cdf739d5a46 Extracting [==================================================>]  264.9kB/264.9kB
+ 4cdf739d5a46 Extracting [==================================================>]  264.9kB/264.9kB
+ 4cdf739d5a46 Pull complete 
+ 4cdf739d5a46 Pull complete 
+ app-1 Pulled 
+ app-2 Pulled 
+ Network tarcisiozf-asm-3_app  Creating
+ Network tarcisiozf-asm-3_app  Created
+ Volume "tarcisiozf-asm-3_app-data"  Creating
+ Volume "tarcisiozf-asm-3_app-data"  Created
+ Volume "tarcisiozf-asm-3_sockets"  Creating
+ Volume "tarcisiozf-asm-3_sockets"  Created
+ Volume "tarcisiozf-asm-3_shmem"  Creating
+ Volume "tarcisiozf-asm-3_shmem"  Created
+ Container tarcisiozf-asm-3-app-2-1  Creating
+ Container tarcisiozf-asm-3-app-1-1  Creating
+ Container tarcisiozf-asm-3-app-1-1  Created
+ Container tarcisiozf-asm-3-app-2-1  Created
+ Container tarcisiozf-asm-3-proxy-1  Creating
+ Container tarcisiozf-asm-3-proxy-1  Created
+Attaching to app-1-1, app-2-1, proxy-1
+proxy-1  | [NOTICE]   (1) : Initializing new worker (8)
+proxy-1  | [NOTICE]   (1) : Loading success.
+proxy-1  | [NOTICE]   (1) : haproxy version is 3.2.3-1844da7
+proxy-1  | [WARNING]  (1) : Exiting Master process...
+proxy-1  | [WARNING]  (8) : Proxy fe stopped (cumulated conns: FE: 553, BE: 0).
+proxy-1  | [ALERT]    (8) : sendmsg()/writev() failed in logger #1: No such file or directory (errno=2)
+proxy-1  | [WARNING]  (8) : Proxy be stopped (cumulated conns: FE: 0, BE: 16763).
+proxy-1  | [WARNING]  (1) : Current worker (8) exited with code 0 (Exit)
+proxy-1  | [WARNING]  (1) : All workers exited. Exiting... (0)
+[Kproxy-1 exited with code 0
+[Kapp-1-1 exited with code 0
+log truncated at line 1000
