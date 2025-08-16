@@ -1,7 +1,7 @@
 x-rinha-api-base: &rinha-api-base
-  image: jhamiltonjunior/rinha-go-escovando-bits:0.0.3
+  image: jhamiltonjunior/rinha-go-socket:0.1.0
   volumes:
-    - api-socketsv1:/tmp
+    - api-socketsv6:/tmp
   depends_on:
     - redis
   networks:
@@ -10,7 +10,7 @@ x-rinha-api-base: &rinha-api-base
   deploy: &rinha-api-deploy
     resources:
       limits:
-        cpus: "0.3"
+        cpus: "0.35"
         memory: "100MB"
 
   environment: &common-environment
@@ -26,13 +26,16 @@ services:
   nginx:
     image: haproxy:3.2.3-alpine
     # image: nginx:1.25.3-alpine
+    pull_policy: always
+    environment:
+      - EXTERNAL_HOSTS=/tmp/api_1.sock,/tmp/api_2.sock,/tmp/api_3.sock
     container_name: nginx_load_balancer
     ports:
       - "9999:80"
     volumes:
       # - ./config/nginx.conf:/etc/nginx/nginx.conf:ro
       - ./config/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
-      - api-socketsv1:/tmp:rw
+      - api-socketsv6:/tmp:rw
     depends_on:
       - rinha-api-1
       - rinha-api-2
@@ -42,8 +45,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.2"
-          memory: "60MB"
+          cpus: "0.35"
+          memory: "80MB"
 
   rinha-api-1:
     <<: *rinha-api-base
@@ -62,18 +65,6 @@ services:
       UNIX_SOCKET: /tmp/api_2.sock
     command: ./main -socket /tmp/api_2.sock
 
-  # rinha-api-3:
-  #   <<: *rinha-api-base
-  #   container_name: rinha-api-3
-  #   environment:
-  #     <<: *common-environment
-  #     UNIX_SOCKET: /tmp/api_3.sock
-  #   command: ./main -socket /tmp/api_3.sock
-
-  # rinha-api-4:
-  #   <<: *rinha-api-base
-  #   container_name: rinha-api-4
-
   redis:
     image: redis:7.2.4-alpine
     container_name: redis_cache
@@ -84,23 +75,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.5"
-          memory: "40MB"
-
-  nats:
-    image: nats:2.10.14-alpine
-    container_name: nats_server
-    ports:
-      - "4222:4222"
-      - "6222:6222"
-      - "8222:8222"
-    networks:
-      - app-network
-    deploy:
-      resources:
-        limits:
-          cpus: "0.2"
-          memory: "30MB"
+          cpus: "0.45"
+          memory: "60MB"
 
 networks:
   app-network:
@@ -110,4 +86,8 @@ networks:
 
 volumes:
   redis-data:
-  api-socketsv1:
+  api-socketsv6:
+    driver_opts:
+      type: tmpfs
+      device: tmpfs
+      o: size=16m,mode=1777
