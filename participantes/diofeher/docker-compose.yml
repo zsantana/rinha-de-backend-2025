@@ -16,9 +16,8 @@ x-api_template: &api
     - payment-processor
 
 services:
-  haproxy:
-    image: haproxy:latest
-    container_name: haproxy
+  nginx:
+    image: nginx:latest
     ports:
       - "9999:80"
     networks:
@@ -32,9 +31,8 @@ services:
           cpus: "0.45"
           memory: "100MB"
     volumes:
-      - ./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
       - socket_data:/tmp
-    command: ["haproxy", "-f", "/usr/local/etc/haproxy/haproxy.cfg"]
   api1:
     <<: *api
     environment:

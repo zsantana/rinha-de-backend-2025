@@ -1,20 +1,20 @@
 {
   "participante": "4emcos-bun-lb",
-  "total_liquido": 373478.8618000325,
+  "total_liquido": 262701.23330002284,
   "total_bruto": 333165.800000029,
   "total_taxas": 16658.29000000145,
   "descricao": "'total_liquido' é sua pontuação final. Equivale ao seu lucro. Fórmula: total_liquido + (total_liquido * p99.bonus) - (total_liquido * multa.porcentagem)",
   "p99": {
-    "valor": "2.22ms",
+    "valor": "2.17ms",
     "bonus": "18%",
     "max_requests": "550",
     "descricao": "Fórmula para o bônus: max((11 - p99.valor) * 0.02, 0)"
   },
   "multa": {
-    "porcentagem": 0,
-    "total": 0,
+    "porcentagem": 0.35,
+    "total": 110777.62850000964,
     "composicao": {
-      "num_inconsistencias": 0,
+      "num_inconsistencias": 9,
       "descricao": "Se 'num_inconsistencias' > 0, há multa de 35%."
     }
   },
