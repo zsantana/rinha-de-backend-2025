@@ -44,6 +44,8 @@ services:
     
   api2:
     <<: *api
+    depends_on:
+      - api1
     hostname: api2
     volumes:
       - shm-volume:/dev/shm
