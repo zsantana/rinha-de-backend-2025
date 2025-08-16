@@ -19,10 +19,6 @@ services:
 
   app1: &app1
     image: ogabriel/rinha-de-backend-2025:elixir
-    build:
-      context: .
-      dockerfile: Dockerfile
-      target: release
     environment: &env_app1
       MIX_ENV: prod
       ERL_MAX_PORTS: 4096
