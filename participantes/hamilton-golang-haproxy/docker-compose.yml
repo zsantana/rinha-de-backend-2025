@@ -12,6 +12,10 @@ x-rinha-api-base: &rinha-api-base
       limits:
         cpus: "0.35"
         memory: "100MB"
+  ulimits:
+    nofile:
+      soft: 65535
+      hard: 65535
 
   environment: &common-environment
     GOGC: 500
@@ -47,6 +51,10 @@ services:
         limits:
           cpus: "0.35"
           memory: "80MB"
+    ulimits:
+      nofile:
+        soft: 65535
+        hard: 65535
 
   rinha-api-1:
     <<: *rinha-api-base
@@ -77,6 +85,10 @@ services:
         limits:
           cpus: "0.45"
           memory: "60MB"
+    ulimits:
+      nofile:
+        soft: 65535
+        hard: 65535
 
 networks:
   app-network:
