@@ -19,7 +19,7 @@ services:
           cpus: "0.20"
           memory: "50MB"
   api1:
-    image: danielsuhett1999/rinha-backend-go:1.2.5
+    image: danielsuhett1999/rinha-backend-go:1.2.5-fallback
     hostname: api1
     volumes:
       - sockets:/var/run/sockets
@@ -33,9 +33,9 @@ services:
       - PROCESSOR_DEFAULT_URL=http://payment-processor-default:8080
       - PROCESSOR_FALLBACK_URL=http://payment-processor-fallback:8080
       - POOLING_INTERVAL=100
-      - HEALTH_TIMEOUT=500
-      - HEALTH_INTERVAL=6000
-      - LATENCY_DIFF_TO_USE_FALLBACK=5000
+      - HEALTH_TIMEOUT=1000
+      - HEALTH_INTERVAL=5000
+      - LATENCY_DIFF_TO_USE_FALLBACK=1000
       - BATCH_SIZE=10
       - GOGC=off
     networks:
@@ -50,7 +50,7 @@ services:
           cpus: "0.50"
           memory: "125MB"
   api2:
-    image: danielsuhett1999/rinha-backend-go:1.2.5
+    image: danielsuhett1999/rinha-backend-go:1.2.5-fallback
     hostname: api2
     volumes:
       - sockets:/var/run/sockets
@@ -64,9 +64,9 @@ services:
       - PROCESSOR_DEFAULT_URL=http://payment-processor-default:8080
       - PROCESSOR_FALLBACK_URL=http://payment-processor-fallback:8080
       - POOLING_INTERVAL=100
-      - HEALTH_TIMEOUT=500
-      - HEALTH_INTERVAL=6000
-      - LATENCY_DIFF_TO_USE_FALLBACK=5000
+      - HEALTH_TIMEOUT=1000
+      - HEALTH_INTERVAL=5000
+      - LATENCY_DIFF_TO_USE_FALLBACK=1000
       - BATCH_SIZE=10
       - GOGC=off
     networks:
