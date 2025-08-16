@@ -92,6 +92,7 @@ services:
 
   nginx:
     image: nginx:latest
+    hostname: nginx
     networks:
       - rinha-net
     volumes:
