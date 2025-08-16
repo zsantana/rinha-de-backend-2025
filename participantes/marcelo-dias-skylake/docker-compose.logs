@@ -1,78 +1,20 @@
 
-time="2025-08-16T19:02:47Z" level=warning msg="/home/ubuntu/rinha-de-backend-2025/participantes/marcelo-dias-skylake/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
- app2 Pulling 
- app1 Pulling 
- b71466b94f26 Already exists 
- 1d18869a3ae9 Already exists 
- 093f20a4b257 Already exists 
- cd9f588ed820 Already exists 
- 9e8651b2c795 Pulling fs layer 
- 4f4fb700ef54 Pulling fs layer 
- bcf8d13d1cfc Pulling fs layer 
- b71466b94f26 Already exists 
- 1d18869a3ae9 Already exists 
- 093f20a4b257 Already exists 
- cd9f588ed820 Already exists 
- 9e8651b2c795 Pulling fs layer 
- 4f4fb700ef54 Pulling fs layer 
- bcf8d13d1cfc Pulling fs layer 
- bcf8d13d1cfc Downloading [==================================================>]     145B/145B
- bcf8d13d1cfc Verifying Checksum 
- bcf8d13d1cfc Download complete 
- bcf8d13d1cfc Verifying Checksum 
- bcf8d13d1cfc Download complete 
- 4f4fb700ef54 Downloading [==================================================>]      32B/32B
- 4f4fb700ef54 Verifying Checksum 
- 4f4fb700ef54 Download complete 
- 4f4fb700ef54 Downloading [==================================================>]      32B/32B
- 4f4fb700ef54 Verifying Checksum 
- 4f4fb700ef54 Download complete 
- 9e8651b2c795 Downloading [==============>                                    ]  16.38kB/57.02kB
- 9e8651b2c795 Downloading [==============>                                    ]  16.38kB/57.02kB
- 9e8651b2c795 Downloading [==================================================>]  57.02kB/57.02kB
- 9e8651b2c795 Verifying Checksum 
- 9e8651b2c795 Download complete 
- 9e8651b2c795 Downloading [==================================================>]  57.02kB/57.02kB
- 9e8651b2c795 Verifying Checksum 
- 9e8651b2c795 Download complete 
- 9e8651b2c795 Extracting [============================>                      ]  32.77kB/57.02kB
- 9e8651b2c795 Extracting [============================>                      ]  32.77kB/57.02kB
- 9e8651b2c795 Extracting [==================================================>]  57.02kB/57.02kB
- 9e8651b2c795 Extracting [==================================================>]  57.02kB/57.02kB
- 9e8651b2c795 Extracting [==================================================>]  57.02kB/57.02kB
- 9e8651b2c795 Pull complete 
- 9e8651b2c795 Pull complete 
- 4f4fb700ef54 Extracting [==================================================>]      32B/32B
- 4f4fb700ef54 Extracting [==================================================>]      32B/32B
- 4f4fb700ef54 Extracting [==================================================>]      32B/32B
- 4f4fb700ef54 Extracting [==================================================>]      32B/32B
- 4f4fb700ef54 Pull complete 
- 4f4fb700ef54 Pull complete 
- bcf8d13d1cfc Extracting [==================================================>]     145B/145B
- bcf8d13d1cfc Extracting [==================================================>]     145B/145B
- bcf8d13d1cfc Extracting [==================================================>]     145B/145B
- bcf8d13d1cfc Extracting [==================================================>]     145B/145B
- bcf8d13d1cfc Pull complete 
- bcf8d13d1cfc Pull complete 
- app1 Pulled 
- app2 Pulled 
+time="2025-08-16T20:11:22Z" level=warning msg="/home/ubuntu/rinha-de-backend-2025/participantes/marcelo-dias-skylake/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
  Network marcelo-dias-skylake_backend  Creating
  Network marcelo-dias-skylake_backend  Created
  Volume "marcelo-dias-skylake_sockets"  Creating
  Volume "marcelo-dias-skylake_sockets"  Created
- Container marcelo-dias-skylake-app2-1  Creating
  Container marcelo-dias-skylake-app1-1  Creating
+ Container marcelo-dias-skylake-app2-1  Creating
  Container marcelo-dias-skylake-app1-1  Created
  Container marcelo-dias-skylake-app2-1  Created
  Container marcelo-dias-skylake-haproxy-1  Creating
  Container marcelo-dias-skylake-haproxy-1  Created
 Attaching to app1-1, app2-1, haproxy-1
 app2-1  | Starting Payment Service...
-app1-1  | Starting Payment Service...
-app1-1  | Initializing PaymentService v1.0...
 app2-1  | Initializing PaymentService v1.0...
 app2-1  | WORKER_COUNT=1
-app2-1  | INTER_INTERVAL=0
+app2-1  | INTER_INTERVAL=500
 app2-1  | EMPTY_INTERVAL=500
 app2-1  | FALLBACK_POOL_INTERVAL_MS=1000
 app2-1  | FALLBACK_ENABLED=0
@@ -80,8 +22,10 @@ app2-1  | Configurations read
 app2-1  | Threads started
 app2-1  | Initializing the paths...
 app2-1  | CONCURRENCY=1
+app1-1  | Starting Payment Service...
+app1-1  | Initializing PaymentService v1.0...
 app1-1  | WORKER_COUNT=1
-app1-1  | INTER_INTERVAL=0
+app1-1  | INTER_INTERVAL=500
 app1-1  | EMPTY_INTERVAL=500
 app1-1  | FALLBACK_POOL_INTERVAL_MS=1000
 app1-1  | FALLBACK_ENABLED=0
@@ -94,7 +38,7 @@ haproxy-1  | [NOTICE]   (1) : Loading success.
 haproxy-1  | [NOTICE]   (1) : haproxy version is 3.2.3-1844da7
 haproxy-1  | [WARNING]  (1) : Exiting Master process...
 haproxy-1  | [WARNING]  (8) : Proxy http_front stopped (cumulated conns: FE: 553, BE: 0).
-haproxy-1  | [WARNING]  (8) : Proxy apps stopped (cumulated conns: FE: 0, BE: 16763).
+haproxy-1  | [WARNING]  (8) : Proxy apps stopped (cumulated conns: FE: 0, BE: 16760).
 haproxy-1  | [WARNING]  (1) : Current worker (8) exited with code 0 (Exit)
 haproxy-1  | [WARNING]  (1) : All workers exited. Exiting... (0)
 [Khaproxy-1 exited with code 0

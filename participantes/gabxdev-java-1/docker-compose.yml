@@ -1,7 +1,9 @@
 services:
   backend-1:
-    image: gabxdevv/rinha-backend-2025-java-gabxdev-nginx-final:1.0.0
+    image: gabxdevv/rinha-backend-2025-java-gabxdev-unix-final:1.0.0
     restart: always
+    volumes:
+      - /tmp:/tmp
     environment:
       RETRY_API_DEFAULT: 8
       WORKER_POOL_SIZE: 16
@@ -9,21 +11,26 @@ services:
       URL_PROCESSOR_FALLBACK: http://payment-processor-fallback:8080/payments
       UDP_CHANNEL_INTERNAL_PORT: 9003
       EXTERNAL_UDP_HOST: backend-2
-      SERVER_PORT: 8080
       EXTERNAL_UDP_PORT: 9004
-      CLIENT_BACKOFF: 250
+      API_UDP_PORT: 9095
+      API_MASTER: true
+      LB_UDP_HOST: load-balance
+      SOCKET_PATH: /tmp/api1-1.sock
+      SOCKET_PATH_2: /tmp/api1-2.sock
     networks:
       - backend
       - payment-processor
     deploy:
       resources:
         limits:
-          cpus: '0.6'
-          memory: '145MB'
+          cpus: '0.575'
+          memory: '135MB'
 
   backend-2:
-    image: gabxdevv/rinha-backend-2025-java-gabxdev-nginx-final:1.0.0
+    image: gabxdevv/rinha-backend-2025-java-gabxdev-unix-final:1.0.0
     restart: always
+    volumes:
+      - /tmp:/tmp
     environment:
       RETRY_API_DEFAULT: 8
       WORKER_POOL_SIZE: 16
@@ -32,21 +39,22 @@ services:
       UDP_CHANNEL_INTERNAL_PORT: 9004
       EXTERNAL_UDP_HOST: backend-1
       EXTERNAL_UDP_PORT: 9003
-      SERVER_PORT: 8080
+      SOCKET_PATH: /tmp/api2-1.sock
+      SOCKET_PATH_2: /tmp/api2-2.sock
     networks:
       - backend
       - payment-processor
     deploy:
       resources:
         limits:
-          cpus: '0.6'
-          memory: '145MB'
+          cpus: '0.575'
+          memory: '135MB'
 
-  load-balancer:
-    image: nginx:1.28-alpine
+  load-balance:
+    image: gabxdevv/load-balance-java-gabxdev-unix-final:1.0.0
     restart: always
     volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - /tmp:/tmp
     depends_on:
       - backend-1
       - backend-2
@@ -57,8 +65,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.3"
-          memory: "60MB"
+          cpus: "0.35"
+          memory: "80MB"
 
 networks:
   backend:

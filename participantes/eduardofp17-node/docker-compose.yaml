@@ -36,7 +36,7 @@ services:
       resources:
         limits:
           cpus: "0.25"
-          memory: "70MB"
+          memory: "90MB"
 
   api2:
     <<: *api
@@ -46,6 +46,7 @@ services:
       - REDIS_URL=redis:6379
       - PROCESSOR_DEFAULT_URL=http://payment-processor-default:8080
       - PROCESSOR_FALLBACK_URL=http://payment-processor-fallback:8080
+      - UV_THREADPOOL_SIZE=64
   worker-job:
     image: eduardofp/rinha-backend
     command: node dist/infra/queue.js
@@ -54,11 +55,12 @@ services:
       - REDIS_URL=redis:6379
       - PROCESSOR_DEFAULT_URL=http://payment-processor-default:8080
       - PROCESSOR_FALLBACK_URL=http://payment-processor-fallback:8080
+      - UV_THREADPOOL_SIZE=64
     deploy:
       resources:
         limits:
           cpus: "0.60"
-          memory: "100MB"
+          memory: "80MB"
     networks:
       - rinha-net
       - payment-processor
@@ -78,7 +80,7 @@ services:
       resources:
         limits:
           cpus: "0.25"
-          memory: "80MB"
+          memory: "60MB"
 
 
 networks:
