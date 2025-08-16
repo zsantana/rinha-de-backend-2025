@@ -32,7 +32,7 @@ services:
 
   # Produtores ========================================================================
   api01: &api
-    image: 442494/rinha-backend-2025-produtor:v2
+    image: 442494/rinha-backend-2025-produtor:v3
     hostname: api01
     networks:
       - rinha-net
@@ -69,7 +69,7 @@ services:
 
   # Consumidores ========================================================================
   api03:
-    image: 442494/rinha-backend-2025-consumidor:v2
+    image: 442494/rinha-backend-2025-consumidor:v3
     hostname: api03
     networks:
       - rinha-net
