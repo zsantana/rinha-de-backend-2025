@@ -1,6 +1,6 @@
 
- backend1 Pulling 
  backend2 Pulling 
+ backend1 Pulling 
  400fe5c6b87b Already exists 
  2e4cf50eeb92 Already exists 
  400fe5c6b87b Already exists 
@@ -8,10 +8,10 @@
  2e4cf50eeb92 Already exists 
  e1089d61b200 Already exists 
  4e9f20d26c87 Already exists 
+ e1089d61b200 Already exists 
  0f8b424aa0b9 Already exists 
- e1089d61b200 Already exists 
+ 0f8b424aa0b9 Already exists 
  d557676654e5 Already exists 
- 0f8b424aa0b9 Already exists 
  d557676654e5 Already exists 
  d82bc7a76a83 Already exists 
  d82bc7a76a83 Already exists 
@@ -37,34 +37,42 @@
  24445b2631ba Already exists 
  70876f70922f Already exists 
  70876f70922f Already exists 
- 19fe5c7c547d Already exists 
- 19fe5c7c547d Already exists 
- 8602d4fac643 Pulling fs layer 
- 8602d4fac643 Pulling fs layer 
- 8602d4fac643 Downloading [=>                                                 ]  16.38kB/767.4kB
- 8602d4fac643 Downloading [=>                                                 ]  16.38kB/767.4kB
- 8602d4fac643 Verifying Checksum 
- 8602d4fac643 Verifying Checksum 
- 8602d4fac643 Download complete 
- 8602d4fac643 Download complete 
- 8602d4fac643 Extracting [==>                                                ]  32.77kB/767.4kB
- 8602d4fac643 Extracting [==>                                                ]  32.77kB/767.4kB
- 8602d4fac643 Extracting [==================================================>]  767.4kB/767.4kB
- 8602d4fac643 Extracting [==================================================>]  767.4kB/767.4kB
- 8602d4fac643 Extracting [==================================================>]  767.4kB/767.4kB
- 8602d4fac643 Extracting [==================================================>]  767.4kB/767.4kB
- 8602d4fac643 Pull complete 
- 8602d4fac643 Pull complete 
- backend1 Pulled 
+ ef3ca167da59 Pulling fs layer 
+ 1c654e967626 Pulling fs layer 
+ ef3ca167da59 Pulling fs layer 
+ 1c654e967626 Pulling fs layer 
+ ef3ca167da59 Downloading [==================================================>]      93B/93B
+ ef3ca167da59 Verifying Checksum 
+ ef3ca167da59 Download complete 
+ ef3ca167da59 Download complete 
+ ef3ca167da59 Extracting [==================================================>]      93B/93B
+ ef3ca167da59 Extracting [==================================================>]      93B/93B
+ ef3ca167da59 Extracting [==================================================>]      93B/93B
+ ef3ca167da59 Extracting [==================================================>]      93B/93B
+ ef3ca167da59 Pull complete 
+ ef3ca167da59 Pull complete 
+ 1c654e967626 Downloading [=>                                                 ]  16.38kB/766.6kB
+ 1c654e967626 Downloading [=>                                                 ]  16.38kB/766.6kB
+ 1c654e967626 Verifying Checksum 
+ 1c654e967626 Download complete 
+ 1c654e967626 Verifying Checksum 
+ 1c654e967626 Download complete 
+ 1c654e967626 Extracting [==>                                                ]  32.77kB/766.6kB
+ 1c654e967626 Extracting [==>                                                ]  32.77kB/766.6kB
+ 1c654e967626 Extracting [==================================================>]  766.6kB/766.6kB
+ 1c654e967626 Extracting [==================================================>]  766.6kB/766.6kB
+ 1c654e967626 Pull complete 
+ 1c654e967626 Pull complete 
  backend2 Pulled 
+ backend1 Pulled 
  Network not4rt-uring_rs_backend  Creating
  Network not4rt-uring_rs_backend  Created
  Volume "not4rt-uring_rs_sockets"  Creating
  Volume "not4rt-uring_rs_sockets"  Created
  Container not4rt-uring_rs-backend2-1  Creating
  Container not4rt-uring_rs-backend1-1  Creating
- Container not4rt-uring_rs-backend2-1  Created
  Container not4rt-uring_rs-backend1-1  Created
+ Container not4rt-uring_rs-backend2-1  Created
  Container not4rt-uring_rs-haproxy-1  Creating
  Container not4rt-uring_rs-haproxy-1  Created
 Attaching to backend1-1, backend2-1, haproxy-1
@@ -79,29 +87,7 @@ haproxy-1   | [WARNING]  (1) : missing timeouts for backend 'api_backend'.
 haproxy-1   |    | While not properly invalid, you will certainly encounter various problems
 haproxy-1   |    | with such a configuration. To fix this, please ensure that all following
 haproxy-1   |    | timeouts are set to a non-zero value: 'client', 'connect', 'server'.
-backend1-1  | summary request NOT from peer
-backend2-1  | summary request from peer
-backend2-1  | Purge!
-backend1-1  | Purge!
-backend1-1  | summary request NOT from peer
-backend2-1  | summary request from peer
-backend1-1  | summary request NOT from peer
-backend2-1  | summary request from peer
-backend1-1  | summary request from peer
-backend2-1  | summary request NOT from peer
-backend1-1  | Processor out!
-backend2-1  | Processor out!
-backend2-1  | Processor out!
-backend1-1  | Processor out!
-backend1-1  | summary request from peer
-backend2-1  | summary request NOT from peer
-backend1-1  | summary request NOT from peer
-backend2-1  | summary request from peer
-backend2-1  | summary request NOT from peer
-backend1-1  | summary request from peer
-backend2-1  | summary request NOT from peer
-backend1-1  | summary request from peer
 haproxy-1   | [WARNING]  (1) : Proxy api_frontend stopped (cumulated conns: FE: 553, BE: 0).
-haproxy-1   | [WARNING]  (1) : Proxy api_backend stopped (cumulated conns: FE: 0, BE: 16762).
+haproxy-1   | [WARNING]  (1) : Proxy api_backend stopped (cumulated conns: FE: 0, BE: 16763).
 [Khaproxy-1 exited with code 0
 log truncated at line 1000
