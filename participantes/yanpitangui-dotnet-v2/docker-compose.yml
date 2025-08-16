@@ -114,9 +114,14 @@ services:
     healthcheck:
       test: [ "CMD-SHELL", "pg_isready -U postgres -d rinha" ]
       interval: 5s
-      timeout: 20s
+      timeout: 5s
       retries: 15
     deploy:
+      restart_policy:
+        condition: on-failure
+        delay: 2s
+        max_attempts: 10
+        window: 5s
       resources:
         limits:
           cpus: "0.1"
