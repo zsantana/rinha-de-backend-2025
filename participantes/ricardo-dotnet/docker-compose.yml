@@ -16,7 +16,7 @@ services:
             resources:
                 limits:
                     cpus: "0.20"
-                    memory: "40MB" 
+                    memory: "20MB" 
     redis:
         container_name: cache
         hostname: redis
@@ -83,7 +83,7 @@ services:
             resources:
                 limits:
                     cpus: "0.80"
-                    memory: "190MB"                    
+                    memory: "210MB"                    
 networks:
   backend:
     driver: bridge
