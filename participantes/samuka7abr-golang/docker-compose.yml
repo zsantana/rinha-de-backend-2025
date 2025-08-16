@@ -1,9 +1,6 @@
-version: "3.8"
-
 services:
   nginx:
     image: nginx:1.27-alpine
-    container_name: rinha-nginx
     ports:
       - "9999:9999"
     volumes:
@@ -21,17 +18,16 @@ services:
       - rinha-net
 
   app-1:
-    image: samuka7abrr/rinha-backend-2025:latest
-    container_name: app-1
+    image: samuka7abrr/my-rinha-backend:latest
     environment:
-      - SERVICE_PORT=8080
-      - PAYMENT_PROCESSOR_DEFAULT_URL=http://payment-processor-default:8080
-      - PAYMENT_PROCESSOR_FALLBACK_URL=http://payment-processor-fallback:8080
       - DB_HOST=postgres
+      - DB_PORT=5432
       - DB_USER=admin
       - DB_PASSWORD=123
       - DB_NAME=rinha
       - REDIS_ADDR=redis:6379
+      - PAYMENT_PROCESSOR_DEFAULT_URL=http://payment-processor-default:8080
+      - PAYMENT_PROCESSOR_FALLBACK_URL=http://payment-processor-fallback:8080
     expose:
       - "8080"
     depends_on:
@@ -40,25 +36,24 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.55"
-          memory: "130MB"
+          cpus: '0.4'
+          memory: 64M
     restart: always
     networks:
       - rinha-net
       - payment-processor
 
   app-2:
-    image: samuka7abrr/rinha-backend-2025:latest
-    container_name: app-2
+    image: samuka7abrr/my-rinha-backend:latest
     environment:
-      - SERVICE_PORT=8080
-      - PAYMENT_PROCESSOR_DEFAULT_URL=http://payment-processor-default:8080
-      - PAYMENT_PROCESSOR_FALLBACK_URL=http://payment-processor-fallback:8080
       - DB_HOST=postgres
+      - DB_PORT=5432
       - DB_USER=admin
       - DB_PASSWORD=123
       - DB_NAME=rinha
       - REDIS_ADDR=redis:6379
+      - PAYMENT_PROCESSOR_DEFAULT_URL=http://payment-processor-default:8080
+      - PAYMENT_PROCESSOR_FALLBACK_URL=http://payment-processor-fallback:8080
     expose:
       - "8080"
     depends_on:
@@ -67,8 +62,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.55"
-          memory: "130MB"
+          cpus: '0.4'
+          memory: 64M
     restart: always
     networks:
       - rinha-net
@@ -76,7 +71,6 @@ services:
 
   postgres:
     image: postgres:16-alpine
-    container_name: rinha-postgres
     environment:
       - POSTGRES_USER=admin
       - POSTGRES_PASSWORD=123
@@ -95,7 +89,6 @@ services:
 
   redis:
     image: redis:7.2-alpine
-    container_name: rinha-redis
     deploy:
       resources:
         limits:
@@ -112,4 +105,4 @@ networks:
   rinha-net:
     driver: bridge
   payment-processor:
-    external: true 
+    external: true

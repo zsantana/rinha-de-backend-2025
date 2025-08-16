@@ -1,29 +1,19 @@
 
-time="2025-08-14T11:26:06Z" level=warning msg="/home/ubuntu/rinha-de-backend-2025/participantes/jeifersonalmeida-stage-1/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
- api-1 Pulling 
+time="2025-08-14T17:56:39Z" level=warning msg="/home/ubuntu/rinha-de-backend-2025/participantes/jeifersonalmeida-stage-1/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
  api-2 Pulling 
+ api-1 Pulling 
  api-1 Pulled 
  api-2 Pulled 
  Network rinha-network  Creating
  Network rinha-network  Created
- Container api-2  Creating
  Container api-1  Creating
- Container api-2  Created
+ Container api-2  Creating
  Container api-1  Created
+ Container api-2  Created
  Container haproxy  Creating
  Container haproxy  Created
 Attaching to api-1, api-2, haproxy
 api-1  | Starting circuit controller
-api-1  | 
-api-1  |  ┌───────────────────────────────────────────────────┐ 
-api-1  |  │                   Fiber v2.52.9                   │ 
-api-1  |  │               http://127.0.0.1:8080               │ 
-api-1  |  │       (bound on host 0.0.0.0 and port 8080)       │ 
-api-1  |  │                                                   │ 
-api-1  |  │ Handlers ............. 4  Processes ........... 1 │ 
-api-1  |  │ Prefork ....... Disabled  PID ................. 1 │ 
-api-1  |  └───────────────────────────────────────────────────┘ 
-api-1  | 
 api-2  | 
 api-2  |  ┌───────────────────────────────────────────────────┐ 
 api-2  |  │                   Fiber v2.52.9                   │ 
@@ -34,29 +24,23 @@ api-2  |  │ Handlers ............. 4  Processes ........... 1 │
 api-2  |  │ Prefork ....... Disabled  PID ................. 1 │ 
 api-2  |  └───────────────────────────────────────────────────┘ 
 api-2  | 
+api-1  | 
+api-1  |  ┌───────────────────────────────────────────────────┐ 
+api-1  |  │                   Fiber v2.52.9                   │ 
+api-1  |  │               http://127.0.0.1:8080               │ 
+api-1  |  │       (bound on host 0.0.0.0 and port 8080)       │ 
+api-1  |  │                                                   │ 
+api-1  |  │ Handlers ............. 4  Processes ........... 1 │ 
+api-1  |  │ Prefork ....... Disabled  PID ................. 1 │ 
+api-1  |  └───────────────────────────────────────────────────┘ 
+api-1  | 
 haproxy  | [NOTICE]   (1) : New worker (8) forked
 haproxy  | [NOTICE]   (1) : Loading success.
-api-1    | [2025-08-14T11:26:11Z][SUMMARY-REQUEST] Recebendo uma summary request...
-api-2    | [2025-08-14T11:26:11Z][SUMMARY-REQUEST] Recebendo uma summary request...
-api-1    | [2025-08-14T11:26:17Z][SUMMARY-REQUEST] Recebendo uma summary request...
-api-2    | [2025-08-14T11:26:17Z][SUMMARY-REQUEST] Recebendo uma summary request...
-api-1    | [2025-08-14T11:26:27Z][SUMMARY-REQUEST] Recebendo uma summary request...
-api-2    | [2025-08-14T11:26:27Z][SUMMARY-REQUEST] Recebendo uma summary request...
-api-1    | [2025-08-14T11:26:37Z][SUMMARY-REQUEST] Recebendo uma summary request...
-api-2    | [2025-08-14T11:26:37Z][SUMMARY-REQUEST] Recebendo uma summary request...
-api-1    | [2025-08-14T11:26:47Z][SUMMARY-REQUEST] Recebendo uma summary request...
-api-2    | [2025-08-14T11:26:47Z][SUMMARY-REQUEST] Recebendo uma summary request...
-api-1    | [2025-08-14T11:26:57Z][SUMMARY-REQUEST] Recebendo uma summary request...
-api-2    | [2025-08-14T11:26:57Z][SUMMARY-REQUEST] Recebendo uma summary request...
-api-2    | [2025-08-14T11:27:07Z][SUMMARY-REQUEST] Recebendo uma summary request...
-api-1    | [2025-08-14T11:27:07Z][SUMMARY-REQUEST] Recebendo uma summary request...
-api-1    | [2025-08-14T11:27:18Z][SUMMARY-REQUEST] Recebendo uma summary request...
-api-2    | [2025-08-14T11:27:18Z][SUMMARY-REQUEST] Recebendo uma summary request...
 haproxy  | [NOTICE]   (1) : haproxy version is 2.6.22-fb0dde3
 haproxy  | [NOTICE]   (1) : path to executable is /usr/local/sbin/haproxy
 haproxy  | [WARNING]  (1) : Exiting Master process...
 haproxy  | [WARNING]  (8) : Proxy http_front stopped (cumulated conns: FE: 558, BE: 0).
-haproxy  | [WARNING]  (8) : Proxy http_back stopped (cumulated conns: FE: 0, BE: 16759).
+haproxy  | [WARNING]  (8) : Proxy http_back stopped (cumulated conns: FE: 0, BE: 16762).
 haproxy  | [WARNING]  (8) : Proxy <HTTPCLIENT> stopped (cumulated conns: FE: 0, BE: 0).
 haproxy  | [WARNING]  (1) : Current worker (8) exited with code 0 (Exit)
 haproxy  | [WARNING]  (1) : All workers exited. Exiting... (0)

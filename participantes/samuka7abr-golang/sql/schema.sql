@@ -11,4 +11,4 @@ CREATE INDEX IF NOT EXISTS idx_payments_processor ON payments(processor);
 CREATE INDEX IF NOT EXISTS idx_payments_processed_at ON payments(processed_at);
 CREATE INDEX IF NOT EXISTS idx_payments_correlation_id ON payments(correlation_id);
 
-CREATE INDEX IF NOT EXISTS idx_payments_processor_processed_at ON payments(processor, processed_at); 
+CREATE INDEX IF NOT EXISTS idx_payments_processor_processed_at ON payments(processor, processed_at);
