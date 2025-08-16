@@ -1,0 +1,73 @@
+
+ api2 Pulling 
+ api1 Pulling 
+ b71466b94f26 Already exists 
+ 9aa4191a8caa Pulling fs layer 
+ 7d11d973006b Pulling fs layer 
+ b71466b94f26 Already exists 
+ 9aa4191a8caa Pulling fs layer 
+ 7d11d973006b Pulling fs layer 
+ 9aa4191a8caa Downloading [>                                                  ]   33.3kB/1.927MB
+ 9aa4191a8caa Downloading [>                                                  ]   33.3kB/1.927MB
+ 7d11d973006b Downloading [>                                                  ]  62.46kB/5.439MB
+ 7d11d973006b Downloading [>                                                  ]  62.46kB/5.439MB
+ 9aa4191a8caa Verifying Checksum 
+ 9aa4191a8caa Download complete 
+ 9aa4191a8caa Extracting [>                                                  ]  32.77kB/1.927MB
+ 9aa4191a8caa Download complete 
+ 9aa4191a8caa Extracting [>                                                  ]  32.77kB/1.927MB
+ 7d11d973006b Download complete 
+ 7d11d973006b Downloading [==================================================>]  5.439MB/5.439MB
+ 7d11d973006b Download complete 
+ 9aa4191a8caa Extracting [==================================================>]  1.927MB/1.927MB
+ 9aa4191a8caa Extracting [==================================================>]  1.927MB/1.927MB
+ 9aa4191a8caa Extracting [==================================================>]  1.927MB/1.927MB
+ 9aa4191a8caa Extracting [==================================================>]  1.927MB/1.927MB
+ 9aa4191a8caa Pull complete 
+ 9aa4191a8caa Pull complete 
+ 7d11d973006b Extracting [>                                                  ]  65.54kB/5.439MB
+ 7d11d973006b Extracting [>                                                  ]  65.54kB/5.439MB
+ 7d11d973006b Extracting [===============================>                   ]  3.408MB/5.439MB
+ 7d11d973006b Extracting [===============================>                   ]  3.408MB/5.439MB
+ 7d11d973006b Extracting [==================================================>]  5.439MB/5.439MB
+ 7d11d973006b Extracting [==================================================>]  5.439MB/5.439MB
+ 7d11d973006b Extracting [==================================================>]  5.439MB/5.439MB
+ 7d11d973006b Extracting [==================================================>]  5.439MB/5.439MB
+ 7d11d973006b Pull complete 
+ 7d11d973006b Pull complete 
+ api1 Pulled 
+ api2 Pulled 
+ Network backend-rinha  Creating
+ Network backend-rinha  Created
+ Volume "diogoloff-delphi_dev-shm"  Creating
+ Volume "diogoloff-delphi_dev-shm"  Created
+ Volume "diogoloff-delphi_persistencia"  Creating
+ Volume "diogoloff-delphi_persistencia"  Created
+ Container diogoloff-delphi-api1-1  Creating
+ Container diogoloff-delphi-api1-1  Created
+ Container diogoloff-delphi-api2-1  Creating
+ Container diogoloff-delphi-api2-1  Created
+ Container nginx  Creating
+ Container nginx  Created
+Attaching to api1-1, api2-1, nginx
+api1-1  | Starting Rinha Server...
+api2-1  | Starting Rinha Server...
+nginx   | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+nginx   | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+nginx   | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+nginx   | 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+nginx   | 10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
+nginx   | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+nginx   | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+nginx   | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+nginx   | /docker-entrypoint.sh: Configuration complete; ready for start up
+[Knginx exited with code 0
+api2-1  | Stopping Rinha Server...
+api2-1  | Exception EThread in module Rinha at 0000000000544DBC.
+api2-1  | Thread Error: System error:   16 (22).
+api2-1  | Rinha Server Stopped
+[Kapi2-1 exited with code 0
+api1-1  | Stopping Rinha Server...
+api1-1  | Exception EThread in module Rinha at 0000000000544DBC.
+api1-1  | Thread Error: System error:   16 (22).
+api1-1  | Rinha Server Stopped
