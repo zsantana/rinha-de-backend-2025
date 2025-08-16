@@ -1,13 +1,13 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Sat Aug 16 01:47:21 UTC 2025**
-380 submissões / 326 resultados / 54 submissões com erro
+Atualizado em **Sat Aug 16 07:19:09 UTC 2025**
+384 submissões / 329 resultados / 55 submissões com erro
 
 
 | participante | p99 | bônus por desempenho (%) | multa ($) | lucro | submissão |
 | -- | -- | -- | -- | -- | -- |
 |	$hell-c#	|	3.75ms	|	15%	|	0	|	363679.266	|	[$hell-c#](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/$hell-c#)
-|	4emcos-bun-lb	|	2.17ms	|	18%	|	110777.62850000964	|	262701.23330002284	|	[4emcos-bun-lb](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/4emcos-bun-lb)
-|	4emcos-bun	|	1.64ms	|	19%	|	0	|	376823.912500033	|	[4emcos-bun](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/4emcos-bun)
+|	4emcos-bun-lb	|	2ms	|	18%	|	0	|	373701.94080003275	|	[4emcos-bun-lb](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/4emcos-bun-lb)
+|	4emcos-bun	|	1.67ms	|	19%	|	0	|	376891.4033500331	|	[4emcos-bun](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/4emcos-bun)
 |	4emcos-golang	|	4.03ms	|	14%	|	0	|	304137.5904	|	[4emcos-golang](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/4emcos-golang)
 |	DouglasMorais-java-od	|	5.06ms	|	12%	|	0	|	354657.8	|	[DouglasMorais-java-od](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/DouglasMorais-java-od)
 |	DouglasMorais-java	|	2.37ms	|	17%	|	0	|	365066.96265	|	[DouglasMorais-java](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/DouglasMorais-java)
@@ -30,6 +30,7 @@ Atualizado em **Sat Aug 16 01:47:21 UTC 2025**
 |	andre-lucas-quarkus	|	92.74ms	|	0%	|	79583.83124999999	|	147798.54374999998	|	[andre-lucas-quarkus](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/andre-lucas-quarkus)
 |	anibalferreira-rust-2	|	3.35ms	|	15%	|	0	|	358220.04925	|	[anibalferreira-rust-2](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/anibalferreira-rust-2)
 |	anibalferreira-rust	|	8.93ms	|	4%	|	0	|	0	|	[anibalferreira-rust](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/anibalferreira-rust)
+|	antooniodev-node	|	161.48ms	|	0%	|	0	|	308771.3849999746	|	[antooniodev-node](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/antooniodev-node)
 |	apelisser-v1.2.0	|	4.63ms	|	13%	|	0	|	356689.91835	|	[apelisser-v1.2.0](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/apelisser-v1.2.0)
 |	arthur-isvi-php-hyperf-nano	|	2.55ms	|	17%	|	0	|	364633.89885	|	[arthur-isvi-php-hyperf-nano](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/arthur-isvi-php-hyperf-nano)
 |	arthur-isvi-php-swoole	|	2.09ms	|	18%	|	0	|	373679.6329	|	[arthur-isvi-php-swoole](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/arthur-isvi-php-swoole)
@@ -37,8 +38,8 @@ Atualizado em **Sat Aug 16 01:47:21 UTC 2025**
 |	arthur-r-oliveira	|	3.37ms	|	15%	|	58842.06125	|	134496.14	|	[arthur-r-oliveira](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/arthur-r-oliveira)
 |	arthur-seus-1.0.0	|	4.31ms	|	13%	|	107906.6555	|	240477.6894	|	[arthur-seus-1.0.0](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/arthur-seus-1.0.0)
 |	artschur	|	7.45ms	|	7%	|	0	|	323205.77718	|	[artschur](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/artschur)
-|	asfernandes-boost-lmdb	|	3.2ms	|	16%	|	0	|	358055.924	|	[asfernandes-boost-lmdb](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/asfernandes-boost-lmdb)
-|	asfernandes-haproxy-mongoose-lmdb	|	1.84ms	|	18%	|	109145.729	|	258831.3002	|	[asfernandes-haproxy-mongoose-lmdb](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/asfernandes-haproxy-mongoose-lmdb)
+|	asfernandes-boost-lmdb	|	2.7ms	|	17%	|	0	|	361497.67875	|	[asfernandes-boost-lmdb](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/asfernandes-boost-lmdb)
+|	asfernandes-haproxy-mongoose-lmdb	|	1.73ms	|	19%	|	0	|	371225.7241	|	[asfernandes-haproxy-mongoose-lmdb](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/asfernandes-haproxy-mongoose-lmdb)
 |	athayr-robyn-python	|	3.51ms	|	15%	|	0	|	126647.4875	|	[athayr-robyn-python](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/athayr-robyn-python)
 |	ba7s-full-rs	|	1.88ms	|	18%	|	110794.709025	|	262741.738545	|	[ba7s-full-rs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/ba7s-full-rs)
 |	ba7s-rs	|	1.89ms	|	18%	|	109151.795025	|	258845.685345	|	[ba7s-rs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/ba7s-rs)
@@ -65,19 +66,19 @@ Atualizado em **Sat Aug 16 01:47:21 UTC 2025**
 |	cgb-go-v1	|	37.63ms	|	0%	|	0	|	309203.215	|	[cgb-go-v1](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/cgb-go-v1)
 |	cgb-go-v2	|	4.87ms	|	12%	|	0	|	352149.2856	|	[cgb-go-v2](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/cgb-go-v2)
 |	chriscorrales	|	50.97ms	|	0%	|	0	|	310550.445	|	[chriscorrales](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/chriscorrales)
-|	cleissonbarbosa-lua	|	4.98ms	|	12%	|	110548.82825	|	243207.42215	|	[cleissonbarbosa-lua](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/cleissonbarbosa-lua)
+|	cleissonbarbosa-lua	|	6.17ms	|	10%	|	109711.63524999697	|	235096.3612499935	|	[cleissonbarbosa-lua](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/cleissonbarbosa-lua)
 |	codevsk-go-1	|	2.27ms	|	17%	|	0	|	364841.11755	|	[codevsk-go-1](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/codevsk-go-1)
 |	cristian-s-bun-go-1	|	51.62ms	|	0%	|	0	|	173134.97499999998	|	[cristian-s-bun-go-1](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/cristian-s-bun-go-1)
 |	cristian-s-node-1	|	42.95ms	|	0%	|	0	|	311520.5699999768	|	[cristian-s-node-1](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/cristian-s-node-1)
 |	danielsuhett-golang-2	|	1.57ms	|	19%	|	0	|	376891.40335	|	[danielsuhett-golang-2](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/danielsuhett-golang-2)
-|	danielsuhett-golang	|	2.01ms	|	18%	|	0	|	373701.9408	|	[danielsuhett-golang](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/danielsuhett-golang)
+|	danielsuhett-golang	|	1.85ms	|	18%	|	0	|	373724.2487	|	[danielsuhett-golang](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/danielsuhett-golang)
 |	danielsuhett-nestjs	|	53.4ms	|	0%	|	0	|	311284.755	|	[danielsuhett-nestjs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/danielsuhett-nestjs)
 |	daniilha-php	|	4.17ms	|	14%	|	0	|	352800.1947	|	[daniilha-php](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/daniilha-php)
 |	daniloneto-0	|	20ms	|	0%	|	0	|	0	|	[daniloneto-0](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/daniloneto-0)
 |	daniloneto-2	|	5.21ms	|	12%	|	0	|	353514.4256	|	[daniloneto-2](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/daniloneto-2)
 |	daniloneto-3	|	5.17ms	|	12%	|	0	|	354213.1544	|	[daniloneto-3](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/daniloneto-3)
 |	daniloneto	|	10.68ms	|	1%	|	0	|	312213.8462	|	[daniloneto](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/daniloneto)
-|	danilosantana-dotnet	|	7.17ms	|	8%	|	0	|	341807.6934	|	[danilosantana-dotnet](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/danilosantana-dotnet)
+|	danilosantana-dotnet	|	14.63ms	|	0%	|	0	|	316564.225	|	[danilosantana-dotnet](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/danilosantana-dotnet)
 |	davi64lima-bun	|	1.82ms	|	18%	|	0	|	363961.60719994147	|	[davi64lima-bun](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/davi64lima-bun)
 |	david-delta-sierra-go-lab	|	1.63ms	|	19%	|	0	|	245486.7184	|	[david-delta-sierra-go-lab](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/david-delta-sierra-go-lab)
 |	david-delta-sierra-go	|	1.56ms	|	19%	|	0	|	376913.9003	|	[david-delta-sierra-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/david-delta-sierra-go)
@@ -93,7 +94,6 @@ Atualizado em **Sat Aug 16 01:47:21 UTC 2025**
 |	diegodario-go	|	2.3ms	|	17%	|	0	|	364951.7118	|	[diegodario-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/diegodario-go)
 |	diofeher-full-custom	|	2.25ms	|	18%	|	0	|	373746.5566	|	[diofeher-full-custom](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/diofeher-full-custom)
 |	diofeher	|	2.65ms	|	17%	|	0	|	370468.61865	|	[diofeher](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/diofeher)
-|	diogoloff-delphi	|	1088.07ms	|	0%	|	87288.166	|	162106.594	|	[diogoloff-delphi](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/diogoloff-delphi)
 |	diogoloff-fpc	|	3.18ms	|	16%	|	0	|	367280.2904	|	[diogoloff-fpc](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/diogoloff-fpc)
 |	diogomassis-go	|	3.52ms	|	15%	|	0	|	261932.55599997003	|	[diogomassis-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/diogomassis-go)
 |	djbrunomonteiro	|	86.55ms	|	0%	|	0	|	2980.025	|	[djbrunomonteiro](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/djbrunomonteiro)
@@ -101,6 +101,7 @@ Atualizado em **Sat Aug 16 01:47:21 UTC 2025**
 |	dolphs-go	|	16.43ms	|	0%	|	110810.71225	|	205791.32275	|	[dolphs-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/dolphs-go)
 |	dolphs	|	13.32ms	|	0%	|	0	|	312808.1	|	[dolphs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/dolphs)
 |	edmar-sousa	|	85.35ms	|	0%	|	0	|	0	|	[edmar-sousa](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/edmar-sousa)
+|	eduardofp17-node	|	35.11ms	|	0%	|	0	|	0	|	[eduardofp17-node](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/eduardofp17-node)
 |	el_yawd-crab	|	1.44ms	|	19%	|	110763.3502500094	|	265832.04060002253	|	[el_yawd-crab](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/el_yawd-crab)
 |	emiliosheinz-go	|	5.27ms	|	11%	|	0	|	223504.23315	|	[emiliosheinz-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/emiliosheinz-go)
 |	fabianoflorentino	|	59.32ms	|	0%	|	62545.7	|	116156.3	|	[fabianoflorentino](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/fabianoflorentino)
@@ -136,12 +137,12 @@ Atualizado em **Sat Aug 16 01:47:21 UTC 2025**
 |	gustavocesario-ktor	|	160.39ms	|	0%	|	0	|	0	|	[gustavocesario-ktor](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/gustavocesario-ktor)
 |	gustavotbett-java	|	274.88ms	|	0%	|	39199.02	|	72798.18	|	[gustavotbett-java](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/gustavotbett-java)
 |	hamilton-golang-erly	|	2.14ms	|	18%	|	0	|	373679.63290003274	|	[hamilton-golang-erly](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/hamilton-golang-erly)
-|	hamilton-golang-escovando-bits	|	2.39ms	|	17%	|	110817.32900000967	|	259629.17080002266	|	[hamilton-golang-escovando-bits](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/hamilton-golang-escovando-bits)
+|	hamilton-golang-escovando-bits	|	3.8ms	|	14%	|	110850.41275000972	|	250205.21735002197	|	[hamilton-golang-escovando-bits](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/hamilton-golang-escovando-bits)
 |	hamilton-golang-redis	|	2.79ms	|	16%	|	0	|	367126.7818000319	|	[hamilton-golang-redis](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/hamilton-golang-redis)
 |	henriquevalcanaia-swift-vapor	|	105.79ms	|	0%	|	74730.658275	|	138785.508225	|	[henriquevalcanaia-swift-vapor](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/henriquevalcanaia-swift-vapor)
 |	igor-gregori-bun-v1	|	3.36ms	|	15%	|	106861.209	|	244254.192	|	[igor-gregori-bun-v1](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/igor-gregori-bun-v1)
 |	igor-gregori-bun-v2	|	2.94ms	|	16%	|	0	|	358944.658	|	[igor-gregori-bun-v2](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/igor-gregori-bun-v2)
-|	igor-lucas-csharp	|	58.22ms	|	0%	|	107543.43075	|	199723.51425	|	[igor-lucas-csharp](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/igor-lucas-csharp)
+|	igor-lucas-csharp	|	52.61ms	|	0%	|	0	|	307189.335	|	[igor-lucas-csharp](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/igor-lucas-csharp)
 |	jairoandre-go-v2	|	50.52ms	|	0%	|	0	|	309055.955	|	[jairoandre-go-v2](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/jairoandre-go-v2)
 |	jairoandre	|	3.03ms	|	16%	|	0	|	359843.7798	|	[jairoandre](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/jairoandre)
 |	jaofreire-e-isaias-dotnet	|	44.9ms	|	0%	|	92759.1735	|	172267.0365	|	[jaofreire-e-isaias-dotnet](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/jaofreire-e-isaias-dotnet)
@@ -167,7 +168,7 @@ Atualizado em **Sat Aug 16 01:47:21 UTC 2025**
 |	joyce-go	|	1.28ms	|	19%	|	0	|	376913.9003	|	[joyce-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/joyce-go)
 |	jrblatt-nodejs-1	|	2.66ms	|	17%	|	55362.34725	|	129706.0707	|	[jrblatt-nodejs-1](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/jrblatt-nodejs-1)
 |	jrblatt-nodejs-faf	|	1.4ms	|	19%	|	0	|	376936.39725	|	[jrblatt-nodejs-faf](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/jrblatt-nodejs-faf)
-|	juanlimalf-python-fastapi	|	56.91ms	|	0%	|	73939.7435	|	137316.6665	|	[juanlimalf-python-fastapi](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/juanlimalf-python-fastapi)
+|	juanlimalf-python-fastapi	|	699.5ms	|	0%	|	0	|	174665.285	|	[juanlimalf-python-fastapi](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/juanlimalf-python-fastapi)
 |	juanmedeiros-dotnet	|	10.11ms	|	2%	|	0	|	322625.5461	|	[juanmedeiros-dotnet](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/juanmedeiros-dotnet)
 |	jvcouto-go-2	|	3.14ms	|	16%	|	109144.68425	|	252591.98355	|	[jvcouto-go-2](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/jvcouto-go-2)
 |	jvsandrade-rust-mini	|	3.33ms	|	15%	|	0	|	364135.82175	|	[jvsandrade-rust-mini](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/jvsandrade-rust-mini)
@@ -227,6 +228,7 @@ Atualizado em **Sat Aug 16 01:47:21 UTC 2025**
 |	marincor	|	1.82ms	|	18%	|	72243.0695	|	171319.2791	|	[marincor](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/marincor)
 |	matheusdojava	|	4.14ms	|	14%	|	110764.395	|	250011.063	|	[matheusdojava](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/matheusdojava)
 |	mauricio-cantu-2	|	3.52ms	|	15%	|	0	|	355763.3445	|	[mauricio-cantu-2](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/mauricio-cantu-2)
+|	mauricio-cantu-3	|	3.1ms	|	16%	|	110784.24525	|	256386.39615	|	[mauricio-cantu-3](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/mauricio-cantu-3)
 |	mauricio-cantu	|	37.68ms	|	0%	|	0	|	303507.835	|	[mauricio-cantu](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/mauricio-cantu)
 |	maxsonferovante	|	433.33ms	|	0%	|	0	|	0	|	[maxsonferovante](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/maxsonferovante)
 |	mdantas-rust	|	0.79ms	|	20%	|	0	|	0	|	[mdantas-rust](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/mdantas-rust)
@@ -294,6 +296,7 @@ Atualizado em **Sat Aug 16 01:47:21 UTC 2025**
 |	samuka7abr-golang	|	186.11ms	|	0%	|	57891.33875	|	107512.48625	|	[samuka7abr-golang](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/samuka7abr-golang)
 |	samypng-go-2	|	2.41ms	|	17%	|	0	|	370512.85635	|	[samypng-go-2](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/samypng-go-2)
 |	samypng-go	|	2.34ms	|	17%	|	0	|	370512.85635	|	[samypng-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/samypng-go)
+|	santannaf-java-revolts	|	3.94ms	|	14%	|	0	|	360861.6648	|	[santannaf-java-revolts](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/santannaf-java-revolts)
 |	santannaf-java	|	5.25ms	|	12%	|	0	|	354022.592	|	[santannaf-java](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/santannaf-java)
 |	santannaf	|	33.42ms	|	0%	|	0	|	316057.77	|	[santannaf](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/santannaf)
 |	silvaangelo	|	2.66ms	|	17%	|	0	|	353526.7437	|	[silvaangelo](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/silvaangelo)
@@ -306,9 +309,9 @@ Atualizado em **Sat Aug 16 01:47:21 UTC 2025**
 |	thomaz-golang-2	|	4.4ms	|	13%	|	0	|	350332.84345	|	[thomaz-golang-2](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/thomaz-golang-2)
 |	thomaz-maldonado-go-1	|	4.57ms	|	13%	|	0	|	247373.86525	|	[thomaz-maldonado-go-1](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/thomaz-maldonado-go-1)
 |	uchoamp-zig+nginx	|	1.63ms	|	19%	|	0	|	376778.9186	|	[uchoamp-zig+nginx](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/uchoamp-zig+nginx)
-|	uchoamp-zig	|	1.38ms	|	19%	|	0	|	376891.40335	|	[uchoamp-zig](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/uchoamp-zig)
+|	uchoamp-zig	|	1.33ms	|	19%	|	0	|	376868.9064	|	[uchoamp-zig](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/uchoamp-zig)
 |	vctrhugo-fastapi	|	1490.6ms	|	0%	|	0	|	0	|	[vctrhugo-fastapi](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/vctrhugo-fastapi)
-|	vfabricio-greedy	|	2.08ms	|	18%	|	0	|	373635.0171	|	[vfabricio-greedy](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/vfabricio-greedy)
+|	vfabricio-greedy	|	1.7ms	|	19%	|	0	|	376868.9064	|	[vfabricio-greedy](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/vfabricio-greedy)
 |	vhogemann	|	734.61ms	|	0%	|	53266.57875	|	98923.64625	|	[vhogemann](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/vhogemann)
 |	victorverdoodt-cs-redis	|	85.01ms	|	0%	|	0	|	310709.645	|	[victorverdoodt-cs-redis](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/victorverdoodt-cs-redis)
 |	victorverdoodt-cs	|	87.79ms	|	0%	|	0	|	309794.245	|	[victorverdoodt-cs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/victorverdoodt-cs)
@@ -339,12 +342,12 @@ Atualizado em **Sat Aug 16 01:47:21 UTC 2025**
 | RuanPabloCR-Rruim | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/RuanPabloCR-Rruim) |
 | andersonhqds-node | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/andersonhqds-node) |
 | andre-nicoletti | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/andre-nicoletti) |
-| antooniodev-node | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/antooniodev-node) |
 | ccs1201-01 | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/ccs1201-01) |
 | chrisx | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/chrisx) |
 | d4vz | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/d4vz) |
 | danielwisky | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/danielwisky) |
 | developerarthur | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/developerarthur) |
+| diogoloff-delphi | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/diogoloff-delphi) |
 | dotnetRinha | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/dotnetRinha) |
 | drope-dev-rinha-backend-node | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/drope-dev-rinha-backend-node) |
 | emilemoraes-java | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/emilemoraes-java) |
@@ -409,6 +412,7 @@ Atualizado em **Sat Aug 16 01:47:21 UTC 2025**
 | lucasvsouza28-bun | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/lucasvsouza28-bun) |
 | luucaspole-crystal | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/luucaspole-crystal) |
 | macedot-go-echo | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/macedot-go-echo) |
+| maico-smaniotto-objpas-pgsql | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/maico-smaniotto-objpas-pgsql) |
 | marcospaulo-java-1 | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/marcospaulo-java-1) |
 | mateuxlucax-elysia | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/mateuxlucax-elysia) |
 | matheusdojava | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/matheusdojava) |
