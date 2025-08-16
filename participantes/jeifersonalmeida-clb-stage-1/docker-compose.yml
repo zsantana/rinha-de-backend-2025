@@ -1,13 +1,13 @@
 version: '3.8'
 
 services:
-  haproxy:
-    image: haproxy:2.6
-    container_name: haproxy
+  customlb:
+    image: jeiferson/rinha-backend-2025-lb:latest
+    container_name: customlb
+    environment:
+      - BACKENDS=http://api-1:8080,http://api-2:8080,http://api-3:8080
     ports:
       - "9999:9999"
-    volumes:
-      - ./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
     depends_on:
       - api-1
       - api-2
