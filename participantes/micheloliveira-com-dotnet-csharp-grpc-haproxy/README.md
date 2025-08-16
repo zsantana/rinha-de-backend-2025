@@ -12,8 +12,7 @@ API de pagamentos para o desafio Rinha de Backend 2025, focada em alta performan
 
 ## Destaques
 
-- Lock distribuído reativo via Redis
-- Balanceamento de carga eficiente
+- Lock distribuído reativo via Grpc
 
 ## Código fonte, arquitetura e insights
 
