@@ -10,7 +10,7 @@ x-rinha-api-base: &rinha-api-base
   deploy: &rinha-api-deploy
     resources:
       limits:
-        cpus: "0.35"
+        cpus: "0.28"
         memory: "100MB"
   ulimits:
     nofile:
@@ -83,7 +83,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.45"
+          cpus: "0.59"
           memory: "60MB"
     ulimits:
       nofile:
