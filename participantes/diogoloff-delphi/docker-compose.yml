@@ -33,6 +33,7 @@ services:
     volumes:
       - persistencia:/opt/rinha/persistencia
       - dev-shm:/dev/shm
+      - ./Logs:/opt/rinha/Logs
     networks:
       - backend-rinha
       - payment-processor
@@ -50,6 +51,7 @@ services:
     volumes:
       - persistencia:/opt/rinha/persistencia
       - dev-shm:/dev/shm
+      - ./Logs2:/opt/rinha/Logs
 
 volumes:
   persistencia:
