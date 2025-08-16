@@ -1,6 +1,6 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Sat Aug 16 21:27:24 UTC 2025**
-393 submissões / 342 resultados / 51 submissões com erro
+Atualizado em **Sat Aug 16 21:36:29 UTC 2025**
+395 submissões / 344 resultados / 51 submissões com erro
 
 
 | participante | p99 | bônus por desempenho (%) | multa ($) | lucro | submissão |
@@ -156,6 +156,7 @@ Atualizado em **Sat Aug 16 21:27:24 UTC 2025**
 |	jeffersonaguiar-nodejs	|	4.41ms	|	13%	|	0	|	349512.06795	|	[jeffersonaguiar-nodejs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/jeffersonaguiar-nodejs)
 |	jeifersonalmeida-stage-1	|	3.49ms	|	15%	|	104365.99774998445	|	238550.85199996448	|	[jeifersonalmeida-stage-1](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/jeifersonalmeida-stage-1)
 |	jjeanjacques10	|	5.03ms	|	12%	|	78481.27175	|	172658.79785	|	[jjeanjacques10](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/jjeanjacques10)
+|	joao-vitor-node	|	71.92ms	|	0%	|	0	|	529.34	|	[joao-vitor-node](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/joao-vitor-node)
 |	joao-xavier	|	1.46ms	|	19%	|	0	|	376958.8942	|	[joao-xavier](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/joao-xavier)
 |	joaocrulhas-nestjs-ts	|	92.67ms	|	0%	|	0	|	0	|	[joaocrulhas-nestjs-ts](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/joaocrulhas-nestjs-ts)
 |	joaoprocopio	|	2ms	|	18%	|	108509.47624998535	|	257322.47224996527	|	[joaoprocopio](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/joaoprocopio)
@@ -308,6 +309,7 @@ Atualizado em **Sat Aug 16 21:27:24 UTC 2025**
 |	samypng-go-2	|	2.41ms	|	17%	|	0	|	370512.85635	|	[samypng-go-2](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/samypng-go-2)
 |	samypng-go	|	2.34ms	|	17%	|	0	|	370512.85635	|	[samypng-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/samypng-go)
 |	santannaf-java-revolts	|	3.94ms	|	14%	|	0	|	360861.6648	|	[santannaf-java-revolts](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/santannaf-java-revolts)
+|	santannaf-java-revolts2	|	4.19ms	|	14%	|	0	|	360857.1276	|	[santannaf-java-revolts2](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/santannaf-java-revolts2)
 |	santannaf-java	|	5.25ms	|	12%	|	0	|	354022.592	|	[santannaf-java](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/santannaf-java)
 |	santannaf	|	33.42ms	|	0%	|	0	|	316057.77	|	[santannaf](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/santannaf)
 |	silvaangelo	|	2.66ms	|	17%	|	0	|	353526.7437	|	[silvaangelo](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/silvaangelo)
