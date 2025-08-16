@@ -18,7 +18,7 @@ services:
           memory: "50MB"
 
   api1: &api
-    image: diogoloff/api-delphi-rinha2025:latest
+    image: diogoloff/api-delphi-rinha2025:v1
     hostname: api1
     environment:
       - DEFAULT_URL=http://payment-processor-default:8080
@@ -33,7 +33,6 @@ services:
     volumes:
       - persistencia:/opt/rinha/persistencia
       - dev-shm:/dev/shm
-      - ./Logs:/opt/rinha/Logs
     networks:
       - backend-rinha
       - payment-processor
@@ -51,8 +50,7 @@ services:
     volumes:
       - persistencia:/opt/rinha/persistencia
       - dev-shm:/dev/shm
-      - ./Logs2:/opt/rinha/Logs
-
+      
 volumes:
   persistencia:
   dev-shm:
