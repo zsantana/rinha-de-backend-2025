@@ -18,7 +18,7 @@ services:
           memory: "50MB"
 
   api1: &api
-    image: diogoloff/api-delphi-rinha2025:v1
+    image: diogoloff/api-delphi-rinha2025:v1.01
     hostname: api1
     environment:
       - DEFAULT_URL=http://payment-processor-default:8080
@@ -29,8 +29,9 @@ services:
       - LISTEM_QUEUE=2
       - NUM_TENTATIVAS_DEFAULT=10 # 5
       - TEMPO_FILA=10
-      - DEBUG=N
+      - DEBUG=S
     volumes:
+      - ./Logs:/opt/rinha/Logs
       - persistencia:/opt/rinha/persistencia
       - dev-shm:/dev/shm
     networks:
@@ -44,10 +45,9 @@ services:
 
   api2:
     <<: *api
-    depends_on:
-      - api1
     hostname: api2
     volumes:
+      - ./Logs2:/opt/rinha/Logs
       - persistencia:/opt/rinha/persistencia
       - dev-shm:/dev/shm
       
