@@ -1,7 +1,7 @@
 x-rinha-api-base: &rinha-api-base
   image: jhamiltonjunior/rinha-go-escovando-bits:0.0.3
   volumes:
-    - api-socketsv1:/var/run
+    - api-socketsv1:/tmp
   depends_on:
     - redis
   networks:
@@ -14,7 +14,7 @@ x-rinha-api-base: &rinha-api-base
         memory: "100MB"
 
   environment: &common-environment
-    # GOGC: 1000
+    # GOGC: 500
     APP_PORT: 3000
     REDIS_ADDR: redis:6379
     POSTGRES_URL: postgres://user:password-very-har@postgres:5432/rinha_de_backend?sslmode=disable
@@ -24,13 +24,15 @@ x-rinha-api-base: &rinha-api-base
 
 services:
   nginx:
-    image: nginx:1.25.3-alpine
+    # image: haproxy:3.2.3-alpine
+    image: nginx:stable-alpine
     container_name: nginx_load_balancer
     ports:
       - "9999:80"
     volumes:
       - ./config/nginx.conf:/etc/nginx/nginx.conf:ro
-      - api-socketsv1:/var/run:rw
+      # - ./config/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
+      - api-socketsv1:/tmp:rw
     depends_on:
       - rinha-api-1
       - rinha-api-2
@@ -49,24 +51,24 @@ services:
     environment:
       <<: *common-environment
       RUN_VERIFY_PAYMENT_SERVICE: "true"
-      UNIX_SOCKET: /var/run/api_1.sock
-    command: ./main -socket /var/run/api_1.sock
+      UNIX_SOCKET: /tmp/api_1.sock
+    command: ./main -socket /tmp/api_1.sock
 
   rinha-api-2:
     <<: *rinha-api-base
     container_name: rinha-api-2
     environment:
       <<: *common-environment
-      UNIX_SOCKET: /var/run/api_2.sock
-    command: ./main -socket /var/run/api_2.sock
+      UNIX_SOCKET: /tmp/api_2.sock
+    command: ./main -socket /tmp/api_2.sock
 
   # rinha-api-3:
   #   <<: *rinha-api-base
   #   container_name: rinha-api-3
   #   environment:
   #     <<: *common-environment
-  #     UNIX_SOCKET: /var/run/api_3.sock
-  #   command: ./main -socket /var/run/api_3.sock
+  #     UNIX_SOCKET: /tmp/api_3.sock
+  #   command: ./main -socket /tmp/api_3.sock
 
   # rinha-api-4:
   #   <<: *rinha-api-base
@@ -98,7 +100,7 @@ services:
       resources:
         limits:
           cpus: "0.2"
-          memory: "30MB"
+          memory: "50MB"
 
 networks:
   app-network:
