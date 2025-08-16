@@ -1,0 +1,78 @@
+
+ api02 Pulling 
+ api01 Pulling 
+ 9824c27679d3 Already exists 
+ 3cdbfff583b0 Already exists 
+ 2d381af09514 Already exists 
+ e62ad5808fa8 Already exists 
+ 9824c27679d3 Already exists 
+ 3f100f8b5415 Already exists 
+ 3cdbfff583b0 Already exists 
+ 2d381af09514 Already exists 
+ 72d351e107a0 Already exists 
+ e62ad5808fa8 Already exists 
+ 3f100f8b5415 Already exists 
+ 054d17687dc0 Already exists 
+ 72d351e107a0 Already exists 
+ e9da6cc7f707 Already exists 
+ 054d17687dc0 Already exists 
+ e9da6cc7f707 Already exists 
+ 17f7b1bf6600 Pulling fs layer 
+ 4370bf00e8d2 Pulling fs layer 
+ 17f7b1bf6600 Pulling fs layer 
+ 4370bf00e8d2 Pulling fs layer 
+ 4370bf00e8d2 Downloading [>                                                  ]  16.38kB/1.485MB
+ 4370bf00e8d2 Downloading [>                                                  ]  16.38kB/1.485MB
+ 4370bf00e8d2 Verifying Checksum 
+ 4370bf00e8d2 Verifying Checksum 
+ 4370bf00e8d2 Download complete 
+ 4370bf00e8d2 Download complete 
+ 17f7b1bf6600 Downloading [=>                                                 ]  16.38kB/700.3kB
+ 17f7b1bf6600 Downloading [=>                                                 ]  16.38kB/700.3kB
+ 17f7b1bf6600 Downloading [==================================================>]  700.3kB/700.3kB
+ 17f7b1bf6600 Downloading [==================================================>]  700.3kB/700.3kB
+ 17f7b1bf6600 Verifying Checksum 
+ 17f7b1bf6600 Verifying Checksum 
+ 17f7b1bf6600 Download complete 
+ 17f7b1bf6600 Download complete 
+ 17f7b1bf6600 Extracting [==>                                                ]  32.77kB/700.3kB
+ 17f7b1bf6600 Extracting [==>                                                ]  32.77kB/700.3kB
+ 17f7b1bf6600 Extracting [==================================================>]  700.3kB/700.3kB
+ 17f7b1bf6600 Extracting [==================================================>]  700.3kB/700.3kB
+ 17f7b1bf6600 Extracting [==================================================>]  700.3kB/700.3kB
+ 17f7b1bf6600 Pull complete 
+ 17f7b1bf6600 Pull complete 
+ 4370bf00e8d2 Extracting [=>                                                 ]  32.77kB/1.485MB
+ 4370bf00e8d2 Extracting [=>                                                 ]  32.77kB/1.485MB
+ 4370bf00e8d2 Extracting [==================================================>]  1.485MB/1.485MB
+ 4370bf00e8d2 Extracting [==================================================>]  1.485MB/1.485MB
+ 4370bf00e8d2 Pull complete 
+ 4370bf00e8d2 Pull complete 
+ api02 Pulled 
+ api01 Pulled 
+ Network antooniodev-node_backend  Creating
+ Network antooniodev-node_backend  Created
+ Container redis  Creating
+ Container redis  Created
+ Container antooniodev-node-api02-1  Creating
+ Container antooniodev-node-api01-1  Creating
+ Container antooniodev-node-api01-1  Created
+ Container antooniodev-node-api02-1  Created
+ Container antooniodev-node-lb-1  Creating
+ Container antooniodev-node-lb-1  Created
+Attaching to api01-1, api02-1, lb-1, redis
+redis  | Starting Redis Server
+redis  | 1:C 16 Aug 2025 02:46:54.564 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+api02-1  | yarn run v1.22.22
+api01-1  | yarn run v1.22.22
+api02-1  | $ node dist/server.js
+api01-1  | $ node dist/server.js
+api01-1  | Iniciando fila e workers...
+api01-1  | Iniciando workers com concorrência 20...
+api01-1  | Workers iniciados. Startando servidor...
+api02-1  | Iniciando fila e workers...
+api02-1  | Iniciando workers com concorrência 20...
+api02-1  | Workers iniciados. Startando servidor...
+api02-1  | (Server) running on port 3333
+api01-1  | (Server) running on port 3333
+dependency failed to start: container antooniodev-node-api02-1 is unhealthy
