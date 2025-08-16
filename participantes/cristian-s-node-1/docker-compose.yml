@@ -29,6 +29,8 @@ services:
       - ZEROMQ_SUFFIXS=1
       - SOCKET_PATH_SERVER=/var/run/server1.sock
       - NODE_ENV=production
+      - BATCH_TIMEOUT=1000
+      - BATCH_SIZE=100
     volumes:
       - socket_volume:/tmp
       - socket_volume:/var/run
@@ -53,6 +55,8 @@ services:
       - ZEROMQ_SUFFIXS=2
       - SOCKET_PATH_SERVER=/var/run/server2.sock
       - NODE_ENV=production
+      - BATCH_TIMEOUT=1000
+      - BATCH_SIZE=100
     volumes:
       - socket_volume:/tmp
       - socket_volume:/var/run
