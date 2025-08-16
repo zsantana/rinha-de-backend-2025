@@ -1,5 +1,5 @@
 x-api_template: &api
-  image: ghcr.io/diofeher/rinha-de-backend-2025-diofeher:main-2eea43c
+  image: ghcr.io/diofeher/rinha-de-backend-2025-diofeher:main-905b270
   depends_on:
     redis:
       condition: service_healthy
@@ -36,7 +36,7 @@ services:
   api1:
     <<: *api
     environment:
-      # - CPU_PROFILE=/app/profile/diogenes.pprof
+      # - CPU_PROFILE=/app/profile/diogenes1.pprof
       - SOCKET_PATH=/tmp/api1.sock
       - DEBUG=false
       - REDIS_URL=/tmp/redis.sock
@@ -47,6 +47,7 @@ services:
   api2:
     <<: *api
     environment:
+      # - CPU_PROFILE=/app/profile/diogenes2.pprof
       - SOCKET_PATH=/tmp/api2.sock
       - DEBUG=false
       - REDIS_URL=/tmp/redis.sock
