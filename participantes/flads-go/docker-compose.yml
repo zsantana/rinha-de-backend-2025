@@ -52,8 +52,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.2"
-          memory: "150MB"
+          cpus: "0.30"
+          memory: "120MB"
 
   worker-1:
     <<: *worker
@@ -62,7 +62,7 @@ services:
       resources:
         limits:
           cpus: "0.15"
-          memory: "50MB"
+          memory: "30MB"
 
   worker-2:
     <<: *worker
@@ -71,7 +71,7 @@ services:
       resources:
         limits:
           cpus: "0.15"
-          memory: "50MB"
+          memory: "30MB"
 
   nginx:
     image: nginx:alpine
@@ -92,7 +92,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.2"
+          cpus: "0.15"
           memory: "20MB"
 
   redis:
@@ -121,8 +121,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.2"
-          memory: "30MB"
+          cpus: "0.15"
+          memory: "100MB"
 
 volumes:
   sockets:
