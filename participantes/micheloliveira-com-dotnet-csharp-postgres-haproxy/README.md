@@ -8,7 +8,7 @@ API de pagamentos para o desafio Rinha de Backend 2025, focada em alta performan
 - PostgreSQL  
 - Redis (mensageria + lock distribuído)  
 - Dapper  
-- Nginx  
+- Haproxy  
 - Docker Compose
 
 ## Destaques
