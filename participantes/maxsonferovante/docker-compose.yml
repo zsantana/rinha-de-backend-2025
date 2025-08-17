@@ -67,9 +67,9 @@ services:
       REDIS_QUEUE_PAYMENTS_MAIN: rinha-payments-main-queue
       PAYMENT_PROCESSOR_DEFAULT_URL: http://payment-processor-default:8080
       PAYMENT_PROCESSOR_FALLBACK_URL: http://payment-processor-fallback:8080
-      WORKER_MAX_CONCURRENT_PAYMENTS: 70
-      WORKER_BATCH_SIZE: 75
-      WORKER_EXECUTION_DELAY: 200
+      WORKER_MAX_CONCURRENT_PAYMENTS: 80
+      WORKER_BATCH_SIZE: 100
+      WORKER_EXECUTION_DELAY: 100
     depends_on:
       redis:
         condition: service_healthy
