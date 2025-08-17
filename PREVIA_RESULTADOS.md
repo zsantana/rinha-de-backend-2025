@@ -1,6 +1,6 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Sun Aug 17 05:20:09 UTC 2025**
-418 submissões / 363 resultados / 55 submissões com erro
+Atualizado em **Sun Aug 17 05:31:27 UTC 2025**
+421 submissões / 366 resultados / 55 submissões com erro
 
 
 | participante | p99 | bônus por desempenho (%) | multa ($) | lucro | submissão |
@@ -74,6 +74,9 @@ Atualizado em **Sun Aug 17 05:20:09 UTC 2025**
 |	codevsk-go-1	|	2.27ms	|	17%	|	0	|	364841.11755	|	[codevsk-go-1](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/codevsk-go-1)
 |	craytee	|	1.36ms	|	19%	|	0	|	376756.42165003286	|	[craytee](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/craytee)
 |	cristian-s-bun-go-1	|	51.62ms	|	0%	|	0	|	173134.97499999998	|	[cristian-s-bun-go-1](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/cristian-s-bun-go-1)
+|	cristian-s-node-1	|	18.45ms	|	0%	|	0	|	311745.43999997707	|	[cristian-s-node-1](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/cristian-s-node-1)
+|	cristian-s-node-2-http	|	3.15ms	|	16%	|	0	|	361767.83119997365	|	[cristian-s-node-2-http](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/cristian-s-node-2-http)
+|	cristian-s-node-3-http-2	|	5.18ms	|	12%	|	0	|	349181.6383999734	|	[cristian-s-node-3-http-2](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/cristian-s-node-3-http-2)
 |	danielsuhett-golang-2	|	1.84ms	|	18%	|	0	|	365390.4869	|	[danielsuhett-golang-2](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/danielsuhett-golang-2)
 |	danielsuhett-golang	|	1.59ms	|	19%	|	0	|	376913.9003	|	[danielsuhett-golang](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/danielsuhett-golang)
 |	daniilha-php	|	4.17ms	|	14%	|	0	|	352800.1947	|	[daniilha-php](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/daniilha-php)
