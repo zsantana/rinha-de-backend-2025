@@ -1,0 +1,226 @@
+
+ worker1 Pulling 
+ api1 Pulling 
+ api2 Pulling 
+ fcce199ebec0 Already exists 
+ 4f4fb700ef54 Already exists 
+ f2dd68b48988 Already exists 
+ 38a10901e100 Already exists 
+ c7fd3f570a3a Pulling fs layer 
+ e68ccbe686c9 Pulling fs layer 
+ 4c7dbb8bd366 Pulling fs layer 
+ c7fd3f570a3a Downloading [==================================================>]      94B/94B
+ c7fd3f570a3a Download complete 
+ e68ccbe686c9 Downloading [==================================================>]     102B/102B
+ e68ccbe686c9 Verifying Checksum 
+ c7fd3f570a3a Extracting [==================================================>]      94B/94B
+ c7fd3f570a3a Extracting [==================================================>]      94B/94B
+ c7fd3f570a3a Pull complete 
+ e68ccbe686c9 Extracting [==================================================>]     102B/102B
+ e68ccbe686c9 Extracting [==================================================>]     102B/102B
+ e68ccbe686c9 Pull complete 
+ 4c7dbb8bd366 Downloading [>                                                  ]  226.5kB/21.8MB
+ fcce199ebec0 Already exists 
+ 4f4fb700ef54 Already exists 
+ f2dd68b48988 Already exists 
+ 38a10901e100 Already exists 
+ c7fd3f570a3a Already exists 
+ fcce199ebec0 Already exists 
+ e68ccbe686c9 Already exists 
+ 4c7dbb8bd366 Pulling fs layer 
+ 4c7dbb8bd366 Downloading [>                                                  ]  226.5kB/21.8MB
+ 4f4fb700ef54 Already exists 
+ f2dd68b48988 Already exists 
+ 38a10901e100 Already exists 
+ c7fd3f570a3a Already exists 
+ e68ccbe686c9 Already exists 
+ 4c7dbb8bd366 Pulling fs layer 
+ 4c7dbb8bd366 Downloading [>                                                  ]  226.5kB/21.8MB
+ 4c7dbb8bd366 Downloading [========================================>          ]  17.85MB/21.8MB
+ 4c7dbb8bd366 Downloading [========================================>          ]  17.85MB/21.8MB
+ 4c7dbb8bd366 Downloading [========================================>          ]  17.85MB/21.8MB
+ 4c7dbb8bd366 Verifying Checksum 
+ 4c7dbb8bd366 Download complete 
+ 4c7dbb8bd366 Download complete 
+ 4c7dbb8bd366 Download complete 
+ 4c7dbb8bd366 Extracting [>                                                  ]  229.4kB/21.8MB
+ 4c7dbb8bd366 Extracting [>                                                  ]  229.4kB/21.8MB
+ 4c7dbb8bd366 Extracting [>                                                  ]  229.4kB/21.8MB
+ 4c7dbb8bd366 Extracting [================>                                  ]   7.34MB/21.8MB
+ 4c7dbb8bd366 Extracting [================>                                  ]   7.34MB/21.8MB
+ 4c7dbb8bd366 Extracting [================>                                  ]   7.34MB/21.8MB
+ 4c7dbb8bd366 Extracting [==================================>                ]  14.91MB/21.8MB
+ 4c7dbb8bd366 Extracting [==================================>                ]  14.91MB/21.8MB
+ 4c7dbb8bd366 Extracting [==================================>                ]  14.91MB/21.8MB
+ 4c7dbb8bd366 Extracting [==================================================>]   21.8MB/21.8MB
+ 4c7dbb8bd366 Extracting [==================================================>]   21.8MB/21.8MB
+ 4c7dbb8bd366 Extracting [==================================================>]   21.8MB/21.8MB
+ 4c7dbb8bd366 Pull complete 
+ 4c7dbb8bd366 Pull complete 
+ 4c7dbb8bd366 Pull complete 
+ api2 Pulled 
+ worker1 Pulled 
+ api1 Pulled 
+ Network feykke-quarkus_backend-rinha  Creating
+ Network feykke-quarkus_backend-rinha  Created
+ Container feykke-quarkus-redis-1  Creating
+ Container feykke-quarkus-redis-1  Created
+ Container feykke-quarkus-api1-1  Creating
+ Container feykke-quarkus-api2-1  Creating
+ Container feykke-quarkus-worker1-1  Creating
+ Container feykke-quarkus-api1-1  Created
+ Container feykke-quarkus-worker1-1  Created
+ Container feykke-quarkus-api2-1  Created
+ Container feykke-quarkus-nginx-1  Creating
+ Container feykke-quarkus-nginx-1  Created
+Attaching to api1-1, api2-1, nginx-1, redis-1, worker1-1
+redis-1  | Starting Redis Server
+redis-1  | 1:C 17 Aug 2025 16:55:35.756 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+redis-1  | 1:C 17 Aug 2025 16:55:35.757 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+redis-1  | 1:C 17 Aug 2025 16:55:35.757 * Redis version=8.0.3, bits=64, commit=00000000, modified=1, pid=1, just started
+redis-1  | 1:C 17 Aug 2025 16:55:35.757 * Configuration loaded
+redis-1  | 1:M 17 Aug 2025 16:55:35.758 * monotonic clock: POSIX clock_gettime
+redis-1  | 1:M 17 Aug 2025 16:55:35.763 * Running mode=standalone, port=6379.
+redis-1  | 1:M 17 Aug 2025 16:55:35.766 * <bf> RedisBloom version 8.0.1 (Git=unknown)
+redis-1  | 1:M 17 Aug 2025 16:55:35.766 * <bf> Registering configuration options: [
+redis-1  | 1:M 17 Aug 2025 16:55:35.766 * <bf> 	{ bf-error-rate       :      0.01 }
+redis-1  | 1:M 17 Aug 2025 16:55:35.766 * <bf> 	{ bf-initial-size     :       100 }
+redis-1  | 1:M 17 Aug 2025 16:55:35.766 * <bf> 	{ bf-expansion-factor :         2 }
+redis-1  | 1:M 17 Aug 2025 16:55:35.766 * <bf> 	{ cf-bucket-size      :         2 }
+redis-1  | 1:M 17 Aug 2025 16:55:35.766 * <bf> 	{ cf-initial-size     :      1024 }
+redis-1  | 1:M 17 Aug 2025 16:55:35.766 * <bf> 	{ cf-max-iterations   :        20 }
+redis-1  | 1:M 17 Aug 2025 16:55:35.766 * <bf> 	{ cf-expansion-factor :         1 }
+redis-1  | 1:M 17 Aug 2025 16:55:35.766 * <bf> 	{ cf-max-expansions   :        32 }
+redis-1  | 1:M 17 Aug 2025 16:55:35.766 * <bf> ]
+redis-1  | 1:M 17 Aug 2025 16:55:35.766 * Module 'bf' loaded from /usr/local/lib/redis/modules//redisbloom.so
+redis-1  | 1:M 17 Aug 2025 16:55:35.794 * <search> Redis version found by RedisSearch : 8.0.3 - oss
+redis-1  | 1:M 17 Aug 2025 16:55:35.794 * <search> RediSearch version 8.0.1 (Git=5688fcc)
+redis-1  | 1:M 17 Aug 2025 16:55:35.794 * <search> Low level api version 1 initialized successfully
+redis-1  | 1:M 17 Aug 2025 16:55:35.795 * <search> gc: ON, prefix min length: 2, min word length to stem: 4, prefix max expansions: 200, query timeout (ms): 500, timeout policy: return, cursor read size: 1000, cursor max idle (ms): 300000, max doctable size: 1000000, max number of search results:  1000000, 
+redis-1  | 1:M 17 Aug 2025 16:55:35.797 * <search> Initialized thread pools!
+redis-1  | 1:M 17 Aug 2025 16:55:35.797 * <search> Disabled workers threadpool of size 0
+redis-1  | 1:M 17 Aug 2025 16:55:35.799 * <search> Subscribe to config changes
+redis-1  | 1:M 17 Aug 2025 16:55:35.799 * <search> Enabled role change notification
+redis-1  | 1:M 17 Aug 2025 16:55:35.799 * <search> Cluster configuration: AUTO partitions, type: 0, coordinator timeout: 0ms
+redis-1  | 1:M 17 Aug 2025 16:55:35.799 * <search> Register write commands
+redis-1  | 1:M 17 Aug 2025 16:55:35.799 * Module 'search' loaded from /usr/local/lib/redis/modules//redisearch.so
+redis-1  | 1:M 17 Aug 2025 16:55:35.804 * <timeseries> RedisTimeSeries version 80001, git_sha=577bfa8b5909e7ee572f0b651399be8303dc6641
+redis-1  | 1:M 17 Aug 2025 16:55:35.805 * <timeseries> Redis version found by RedisTimeSeries : 8.0.3 - oss
+redis-1  | 1:M 17 Aug 2025 16:55:35.805 * <timeseries> Registering configuration options: [
+redis-1  | 1:M 17 Aug 2025 16:55:35.805 * <timeseries> 	{ ts-compaction-policy   :              }
+redis-1  | 1:M 17 Aug 2025 16:55:35.805 * <timeseries> 	{ ts-num-threads         :            3 }
+redis-1  | 1:M 17 Aug 2025 16:55:35.805 * <timeseries> 	{ ts-retention-policy    :            0 }
+redis-1  | 1:M 17 Aug 2025 16:55:35.805 * <timeseries> 	{ ts-duplicate-policy    :        block }
+redis-1  | 1:M 17 Aug 2025 16:55:35.805 * <timeseries> 	{ ts-chunk-size-bytes    :         4096 }
+redis-1  | 1:M 17 Aug 2025 16:55:35.805 * <timeseries> 	{ ts-encoding            :   compressed }
+redis-1  | 1:M 17 Aug 2025 16:55:35.805 * <timeseries> 	{ ts-ignore-max-time-diff:            0 }
+redis-1  | 1:M 17 Aug 2025 16:55:35.805 * <timeseries> 	{ ts-ignore-max-val-diff :     0.000000 }
+redis-1  | 1:M 17 Aug 2025 16:55:35.805 * <timeseries> ]
+redis-1  | 1:M 17 Aug 2025 16:55:35.805 * <timeseries> Detected redis oss
+redis-1  | 1:M 17 Aug 2025 16:55:35.806 * Module 'timeseries' loaded from /usr/local/lib/redis/modules//redistimeseries.so
+redis-1  | 1:M 17 Aug 2025 16:55:35.821 * <ReJSON> Created new data type 'ReJSON-RL'
+redis-1  | 1:M 17 Aug 2025 16:55:35.823 * <ReJSON> version: 80001 git sha: unknown branch: unknown
+redis-1  | 1:M 17 Aug 2025 16:55:35.823 * <ReJSON> Exported RedisJSON_V1 API
+redis-1  | 1:M 17 Aug 2025 16:55:35.823 * <ReJSON> Exported RedisJSON_V2 API
+redis-1  | 1:M 17 Aug 2025 16:55:35.823 * <ReJSON> Exported RedisJSON_V3 API
+redis-1  | 1:M 17 Aug 2025 16:55:35.823 * <ReJSON> Exported RedisJSON_V4 API
+redis-1  | 1:M 17 Aug 2025 16:55:35.823 * <ReJSON> Exported RedisJSON_V5 API
+redis-1  | 1:M 17 Aug 2025 16:55:35.823 * <ReJSON> Enabled diskless replication
+redis-1  | 1:M 17 Aug 2025 16:55:35.824 * <ReJSON> Initialized shared string cache, thread safe: false.
+redis-1  | 1:M 17 Aug 2025 16:55:35.824 * Module 'ReJSON' loaded from /usr/local/lib/redis/modules//rejson.so
+redis-1  | 1:M 17 Aug 2025 16:55:35.824 * <search> Acquired RedisJSON_V5 API
+redis-1  | 1:M 17 Aug 2025 16:55:35.825 * Server initialized
+redis-1  | 1:M 17 Aug 2025 16:55:35.825 * Ready to accept connections tcp
+worker1-1  | __  ____  __  _____   ___  __ ____  ______ 
+worker1-1  |  --/ __ \/ / / / _ | / _ \/ //_/ / / / __/ 
+worker1-1  |  -/ /_/ / /_/ / __ |/ , _/ ,< / /_/ /\ \   
+worker1-1  | --\___\_\____/_/ |_/_/|_/_/|_|\____/___/   
+worker1-1  | 2025-08-17 16:55:41,538 WARN  [io.qua.run.con.ConfigRecorder] (main) The profile 'prod' used to build the native image is different from the runtime profile 'worker'. This may lead to unexpected results.
+worker1-1  | 2025-08-17 16:55:41,560 INFO  [io.qua.sch.run.SimpleScheduler] (main) No scheduled business methods found - Simple scheduler will not be started
+worker1-1  | Starting Checker Worker...
+worker1-1  | Checker started!
+worker1-1  | Starting Payment Workers...
+worker1-1  | Staring payment worker 0
+worker1-1  | Staring payment worker 1
+worker1-1  | Staring payment worker 2
+worker1-1  | Staring payment worker 3
+worker1-1  | Staring payment worker 4
+worker1-1  | Staring payment worker 5
+worker1-1  | Staring payment worker 6
+worker1-1  | Staring payment worker 7
+worker1-1  | Staring payment worker 8
+worker1-1  | Staring payment worker 9
+worker1-1  | Staring payment worker 10
+worker1-1  | Staring payment worker 11
+worker1-1  | Staring payment worker 12
+worker1-1  | Staring payment worker 13
+worker1-1  | Staring payment worker 14
+worker1-1  | Staring payment worker 15
+worker1-1  | Staring payment worker 16
+worker1-1  | Staring payment worker 17
+worker1-1  | Staring payment worker 18
+worker1-1  | Staring payment worker 19
+worker1-1  | 2025-08-17 16:55:41,566 INFO  [io.quarkus] (main) rinha-backend-2025 1.0.0-SNAPSHOT native (powered by Quarkus 3.25.0) started in 0.065s. Listening on: http://0.0.0.0:45559
+worker1-1  | 2025-08-17 16:55:41,566 INFO  [io.quarkus] (main) Profile worker activated. 
+worker1-1  | 2025-08-17 16:55:41,566 INFO  [io.quarkus] (main) Installed features: [cdi, redis-client, rest, rest-client, rest-client-jackson, rest-jackson, scheduler, smallrye-context-propagation, vertx]
+api1-1     | __  ____  __  _____   ___  __ ____  ______ 
+api1-1     |  --/ __ \/ / / / _ | / _ \/ //_/ / / / __/ 
+api1-1     |  -/ /_/ / /_/ / __ |/ , _/ ,< / /_/ /\ \   
+api1-1     | --\___\_\____/_/ |_/_/|_/_/|_|\____/___/   
+api1-1     | 2025-08-17 16:55:41,545 WARN  [io.qua.run.con.ConfigRecorder] (main) The profile 'prod' used to build the native image is different from the runtime profile 'api'. This may lead to unexpected results.
+api1-1     | 2025-08-17 16:55:41,588 INFO  [io.qua.sch.run.SimpleScheduler] (main) No scheduled business methods found - Simple scheduler will not be started
+api1-1     | 2025-08-17 16:55:41,590 INFO  [io.quarkus] (main) rinha-backend-2025 1.0.0-SNAPSHOT native (powered by Quarkus 3.25.0) started in 0.070s. Listening on: http://0.0.0.0:8080
+api1-1     | 2025-08-17 16:55:41,590 INFO  [io.quarkus] (main) Profile api activated. 
+api1-1     | 2025-08-17 16:55:41,590 INFO  [io.quarkus] (main) Installed features: [cdi, redis-client, rest, rest-client, rest-client-jackson, rest-jackson, scheduler, smallrye-context-propagation, vertx]
+api2-1     | __  ____  __  _____   ___  __ ____  ______ 
+api2-1     |  --/ __ \/ / / / _ | / _ \/ //_/ / / / __/ 
+api2-1     |  -/ /_/ / /_/ / __ |/ , _/ ,< / /_/ /\ \   
+api2-1     | --\___\_\____/_/ |_/_/|_/_/|_|\____/___/   
+api2-1     | 2025-08-17 16:55:41,533 WARN  [io.qua.run.con.ConfigRecorder] (main) The profile 'prod' used to build the native image is different from the runtime profile 'api'. This may lead to unexpected results.
+api2-1     | 2025-08-17 16:55:41,599 INFO  [io.qua.sch.run.SimpleScheduler] (main) No scheduled business methods found - Simple scheduler will not be started
+api2-1     | 2025-08-17 16:55:41,601 INFO  [io.quarkus] (main) rinha-backend-2025 1.0.0-SNAPSHOT native (powered by Quarkus 3.25.0) started in 0.098s. Listening on: http://0.0.0.0:8080
+api2-1     | 2025-08-17 16:55:41,601 INFO  [io.quarkus] (main) Profile api activated. 
+api2-1     | 2025-08-17 16:55:41,601 INFO  [io.quarkus] (main) Installed features: [cdi, redis-client, rest, rest-client, rest-client-jackson, rest-jackson, scheduler, smallrye-context-propagation, vertx]
+nginx-1    | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+nginx-1    | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+nginx-1    | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+nginx-1    | 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+nginx-1    | 10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
+nginx-1    | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+nginx-1    | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+nginx-1    | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+nginx-1    | /docker-entrypoint.sh: Configuration complete; ready for start up
+[Knginx-1 exited with code 0
+worker1-1  | Dequeue error: CONNECTION_CLOSED
+worker1-1  | 2025-08-17 16:56:49,932 ERROR [io.qua.arc.imp.UncaughtExceptions] (Shutdown thread) Error occurred while destroying instance of CLASS bean [types=[org.acme.worker.PaymentWorker, java.lang.Object], qualifiers=[@Default, @Any], target=org.acme.worker.PaymentWorker]: java.lang.IllegalStateException [Error Occurred After Shutdown]
+worker1-1  | Dequeue error: CONNECTION_CLOSED
+worker1-1  | Dequeue error: CONNECTION_CLOSED
+worker1-1  | Dequeue error: CONNECTION_CLOSED
+worker1-1  | Dequeue error: CONNECTION_CLOSED
+worker1-1  | Dequeue error: CONNECTION_CLOSED
+worker1-1  | Dequeue error: CONNECTION_CLOSED
+worker1-1  | Dequeue error: CONNECTION_CLOSED
+worker1-1  | Dequeue error: CONNECTION_CLOSED
+worker1-1  | Dequeue error: CONNECTION_CLOSED
+worker1-1  | Dequeue error: CONNECTION_CLOSED
+worker1-1  | Dequeue error: CONNECTION_CLOSED
+worker1-1  | Dequeue error: CONNECTION_CLOSED
+worker1-1  | Dequeue error: CONNECTION_CLOSED
+worker1-1  | Dequeue error: CONNECTION_CLOSED
+worker1-1  | Dequeue error: CONNECTION_CLOSED
+worker1-1  | Dequeue error: CONNECTION_CLOSED
+worker1-1  | Dequeue error: CONNECTION_CLOSED
+worker1-1  | Dequeue error: CONNECTION_CLOSED
+worker1-1  | Dequeue error: CONNECTION_CLOSED
+api1-1     | 2025-08-17 16:56:49,935 ERROR [io.qua.arc.imp.UncaughtExceptions] (Shutdown thread) Error occurred while destroying instance of CLASS bean [types=[org.acme.worker.PaymentWorker, java.lang.Object], qualifiers=[@Default, @Any], target=org.acme.worker.PaymentWorker]: jakarta.enterprise.inject.CreationException: Error creating synthetic bean [B8eB9Iu-Axjc8C8tOICEHkb6Ib0]: java.lang.NullPointerException [Error Occurred After Shutdown]
+worker1-1  | 2025-08-17 16:56:49,938 INFO  [io.quarkus] (Shutdown thread) rinha-backend-2025 stopped in 0.008s
+api1-1     | 2025-08-17 16:56:49,939 INFO  [io.quarkus] (Shutdown thread) rinha-backend-2025 stopped in 0.005s
+api2-1     | 2025-08-17 16:56:49,943 ERROR [io.qua.arc.imp.UncaughtExceptions] (Shutdown thread) Error occurred while destroying instance of CLASS bean [types=[org.acme.worker.PaymentWorker, java.lang.Object], qualifiers=[@Default, @Any], target=org.acme.worker.PaymentWorker]: jakarta.enterprise.inject.CreationException: Error creating synthetic bean [B8eB9Iu-Axjc8C8tOICEHkb6Ib0]: java.lang.NullPointerException [Error Occurred After Shutdown]
+api2-1     | 2025-08-17 16:56:49,945 INFO  [io.quarkus] (Shutdown thread) rinha-backend-2025 stopped in 0.002s
+[Kapi1-1 exited with code 143
+[Kworker1-1 exited with code 143
+[Kapi2-1 exited with code 143
+redis-1    | 1:signal-handler (1755449810) Received SIGTERM scheduling shutdown...
+redis-1    | 1:M 17 Aug 2025 16:56:50.272 * User requested shutdown...
+redis-1    | 1:M 17 Aug 2025 16:56:50.272 # Redis is now ready to exit, bye bye...
+log truncated at line 1000
