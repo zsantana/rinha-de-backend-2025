@@ -18,7 +18,7 @@ services:
           memory: "50MB"
 
   api1: &api
-    image: diogoloff/api-fpc-rinha2025:v1.01
+    image: diogoloff/api-fpc-rinha2025:v1.02
     hostname: api1
     environment:
       - DEFAULT_URL=http://payment-processor-default:8080
