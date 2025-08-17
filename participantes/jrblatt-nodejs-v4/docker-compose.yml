@@ -1,12 +1,12 @@
 services:
   api1:
-    image: jrblatt/rinha-de-backend-2025-nodejs:1
+    image: jrblatt/rinha-de-backend-2025-nodejs:1.0.0
     container_name: api1
     hostname: api1
     environment:
-      - MODE=🔥
+      - MODE=💩
       - WORKERS=1
-      - EXTERNAL_SUMMARY_HOSTNAME=api2
+      - FALLBACK_INTERVAL=5
     volumes:
       - rb2025:/tmp/
     networks:
@@ -15,17 +15,17 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.5"
+          cpus: "0.55"
           memory: 150MB
 
   api2:
-    image: jrblatt/rinha-de-backend-2025-nodejs:1
+    image: jrblatt/rinha-de-backend-2025-nodejs:1.0.0
     container_name: api2
     hostname: api2
     environment:
-      - MODE=🔥
+      - MODE=💩
       - WORKERS=1
-      - EXTERNAL_SUMMARY_HOSTNAME=api1
+      - FALLBACK_INTERVAL=5
     volumes:
       - rb2025:/tmp/
     networks:
@@ -34,31 +34,38 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.5"
+          cpus: "0.55"
           memory: 150MB
 
-  uxlb:
-    image: jrblatt/uxlb
-    container_name: uxlb
-    ports:
-      - "9999:9999"
-    environment:
-      - LB_UPSTREAMS=/tmp/api1.sock,/tmp/api2.sock
-      - LB_FAF=POST:/payments:200
-      - LB_WORKERS=1
+  beercache:
+    image: jrblatt/beercache:1.0.0
+    container_name: beercache
     volumes:
       - rb2025:/tmp/
+    networks:
+      - payment-processor
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: "0.2"
+          memory: 30MB
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - "9999:9999"
+    volumes:
+      - rb2025:/tmp/
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
     depends_on:
       - api1
       - api2
-    networks:
-      - payment-processor
-    restart: unless-stopped
     deploy:
       resources:
         limits:
-          cpus: "0.5"
-          memory: 50MB
+          cpus: "0.2"
+          memory: "20MB"
 
 volumes:
   rb2025:
