@@ -1,0 +1,1001 @@
+
+ app1 Pulling 
+ app2 Pulling 
+ b1badc6e5066 Already exists 
+ d08dca16e744 Pulling fs layer 
+ 5aa53098da91 Pulling fs layer 
+ d30a2a8c2978 Pulling fs layer 
+ b1badc6e5066 Already exists 
+ d08dca16e744 Pulling fs layer 
+ 5aa53098da91 Pulling fs layer 
+ d30a2a8c2978 Pulling fs layer 
+ 5aa53098da91 Download complete 
+ 5aa53098da91 Downloading [==================================================>]     110B/110B
+ 5aa53098da91 Verifying Checksum 
+ 5aa53098da91 Download complete 
+ d30a2a8c2978 Downloading [>                                                  ]  33.28kB/2.764MB
+ d30a2a8c2978 Downloading [>                                                  ]  33.28kB/2.764MB
+ d30a2a8c2978 Verifying Checksum 
+ d30a2a8c2978 Download complete 
+ d30a2a8c2978 Verifying Checksum 
+ d08dca16e744 Downloading [==>                                                ]  16.38kB/349.7kB
+ d08dca16e744 Downloading [==>                                                ]  16.38kB/349.7kB
+ d08dca16e744 Download complete 
+ d08dca16e744 Download complete 
+ d08dca16e744 Extracting [====>                                              ]  32.77kB/349.7kB
+ d08dca16e744 Extracting [====>                                              ]  32.77kB/349.7kB
+ d08dca16e744 Extracting [==================================================>]  349.7kB/349.7kB
+ d08dca16e744 Extracting [==================================================>]  349.7kB/349.7kB
+ d08dca16e744 Extracting [==================================================>]  349.7kB/349.7kB
+ d08dca16e744 Extracting [==================================================>]  349.7kB/349.7kB
+ d08dca16e744 Pull complete 
+ d08dca16e744 Pull complete 
+ 5aa53098da91 Extracting [==================================================>]     110B/110B
+ 5aa53098da91 Extracting [==================================================>]     110B/110B
+ 5aa53098da91 Extracting [==================================================>]     110B/110B
+ 5aa53098da91 Extracting [==================================================>]     110B/110B
+ 5aa53098da91 Pull complete 
+ 5aa53098da91 Pull complete 
+ d30a2a8c2978 Extracting [>                                                  ]  32.77kB/2.764MB
+ d30a2a8c2978 Extracting [>                                                  ]  32.77kB/2.764MB
+ d30a2a8c2978 Extracting [==================================================>]  2.764MB/2.764MB
+ d30a2a8c2978 Extracting [==================================================>]  2.764MB/2.764MB
+ d30a2a8c2978 Pull complete 
+ d30a2a8c2978 Pull complete 
+ app2 Pulled 
+ app1 Pulled 
+ Network cleissonbarbosa-lean4_default  Creating
+ Network cleissonbarbosa-lean4_default  Created
+ Volume "cleissonbarbosa-lean4_sockets"  Creating
+ Volume "cleissonbarbosa-lean4_sockets"  Created
+ Container cleissonbarbosa-lean4-app2-1  Creating
+ Container cleissonbarbosa-lean4-app1-1  Creating
+ Container cleissonbarbosa-lean4-app2-1  Created
+ Container cleissonbarbosa-lean4-app1-1  Created
+ Container cleissonbarbosa-lean4-haproxy-1  Creating
+ Container cleissonbarbosa-lean4-haproxy-1  Created
+Attaching to app1-1, app2-1, haproxy-1
+haproxy-1  | [NOTICE]   (1) : Initializing new worker (8)
+haproxy-1  | [NOTICE]   (1) : Loading success.
+app1-1     | req: GET /payments-summary (cl=0)
+app1-1     | route: GET /payments-summary (path=/payments-summary)
+app1-1     | filters: from_ms=0 to_ms=18446744073709551615 (events=0x78aab4514000)
+app2-1     | req: POST /purge-payments (cl=0)
+app2-1     | route: POST /purge-payments (clear counters and events)
+app1-1     | req: GET /payments-summary?from=2025-08-17T15:38:21.227Z&to=2025-08-17T15:38:34.727Z (cl=0)
+app1-1     | route: GET /payments-summary (path=/payments-summary?from=2025-08-17T15:38:21.227Z&to=2025-08-17T15:38:34.727Z)
+app1-1     | query present: from=2025-08-17T15:38:21.227Z&to=2025-08-17T15:38:34.727Z
+app1-1     | parsing from=...
+app1-1     | parsing to=...
+app1-1     | filters: from_ms=1755445101227 to_ms=1755445114727 (events=0x78aab4514000)
+app1-1     | scanning events ring buffer... cap=65536
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app2-1     | health: host=payment-processor-default port=8080 status=200
+app2-1     | health: host=payment-processor-fallback port=8080 status=200
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | health: host=payment-processor-default port=8080 status=200
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app1-1     | health: host=payment-processor-fallback port=8080 status=200
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+app2-1     | route: POST /payments
+app1-1     | req: POST /payments (cl=70)
+app1-1     | route: POST /payments
+app2-1     | req: POST /payments (cl=70)
+log truncated at line 1000
