@@ -12,7 +12,7 @@ x-service-templates:
       QUEUE_SIZE: 200
       CONCURRENCY: 25
       CONNECTIONS: 1
-      PIPELINING: 20
+      PIPELINING: 16
       PAYMENT_URL_DEFAULT: http://payment-processor-default:8080
       PAYMENT_URL_FALLBACK: http://payment-processor-fallback:8080
     deploy:
