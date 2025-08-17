@@ -3,7 +3,7 @@ version: '3.8'
 services:
   app1:
     restart: always
-    image: docker.io/gustavodocker910/rinha-backend-25:1.1.0
+    image: docker.io/gustavodocker910/rinha-backend-25:1.1.1
     hostname: app1
     environment:
       - JAVA_OPTS=-Xmx128m -Xms128m -XX:+UseG1GC -XX:MaxGCPauseMillis=100 -XX:+ParallelRefProcEnabled
@@ -16,14 +16,14 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.55"
+          cpus: "0.60"
           memory: "130MB"
     networks:
       - payment-processor
 
   app2:
     restart: always
-    image: docker.io/gustavodocker910/rinha-backend-25:1.1.0
+    image: docker.io/gustavodocker910/rinha-backend-25:1.1.1
     hostname: app2
     environment:
       - JAVA_OPTS=-Xmx128m -Xms128m -XX:+UseG1GC -XX:MaxGCPauseMillis=100 -XX:+ParallelRefProcEnabled
@@ -53,7 +53,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.60"
+          cpus: "0.15"
           memory: "15MB"
     networks:
       - payment-processor
