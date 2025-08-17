@@ -1,0 +1,92 @@
+
+ rinha-api-2 Pulling 
+ rinha-api-1 Pulling 
+ 9824c27679d3 Already exists 
+ a5c68c270f68 Already exists 
+ 4f4fb700ef54 Already exists 
+ b3aec767fc65 Pulling fs layer 
+ 9824c27679d3 Already exists 
+ a5c68c270f68 Already exists 
+ 4f4fb700ef54 Already exists 
+ b3aec767fc65 Pulling fs layer 
+ b3aec767fc65 Downloading [>                                                  ]  122.1kB/12.2MB
+ b3aec767fc65 Downloading [>                                                  ]  122.1kB/12.2MB
+ b3aec767fc65 Downloading [=============================================>     ]  11.08MB/12.2MB
+ b3aec767fc65 Downloading [=============================================>     ]  11.08MB/12.2MB
+ b3aec767fc65 Download complete 
+ b3aec767fc65 Verifying Checksum 
+ b3aec767fc65 Download complete 
+ b3aec767fc65 Extracting [>                                                  ]  131.1kB/12.2MB
+ b3aec767fc65 Extracting [>                                                  ]  131.1kB/12.2MB
+ b3aec767fc65 Extracting [===============================>                   ]  7.602MB/12.2MB
+ b3aec767fc65 Extracting [===============================>                   ]  7.602MB/12.2MB
+ b3aec767fc65 Extracting [==================================================>]   12.2MB/12.2MB
+ b3aec767fc65 Extracting [==================================================>]   12.2MB/12.2MB
+ b3aec767fc65 Pull complete 
+ b3aec767fc65 Pull complete 
+ rinha-api-2 Pulled 
+ rinha-api-1 Pulled 
+ Network hamilton-golang-escovando-bytes-haproxy_app-network  Creating
+ Network hamilton-golang-escovando-bytes-haproxy_app-network  Created
+ Volume "hamilton-golang-escovando-bytes-haproxy_redis-data"  Creating
+ Volume "hamilton-golang-escovando-bytes-haproxy_redis-data"  Created
+ Volume "hamilton-golang-escovando-bytes-haproxy_api-socketsv1"  Creating
+ Volume "hamilton-golang-escovando-bytes-haproxy_api-socketsv1"  Created
+ Container redis_cache  Creating
+ Container nats_server  Creating
+ Container redis_cache  Created
+ Container nats_server  Created
+ Container rinha-api-2  Creating
+ Container rinha-api-1  Creating
+ Container rinha-api-1  Created
+ Container rinha-api-2  Created
+ Container nginx_load_balancer  Creating
+ Container nginx_load_balancer  Created
+Attaching to nats_server, nginx_load_balancer, redis_cache, rinha-api-1, rinha-api-2
+nats_server  | [1] 2025/08/17 13:06:27.561928 [INF] Starting nats-server
+nats_server  | [1] 2025/08/17 13:06:27.562051 [INF]   Version:  2.10.14
+nats_server  | [1] 2025/08/17 13:06:27.562054 [INF]   Git:      [31af767]
+nats_server  | [1] 2025/08/17 13:06:27.562056 [INF]   Cluster:  my_cluster
+nats_server  | [1] 2025/08/17 13:06:27.562058 [INF]   Name:     NC7FVOOVHBOCK23EJA5DSTGQSFQPZD5N4N3KW2QA6RNEAJBXASPFOSPV
+nats_server  | [1] 2025/08/17 13:06:27.562065 [INF]   ID:       NC7FVOOVHBOCK23EJA5DSTGQSFQPZD5N4N3KW2QA6RNEAJBXASPFOSPV
+nats_server  | [1] 2025/08/17 13:06:27.562071 [INF] Using configuration file: /etc/nats/nats-server.conf
+nats_server  | [1] 2025/08/17 13:06:27.562962 [INF] Starting http monitor on 0.0.0.0:8222
+nats_server  | [1] 2025/08/17 13:06:27.563141 [INF] Listening for client connections on 0.0.0.0:4222
+nats_server  | [1] 2025/08/17 13:06:27.563397 [INF] Server is ready
+nats_server  | [1] 2025/08/17 13:06:27.563514 [INF] Cluster name is my_cluster
+nats_server  | [1] 2025/08/17 13:06:27.563557 [INF] Listening for route connections on 0.0.0.0:6222
+redis_cache  | 1:C 17 Aug 2025 13:06:27.581 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+redis_cache  | 1:C 17 Aug 2025 13:06:27.581 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+redis_cache  | 1:C 17 Aug 2025 13:06:27.581 * Redis version=7.2.4, bits=64, commit=00000000, modified=0, pid=1, just started
+redis_cache  | 1:C 17 Aug 2025 13:06:27.581 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf
+redis_cache  | 1:M 17 Aug 2025 13:06:27.581 * monotonic clock: POSIX clock_gettime
+redis_cache  | 1:M 17 Aug 2025 13:06:27.582 * Running mode=standalone, port=6379.
+redis_cache  | 1:M 17 Aug 2025 13:06:27.582 * Server initialized
+redis_cache  | 1:M 17 Aug 2025 13:06:27.582 * Ready to accept connections tcp
+rinha-api-2  | 2025/08/17 13:06:27 Connected to NATS server
+rinha-api-1  | 2025/08/17 13:06:27 Connected to NATS server
+nginx_load_balancer  | [NOTICE]   (1) : Initializing new worker (8)
+nginx_load_balancer  | [NOTICE]   (1) : Loading success.
+redis_cache          | 1:M 17 Aug 2025 13:07:28.080 * 10000 changes in 60 seconds. Saving...
+redis_cache          | 1:M 17 Aug 2025 13:07:28.081 * Background saving started by pid 20
+redis_cache          | 20:C 17 Aug 2025 13:07:28.090 * DB saved on disk
+redis_cache          | 20:C 17 Aug 2025 13:07:28.090 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+redis_cache          | 1:M 17 Aug 2025 13:07:28.182 * Background saving terminated with success
+nats_server          | [1] 2025/08/17 13:07:37.619778 [INF] Initiating Shutdown...
+nats_server          | [1] 2025/08/17 13:07:37.620093 [INF] Server Exiting..
+nginx_load_balancer  | [NOTICE]   (1) : haproxy version is 3.2.3-1844da7
+nginx_load_balancer  | [WARNING]  (1) : Exiting Master process...
+nginx_load_balancer  | [WARNING]  (8) : Proxy frontend stopped (cumulated conns: FE: 553, BE: 0).
+nginx_load_balancer  | [WARNING]  (8) : Proxy backend stopped (cumulated conns: FE: 0, BE: 16762).
+nginx_load_balancer  | [WARNING]  (1) : Current worker (8) exited with code 0 (Exit)
+nginx_load_balancer  | [WARNING]  (1) : All workers exited. Exiting... (0)
+[Knats_server exited with code 1
+[Knginx_load_balancer exited with code 0
+[Krinha-api-2 exited with code 2
+[Krinha-api-1 exited with code 2
+redis_cache          | 1:signal-handler (1755436058) Received SIGTERM scheduling shutdown...
+redis_cache          | 1:M 17 Aug 2025 13:07:38.220 * User requested shutdown...
+redis_cache          | 1:M 17 Aug 2025 13:07:38.220 * Saving the final RDB snapshot before exiting.
+redis_cache          | 1:M 17 Aug 2025 13:07:38.228 * DB saved on disk
+redis_cache          | 1:M 17 Aug 2025 13:07:38.228 # Redis is now ready to exit, bye bye...
+log truncated at line 1000
