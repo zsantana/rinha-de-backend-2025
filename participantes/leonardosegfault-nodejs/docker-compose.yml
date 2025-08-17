@@ -44,6 +44,7 @@ services:
     image: redis:8-alpine
     container_name: rinha-redis
     command: ["redis-server", "/usr/local/etc/redis/redis.conf"]
+    user: root
     deploy:
       resources:
         limits:
