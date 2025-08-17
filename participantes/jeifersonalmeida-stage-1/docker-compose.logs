@@ -1,16 +1,16 @@
 
-time="2025-08-16T22:05:03Z" level=warning msg="/home/ubuntu/rinha-de-backend-2025/participantes/jeifersonalmeida-stage-1/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
- api-3 Pulling 
+time="2025-08-17T01:45:14Z" level=warning msg="/home/ubuntu/rinha-de-backend-2025/participantes/jeifersonalmeida-stage-1/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
  api-2 Pulling 
+ api-3 Pulling 
  api-1 Pulling 
- api-3 Pulled 
  api-1 Pulled 
+ api-3 Pulled 
  api-2 Pulled 
  Network rinha-network  Creating
  Network rinha-network  Created
- Container api-1  Creating
  Container api-2  Creating
  Container api-3  Creating
+ Container api-1  Creating
  Container api-2  Created
  Container api-1  Created
  Container api-3  Created
@@ -48,49 +48,47 @@ api-1  |  │ Handlers ............. 8  Processes ........... 1 │
 api-1  |  │ Prefork ....... Disabled  PID ................. 1 │ 
 api-1  |  └───────────────────────────────────────────────────┘ 
 api-1  | 
-haproxy  | [NOTICE]   (1) : New worker (8) forked
+haproxy  | [NOTICE]   (1) : New worker (9) forked
 haproxy  | [NOTICE]   (1) : Loading success.
-api-1    | [2025-08-16T22:05:08.231Z][SUMMARY-REQUEST] Receiving request with from: 0001-01-01T00:00:00.000Z and 0001-01-01T00:00:00.000Z
-api-2    | [2025-08-16T22:05:08.232Z][SUMMARY-REQUEST] Receiving request with from: 0001-01-01T00:00:00.000Z and 0001-01-01T00:00:00.000Z
-api-3    | [2025-08-16T22:05:08.233Z][SUMMARY-REQUEST] Receiving request with from: 0001-01-01T00:00:00.000Z and 0001-01-01T00:00:00.000Z
-api-3    | [2025-08-16T22:05:13.736Z][SUMMARY-REQUEST] Receiving request with from: 2025-08-16T22:04:58.734Z and 2025-08-16T22:05:12.234Z
-api-1    | [2025-08-16T22:05:13.739Z][SUMMARY-REQUEST] Receiving request with from: 2025-08-16T22:04:58.734Z and 2025-08-16T22:05:12.234Z
-api-2    | [2025-08-16T22:05:13.739Z][SUMMARY-REQUEST] Receiving request with from: 2025-08-16T22:04:58.734Z and 2025-08-16T22:05:12.234Z
-api-3    | [2025-08-16T22:05:13.740Z][SUMMARY-REQUEST] Receiving request with from: 2025-08-16T22:04:58.734Z and 2025-08-16T22:05:12.234Z
-api-3    | [2025-08-16T22:05:23.742Z][SUMMARY-REQUEST] Receiving request with from: 2025-08-16T22:05:08.741Z and 2025-08-16T22:05:22.241Z
-api-1    | [2025-08-16T22:05:23.743Z][SUMMARY-REQUEST] Receiving request with from: 2025-08-16T22:05:08.741Z and 2025-08-16T22:05:22.241Z
-api-2    | [2025-08-16T22:05:23.743Z][SUMMARY-REQUEST] Receiving request with from: 2025-08-16T22:05:08.741Z and 2025-08-16T22:05:22.241Z
-api-3    | [2025-08-16T22:05:23.743Z][SUMMARY-REQUEST] Receiving request with from: 2025-08-16T22:05:08.741Z and 2025-08-16T22:05:22.241Z
-api-1    | [2025-08-16T22:05:24.207Z][CIRCUIT-STATUS] Switching circuit to 2
-api-1    | [2025-08-16T22:05:33.745Z][SUMMARY-REQUEST] Receiving request with from: 2025-08-16T22:05:18.745Z and 2025-08-16T22:05:32.245Z
-api-2    | [2025-08-16T22:05:33.746Z][SUMMARY-REQUEST] Receiving request with from: 2025-08-16T22:05:18.745Z and 2025-08-16T22:05:32.245Z
-api-3    | [2025-08-16T22:05:33.746Z][SUMMARY-REQUEST] Receiving request with from: 2025-08-16T22:05:18.745Z and 2025-08-16T22:05:32.245Z
-api-3    | [2025-08-16T22:05:43.748Z][SUMMARY-REQUEST] Receiving request with from: 2025-08-16T22:05:28.747Z and 2025-08-16T22:05:42.247Z
-api-1    | [2025-08-16T22:05:43.748Z][SUMMARY-REQUEST] Receiving request with from: 2025-08-16T22:05:28.747Z and 2025-08-16T22:05:42.247Z
-api-2    | [2025-08-16T22:05:43.749Z][SUMMARY-REQUEST] Receiving request with from: 2025-08-16T22:05:28.747Z and 2025-08-16T22:05:42.247Z
-api-3    | [2025-08-16T22:05:43.749Z][SUMMARY-REQUEST] Receiving request with from: 2025-08-16T22:05:28.747Z and 2025-08-16T22:05:42.247Z
-api-1    | [2025-08-16T22:05:48.707Z][CIRCUIT-STATUS] Switching circuit to 0
-api-2    | [2025-08-16T22:05:53.752Z][SUMMARY-REQUEST] Receiving request with from: 2025-08-16T22:05:38.751Z and 2025-08-16T22:05:52.251Z
-api-1    | [2025-08-16T22:05:53.756Z][SUMMARY-REQUEST] Receiving request with from: 2025-08-16T22:05:38.751Z and 2025-08-16T22:05:52.251Z
-api-2    | [2025-08-16T22:05:53.757Z][SUMMARY-REQUEST] Receiving request with from: 2025-08-16T22:05:38.751Z and 2025-08-16T22:05:52.251Z
-api-3    | [2025-08-16T22:05:53.757Z][SUMMARY-REQUEST] Receiving request with from: 2025-08-16T22:05:38.751Z and 2025-08-16T22:05:52.251Z
-api-2    | [2025-08-16T22:06:03.762Z][SUMMARY-REQUEST] Receiving request with from: 2025-08-16T22:05:48.759Z and 2025-08-16T22:06:02.259Z
-api-1    | [2025-08-16T22:06:03.762Z][SUMMARY-REQUEST] Receiving request with from: 2025-08-16T22:05:48.759Z and 2025-08-16T22:06:02.259Z
-api-2    | [2025-08-16T22:06:03.763Z][SUMMARY-REQUEST] Receiving request with from: 2025-08-16T22:05:48.759Z and 2025-08-16T22:06:02.259Z
-api-3    | [2025-08-16T22:06:03.763Z][SUMMARY-REQUEST] Receiving request with from: 2025-08-16T22:05:48.759Z and 2025-08-16T22:06:02.259Z
-api-2    | [2025-08-16T22:06:14.746Z][SUMMARY-REQUEST] Receiving request with from: 2025-08-16T22:05:04.737Z and 2025-08-16T22:06:14.737Z
-api-1    | [2025-08-16T22:06:14.746Z][SUMMARY-REQUEST] Receiving request with from: 2025-08-16T22:05:04.737Z and 2025-08-16T22:06:14.737Z
-api-2    | [2025-08-16T22:06:14.746Z][SUMMARY-REQUEST] Receiving request with from: 2025-08-16T22:05:04.737Z and 2025-08-16T22:06:14.737Z
-api-3    | [2025-08-16T22:06:14.747Z][SUMMARY-REQUEST] Receiving request with from: 2025-08-16T22:05:04.737Z and 2025-08-16T22:06:14.737Z
+api-1    | [2025-08-17T01:45:19.087Z][SUMMARY-REQUEST] Receiving request with from: 0001-01-01T00:00:00.000Z and 0001-01-01T00:00:00.000Z
+api-2    | [2025-08-17T01:45:19.088Z][SUMMARY-REQUEST] Receiving request with from: 0001-01-01T00:00:00.000Z and 0001-01-01T00:00:00.000Z
+api-3    | [2025-08-17T01:45:19.089Z][SUMMARY-REQUEST] Receiving request with from: 0001-01-01T00:00:00.000Z and 0001-01-01T00:00:00.000Z
+api-3    | [2025-08-17T01:45:24.564Z][SUMMARY-REQUEST] Receiving request with from: 2025-08-17T01:45:09.562Z and 2025-08-17T01:45:23.062Z
+api-1    | [2025-08-17T01:45:24.566Z][SUMMARY-REQUEST] Receiving request with from: 2025-08-17T01:45:09.562Z and 2025-08-17T01:45:23.062Z
+api-2    | [2025-08-17T01:45:24.567Z][SUMMARY-REQUEST] Receiving request with from: 2025-08-17T01:45:09.562Z and 2025-08-17T01:45:23.062Z
+api-3    | [2025-08-17T01:45:24.568Z][SUMMARY-REQUEST] Receiving request with from: 2025-08-17T01:45:09.562Z and 2025-08-17T01:45:23.062Z
+api-1    | [2025-08-17T01:45:34.571Z][SUMMARY-REQUEST] Receiving request with from: 2025-08-17T01:45:19.570Z and 2025-08-17T01:45:33.070Z
+api-3    | [2025-08-17T01:45:34.571Z][SUMMARY-REQUEST] Receiving request with from: 2025-08-17T01:45:19.570Z and 2025-08-17T01:45:33.070Z
+api-2    | [2025-08-17T01:45:34.571Z][SUMMARY-REQUEST] Receiving request with from: 2025-08-17T01:45:19.570Z and 2025-08-17T01:45:33.070Z
+api-3    | [2025-08-17T01:45:34.572Z][SUMMARY-REQUEST] Receiving request with from: 2025-08-17T01:45:19.570Z and 2025-08-17T01:45:33.070Z
+api-1    | [2025-08-17T01:45:35.085Z][CIRCUIT-STATUS] Switching circuit to 2
+api-2    | [2025-08-17T01:45:44.575Z][SUMMARY-REQUEST] Receiving request with from: 2025-08-17T01:45:29.574Z and 2025-08-17T01:45:43.074Z
+api-1    | [2025-08-17T01:45:44.576Z][SUMMARY-REQUEST] Receiving request with from: 2025-08-17T01:45:29.574Z and 2025-08-17T01:45:43.074Z
+api-2    | [2025-08-17T01:45:44.576Z][SUMMARY-REQUEST] Receiving request with from: 2025-08-17T01:45:29.574Z and 2025-08-17T01:45:43.074Z
+api-3    | [2025-08-17T01:45:44.577Z][SUMMARY-REQUEST] Receiving request with from: 2025-08-17T01:45:29.574Z and 2025-08-17T01:45:43.074Z
+api-3    | [2025-08-17T01:45:54.580Z][SUMMARY-REQUEST] Receiving request with from: 2025-08-17T01:45:39.578Z and 2025-08-17T01:45:53.078Z
+api-1    | [2025-08-17T01:45:54.580Z][SUMMARY-REQUEST] Receiving request with from: 2025-08-17T01:45:39.578Z and 2025-08-17T01:45:53.078Z
+api-2    | [2025-08-17T01:45:54.580Z][SUMMARY-REQUEST] Receiving request with from: 2025-08-17T01:45:39.578Z and 2025-08-17T01:45:53.078Z
+api-3    | [2025-08-17T01:45:54.581Z][SUMMARY-REQUEST] Receiving request with from: 2025-08-17T01:45:39.578Z and 2025-08-17T01:45:53.078Z
+api-1    | [2025-08-17T01:45:59.586Z][CIRCUIT-STATUS] Switching circuit to 0
+api-1    | [2025-08-17T01:46:04.584Z][SUMMARY-REQUEST] Receiving request with from: 2025-08-17T01:45:49.581Z and 2025-08-17T01:46:03.081Z
+api-2    | [2025-08-17T01:46:04.584Z][SUMMARY-REQUEST] Receiving request with from: 2025-08-17T01:45:49.581Z and 2025-08-17T01:46:03.081Z
+api-3    | [2025-08-17T01:46:04.585Z][SUMMARY-REQUEST] Receiving request with from: 2025-08-17T01:45:49.581Z and 2025-08-17T01:46:03.081Z
+api-1    | [2025-08-17T01:46:14.588Z][SUMMARY-REQUEST] Receiving request with from: 2025-08-17T01:45:59.587Z and 2025-08-17T01:46:13.087Z
+api-2    | [2025-08-17T01:46:14.589Z][SUMMARY-REQUEST] Receiving request with from: 2025-08-17T01:45:59.587Z and 2025-08-17T01:46:13.087Z
+api-3    | [2025-08-17T01:46:14.589Z][SUMMARY-REQUEST] Receiving request with from: 2025-08-17T01:45:59.587Z and 2025-08-17T01:46:13.087Z
+api-2    | [2025-08-17T01:46:25.574Z][SUMMARY-REQUEST] Receiving request with from: 2025-08-17T01:45:15.566Z and 2025-08-17T01:46:25.566Z
+api-1    | [2025-08-17T01:46:25.574Z][SUMMARY-REQUEST] Receiving request with from: 2025-08-17T01:45:15.566Z and 2025-08-17T01:46:25.566Z
+api-2    | [2025-08-17T01:46:25.574Z][SUMMARY-REQUEST] Receiving request with from: 2025-08-17T01:45:15.566Z and 2025-08-17T01:46:25.566Z
+api-3    | [2025-08-17T01:46:25.575Z][SUMMARY-REQUEST] Receiving request with from: 2025-08-17T01:45:15.566Z and 2025-08-17T01:46:25.566Z
 haproxy  | [NOTICE]   (1) : haproxy version is 2.6.22-fb0dde3
 haproxy  | [NOTICE]   (1) : path to executable is /usr/local/sbin/haproxy
 haproxy  | [WARNING]  (1) : Exiting Master process...
-haproxy  | [WARNING]  (8) : Proxy http_front stopped (cumulated conns: FE: 558, BE: 0).
-haproxy  | [WARNING]  (8) : Proxy http_back stopped (cumulated conns: FE: 0, BE: 16760).
-haproxy  | [WARNING]  (8) : Proxy <HTTPCLIENT> stopped (cumulated conns: FE: 0, BE: 0).
-haproxy  | [WARNING]  (1) : Current worker (8) exited with code 0 (Exit)
+haproxy  | [WARNING]  (9) : Proxy http_front stopped (cumulated conns: FE: 558, BE: 0).
+haproxy  | [WARNING]  (9) : Proxy http_back stopped (cumulated conns: FE: 0, BE: 16760).
+haproxy  | [WARNING]  (9) : Proxy <HTTPCLIENT> stopped (cumulated conns: FE: 0, BE: 0).
+haproxy  | [WARNING]  (1) : Current worker (9) exited with code 0 (Exit)
 haproxy  | [WARNING]  (1) : All workers exited. Exiting... (0)
 [Khaproxy exited with code 0
-[Kapi-2 exited with code 2
-[Kapi-3 exited with code 2
+[Kapi-1 exited with code 2
 log truncated at line 1000
