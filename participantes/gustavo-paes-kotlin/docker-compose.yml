@@ -4,10 +4,6 @@ services:
   app1:
     restart: always
     image: docker.io/gustavodocker910/rinha-backend-25:1.1.0
-    # build:
-    #   context: .
-    #   dockerfile: Dockerfile
-    # image: rinha-backend-local:1.0.0
     hostname: app1
     environment:
       - JAVA_OPTS=-Xmx128m -Xms128m -XX:+UseG1GC -XX:MaxGCPauseMillis=100 -XX:+ParallelRefProcEnabled
@@ -28,10 +24,6 @@ services:
   app2:
     restart: always
     image: docker.io/gustavodocker910/rinha-backend-25:1.1.0
-    # build:
-    #   context: .
-    #   dockerfile: Dockerfile
-    # image: rinha-backend-local:1.0.0
     hostname: app2
     environment:
       - JAVA_OPTS=-Xmx128m -Xms128m -XX:+UseG1GC -XX:MaxGCPauseMillis=100 -XX:+ParallelRefProcEnabled
