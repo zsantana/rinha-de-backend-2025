@@ -1,6 +1,6 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Sun Aug 17 05:12:43 UTC 2025**
-419 submissões / 364 resultados / 55 submissões com erro
+Atualizado em **Sun Aug 17 05:20:09 UTC 2025**
+418 submissões / 363 resultados / 55 submissões com erro
 
 
 | participante | p99 | bônus por desempenho (%) | multa ($) | lucro | submissão |
@@ -52,6 +52,7 @@ Atualizado em **Sun Aug 17 05:12:43 UTC 2025**
 |	brecabral-go	|	90.32ms	|	0%	|	27548.31625	|	51161.15875	|	[brecabral-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/brecabral-go)
 |	breno5g	|	3.89ms	|	14%	|	0	|	339102.3879	|	[breno5g](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/breno5g)
 |	brinobruno-elixir	|	579.24ms	|	0%	|	103620.04625	|	192437.22875	|	[brinobruno-elixir](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/brinobruno-elixir)
+|	bruno-inacio-dotnet	|	109.51ms	|	0%	|	0	|	37063.75	|	[bruno-inacio-dotnet](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/bruno-inacio-dotnet)
 |	brunokiau-jvm	|	785.57ms	|	0%	|	0	|	302111.85	|	[brunokiau-jvm](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/brunokiau-jvm)
 |	brunosilvadev	|	564.45ms	|	0%	|	44652.26675	|	82925.63825	|	[brunosilvadev](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/brunosilvadev)
 |	caiodgallo-go	|	9.93ms	|	2%	|	0	|	322972.6419	|	[caiodgallo-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/caiodgallo-go)
@@ -73,8 +74,6 @@ Atualizado em **Sun Aug 17 05:12:43 UTC 2025**
 |	codevsk-go-1	|	2.27ms	|	17%	|	0	|	364841.11755	|	[codevsk-go-1](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/codevsk-go-1)
 |	craytee	|	1.36ms	|	19%	|	0	|	376756.42165003286	|	[craytee](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/craytee)
 |	cristian-s-bun-go-1	|	51.62ms	|	0%	|	0	|	173134.97499999998	|	[cristian-s-bun-go-1](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/cristian-s-bun-go-1)
-|	cristian-s-node-1	|	34.29ms	|	0%	|	0	|	311650.914999977	|	[cristian-s-node-1](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/cristian-s-node-1)
-|	cristian-s-node-2-http	|	2.93ms	|	16%	|	0	|	361789.7609999737	|	[cristian-s-node-2-http](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/cristian-s-node-2-http)
 |	danielsuhett-golang-2	|	1.84ms	|	18%	|	0	|	365390.4869	|	[danielsuhett-golang-2](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/danielsuhett-golang-2)
 |	danielsuhett-golang	|	1.59ms	|	19%	|	0	|	376913.9003	|	[danielsuhett-golang](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/danielsuhett-golang)
 |	daniilha-php	|	4.17ms	|	14%	|	0	|	352800.1947	|	[daniilha-php](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/daniilha-php)
