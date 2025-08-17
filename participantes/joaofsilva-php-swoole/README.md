@@ -31,7 +31,7 @@ Desenvolver uma API que intermedia pagamentos entre dois processadores. Ganha qu
 | Serviço | CPU   | Memória   | Função                               |
 | :------ | :---- |:----------| :----------------------------------- |
 | `nginx` | 0.1   | 30MB      | Load Balancer                        |
-| `app1`  | 0.6   | 130MB     | API Server + Worker (PHP/Swoole)     |
+| `app1`  | 0.6   | 120MB     | API Server + Worker (PHP/Swoole)     |
 | `app2`  | 0.6   | 120MB     | API Server + Worker (PHP/Swoole)     |
-| `cache` | 0.2   | 70MB      | Redis (Fila e Armazenamento)         |
+| `cache` | 0.2   | 80MB      | Redis (Fila e Armazenamento)         |
 | **Total** | **1.5** | **350MB** | ✅                                   |
