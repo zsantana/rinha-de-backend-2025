@@ -1,6 +1,6 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Sun Aug 17 14:21:37 UTC 2025**
-428 submissões / 371 resultados / 57 submissões com erro
+Atualizado em **Sun Aug 17 14:33:59 UTC 2025**
+429 submissões / 372 resultados / 57 submissões com erro
 
 
 | participante | p99 | bônus por desempenho (%) | multa ($) | lucro | submissão |
@@ -151,8 +151,8 @@ Atualizado em **Sun Aug 17 14:21:37 UTC 2025**
 |	gustavotbett-java	|	274.88ms	|	0%	|	39199.02	|	72798.18	|	[gustavotbett-java](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/gustavotbett-java)
 |	hamilton-golang-erly	|	2.14ms	|	18%	|	0	|	373679.63290003274	|	[hamilton-golang-erly](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/hamilton-golang-erly)
 |	hamilton-golang-escovando-bits	|	1.66ms	|	19%	|	0	|	376913.9003000331	|	[hamilton-golang-escovando-bits](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/hamilton-golang-escovando-bits)
-|	hamilton-golang-escovando-bytes-haproxy	|	1.46ms	|	19%	|	110843.79600000972	|	266025.11040002335	|	[hamilton-golang-escovando-bytes-haproxy](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/hamilton-golang-escovando-bytes-haproxy)
-|	hamilton-golang-escovando-bytes-nginx	|	2.08ms	|	18%	|	110857.02950000972	|	262889.52710002306	|	[hamilton-golang-escovando-bytes-nginx](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/hamilton-golang-escovando-bytes-nginx)
+|	hamilton-golang-escovando-bytes-haproxy	|	2.32ms	|	17%	|	110850.41275000972	|	259706.68130002278	|	[hamilton-golang-escovando-bytes-haproxy](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/hamilton-golang-escovando-bytes-haproxy)
+|	hamilton-golang-escovando-bytes-nginx	|	1.67ms	|	19%	|	110850.41275000972	|	266040.99060002336	|	[hamilton-golang-escovando-bytes-nginx](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/hamilton-golang-escovando-bytes-nginx)
 |	hamilton-golang-redis	|	2.79ms	|	16%	|	0	|	367126.7818000319	|	[hamilton-golang-redis](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/hamilton-golang-redis)
 |	henriquevalcanaia-swift-vapor	|	105.79ms	|	0%	|	74730.658275	|	138785.508225	|	[henriquevalcanaia-swift-vapor](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/henriquevalcanaia-swift-vapor)
 |	igor-gregori-bun-v1	|	3.36ms	|	15%	|	106861.209	|	244254.192	|	[igor-gregori-bun-v1](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/igor-gregori-bun-v1)
@@ -345,6 +345,7 @@ Atualizado em **Sun Aug 17 14:21:37 UTC 2025**
 |	tarcisiozf-asm-2	|	2.19ms	|	18%	|	0	|	373367.3223	|	[tarcisiozf-asm-2](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/tarcisiozf-asm-2)
 |	tarcisiozf-asm	|	1.53ms	|	19%	|	0	|	376913.9003	|	[tarcisiozf-asm](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/tarcisiozf-asm)
 |	thiagorigonatti-c	|	1.22ms	|	20%	|	0	|	380058.558	|	[thiagorigonatti-c](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/thiagorigonatti-c)
+|	thiagorigonatti2-c	|	1.12ms	|	20%	|	0	|	380081.244	|	[thiagorigonatti2-c](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/thiagorigonatti2-c)
 |	thilourenco-node	|	26.25ms	|	0%	|	0	|	83475.52500000357	|	[thilourenco-node](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/thilourenco-node)
 |	thomaz-golang-2	|	4.4ms	|	13%	|	0	|	350332.84345	|	[thomaz-golang-2](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/thomaz-golang-2)
 |	thomaz-maldonado-go-1	|	4.57ms	|	13%	|	0	|	247373.86525	|	[thomaz-maldonado-go-1](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/thomaz-maldonado-go-1)
@@ -394,7 +395,6 @@ Atualizado em **Sun Aug 17 14:21:37 UTC 2025**
 | dotnetRinha | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/dotnetRinha) |
 | drope-dev-rinha-backend-node | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/drope-dev-rinha-backend-node) |
 | emilemoraes-java | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/emilemoraes-java) |
-| feykke-quarkus | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/feykke-quarkus) |
 | fhgm-dani-ed | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/fhgm-dani-ed) |
 | gabriel-nardelli-perl-mojolicious | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/gabriel-nardelli-perl-mojolicious) |
 | githiago-f | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/githiago-f) |
@@ -423,6 +423,7 @@ Atualizado em **Sun Aug 17 14:21:37 UTC 2025**
 | joaoreisa-go | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/joaoreisa-go) |
 | joney-sousa-pereira | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/joney-sousa-pereira) |
 | jonhkr | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/jonhkr) |
+| joojf-rust | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/joojf-rust) |
 | josafaverissimo-java-01 | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/josafaverissimo-java-01) |
 | josehelioaraujo | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/josehelioaraujo) |
 | juanmedeiros-dotnet-redis | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/juanmedeiros-dotnet-redis) |
