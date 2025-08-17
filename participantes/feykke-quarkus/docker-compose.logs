@@ -1,0 +1,493 @@
+
+ api1 Pulling 
+ api2 Pulling 
+ worker1 Pulling 
+ 1e654d6ada44 Already exists 
+ 695bf607cc79 Already exists 
+ 10cb4ee46272 Already exists 
+ 7a99d21fb5e2 Pulling fs layer 
+ e7279d31c954 Pulling fs layer 
+ 6ac6e7e811d7 Pulling fs layer 
+ 7a99d21fb5e2 Download complete 
+ 7a99d21fb5e2 Extracting [==================================================>]     739B/739B
+ 7a99d21fb5e2 Extracting [==================================================>]     739B/739B
+ 7a99d21fb5e2 Pull complete 
+ e7279d31c954 Downloading [=====================>                             ]  8.491kB/20.07kB
+ e7279d31c954 Downloading [==================================================>]  20.07kB/20.07kB
+ e7279d31c954 Verifying Checksum 
+ e7279d31c954 Download complete 
+ e7279d31c954 Extracting [==================================================>]  20.07kB/20.07kB
+ e7279d31c954 Extracting [==================================================>]  20.07kB/20.07kB
+ 6ac6e7e811d7 Downloading [=>                                                 ]  16.38kB/607.3kB
+ 6ac6e7e811d7 Verifying Checksum 
+ 6ac6e7e811d7 Download complete 
+ 1e654d6ada44 Already exists 
+ 695bf607cc79 Already exists 
+ e7279d31c954 Pull complete 
+ 10cb4ee46272 Already exists 
+ 6ac6e7e811d7 Extracting [==>                                                ]  32.77kB/607.3kB
+ 7a99d21fb5e2 Already exists 
+ e7279d31c954 Already exists 
+ 6ac6e7e811d7 Extracting [==================================================>]  607.3kB/607.3kB
+ 6ac6e7e811d7 Extracting [==================================================>]  607.3kB/607.3kB
+ 6ac6e7e811d7 Pulling fs layer 
+ 6ac6e7e811d7 Extracting [==================================================>]  607.3kB/607.3kB
+ 6ac6e7e811d7 Pull complete 
+ 6ac6e7e811d7 Pull complete 
+ 1e654d6ada44 Already exists 
+ 695bf607cc79 Already exists 
+ 10cb4ee46272 Already exists 
+ 7a99d21fb5e2 Already exists 
+ e7279d31c954 Already exists 
+ api2 Pulled 
+ api1 Pulled 
+ 6ac6e7e811d7 Already exists 
+ worker1 Pulled 
+ Network feykke-quarkus_backend-rinha  Creating
+ Network feykke-quarkus_backend-rinha  Created
+ Container feykke-quarkus-redis-1  Creating
+ Container feykke-quarkus-redis-1  Created
+ Container feykke-quarkus-worker1-1  Creating
+ Container feykke-quarkus-api1-1  Creating
+ Container feykke-quarkus-api2-1  Creating
+ Container feykke-quarkus-worker1-1  Created
+ Container feykke-quarkus-api2-1  Created
+ Container feykke-quarkus-api1-1  Created
+ Container feykke-quarkus-nginx-1  Creating
+ Container feykke-quarkus-nginx-1  Created
+Attaching to api1-1, api2-1, nginx-1, redis-1, worker1-1
+redis-1  | Starting Redis Server
+redis-1  | 1:C 17 Aug 2025 13:44:33.361 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+redis-1  | 1:C 17 Aug 2025 13:44:33.361 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+redis-1  | 1:C 17 Aug 2025 13:44:33.361 * Redis version=8.0.3, bits=64, commit=00000000, modified=1, pid=1, just started
+redis-1  | 1:C 17 Aug 2025 13:44:33.361 * Configuration loaded
+redis-1  | 1:M 17 Aug 2025 13:44:33.361 * monotonic clock: POSIX clock_gettime
+redis-1  | 1:M 17 Aug 2025 13:44:33.362 * Running mode=standalone, port=6379.
+redis-1  | 1:M 17 Aug 2025 13:44:33.362 * <bf> RedisBloom version 8.0.1 (Git=unknown)
+redis-1  | 1:M 17 Aug 2025 13:44:33.362 * <bf> Registering configuration options: [
+redis-1  | 1:M 17 Aug 2025 13:44:33.362 * <bf> 	{ bf-error-rate       :      0.01 }
+redis-1  | 1:M 17 Aug 2025 13:44:33.362 * <bf> 	{ bf-initial-size     :       100 }
+redis-1  | 1:M 17 Aug 2025 13:44:33.362 * <bf> 	{ bf-expansion-factor :         2 }
+redis-1  | 1:M 17 Aug 2025 13:44:33.362 * <bf> 	{ cf-bucket-size      :         2 }
+redis-1  | 1:M 17 Aug 2025 13:44:33.362 * <bf> 	{ cf-initial-size     :      1024 }
+redis-1  | 1:M 17 Aug 2025 13:44:33.362 * <bf> 	{ cf-max-iterations   :        20 }
+redis-1  | 1:M 17 Aug 2025 13:44:33.362 * <bf> 	{ cf-expansion-factor :         1 }
+redis-1  | 1:M 17 Aug 2025 13:44:33.362 * <bf> 	{ cf-max-expansions   :        32 }
+redis-1  | 1:M 17 Aug 2025 13:44:33.362 * <bf> ]
+redis-1  | 1:M 17 Aug 2025 13:44:33.363 * Module 'bf' loaded from /usr/local/lib/redis/modules//redisbloom.so
+redis-1  | 1:M 17 Aug 2025 13:44:33.364 * <search> Redis version found by RedisSearch : 8.0.3 - oss
+redis-1  | 1:M 17 Aug 2025 13:44:33.364 * <search> RediSearch version 8.0.1 (Git=5688fcc)
+redis-1  | 1:M 17 Aug 2025 13:44:33.364 * <search> Low level api version 1 initialized successfully
+redis-1  | 1:M 17 Aug 2025 13:44:33.364 * <search> gc: ON, prefix min length: 2, min word length to stem: 4, prefix max expansions: 200, query timeout (ms): 500, timeout policy: return, cursor read size: 1000, cursor max idle (ms): 300000, max doctable size: 1000000, max number of search results:  1000000, 
+redis-1  | 1:M 17 Aug 2025 13:44:33.364 * <search> Initialized thread pools!
+redis-1  | 1:M 17 Aug 2025 13:44:33.364 * <search> Disabled workers threadpool of size 0
+redis-1  | 1:M 17 Aug 2025 13:44:33.364 * <search> Subscribe to config changes
+redis-1  | 1:M 17 Aug 2025 13:44:33.364 * <search> Enabled role change notification
+redis-1  | 1:M 17 Aug 2025 13:44:33.364 * <search> Cluster configuration: AUTO partitions, type: 0, coordinator timeout: 0ms
+redis-1  | 1:M 17 Aug 2025 13:44:33.365 * <search> Register write commands
+redis-1  | 1:M 17 Aug 2025 13:44:33.365 * Module 'search' loaded from /usr/local/lib/redis/modules//redisearch.so
+redis-1  | 1:M 17 Aug 2025 13:44:33.365 * <timeseries> RedisTimeSeries version 80001, git_sha=577bfa8b5909e7ee572f0b651399be8303dc6641
+redis-1  | 1:M 17 Aug 2025 13:44:33.365 * <timeseries> Redis version found by RedisTimeSeries : 8.0.3 - oss
+redis-1  | 1:M 17 Aug 2025 13:44:33.365 * <timeseries> Registering configuration options: [
+redis-1  | 1:M 17 Aug 2025 13:44:33.365 * <timeseries> 	{ ts-compaction-policy   :              }
+redis-1  | 1:M 17 Aug 2025 13:44:33.365 * <timeseries> 	{ ts-num-threads         :            3 }
+redis-1  | 1:M 17 Aug 2025 13:44:33.365 * <timeseries> 	{ ts-retention-policy    :            0 }
+redis-1  | 1:M 17 Aug 2025 13:44:33.365 * <timeseries> 	{ ts-duplicate-policy    :        block }
+redis-1  | 1:M 17 Aug 2025 13:44:33.365 * <timeseries> 	{ ts-chunk-size-bytes    :         4096 }
+redis-1  | 1:M 17 Aug 2025 13:44:33.365 * <timeseries> 	{ ts-encoding            :   compressed }
+redis-1  | 1:M 17 Aug 2025 13:44:33.365 * <timeseries> 	{ ts-ignore-max-time-diff:            0 }
+redis-1  | 1:M 17 Aug 2025 13:44:33.365 * <timeseries> 	{ ts-ignore-max-val-diff :     0.000000 }
+redis-1  | 1:M 17 Aug 2025 13:44:33.365 * <timeseries> ]
+redis-1  | 1:M 17 Aug 2025 13:44:33.365 * <timeseries> Detected redis oss
+redis-1  | 1:M 17 Aug 2025 13:44:33.365 * Module 'timeseries' loaded from /usr/local/lib/redis/modules//redistimeseries.so
+redis-1  | 1:M 17 Aug 2025 13:44:33.366 * <ReJSON> Created new data type 'ReJSON-RL'
+redis-1  | 1:M 17 Aug 2025 13:44:33.366 * <ReJSON> version: 80001 git sha: unknown branch: unknown
+redis-1  | 1:M 17 Aug 2025 13:44:33.366 * <ReJSON> Exported RedisJSON_V1 API
+redis-1  | 1:M 17 Aug 2025 13:44:33.366 * <ReJSON> Exported RedisJSON_V2 API
+redis-1  | 1:M 17 Aug 2025 13:44:33.366 * <ReJSON> Exported RedisJSON_V3 API
+redis-1  | 1:M 17 Aug 2025 13:44:33.366 * <ReJSON> Exported RedisJSON_V4 API
+redis-1  | 1:M 17 Aug 2025 13:44:33.366 * <ReJSON> Exported RedisJSON_V5 API
+redis-1  | 1:M 17 Aug 2025 13:44:33.366 * <ReJSON> Enabled diskless replication
+redis-1  | 1:M 17 Aug 2025 13:44:33.366 * <ReJSON> Initialized shared string cache, thread safe: false.
+redis-1  | 1:M 17 Aug 2025 13:44:33.366 * Module 'ReJSON' loaded from /usr/local/lib/redis/modules//rejson.so
+redis-1  | 1:M 17 Aug 2025 13:44:33.366 * <search> Acquired RedisJSON_V5 API
+redis-1  | 1:M 17 Aug 2025 13:44:33.366 * Server initialized
+redis-1  | 1:M 17 Aug 2025 13:44:33.367 * Ready to accept connections tcp
+api2-1   | INFO exec -a "java" java -XX:MaxRAMPercentage=80.0 -XX:+UseParallelGC -XX:MinHeapFreeRatio=10 -XX:MaxHeapFreeRatio=20 -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -XX:+ExitOnOutOfMemoryError -Dquarkus.http.host=0.0.0.0 -Djava.util.logging.manager=org.jboss.logmanager.LogManager -cp "." -jar /deployments/quarkus-run.jar 
+api2-1   | INFO running in /deployments
+worker1-1  | INFO exec -a "java" java -XX:MaxRAMPercentage=80.0 -XX:+UseParallelGC -XX:MinHeapFreeRatio=10 -XX:MaxHeapFreeRatio=20 -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -XX:+ExitOnOutOfMemoryError -Dquarkus.http.host=0.0.0.0 -Djava.util.logging.manager=org.jboss.logmanager.LogManager -cp "." -jar /deployments/quarkus-run.jar 
+worker1-1  | INFO running in /deployments
+api1-1     | INFO exec -a "java" java -XX:MaxRAMPercentage=80.0 -XX:+UseParallelGC -XX:MinHeapFreeRatio=10 -XX:MaxHeapFreeRatio=20 -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -XX:+ExitOnOutOfMemoryError -Dquarkus.http.host=0.0.0.0 -Djava.util.logging.manager=org.jboss.logmanager.LogManager -cp "." -jar /deployments/quarkus-run.jar 
+api1-1     | INFO running in /deployments
+nginx-1    | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+nginx-1    | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+nginx-1    | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+nginx-1    | 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+nginx-1    | 10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
+nginx-1    | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+nginx-1    | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+nginx-1    | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+nginx-1    | /docker-entrypoint.sh: Configuration complete; ready for start up
+[Kworker1-1 exited with code 137
+api2-1     | __  ____  __  _____   ___  __ ____  ______ 
+api2-1     |  --/ __ \/ / / / _ | / _ \/ //_/ / / / __/ 
+api2-1     |  -/ /_/ / /_/ / __ |/ , _/ ,< / /_/ /\ \   
+api2-1     | --\___\_\____/_/ |_/_/|_/_/|_|\____/___/   
+api2-1     | 2025-08-17 13:44:49,331 INFO  [io.qua.sch.run.SimpleScheduler] (main) No scheduled business methods found - Simple scheduler will not be started
+api2-1     | 2025-08-17 13:45:10,890 WARN  [io.ver.cor.imp.BlockedThreadChecker] (vertx-blocked-thread-checker) Thread Thread[vert.x-eventloop-thread-3,5,main] has been blocked for 3518 ms, time limit is 2000 ms: io.vertx.core.VertxException: Thread blocked
+api2-1     | 	at io.vertx.core.net.NetServerOptions.isUseProxyProtocol(NetServerOptions.java:465)
+api2-1     | 	at io.vertx.core.net.NetServerOptions.<init>(NetServerOptions.java:114)
+api2-1     | 	at io.vertx.core.net.impl.TCPServerBase.<init>(TCPServerBase.java:81)
+api2-1     | 	at io.vertx.core.http.impl.HttpServerImpl.<init>(HttpServerImpl.java:62)
+api2-1     | 	at io.vertx.core.impl.VertxImpl.createHttpServer(VertxImpl.java:377)
+api2-1     | 	at io.quarkus.vertx.http.runtime.VertxHttpRecorder$WebDeploymentVerticle.start(VertxHttpRecorder.java:1232)
+api2-1     | 	at io.vertx.core.impl.DeploymentManager.lambda$doDeploy$5(DeploymentManager.java:210)
+api2-1     | 	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:270)
+api2-1     | 	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:252)
+api2-1     | 	at io.vertx.core.impl.ContextInternal.lambda$runOnContext$0(ContextInternal.java:50)
+api2-1     | 	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173)
+api2-1     | 	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166)
+api2-1     | 	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+api2-1     | 	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
+api2-1     | 	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+api2-1     | 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+api2-1     | 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+api2-1     | 	at java.base/java.lang.Thread.run(Thread.java:1583)
+api2-1     | 
+api2-1     | 2025-08-17 13:45:14,856 WARN  [io.ver.cor.imp.BlockedThreadChecker] (vertx-blocked-thread-checker) Thread Thread[vert.x-eventloop-thread-2,5,main] has been blocked for 3709 ms, time limit is 2000 ms: io.vertx.core.VertxException: Thread blocked
+api2-1     | 	at io.vertx.core.http.impl.HttpServerImpl.<init>(HttpServerImpl.java:64)
+api2-1     | 	at io.vertx.core.impl.VertxImpl.createHttpServer(VertxImpl.java:377)
+api2-1     | 	at io.quarkus.vertx.http.runtime.VertxHttpRecorder$WebDeploymentVerticle.start(VertxHttpRecorder.java:1232)
+api2-1     | 	at io.vertx.core.impl.DeploymentManager.lambda$doDeploy$5(DeploymentManager.java:210)
+api2-1     | 	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:270)
+api2-1     | 	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:252)
+api2-1     | 	at io.vertx.core.impl.ContextInternal.lambda$runOnContext$0(ContextInternal.java:50)
+api2-1     | 	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173)
+api2-1     | 	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166)
+api2-1     | 	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+api2-1     | 	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
+api2-1     | 	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+api2-1     | 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+api2-1     | 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+api2-1     | 	at java.base/java.lang.Thread.run(Thread.java:1583)
+api2-1     | 
+api2-1     | 2025-08-17 13:45:16,146 WARN  [io.ver.cor.imp.BlockedThreadChecker] (vertx-blocked-thread-checker) Thread Thread[vert.x-eventloop-thread-1,5,main] has been blocked for 3777 ms, time limit is 2000 ms: io.vertx.core.VertxException: Thread blocked
+api2-1     | 	at io.vertx.core.http.impl.HttpServerImpl.<init>(HttpServerImpl.java:64)
+api2-1     | 	at io.vertx.core.impl.VertxImpl.createHttpServer(VertxImpl.java:377)
+api2-1     | 	at io.quarkus.vertx.http.runtime.VertxHttpRecorder$WebDeploymentVerticle.start(VertxHttpRecorder.java:1232)
+api2-1     | 	at io.vertx.core.impl.DeploymentManager.lambda$doDeploy$5(DeploymentManager.java:210)
+api2-1     | 	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:270)
+api2-1     | 	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:252)
+api2-1     | 	at io.vertx.core.impl.ContextInternal.lambda$runOnContext$0(ContextInternal.java:50)
+api2-1     | 	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173)
+api2-1     | 	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166)
+api2-1     | 	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+api2-1     | 	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
+api2-1     | 	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+api2-1     | 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+api2-1     | 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+api2-1     | 	at java.base/java.lang.Thread.run(Thread.java:1583)
+api2-1     | 
+api2-1     | 2025-08-17 13:45:16,810 WARN  [io.ver.cor.imp.BlockedThreadChecker] (vertx-blocked-thread-checker) Thread Thread[vert.x-eventloop-thread-0,5,main] has been blocked for 3235 ms, time limit is 2000 ms: io.vertx.core.VertxException: Thread blocked
+api2-1     | 	at io.vertx.core.http.impl.HttpServerImpl.<init>(HttpServerImpl.java:64)
+api2-1     | 	at io.vertx.core.impl.VertxImpl.createHttpServer(VertxImpl.java:377)
+api2-1     | 	at io.quarkus.vertx.http.runtime.VertxHttpRecorder$WebDeploymentVerticle.start(VertxHttpRecorder.java:1232)
+api2-1     | 	at io.vertx.core.impl.DeploymentManager.lambda$doDeploy$5(DeploymentManager.java:210)
+api2-1     | 	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:270)
+api2-1     | 	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:252)
+api2-1     | 	at io.vertx.core.impl.ContextInternal.lambda$runOnContext$0(ContextInternal.java:50)
+api2-1     | 	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173)
+api2-1     | 	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166)
+api2-1     | 	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+api2-1     | 	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
+api2-1     | 	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+api2-1     | 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+api2-1     | 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+api2-1     | 	at java.base/java.lang.Thread.run(Thread.java:1583)
+api2-1     | 
+api2-1     | 2025-08-17 13:45:17,665 WARN  [io.ver.cor.imp.BlockedThreadChecker] (vertx-blocked-thread-checker) Thread Thread[vert.x-eventloop-thread-3,5,main] has been blocked for 14918 ms, time limit is 2000 ms: io.vertx.core.VertxException: Thread blocked
+api2-1     | 	at io.vertx.core.http.impl.HttpServerImpl.<init>(HttpServerImpl.java:64)
+api2-1     | 	at io.vertx.core.impl.VertxImpl.createHttpServer(VertxImpl.java:377)
+api2-1     | 	at io.quarkus.vertx.http.runtime.VertxHttpRecorder$WebDeploymentVerticle.start(VertxHttpRecorder.java:1232)
+api2-1     | 	at io.vertx.core.impl.DeploymentManager.lambda$doDeploy$5(DeploymentManager.java:210)
+api2-1     | 	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:270)
+api2-1     | 	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:252)
+api2-1     | 	at io.vertx.core.impl.ContextInternal.lambda$runOnContext$0(ContextInternal.java:50)
+api2-1     | 	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173)
+api2-1     | 	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166)
+api2-1     | 	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+api2-1     | 	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
+api2-1     | 	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+api2-1     | 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+api2-1     | 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+api2-1     | 	at java.base/java.lang.Thread.run(Thread.java:1583)
+api2-1     | 
+api2-1     | 2025-08-17 13:45:19,464 WARN  [io.ver.cor.imp.BlockedThreadChecker] (vertx-blocked-thread-checker) Thread Thread[vert.x-eventloop-thread-2,5,main] has been blocked for 15109 ms, time limit is 2000 ms: io.vertx.core.VertxException: Thread blocked
+api2-1     | 	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+api2-1     | 	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1027)
+api2-1     | 	at io.quarkus.bootstrap.runner.RunnerClassLoader.defineClass(RunnerClassLoader.java:152)
+api2-1     | 	at io.quarkus.bootstrap.runner.RunnerClassLoader.loadClass(RunnerClassLoader.java:111)
+api2-1     | 	at io.quarkus.bootstrap.runner.RunnerClassLoader.loadClass(RunnerClassLoader.java:72)
+api2-1     | 	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+api2-1     | 	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1027)
+api2-1     | 	at io.quarkus.bootstrap.runner.RunnerClassLoader.defineClass(RunnerClassLoader.java:152)
+api2-1     | 	at io.quarkus.bootstrap.runner.RunnerClassLoader.loadClass(RunnerClassLoader.java:111)
+api2-1     | 	at io.quarkus.bootstrap.runner.RunnerClassLoader.loadClass(RunnerClassLoader.java:72)
+api2-1     | 	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+api2-1     | 	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1027)
+api2-1     | 	at io.quarkus.bootstrap.runner.RunnerClassLoader.defineClass(RunnerClassLoader.java:152)
+api2-1     | 	at io.quarkus.bootstrap.runner.RunnerClassLoader.loadClass(RunnerClassLoader.java:111)
+api2-1     | 	at io.quarkus.bootstrap.runner.RunnerClassLoader.loadClass(RunnerClassLoader.java:72)
+api2-1     | 	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+api2-1     | 	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1027)
+api2-1     | 	at io.quarkus.bootstrap.runner.RunnerClassLoader.defineClass(RunnerClassLoader.java:152)
+api2-1     | 	at io.quarkus.bootstrap.runner.RunnerClassLoader.loadClass(RunnerClassLoader.java:111)
+api2-1     | 	at io.quarkus.bootstrap.runner.RunnerClassLoader.loadClass(RunnerClassLoader.java:72)
+api2-1     | 	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+api2-1     | 	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1027)
+api2-1     | 	at io.quarkus.bootstrap.runner.RunnerClassLoader.defineClass(RunnerClassLoader.java:152)
+api2-1     | 	at io.quarkus.bootstrap.runner.RunnerClassLoader.loadClass(RunnerClassLoader.java:111)
+api2-1     | 	at io.quarkus.bootstrap.runner.RunnerClassLoader.loadClass(RunnerClassLoader.java:72)
+api2-1     | 	at io.vertx.core.http.impl.HttpServerImpl.<init>(HttpServerImpl.java:64)
+api2-1     | 	at io.vertx.core.impl.VertxImpl.createHttpServer(VertxImpl.java:377)
+api2-1     | 	at io.quarkus.vertx.http.runtime.VertxHttpRecorder$WebDeploymentVerticle.start(VertxHttpRecorder.java:1232)
+api2-1     | 	at io.vertx.core.impl.DeploymentManager.lambda$doDeploy$5(DeploymentManager.java:210)
+api2-1     | 	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:270)
+api2-1     | 	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:252)
+api2-1     | 	at io.vertx.core.impl.ContextInternal.lambda$runOnContext$0(ContextInternal.java:50)
+api2-1     | 	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173)
+api2-1     | 	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166)
+api2-1     | 	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+api2-1     | 	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
+api2-1     | 	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+api2-1     | 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+api2-1     | 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+api2-1     | 	at java.base/java.lang.Thread.run(Thread.java:1583)
+api2-1     | 
+api2-1     | 2025-08-17 13:45:21,183 WARN  [io.ver.cor.imp.BlockedThreadChecker] (vertx-blocked-thread-checker) Thread Thread[vert.x-eventloop-thread-1,5,main] has been blocked for 15177 ms, time limit is 2000 ms: io.vertx.core.VertxException: Thread blocked
+api2-1     | 	at io.vertx.core.http.impl.HttpServerImpl.<init>(HttpServerImpl.java:64)
+api2-1     | 	at io.vertx.core.impl.VertxImpl.createHttpServer(VertxImpl.java:377)
+api2-1     | 	at io.quarkus.vertx.http.runtime.VertxHttpRecorder$WebDeploymentVerticle.start(VertxHttpRecorder.java:1232)
+api2-1     | 	at io.vertx.core.impl.DeploymentManager.lambda$doDeploy$5(DeploymentManager.java:210)
+api2-1     | 	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:270)
+api2-1     | 	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:252)
+api2-1     | 	at io.vertx.core.impl.ContextInternal.lambda$runOnContext$0(ContextInternal.java:50)
+api2-1     | 	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173)
+api2-1     | 	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166)
+api2-1     | 	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+api2-1     | 	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
+api2-1     | 	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+api2-1     | 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+api2-1     | 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+api2-1     | 	at java.base/java.lang.Thread.run(Thread.java:1583)
+api2-1     | 
+api2-1     | 2025-08-17 13:45:22,134 WARN  [io.ver.cor.imp.BlockedThreadChecker] (vertx-blocked-thread-checker) Thread Thread[vert.x-eventloop-thread-0,5,main] has been blocked for 14635 ms, time limit is 2000 ms: io.vertx.core.VertxException: Thread blocked
+api2-1     | 	at io.vertx.core.http.impl.HttpServerImpl.<init>(HttpServerImpl.java:64)
+api2-1     | 	at io.vertx.core.impl.VertxImpl.createHttpServer(VertxImpl.java:377)
+api2-1     | 	at io.quarkus.vertx.http.runtime.VertxHttpRecorder$WebDeploymentVerticle.start(VertxHttpRecorder.java:1232)
+api2-1     | 	at io.vertx.core.impl.DeploymentManager.lambda$doDeploy$5(DeploymentManager.java:210)
+api2-1     | 	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:270)
+api2-1     | 	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:252)
+api2-1     | 	at io.vertx.core.impl.ContextInternal.lambda$runOnContext$0(ContextInternal.java:50)
+api2-1     | 	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173)
+api2-1     | 	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166)
+api2-1     | 	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+api2-1     | 	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
+api2-1     | 	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+api2-1     | 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+api2-1     | 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+api2-1     | 	at java.base/java.lang.Thread.run(Thread.java:1583)
+api2-1     | 
+api2-1     | 2025-08-17 13:45:23,105 WARN  [io.ver.cor.imp.BlockedThreadChecker] (vertx-blocked-thread-checker) Thread Thread[vert.x-eventloop-thread-3,5,main] has been blocked for 20390 ms, time limit is 2000 ms: io.vertx.core.VertxException: Thread blocked
+api2-1     | 	at io.vertx.core.http.impl.HttpServerImpl.<init>(HttpServerImpl.java:64)
+api2-1     | 	at io.vertx.core.impl.VertxImpl.createHttpServer(VertxImpl.java:377)
+api2-1     | 	at io.quarkus.vertx.http.runtime.VertxHttpRecorder$WebDeploymentVerticle.start(VertxHttpRecorder.java:1232)
+api2-1     | 	at io.vertx.core.impl.DeploymentManager.lambda$doDeploy$5(DeploymentManager.java:210)
+api2-1     | 	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:270)
+api2-1     | 	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:252)
+api2-1     | 	at io.vertx.core.impl.ContextInternal.lambda$runOnContext$0(ContextInternal.java:50)
+api2-1     | 	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173)
+api2-1     | 	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166)
+api2-1     | 	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+api2-1     | 	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
+api2-1     | 	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+api2-1     | 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+api2-1     | 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+api2-1     | 	at java.base/java.lang.Thread.run(Thread.java:1583)
+api2-1     | 
+api2-1     | 2025-08-17 13:45:27,195 WARN  [io.ver.cor.imp.BlockedThreadChecker] (vertx-blocked-thread-checker) Thread Thread[vert.x-eventloop-thread-2,5,main] has been blocked for 20582 ms, time limit is 2000 ms: io.vertx.core.VertxException: Thread blocked
+api2-1     | 	at java.base/java.io.RandomAccessFile.seek0(Native Method)
+api2-1     | 	at java.base/java.io.RandomAccessFile.seek(RandomAccessFile.java:636)
+api2-1     | 	at java.base/java.util.zip.ZipFile$Source.readFullyAt(ZipFile.java:1524)
+api2-1     | 	at java.base/java.util.zip.ZipFile$ZipFileInputStream.initDataOffset(ZipFile.java:930)
+api2-1     | 	at java.base/java.util.zip.ZipFile$ZipFileInputStream.read(ZipFile.java:946)
+api2-1     | 	at java.base/java.util.zip.ZipFile$ZipFileInflaterInputStream.fill(ZipFile.java:463)
+api2-1     | 	at java.base/java.util.zip.InflaterInputStream.read(InflaterInputStream.java:175)
+api2-1     | 	at io.quarkus.bootstrap.runner.JarResource$JarResourceDataProvider.apply(JarResource.java:73)
+api2-1     | 	at io.quarkus.bootstrap.runner.JarResource$JarResourceDataProvider.apply(JarResource.java:59)
+api2-1     | 	at io.quarkus.bootstrap.runner.JarFileReference.consumeSharedJarFile(JarFileReference.java:169)
+api2-1     | 	at io.quarkus.bootstrap.runner.JarFileReference.withJarFile(JarFileReference.java:135)
+api2-1     | 	at io.quarkus.bootstrap.runner.JarResource.getResourceData(JarResource.java:56)
+api2-1     | 	at io.quarkus.bootstrap.runner.RunnerClassLoader.loadClass(RunnerClassLoader.java:106)
+api2-1     | 	at io.quarkus.bootstrap.runner.RunnerClassLoader.loadClass(RunnerClassLoader.java:72)
+api2-1     | 	at io.vertx.core.http.impl.HttpServerImpl.<init>(HttpServerImpl.java:64)
+api2-1     | 	at io.vertx.core.impl.VertxImpl.createHttpServer(VertxImpl.java:377)
+api2-1     | 	at io.quarkus.vertx.http.runtime.VertxHttpRecorder$WebDeploymentVerticle.start(VertxHttpRecorder.java:1232)
+api2-1     | 	at io.vertx.core.impl.DeploymentManager.lambda$doDeploy$5(DeploymentManager.java:210)
+api2-1     | 	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:270)
+api2-1     | 	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:252)
+api2-1     | 	at io.vertx.core.impl.ContextInternal.lambda$runOnContext$0(ContextInternal.java:50)
+api2-1     | 	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173)
+api2-1     | 	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166)
+api2-1     | 	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+api2-1     | 	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
+api2-1     | 	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+api2-1     | 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+api2-1     | 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+api2-1     | 	at java.base/java.lang.Thread.run(Thread.java:1583)
+api2-1     | 
+api2-1     | 2025-08-17 13:45:28,009 WARN  [io.ver.cor.imp.BlockedThreadChecker] (vertx-blocked-thread-checker) Thread Thread[vert.x-eventloop-thread-1,5,main] has been blocked for 20650 ms, time limit is 2000 ms: io.vertx.core.VertxException: Thread blocked
+api2-1     | 	at io.vertx.core.http.impl.HttpServerImpl.<init>(HttpServerImpl.java:64)
+api2-1     | 	at io.vertx.core.impl.VertxImpl.createHttpServer(VertxImpl.java:377)
+api2-1     | 	at io.quarkus.vertx.http.runtime.VertxHttpRecorder$WebDeploymentVerticle.start(VertxHttpRecorder.java:1232)
+api2-1     | 	at io.vertx.core.impl.DeploymentManager.lambda$doDeploy$5(DeploymentManager.java:210)
+api2-1     | 	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:270)
+api2-1     | 	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:252)
+api2-1     | 	at io.vertx.core.impl.ContextInternal.lambda$runOnContext$0(ContextInternal.java:50)
+api2-1     | 	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173)
+api2-1     | 	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166)
+api2-1     | 	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+api2-1     | 	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
+api2-1     | 	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+api2-1     | 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+api2-1     | 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+api2-1     | 	at java.base/java.lang.Thread.run(Thread.java:1583)
+api2-1     | 
+api2-1     | 2025-08-17 13:45:29,728 WARN  [io.ver.cor.imp.BlockedThreadChecker] (vertx-blocked-thread-checker) Thread Thread[vert.x-eventloop-thread-0,5,main] has been blocked for 20107 ms, time limit is 2000 ms: io.vertx.core.VertxException: Thread blocked
+api2-1     | 	at io.vertx.core.http.impl.HttpServerImpl.<init>(HttpServerImpl.java:64)
+api2-1     | 	at io.vertx.core.impl.VertxImpl.createHttpServer(VertxImpl.java:377)
+api2-1     | 	at io.quarkus.vertx.http.runtime.VertxHttpRecorder$WebDeploymentVerticle.start(VertxHttpRecorder.java:1232)
+api2-1     | 	at io.vertx.core.impl.DeploymentManager.lambda$doDeploy$5(DeploymentManager.java:210)
+api2-1     | 	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:270)
+api2-1     | 	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:252)
+api2-1     | 	at io.vertx.core.impl.ContextInternal.lambda$runOnContext$0(ContextInternal.java:50)
+api2-1     | 	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173)
+api2-1     | 	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166)
+api2-1     | 	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+api2-1     | 	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
+api2-1     | 	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+api2-1     | 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+api2-1     | 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+api2-1     | 	at java.base/java.lang.Thread.run(Thread.java:1583)
+api2-1     | 
+api2-1     | 2025-08-17 13:45:31,972 WARN  [io.ver.cor.imp.BlockedThreadChecker] (vertx-blocked-thread-checker) Thread Thread[vert.x-eventloop-thread-3,5,main] has been blocked for 28074 ms, time limit is 2000 ms: io.vertx.core.VertxException: Thread blocked
+api2-1     | 	at io.vertx.core.http.impl.HttpServerImpl.<init>(HttpServerImpl.java:64)
+api2-1     | 	at io.vertx.core.impl.VertxImpl.createHttpServer(VertxImpl.java:377)
+api2-1     | 	at io.quarkus.vertx.http.runtime.VertxHttpRecorder$WebDeploymentVerticle.start(VertxHttpRecorder.java:1232)
+api2-1     | 	at io.vertx.core.impl.DeploymentManager.lambda$doDeploy$5(DeploymentManager.java:210)
+api2-1     | 	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:270)
+api2-1     | 	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:252)
+api2-1     | 	at io.vertx.core.impl.ContextInternal.lambda$runOnContext$0(ContextInternal.java:50)
+api2-1     | 	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173)
+api2-1     | 	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166)
+api2-1     | 	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+api2-1     | 	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
+api2-1     | 	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+api2-1     | 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+api2-1     | 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+api2-1     | 	at java.base/java.lang.Thread.run(Thread.java:1583)
+api2-1     | 
+api2-1     | 2025-08-17 13:45:33,383 WARN  [io.ver.cor.imp.BlockedThreadChecker] (vertx-blocked-thread-checker) Thread Thread[vert.x-eventloop-thread-2,5,main] has been blocked for 28266 ms, time limit is 2000 ms: io.vertx.core.VertxException: Thread blocked
+api2-1     | 	at io.vertx.core.http.impl.HttpServerImpl.<init>(HttpServerImpl.java:64)
+api2-1     | 	at io.vertx.core.impl.VertxImpl.createHttpServer(VertxImpl.java:377)
+api2-1     | 	at io.quarkus.vertx.http.runtime.VertxHttpRecorder$WebDeploymentVerticle.start(VertxHttpRecorder.java:1232)
+api2-1     | 	at io.vertx.core.impl.DeploymentManager.lambda$doDeploy$5(DeploymentManager.java:210)
+api2-1     | 	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:270)
+api2-1     | 	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:252)
+api2-1     | 	at io.vertx.core.impl.ContextInternal.lambda$runOnContext$0(ContextInternal.java:50)
+api2-1     | 	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173)
+api2-1     | 	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166)
+api2-1     | 	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+api2-1     | 	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
+api2-1     | 	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+api2-1     | 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+api2-1     | 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+api2-1     | 	at java.base/java.lang.Thread.run(Thread.java:1583)
+api2-1     | 
+api2-1     | 2025-08-17 13:45:36,198 WARN  [io.ver.cor.imp.BlockedThreadChecker] (vertx-blocked-thread-checker) Thread Thread[vert.x-eventloop-thread-1,5,main] has been blocked for 28334 ms, time limit is 2000 ms: io.vertx.core.VertxException: Thread blocked
+api2-1     | 	at io.vertx.core.VertxException.<init>(VertxException.java:60)
+api2-1     | 	at io.vertx.core.http.HttpClosedException.<init>(HttpClosedException.java:33)
+api2-1     | 	at io.vertx.core.http.impl.HttpUtils.<clinit>(HttpUtils.java:75)
+api2-1     | 	at io.vertx.core.http.impl.HttpServerImpl.<init>(HttpServerImpl.java:64)
+api2-1     | 	at io.vertx.core.impl.VertxImpl.createHttpServer(VertxImpl.java:377)
+api2-1     | 	at io.quarkus.vertx.http.runtime.VertxHttpRecorder$WebDeploymentVerticle.start(VertxHttpRecorder.java:1232)
+api2-1     | 	at io.vertx.core.impl.DeploymentManager.lambda$doDeploy$5(DeploymentManager.java:210)
+api2-1     | 	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:270)
+api2-1     | 	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:252)
+api2-1     | 	at io.vertx.core.impl.ContextInternal.lambda$runOnContext$0(ContextInternal.java:50)
+api2-1     | 	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173)
+api2-1     | 	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166)
+api2-1     | 	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+api2-1     | 	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
+api2-1     | 	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+api2-1     | 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+api2-1     | 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+api2-1     | 	at java.base/java.lang.Thread.run(Thread.java:1583)
+api2-1     | 
+api2-1     | 2025-08-17 13:45:38,838 WARN  [io.ver.cor.imp.BlockedThreadChecker] (vertx-blocked-thread-checker) Thread Thread[vert.x-eventloop-thread-0,5,main] has been blocked for 27792 ms, time limit is 2000 ms: io.vertx.core.VertxException: Thread blocked
+api2-1     | 	at io.vertx.core.http.impl.HttpServerImpl.<init>(HttpServerImpl.java:64)
+api2-1     | 	at io.vertx.core.impl.VertxImpl.createHttpServer(VertxImpl.java:377)
+api2-1     | 	at io.quarkus.vertx.http.runtime.VertxHttpRecorder$WebDeploymentVerticle.start(VertxHttpRecorder.java:1232)
+api2-1     | 	at io.vertx.core.impl.DeploymentManager.lambda$doDeploy$5(DeploymentManager.java:210)
+api2-1     | 	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:270)
+api2-1     | 	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:252)
+api2-1     | 	at io.vertx.core.impl.ContextInternal.lambda$runOnContext$0(ContextInternal.java:50)
+api2-1     | 	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173)
+api2-1     | 	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166)
+api2-1     | 	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+api2-1     | 	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
+api2-1     | 	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+api2-1     | 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+api2-1     | 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+api2-1     | 	at java.base/java.lang.Thread.run(Thread.java:1583)
+api2-1     | 
+api2-1     | 2025-08-17 13:45:40,981 WARN  [io.ver.cor.imp.BlockedThreadChecker] (vertx-blocked-thread-checker) Thread Thread[vert.x-eventloop-thread-3,5,main] has been blocked for 37346 ms, time limit is 2000 ms: io.vertx.core.VertxException: Thread blocked
+api2-1     | 	at io.vertx.core.http.impl.HttpServerImpl.<init>(HttpServerImpl.java:64)
+api2-1     | 	at io.vertx.core.impl.VertxImpl.createHttpServer(VertxImpl.java:377)
+api2-1     | 	at io.quarkus.vertx.http.runtime.VertxHttpRecorder$WebDeploymentVerticle.start(VertxHttpRecorder.java:1232)
+api2-1     | 	at io.vertx.core.impl.DeploymentManager.lambda$doDeploy$5(DeploymentManager.java:210)
+api2-1     | 	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:270)
+api2-1     | 	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:252)
+api2-1     | 	at io.vertx.core.impl.ContextInternal.lambda$runOnContext$0(ContextInternal.java:50)
+api2-1     | 	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173)
+api2-1     | 	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166)
+api2-1     | 	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+api2-1     | 	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
+api2-1     | 	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+api2-1     | 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+api2-1     | 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+api2-1     | 	at java.base/java.lang.Thread.run(Thread.java:1583)
+api2-1     | 
+[Knginx-1 exited with code 0
+api2-1     | 2025-08-17 13:45:45,175 WARN  [io.ver.cor.imp.BlockedThreadChecker] (vertx-blocked-thread-checker) Thread Thread[vert.x-eventloop-thread-2,5,main] has been blocked for 37537 ms, time limit is 2000 ms: io.vertx.core.VertxException: Thread blocked
+api2-1     | 	at io.vertx.core.http.impl.HttpServerImpl.<init>(HttpServerImpl.java:64)
+api2-1     | 	at io.vertx.core.impl.VertxImpl.createHttpServer(VertxImpl.java:377)
+api2-1     | 	at io.quarkus.vertx.http.runtime.VertxHttpRecorder$WebDeploymentVerticle.start(VertxHttpRecorder.java:1232)
+api2-1     | 	at io.vertx.core.impl.DeploymentManager.lambda$doDeploy$5(DeploymentManager.java:210)
+api2-1     | 	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:270)
+api2-1     | 	at io.vertx.core.impl.ContextInternal.dispatch(ContextInternal.java:252)
+api2-1     | 	at io.vertx.core.impl.ContextInternal.lambda$runOnContext$0(ContextInternal.java:50)
+api2-1     | 	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173)
+api2-1     | 	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166)
+api2-1     | 	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+api2-1     | 	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
+api2-1     | 	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+api2-1     | 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+api2-1     | 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+api2-1     | 	at java.base/java.lang.Thread.run(Thread.java:1583)
+api2-1     | 
+[Kapi1-1 exited with code 137
+[Kapi2-1 exited with code 137
+redis-1    | 1:signal-handler (1755438357) Received SIGTERM scheduling shutdown...
+redis-1    | 1:M 17 Aug 2025 13:45:57.192 * User requested shutdown...
+redis-1    | 1:M 17 Aug 2025 13:45:57.192 # Redis is now ready to exit, bye bye...
