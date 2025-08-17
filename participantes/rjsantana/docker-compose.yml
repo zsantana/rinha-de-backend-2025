@@ -1,43 +1,34 @@
 services:
-  # Redis ========================================================================
-  # redis:
-  #   image: redis:7-alpine
-  #   container_name: rinha-redis
-  #   restart: unless-stopped
-  #   command: >
-  #     sh -c "mkdir -p /var/run/redis &&
-  #            redis-server \
-  #            --save '' \
-  #            --appendonly no \
-  #            --maxclients 5000 \
-  #            --unixsocket /var/run/redis/redis.sock \
-  #            --unixsocketperm 777 \
-  #            --port 0 \
-  #            --protected-mode no \
-  #            --hz 10"
-  #   networks:
-  #     - rinha-net
-  #   volumes:
-  #     - redis-socket:/var/run/redis
-  #   deploy:
-  #     resources:
-  #       limits:
-  #         cpus: "0.2"
-  #         memory: "25MB"
-
   redis:
     image: redis:7-alpine
     hostname: redis
     ports:
       - "6379:6379"        # Porta TCP exposta para APIs
-    command: redis-server --save '' --appendonly no
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 5s
+    # OTIMIZAÇÃO: Configuração Redis para alta performance
+    command: ["redis-server", "/usr/local/etc/redis/redis.conf"]
     networks:
       - rinha-net
+    volumes:
+      - ./redis.conf:/usr/local/etc/redis/redis.conf:ro
+      - redis-data:/data
+    sysctls:
+      # OTIMIZAÇÃO: Network performance
+      - net.core.somaxconn=8192
     deploy:
       resources:
         limits:
           cpus: "0.2"
           memory: "20MB"
+    ulimits:
+      nofile:
+        soft: 65535
+        hard: 65535
 
   # APIs Produtor ========================================================================
   api01: &api
@@ -55,7 +46,8 @@ services:
       - PAYMENT_PROCESSOR_FALLBACK=http://payment-processor-fallback:8080
       - QUARKUS_LOG_LEVEL=INFO
     depends_on:
-      - redis
+      redis:
+        condition: service_healthy
     # volumes:
     #   - redis-socket:/var/run/redis
     deploy:
@@ -84,7 +76,8 @@ services:
       - PAYMENT_PROCESSOR_FALLBACK=http://payment-processor-fallback:8080
       - QUARKUS_LOG_LEVEL=INFO
     depends_on:
-      - redis
+      redis:
+        condition: service_healthy
     # volumes:
     #   - redis-socket:/var/run/redis
     deploy:
@@ -119,5 +112,5 @@ networks:
   rinha-net:
     driver: bridge
 
-# volumes:
-#   redis-socket:
+volumes:
+  redis-data:
