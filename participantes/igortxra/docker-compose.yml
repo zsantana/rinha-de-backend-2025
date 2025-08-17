@@ -90,6 +90,8 @@ services:
     environment:
       - PAYMENT_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080
       - PAYMENT_PROCESSOR_URL_FALLBACK=http://payment-processor-fallback:8080
+      - DEFAULT_WORKERS=20
+      - FALLBACK_WORKERS=15
       - REDIS_URL=redis://redis:6379
     deploy:
       resources:
