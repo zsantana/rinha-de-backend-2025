@@ -20,18 +20,18 @@ services:
       - rinha
 
   eliot1:
+    build: .
     image: fabianoflorentino/eliot:v0.0.1
     container_name: eliot-1
     hostname: eliot-1
     environment:
       HTTP_ADDR: ":8080"
       REDIS_ADDR: "redis:6379"
-      REDIS_POOL: "100"
+      REDIS_POOL: "250"
       PROCESSOR_DEFAULT_URL: "http://payment-processor-default:8080"
       PROCESSOR_FALLBACK_URL: "http://payment-processor-fallback:8080"
       TIMEOUT_MS: "120"
-      HEDGE_MS: "20"
-      WORKER_CONCURRENCY: "2"
+      HEDGE_MS: "40"
     depends_on:
       - redis
     deploy:
@@ -50,12 +50,11 @@ services:
     environment:
       HTTP_ADDR: ":8080"
       REDIS_ADDR: "redis:6379"
-      REDIS_POOL: "100"
+      REDIS_POOL: "250"
       PROCESSOR_DEFAULT_URL: "http://payment-processor-default:8080"
       PROCESSOR_FALLBACK_URL: "http://payment-processor-fallback:8080"
       TIMEOUT_MS: "120"
-      HEDGE_MS: "20"
-      WORKER_CONCURRENCY: "2"
+      HEDGE_MS: "40"
     depends_on:
       - redis
     deploy:
