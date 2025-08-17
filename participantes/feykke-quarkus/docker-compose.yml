@@ -25,7 +25,7 @@ services:
     networks:
       - backend-rinha
   api1: &api1
-    image: feykke/rinha-backend-2025:1.0.2
+    image: feykke/rinha-backend-2025:1.0.3
     hostname: api1
     environment:
       - BACKEND_TYPE=api
