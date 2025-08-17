@@ -1,5 +1,5 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Sun Aug 17 12:53:48 UTC 2025**
+Atualizado em **Sun Aug 17 13:01:01 UTC 2025**
 426 submissões / 370 resultados / 56 submissões com erro
 
 
@@ -269,7 +269,7 @@ Atualizado em **Sun Aug 17 12:53:48 UTC 2025**
 |	murilo-guedes-toloni-haprox18	|	1.72ms	|	19%	|	86726.0905	|	208142.6172	|	[murilo-guedes-toloni-haprox18](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/murilo-guedes-toloni-haprox18)
 |	murilo-guedes-toloni-undertow	|	1.58ms	|	19%	|	85671.24125	|	205610.979	|	[murilo-guedes-toloni-undertow](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/murilo-guedes-toloni-undertow)
 |	murilo-guedes-toloni	|	1.53ms	|	19%	|	83981.8805	|	201556.5132	|	[murilo-guedes-toloni](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/murilo-guedes-toloni)
-|	murilo-kendjy-node	|	8.39ms	|	5%	|	110473.2580000065	|	220946.516000013	|	[murilo-kendjy-node](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/murilo-kendjy-node)
+|	murilo-kendjy-node	|	7.47ms	|	7%	|	0	|	337896.48770002014	|	[murilo-kendjy-node](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/murilo-kendjy-node)
 |	mxlange-cpp	|	4ms	|	14%	|	0	|	360775.458	|	[mxlange-cpp](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/mxlange-cpp)
 |	mxlange-fasthttp	|	3.64ms	|	15%	|	0	|	110446.44275000517	|	[mxlange-fasthttp](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/mxlange-fasthttp)
 |	mxlange-only-go	|	2.81ms	|	16%	|	110606.986	|	255976.1676	|	[mxlange-only-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/mxlange-only-go)
