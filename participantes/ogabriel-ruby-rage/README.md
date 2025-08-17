@@ -1,6 +1,8 @@
 # Rinha
 
-Verão em ruby, eu sei q não ia sair perfeita, mas queria testar novas tecnologias
+Código fonte: https://github.com/ogabriel/rinha-de-backend-2025-ruby/tree/rage
+
+Versão em ruby, eu sei q não ia sair perfeita, mas queria testar novas tecnologias
 
 usa:
 - `rage` como webserver que usa `iodine` e `fibers`
