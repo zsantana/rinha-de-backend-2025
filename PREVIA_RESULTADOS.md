@@ -1,6 +1,6 @@
 # Prévia do Resultados da Rinha de Backend 2025
-Atualizado em **Sun Aug 17 10:55:38 UTC 2025**
-422 submissões / 366 resultados / 56 submissões com erro
+Atualizado em **Sun Aug 17 11:04:29 UTC 2025**
+424 submissões / 367 resultados / 57 submissões com erro
 
 
 | participante | p99 | bônus por desempenho (%) | multa ($) | lucro | submissão |
@@ -96,6 +96,7 @@ Atualizado em **Sun Aug 17 10:55:38 UTC 2025**
 |	davigga-node-2	|	67.69ms	|	0%	|	0	|	290878.3	|	[davigga-node-2](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/davigga-node-2)
 |	davigga-node	|	65.35ms	|	0%	|	0	|	306834.12	|	[davigga-node](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/davigga-node)
 |	dbiagi	|	106.22ms	|	0%	|	0	|	0	|	[dbiagi](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/dbiagi)
+|	dearrudam_java_01	|	3.24ms	|	16%	|	0	|	367214.501	|	[dearrudam_java_01](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/dearrudam_java_01)
 |	diegodario-go	|	2.3ms	|	17%	|	0	|	364951.7118	|	[diegodario-go](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/diegodario-go)
 |	dinossauro	|	3.71ms	|	15%	|	0	|	0	|	[dinossauro](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/dinossauro)
 |	diofeher-full-custom	|	2.25ms	|	18%	|	0	|	373746.5566	|	[diofeher-full-custom](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/diofeher-full-custom)
@@ -376,6 +377,7 @@ Atualizado em **Sun Aug 17 10:55:38 UTC 2025**
 
 | participante | submissão |
 | -- | -- |
+| alvesa | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/alvesa) |
 | andersonhqds-node | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/andersonhqds-node) |
 | andre-nicoletti | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/andre-nicoletti) |
 | augustoc100-ruby | [logs](https://github.com/zanfranceschi/rinha-de-backend-2025/tree/main/participantes/augustoc100-ruby) |
