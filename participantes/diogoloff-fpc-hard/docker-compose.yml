@@ -26,8 +26,8 @@ services:
       - CONSOLIDA_URL=http://persistencia:9090
       - CON_TIME_OUT=5000
       - READ_TIME_OUT=200
-      - NUM_WORKERS=64  # 16
-      - NUM_WORKERS_SOCKET=32 # 32
+      - NUM_WORKERS=24  # 16
+      - NUM_WORKERS_SOCKET=64 # 32
       - NUM_TENTATIVAS_DEFAULT=10
       - TEMPO_FILA=50
     volumes:

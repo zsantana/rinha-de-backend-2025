@@ -25,8 +25,8 @@ services:
       - FALLBACK_URL=http://payment-processor-fallback:8080
       - CON_TIME_OUT=5000
       - READ_TIME_OUT=200  # 2500
-      - NUM_WORKERS=32
-      - LISTEM_QUEUE=32
+      - NUM_WORKERS=24
+      - LISTEM_QUEUE=64
       - NUM_TENTATIVAS_DEFAULT=10
       - TEMPO_FILA=50
       - NATIVO=S
