@@ -1,20 +1,20 @@
 {
-  "participante": "cleissonbarbosa-lua",
-  "total_liquido": 252592.03329995964,
-  "total_bruto": 333265.299999948,
-  "total_taxas": 25226.2349999972,
+  "participante": "craytee",
+  "total_liquido": 376756.42165003286,
+  "total_bruto": 333265.3000000291,
+  "total_taxas": 16663.265000001455,
   "descricao": "'total_liquido' é sua pontuação final. Equivale ao seu lucro. Fórmula: total_liquido + (total_liquido * p99.bonus) - (total_liquido * multa.porcentagem)",
   "p99": {
-    "valor": "2.54ms",
-    "bonus": "17%",
+    "valor": "1.36ms",
+    "bonus": "19%",
     "max_requests": "550",
     "descricao": "Fórmula para o bônus: max((11 - p99.valor) * 0.02, 0)"
   },
   "multa": {
-    "porcentagem": 0.35,
-    "total": 107813.67274998278,
+    "porcentagem": 0,
+    "total": 0,
     "composicao": {
-      "num_inconsistencias": 1,
+      "num_inconsistencias": 0,
       "descricao": "Se 'num_inconsistencias' > 0, há multa de 35%."
     }
   },
@@ -34,15 +34,15 @@
     "descricao": "'qtd_sucesso' foram requests bem sucedidos para 'POST /payments' e 'qtd_falha' os requests com erro."
   },
   "pagamentos_realizados_default": {
-    "total_bruto": 247635.59999995,
-    "num_pagamentos": 12444,
-    "total_taxas": 12381.7799999975,
+    "total_bruto": 333265.3000000291,
+    "num_pagamentos": 16747,
+    "total_taxas": 16663.265000001455,
     "descricao": "Informações do backend sobre solicitações de pagamento para o Payment Processor Default."
   },
   "pagamentos_realizados_fallback": {
-    "total_bruto": 85629.699999998,
-    "num_pagamentos": 4303,
-    "total_taxas": 12844.4549999997,
+    "total_bruto": 0,
+    "num_pagamentos": 0,
+    "total_taxas": 0,
     "descricao": "Informações do backend sobre solicitações de pagamento para o Payment Processor Fallback."
   }
 }
