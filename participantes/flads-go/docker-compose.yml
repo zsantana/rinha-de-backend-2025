@@ -27,8 +27,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.2"
-          memory: "50MB"
+          cpus: "0.25"
+          memory: "25MB"
 
   api-2:
     <<: *api
@@ -40,8 +40,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.2"
-          memory: "50MB"
+          cpus: "0.25"
+          memory: "25MB"
 
   database:
     image: flads/rinha25-go-database:1.0.0
@@ -53,7 +53,7 @@ services:
       resources:
         limits:
           cpus: "0.3"
-          memory: "100MB"
+          memory: "150MB"
 
   worker-1:
     <<: *worker
@@ -61,7 +61,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.2"
+          cpus: "0.15"
           memory: "50MB"
 
   worker-2:
@@ -70,7 +70,7 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.2"
+          cpus: "0.15"
           memory: "50MB"
 
   nginx:
