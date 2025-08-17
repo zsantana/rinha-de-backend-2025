@@ -1,0 +1,1001 @@
+
+ Network rjsantana_rinha-net  Creating
+ Network rjsantana_rinha-net  Created
+ Volume "rjsantana_redis-data"  Creating
+ Volume "rjsantana_redis-data"  Created
+ Container rjsantana-redis-1  Creating
+ Container rjsantana-redis-1  Created
+ Container rjsantana-api03-1  Creating
+ Container rjsantana-api01-1  Creating
+ Container rjsantana-api02-1  Creating
+ Container rjsantana-api01-1  Created
+ Container rjsantana-api03-1  Created
+ Container rjsantana-api02-1  Created
+ Container rjsantana-nginx-1  Creating
+ Container rjsantana-nginx-1  Created
+Attaching to api01-1, api02-1, api03-1, nginx-1, redis-1
+redis-1  | 1:C 17 Aug 2025 17:58:41.289 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+redis-1  | 1:C 17 Aug 2025 17:58:41.289 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+redis-1  | 1:C 17 Aug 2025 17:58:41.289 * Redis version=7.4.5, bits=64, commit=00000000, modified=0, pid=1, just started
+redis-1  | 1:C 17 Aug 2025 17:58:41.289 * Configuration loaded
+redis-1  | 1:M 17 Aug 2025 17:58:41.289 * monotonic clock: POSIX clock_gettime
+redis-1  | 1:M 17 Aug 2025 17:58:41.291 * Running mode=standalone, port=6379.
+redis-1  | 1:M 17 Aug 2025 17:58:41.291 * Server initialized
+redis-1  | 1:M 17 Aug 2025 17:58:41.297 * Creating AOF base file appendonly.aof.1.base.rdb on server start
+redis-1  | 1:M 17 Aug 2025 17:58:41.309 * Creating AOF incr file appendonly.aof.1.incr.aof on server start
+redis-1  | 1:M 17 Aug 2025 17:58:41.309 * Ready to accept connections tcp
+api01-1  | __  ____  __  _____   ___  __ ____  ______ 
+api01-1  |  --/ __ \/ / / / _ | / _ \/ //_/ / / / __/ 
+api01-1  |  -/ /_/ / /_/ / __ |/ , _/ ,< / /_/ /\ \   
+api01-1  | --\___\_\____/_/ |_/_/|_/_/|_|\____/___/   
+api01-1  | 2025-08-17 17:58:47,168 INFO  [com.rin.JvmOptionsLogger] (main) 🚀 JVM Arguments:
+api01-1  | 2025-08-17 17:58:47,168 INFO  [com.rin.JvmOptionsLogger] (main)   -Dquarkus.http.host=0.0.0.0
+api02-1  | __  ____  __  _____   ___  __ ____  ______ 
+api02-1  |  --/ __ \/ / / / _ | / _ \/ //_/ / / / __/ 
+api02-1  |  -/ /_/ / /_/ / __ |/ , _/ ,< / /_/ /\ \   
+api02-1  | --\___\_\____/_/ |_/_/|_/_/|_|\____/___/   
+api02-1  | 2025-08-17 17:58:47,168 INFO  [com.rin.JvmOptionsLogger] (main) 🚀 JVM Arguments:
+api02-1  | 2025-08-17 17:58:47,168 INFO  [com.rin.JvmOptionsLogger] (main)   -Dquarkus.http.host=0.0.0.0
+api01-1  | 2025-08-17 17:58:47,170 INFO  [io.quarkus] (main) rinha-backend-2025-produtor 1.0.0-SNAPSHOT native (powered by Quarkus 3.24.4) started in 0.145s. Listening on: http://0.0.0.0:8080
+api01-1  | 2025-08-17 17:58:47,170 INFO  [io.quarkus] (main) Profile prod activated. 
+api01-1  | 2025-08-17 17:58:47,170 INFO  [io.quarkus] (main) Installed features: [cdi, hibernate-validator, redis-client, rest, rest-client, rest-client-jackson, rest-jackson, smallrye-context-propagation, smallrye-openapi, swagger-ui, vertx]
+api02-1  | 2025-08-17 17:58:47,170 INFO  [io.quarkus] (main) rinha-backend-2025-produtor 1.0.0-SNAPSHOT native (powered by Quarkus 3.24.4) started in 0.050s. Listening on: http://0.0.0.0:8080
+api02-1  | 2025-08-17 17:58:47,170 INFO  [io.quarkus] (main) Profile prod activated. 
+api02-1  | 2025-08-17 17:58:47,170 INFO  [io.quarkus] (main) Installed features: [cdi, hibernate-validator, redis-client, rest, rest-client, rest-client-jackson, rest-jackson, smallrye-context-propagation, smallrye-openapi, swagger-ui, vertx]
+nginx-1  | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+nginx-1  | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+nginx-1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+nginx-1  | 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+nginx-1  | 10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
+nginx-1  | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+nginx-1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+nginx-1  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+nginx-1  | /docker-entrypoint.sh: Configuration complete; ready for start up
+api03-1  | __  ____  __  _____   ___  __ ____  ______ 
+api03-1  |  --/ __ \/ / / / _ | / _ \/ //_/ / / / __/ 
+api03-1  |  -/ /_/ / /_/ / __ |/ , _/ ,< / /_/ /\ \   
+api03-1  | --\___\_\____/_/ |_/_/|_/_/|_|\____/___/   
+api03-1  | 2025-08-17 17:58:47,460 INFO  [com.rin.ser.PaymentConsumerRedis] (main) ✅ Inscrito no canal Redis 'payments'
+api03-1  | 2025-08-17 17:58:47,460 INFO  [com.rin.JvmOptionsLogger] (main) 🚀 JVM Arguments:
+api03-1  | 2025-08-17 17:58:47,460 INFO  [com.rin.JvmOptionsLogger] (main)   -Dquarkus.http.host=0.0.0.0
+api03-1  | 2025-08-17 17:58:47,471 INFO  [io.quarkus] (main) rinha-backend-2025-consumidor 1.0.0-SNAPSHOT native (powered by Quarkus 3.24.4) started in 0.276s. Listening on: http://0.0.0.0:8080
+api03-1  | 2025-08-17 17:58:47,471 INFO  [io.quarkus] (main) Profile prod activated. 
+api03-1  | 2025-08-17 17:58:47,471 INFO  [io.quarkus] (main) Installed features: [cdi, hibernate-validator, redis-client, rest, rest-client, rest-client-jackson, rest-jackson, smallrye-context-propagation, smallrye-openapi, swagger-ui, vertx]
+api01-1  | 2025-08-17 17:58:50,586 INFO  [com.rin.res.PaymentSummaryResource] (vert.x-eventloop-thread-1) ### getPaymentsSummary: null, null
+api01-1  | 2025-08-17 17:58:50,586 INFO  [com.rin.ser.RedisService] (vert.x-eventloop-thread-1) 🔌 Conectando no Redis com: null
+api01-1  | 2025-08-17 17:58:50,586 INFO  [com.rin.ser.RedisService] (vert.x-eventloop-thread-1) ✅ reactiveRedisDataSource injetado com sucesso.
+api01-1  | 2025-08-17 17:58:50,586 INFO  [com.rin.ser.RedisService] (vert.x-eventloop-thread-1) 🔍 Buscando pagamentos entre null e null
+api01-1  | 2025-08-17 17:58:50,588 INFO  [com.rin.ser.RedisService] (vert.x-eventloop-thread-1) 🔑 Chaves encontradas: 0
+api01-1  | 2025-08-17 17:58:50,588 INFO  [com.rin.res.PaymentSummaryResource] (vert.x-eventloop-thread-1) ### Resumo de pagamentos: PaymentsSummary[defaultProcessor=ProcessorSummary[totalRequests=0, totalAmount=0], fallbackProcessor=ProcessorSummary[totalRequests=0, totalAmount=0]]
+api01-1  | 2025-08-17 17:58:56,139 INFO  [com.rin.res.PaymentSummaryResource] (vert.x-eventloop-thread-0) ### getPaymentsSummary: 2025-08-17T17:58:41.137Z, 2025-08-17T17:58:54.637Z
+api01-1  | 2025-08-17 17:58:56,139 INFO  [com.rin.ser.RedisService] (vert.x-eventloop-thread-0) 🔍 Buscando pagamentos entre 2025-08-17T17:58:41.137Z e 2025-08-17T17:58:54.637Z
+api01-1  | 2025-08-17 17:58:56,140 INFO  [com.rin.ser.RedisService] (vert.x-eventloop-thread-0) 🔑 Chaves encontradas: 0
+api01-1  | 2025-08-17 17:58:56,140 INFO  [com.rin.res.PaymentSummaryResource] (vert.x-eventloop-thread-0) ### Resumo de pagamentos: PaymentsSummary[defaultProcessor=ProcessorSummary[totalRequests=0, totalAmount=0], fallbackProcessor=ProcessorSummary[totalRequests=0, totalAmount=0]]
+api02-1  | 2025-08-17 17:58:56,145 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-0) 📤 Publicando pagamento no Redis (async): {"correlationId":"c90e4edd-7cae-4a86-bcff-fea1f7238172","amount":19.9}
+api02-1  | 2025-08-17 17:58:56,147 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=c90e4edd-7cae-4a86-bcff-fea1f7238172, amount=19.9]
+api02-1  | 2025-08-17 17:58:56,147 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:58:56,187 INFO  [com.rin.ser.PaymentService] (vert.x-eventloop-thread-0) 🔧 Validando configurações do PaymentService...
+api03-1  | 2025-08-17 17:58:56,187 INFO  [com.rin.ser.PaymentService] (vert.x-eventloop-thread-0) ✅ PaymentService configurado - Timeout: 4000ms, VirtualThreads: enabled
+api03-1  | 2025-08-17 17:58:56,187 INFO  [com.rin.ser.PaymentService] (vert.x-eventloop-thread-0) 📍 URIs: Default=http://payment-processor-default:8080/payments, Fallback=http://payment-processor-fallback:8080/payments
+api03-1  | 2025-08-17 17:58:56,193 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: c90e4edd-7cae-4a86-bcff-fea1f7238172
+api03-1  | 2025-08-17 17:58:56,200 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:c90e4edd-7cae-4a86-bcff-fea1f7238172
+api01-1  | 2025-08-17 17:58:56,250 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-0) 📤 Publicando pagamento no Redis (async): {"correlationId":"3bed5fed-ad34-45a1-9ba7-d2c487964e63","amount":19.9}
+api01-1  | 2025-08-17 17:58:56,251 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=3bed5fed-ad34-45a1-9ba7-d2c487964e63, amount=19.9]
+api01-1  | 2025-08-17 17:58:56,251 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:58:56,252 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 3bed5fed-ad34-45a1-9ba7-d2c487964e63
+api03-1  | 2025-08-17 17:58:56,253 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:3bed5fed-ad34-45a1-9ba7-d2c487964e63
+api02-1  | 2025-08-17 17:58:56,358 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-1) 📤 Publicando pagamento no Redis (async): {"correlationId":"86d0c090-aba6-4b29-9b0f-f027fc188216","amount":19.9}
+api02-1  | 2025-08-17 17:58:56,358 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=86d0c090-aba6-4b29-9b0f-f027fc188216, amount=19.9]
+api02-1  | 2025-08-17 17:58:56,358 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:58:56,360 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 86d0c090-aba6-4b29-9b0f-f027fc188216
+api03-1  | 2025-08-17 17:58:56,360 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:86d0c090-aba6-4b29-9b0f-f027fc188216
+api01-1  | 2025-08-17 17:58:56,467 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-1) 📤 Publicando pagamento no Redis (async): {"correlationId":"76548627-dde0-4dda-83c4-723dd5e738e5","amount":19.9}
+api01-1  | 2025-08-17 17:58:56,468 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=76548627-dde0-4dda-83c4-723dd5e738e5, amount=19.9]
+api01-1  | 2025-08-17 17:58:56,468 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:58:56,469 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 76548627-dde0-4dda-83c4-723dd5e738e5
+api03-1  | 2025-08-17 17:58:56,469 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:76548627-dde0-4dda-83c4-723dd5e738e5
+api02-1  | 2025-08-17 17:58:56,576 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-2) 📤 Publicando pagamento no Redis (async): {"correlationId":"f87cb4c4-bde2-4f0d-87d5-639f9f878ee5","amount":19.9}
+api02-1  | 2025-08-17 17:58:56,577 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=f87cb4c4-bde2-4f0d-87d5-639f9f878ee5, amount=19.9]
+api02-1  | 2025-08-17 17:58:56,577 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:58:56,578 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: f87cb4c4-bde2-4f0d-87d5-639f9f878ee5
+api03-1  | 2025-08-17 17:58:56,579 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:f87cb4c4-bde2-4f0d-87d5-639f9f878ee5
+api01-1  | 2025-08-17 17:58:56,686 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-2) 📤 Publicando pagamento no Redis (async): {"correlationId":"10677257-868e-47e9-99b4-e6323f951654","amount":19.9}
+api01-1  | 2025-08-17 17:58:56,687 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=10677257-868e-47e9-99b4-e6323f951654, amount=19.9]
+api01-1  | 2025-08-17 17:58:56,687 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:58:56,688 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 10677257-868e-47e9-99b4-e6323f951654
+api03-1  | 2025-08-17 17:58:56,689 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:10677257-868e-47e9-99b4-e6323f951654
+api02-1  | 2025-08-17 17:58:56,796 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-3) 📤 Publicando pagamento no Redis (async): {"correlationId":"0f5a07ad-ae38-49ec-bcfb-93a6edce6376","amount":19.9}
+api02-1  | 2025-08-17 17:58:56,796 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=0f5a07ad-ae38-49ec-bcfb-93a6edce6376, amount=19.9]
+api02-1  | 2025-08-17 17:58:56,796 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:58:56,798 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 0f5a07ad-ae38-49ec-bcfb-93a6edce6376
+api03-1  | 2025-08-17 17:58:56,798 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:0f5a07ad-ae38-49ec-bcfb-93a6edce6376
+api01-1  | 2025-08-17 17:58:56,904 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-3) 📤 Publicando pagamento no Redis (async): {"correlationId":"723cf207-e634-4c28-a0a7-73095f2c4bd6","amount":19.9}
+api01-1  | 2025-08-17 17:58:56,904 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=723cf207-e634-4c28-a0a7-73095f2c4bd6, amount=19.9]
+api01-1  | 2025-08-17 17:58:56,905 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:58:56,906 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 723cf207-e634-4c28-a0a7-73095f2c4bd6
+api03-1  | 2025-08-17 17:58:56,906 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:723cf207-e634-4c28-a0a7-73095f2c4bd6
+api02-1  | 2025-08-17 17:58:57,013 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-4) 📤 Publicando pagamento no Redis (async): {"correlationId":"74425fe2-2c4f-4c73-8df6-0e4f41f28b55","amount":19.9}
+api02-1  | 2025-08-17 17:58:57,014 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=74425fe2-2c4f-4c73-8df6-0e4f41f28b55, amount=19.9]
+api02-1  | 2025-08-17 17:58:57,014 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:58:57,016 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 74425fe2-2c4f-4c73-8df6-0e4f41f28b55
+api03-1  | 2025-08-17 17:58:57,016 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:74425fe2-2c4f-4c73-8df6-0e4f41f28b55
+api01-1  | 2025-08-17 17:58:57,123 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-4) 📤 Publicando pagamento no Redis (async): {"correlationId":"ea86988f-c466-417a-8a06-2c68fca905b2","amount":19.9}
+api01-1  | 2025-08-17 17:58:57,124 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=ea86988f-c466-417a-8a06-2c68fca905b2, amount=19.9]
+api01-1  | 2025-08-17 17:58:57,124 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:58:57,125 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: ea86988f-c466-417a-8a06-2c68fca905b2
+api03-1  | 2025-08-17 17:58:57,126 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:ea86988f-c466-417a-8a06-2c68fca905b2
+api02-1  | 2025-08-17 17:58:57,148 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-5) 📤 Publicando pagamento no Redis (async): {"correlationId":"c563861d-32bf-407e-a9a9-06715d16164c","amount":19.9}
+api02-1  | 2025-08-17 17:58:57,148 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=c563861d-32bf-407e-a9a9-06715d16164c, amount=19.9]
+api02-1  | 2025-08-17 17:58:57,148 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:58:57,150 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: c563861d-32bf-407e-a9a9-06715d16164c
+api03-1  | 2025-08-17 17:58:57,150 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:c563861d-32bf-407e-a9a9-06715d16164c
+api01-1  | 2025-08-17 17:58:57,232 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-5) 📤 Publicando pagamento no Redis (async): {"correlationId":"b7480bf4-0fb2-47d8-a329-26bc83ce8adb","amount":19.9}
+api01-1  | 2025-08-17 17:58:57,233 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=b7480bf4-0fb2-47d8-a329-26bc83ce8adb, amount=19.9]
+api01-1  | 2025-08-17 17:58:57,233 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:58:57,234 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: b7480bf4-0fb2-47d8-a329-26bc83ce8adb
+api03-1  | 2025-08-17 17:58:57,235 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:b7480bf4-0fb2-47d8-a329-26bc83ce8adb
+api02-1  | 2025-08-17 17:58:57,253 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-6) 📤 Publicando pagamento no Redis (async): {"correlationId":"eac32ecb-b1db-4484-9a3d-dc659bb87718","amount":19.9}
+api02-1  | 2025-08-17 17:58:57,254 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=eac32ecb-b1db-4484-9a3d-dc659bb87718, amount=19.9]
+api02-1  | 2025-08-17 17:58:57,254 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:58:57,256 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: eac32ecb-b1db-4484-9a3d-dc659bb87718
+api03-1  | 2025-08-17 17:58:57,256 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:eac32ecb-b1db-4484-9a3d-dc659bb87718
+api01-1  | 2025-08-17 17:58:57,341 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-6) 📤 Publicando pagamento no Redis (async): {"correlationId":"3d7ce774-166c-46f7-be41-53e7a756f534","amount":19.9}
+api01-1  | 2025-08-17 17:58:57,342 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=3d7ce774-166c-46f7-be41-53e7a756f534, amount=19.9]
+api01-1  | 2025-08-17 17:58:57,342 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:58:57,343 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 3d7ce774-166c-46f7-be41-53e7a756f534
+api03-1  | 2025-08-17 17:58:57,343 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:3d7ce774-166c-46f7-be41-53e7a756f534
+api02-1  | 2025-08-17 17:58:57,360 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-7) 📤 Publicando pagamento no Redis (async): {"correlationId":"7e178184-9572-44a9-b61e-92c7ff952117","amount":19.9}
+api02-1  | 2025-08-17 17:58:57,361 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=7e178184-9572-44a9-b61e-92c7ff952117, amount=19.9]
+api02-1  | 2025-08-17 17:58:57,361 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:58:57,362 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 7e178184-9572-44a9-b61e-92c7ff952117
+api03-1  | 2025-08-17 17:58:57,363 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:7e178184-9572-44a9-b61e-92c7ff952117
+api01-1  | 2025-08-17 17:58:57,450 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-7) 📤 Publicando pagamento no Redis (async): {"correlationId":"5ccf7cc8-2d36-4da2-8655-34d73613e7e7","amount":19.9}
+api01-1  | 2025-08-17 17:58:57,451 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=5ccf7cc8-2d36-4da2-8655-34d73613e7e7, amount=19.9]
+api01-1  | 2025-08-17 17:58:57,451 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:58:57,452 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 5ccf7cc8-2d36-4da2-8655-34d73613e7e7
+api03-1  | 2025-08-17 17:58:57,452 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:5ccf7cc8-2d36-4da2-8655-34d73613e7e7
+api02-1  | 2025-08-17 17:58:57,470 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-8) 📤 Publicando pagamento no Redis (async): {"correlationId":"7f66d11c-4090-4b0f-959c-d4a6aaef2272","amount":19.9}
+api02-1  | 2025-08-17 17:58:57,470 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=7f66d11c-4090-4b0f-959c-d4a6aaef2272, amount=19.9]
+api02-1  | 2025-08-17 17:58:57,470 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:58:57,472 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 7f66d11c-4090-4b0f-959c-d4a6aaef2272
+api03-1  | 2025-08-17 17:58:57,472 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:7f66d11c-4090-4b0f-959c-d4a6aaef2272
+api01-1  | 2025-08-17 17:58:57,560 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-8) 📤 Publicando pagamento no Redis (async): {"correlationId":"bb1075a8-4197-4552-8a29-0e7b33912f0f","amount":19.9}
+api01-1  | 2025-08-17 17:58:57,561 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=bb1075a8-4197-4552-8a29-0e7b33912f0f, amount=19.9]
+api01-1  | 2025-08-17 17:58:57,561 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:58:57,562 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: bb1075a8-4197-4552-8a29-0e7b33912f0f
+api03-1  | 2025-08-17 17:58:57,563 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:bb1075a8-4197-4552-8a29-0e7b33912f0f
+api02-1  | 2025-08-17 17:58:57,579 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-9) 📤 Publicando pagamento no Redis (async): {"correlationId":"73a2b77d-5c7b-48ab-b9e6-d939e13c4e0b","amount":19.9}
+api02-1  | 2025-08-17 17:58:57,579 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=73a2b77d-5c7b-48ab-b9e6-d939e13c4e0b, amount=19.9]
+api02-1  | 2025-08-17 17:58:57,579 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:58:57,581 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 73a2b77d-5c7b-48ab-b9e6-d939e13c4e0b
+api03-1  | 2025-08-17 17:58:57,581 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:73a2b77d-5c7b-48ab-b9e6-d939e13c4e0b
+api01-1  | 2025-08-17 17:58:57,670 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-9) 📤 Publicando pagamento no Redis (async): {"correlationId":"e65a1d4f-cd58-4b56-bbdf-ff993b2f9851","amount":19.9}
+api01-1  | 2025-08-17 17:58:57,670 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=e65a1d4f-cd58-4b56-bbdf-ff993b2f9851, amount=19.9]
+api01-1  | 2025-08-17 17:58:57,670 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:58:57,672 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: e65a1d4f-cd58-4b56-bbdf-ff993b2f9851
+api03-1  | 2025-08-17 17:58:57,672 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:e65a1d4f-cd58-4b56-bbdf-ff993b2f9851
+api02-1  | 2025-08-17 17:58:57,689 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-10) 📤 Publicando pagamento no Redis (async): {"correlationId":"41abe8e3-c5ec-4243-9c0a-5f60e976cf3c","amount":19.9}
+api02-1  | 2025-08-17 17:58:57,690 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=41abe8e3-c5ec-4243-9c0a-5f60e976cf3c, amount=19.9]
+api02-1  | 2025-08-17 17:58:57,690 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:58:57,691 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 41abe8e3-c5ec-4243-9c0a-5f60e976cf3c
+api03-1  | 2025-08-17 17:58:57,692 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:41abe8e3-c5ec-4243-9c0a-5f60e976cf3c
+api01-1  | 2025-08-17 17:58:57,779 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-10) 📤 Publicando pagamento no Redis (async): {"correlationId":"7daacc93-861b-4e6b-b265-ed5b2654b251","amount":19.9}
+api01-1  | 2025-08-17 17:58:57,779 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=7daacc93-861b-4e6b-b265-ed5b2654b251, amount=19.9]
+api01-1  | 2025-08-17 17:58:57,779 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:58:57,781 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 7daacc93-861b-4e6b-b265-ed5b2654b251
+api03-1  | 2025-08-17 17:58:57,781 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:7daacc93-861b-4e6b-b265-ed5b2654b251
+api02-1  | 2025-08-17 17:58:57,798 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-11) 📤 Publicando pagamento no Redis (async): {"correlationId":"ffafd047-ddd0-4ca2-aaed-ab01f3835ef8","amount":19.9}
+api02-1  | 2025-08-17 17:58:57,799 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=ffafd047-ddd0-4ca2-aaed-ab01f3835ef8, amount=19.9]
+api02-1  | 2025-08-17 17:58:57,799 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:58:57,800 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: ffafd047-ddd0-4ca2-aaed-ab01f3835ef8
+api03-1  | 2025-08-17 17:58:57,801 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:ffafd047-ddd0-4ca2-aaed-ab01f3835ef8
+api01-1  | 2025-08-17 17:58:57,888 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-11) 📤 Publicando pagamento no Redis (async): {"correlationId":"1c894156-586c-4f3b-9e08-3261700ec469","amount":19.9}
+api01-1  | 2025-08-17 17:58:57,888 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=1c894156-586c-4f3b-9e08-3261700ec469, amount=19.9]
+api01-1  | 2025-08-17 17:58:57,888 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:58:57,890 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 1c894156-586c-4f3b-9e08-3261700ec469
+api03-1  | 2025-08-17 17:58:57,890 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:1c894156-586c-4f3b-9e08-3261700ec469
+api02-1  | 2025-08-17 17:58:57,907 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-12) 📤 Publicando pagamento no Redis (async): {"correlationId":"bdf782c3-82fe-4583-ae90-2af90013c310","amount":19.9}
+api02-1  | 2025-08-17 17:58:57,907 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=bdf782c3-82fe-4583-ae90-2af90013c310, amount=19.9]
+api02-1  | 2025-08-17 17:58:57,908 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:58:57,909 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: bdf782c3-82fe-4583-ae90-2af90013c310
+api03-1  | 2025-08-17 17:58:57,909 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:bdf782c3-82fe-4583-ae90-2af90013c310
+api01-1  | 2025-08-17 17:58:57,997 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-12) 📤 Publicando pagamento no Redis (async): {"correlationId":"405bc4c7-72d8-4c19-8e9b-e4ff60db77c8","amount":19.9}
+api01-1  | 2025-08-17 17:58:57,997 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=405bc4c7-72d8-4c19-8e9b-e4ff60db77c8, amount=19.9]
+api01-1  | 2025-08-17 17:58:57,997 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:58:57,999 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 405bc4c7-72d8-4c19-8e9b-e4ff60db77c8
+api03-1  | 2025-08-17 17:58:57,999 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:405bc4c7-72d8-4c19-8e9b-e4ff60db77c8
+api02-1  | 2025-08-17 17:58:58,016 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-13) 📤 Publicando pagamento no Redis (async): {"correlationId":"3e91ebd3-c4b5-4ec1-8c60-3fb417965b7a","amount":19.9}
+api02-1  | 2025-08-17 17:58:58,017 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=3e91ebd3-c4b5-4ec1-8c60-3fb417965b7a, amount=19.9]
+api02-1  | 2025-08-17 17:58:58,017 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:58:58,018 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 3e91ebd3-c4b5-4ec1-8c60-3fb417965b7a
+api03-1  | 2025-08-17 17:58:58,018 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:3e91ebd3-c4b5-4ec1-8c60-3fb417965b7a
+api01-1  | 2025-08-17 17:58:58,107 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-13) 📤 Publicando pagamento no Redis (async): {"correlationId":"54a0ffa7-2a40-4332-9682-7c6037394b77","amount":19.9}
+api01-1  | 2025-08-17 17:58:58,107 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=54a0ffa7-2a40-4332-9682-7c6037394b77, amount=19.9]
+api01-1  | 2025-08-17 17:58:58,107 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:58:58,109 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 54a0ffa7-2a40-4332-9682-7c6037394b77
+api03-1  | 2025-08-17 17:58:58,109 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:54a0ffa7-2a40-4332-9682-7c6037394b77
+api02-1  | 2025-08-17 17:58:58,126 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-14) 📤 Publicando pagamento no Redis (async): {"correlationId":"36b8919a-ae76-4403-8b35-59ee543b9df0","amount":19.9}
+api02-1  | 2025-08-17 17:58:58,127 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=36b8919a-ae76-4403-8b35-59ee543b9df0, amount=19.9]
+api02-1  | 2025-08-17 17:58:58,127 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:58:58,128 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 36b8919a-ae76-4403-8b35-59ee543b9df0
+api03-1  | 2025-08-17 17:58:58,129 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:36b8919a-ae76-4403-8b35-59ee543b9df0
+api01-1  | 2025-08-17 17:58:58,151 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-14) 📤 Publicando pagamento no Redis (async): {"correlationId":"5a14228b-adc6-41ba-a0c9-29d684f444b4","amount":19.9}
+api01-1  | 2025-08-17 17:58:58,151 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=5a14228b-adc6-41ba-a0c9-29d684f444b4, amount=19.9]
+api01-1  | 2025-08-17 17:58:58,151 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:58:58,152 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 5a14228b-adc6-41ba-a0c9-29d684f444b4
+api03-1  | 2025-08-17 17:58:58,153 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:5a14228b-adc6-41ba-a0c9-29d684f444b4
+api02-1  | 2025-08-17 17:58:58,215 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-15) 📤 Publicando pagamento no Redis (async): {"correlationId":"44753d88-4e39-4896-9f8d-4c2e81bdd3ad","amount":19.9}
+api02-1  | 2025-08-17 17:58:58,216 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=44753d88-4e39-4896-9f8d-4c2e81bdd3ad, amount=19.9]
+api02-1  | 2025-08-17 17:58:58,216 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:58:58,217 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 44753d88-4e39-4896-9f8d-4c2e81bdd3ad
+api03-1  | 2025-08-17 17:58:58,218 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:44753d88-4e39-4896-9f8d-4c2e81bdd3ad
+api01-1  | 2025-08-17 17:58:58,234 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-15) 📤 Publicando pagamento no Redis (async): {"correlationId":"1ff6cd99-7930-4717-bdff-aab79ed06fc9","amount":19.9}
+api01-1  | 2025-08-17 17:58:58,235 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=1ff6cd99-7930-4717-bdff-aab79ed06fc9, amount=19.9]
+api01-1  | 2025-08-17 17:58:58,235 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:58:58,236 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 1ff6cd99-7930-4717-bdff-aab79ed06fc9
+api03-1  | 2025-08-17 17:58:58,237 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:1ff6cd99-7930-4717-bdff-aab79ed06fc9
+api02-1  | 2025-08-17 17:58:58,255 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-16) 📤 Publicando pagamento no Redis (async): {"correlationId":"a3d5026f-ca5d-4716-99e7-b7ecdd68854b","amount":19.9}
+api02-1  | 2025-08-17 17:58:58,257 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=a3d5026f-ca5d-4716-99e7-b7ecdd68854b, amount=19.9]
+api02-1  | 2025-08-17 17:58:58,257 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:58:58,258 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: a3d5026f-ca5d-4716-99e7-b7ecdd68854b
+api03-1  | 2025-08-17 17:58:58,258 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:a3d5026f-ca5d-4716-99e7-b7ecdd68854b
+api01-1  | 2025-08-17 17:58:58,325 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-16) 📤 Publicando pagamento no Redis (async): {"correlationId":"221b5c5b-3b1a-4b14-849e-558410af3ff3","amount":19.9}
+api01-1  | 2025-08-17 17:58:58,326 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=221b5c5b-3b1a-4b14-849e-558410af3ff3, amount=19.9]
+api01-1  | 2025-08-17 17:58:58,326 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:58:58,327 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 221b5c5b-3b1a-4b14-849e-558410af3ff3
+api03-1  | 2025-08-17 17:58:58,328 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:221b5c5b-3b1a-4b14-849e-558410af3ff3
+api02-1  | 2025-08-17 17:58:58,344 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-17) 📤 Publicando pagamento no Redis (async): {"correlationId":"b297e46f-12d7-47f8-a0a6-61408ef79d90","amount":19.9}
+api02-1  | 2025-08-17 17:58:58,345 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=b297e46f-12d7-47f8-a0a6-61408ef79d90, amount=19.9]
+api02-1  | 2025-08-17 17:58:58,345 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:58:58,346 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: b297e46f-12d7-47f8-a0a6-61408ef79d90
+api03-1  | 2025-08-17 17:58:58,346 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:b297e46f-12d7-47f8-a0a6-61408ef79d90
+api01-1  | 2025-08-17 17:58:58,363 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-17) 📤 Publicando pagamento no Redis (async): {"correlationId":"af37eed4-ebf5-44fd-b7e9-f8008b537b8b","amount":19.9}
+api01-1  | 2025-08-17 17:58:58,363 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=af37eed4-ebf5-44fd-b7e9-f8008b537b8b, amount=19.9]
+api01-1  | 2025-08-17 17:58:58,363 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:58:58,364 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: af37eed4-ebf5-44fd-b7e9-f8008b537b8b
+api03-1  | 2025-08-17 17:58:58,365 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:af37eed4-ebf5-44fd-b7e9-f8008b537b8b
+api02-1  | 2025-08-17 17:58:58,434 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-18) 📤 Publicando pagamento no Redis (async): {"correlationId":"626e4327-7a0a-46b4-b534-76a68bb32869","amount":19.9}
+api02-1  | 2025-08-17 17:58:58,435 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=626e4327-7a0a-46b4-b534-76a68bb32869, amount=19.9]
+api02-1  | 2025-08-17 17:58:58,435 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:58:58,436 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 626e4327-7a0a-46b4-b534-76a68bb32869
+api03-1  | 2025-08-17 17:58:58,437 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:626e4327-7a0a-46b4-b534-76a68bb32869
+api01-1  | 2025-08-17 17:58:58,452 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-18) 📤 Publicando pagamento no Redis (async): {"correlationId":"a3e992fe-0c78-45f6-ab01-cd75ebb96376","amount":19.9}
+api01-1  | 2025-08-17 17:58:58,453 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=a3e992fe-0c78-45f6-ab01-cd75ebb96376, amount=19.9]
+api01-1  | 2025-08-17 17:58:58,453 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:58:58,454 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: a3e992fe-0c78-45f6-ab01-cd75ebb96376
+api03-1  | 2025-08-17 17:58:58,455 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:a3e992fe-0c78-45f6-ab01-cd75ebb96376
+api02-1  | 2025-08-17 17:58:58,472 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-19) 📤 Publicando pagamento no Redis (async): {"correlationId":"8ef9275c-6185-4b01-babc-f9cef87a4f19","amount":19.9}
+api02-1  | 2025-08-17 17:58:58,472 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=8ef9275c-6185-4b01-babc-f9cef87a4f19, amount=19.9]
+api02-1  | 2025-08-17 17:58:58,472 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:58:58,474 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 8ef9275c-6185-4b01-babc-f9cef87a4f19
+api03-1  | 2025-08-17 17:58:58,474 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:8ef9275c-6185-4b01-babc-f9cef87a4f19
+api01-1  | 2025-08-17 17:58:58,544 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-19) 📤 Publicando pagamento no Redis (async): {"correlationId":"5594b1a2-0dcb-475c-9165-f41fe74a4e27","amount":19.9}
+api01-1  | 2025-08-17 17:58:58,544 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=5594b1a2-0dcb-475c-9165-f41fe74a4e27, amount=19.9]
+api01-1  | 2025-08-17 17:58:58,544 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:58:58,546 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 5594b1a2-0dcb-475c-9165-f41fe74a4e27
+api03-1  | 2025-08-17 17:58:58,546 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:5594b1a2-0dcb-475c-9165-f41fe74a4e27
+api02-1  | 2025-08-17 17:58:58,563 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-20) 📤 Publicando pagamento no Redis (async): {"correlationId":"287b6bba-e3bf-47eb-856f-bff8aadb8a41","amount":19.9}
+api02-1  | 2025-08-17 17:58:58,563 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=287b6bba-e3bf-47eb-856f-bff8aadb8a41, amount=19.9]
+api02-1  | 2025-08-17 17:58:58,563 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:58:58,564 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 287b6bba-e3bf-47eb-856f-bff8aadb8a41
+api03-1  | 2025-08-17 17:58:58,565 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:287b6bba-e3bf-47eb-856f-bff8aadb8a41
+api01-1  | 2025-08-17 17:58:58,582 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-20) 📤 Publicando pagamento no Redis (async): {"correlationId":"bc216ff1-20b8-40c9-9cbd-686301925841","amount":19.9}
+api01-1  | 2025-08-17 17:58:58,582 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=bc216ff1-20b8-40c9-9cbd-686301925841, amount=19.9]
+api01-1  | 2025-08-17 17:58:58,582 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:58:58,583 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: bc216ff1-20b8-40c9-9cbd-686301925841
+api03-1  | 2025-08-17 17:58:58,584 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:bc216ff1-20b8-40c9-9cbd-686301925841
+api02-1  | 2025-08-17 17:58:58,652 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-21) 📤 Publicando pagamento no Redis (async): {"correlationId":"59a41043-0d70-4af0-940d-c0fc5d96a010","amount":19.9}
+api02-1  | 2025-08-17 17:58:58,653 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=59a41043-0d70-4af0-940d-c0fc5d96a010, amount=19.9]
+api02-1  | 2025-08-17 17:58:58,653 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:58:58,654 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 59a41043-0d70-4af0-940d-c0fc5d96a010
+api03-1  | 2025-08-17 17:58:58,655 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:59a41043-0d70-4af0-940d-c0fc5d96a010
+api01-1  | 2025-08-17 17:58:58,673 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-21) 📤 Publicando pagamento no Redis (async): {"correlationId":"33fe54ac-e5b8-46bb-ac4f-5b002c5ed79a","amount":19.9}
+api01-1  | 2025-08-17 17:58:58,673 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=33fe54ac-e5b8-46bb-ac4f-5b002c5ed79a, amount=19.9]
+api01-1  | 2025-08-17 17:58:58,673 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:58:58,674 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 33fe54ac-e5b8-46bb-ac4f-5b002c5ed79a
+api03-1  | 2025-08-17 17:58:58,675 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:33fe54ac-e5b8-46bb-ac4f-5b002c5ed79a
+api02-1  | 2025-08-17 17:58:58,691 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-22) 📤 Publicando pagamento no Redis (async): {"correlationId":"b765712e-8227-48c9-a03d-d3e5655e669a","amount":19.9}
+api02-1  | 2025-08-17 17:58:58,692 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=b765712e-8227-48c9-a03d-d3e5655e669a, amount=19.9]
+api02-1  | 2025-08-17 17:58:58,692 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:58:58,693 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: b765712e-8227-48c9-a03d-d3e5655e669a
+api03-1  | 2025-08-17 17:58:58,694 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:b765712e-8227-48c9-a03d-d3e5655e669a
+api01-1  | 2025-08-17 17:58:58,762 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-22) 📤 Publicando pagamento no Redis (async): {"correlationId":"164d2592-581e-4142-a5a7-27bc4df59c1e","amount":19.9}
+api01-1  | 2025-08-17 17:58:58,763 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=164d2592-581e-4142-a5a7-27bc4df59c1e, amount=19.9]
+api01-1  | 2025-08-17 17:58:58,763 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:58:58,764 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 164d2592-581e-4142-a5a7-27bc4df59c1e
+api03-1  | 2025-08-17 17:58:58,765 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:164d2592-581e-4142-a5a7-27bc4df59c1e
+api02-1  | 2025-08-17 17:58:58,781 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-23) 📤 Publicando pagamento no Redis (async): {"correlationId":"f833be32-80b4-41e8-8990-3a76cbea3b80","amount":19.9}
+api02-1  | 2025-08-17 17:58:58,782 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=f833be32-80b4-41e8-8990-3a76cbea3b80, amount=19.9]
+api02-1  | 2025-08-17 17:58:58,782 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:58:58,783 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: f833be32-80b4-41e8-8990-3a76cbea3b80
+api03-1  | 2025-08-17 17:58:58,784 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:f833be32-80b4-41e8-8990-3a76cbea3b80
+api01-1  | 2025-08-17 17:58:58,801 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-23) 📤 Publicando pagamento no Redis (async): {"correlationId":"e809e454-f3c5-4703-a2c6-735ffaf61050","amount":19.9}
+api01-1  | 2025-08-17 17:58:58,801 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=e809e454-f3c5-4703-a2c6-735ffaf61050, amount=19.9]
+api01-1  | 2025-08-17 17:58:58,801 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:58:58,803 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: e809e454-f3c5-4703-a2c6-735ffaf61050
+api03-1  | 2025-08-17 17:58:58,803 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:e809e454-f3c5-4703-a2c6-735ffaf61050
+api02-1  | 2025-08-17 17:58:58,872 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-24) 📤 Publicando pagamento no Redis (async): {"correlationId":"9d9ec640-3149-4b77-a105-872e0c352d5e","amount":19.9}
+api02-1  | 2025-08-17 17:58:58,872 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=9d9ec640-3149-4b77-a105-872e0c352d5e, amount=19.9]
+api02-1  | 2025-08-17 17:58:58,872 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:58:58,873 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 9d9ec640-3149-4b77-a105-872e0c352d5e
+api03-1  | 2025-08-17 17:58:58,874 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:9d9ec640-3149-4b77-a105-872e0c352d5e
+api01-1  | 2025-08-17 17:58:58,891 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-24) 📤 Publicando pagamento no Redis (async): {"correlationId":"be8b5dbb-01db-4745-8c3b-fd692a30f4dd","amount":19.9}
+api01-1  | 2025-08-17 17:58:58,891 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=be8b5dbb-01db-4745-8c3b-fd692a30f4dd, amount=19.9]
+api01-1  | 2025-08-17 17:58:58,891 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:58:58,893 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: be8b5dbb-01db-4745-8c3b-fd692a30f4dd
+api03-1  | 2025-08-17 17:58:58,893 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:be8b5dbb-01db-4745-8c3b-fd692a30f4dd
+api02-1  | 2025-08-17 17:58:58,910 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-25) 📤 Publicando pagamento no Redis (async): {"correlationId":"d16d48d9-d3dc-444b-9594-0abda67ccffb","amount":19.9}
+api02-1  | 2025-08-17 17:58:58,911 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=d16d48d9-d3dc-444b-9594-0abda67ccffb, amount=19.9]
+api02-1  | 2025-08-17 17:58:58,911 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:58:58,912 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: d16d48d9-d3dc-444b-9594-0abda67ccffb
+api03-1  | 2025-08-17 17:58:58,913 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:d16d48d9-d3dc-444b-9594-0abda67ccffb
+api01-1  | 2025-08-17 17:58:58,981 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-25) 📤 Publicando pagamento no Redis (async): {"correlationId":"6eda43f7-e929-499f-b451-38d04c128053","amount":19.9}
+api01-1  | 2025-08-17 17:58:58,981 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=6eda43f7-e929-499f-b451-38d04c128053, amount=19.9]
+api01-1  | 2025-08-17 17:58:58,981 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:58:58,983 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 6eda43f7-e929-499f-b451-38d04c128053
+api03-1  | 2025-08-17 17:58:58,983 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:6eda43f7-e929-499f-b451-38d04c128053
+api02-1  | 2025-08-17 17:58:59,000 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-26) 📤 Publicando pagamento no Redis (async): {"correlationId":"dd6a5e4f-51aa-4bf9-861f-e0495d9731e8","amount":19.9}
+api02-1  | 2025-08-17 17:58:59,001 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=dd6a5e4f-51aa-4bf9-861f-e0495d9731e8, amount=19.9]
+api02-1  | 2025-08-17 17:58:59,001 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:58:59,002 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: dd6a5e4f-51aa-4bf9-861f-e0495d9731e8
+api03-1  | 2025-08-17 17:58:59,003 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:dd6a5e4f-51aa-4bf9-861f-e0495d9731e8
+api01-1  | 2025-08-17 17:58:59,019 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-26) 📤 Publicando pagamento no Redis (async): {"correlationId":"7a1a7456-3bad-4036-9ce6-8f49041fd4f1","amount":19.9}
+api01-1  | 2025-08-17 17:58:59,019 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=7a1a7456-3bad-4036-9ce6-8f49041fd4f1, amount=19.9]
+api01-1  | 2025-08-17 17:58:59,019 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:58:59,021 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 7a1a7456-3bad-4036-9ce6-8f49041fd4f1
+api03-1  | 2025-08-17 17:58:59,021 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:7a1a7456-3bad-4036-9ce6-8f49041fd4f1
+api02-1  | 2025-08-17 17:58:59,091 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-27) 📤 Publicando pagamento no Redis (async): {"correlationId":"efb68a97-369e-4b01-9734-f902d47b6a09","amount":19.9}
+api02-1  | 2025-08-17 17:58:59,091 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=efb68a97-369e-4b01-9734-f902d47b6a09, amount=19.9]
+api02-1  | 2025-08-17 17:58:59,091 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:58:59,092 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: efb68a97-369e-4b01-9734-f902d47b6a09
+api03-1  | 2025-08-17 17:58:59,093 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:efb68a97-369e-4b01-9734-f902d47b6a09
+api01-1  | 2025-08-17 17:58:59,110 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-27) 📤 Publicando pagamento no Redis (async): {"correlationId":"4ec0d3e0-5a86-4f36-bbdd-f54d6c55ddc4","amount":19.9}
+api01-1  | 2025-08-17 17:58:59,110 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=4ec0d3e0-5a86-4f36-bbdd-f54d6c55ddc4, amount=19.9]
+api01-1  | 2025-08-17 17:58:59,110 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:58:59,112 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 4ec0d3e0-5a86-4f36-bbdd-f54d6c55ddc4
+api03-1  | 2025-08-17 17:58:59,112 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:4ec0d3e0-5a86-4f36-bbdd-f54d6c55ddc4
+api02-1  | 2025-08-17 17:58:59,129 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-28) 📤 Publicando pagamento no Redis (async): {"correlationId":"0f1fa62c-752d-4882-934a-6846a3b61b22","amount":19.9}
+api02-1  | 2025-08-17 17:58:59,129 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=0f1fa62c-752d-4882-934a-6846a3b61b22, amount=19.9]
+api02-1  | 2025-08-17 17:58:59,130 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:58:59,131 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 0f1fa62c-752d-4882-934a-6846a3b61b22
+api03-1  | 2025-08-17 17:58:59,131 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:0f1fa62c-752d-4882-934a-6846a3b61b22
+api01-1  | 2025-08-17 17:58:59,153 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-28) 📤 Publicando pagamento no Redis (async): {"correlationId":"d5044943-42b8-44ee-b53d-f4a8ed82d1e5","amount":19.9}
+api01-1  | 2025-08-17 17:58:59,154 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=d5044943-42b8-44ee-b53d-f4a8ed82d1e5, amount=19.9]
+api01-1  | 2025-08-17 17:58:59,154 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:58:59,155 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: d5044943-42b8-44ee-b53d-f4a8ed82d1e5
+api03-1  | 2025-08-17 17:58:59,156 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:d5044943-42b8-44ee-b53d-f4a8ed82d1e5
+api02-1  | 2025-08-17 17:58:59,199 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-29) 📤 Publicando pagamento no Redis (async): {"correlationId":"bc65306f-16ea-4901-bcfa-b8705a07938e","amount":19.9}
+api02-1  | 2025-08-17 17:58:59,200 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=bc65306f-16ea-4901-bcfa-b8705a07938e, amount=19.9]
+api02-1  | 2025-08-17 17:58:59,200 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:58:59,205 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: bc65306f-16ea-4901-bcfa-b8705a07938e
+api03-1  | 2025-08-17 17:58:59,206 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:bc65306f-16ea-4901-bcfa-b8705a07938e
+api01-1  | 2025-08-17 17:58:59,219 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-29) 📤 Publicando pagamento no Redis (async): {"correlationId":"c5640261-f5a4-4113-af01-01dc95ee2ea9","amount":19.9}
+api01-1  | 2025-08-17 17:58:59,219 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=c5640261-f5a4-4113-af01-01dc95ee2ea9, amount=19.9]
+api01-1  | 2025-08-17 17:58:59,219 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:58:59,220 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: c5640261-f5a4-4113-af01-01dc95ee2ea9
+api03-1  | 2025-08-17 17:58:59,221 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:c5640261-f5a4-4113-af01-01dc95ee2ea9
+api02-1  | 2025-08-17 17:58:59,238 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-30) 📤 Publicando pagamento no Redis (async): {"correlationId":"0b3d3d80-5107-4732-9f23-39fe717cfa35","amount":19.9}
+api02-1  | 2025-08-17 17:58:59,238 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=0b3d3d80-5107-4732-9f23-39fe717cfa35, amount=19.9]
+api02-1  | 2025-08-17 17:58:59,238 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:58:59,240 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 0b3d3d80-5107-4732-9f23-39fe717cfa35
+api03-1  | 2025-08-17 17:58:59,240 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:0b3d3d80-5107-4732-9f23-39fe717cfa35
+api01-1  | 2025-08-17 17:58:59,258 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-30) 📤 Publicando pagamento no Redis (async): {"correlationId":"05b740c8-9604-4509-a007-31d56ad66aff","amount":19.9}
+api01-1  | 2025-08-17 17:58:59,259 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=05b740c8-9604-4509-a007-31d56ad66aff, amount=19.9]
+api01-1  | 2025-08-17 17:58:59,259 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:58:59,260 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 05b740c8-9604-4509-a007-31d56ad66aff
+api03-1  | 2025-08-17 17:58:59,261 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:05b740c8-9604-4509-a007-31d56ad66aff
+api02-1  | 2025-08-17 17:58:59,309 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-31) 📤 Publicando pagamento no Redis (async): {"correlationId":"54d75861-4377-4e9f-94fd-8f57fa8b1713","amount":19.9}
+api02-1  | 2025-08-17 17:58:59,309 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=54d75861-4377-4e9f-94fd-8f57fa8b1713, amount=19.9]
+api02-1  | 2025-08-17 17:58:59,309 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:58:59,311 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 54d75861-4377-4e9f-94fd-8f57fa8b1713
+api03-1  | 2025-08-17 17:58:59,311 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:54d75861-4377-4e9f-94fd-8f57fa8b1713
+api01-1  | 2025-08-17 17:58:59,328 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-31) 📤 Publicando pagamento no Redis (async): {"correlationId":"f438d796-db34-480b-adc7-425e360ee043","amount":19.9}
+api01-1  | 2025-08-17 17:58:59,329 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=f438d796-db34-480b-adc7-425e360ee043, amount=19.9]
+api01-1  | 2025-08-17 17:58:59,329 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:58:59,330 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: f438d796-db34-480b-adc7-425e360ee043
+api03-1  | 2025-08-17 17:58:59,330 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:f438d796-db34-480b-adc7-425e360ee043
+api02-1  | 2025-08-17 17:58:59,347 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-32) 📤 Publicando pagamento no Redis (async): {"correlationId":"c2ca6501-5bd5-437e-bd9e-da4bf35fd36b","amount":19.9}
+api02-1  | 2025-08-17 17:58:59,348 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=c2ca6501-5bd5-437e-bd9e-da4bf35fd36b, amount=19.9]
+api02-1  | 2025-08-17 17:58:59,348 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:58:59,349 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: c2ca6501-5bd5-437e-bd9e-da4bf35fd36b
+api03-1  | 2025-08-17 17:58:59,350 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:c2ca6501-5bd5-437e-bd9e-da4bf35fd36b
+api01-1  | 2025-08-17 17:58:59,365 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-32) 📤 Publicando pagamento no Redis (async): {"correlationId":"f648bc79-d373-4615-910c-f939873f932e","amount":19.9}
+api01-1  | 2025-08-17 17:58:59,365 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=f648bc79-d373-4615-910c-f939873f932e, amount=19.9]
+api01-1  | 2025-08-17 17:58:59,365 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:58:59,367 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: f648bc79-d373-4615-910c-f939873f932e
+api03-1  | 2025-08-17 17:58:59,367 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:f648bc79-d373-4615-910c-f939873f932e
+api02-1  | 2025-08-17 17:58:59,418 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-33) 📤 Publicando pagamento no Redis (async): {"correlationId":"f844d5a5-68c9-431f-92ef-60c91a5d8865","amount":19.9}
+api02-1  | 2025-08-17 17:58:59,418 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=f844d5a5-68c9-431f-92ef-60c91a5d8865, amount=19.9]
+api02-1  | 2025-08-17 17:58:59,418 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:58:59,420 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: f844d5a5-68c9-431f-92ef-60c91a5d8865
+api03-1  | 2025-08-17 17:58:59,420 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:f844d5a5-68c9-431f-92ef-60c91a5d8865
+api01-1  | 2025-08-17 17:58:59,437 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-33) 📤 Publicando pagamento no Redis (async): {"correlationId":"27599095-ffe7-42f9-aaaf-e910cc87f440","amount":19.9}
+api01-1  | 2025-08-17 17:58:59,437 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=27599095-ffe7-42f9-aaaf-e910cc87f440, amount=19.9]
+api01-1  | 2025-08-17 17:58:59,438 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:58:59,439 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 27599095-ffe7-42f9-aaaf-e910cc87f440
+api03-1  | 2025-08-17 17:58:59,439 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:27599095-ffe7-42f9-aaaf-e910cc87f440
+api02-1  | 2025-08-17 17:58:59,455 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-34) 📤 Publicando pagamento no Redis (async): {"correlationId":"fbcc1d79-2184-4b4f-80da-2c34a5c110d3","amount":19.9}
+api02-1  | 2025-08-17 17:58:59,456 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=fbcc1d79-2184-4b4f-80da-2c34a5c110d3, amount=19.9]
+api02-1  | 2025-08-17 17:58:59,456 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:58:59,457 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: fbcc1d79-2184-4b4f-80da-2c34a5c110d3
+api03-1  | 2025-08-17 17:58:59,457 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:fbcc1d79-2184-4b4f-80da-2c34a5c110d3
+api01-1  | 2025-08-17 17:58:59,475 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-34) 📤 Publicando pagamento no Redis (async): {"correlationId":"fe90c52e-4498-4126-b861-d2860c43c033","amount":19.9}
+api01-1  | 2025-08-17 17:58:59,475 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=fe90c52e-4498-4126-b861-d2860c43c033, amount=19.9]
+api01-1  | 2025-08-17 17:58:59,475 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:58:59,476 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: fe90c52e-4498-4126-b861-d2860c43c033
+api03-1  | 2025-08-17 17:58:59,477 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:fe90c52e-4498-4126-b861-d2860c43c033
+api02-1  | 2025-08-17 17:58:59,527 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-35) 📤 Publicando pagamento no Redis (async): {"correlationId":"507f6c27-2337-4888-90b8-7418a7f9c1bf","amount":19.9}
+api02-1  | 2025-08-17 17:58:59,528 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=507f6c27-2337-4888-90b8-7418a7f9c1bf, amount=19.9]
+api02-1  | 2025-08-17 17:58:59,528 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:58:59,529 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 507f6c27-2337-4888-90b8-7418a7f9c1bf
+api03-1  | 2025-08-17 17:58:59,529 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:507f6c27-2337-4888-90b8-7418a7f9c1bf
+api01-1  | 2025-08-17 17:58:59,546 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-35) 📤 Publicando pagamento no Redis (async): {"correlationId":"578bf209-e8a4-495f-a3cb-ff423a2148b8","amount":19.9}
+api01-1  | 2025-08-17 17:58:59,547 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=578bf209-e8a4-495f-a3cb-ff423a2148b8, amount=19.9]
+api01-1  | 2025-08-17 17:58:59,547 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:58:59,548 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 578bf209-e8a4-495f-a3cb-ff423a2148b8
+api03-1  | 2025-08-17 17:58:59,548 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:578bf209-e8a4-495f-a3cb-ff423a2148b8
+api02-1  | 2025-08-17 17:58:59,566 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-36) 📤 Publicando pagamento no Redis (async): {"correlationId":"6d86f9e0-6a17-4f1a-97de-03458e56b931","amount":19.9}
+api02-1  | 2025-08-17 17:58:59,566 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=6d86f9e0-6a17-4f1a-97de-03458e56b931, amount=19.9]
+api02-1  | 2025-08-17 17:58:59,566 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:58:59,567 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 6d86f9e0-6a17-4f1a-97de-03458e56b931
+api03-1  | 2025-08-17 17:58:59,568 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:6d86f9e0-6a17-4f1a-97de-03458e56b931
+api01-1  | 2025-08-17 17:58:59,585 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-36) 📤 Publicando pagamento no Redis (async): {"correlationId":"95e1055f-c11f-4771-bf08-33b720bb47f9","amount":19.9}
+api01-1  | 2025-08-17 17:58:59,585 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=95e1055f-c11f-4771-bf08-33b720bb47f9, amount=19.9]
+api01-1  | 2025-08-17 17:58:59,585 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:58:59,587 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 95e1055f-c11f-4771-bf08-33b720bb47f9
+api03-1  | 2025-08-17 17:58:59,587 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:95e1055f-c11f-4771-bf08-33b720bb47f9
+api02-1  | 2025-08-17 17:58:59,637 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-37) 📤 Publicando pagamento no Redis (async): {"correlationId":"82e3081c-15a1-4e16-8eb9-5c47f86e9189","amount":19.9}
+api02-1  | 2025-08-17 17:58:59,637 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=82e3081c-15a1-4e16-8eb9-5c47f86e9189, amount=19.9]
+api02-1  | 2025-08-17 17:58:59,637 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:58:59,638 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 82e3081c-15a1-4e16-8eb9-5c47f86e9189
+api03-1  | 2025-08-17 17:58:59,639 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:82e3081c-15a1-4e16-8eb9-5c47f86e9189
+api01-1  | 2025-08-17 17:58:59,654 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-37) 📤 Publicando pagamento no Redis (async): {"correlationId":"87881bf8-3b90-4d79-906a-be6cdf39de09","amount":19.9}
+api01-1  | 2025-08-17 17:58:59,655 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=87881bf8-3b90-4d79-906a-be6cdf39de09, amount=19.9]
+api01-1  | 2025-08-17 17:58:59,655 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:58:59,656 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 87881bf8-3b90-4d79-906a-be6cdf39de09
+api03-1  | 2025-08-17 17:58:59,657 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:87881bf8-3b90-4d79-906a-be6cdf39de09
+api02-1  | 2025-08-17 17:58:59,675 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-38) 📤 Publicando pagamento no Redis (async): {"correlationId":"b007b4a5-acda-4560-bc39-436e071d76f7","amount":19.9}
+api02-1  | 2025-08-17 17:58:59,675 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=b007b4a5-acda-4560-bc39-436e071d76f7, amount=19.9]
+api02-1  | 2025-08-17 17:58:59,675 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:58:59,677 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: b007b4a5-acda-4560-bc39-436e071d76f7
+api03-1  | 2025-08-17 17:58:59,677 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:b007b4a5-acda-4560-bc39-436e071d76f7
+api01-1  | 2025-08-17 17:58:59,694 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-38) 📤 Publicando pagamento no Redis (async): {"correlationId":"b7ba73d6-69b6-4589-b3b2-74b5899b85b0","amount":19.9}
+api01-1  | 2025-08-17 17:58:59,694 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=b7ba73d6-69b6-4589-b3b2-74b5899b85b0, amount=19.9]
+api01-1  | 2025-08-17 17:58:59,695 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:58:59,696 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: b7ba73d6-69b6-4589-b3b2-74b5899b85b0
+api03-1  | 2025-08-17 17:58:59,696 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:b7ba73d6-69b6-4589-b3b2-74b5899b85b0
+api02-1  | 2025-08-17 17:58:59,746 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-39) 📤 Publicando pagamento no Redis (async): {"correlationId":"4a7c8ca5-6f78-4373-bb13-dae148ec72ef","amount":19.9}
+api02-1  | 2025-08-17 17:58:59,746 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=4a7c8ca5-6f78-4373-bb13-dae148ec72ef, amount=19.9]
+api02-1  | 2025-08-17 17:58:59,746 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:58:59,748 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 4a7c8ca5-6f78-4373-bb13-dae148ec72ef
+api03-1  | 2025-08-17 17:58:59,748 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:4a7c8ca5-6f78-4373-bb13-dae148ec72ef
+api01-1  | 2025-08-17 17:58:59,764 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-39) 📤 Publicando pagamento no Redis (async): {"correlationId":"f15105a2-bba4-43ed-8da1-37abd01e291a","amount":19.9}
+api01-1  | 2025-08-17 17:58:59,765 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=f15105a2-bba4-43ed-8da1-37abd01e291a, amount=19.9]
+api01-1  | 2025-08-17 17:58:59,765 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:58:59,766 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: f15105a2-bba4-43ed-8da1-37abd01e291a
+api03-1  | 2025-08-17 17:58:59,767 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:f15105a2-bba4-43ed-8da1-37abd01e291a
+api02-1  | 2025-08-17 17:58:59,785 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-40) 📤 Publicando pagamento no Redis (async): {"correlationId":"9c2e068b-0e46-4bdb-99f8-16d3ea8c5203","amount":19.9}
+api02-1  | 2025-08-17 17:58:59,785 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=9c2e068b-0e46-4bdb-99f8-16d3ea8c5203, amount=19.9]
+api02-1  | 2025-08-17 17:58:59,785 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:58:59,787 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 9c2e068b-0e46-4bdb-99f8-16d3ea8c5203
+api03-1  | 2025-08-17 17:58:59,787 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:9c2e068b-0e46-4bdb-99f8-16d3ea8c5203
+api01-1  | 2025-08-17 17:58:59,804 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-40) 📤 Publicando pagamento no Redis (async): {"correlationId":"2b7d6ad7-a61f-44c3-8551-3c8addc10619","amount":19.9}
+api01-1  | 2025-08-17 17:58:59,804 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=2b7d6ad7-a61f-44c3-8551-3c8addc10619, amount=19.9]
+api01-1  | 2025-08-17 17:58:59,804 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:58:59,805 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 2b7d6ad7-a61f-44c3-8551-3c8addc10619
+api03-1  | 2025-08-17 17:58:59,806 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:2b7d6ad7-a61f-44c3-8551-3c8addc10619
+api02-1  | 2025-08-17 17:58:59,855 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-41) 📤 Publicando pagamento no Redis (async): {"correlationId":"d5392c1c-375a-40ea-9143-819923259e2d","amount":19.9}
+api02-1  | 2025-08-17 17:58:59,856 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=d5392c1c-375a-40ea-9143-819923259e2d, amount=19.9]
+api02-1  | 2025-08-17 17:58:59,856 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:58:59,857 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: d5392c1c-375a-40ea-9143-819923259e2d
+api03-1  | 2025-08-17 17:58:59,857 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:d5392c1c-375a-40ea-9143-819923259e2d
+api01-1  | 2025-08-17 17:58:59,874 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-41) 📤 Publicando pagamento no Redis (async): {"correlationId":"175b8264-73e3-4907-9647-c3134dbaff3f","amount":19.9}
+api01-1  | 2025-08-17 17:58:59,875 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=175b8264-73e3-4907-9647-c3134dbaff3f, amount=19.9]
+api01-1  | 2025-08-17 17:58:59,875 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:58:59,876 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 175b8264-73e3-4907-9647-c3134dbaff3f
+api03-1  | 2025-08-17 17:58:59,876 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:175b8264-73e3-4907-9647-c3134dbaff3f
+api02-1  | 2025-08-17 17:58:59,893 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-42) 📤 Publicando pagamento no Redis (async): {"correlationId":"4bf0b61c-64dd-4ac9-bce3-25c828b67182","amount":19.9}
+api02-1  | 2025-08-17 17:58:59,894 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=4bf0b61c-64dd-4ac9-bce3-25c828b67182, amount=19.9]
+api02-1  | 2025-08-17 17:58:59,894 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:58:59,895 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 4bf0b61c-64dd-4ac9-bce3-25c828b67182
+api03-1  | 2025-08-17 17:58:59,895 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:4bf0b61c-64dd-4ac9-bce3-25c828b67182
+api01-1  | 2025-08-17 17:58:59,912 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-42) 📤 Publicando pagamento no Redis (async): {"correlationId":"3168e1f2-5b33-4d17-9dbf-79db77492879","amount":19.9}
+api01-1  | 2025-08-17 17:58:59,913 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=3168e1f2-5b33-4d17-9dbf-79db77492879, amount=19.9]
+api01-1  | 2025-08-17 17:58:59,913 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:58:59,914 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 3168e1f2-5b33-4d17-9dbf-79db77492879
+api03-1  | 2025-08-17 17:58:59,914 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:3168e1f2-5b33-4d17-9dbf-79db77492879
+api02-1  | 2025-08-17 17:58:59,965 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-43) 📤 Publicando pagamento no Redis (async): {"correlationId":"c9f0d836-c2b9-4013-873c-fac91134e9d6","amount":19.9}
+api02-1  | 2025-08-17 17:58:59,965 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=c9f0d836-c2b9-4013-873c-fac91134e9d6, amount=19.9]
+api02-1  | 2025-08-17 17:58:59,965 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:58:59,966 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: c9f0d836-c2b9-4013-873c-fac91134e9d6
+api03-1  | 2025-08-17 17:58:59,967 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:c9f0d836-c2b9-4013-873c-fac91134e9d6
+api01-1  | 2025-08-17 17:58:59,983 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-43) 📤 Publicando pagamento no Redis (async): {"correlationId":"5662dff0-61a8-4db6-b9b4-3518a81b2eb0","amount":19.9}
+api01-1  | 2025-08-17 17:58:59,984 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=5662dff0-61a8-4db6-b9b4-3518a81b2eb0, amount=19.9]
+api01-1  | 2025-08-17 17:58:59,984 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:58:59,985 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 5662dff0-61a8-4db6-b9b4-3518a81b2eb0
+api03-1  | 2025-08-17 17:58:59,985 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:5662dff0-61a8-4db6-b9b4-3518a81b2eb0
+api02-1  | 2025-08-17 17:59:00,002 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-44) 📤 Publicando pagamento no Redis (async): {"correlationId":"b963b69c-86ca-4e77-9801-455af3929fc9","amount":19.9}
+api02-1  | 2025-08-17 17:59:00,002 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=b963b69c-86ca-4e77-9801-455af3929fc9, amount=19.9]
+api02-1  | 2025-08-17 17:59:00,002 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:59:00,003 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: b963b69c-86ca-4e77-9801-455af3929fc9
+api03-1  | 2025-08-17 17:59:00,004 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:b963b69c-86ca-4e77-9801-455af3929fc9
+api01-1  | 2025-08-17 17:59:00,021 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-44) 📤 Publicando pagamento no Redis (async): {"correlationId":"ea86a7d0-efb1-4dae-b82a-5517d02bad5d","amount":19.9}
+api01-1  | 2025-08-17 17:59:00,022 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=ea86a7d0-efb1-4dae-b82a-5517d02bad5d, amount=19.9]
+api01-1  | 2025-08-17 17:59:00,022 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:59:00,023 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: ea86a7d0-efb1-4dae-b82a-5517d02bad5d
+api03-1  | 2025-08-17 17:59:00,023 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:ea86a7d0-efb1-4dae-b82a-5517d02bad5d
+api02-1  | 2025-08-17 17:59:00,074 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-45) 📤 Publicando pagamento no Redis (async): {"correlationId":"bd35a75d-3fd2-44d7-b729-d031c206708d","amount":19.9}
+api02-1  | 2025-08-17 17:59:00,074 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=bd35a75d-3fd2-44d7-b729-d031c206708d, amount=19.9]
+api02-1  | 2025-08-17 17:59:00,074 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:59:00,075 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: bd35a75d-3fd2-44d7-b729-d031c206708d
+api03-1  | 2025-08-17 17:59:00,076 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:bd35a75d-3fd2-44d7-b729-d031c206708d
+api01-1  | 2025-08-17 17:59:00,093 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-45) 📤 Publicando pagamento no Redis (async): {"correlationId":"537d6baf-8dee-4d39-a11e-ae183cc2f2b4","amount":19.9}
+api01-1  | 2025-08-17 17:59:00,094 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=537d6baf-8dee-4d39-a11e-ae183cc2f2b4, amount=19.9]
+api01-1  | 2025-08-17 17:59:00,094 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:59:00,095 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 537d6baf-8dee-4d39-a11e-ae183cc2f2b4
+api03-1  | 2025-08-17 17:59:00,095 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:537d6baf-8dee-4d39-a11e-ae183cc2f2b4
+api02-1  | 2025-08-17 17:59:00,112 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-46) 📤 Publicando pagamento no Redis (async): {"correlationId":"896abf39-ef6b-430c-b26f-339f3a015d8a","amount":19.9}
+api02-1  | 2025-08-17 17:59:00,113 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=896abf39-ef6b-430c-b26f-339f3a015d8a, amount=19.9]
+api02-1  | 2025-08-17 17:59:00,113 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:59:00,114 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 896abf39-ef6b-430c-b26f-339f3a015d8a
+api03-1  | 2025-08-17 17:59:00,114 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:896abf39-ef6b-430c-b26f-339f3a015d8a
+api01-1  | 2025-08-17 17:59:00,131 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-46) 📤 Publicando pagamento no Redis (async): {"correlationId":"59cf07ac-5135-4334-97df-a012bef2666c","amount":19.9}
+api01-1  | 2025-08-17 17:59:00,131 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=59cf07ac-5135-4334-97df-a012bef2666c, amount=19.9]
+api01-1  | 2025-08-17 17:59:00,131 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:59:00,133 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 59cf07ac-5135-4334-97df-a012bef2666c
+api03-1  | 2025-08-17 17:59:00,133 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:59cf07ac-5135-4334-97df-a012bef2666c
+api02-1  | 2025-08-17 17:59:00,156 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-47) 📤 Publicando pagamento no Redis (async): {"correlationId":"2d44ef34-a0ed-4cba-9167-864b2912ed04","amount":19.9}
+api02-1  | 2025-08-17 17:59:00,157 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=2d44ef34-a0ed-4cba-9167-864b2912ed04, amount=19.9]
+api02-1  | 2025-08-17 17:59:00,157 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:59:00,157 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 2d44ef34-a0ed-4cba-9167-864b2912ed04
+api03-1  | 2025-08-17 17:59:00,158 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:2d44ef34-a0ed-4cba-9167-864b2912ed04
+api01-1  | 2025-08-17 17:59:00,183 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-47) 📤 Publicando pagamento no Redis (async): {"correlationId":"0400465c-00df-4f12-a243-d635ac50e199","amount":19.9}
+api01-1  | 2025-08-17 17:59:00,184 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=0400465c-00df-4f12-a243-d635ac50e199, amount=19.9]
+api01-1  | 2025-08-17 17:59:00,184 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:59:00,185 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 0400465c-00df-4f12-a243-d635ac50e199
+api03-1  | 2025-08-17 17:59:00,185 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:0400465c-00df-4f12-a243-d635ac50e199
+api02-1  | 2025-08-17 17:59:00,201 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-48) 📤 Publicando pagamento no Redis (async): {"correlationId":"82847c14-4fb8-432d-bfd3-53dd1b2dd96f","amount":19.9}
+api02-1  | 2025-08-17 17:59:00,201 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=82847c14-4fb8-432d-bfd3-53dd1b2dd96f, amount=19.9]
+api02-1  | 2025-08-17 17:59:00,202 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:59:00,203 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 82847c14-4fb8-432d-bfd3-53dd1b2dd96f
+api03-1  | 2025-08-17 17:59:00,203 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:82847c14-4fb8-432d-bfd3-53dd1b2dd96f
+api01-1  | 2025-08-17 17:59:00,221 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-48) 📤 Publicando pagamento no Redis (async): {"correlationId":"4e9c872a-b924-4617-befe-70a13218e505","amount":19.9}
+api01-1  | 2025-08-17 17:59:00,221 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=4e9c872a-b924-4617-befe-70a13218e505, amount=19.9]
+api01-1  | 2025-08-17 17:59:00,221 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:59:00,222 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 4e9c872a-b924-4617-befe-70a13218e505
+api03-1  | 2025-08-17 17:59:00,223 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:4e9c872a-b924-4617-befe-70a13218e505
+api02-1  | 2025-08-17 17:59:00,240 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-49) 📤 Publicando pagamento no Redis (async): {"correlationId":"93487172-f191-46fe-8eed-80006f357ad5","amount":19.9}
+api02-1  | 2025-08-17 17:59:00,240 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=93487172-f191-46fe-8eed-80006f357ad5, amount=19.9]
+api02-1  | 2025-08-17 17:59:00,240 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:59:00,242 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 93487172-f191-46fe-8eed-80006f357ad5
+api03-1  | 2025-08-17 17:59:00,242 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:93487172-f191-46fe-8eed-80006f357ad5
+api01-1  | 2025-08-17 17:59:00,261 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-49) 📤 Publicando pagamento no Redis (async): {"correlationId":"12e7ba19-c404-40e0-873b-4e2aab42b025","amount":19.9}
+api01-1  | 2025-08-17 17:59:00,262 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=12e7ba19-c404-40e0-873b-4e2aab42b025, amount=19.9]
+api01-1  | 2025-08-17 17:59:00,262 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:59:00,263 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 12e7ba19-c404-40e0-873b-4e2aab42b025
+api03-1  | 2025-08-17 17:59:00,263 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:12e7ba19-c404-40e0-873b-4e2aab42b025
+api02-1  | 2025-08-17 17:59:00,292 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-50) 📤 Publicando pagamento no Redis (async): {"correlationId":"36c488ad-a8c8-43e5-851f-7b80480e6f04","amount":19.9}
+api02-1  | 2025-08-17 17:59:00,293 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=36c488ad-a8c8-43e5-851f-7b80480e6f04, amount=19.9]
+api02-1  | 2025-08-17 17:59:00,293 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:59:00,294 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 36c488ad-a8c8-43e5-851f-7b80480e6f04
+api03-1  | 2025-08-17 17:59:00,294 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:36c488ad-a8c8-43e5-851f-7b80480e6f04
+api01-1  | 2025-08-17 17:59:00,311 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-50) 📤 Publicando pagamento no Redis (async): {"correlationId":"5982cca6-433f-48d2-9026-2a8cfe7c1dbe","amount":19.9}
+api01-1  | 2025-08-17 17:59:00,312 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=5982cca6-433f-48d2-9026-2a8cfe7c1dbe, amount=19.9]
+api01-1  | 2025-08-17 17:59:00,312 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:59:00,313 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 5982cca6-433f-48d2-9026-2a8cfe7c1dbe
+api03-1  | 2025-08-17 17:59:00,313 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:5982cca6-433f-48d2-9026-2a8cfe7c1dbe
+api02-1  | 2025-08-17 17:59:00,331 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-51) 📤 Publicando pagamento no Redis (async): {"correlationId":"9cc7103c-aa40-4045-8c61-3f67e18218e0","amount":19.9}
+api02-1  | 2025-08-17 17:59:00,331 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=9cc7103c-aa40-4045-8c61-3f67e18218e0, amount=19.9]
+api02-1  | 2025-08-17 17:59:00,331 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:59:00,332 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 9cc7103c-aa40-4045-8c61-3f67e18218e0
+api03-1  | 2025-08-17 17:59:00,333 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:9cc7103c-aa40-4045-8c61-3f67e18218e0
+api01-1  | 2025-08-17 17:59:00,349 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-51) 📤 Publicando pagamento no Redis (async): {"correlationId":"62658256-abdd-4203-bcb3-cd5e1a3e276c","amount":19.9}
+api01-1  | 2025-08-17 17:59:00,350 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=62658256-abdd-4203-bcb3-cd5e1a3e276c, amount=19.9]
+api01-1  | 2025-08-17 17:59:00,350 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:59:00,351 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 62658256-abdd-4203-bcb3-cd5e1a3e276c
+api03-1  | 2025-08-17 17:59:00,351 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:62658256-abdd-4203-bcb3-cd5e1a3e276c
+api02-1  | 2025-08-17 17:59:00,367 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-52) 📤 Publicando pagamento no Redis (async): {"correlationId":"7f3a7ab0-6fd3-4977-a2d0-48d6cd2e63f7","amount":19.9}
+api02-1  | 2025-08-17 17:59:00,368 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=7f3a7ab0-6fd3-4977-a2d0-48d6cd2e63f7, amount=19.9]
+api02-1  | 2025-08-17 17:59:00,368 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:59:00,369 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 7f3a7ab0-6fd3-4977-a2d0-48d6cd2e63f7
+api03-1  | 2025-08-17 17:59:00,369 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:7f3a7ab0-6fd3-4977-a2d0-48d6cd2e63f7
+api01-1  | 2025-08-17 17:59:00,407 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-52) 📤 Publicando pagamento no Redis (async): {"correlationId":"35c78bab-8fb6-4f9e-84c4-f8d21b451f43","amount":19.9}
+api01-1  | 2025-08-17 17:59:00,407 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=35c78bab-8fb6-4f9e-84c4-f8d21b451f43, amount=19.9]
+api01-1  | 2025-08-17 17:59:00,407 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:59:00,408 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 35c78bab-8fb6-4f9e-84c4-f8d21b451f43
+api03-1  | 2025-08-17 17:59:00,409 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:35c78bab-8fb6-4f9e-84c4-f8d21b451f43
+api02-1  | 2025-08-17 17:59:00,420 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-53) 📤 Publicando pagamento no Redis (async): {"correlationId":"c104222b-7de9-4dc4-bc14-6679a3aed16e","amount":19.9}
+api02-1  | 2025-08-17 17:59:00,421 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=c104222b-7de9-4dc4-bc14-6679a3aed16e, amount=19.9]
+api02-1  | 2025-08-17 17:59:00,421 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:59:00,422 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: c104222b-7de9-4dc4-bc14-6679a3aed16e
+api03-1  | 2025-08-17 17:59:00,422 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:c104222b-7de9-4dc4-bc14-6679a3aed16e
+api01-1  | 2025-08-17 17:59:00,440 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-53) 📤 Publicando pagamento no Redis (async): {"correlationId":"13379ba0-d999-48f1-a676-3f13cd2f9392","amount":19.9}
+api01-1  | 2025-08-17 17:59:00,440 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=13379ba0-d999-48f1-a676-3f13cd2f9392, amount=19.9]
+api01-1  | 2025-08-17 17:59:00,440 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:59:00,441 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 13379ba0-d999-48f1-a676-3f13cd2f9392
+api03-1  | 2025-08-17 17:59:00,442 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:13379ba0-d999-48f1-a676-3f13cd2f9392
+api02-1  | 2025-08-17 17:59:00,458 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-54) 📤 Publicando pagamento no Redis (async): {"correlationId":"b2687736-7476-456c-b970-92d04f0c295b","amount":19.9}
+api02-1  | 2025-08-17 17:59:00,458 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=b2687736-7476-456c-b970-92d04f0c295b, amount=19.9]
+api02-1  | 2025-08-17 17:59:00,458 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:59:00,459 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: b2687736-7476-456c-b970-92d04f0c295b
+api03-1  | 2025-08-17 17:59:00,460 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:b2687736-7476-456c-b970-92d04f0c295b
+api01-1  | 2025-08-17 17:59:00,477 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-54) 📤 Publicando pagamento no Redis (async): {"correlationId":"a059acc5-6891-49c6-bfb1-05e30d956c21","amount":19.9}
+api01-1  | 2025-08-17 17:59:00,477 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=a059acc5-6891-49c6-bfb1-05e30d956c21, amount=19.9]
+api01-1  | 2025-08-17 17:59:00,477 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:59:00,478 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: a059acc5-6891-49c6-bfb1-05e30d956c21
+api03-1  | 2025-08-17 17:59:00,478 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:a059acc5-6891-49c6-bfb1-05e30d956c21
+api02-1  | 2025-08-17 17:59:00,511 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-55) 📤 Publicando pagamento no Redis (async): {"correlationId":"add43ddf-38c7-476a-bb7b-b7b8d9b0aad1","amount":19.9}
+api02-1  | 2025-08-17 17:59:00,511 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=add43ddf-38c7-476a-bb7b-b7b8d9b0aad1, amount=19.9]
+api02-1  | 2025-08-17 17:59:00,511 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:59:00,512 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: add43ddf-38c7-476a-bb7b-b7b8d9b0aad1
+api03-1  | 2025-08-17 17:59:00,512 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:add43ddf-38c7-476a-bb7b-b7b8d9b0aad1
+api01-1  | 2025-08-17 17:59:00,530 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-55) 📤 Publicando pagamento no Redis (async): {"correlationId":"6f5c4faa-f8bd-42a6-a4d6-b6ca7d9ab816","amount":19.9}
+api01-1  | 2025-08-17 17:59:00,530 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=6f5c4faa-f8bd-42a6-a4d6-b6ca7d9ab816, amount=19.9]
+api01-1  | 2025-08-17 17:59:00,530 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:59:00,531 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 6f5c4faa-f8bd-42a6-a4d6-b6ca7d9ab816
+api03-1  | 2025-08-17 17:59:00,531 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:6f5c4faa-f8bd-42a6-a4d6-b6ca7d9ab816
+api02-1  | 2025-08-17 17:59:00,548 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-56) 📤 Publicando pagamento no Redis (async): {"correlationId":"23411e85-17d9-4d0f-a781-99bde0475bd2","amount":19.9}
+api02-1  | 2025-08-17 17:59:00,549 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=23411e85-17d9-4d0f-a781-99bde0475bd2, amount=19.9]
+api02-1  | 2025-08-17 17:59:00,549 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:59:00,550 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 23411e85-17d9-4d0f-a781-99bde0475bd2
+api03-1  | 2025-08-17 17:59:00,550 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:23411e85-17d9-4d0f-a781-99bde0475bd2
+api01-1  | 2025-08-17 17:59:00,568 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-56) 📤 Publicando pagamento no Redis (async): {"correlationId":"f4b1f76a-d332-4012-b3ad-d312b494fbcb","amount":19.9}
+api01-1  | 2025-08-17 17:59:00,569 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=f4b1f76a-d332-4012-b3ad-d312b494fbcb, amount=19.9]
+api01-1  | 2025-08-17 17:59:00,569 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:59:00,570 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: f4b1f76a-d332-4012-b3ad-d312b494fbcb
+api03-1  | 2025-08-17 17:59:00,570 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:f4b1f76a-d332-4012-b3ad-d312b494fbcb
+api02-1  | 2025-08-17 17:59:00,587 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-57) 📤 Publicando pagamento no Redis (async): {"correlationId":"b4c89db1-57e2-49d6-bd18-93167f7ea79b","amount":19.9}
+api02-1  | 2025-08-17 17:59:00,587 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=b4c89db1-57e2-49d6-bd18-93167f7ea79b, amount=19.9]
+api02-1  | 2025-08-17 17:59:00,587 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:59:00,588 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: b4c89db1-57e2-49d6-bd18-93167f7ea79b
+api03-1  | 2025-08-17 17:59:00,589 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:b4c89db1-57e2-49d6-bd18-93167f7ea79b
+api01-1  | 2025-08-17 17:59:00,620 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-57) 📤 Publicando pagamento no Redis (async): {"correlationId":"ec91832d-1908-4c57-92c5-cb6c1f1bb87b","amount":19.9}
+api01-1  | 2025-08-17 17:59:00,621 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=ec91832d-1908-4c57-92c5-cb6c1f1bb87b, amount=19.9]
+api01-1  | 2025-08-17 17:59:00,621 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:59:00,622 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: ec91832d-1908-4c57-92c5-cb6c1f1bb87b
+api03-1  | 2025-08-17 17:59:00,622 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:ec91832d-1908-4c57-92c5-cb6c1f1bb87b
+api02-1  | 2025-08-17 17:59:00,639 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-58) 📤 Publicando pagamento no Redis (async): {"correlationId":"99569ec8-ab25-4bfa-a45e-6e5f6978034b","amount":19.9}
+api02-1  | 2025-08-17 17:59:00,640 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=99569ec8-ab25-4bfa-a45e-6e5f6978034b, amount=19.9]
+api02-1  | 2025-08-17 17:59:00,640 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:59:00,649 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 99569ec8-ab25-4bfa-a45e-6e5f6978034b
+api03-1  | 2025-08-17 17:59:00,650 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:99569ec8-ab25-4bfa-a45e-6e5f6978034b
+api01-1  | 2025-08-17 17:59:00,657 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-58) 📤 Publicando pagamento no Redis (async): {"correlationId":"71ee44cb-c590-4add-8eac-da228664da47","amount":19.9}
+api01-1  | 2025-08-17 17:59:00,657 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=71ee44cb-c590-4add-8eac-da228664da47, amount=19.9]
+api01-1  | 2025-08-17 17:59:00,657 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:59:00,659 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 71ee44cb-c590-4add-8eac-da228664da47
+api03-1  | 2025-08-17 17:59:00,659 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:71ee44cb-c590-4add-8eac-da228664da47
+api02-1  | 2025-08-17 17:59:00,677 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-59) 📤 Publicando pagamento no Redis (async): {"correlationId":"1524c586-2d09-4019-a441-273e079e4e19","amount":19.9}
+api02-1  | 2025-08-17 17:59:00,677 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=1524c586-2d09-4019-a441-273e079e4e19, amount=19.9]
+api02-1  | 2025-08-17 17:59:00,677 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:59:00,678 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 1524c586-2d09-4019-a441-273e079e4e19
+api03-1  | 2025-08-17 17:59:00,679 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:1524c586-2d09-4019-a441-273e079e4e19
+api01-1  | 2025-08-17 17:59:00,697 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-59) 📤 Publicando pagamento no Redis (async): {"correlationId":"3d7181d5-1419-4047-b2f7-fd756088bd70","amount":19.9}
+api01-1  | 2025-08-17 17:59:00,697 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=3d7181d5-1419-4047-b2f7-fd756088bd70, amount=19.9]
+api01-1  | 2025-08-17 17:59:00,697 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:59:00,698 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 3d7181d5-1419-4047-b2f7-fd756088bd70
+api03-1  | 2025-08-17 17:59:00,698 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:3d7181d5-1419-4047-b2f7-fd756088bd70
+api02-1  | 2025-08-17 17:59:00,729 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-60) 📤 Publicando pagamento no Redis (async): {"correlationId":"f141d847-9e16-4198-ba29-785a6ed8b1d6","amount":19.9}
+api02-1  | 2025-08-17 17:59:00,730 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=f141d847-9e16-4198-ba29-785a6ed8b1d6, amount=19.9]
+api02-1  | 2025-08-17 17:59:00,730 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:59:00,731 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: f141d847-9e16-4198-ba29-785a6ed8b1d6
+api03-1  | 2025-08-17 17:59:00,731 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:f141d847-9e16-4198-ba29-785a6ed8b1d6
+api01-1  | 2025-08-17 17:59:00,748 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-60) 📤 Publicando pagamento no Redis (async): {"correlationId":"d70f92ec-fb35-4275-8068-745af08f6efd","amount":19.9}
+api01-1  | 2025-08-17 17:59:00,748 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=d70f92ec-fb35-4275-8068-745af08f6efd, amount=19.9]
+api01-1  | 2025-08-17 17:59:00,749 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:59:00,750 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: d70f92ec-fb35-4275-8068-745af08f6efd
+api03-1  | 2025-08-17 17:59:00,750 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:d70f92ec-fb35-4275-8068-745af08f6efd
+api02-1  | 2025-08-17 17:59:00,767 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-61) 📤 Publicando pagamento no Redis (async): {"correlationId":"df074127-c02e-4c91-a4cb-a86eeb6b8354","amount":19.9}
+api02-1  | 2025-08-17 17:59:00,767 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=df074127-c02e-4c91-a4cb-a86eeb6b8354, amount=19.9]
+api02-1  | 2025-08-17 17:59:00,767 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:59:00,768 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: df074127-c02e-4c91-a4cb-a86eeb6b8354
+api03-1  | 2025-08-17 17:59:00,769 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:df074127-c02e-4c91-a4cb-a86eeb6b8354
+api01-1  | 2025-08-17 17:59:00,787 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-61) 📤 Publicando pagamento no Redis (async): {"correlationId":"dff227b9-5aea-466e-b843-8eafbbb29198","amount":19.9}
+api01-1  | 2025-08-17 17:59:00,787 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=dff227b9-5aea-466e-b843-8eafbbb29198, amount=19.9]
+api01-1  | 2025-08-17 17:59:00,787 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:59:00,788 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: dff227b9-5aea-466e-b843-8eafbbb29198
+api03-1  | 2025-08-17 17:59:00,788 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:dff227b9-5aea-466e-b843-8eafbbb29198
+api02-1  | 2025-08-17 17:59:00,805 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-62) 📤 Publicando pagamento no Redis (async): {"correlationId":"a0202f4e-7648-48b3-b39a-1bf043e41a70","amount":19.9}
+api02-1  | 2025-08-17 17:59:00,806 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=a0202f4e-7648-48b3-b39a-1bf043e41a70, amount=19.9]
+api02-1  | 2025-08-17 17:59:00,806 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:59:00,807 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: a0202f4e-7648-48b3-b39a-1bf043e41a70
+api03-1  | 2025-08-17 17:59:00,807 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:a0202f4e-7648-48b3-b39a-1bf043e41a70
+api01-1  | 2025-08-17 17:59:00,839 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-62) 📤 Publicando pagamento no Redis (async): {"correlationId":"22dfd2c7-0d07-4894-b829-2c0777a9f1ad","amount":19.9}
+api01-1  | 2025-08-17 17:59:00,839 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=22dfd2c7-0d07-4894-b829-2c0777a9f1ad, amount=19.9]
+api01-1  | 2025-08-17 17:59:00,839 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:59:00,840 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 22dfd2c7-0d07-4894-b829-2c0777a9f1ad
+api03-1  | 2025-08-17 17:59:00,841 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:22dfd2c7-0d07-4894-b829-2c0777a9f1ad
+api02-1  | 2025-08-17 17:59:00,857 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-63) 📤 Publicando pagamento no Redis (async): {"correlationId":"73a1e9dd-6da8-4715-93f1-22b988603105","amount":19.9}
+api02-1  | 2025-08-17 17:59:00,858 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=73a1e9dd-6da8-4715-93f1-22b988603105, amount=19.9]
+api02-1  | 2025-08-17 17:59:00,858 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:59:00,859 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 73a1e9dd-6da8-4715-93f1-22b988603105
+api03-1  | 2025-08-17 17:59:00,859 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:73a1e9dd-6da8-4715-93f1-22b988603105
+api01-1  | 2025-08-17 17:59:00,876 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-63) 📤 Publicando pagamento no Redis (async): {"correlationId":"5fa56e47-96bb-45a7-a516-eee97bfeef51","amount":19.9}
+api01-1  | 2025-08-17 17:59:00,877 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=5fa56e47-96bb-45a7-a516-eee97bfeef51, amount=19.9]
+api01-1  | 2025-08-17 17:59:00,877 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:59:00,878 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 5fa56e47-96bb-45a7-a516-eee97bfeef51
+api03-1  | 2025-08-17 17:59:00,878 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:5fa56e47-96bb-45a7-a516-eee97bfeef51
+api02-1  | 2025-08-17 17:59:00,895 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-64) 📤 Publicando pagamento no Redis (async): {"correlationId":"f06103b2-0911-4068-954f-9fe675c98fc4","amount":19.9}
+api02-1  | 2025-08-17 17:59:00,895 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=f06103b2-0911-4068-954f-9fe675c98fc4, amount=19.9]
+api02-1  | 2025-08-17 17:59:00,895 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:59:00,896 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: f06103b2-0911-4068-954f-9fe675c98fc4
+api03-1  | 2025-08-17 17:59:00,897 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:f06103b2-0911-4068-954f-9fe675c98fc4
+api01-1  | 2025-08-17 17:59:00,914 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-64) 📤 Publicando pagamento no Redis (async): {"correlationId":"90a73bdf-f094-4b13-814a-3fc91681ebcf","amount":19.9}
+api01-1  | 2025-08-17 17:59:00,914 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=90a73bdf-f094-4b13-814a-3fc91681ebcf, amount=19.9]
+api01-1  | 2025-08-17 17:59:00,914 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:59:00,915 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 90a73bdf-f094-4b13-814a-3fc91681ebcf
+api03-1  | 2025-08-17 17:59:00,916 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:90a73bdf-f094-4b13-814a-3fc91681ebcf
+api02-1  | 2025-08-17 17:59:00,947 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-65) 📤 Publicando pagamento no Redis (async): {"correlationId":"85edc063-47a5-4e58-b3dd-52d9b1154d23","amount":19.9}
+api02-1  | 2025-08-17 17:59:00,948 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=85edc063-47a5-4e58-b3dd-52d9b1154d23, amount=19.9]
+api02-1  | 2025-08-17 17:59:00,948 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:59:00,949 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 85edc063-47a5-4e58-b3dd-52d9b1154d23
+api03-1  | 2025-08-17 17:59:00,949 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:85edc063-47a5-4e58-b3dd-52d9b1154d23
+api01-1  | 2025-08-17 17:59:00,966 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-65) 📤 Publicando pagamento no Redis (async): {"correlationId":"0c0fbeb9-1d53-4a0f-96f4-7be555b16566","amount":19.9}
+api01-1  | 2025-08-17 17:59:00,967 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=0c0fbeb9-1d53-4a0f-96f4-7be555b16566, amount=19.9]
+api01-1  | 2025-08-17 17:59:00,967 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:59:00,968 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 0c0fbeb9-1d53-4a0f-96f4-7be555b16566
+api03-1  | 2025-08-17 17:59:00,968 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:0c0fbeb9-1d53-4a0f-96f4-7be555b16566
+api02-1  | 2025-08-17 17:59:00,985 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-66) 📤 Publicando pagamento no Redis (async): {"correlationId":"ac14e061-dbbb-4df0-a93f-992158688f60","amount":19.9}
+api02-1  | 2025-08-17 17:59:00,985 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=ac14e061-dbbb-4df0-a93f-992158688f60, amount=19.9]
+api02-1  | 2025-08-17 17:59:00,985 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:59:00,986 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: ac14e061-dbbb-4df0-a93f-992158688f60
+api03-1  | 2025-08-17 17:59:00,987 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:ac14e061-dbbb-4df0-a93f-992158688f60
+api01-1  | 2025-08-17 17:59:01,004 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-66) 📤 Publicando pagamento no Redis (async): {"correlationId":"73bedb5a-4302-4688-94cf-997def13a576","amount":19.9}
+api01-1  | 2025-08-17 17:59:01,005 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=73bedb5a-4302-4688-94cf-997def13a576, amount=19.9]
+api01-1  | 2025-08-17 17:59:01,005 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:59:01,006 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 73bedb5a-4302-4688-94cf-997def13a576
+api03-1  | 2025-08-17 17:59:01,006 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:73bedb5a-4302-4688-94cf-997def13a576
+api02-1  | 2025-08-17 17:59:01,023 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-67) 📤 Publicando pagamento no Redis (async): {"correlationId":"c7c7e606-9823-4efa-a8f5-4f026f009ebe","amount":19.9}
+api02-1  | 2025-08-17 17:59:01,024 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=c7c7e606-9823-4efa-a8f5-4f026f009ebe, amount=19.9]
+api02-1  | 2025-08-17 17:59:01,024 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:59:01,025 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: c7c7e606-9823-4efa-a8f5-4f026f009ebe
+api03-1  | 2025-08-17 17:59:01,025 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:c7c7e606-9823-4efa-a8f5-4f026f009ebe
+api01-1  | 2025-08-17 17:59:01,057 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-67) 📤 Publicando pagamento no Redis (async): {"correlationId":"413bf320-a3e9-43bb-a934-36573183084b","amount":19.9}
+api01-1  | 2025-08-17 17:59:01,058 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=413bf320-a3e9-43bb-a934-36573183084b, amount=19.9]
+api01-1  | 2025-08-17 17:59:01,058 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:59:01,059 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 413bf320-a3e9-43bb-a934-36573183084b
+api03-1  | 2025-08-17 17:59:01,059 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:413bf320-a3e9-43bb-a934-36573183084b
+api02-1  | 2025-08-17 17:59:01,076 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-68) 📤 Publicando pagamento no Redis (async): {"correlationId":"2207a73f-4824-4ab7-a90c-fccfc6664136","amount":19.9}
+api02-1  | 2025-08-17 17:59:01,077 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=2207a73f-4824-4ab7-a90c-fccfc6664136, amount=19.9]
+api02-1  | 2025-08-17 17:59:01,077 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:59:01,078 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 2207a73f-4824-4ab7-a90c-fccfc6664136
+api03-1  | 2025-08-17 17:59:01,078 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:2207a73f-4824-4ab7-a90c-fccfc6664136
+api01-1  | 2025-08-17 17:59:01,095 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-68) 📤 Publicando pagamento no Redis (async): {"correlationId":"7fdb2939-e209-4543-8f4f-80f863a994dd","amount":19.9}
+api01-1  | 2025-08-17 17:59:01,095 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=7fdb2939-e209-4543-8f4f-80f863a994dd, amount=19.9]
+api01-1  | 2025-08-17 17:59:01,095 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:59:01,096 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 7fdb2939-e209-4543-8f4f-80f863a994dd
+api03-1  | 2025-08-17 17:59:01,097 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:7fdb2939-e209-4543-8f4f-80f863a994dd
+api02-1  | 2025-08-17 17:59:01,115 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-69) 📤 Publicando pagamento no Redis (async): {"correlationId":"a1c7ad2f-715c-4c60-a7e3-8852cab5871f","amount":19.9}
+api02-1  | 2025-08-17 17:59:01,115 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=a1c7ad2f-715c-4c60-a7e3-8852cab5871f, amount=19.9]
+api02-1  | 2025-08-17 17:59:01,115 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:59:01,116 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: a1c7ad2f-715c-4c60-a7e3-8852cab5871f
+api03-1  | 2025-08-17 17:59:01,116 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:a1c7ad2f-715c-4c60-a7e3-8852cab5871f
+api01-1  | 2025-08-17 17:59:01,134 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-69) 📤 Publicando pagamento no Redis (async): {"correlationId":"952d9213-eefd-4c2c-be8f-c9d7ced6cba7","amount":19.9}
+api01-1  | 2025-08-17 17:59:01,134 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=952d9213-eefd-4c2c-be8f-c9d7ced6cba7, amount=19.9]
+api01-1  | 2025-08-17 17:59:01,134 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:59:01,135 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 952d9213-eefd-4c2c-be8f-c9d7ced6cba7
+api03-1  | 2025-08-17 17:59:01,135 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:952d9213-eefd-4c2c-be8f-c9d7ced6cba7
+api02-1  | 2025-08-17 17:59:01,158 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-70) 📤 Publicando pagamento no Redis (async): {"correlationId":"dd020515-c53e-408f-9924-c2f396474e71","amount":19.9}
+api02-1  | 2025-08-17 17:59:01,159 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=dd020515-c53e-408f-9924-c2f396474e71, amount=19.9]
+api02-1  | 2025-08-17 17:59:01,159 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:59:01,160 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: dd020515-c53e-408f-9924-c2f396474e71
+api03-1  | 2025-08-17 17:59:01,160 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:dd020515-c53e-408f-9924-c2f396474e71
+api01-1  | 2025-08-17 17:59:01,166 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-70) 📤 Publicando pagamento no Redis (async): {"correlationId":"163e7d66-f483-4735-b2fd-510080fa551c","amount":19.9}
+api01-1  | 2025-08-17 17:59:01,167 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=163e7d66-f483-4735-b2fd-510080fa551c, amount=19.9]
+api01-1  | 2025-08-17 17:59:01,167 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:59:01,168 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 163e7d66-f483-4735-b2fd-510080fa551c
+api03-1  | 2025-08-17 17:59:01,168 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:163e7d66-f483-4735-b2fd-510080fa551c
+api02-1  | 2025-08-17 17:59:01,186 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-71) 📤 Publicando pagamento no Redis (async): {"correlationId":"3a2b23ba-95ed-403f-8d1f-569ce1a23611","amount":19.9}
+api02-1  | 2025-08-17 17:59:01,186 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=3a2b23ba-95ed-403f-8d1f-569ce1a23611, amount=19.9]
+api02-1  | 2025-08-17 17:59:01,186 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:59:01,187 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 3a2b23ba-95ed-403f-8d1f-569ce1a23611
+api03-1  | 2025-08-17 17:59:01,188 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:3a2b23ba-95ed-403f-8d1f-569ce1a23611
+api01-1  | 2025-08-17 17:59:01,203 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-71) 📤 Publicando pagamento no Redis (async): {"correlationId":"eb550db9-12d3-4033-89d1-f9163cf395d9","amount":19.9}
+api01-1  | 2025-08-17 17:59:01,204 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=eb550db9-12d3-4033-89d1-f9163cf395d9, amount=19.9]
+api01-1  | 2025-08-17 17:59:01,204 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:59:01,205 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: eb550db9-12d3-4033-89d1-f9163cf395d9
+api03-1  | 2025-08-17 17:59:01,205 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:eb550db9-12d3-4033-89d1-f9163cf395d9
+api02-1  | 2025-08-17 17:59:01,223 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-72) 📤 Publicando pagamento no Redis (async): {"correlationId":"611695bc-1a3e-4230-93f7-8dc0d2d4a768","amount":19.9}
+api02-1  | 2025-08-17 17:59:01,224 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=611695bc-1a3e-4230-93f7-8dc0d2d4a768, amount=19.9]
+api02-1  | 2025-08-17 17:59:01,224 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:59:01,225 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 611695bc-1a3e-4230-93f7-8dc0d2d4a768
+api03-1  | 2025-08-17 17:59:01,225 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:611695bc-1a3e-4230-93f7-8dc0d2d4a768
+api01-1  | 2025-08-17 17:59:01,242 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-72) 📤 Publicando pagamento no Redis (async): {"correlationId":"011fd991-d20e-46a8-a80a-ffd03e651566","amount":19.9}
+api01-1  | 2025-08-17 17:59:01,242 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=011fd991-d20e-46a8-a80a-ffd03e651566, amount=19.9]
+api01-1  | 2025-08-17 17:59:01,242 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:59:01,244 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 011fd991-d20e-46a8-a80a-ffd03e651566
+api03-1  | 2025-08-17 17:59:01,244 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:011fd991-d20e-46a8-a80a-ffd03e651566
+api02-1  | 2025-08-17 17:59:01,263 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-73) 📤 Publicando pagamento no Redis (async): {"correlationId":"991820ce-aa77-4221-8993-48206e0c1de7","amount":19.9}
+api02-1  | 2025-08-17 17:59:01,264 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=991820ce-aa77-4221-8993-48206e0c1de7, amount=19.9]
+api02-1  | 2025-08-17 17:59:01,264 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:59:01,265 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 991820ce-aa77-4221-8993-48206e0c1de7
+api03-1  | 2025-08-17 17:59:01,265 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:991820ce-aa77-4221-8993-48206e0c1de7
+api01-1  | 2025-08-17 17:59:01,281 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-73) 📤 Publicando pagamento no Redis (async): {"correlationId":"bceccbbc-66d5-4205-b81d-d435537d433e","amount":19.9}
+api01-1  | 2025-08-17 17:59:01,281 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=bceccbbc-66d5-4205-b81d-d435537d433e, amount=19.9]
+api01-1  | 2025-08-17 17:59:01,282 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:59:01,282 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: bceccbbc-66d5-4205-b81d-d435537d433e
+api03-1  | 2025-08-17 17:59:01,283 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:bceccbbc-66d5-4205-b81d-d435537d433e
+api02-1  | 2025-08-17 17:59:01,295 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-74) 📤 Publicando pagamento no Redis (async): {"correlationId":"b49b8a66-c995-433d-adca-465200146d72","amount":19.9}
+api02-1  | 2025-08-17 17:59:01,295 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=b49b8a66-c995-433d-adca-465200146d72, amount=19.9]
+api02-1  | 2025-08-17 17:59:01,295 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:59:01,296 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: b49b8a66-c995-433d-adca-465200146d72
+api03-1  | 2025-08-17 17:59:01,296 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:b49b8a66-c995-433d-adca-465200146d72
+api01-1  | 2025-08-17 17:59:01,314 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-74) 📤 Publicando pagamento no Redis (async): {"correlationId":"55d0b7e1-d9e5-4062-b1c3-1914a4a70904","amount":19.9}
+api01-1  | 2025-08-17 17:59:01,314 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=55d0b7e1-d9e5-4062-b1c3-1914a4a70904, amount=19.9]
+api01-1  | 2025-08-17 17:59:01,314 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:59:01,315 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 55d0b7e1-d9e5-4062-b1c3-1914a4a70904
+api03-1  | 2025-08-17 17:59:01,315 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:55d0b7e1-d9e5-4062-b1c3-1914a4a70904
+api02-1  | 2025-08-17 17:59:01,333 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-75) 📤 Publicando pagamento no Redis (async): {"correlationId":"e6d0d46a-bd15-47fa-be56-e8a028527411","amount":19.9}
+api02-1  | 2025-08-17 17:59:01,334 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=e6d0d46a-bd15-47fa-be56-e8a028527411, amount=19.9]
+api02-1  | 2025-08-17 17:59:01,334 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:59:01,335 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: e6d0d46a-bd15-47fa-be56-e8a028527411
+api03-1  | 2025-08-17 17:59:01,335 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:e6d0d46a-bd15-47fa-be56-e8a028527411
+api01-1  | 2025-08-17 17:59:01,352 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-75) 📤 Publicando pagamento no Redis (async): {"correlationId":"c0849bc3-7ede-447f-9ecc-7625ba71274d","amount":19.9}
+api01-1  | 2025-08-17 17:59:01,353 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=c0849bc3-7ede-447f-9ecc-7625ba71274d, amount=19.9]
+api01-1  | 2025-08-17 17:59:01,353 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:59:01,354 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: c0849bc3-7ede-447f-9ecc-7625ba71274d
+api03-1  | 2025-08-17 17:59:01,354 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:c0849bc3-7ede-447f-9ecc-7625ba71274d
+api02-1  | 2025-08-17 17:59:01,369 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-76) 📤 Publicando pagamento no Redis (async): {"correlationId":"f1ee8263-dbe7-4aaf-9b09-5160548b2c2c","amount":19.9}
+api02-1  | 2025-08-17 17:59:01,370 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=f1ee8263-dbe7-4aaf-9b09-5160548b2c2c, amount=19.9]
+api02-1  | 2025-08-17 17:59:01,370 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:59:01,371 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: f1ee8263-dbe7-4aaf-9b09-5160548b2c2c
+api03-1  | 2025-08-17 17:59:01,371 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:f1ee8263-dbe7-4aaf-9b09-5160548b2c2c
+api01-1  | 2025-08-17 17:59:01,385 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-76) 📤 Publicando pagamento no Redis (async): {"correlationId":"3f0b588f-84d3-4bba-b711-9b3feb8f0206","amount":19.9}
+api01-1  | 2025-08-17 17:59:01,385 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=3f0b588f-84d3-4bba-b711-9b3feb8f0206, amount=19.9]
+api01-1  | 2025-08-17 17:59:01,385 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:59:01,386 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 3f0b588f-84d3-4bba-b711-9b3feb8f0206
+api03-1  | 2025-08-17 17:59:01,386 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:3f0b588f-84d3-4bba-b711-9b3feb8f0206
+api02-1  | 2025-08-17 17:59:01,409 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-77) 📤 Publicando pagamento no Redis (async): {"correlationId":"7fba73b5-0804-4d00-a2bc-da7ed2cb10f0","amount":19.9}
+api02-1  | 2025-08-17 17:59:01,410 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=7fba73b5-0804-4d00-a2bc-da7ed2cb10f0, amount=19.9]
+api02-1  | 2025-08-17 17:59:01,410 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:59:01,411 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 7fba73b5-0804-4d00-a2bc-da7ed2cb10f0
+api03-1  | 2025-08-17 17:59:01,411 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:7fba73b5-0804-4d00-a2bc-da7ed2cb10f0
+api01-1  | 2025-08-17 17:59:01,422 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-77) 📤 Publicando pagamento no Redis (async): {"correlationId":"8c2623fd-82a4-444c-b56d-684b5d5ab497","amount":19.9}
+api01-1  | 2025-08-17 17:59:01,422 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=8c2623fd-82a4-444c-b56d-684b5d5ab497, amount=19.9]
+api01-1  | 2025-08-17 17:59:01,422 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:59:01,423 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 8c2623fd-82a4-444c-b56d-684b5d5ab497
+api03-1  | 2025-08-17 17:59:01,423 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:8c2623fd-82a4-444c-b56d-684b5d5ab497
+api02-1  | 2025-08-17 17:59:01,442 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-78) 📤 Publicando pagamento no Redis (async): {"correlationId":"c20ffabe-069f-466b-abbf-36538bff32df","amount":19.9}
+api02-1  | 2025-08-17 17:59:01,442 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=c20ffabe-069f-466b-abbf-36538bff32df, amount=19.9]
+api02-1  | 2025-08-17 17:59:01,442 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:59:01,443 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: c20ffabe-069f-466b-abbf-36538bff32df
+api03-1  | 2025-08-17 17:59:01,443 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:c20ffabe-069f-466b-abbf-36538bff32df
+api01-1  | 2025-08-17 17:59:01,460 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-78) 📤 Publicando pagamento no Redis (async): {"correlationId":"34af274b-11ee-4916-8fb4-9fb939977f90","amount":19.9}
+api01-1  | 2025-08-17 17:59:01,461 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=34af274b-11ee-4916-8fb4-9fb939977f90, amount=19.9]
+api01-1  | 2025-08-17 17:59:01,461 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:59:01,462 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 34af274b-11ee-4916-8fb4-9fb939977f90
+api03-1  | 2025-08-17 17:59:01,462 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:34af274b-11ee-4916-8fb4-9fb939977f90
+api02-1  | 2025-08-17 17:59:01,479 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-79) 📤 Publicando pagamento no Redis (async): {"correlationId":"246358fa-f37b-4a1f-8c2c-a711bf5b1c6a","amount":19.9}
+api02-1  | 2025-08-17 17:59:01,479 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=246358fa-f37b-4a1f-8c2c-a711bf5b1c6a, amount=19.9]
+api02-1  | 2025-08-17 17:59:01,479 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:59:01,480 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 246358fa-f37b-4a1f-8c2c-a711bf5b1c6a
+api03-1  | 2025-08-17 17:59:01,480 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:246358fa-f37b-4a1f-8c2c-a711bf5b1c6a
+api01-1  | 2025-08-17 17:59:01,494 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-79) 📤 Publicando pagamento no Redis (async): {"correlationId":"b111efae-d9dc-47e0-926b-83d125dde18b","amount":19.9}
+api01-1  | 2025-08-17 17:59:01,494 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=b111efae-d9dc-47e0-926b-83d125dde18b, amount=19.9]
+api01-1  | 2025-08-17 17:59:01,494 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:59:01,495 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: b111efae-d9dc-47e0-926b-83d125dde18b
+api03-1  | 2025-08-17 17:59:01,495 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:b111efae-d9dc-47e0-926b-83d125dde18b
+api02-1  | 2025-08-17 17:59:01,513 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-80) 📤 Publicando pagamento no Redis (async): {"correlationId":"02042df8-8a2a-46bc-9ff7-7283dd60a08c","amount":19.9}
+api02-1  | 2025-08-17 17:59:01,513 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=02042df8-8a2a-46bc-9ff7-7283dd60a08c, amount=19.9]
+api02-1  | 2025-08-17 17:59:01,513 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:59:01,514 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 02042df8-8a2a-46bc-9ff7-7283dd60a08c
+api03-1  | 2025-08-17 17:59:01,515 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:02042df8-8a2a-46bc-9ff7-7283dd60a08c
+api01-1  | 2025-08-17 17:59:01,531 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-80) 📤 Publicando pagamento no Redis (async): {"correlationId":"81a4d824-7fe7-4223-a74b-69f5348db173","amount":19.9}
+api01-1  | 2025-08-17 17:59:01,532 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=81a4d824-7fe7-4223-a74b-69f5348db173, amount=19.9]
+api01-1  | 2025-08-17 17:59:01,532 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:59:01,533 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 81a4d824-7fe7-4223-a74b-69f5348db173
+api03-1  | 2025-08-17 17:59:01,533 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:81a4d824-7fe7-4223-a74b-69f5348db173
+api02-1  | 2025-08-17 17:59:01,550 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-81) 📤 Publicando pagamento no Redis (async): {"correlationId":"9ed0844d-092d-45d7-94e2-93dfa7cc47fe","amount":19.9}
+api02-1  | 2025-08-17 17:59:01,550 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=9ed0844d-092d-45d7-94e2-93dfa7cc47fe, amount=19.9]
+api02-1  | 2025-08-17 17:59:01,550 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:59:01,551 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 9ed0844d-092d-45d7-94e2-93dfa7cc47fe
+api03-1  | 2025-08-17 17:59:01,552 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:9ed0844d-092d-45d7-94e2-93dfa7cc47fe
+api01-1  | 2025-08-17 17:59:01,570 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-81) 📤 Publicando pagamento no Redis (async): {"correlationId":"6e6483f5-e34a-41a7-b1ce-53e6156de966","amount":19.9}
+api01-1  | 2025-08-17 17:59:01,570 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=6e6483f5-e34a-41a7-b1ce-53e6156de966, amount=19.9]
+api01-1  | 2025-08-17 17:59:01,570 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:59:01,571 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 6e6483f5-e34a-41a7-b1ce-53e6156de966
+api03-1  | 2025-08-17 17:59:01,571 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:6e6483f5-e34a-41a7-b1ce-53e6156de966
+api02-1  | 2025-08-17 17:59:01,589 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-82) 📤 Publicando pagamento no Redis (async): {"correlationId":"12942925-6fbe-4962-9993-05d5b50d260a","amount":19.9}
+api02-1  | 2025-08-17 17:59:01,590 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=12942925-6fbe-4962-9993-05d5b50d260a, amount=19.9]
+api02-1  | 2025-08-17 17:59:01,590 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:59:01,591 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 12942925-6fbe-4962-9993-05d5b50d260a
+api03-1  | 2025-08-17 17:59:01,591 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:12942925-6fbe-4962-9993-05d5b50d260a
+api01-1  | 2025-08-17 17:59:01,603 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-82) 📤 Publicando pagamento no Redis (async): {"correlationId":"953b44e3-1a97-4c29-8f45-52056d3fa312","amount":19.9}
+api01-1  | 2025-08-17 17:59:01,604 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=953b44e3-1a97-4c29-8f45-52056d3fa312, amount=19.9]
+api01-1  | 2025-08-17 17:59:01,604 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:59:01,605 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 953b44e3-1a97-4c29-8f45-52056d3fa312
+api03-1  | 2025-08-17 17:59:01,605 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:953b44e3-1a97-4c29-8f45-52056d3fa312
+api02-1  | 2025-08-17 17:59:01,622 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-83) 📤 Publicando pagamento no Redis (async): {"correlationId":"35851f89-a4d0-4bc4-80f3-e2fb13ccc858","amount":19.9}
+api02-1  | 2025-08-17 17:59:01,623 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=35851f89-a4d0-4bc4-80f3-e2fb13ccc858, amount=19.9]
+api02-1  | 2025-08-17 17:59:01,623 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:59:01,624 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 35851f89-a4d0-4bc4-80f3-e2fb13ccc858
+api03-1  | 2025-08-17 17:59:01,624 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:35851f89-a4d0-4bc4-80f3-e2fb13ccc858
+api01-1  | 2025-08-17 17:59:01,641 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-83) 📤 Publicando pagamento no Redis (async): {"correlationId":"81a459b9-8d82-4bd5-a3b6-3c71bd5db227","amount":19.9}
+api01-1  | 2025-08-17 17:59:01,641 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=81a459b9-8d82-4bd5-a3b6-3c71bd5db227, amount=19.9]
+api01-1  | 2025-08-17 17:59:01,642 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:59:01,642 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 81a459b9-8d82-4bd5-a3b6-3c71bd5db227
+api03-1  | 2025-08-17 17:59:01,643 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:81a459b9-8d82-4bd5-a3b6-3c71bd5db227
+api02-1  | 2025-08-17 17:59:01,659 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-84) 📤 Publicando pagamento no Redis (async): {"correlationId":"f94b532b-e7d2-415d-bbea-d1dd71fb7830","amount":19.9}
+api02-1  | 2025-08-17 17:59:01,659 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=f94b532b-e7d2-415d-bbea-d1dd71fb7830, amount=19.9]
+api02-1  | 2025-08-17 17:59:01,659 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:59:01,660 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: f94b532b-e7d2-415d-bbea-d1dd71fb7830
+api03-1  | 2025-08-17 17:59:01,661 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:f94b532b-e7d2-415d-bbea-d1dd71fb7830
+api01-1  | 2025-08-17 17:59:01,679 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-84) 📤 Publicando pagamento no Redis (async): {"correlationId":"6093c419-bdb8-404b-a56f-6578c3829698","amount":19.9}
+api01-1  | 2025-08-17 17:59:01,680 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=6093c419-bdb8-404b-a56f-6578c3829698, amount=19.9]
+api01-1  | 2025-08-17 17:59:01,680 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:59:01,681 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 6093c419-bdb8-404b-a56f-6578c3829698
+api03-1  | 2025-08-17 17:59:01,681 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:6093c419-bdb8-404b-a56f-6578c3829698
+api02-1  | 2025-08-17 17:59:01,699 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-85) 📤 Publicando pagamento no Redis (async): {"correlationId":"15996f78-1d85-4629-bf87-e5bef5230617","amount":19.9}
+api02-1  | 2025-08-17 17:59:01,700 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=15996f78-1d85-4629-bf87-e5bef5230617, amount=19.9]
+api02-1  | 2025-08-17 17:59:01,700 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:59:01,701 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 15996f78-1d85-4629-bf87-e5bef5230617
+api03-1  | 2025-08-17 17:59:01,701 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:15996f78-1d85-4629-bf87-e5bef5230617
+api01-1  | 2025-08-17 17:59:01,712 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-85) 📤 Publicando pagamento no Redis (async): {"correlationId":"b6fd2747-4af7-43d3-bf98-97b66e36fd9f","amount":19.9}
+api01-1  | 2025-08-17 17:59:01,713 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=b6fd2747-4af7-43d3-bf98-97b66e36fd9f, amount=19.9]
+api01-1  | 2025-08-17 17:59:01,713 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:59:01,714 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: b6fd2747-4af7-43d3-bf98-97b66e36fd9f
+api03-1  | 2025-08-17 17:59:01,714 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:b6fd2747-4af7-43d3-bf98-97b66e36fd9f
+api02-1  | 2025-08-17 17:59:01,731 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-86) 📤 Publicando pagamento no Redis (async): {"correlationId":"4d3d8f62-b58b-4e21-858c-eedc9c7a8210","amount":19.9}
+api02-1  | 2025-08-17 17:59:01,732 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=4d3d8f62-b58b-4e21-858c-eedc9c7a8210, amount=19.9]
+api02-1  | 2025-08-17 17:59:01,732 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:59:01,733 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 4d3d8f62-b58b-4e21-858c-eedc9c7a8210
+api03-1  | 2025-08-17 17:59:01,733 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:4d3d8f62-b58b-4e21-858c-eedc9c7a8210
+api01-1  | 2025-08-17 17:59:01,750 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-86) 📤 Publicando pagamento no Redis (async): {"correlationId":"3f81e6f4-f2e6-4476-abfb-26b09fde6c8d","amount":19.9}
+api01-1  | 2025-08-17 17:59:01,751 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=3f81e6f4-f2e6-4476-abfb-26b09fde6c8d, amount=19.9]
+api01-1  | 2025-08-17 17:59:01,751 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:59:01,752 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 3f81e6f4-f2e6-4476-abfb-26b09fde6c8d
+api03-1  | 2025-08-17 17:59:01,752 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:3f81e6f4-f2e6-4476-abfb-26b09fde6c8d
+api02-1  | 2025-08-17 17:59:01,769 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-87) 📤 Publicando pagamento no Redis (async): {"correlationId":"dfa5f984-183f-473e-be18-e0901b14bed1","amount":19.9}
+api02-1  | 2025-08-17 17:59:01,770 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=dfa5f984-183f-473e-be18-e0901b14bed1, amount=19.9]
+api02-1  | 2025-08-17 17:59:01,770 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:59:01,771 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: dfa5f984-183f-473e-be18-e0901b14bed1
+api03-1  | 2025-08-17 17:59:01,771 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:dfa5f984-183f-473e-be18-e0901b14bed1
+api01-1  | 2025-08-17 17:59:01,789 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-87) 📤 Publicando pagamento no Redis (async): {"correlationId":"7fe7b68d-8562-4885-8875-95f68f6698c5","amount":19.9}
+api01-1  | 2025-08-17 17:59:01,789 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=7fe7b68d-8562-4885-8875-95f68f6698c5, amount=19.9]
+api01-1  | 2025-08-17 17:59:01,789 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:59:01,790 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 7fe7b68d-8562-4885-8875-95f68f6698c5
+api03-1  | 2025-08-17 17:59:01,790 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:7fe7b68d-8562-4885-8875-95f68f6698c5
+api02-1  | 2025-08-17 17:59:01,807 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-88) 📤 Publicando pagamento no Redis (async): {"correlationId":"3cdbcb17-2504-4dd5-b2fb-bd0f679469e3","amount":19.9}
+api02-1  | 2025-08-17 17:59:01,808 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=3cdbcb17-2504-4dd5-b2fb-bd0f679469e3, amount=19.9]
+api02-1  | 2025-08-17 17:59:01,808 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:59:01,809 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 3cdbcb17-2504-4dd5-b2fb-bd0f679469e3
+api03-1  | 2025-08-17 17:59:01,809 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:3cdbcb17-2504-4dd5-b2fb-bd0f679469e3
+api01-1  | 2025-08-17 17:59:01,822 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-88) 📤 Publicando pagamento no Redis (async): {"correlationId":"96f919ff-5807-479e-a31d-6982f0af7d36","amount":19.9}
+api01-1  | 2025-08-17 17:59:01,822 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=96f919ff-5807-479e-a31d-6982f0af7d36, amount=19.9]
+api01-1  | 2025-08-17 17:59:01,822 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:59:01,823 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 96f919ff-5807-479e-a31d-6982f0af7d36
+api03-1  | 2025-08-17 17:59:01,824 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:96f919ff-5807-479e-a31d-6982f0af7d36
+api02-1  | 2025-08-17 17:59:01,841 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-89) 📤 Publicando pagamento no Redis (async): {"correlationId":"8158d8fc-e219-496a-bba4-7911bf170ed9","amount":19.9}
+api02-1  | 2025-08-17 17:59:01,841 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=8158d8fc-e219-496a-bba4-7911bf170ed9, amount=19.9]
+api02-1  | 2025-08-17 17:59:01,841 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:59:01,842 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 8158d8fc-e219-496a-bba4-7911bf170ed9
+api03-1  | 2025-08-17 17:59:01,842 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:8158d8fc-e219-496a-bba4-7911bf170ed9
+api01-1  | 2025-08-17 17:59:01,859 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-89) 📤 Publicando pagamento no Redis (async): {"correlationId":"fecbb8e7-37ca-4f88-bdf0-f30c2a3bb8ae","amount":19.9}
+api01-1  | 2025-08-17 17:59:01,860 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=fecbb8e7-37ca-4f88-bdf0-f30c2a3bb8ae, amount=19.9]
+api01-1  | 2025-08-17 17:59:01,860 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:59:01,861 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: fecbb8e7-37ca-4f88-bdf0-f30c2a3bb8ae
+api03-1  | 2025-08-17 17:59:01,861 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:fecbb8e7-37ca-4f88-bdf0-f30c2a3bb8ae
+api02-1  | 2025-08-17 17:59:01,879 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-90) 📤 Publicando pagamento no Redis (async): {"correlationId":"413d74ed-c9e9-4a6f-8890-835b234d7dd8","amount":19.9}
+api02-1  | 2025-08-17 17:59:01,879 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=413d74ed-c9e9-4a6f-8890-835b234d7dd8, amount=19.9]
+api02-1  | 2025-08-17 17:59:01,879 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:59:01,880 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 413d74ed-c9e9-4a6f-8890-835b234d7dd8
+api03-1  | 2025-08-17 17:59:01,881 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:413d74ed-c9e9-4a6f-8890-835b234d7dd8
+api01-1  | 2025-08-17 17:59:01,898 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-90) 📤 Publicando pagamento no Redis (async): {"correlationId":"3069934f-38c3-459e-8c48-667081dd48c8","amount":19.9}
+api01-1  | 2025-08-17 17:59:01,899 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=3069934f-38c3-459e-8c48-667081dd48c8, amount=19.9]
+api01-1  | 2025-08-17 17:59:01,899 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:59:01,900 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 3069934f-38c3-459e-8c48-667081dd48c8
+api03-1  | 2025-08-17 17:59:01,900 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:3069934f-38c3-459e-8c48-667081dd48c8
+api02-1  | 2025-08-17 17:59:01,916 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-91) 📤 Publicando pagamento no Redis (async): {"correlationId":"853f5774-e04d-44ec-ab94-0d978dd61388","amount":19.9}
+api02-1  | 2025-08-17 17:59:01,916 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=853f5774-e04d-44ec-ab94-0d978dd61388, amount=19.9]
+api02-1  | 2025-08-17 17:59:01,917 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:59:01,918 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 853f5774-e04d-44ec-ab94-0d978dd61388
+api03-1  | 2025-08-17 17:59:01,918 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:853f5774-e04d-44ec-ab94-0d978dd61388
+api01-1  | 2025-08-17 17:59:01,931 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-91) 📤 Publicando pagamento no Redis (async): {"correlationId":"b2ea39e4-1e02-4f7e-a358-0eda95dca8b9","amount":19.9}
+api01-1  | 2025-08-17 17:59:01,931 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=b2ea39e4-1e02-4f7e-a358-0eda95dca8b9, amount=19.9]
+api01-1  | 2025-08-17 17:59:01,931 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-0) Sucesso
+api03-1  | 2025-08-17 17:59:01,933 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: b2ea39e4-1e02-4f7e-a358-0eda95dca8b9
+api03-1  | 2025-08-17 17:59:01,933 INFO  [com.rin.ser.RedisService] () ✅ Payment salvo no Redis: payment:b2ea39e4-1e02-4f7e-a358-0eda95dca8b9
+api02-1  | 2025-08-17 17:59:01,950 INFO  [com.rin.ser.PaymentProducerRedis] (quarkus-virtual-thread-92) 📤 Publicando pagamento no Redis (async): {"correlationId":"175edce8-ac31-4d4c-b4e7-ad70c6267a5a","amount":19.9}
+api02-1  | 2025-08-17 17:59:01,950 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) ✅ Mensagem publicada no Redis com sucesso (async): PaymentRequest[correlationId=175edce8-ac31-4d4c-b4e7-ad70c6267a5a, amount=19.9]
+api02-1  | 2025-08-17 17:59:01,950 INFO  [com.rin.ser.PaymentProducerRedis] (vert.x-eventloop-thread-1) Sucesso
+api03-1  | 2025-08-17 17:59:01,951 INFO  [com.rin.ser.PaymentService] () ✅ Payment processed: 175edce8-ac31-4d4c-b4e7-ad70c6267a5a
+log truncated at line 1000
