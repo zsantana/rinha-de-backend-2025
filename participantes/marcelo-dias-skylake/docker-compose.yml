@@ -6,7 +6,7 @@ services:
     hostname: app1
     environment:
       - FALLBACK_ENABLED=0
-      - INTER_INTERVAL=500
+      - INTER_INTERVAL=0
       - EMPTY_INTERVAL=500
       - PROCESSOR_URL=http://payment-processor-default:8080/payments
       - FALLBACK_PROCESSOR_URL=http://payment-processor-fallback:8080/payments
@@ -31,7 +31,7 @@ services:
     hostname: app2
     environment:
       - FALLBACK_ENABLED=0
-      - INTER_INTERVAL=500
+      - INTER_INTERVAL=0
       - EMPTY_INTERVAL=100
       - PROCESSOR_URL=http://payment-processor-default:8080/payments
       - FALLBACK_PROCESSOR_URL=http://payment-processor-fallback:8080/payments
